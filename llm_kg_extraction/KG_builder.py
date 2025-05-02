@@ -12,6 +12,11 @@ from ontology.loader import PEKGOntology
 load_dotenv()
 
 class FinancialKGBuilder:
+    """
+    A class to build a financial knowledge graph from text using Azure OpenAI.
+    It extracts entities and relationships based on a predefined ontology.
+    """
+    
     def __init__(self, model_name, deployment_name, ontology_path: str =  Path(__file__).resolve().parent / "ontology" / "pekg_ontology.yaml"):
         """
         Initialize the FinancialKGBuilder with the model name and deployment name.
@@ -46,10 +51,26 @@ class FinancialKGBuilder:
         )
 
     def extract_text_from_pdf(self, file_path: str) -> str:
+        """
+        Extract text from a PDF file using PyMuPDF.
+        Args:
+            file_path (str): Path to the PDF file.
+        Returns:
+            str: Extracted text from the PDF file.
+        """
+
         doc = pymupdf.open(file_path)
         return "\n".join([page.get_text() for page in doc])
 
     def build_prompt(self, text: str) -> str:
+        """
+        Build the prompt for the LLM based on the provided text and ontology.
+        Args:
+            text (str): The text to be analyzed.
+        Returns:
+            str: The formatted prompt for the LLM.
+        """
+
         ontology_desc = self.ontology.format_for_prompt()
         prompt = f"""
         You are a financial information extraction expert.
@@ -87,6 +108,14 @@ class FinancialKGBuilder:
 
 
     def analyze_text_with_llm(self, text: str) -> Dict:
+        """
+        Analyze the provided text using the LLM to extract a knowledge graph.
+        Args:
+            text (str): The text to be analyzed.
+        Returns:
+            dict: The extracted knowledge graph in JSON format.
+        """
+
         prompt = self.build_prompt(text)
 
         response = self.client.chat.completions.create(
@@ -113,6 +142,13 @@ class FinancialKGBuilder:
         
     
     def save_knowledge_graph(self, data: dict, project_name: str):
+        """
+        Save the knowledge graph data to a JSON file.
+        Args:
+            data (dict): The knowledge graph data to be saved.
+            project_name (str): The name of the project for file naming.
+        """
+
         output_file: str = Path(__file__).resolve().parents[1] / "examples" / f"knowledge_graph_{project_name}_{self.model_name}.json"
         with open(output_file, "w") as f:
             json.dump(data, f, indent=2)
