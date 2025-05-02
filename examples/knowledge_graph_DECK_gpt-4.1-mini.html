@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "e1", "label": "DESK", "shape": "dot", "title": "Type: pekg:Company\u003cbr\u003ename: DESK\u003cbr\u003ealiases: [\u0027DECK\u0027]\u003cbr\u003eattributes: {\u0027annualRevenue\u0027: 4000000, \u0027revenueCurrency\u0027: \u0027EUR\u0027, \u0027EBITDA\u0027: 800000, \u0027headcount\u0027: 30, \u0027EFN\u0027: \u0027less than one year EBITDA\u0027}"}, {"color": "#97c2fc", "id": "e2", "label": "Cr\u00e9dit Agricole", "shape": "dot", "title": "Type: pekg:Company\u003cbr\u003ename: Cr\u00e9dit Agricole"}, {"color": "#97c2fc", "id": "e3", "label": "L\u2019Or\u00e9al", "shape": "dot", "title": "Type: pekg:Company\u003cbr\u003ename: L\u2019Or\u00e9al"}, {"color": "#97c2fc", "id": "e4", "label": "Sanofi", "shape": "dot", "title": "Type: pekg:Company\u003cbr\u003ename: Sanofi"}, {"color": "#97c2fc", "id": "e5", "label": "Thales", "shape": "dot", "title": "Type: pekg:Company\u003cbr\u003ename: Thales"}, {"color": "#97c2fc", "id": "e6", "label": "Danone", "shape": "dot", "title": "Type: pekg:Company\u003cbr\u003ename: Danone"}, {"color": "#97c2fc", "id": "e7", "label": "Souriau", "shape": "dot", "title": "Type: pekg:Company\u003cbr\u003ename: Souriau"}, {"color": "#97c2fc", "id": "e8", "label": "CEA", "shape": "dot", "title": "Type: pekg:Company\u003cbr\u003ename: CEA"}, {"color": "#97c2fc", "id": "e9", "label": "SEB", "shape": "dot", "title": "Type: pekg:Company\u003cbr\u003ename: SEB"}, {"color": "#97c2fc", "id": "e10", "label": "Safran", "shape": "dot", "title": "Type: pekg:Company\u003cbr\u003ename: Safran"}, {"color": "#97c2fc", "id": "e11", "label": "Orange", "shape": "dot", "title": "Type: pekg:Company\u003cbr\u003ename: Orange"}, {"color": "#97c2fc", "id": "e12", "label": "Dassault", "shape": "dot", "title": "Type: pekg:Company\u003cbr\u003ename: Dassault"}, {"color": "#97c2fc", "id": "e13", "label": "Airbus", "shape": "dot", "title": "Type: pekg:Company\u003cbr\u003ename: Airbus"}, {"color": "#97c2fc", "id": "e14", "label": "Colas", "shape": "dot", "title": "Type: pekg:Company\u003cbr\u003ename: Colas"}, {"color": "#97c2fc", "id": "e15", "label": "Club Med", "shape": "dot", "title": "Type: pekg:Company\u003cbr\u003ename: Club Med"}, {"color": "#97c2fc", "id": "e16", "label": "C\u00e9line", "shape": "dot", "title": "Type: pekg:Company\u003cbr\u003ename: C\u00e9line"}, {"color": "#97c2fc", "id": "e17", "label": "Parfums Christian Dior", "shape": "dot", "title": "Type: pekg:Company\u003cbr\u003ename: Parfums Christian Dior"}, {"color": "#97c2fc", "id": "e18", "label": "Mo\u00ebt Hennessy", "shape": "dot", "title": "Type: pekg:Company\u003cbr\u003ename: Mo\u00ebt Hennessy"}, {"color": "#97c2fc", "id": "e19", "label": "Minist\u00e8re de l\u2019Int\u00e9rieur", "shape": "dot", "title": "Type: pekg:GovernmentBody\u003cbr\u003ename: Minist\u00e8re de l\u2019Int\u00e9rieur"}, {"color": "#97c2fc", "id": "e20", "label": "Minist\u00e8re des Affaires \u00c9trang\u00e8res", "shape": "dot", "title": "Type: pekg:GovernmentBody\u003cbr\u003ename: Minist\u00e8re des Affaires \u00c9trang\u00e8res"}, {"color": "#97c2fc", "id": "e21", "label": "Minist\u00e8re de la D\u00e9fense", "shape": "dot", "title": "Type: pekg:GovernmentBody\u003cbr\u003ename: Minist\u00e8re de la D\u00e9fense"}, {"color": "#97c2fc", "id": "e22", "label": "Minist\u00e8re de la Transition \u00c9cologique et de la Coh\u00e9sion des Territoires", "shape": "dot", "title": "Type: pekg:GovernmentBody\u003cbr\u003ename: Minist\u00e8re de la Transition \u00c9cologique et de la Coh\u00e9sion des Territoires"}, {"color": "#97c2fc", "id": "e23", "label": "DGA", "shape": "dot", "title": "Type: pekg:GovernmentBody\u003cbr\u003ename: DGA"}, {"color": "#97c2fc", "id": "e24", "label": "Gendarmerie Nationale", "shape": "dot", "title": "Type: pekg:GovernmentBody\u003cbr\u003ename: Gendarmerie Nationale"}, {"color": "#97c2fc", "id": "e25", "label": "Naval Group", "shape": "dot", "title": "Type: pekg:Company\u003cbr\u003ename: Naval Group"}, {"color": "#97c2fc", "id": "e26", "label": "Dominique Tr\u00e9chot", "shape": "dot", "title": "Type: pekg:Person\u003cbr\u003ename: Dominique Tr\u00e9chot\u003cbr\u003econtact: {\u0027phone\u0027: \u002706 72 73 78 08\u0027, \u0027email\u0027: \u0027dominique.trechot@carmin-finance.com\u0027}"}, {"color": "#97c2fc", "id": "e27", "label": "Carmin Finance", "shape": "dot", "title": "Type: pekg:Company\u003cbr\u003ename: Carmin Finance\u003cbr\u003eaddress: 153, boulevard Haussmann, 75008 Paris\u003cbr\u003ewebsite: groupe-carmin.com\u003cbr\u003eORIAS: 13000921"}, {"color": "#97c2fc", "id": "e28", "label": "ICFG", "shape": "dot", "title": "Type: pekg:Committee\u003cbr\u003ename: ICFG"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "e1", "label": "hasCustomer", "to": "e2"}, {"arrows": "to", "from": "e1", "label": "hasCustomer", "to": "e3"}, {"arrows": "to", "from": "e1", "label": "hasCustomer", "to": "e4"}, {"arrows": "to", "from": "e1", "label": "hasCustomer", "to": "e5"}, {"arrows": "to", "from": "e1", "label": "hasCustomer", "to": "e6"}, {"arrows": "to", "from": "e1", "label": "hasCustomer", "to": "e7"}, {"arrows": "to", "from": "e1", "label": "hasCustomer", "to": "e8"}, {"arrows": "to", "from": "e1", "label": "hasCustomer", "to": "e9"}, {"arrows": "to", "from": "e1", "label": "hasCustomer", "to": "e10"}, {"arrows": "to", "from": "e1", "label": "hasCustomer", "to": "e11"}, {"arrows": "to", "from": "e1", "label": "hasCustomer", "to": "e12"}, {"arrows": "to", "from": "e1", "label": "hasCustomer", "to": "e13"}, {"arrows": "to", "from": "e1", "label": "hasCustomer", "to": "e14"}, {"arrows": "to", "from": "e1", "label": "hasCustomer", "to": "e15"}, {"arrows": "to", "from": "e1", "label": "hasCustomer", "to": "e16"}, {"arrows": "to", "from": "e1", "label": "hasCustomer", "to": "e17"}, {"arrows": "to", "from": "e1", "label": "hasCustomer", "to": "e18"}, {"arrows": "to", "from": "e1", "label": "contractsWithGov", "to": "e19"}, {"arrows": "to", "from": "e1", "label": "contractsWithGov", "to": "e20"}, {"arrows": "to", "from": "e1", "label": "contractsWithGov", "to": "e21"}, {"arrows": "to", "from": "e1", "label": "contractsWithGov", "to": "e22"}, {"arrows": "to", "from": "e1", "label": "contractsWithGov", "to": "e23"}, {"arrows": "to", "from": "e1", "label": "contractsWithGov", "to": "e24"}, {"arrows": "to", "from": "e1", "label": "hasCustomer", "to": "e25"}, {"arrows": "to", "from": "e27", "label": "hasExecutive", "to": "e26"}, {"arrows": "to", "from": "e26", "label": "holdsPosition", "to": "e27"}, {"arrows": "to", "from": "e27", "label": "hasMembership", "to": "e28"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shape": "dot", "size": 16, "font": {"size": 14}}, "edges": {"arrows": {"to": {"enabled": true}}, "font": {"align": "middle"}}, "interaction": {"hover": true, "tooltipDelay": 200}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

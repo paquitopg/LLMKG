@@ -1,0 +1,385 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "DESK"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "Cap Gemini"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "Alixio"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "Cr\u00e9dit Agricole"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "L'Or\u00e9al"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Company",
+      "name": "Sanofi"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Company",
+      "name": "Thales"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Company",
+      "name": "Danone"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Company",
+      "name": "Souriau"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Company",
+      "name": "CEA"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Company",
+      "name": "SEB"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Company",
+      "name": "Safran"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Company",
+      "name": "Orange"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Company",
+      "name": "Dassault"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Company",
+      "name": "Airbus"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Company",
+      "name": "Colas"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Company",
+      "name": "Club Med"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:Company",
+      "name": "C\u00e9line"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:Company",
+      "name": "Parfums Christian Dior"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:Company",
+      "name": "Mo\u00ebt Hennesy"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:GovernmentBody",
+      "name": "Minist\u00e8re de l'Int\u00e9rieur"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:GovernmentBody",
+      "name": "Minist\u00e8re des Affaires \u00c9trang\u00e8res"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:GovernmentBody",
+      "name": "Minist\u00e8re de la D\u00e9fense"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:GovernmentBody",
+      "name": "Minist\u00e8re de la Transition \u00c9cologique"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:GovernmentBody",
+      "name": "Minist\u00e8re de la Coh\u00e9sion des Territoires"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:GovernmentBody",
+      "name": "DGA"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:GovernmentBody",
+      "name": "Gendarmerie Nationale"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:Company",
+      "name": "Naval Group"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:Product",
+      "name": "Suites Logicielles"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:UseCase",
+      "name": "Gestion de crise"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:UseCase",
+      "name": "S\u00fbret\u00e9"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "name": "Revenue",
+      "metricValue": 4000000,
+      "metricCurrency": "EUR"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "name": "EBITDA",
+      "metricValue": 800000,
+      "metricCurrency": "EUR"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:HeadcountMetric",
+      "headcountValue": 30
+    },
+    {
+      "id": "e35",
+      "type": "pekg:Person",
+      "name": "Dominique Tr\u00e9chot"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:Company",
+      "name": "Carmin Finance"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:Location",
+      "name": "153, boulevard Haussmann, 75008 Paris"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:Committee",
+      "name": "ICFG"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:contractsWithGov"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:contractsWithGov"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:contractsWithGov"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:contractsWithGov"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:contractsWithGov"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:contractsWithGov"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:contractsWithGov"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:contractsWithGov"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e29",
+      "target": "e30",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e29",
+      "target": "e31",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:hasAdvisor"
+    },
+    {
+      "source": "e35",
+      "target": "e36",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e36",
+      "target": "e37",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e36",
+      "target": "e38",
+      "type": "pekg:hasCommittee"
+    },
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:competesWith"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:competesWith"
+    }
+  ]
+}

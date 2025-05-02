@@ -1,0 +1,131 @@
+#################################################################
+# Private-Equity Knowledge-Graph Ontology — FLAT KG MODEL (v0.6)
+# • Entities (“nodes”) and Relations only – NO subclass hierarchy
+# • Temporal information lives on relation instances (not modelled here)
+# • Document / media provenance classes removed
+# • Intended for property‑graph or RDF* stores where edge properties
+#   can carry validFrom / validTo, confidence, etc.
+#################################################################
+@prefix pekg: <http://example.com/pekg#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+
+###########################
+# ENTITY (NODE) CLASSES
+###########################
+pekg:Company                 rdf:type owl:Class .
+pekg:LegalEntity             rdf:type owl:Class .
+pekg:Person                  rdf:type owl:Class .
+pekg:Department              rdf:type owl:Class .
+pekg:Position                rdf:type owl:Class .
+pekg:Committee               rdf:type owl:Class .
+pekg:Product                 rdf:type owl:Class .
+pekg:UseCase                 rdf:type owl:Class .
+pekg:Investor                rdf:type owl:Class .
+pekg:Advisor                 rdf:type owl:Class .
+pekg:GovernmentBody          rdf:type owl:Class .
+
+pekg:FinancialInstrument     rdf:type owl:Class .
+pekg:OwnershipStake          rdf:type owl:Class .
+pekg:Contract                rdf:type owl:Class .
+pekg:IntellectualProperty    rdf:type owl:Class .
+pekg:Litigation              rdf:type owl:Class .
+pekg:Risk                    rdf:type owl:Class .
+pekg:RegulatoryRequirement   rdf:type owl:Class .
+pekg:PolicyDocument          rdf:type owl:Class .
+
+# Corporate events (each modelled as its own node type)
+pekg:CorporateEvent          rdf:type owl:Class .
+pekg:FundingRound            rdf:type owl:Class .
+pekg:AcquisitionEvent        rdf:type owl:Class .
+pekg:MergerEvent             rdf:type owl:Class .
+pekg:IPOEvent                rdf:type owl:Class .
+pekg:ExitEvent               rdf:type owl:Class .
+pekg:LeadershipChangeEvent   rdf:type owl:Class .
+
+# Metrics
+pekg:FinancialMetric         rdf:type owl:Class .
+pekg:HeadcountMetric         rdf:type owl:Class .
+pekg:MarketMetric            rdf:type owl:Class .
+pekg:TaxMetric               rdf:type owl:Class .
+pekg:KPI                     rdf:type owl:Class .
+
+# News & geography
+pekg:NewsItem                rdf:type owl:Class .
+pekg:Location                rdf:type owl:Class .
+
+###########################
+# RELATION (EDGE) PROPERTIES
+# Temporal validity (start / end dates) will be stored as
+# edge‑level attributes in the target graph store.
+###########################
+
+## 1. Governance & people
+pekg:ownsEntity              rdf:type owl:ObjectProperty .          # Company → LegalEntity
+pekg:hasExecutive            rdf:type owl:ObjectProperty .          # Company|LegalEntity → Person
+pekg:hasBoardMember          rdf:type owl:ObjectProperty .          # Company → Person
+pekg:employs                 rdf:type owl:ObjectProperty .          # Company → Person
+pekg:hasDepartment           rdf:type owl:ObjectProperty .          # Company → Department
+pekg:holdsPosition           rdf:type owl:ObjectProperty .          # Person  → Position
+pekg:isMemberOfCommittee     rdf:type owl:ObjectProperty .          # Person  → Committee
+pekg:hasCommittee            rdf:type owl:ObjectProperty .          # Company → Committee
+
+## 2. Products, markets, competitors
+pekg:targetsUseCase          rdf:type owl:ObjectProperty .          # Product → UseCase
+pekg:operatesInMarket        rdf:type owl:ObjectProperty .          # Company → UseCase
+pekg:competesWith            rdf:type owl:ObjectProperty , owl:SymmetricProperty .   # Company ↔ Company
+pekg:hasCustomer             rdf:type owl:ObjectProperty .          # Company → Company
+pekg:hasPartnershipWith      rdf:type owl:ObjectProperty , owl:SymmetricProperty .   # Company ↔ Company
+pekg:hasContractor           rdf:type owl:ObjectProperty .          # Company → Company
+
+## 3. Geography
+pekg:hasHeadquartersIn       rdf:type owl:ObjectProperty .          # Company → Location
+pekg:hasOfficeIn             rdf:type owl:ObjectProperty .          # Company → Location
+pekg:operatesInLocation      rdf:type owl:ObjectProperty .          # Company → Location
+pekg:registeredIn            rdf:type owl:ObjectProperty .          # LegalEntity → Location
+
+## 4. Capital structure & transactions
+pekg:hasOwnershipStake       rdf:type owl:ObjectProperty .          # Company → OwnershipStake
+pekg:hasInvestor             rdf:type owl:ObjectProperty .          # OwnershipStake → Investor
+pekg:inLegalEntity           rdf:type owl:ObjectProperty .          # OwnershipStake → LegalEntity
+
+pekg:receivedInvestment      rdf:type owl:ObjectProperty .          # Company → FundingRound
+pekg:investsIn               rdf:type owl:ObjectProperty .          # Investor → Company
+pekg:acquired                rdf:type owl:ObjectProperty .          # AcquisitionEvent → Company (target)
+pekg:acquirer                rdf:type owl:ObjectProperty .          # AcquisitionEvent → Company (buyer)
+pekg:mergedWith              rdf:type owl:ObjectProperty , owl:SymmetricProperty .   # Company ↔ Company
+pekg:hasEvent                rdf:type owl:ObjectProperty .          # Company → CorporateEvent
+
+## 5. Contracts, IP, compliance
+pekg:signsContract           rdf:type owl:ObjectProperty .          # Company → Contract
+pekg:holdsIP                 rdf:type owl:ObjectProperty .          # Company → IntellectualProperty
+pekg:partyToLitigation       rdf:type owl:ObjectProperty .          # Company → Litigation
+pekg:hasRisk                 rdf:type owl:ObjectProperty .          # Company → Risk
+pekg:subjectTo               rdf:type owl:ObjectProperty .          # Company → RegulatoryRequirement
+pekg:hasPolicy               rdf:type owl:ObjectProperty .          # Company → PolicyDocument
+pekg:contractsWithGov        rdf:type owl:ObjectProperty .          # Company → GovernmentBody
+
+## 6. Metrics & analytics
+pekg:reportsMetric           rdf:type owl:ObjectProperty .          # Company → FinancialMetric
+pekg:hasHeadcount            rdf:type owl:ObjectProperty .          # Department → HeadcountMetric
+pekg:hasKPI                  rdf:type owl:ObjectProperty .          # Company → KPI
+
+## 7. News & sentiment
+pekg:mentionsCompany         rdf:type owl:ObjectProperty .          # NewsItem → Company
+pekg:hasSentiment            rdf:type owl:ObjectProperty .          # NewsItem → Risk
+
+###########################
+# DATATYPE (ATTRIBUTE) PROPERTIES
+# Still useful for literal values stored on nodes
+###########################
+pekg:metricValue             rdf:type owl:DatatypeProperty ; rdfs:domain pekg:FinancialMetric , pekg:MarketMetric ; rdfs:range xsd:decimal .
+pekg:metricCurrency          rdf:type owl:DatatypeProperty ; rdfs:domain pekg:FinancialMetric ; rdfs:range xsd:string .
+pekg:metricUnit              rdf:type owl:DatatypeProperty ; rdfs:domain pekg:FinancialMetric , pekg:KPI ; rdfs:range xsd:string .
+pekg:percentageValue         rdf:type owl:DatatypeProperty ; rdfs:domain pekg:FinancialMetric ; rdfs:range xsd:decimal .
+pekg:headcountValue          rdf:type owl:DatatypeProperty ; rdfs:domain pekg:HeadcountMetric ; rdfs:range xsd:integer .
+pekg:roundDate               rdf:type owl:DatatypeProperty ; rdfs:domain pekg:FundingRound ; rdfs:range xsd:date .
+pekg:roundAmount             rdf:type owl:DatatypeProperty ; rdfs:domain pekg:FundingRound ; rdfs:range xsd:decimal .
+pekg:latitude                rdf:type owl:DatatypeProperty ; rdfs:domain pekg:Location ; rdfs:range xsd:decimal .
+pekg:longitude               rdf:type owl:DatatypeProperty ; rdfs:domain pekg:Location ; rdfs:range xsd:decimal .

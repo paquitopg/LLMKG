@@ -1,0 +1,1697 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "CNIM Group"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "Airelle"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Department",
+      "name": "DSI",
+      "description": "Division Syst\u00e8mes Industriels"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Department",
+      "name": "Bertin"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:LegalEntity",
+      "name": "CNIM Industrial Systems"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:LegalEntity",
+      "name": "Bertin Technologies"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:LegalEntity",
+      "name": "CNIM E&E Participations"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:LegalEntity",
+      "name": "CNIM E&E EPC"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:LegalEntity",
+      "name": "CNIM E&E O&M"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:LegalEntity",
+      "name": "CNIM E&E Services"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:LegalEntity",
+      "name": "LAB"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:LegalEntity",
+      "name": "CNIM HK Limited"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:LegalEntity",
+      "name": "Bertin IT"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Location",
+      "name": "France"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Location",
+      "name": "La Seyne-sur-Mer"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Location",
+      "name": "Ayguesvives"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Location",
+      "name": "Gaoming"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:Location",
+      "name": "Aix-en-Provence"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:Location",
+      "name": "Pertuis"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:Location",
+      "name": "Frankfurt"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:Location",
+      "name": "Thiron Gardais"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:Location",
+      "name": "Basingstoke"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:Location",
+      "name": "Montigny-le-Bretonneux"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:Location",
+      "name": "Lund"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:Location",
+      "name": "Kalmar"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:Location",
+      "name": "Europe"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:Location",
+      "name": "Asia"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:Product",
+      "name": "Motorized Floating Bridge (PFM)"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:Product",
+      "name": "Laser M\u00e9gajoule (LMJ)"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:Product",
+      "name": "Frequency Conversion and Laser Beam Focusing Systems (SCF)"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:Product",
+      "name": "SaphyRAD-E"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:Product",
+      "name": "AMI software"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:Product",
+      "name": "Assay kits and biological reagents"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:Product",
+      "name": "Speech recognition solution"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:Product",
+      "name": "Trusted data gateway"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:Product",
+      "name": "Ground sensor systems"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:Product",
+      "name": "Military radiological instruments"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:Product",
+      "name": "Environmental Radiation Monitoring Systems"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:Product",
+      "name": "Escalators"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:Product",
+      "name": "Nozzle casings for Ariane launchers"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:Product",
+      "name": "Modular Assault Bridge"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:Product",
+      "name": "Amphibious Landing Craft"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:Product",
+      "name": "Stratospheric balloons"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:Product",
+      "name": "Missile-launching systems for nuclear submarines"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:Product",
+      "name": "Large-scale scientific instruments"
+    },
+    {
+      "id": "e46",
+      "type": "pekg:Product",
+      "name": "Turnkey high-powered absorption chillers"
+    },
+    {
+      "id": "e47",
+      "type": "pekg:Product",
+      "name": "Landing crafts for amphibious operations"
+    },
+    {
+      "id": "e48",
+      "type": "pekg:Product",
+      "name": "Balloons and airship-based platforms"
+    },
+    {
+      "id": "e49",
+      "type": "pekg:Product",
+      "name": "Laboratory equipment, kits and reagents"
+    },
+    {
+      "id": "e50",
+      "type": "pekg:Product",
+      "name": "Medical waste solutions"
+    },
+    {
+      "id": "e51",
+      "type": "pekg:Product",
+      "name": "High performance optical and opto-mechanical systems"
+    },
+    {
+      "id": "e52",
+      "type": "pekg:Product",
+      "name": "Systems and services to detect, measure and identify ionizing radiation"
+    },
+    {
+      "id": "e53",
+      "type": "pekg:Product",
+      "name": "CBRN threats detection and identification solutions"
+    },
+    {
+      "id": "e54",
+      "type": "pekg:Product",
+      "name": "Optronic surveillance and surveillance sensors network"
+    },
+    {
+      "id": "e55",
+      "type": "pekg:Product",
+      "name": "Cyber intelligence & speech solutions"
+    },
+    {
+      "id": "e56",
+      "type": "pekg:Product",
+      "name": "Cyber security solutions"
+    },
+    {
+      "id": "e57",
+      "type": "pekg:UseCase",
+      "name": "Defense"
+    },
+    {
+      "id": "e58",
+      "type": "pekg:UseCase",
+      "name": "Nuclear and Big Sciences"
+    },
+    {
+      "id": "e59",
+      "type": "pekg:UseCase",
+      "name": "Industrial Solutions"
+    },
+    {
+      "id": "e60",
+      "type": "pekg:UseCase",
+      "name": "Space"
+    },
+    {
+      "id": "e61",
+      "type": "pekg:UseCase",
+      "name": "Life Sciences"
+    },
+    {
+      "id": "e62",
+      "type": "pekg:UseCase",
+      "name": "Cyber security and cyber intelligence"
+    },
+    {
+      "id": "e63",
+      "type": "pekg:UseCase",
+      "name": "Health & Life Sciences"
+    },
+    {
+      "id": "e64",
+      "type": "pekg:UseCase",
+      "name": "Naval"
+    },
+    {
+      "id": "e65",
+      "type": "pekg:UseCase",
+      "name": "IT solutions to Industry"
+    },
+    {
+      "id": "e66",
+      "type": "pekg:Company",
+      "name": "DGA"
+    },
+    {
+      "id": "e67",
+      "type": "pekg:Company",
+      "name": "CEA"
+    },
+    {
+      "id": "e68",
+      "type": "pekg:Company",
+      "name": "Nexter"
+    },
+    {
+      "id": "e69",
+      "type": "pekg:Company",
+      "name": "Naval Group"
+    },
+    {
+      "id": "e70",
+      "type": "pekg:Company",
+      "name": "Ariane Group"
+    },
+    {
+      "id": "e71",
+      "type": "pekg:Company",
+      "name": "EDF"
+    },
+    {
+      "id": "e72",
+      "type": "pekg:Company",
+      "name": "Deutsche Telekom"
+    },
+    {
+      "id": "e73",
+      "type": "pekg:GovernmentBody",
+      "name": "French Ministry of Armed Forces"
+    },
+    {
+      "id": "e74",
+      "type": "pekg:GovernmentBody",
+      "name": "Direction G\u00e9n\u00e9rale de l'Armement"
+    },
+    {
+      "id": "e75",
+      "type": "pekg:GovernmentBody",
+      "name": "French Ministry of Defense"
+    },
+    {
+      "id": "e76",
+      "type": "pekg:GovernmentBody",
+      "name": "Military Applications Directorate of France\u2019s Atomic and Alternative Energy Authority"
+    },
+    {
+      "id": "e77",
+      "type": "pekg:GovernmentBody",
+      "name": "European Union"
+    },
+    {
+      "id": "e78",
+      "type": "pekg:CorporateEvent",
+      "name": "ITER Project"
+    },
+    {
+      "id": "e79",
+      "type": "pekg:FinancialMetric",
+      "name": "2018 Revenues",
+      "metricValue": 200000000,
+      "metricCurrency": "EUR",
+      "metricUnit": "EUR"
+    },
+    {
+      "id": "e80",
+      "type": "pekg:HeadcountMetric",
+      "name": "Employees",
+      "headcountValue": 1350
+    },
+    {
+      "id": "e81",
+      "type": "pekg:HeadcountMetric",
+      "name": "Engineers",
+      "headcountValue": 735
+    },
+    {
+      "id": "e82",
+      "type": "pekg:HeadcountMetric",
+      "name": "Technicians and workers",
+      "headcountValue": 290
+    },
+    {
+      "id": "e83",
+      "type": "pekg:KPI",
+      "name": "Defense Revenue Share",
+      "metricUnit": "%",
+      "metricValue": 40
+    },
+    {
+      "id": "e84",
+      "type": "pekg:KPI",
+      "name": "Nuclear and Big Sciences Revenue Share",
+      "metricUnit": "%",
+      "metricValue": 35
+    },
+    {
+      "id": "e85",
+      "type": "pekg:KPI",
+      "name": "Others Revenue Share",
+      "metricUnit": "%",
+      "metricValue": 25
+    },
+    {
+      "id": "e86",
+      "type": "pekg:KPI",
+      "name": "Equipment & instrumentation systems Revenue Share",
+      "metricUnit": "%",
+      "metricValue": 40
+    },
+    {
+      "id": "e87",
+      "type": "pekg:KPI",
+      "name": "Software & innovative engineering Revenue Share",
+      "metricUnit": "%",
+      "metricValue": 10
+    },
+    {
+      "id": "e88",
+      "type": "pekg:KPI",
+      "name": "Large-scale systems & manufacturing Revenue Share",
+      "metricUnit": "%",
+      "metricValue": 50
+    },
+    {
+      "id": "e89",
+      "type": "pekg:KPI",
+      "name": "DSI Defense Revenue",
+      "metricUnit": "EUR",
+      "metricValue": 40000000
+    },
+    {
+      "id": "e90",
+      "type": "pekg:KPI",
+      "name": "DSI Nuclear and Big Sciences Revenue",
+      "metricUnit": "EUR",
+      "metricValue": 40000000
+    },
+    {
+      "id": "e91",
+      "type": "pekg:KPI",
+      "name": "DSI Industrial Solutions Revenue",
+      "metricUnit": "EUR",
+      "metricValue": 20000000
+    },
+    {
+      "id": "e92",
+      "type": "pekg:KPI",
+      "name": "Bertin Systems & Instrumentation Revenue",
+      "metricUnit": "EUR",
+      "metricValue": 80000000
+    },
+    {
+      "id": "e93",
+      "type": "pekg:KPI",
+      "name": "Bertin Information Technologies Revenue",
+      "metricUnit": "EUR",
+      "metricValue": 10000000
+    },
+    {
+      "id": "e94",
+      "type": "pekg:KPI",
+      "name": "PFM vehicles crossing capacity per hour",
+      "metricUnit": "vehicles/hour",
+      "metricValue": 250
+    },
+    {
+      "id": "e95",
+      "type": "pekg:KPI",
+      "name": "PFM set-up time",
+      "metricUnit": "minutes",
+      "metricValue": 30
+    },
+    {
+      "id": "e96",
+      "type": "pekg:KPI",
+      "name": "PFM 3rd generation",
+      "metricUnit": "generation",
+      "metricValue": 3
+    },
+    {
+      "id": "e97",
+      "type": "pekg:KPI",
+      "name": "PFM alignment accuracy",
+      "metricUnit": "microradian",
+      "metricValue": 1
+    },
+    {
+      "id": "e98",
+      "type": "pekg:KPI",
+      "name": "SCFs manufactured",
+      "metricUnit": "units",
+      "metricValue": 44
+    },
+    {
+      "id": "e99",
+      "type": "pekg:KPI",
+      "name": "SCF parts to be assembled in clean room",
+      "metricUnit": "units",
+      "metricValue": 1500
+    },
+    {
+      "id": "e100",
+      "type": "pekg:KPI",
+      "name": "SCF annual supply",
+      "metricUnit": "units/year",
+      "metricValue": 4
+    },
+    {
+      "id": "e101",
+      "type": "pekg:KPI",
+      "name": "SCF annual supply upper",
+      "metricUnit": "units/year",
+      "metricValue": 6
+    },
+    {
+      "id": "e102",
+      "type": "pekg:KPI",
+      "name": "ITER SSAT height",
+      "metricUnit": "meters",
+      "metricValue": 22
+    },
+    {
+      "id": "e103",
+      "type": "pekg:KPI",
+      "name": "ITER SSAT weight",
+      "metricUnit": "metric tons",
+      "metricValue": 880
+    },
+    {
+      "id": "e104",
+      "type": "pekg:KPI",
+      "name": "ITER SSAT lifting capacity",
+      "metricUnit": "metric tons",
+      "metricValue": 400
+    },
+    {
+      "id": "e105",
+      "type": "pekg:KPI",
+      "name": "Ariane 5 nozzle casings",
+      "metricUnit": "units",
+      "metricValue": "all"
+    },
+    {
+      "id": "e106",
+      "type": "pekg:KPI",
+      "name": "Ariane 6 nozzle casings",
+      "metricUnit": "units",
+      "metricValue": "developed"
+    },
+    {
+      "id": "e107",
+      "type": "pekg:KPI",
+      "name": "French Ministry of Armed Forces 2020 budget",
+      "metricUnit": "EUR",
+      "metricValue": 37500000000
+    },
+    {
+      "id": "e108",
+      "type": "pekg:KPI",
+      "name": "Loi de Programmation Militaire annual growth until 2022",
+      "metricUnit": "EUR",
+      "metricValue": 1700000000
+    },
+    {
+      "id": "e109",
+      "type": "pekg:KPI",
+      "name": "Loi de Programmation Militaire annual growth after 2022",
+      "metricUnit": "EUR",
+      "metricValue": 3000000000
+    },
+    {
+      "id": "e110",
+      "type": "pekg:KPI",
+      "name": "DGA orders in 2019",
+      "metricUnit": "EUR",
+      "metricValue": 13000000000
+    },
+    {
+      "id": "e111",
+      "type": "pekg:KPI",
+      "name": "DGA innovation investment in 2019",
+      "metricUnit": "EUR",
+      "metricValue": 900000000
+    },
+    {
+      "id": "e112",
+      "type": "pekg:KPI",
+      "name": "French armed forces nuclear deterrence annual spend",
+      "metricUnit": "EUR",
+      "metricValue": 4000000000
+    },
+    {
+      "id": "e113",
+      "type": "pekg:KPI",
+      "name": "French naval industry annual revenues",
+      "metricUnit": "EUR",
+      "metricValue": 9500000000
+    },
+    {
+      "id": "e114",
+      "type": "pekg:KPI",
+      "name": "Global space economy 2018",
+      "metricUnit": "USD",
+      "metricValue": 415000000000
+    },
+    {
+      "id": "e115",
+      "type": "pekg:KPI",
+      "name": "European space industry sales 2018",
+      "metricUnit": "EUR",
+      "metricValue": 8500000000
+    },
+    {
+      "id": "e116",
+      "type": "pekg:KPI",
+      "name": "France nuclear reactors",
+      "metricUnit": "units",
+      "metricValue": 58
+    },
+    {
+      "id": "e117",
+      "type": "pekg:KPI",
+      "name": "France nuclear share of electricity",
+      "metricUnit": "%",
+      "metricValue": 75
+    },
+    {
+      "id": "e118",
+      "type": "pekg:KPI",
+      "name": "France nuclear-based electricity share in Europe",
+      "metricUnit": "%",
+      "metricValue": 50
+    },
+    {
+      "id": "e119",
+      "type": "pekg:KPI",
+      "name": "EU nuclear energy share target 2050",
+      "metricUnit": "%",
+      "metricValue": 25
+    },
+    {
+      "id": "e120",
+      "type": "pekg:KPI",
+      "name": "Cybersecurity global market 2019",
+      "metricUnit": "EUR",
+      "metricValue": 107000000000
+    },
+    {
+      "id": "e121",
+      "type": "pekg:KPI",
+      "name": "Cybersecurity global market growth 2018-2019",
+      "metricUnit": "%",
+      "metricValue": 10
+    },
+    {
+      "id": "e122",
+      "type": "pekg:KPI",
+      "name": "Cybersecurity global market 2022 target",
+      "metricUnit": "USD",
+      "metricValue": 133000000000
+    },
+    {
+      "id": "e123",
+      "type": "pekg:KPI",
+      "name": "European cybersecurity market 2019",
+      "metricUnit": "USD",
+      "metricValue": 36000000000
+    },
+    {
+      "id": "e124",
+      "type": "pekg:KPI",
+      "name": "France GDP military spend",
+      "metricUnit": "%",
+      "metricValue": 2
+    },
+    {
+      "id": "e125",
+      "type": "pekg:KPI",
+      "name": "Defence equipment renewal budget 2019-2023",
+      "metricUnit": "EUR",
+      "metricValue": 113000000000
+    },
+    {
+      "id": "e126",
+      "type": "pekg:KPI",
+      "name": "Spatial launches growth 2018 vs decade ago",
+      "metricUnit": "%",
+      "metricValue": 46
+    },
+    {
+      "id": "e127",
+      "type": "pekg:KPI",
+      "name": "Medical waste management market 2018",
+      "metricUnit": "USD",
+      "metricValue": 11800000000
+    },
+    {
+      "id": "e128",
+      "type": "pekg:KPI",
+      "name": "Medical waste management market 2026 forecast",
+      "metricUnit": "USD",
+      "metricValue": 17900000000
+    },
+    {
+      "id": "e129",
+      "type": "pekg:KPI",
+      "name": "Medical waste management CAGR 2018-2026",
+      "metricUnit": "%",
+      "metricValue": 5.3
+    },
+    {
+      "id": "e130",
+      "type": "pekg:KPI",
+      "name": "Life Science & Analytical Instruments Market CAGR until 2025",
+      "metricUnit": "%",
+      "metricValue": 6.8
+    },
+    {
+      "id": "e131",
+      "type": "pekg:KPI",
+      "name": "Life Science & Analytical Instruments Market 2025",
+      "metricUnit": "USD",
+      "metricValue": 91000000000
+    },
+    {
+      "id": "e132",
+      "type": "pekg:KPI",
+      "name": "R&D spending CAGR 2019-2024",
+      "metricUnit": "%",
+      "metricValue": 3
+    },
+    {
+      "id": "e133",
+      "type": "pekg:KPI",
+      "name": "Bertin partnership with EDF duration",
+      "metricUnit": "years",
+      "metricValue": 25
+    },
+    {
+      "id": "e134",
+      "type": "pekg:KPI",
+      "name": "Bertin AMI software partnership with Deutsche Telekom duration",
+      "metricUnit": "years",
+      "metricValue": 6
+    },
+    {
+      "id": "e135",
+      "type": "pekg:KPI",
+      "name": "Bertin CETIA customer support duration",
+      "metricUnit": "years",
+      "metricValue": 5
+    },
+    {
+      "id": "e136",
+      "type": "pekg:KPI",
+      "name": "ITER project involvement since",
+      "metricUnit": "year",
+      "metricValue": 2009
+    },
+    {
+      "id": "e137",
+      "type": "pekg:KPI",
+      "name": "Ariane partnership since",
+      "metricUnit": "year",
+      "metricValue": 2004
+    },
+    {
+      "id": "e138",
+      "type": "pekg:KPI",
+      "name": "Airelle employees",
+      "metricUnit": "employees",
+      "metricValue": 1350
+    },
+    {
+      "id": "e139",
+      "type": "pekg:KPI",
+      "name": "Airelle engineers",
+      "metricUnit": "engineers",
+      "metricValue": 735
+    },
+    {
+      "id": "e140",
+      "type": "pekg:KPI",
+      "name": "Airelle technicians and workers",
+      "metricUnit": "persons",
+      "metricValue": 290
+    },
+    {
+      "id": "e141",
+      "type": "pekg:KPI",
+      "name": "PFM ferry implementation time",
+      "metricUnit": "minutes",
+      "metricValue": 10
+    },
+    {
+      "id": "e142",
+      "type": "pekg:KPI",
+      "name": "PFM ferry required persons",
+      "metricUnit": "persons",
+      "metricValue": 4
+    },
+    {
+      "id": "e143",
+      "type": "pekg:KPI",
+      "name": "ITER Tokamak height",
+      "metricUnit": "meters",
+      "metricValue": 22
+    },
+    {
+      "id": "e144",
+      "type": "pekg:KPI",
+      "name": "ITER Tokamak weight",
+      "metricUnit": "metric tons",
+      "metricValue": 880
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:ownsEntity"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:hasDepartment"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:hasDepartment"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:ownsEntity"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:ownsEntity"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:ownsEntity"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:ownsEntity"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:ownsEntity"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:ownsEntity"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:ownsEntity"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:ownsEntity"
+    },
+    {
+      "source": "e6",
+      "target": "e13",
+      "type": "pekg:ownsEntity"
+    },
+    {
+      "source": "e2",
+      "target": "e14",
+      "type": "pekg:hasHeadquartersIn"
+    },
+    {
+      "source": "e2",
+      "target": "e26",
+      "type": "pekg:operatesInLocation"
+    },
+    {
+      "source": "e2",
+      "target": "e27",
+      "type": "pekg:operatesInLocation"
+    },
+    {
+      "source": "e3",
+      "target": "e15",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e3",
+      "target": "e16",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e3",
+      "target": "e17",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e4",
+      "target": "e18",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e4",
+      "target": "e19",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e4",
+      "target": "e20",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e4",
+      "target": "e21",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e4",
+      "target": "e22",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e4",
+      "target": "e23",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e4",
+      "target": "e24",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e4",
+      "target": "e25",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e2",
+      "target": "e57",
+      "type": "pekg:operatesInMarket"
+    },
+    {
+      "source": "e2",
+      "target": "e58",
+      "type": "pekg:operatesInMarket"
+    },
+    {
+      "source": "e2",
+      "target": "e59",
+      "type": "pekg:operatesInMarket"
+    },
+    {
+      "source": "e2",
+      "target": "e60",
+      "type": "pekg:operatesInMarket"
+    },
+    {
+      "source": "e2",
+      "target": "e61",
+      "type": "pekg:operatesInMarket"
+    },
+    {
+      "source": "e2",
+      "target": "e62",
+      "type": "pekg:operatesInMarket"
+    },
+    {
+      "source": "e2",
+      "target": "e63",
+      "type": "pekg:operatesInMarket"
+    },
+    {
+      "source": "e2",
+      "target": "e64",
+      "type": "pekg:operatesInMarket"
+    },
+    {
+      "source": "e2",
+      "target": "e65",
+      "type": "pekg:operatesInMarket"
+    },
+    {
+      "source": "e2",
+      "target": "e66",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e2",
+      "target": "e67",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e2",
+      "target": "e68",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e2",
+      "target": "e69",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e2",
+      "target": "e70",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e2",
+      "target": "e71",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e4",
+      "target": "e75",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e4",
+      "target": "e71",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e4",
+      "target": "e72",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e3",
+      "target": "e28",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e3",
+      "target": "e29",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e3",
+      "target": "e30",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e3",
+      "target": "e39",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e3",
+      "target": "e40",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e3",
+      "target": "e41",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e3",
+      "target": "e42",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e3",
+      "target": "e43",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e3",
+      "target": "e44",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e3",
+      "target": "e45",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e3",
+      "target": "e46",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e3",
+      "target": "e47",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e3",
+      "target": "e48",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e4",
+      "target": "e31",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e4",
+      "target": "e32",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e4",
+      "target": "e33",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e4",
+      "target": "e34",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e4",
+      "target": "e35",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e4",
+      "target": "e36",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e4",
+      "target": "e37",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e4",
+      "target": "e38",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e4",
+      "target": "e49",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e4",
+      "target": "e50",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e4",
+      "target": "e51",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e4",
+      "target": "e52",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e4",
+      "target": "e53",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e4",
+      "target": "e54",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e4",
+      "target": "e55",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e4",
+      "target": "e56",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e28",
+      "target": "e57",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e29",
+      "target": "e58",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e31",
+      "target": "e58",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e31",
+      "target": "e61",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e32",
+      "target": "e62",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e33",
+      "target": "e61",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e34",
+      "target": "e62",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e35",
+      "target": "e62",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e36",
+      "target": "e57",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e37",
+      "target": "e57",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e38",
+      "target": "e58",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e39",
+      "target": "e59",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e40",
+      "target": "e60",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e41",
+      "target": "e57",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e42",
+      "target": "e57",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e43",
+      "target": "e60",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e44",
+      "target": "e57",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e45",
+      "target": "e58",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e46",
+      "target": "e59",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e47",
+      "target": "e64",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e48",
+      "target": "e60",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e49",
+      "target": "e61",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e50",
+      "target": "e61",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e51",
+      "target": "e60",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e52",
+      "target": "e58",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e53",
+      "target": "e57",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e54",
+      "target": "e57",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e55",
+      "target": "e62",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e56",
+      "target": "e62",
+      "type": "pekg:targetsUseCase"
+    },
+    {
+      "source": "e2",
+      "target": "e79",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e2",
+      "target": "e80",
+      "type": "pekg:hasHeadcount"
+    },
+    {
+      "source": "e2",
+      "target": "e81",
+      "type": "pekg:hasHeadcount"
+    },
+    {
+      "source": "e2",
+      "target": "e82",
+      "type": "pekg:hasHeadcount"
+    },
+    {
+      "source": "e2",
+      "target": "e83",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e2",
+      "target": "e84",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e2",
+      "target": "e85",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e2",
+      "target": "e86",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e2",
+      "target": "e87",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e2",
+      "target": "e88",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e3",
+      "target": "e89",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e3",
+      "target": "e90",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e3",
+      "target": "e91",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e4",
+      "target": "e92",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e4",
+      "target": "e93",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e28",
+      "target": "e94",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e28",
+      "target": "e95",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e28",
+      "target": "e96",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e28",
+      "target": "e97",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e30",
+      "target": "e98",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e30",
+      "target": "e99",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e30",
+      "target": "e100",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e30",
+      "target": "e101",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e78",
+      "target": "e102",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e78",
+      "target": "e103",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e78",
+      "target": "e104",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e40",
+      "target": "e105",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e40",
+      "target": "e106",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e73",
+      "target": "e107",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e73",
+      "target": "e108",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e73",
+      "target": "e109",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e74",
+      "target": "e110",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e74",
+      "target": "e111",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e73",
+      "target": "e112",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e69",
+      "target": "e113",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e60",
+      "target": "e114",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e60",
+      "target": "e115",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e14",
+      "target": "e116",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e14",
+      "target": "e117",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e26",
+      "target": "e118",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e77",
+      "target": "e119",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e62",
+      "target": "e120",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e62",
+      "target": "e121",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e62",
+      "target": "e122",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e62",
+      "target": "e123",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e73",
+      "target": "e124",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e73",
+      "target": "e125",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e60",
+      "target": "e126",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e50",
+      "target": "e127",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e50",
+      "target": "e128",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e50",
+      "target": "e129",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e61",
+      "target": "e130",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e61",
+      "target": "e131",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e61",
+      "target": "e132",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e4",
+      "target": "e133",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e32",
+      "target": "e134",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e54",
+      "target": "e135",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e78",
+      "target": "e136",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e40",
+      "target": "e137",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e2",
+      "target": "e138",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e2",
+      "target": "e139",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e2",
+      "target": "e140",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e28",
+      "target": "e141",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e28",
+      "target": "e142",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e78",
+      "target": "e143",
+      "type": "pekg:hasKPI"
+    },
+    {
+      "source": "e78",
+      "target": "e144",
+      "type": "pekg:hasKPI"
+    }
+  ]
+}

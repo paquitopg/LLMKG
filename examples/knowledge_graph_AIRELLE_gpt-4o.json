@@ -1,0 +1,354 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "CNIM Group"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "Airelle"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Department",
+      "name": "Innovation & Systems"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Department",
+      "name": "DSI"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Department",
+      "name": "Bertin"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:UseCase",
+      "name": "Defense and Security"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:UseCase",
+      "name": "Nuclear Power"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:UseCase",
+      "name": "Scientific Instruments"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:UseCase",
+      "name": "High Technology Solutions"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:UseCase",
+      "name": "Cyber Security"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:UseCase",
+      "name": "Life Sciences"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:UseCase",
+      "name": "Space"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:UseCase",
+      "name": "Instrumentation"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:UseCase",
+      "name": "IT Solutions"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Location",
+      "name": "France"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Location",
+      "name": "Europe"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Location",
+      "name": "Asia"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:FinancialMetric",
+      "metricValue": 200000000,
+      "metricCurrency": "EUR",
+      "metricUnit": "Revenues",
+      "percentageValue": null
+    },
+    {
+      "id": "e19",
+      "type": "pekg:HeadcountMetric",
+      "headcountValue": 1350
+    },
+    {
+      "id": "e20",
+      "type": "pekg:HeadcountMetric",
+      "headcountValue": 735
+    },
+    {
+      "id": "e21",
+      "type": "pekg:Company",
+      "name": "DGA"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:Company",
+      "name": "CEA"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:Company",
+      "name": "Nexter"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:Company",
+      "name": "Naval Group"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:Company",
+      "name": "Ariane Group"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:Company",
+      "name": "EDF"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:Product",
+      "name": "Motorized Floating Bridge"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:Product",
+      "name": "Laser M\u00e9gajoule"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:Product",
+      "name": "SaphyRAD-E"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:Product",
+      "name": "AMI software"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:Investor",
+      "name": "Rothschild & Co"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:Person",
+      "name": "Augustin Delouvrier"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:Person",
+      "name": "Philippe de Montreynaud"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:Person",
+      "name": "Guillaume Girardeau"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:Person",
+      "name": "Arthur Soussan"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:ownsEntity"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:hasDepartment"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:hasDepartment"
+    },
+    {
+      "source": "e2",
+      "target": "e5",
+      "type": "pekg:hasDepartment"
+    },
+    {
+      "source": "e2",
+      "target": "e6",
+      "type": "pekg:operatesInMarket"
+    },
+    {
+      "source": "e2",
+      "target": "e7",
+      "type": "pekg:operatesInMarket"
+    },
+    {
+      "source": "e2",
+      "target": "e8",
+      "type": "pekg:operatesInMarket"
+    },
+    {
+      "source": "e2",
+      "target": "e9",
+      "type": "pekg:operatesInMarket"
+    },
+    {
+      "source": "e2",
+      "target": "e10",
+      "type": "pekg:operatesInMarket"
+    },
+    {
+      "source": "e2",
+      "target": "e11",
+      "type": "pekg:operatesInMarket"
+    },
+    {
+      "source": "e2",
+      "target": "e12",
+      "type": "pekg:operatesInMarket"
+    },
+    {
+      "source": "e2",
+      "target": "e13",
+      "type": "pekg:operatesInMarket"
+    },
+    {
+      "source": "e2",
+      "target": "e14",
+      "type": "pekg:operatesInMarket"
+    },
+    {
+      "source": "e2",
+      "target": "e15",
+      "type": "pekg:hasHeadquartersIn"
+    },
+    {
+      "source": "e2",
+      "target": "e16",
+      "type": "pekg:operatesInLocation"
+    },
+    {
+      "source": "e2",
+      "target": "e17",
+      "type": "pekg:operatesInLocation"
+    },
+    {
+      "source": "e2",
+      "target": "e18",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e2",
+      "target": "e19",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e4",
+      "target": "e20",
+      "type": "pekg:hasHeadcount"
+    },
+    {
+      "source": "e2",
+      "target": "e21",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e2",
+      "target": "e22",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e2",
+      "target": "e23",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e2",
+      "target": "e24",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e2",
+      "target": "e25",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e2",
+      "target": "e26",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e2",
+      "target": "e27",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e2",
+      "target": "e28",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e5",
+      "target": "e29",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e5",
+      "target": "e30",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e31",
+      "target": "e2",
+      "type": "pekg:investsIn"
+    },
+    {
+      "source": "e31",
+      "target": "e32",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e31",
+      "target": "e33",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e31",
+      "target": "e34",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e31",
+      "target": "e35",
+      "type": "pekg:employs"
+    }
+  ]
+}
