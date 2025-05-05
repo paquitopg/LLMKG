@@ -72,7 +72,7 @@ class MultimodalFinancialKGBuilder:
             width, height = page.rect.width, page.rect.height
             
             # Render page to a pixmap (image)
-            matrix = pymupdf.Matrix(self.page_dpi/72, self.page_dpi/72)  # Scale to desired DPI
+            matrix = pymupdf.Matrix(self.page_dpi/72, self.page_dpi/72) 
             pixmap = page.get_pixmap(matrix=matrix, alpha=False)
             
             # Convert pixmap to PIL Image
