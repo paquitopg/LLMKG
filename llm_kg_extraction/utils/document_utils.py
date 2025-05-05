@@ -73,5 +73,4 @@ class PDFProcessor:
             writer.write(buffer)
             buffer.seek(0)
             pdf_streams.append(buffer)
-            print(f"Page {len(pdf_streams)} extracted as PDF stream.")
         return pdf_streams
