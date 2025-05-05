@@ -1,0 +1,716 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "True Fashion"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Location",
+      "name": "Mumbai",
+      "latitude": null,
+      "longitude": null
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Product",
+      "name": "Cotton Pareo"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Product",
+      "name": "Cotton Scarf"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Product",
+      "name": "Polyester Pareo"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Product",
+      "name": "Viscose Pareo"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Product",
+      "name": "Viscose Scarf"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Product",
+      "name": "Scarves"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Product",
+      "name": "Soft Fabric Scarf"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Product",
+      "name": "Soft Fabric Beach Clothing"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Product",
+      "name": "Soft Fabric Ladies Clothing"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Product",
+      "name": "Paisley Printed Women's Top"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Product",
+      "name": "Paisley Top"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Product",
+      "name": "True Fashion Rust Coloured Top"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Product",
+      "name": "Ladies Shirt"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Product",
+      "name": "Ladies Palazzo"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:FinancialMetric",
+      "name": "Revenue From Operations [Gross] Mar-16",
+      "metricValue": 888.28,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:FinancialMetric",
+      "name": "Revenue From Operations [Gross] Mar-17",
+      "metricValue": 805.87,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "name": "Revenue From Operations [Gross] Mar-18",
+      "metricValue": 844.24,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "name": "Revenue From Operations [Gross] Mar-19",
+      "metricValue": 886.452,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "name": "Revenue From Operations [Gross] Mar-20",
+      "metricValue": 930.7746,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "name": "Revenue From Operations [Gross] Mar-21",
+      "metricValue": 977.3133,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "name": "Total Revenue Mar-16",
+      "metricValue": 934.55,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "name": "Total Revenue Mar-17",
+      "metricValue": 938.76,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:FinancialMetric",
+      "name": "Total Revenue Mar-18",
+      "metricValue": 966.48,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:FinancialMetric",
+      "name": "Total Revenue Mar-19",
+      "metricValue": 1017.25,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:FinancialMetric",
+      "name": "Total Revenue Mar-20",
+      "metricValue": 1070.73,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:FinancialMetric",
+      "name": "Total Revenue Mar-21",
+      "metricValue": 1127.06,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:FinancialMetric",
+      "name": "Profit/Loss After Tax Mar-16",
+      "metricValue": 10.58,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:FinancialMetric",
+      "name": "Profit/Loss After Tax Mar-17",
+      "metricValue": 33.83,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "name": "Profit/Loss After Tax Mar-18",
+      "metricValue": 153.02,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "name": "Profit/Loss After Tax Mar-19",
+      "metricValue": 238.84,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "name": "Profit/Loss After Tax Mar-20",
+      "metricValue": 245.72,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:FinancialMetric",
+      "name": "Profit/Loss After Tax Mar-21",
+      "metricValue": 257.09,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:FinancialMetric",
+      "name": "Total Equity Mar-16",
+      "metricValue": 199.23,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:FinancialMetric",
+      "name": "Total Equity Mar-17",
+      "metricValue": 297.67,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:FinancialMetric",
+      "name": "Total Equity Mar-18",
+      "metricValue": 413.98,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:FinancialMetric",
+      "name": "Total Equity Mar-19",
+      "metricValue": 558.17,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:FinancialMetric",
+      "name": "Total Equity Mar-20",
+      "metricValue": 803.24,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:FinancialMetric",
+      "name": "Total Equity Mar-21",
+      "metricValue": 1059.51,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:FinancialMetric",
+      "name": "Average Total Assets Mar-17",
+      "metricValue": 443.54,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:FinancialMetric",
+      "name": "Average Total Assets Mar-18",
+      "metricValue": 528.58,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:FinancialMetric",
+      "name": "Average Total Assets Mar-19",
+      "metricValue": 705.21,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:FinancialMetric",
+      "name": "Average Total Assets Mar-20",
+      "metricValue": 940.3,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:FinancialMetric",
+      "name": "Average Total Assets Mar-21",
+      "metricValue": 1239.8,
+      "metricCurrency": "INR",
+      "metricUnit": "Lakhs"
+    },
+    {
+      "id": "e46",
+      "type": "pekg:FinancialMetric",
+      "name": "ROE Jan-16",
+      "percentageValue": 5.31
+    },
+    {
+      "id": "e47",
+      "type": "pekg:FinancialMetric",
+      "name": "ROE Jan-17",
+      "percentageValue": 11.36
+    },
+    {
+      "id": "e48",
+      "type": "pekg:FinancialMetric",
+      "name": "ROE Jan-18",
+      "percentageValue": 36.96
+    },
+    {
+      "id": "e49",
+      "type": "pekg:FinancialMetric",
+      "name": "ROE Jan-19",
+      "percentageValue": 42.79
+    },
+    {
+      "id": "e50",
+      "type": "pekg:FinancialMetric",
+      "name": "ROE Jan-20",
+      "percentageValue": 30.59
+    },
+    {
+      "id": "e51",
+      "type": "pekg:FinancialMetric",
+      "name": "ROE Jan-21",
+      "percentageValue": 24.26
+    },
+    {
+      "id": "e52",
+      "type": "pekg:FinancialMetric",
+      "name": "Profit Margin Jan-16",
+      "percentageValue": 1.13
+    },
+    {
+      "id": "e53",
+      "type": "pekg:FinancialMetric",
+      "name": "Profit Margin Jan-17",
+      "percentageValue": 3.6
+    },
+    {
+      "id": "e54",
+      "type": "pekg:FinancialMetric",
+      "name": "Profit Margin Jan-18",
+      "percentageValue": 15.83
+    },
+    {
+      "id": "e55",
+      "type": "pekg:FinancialMetric",
+      "name": "Profit Margin Jan-19",
+      "percentageValue": 23.48
+    },
+    {
+      "id": "e56",
+      "type": "pekg:FinancialMetric",
+      "name": "Profit Margin Jan-20",
+      "percentageValue": 22.95
+    },
+    {
+      "id": "e57",
+      "type": "pekg:FinancialMetric",
+      "name": "Profit Margin Jan-21",
+      "percentageValue": 22.81
+    },
+    {
+      "id": "e58",
+      "type": "pekg:FundingRound",
+      "roundAmount": 145.5,
+      "roundDate": null
+    },
+    {
+      "id": "e59",
+      "type": "pekg:FinancialMetric",
+      "name": "Funds Growth Rate 2018-2019",
+      "percentageValue": 34.83
+    },
+    {
+      "id": "e60",
+      "type": "pekg:FinancialMetric",
+      "name": "Funds Growth Rate 2019-2020",
+      "percentageValue": 43.9
+    },
+    {
+      "id": "e61",
+      "type": "pekg:FinancialMetric",
+      "name": "Funds Growth Rate 2020-2021",
+      "percentageValue": 31.91
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:hasHeadquartersIn"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:holdsIP"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e36",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e40",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e41",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e42",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e43",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e44",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e45",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e46",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e47",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e48",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e49",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e50",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e51",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e52",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e53",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e54",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e55",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e56",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e57",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e58",
+      "type": "pekg:receivedInvestment"
+    },
+    {
+      "source": "e1",
+      "target": "e59",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e60",
+      "type": "pekg:reportsMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e61",
+      "type": "pekg:reportsMetric"
+    }
+  ]
+}
