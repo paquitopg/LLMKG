@@ -8,194 +8,184 @@
     {
       "id": "e2",
       "type": "pekg:Company",
-      "name": "Cap Gemini"
+      "name": "Cr\u00e9dit Agricole"
     },
     {
       "id": "e3",
       "type": "pekg:Company",
-      "name": "Alixio"
+      "name": "L'Or\u00e9al"
     },
     {
       "id": "e4",
       "type": "pekg:Company",
-      "name": "Cr\u00e9dit Agricole"
+      "name": "Sanofi"
     },
     {
       "id": "e5",
       "type": "pekg:Company",
-      "name": "L'Or\u00e9al"
+      "name": "Thales"
     },
     {
       "id": "e6",
       "type": "pekg:Company",
-      "name": "Sanofi"
+      "name": "Danone"
     },
     {
       "id": "e7",
       "type": "pekg:Company",
-      "name": "Thales"
+      "name": "Souriau"
     },
     {
       "id": "e8",
       "type": "pekg:Company",
-      "name": "Danone"
+      "name": "CEA"
     },
     {
       "id": "e9",
       "type": "pekg:Company",
-      "name": "Souriau"
+      "name": "SEB"
     },
     {
       "id": "e10",
       "type": "pekg:Company",
-      "name": "CEA"
+      "name": "Safran"
     },
     {
       "id": "e11",
       "type": "pekg:Company",
-      "name": "SEB"
+      "name": "Orange"
     },
     {
       "id": "e12",
       "type": "pekg:Company",
-      "name": "Safran"
+      "name": "Dassault"
     },
     {
       "id": "e13",
       "type": "pekg:Company",
-      "name": "Orange"
+      "name": "Airbus"
     },
     {
       "id": "e14",
       "type": "pekg:Company",
-      "name": "Dassault"
+      "name": "Colas"
     },
     {
       "id": "e15",
       "type": "pekg:Company",
-      "name": "Airbus"
+      "name": "Club Med"
     },
     {
       "id": "e16",
       "type": "pekg:Company",
-      "name": "Colas"
+      "name": "C\u00e9line"
     },
     {
       "id": "e17",
       "type": "pekg:Company",
-      "name": "Club Med"
+      "name": "Parfums Christian Dior"
     },
     {
       "id": "e18",
       "type": "pekg:Company",
-      "name": "C\u00e9line"
-    },
-    {
-      "id": "e19",
-      "type": "pekg:Company",
-      "name": "Parfums Christian Dior"
-    },
-    {
-      "id": "e20",
-      "type": "pekg:Company",
       "name": "Mo\u00ebt Hennesy"
     },
     {
-      "id": "e21",
+      "id": "e19",
       "type": "pekg:GovernmentBody",
       "name": "Minist\u00e8re de l'Int\u00e9rieur"
     },
     {
-      "id": "e22",
+      "id": "e20",
       "type": "pekg:GovernmentBody",
       "name": "Minist\u00e8re des Affaires \u00c9trang\u00e8res"
     },
     {
-      "id": "e23",
+      "id": "e21",
       "type": "pekg:GovernmentBody",
       "name": "Minist\u00e8re de la D\u00e9fense"
     },
     {
-      "id": "e24",
+      "id": "e22",
       "type": "pekg:GovernmentBody",
       "name": "Minist\u00e8re de la Transition \u00c9cologique"
     },
     {
-      "id": "e25",
+      "id": "e23",
       "type": "pekg:GovernmentBody",
       "name": "Minist\u00e8re de la Coh\u00e9sion des Territoires"
     },
     {
-      "id": "e26",
+      "id": "e24",
       "type": "pekg:GovernmentBody",
       "name": "DGA"
     },
     {
-      "id": "e27",
+      "id": "e25",
       "type": "pekg:GovernmentBody",
       "name": "Gendarmerie Nationale"
     },
     {
-      "id": "e28",
+      "id": "e26",
       "type": "pekg:Company",
       "name": "Naval Group"
     },
     {
+      "id": "e27",
+      "type": "pekg:Company",
+      "name": "Cap Gemini"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:Company",
+      "name": "Alixio"
+    },
+    {
       "id": "e29",
-      "type": "pekg:Product",
-      "name": "Suites Logicielles"
+      "type": "pekg:FinancialMetric",
+      "metricValue": 4000000,
+      "metricCurrency": "EUR",
+      "metricUnit": "revenue"
     },
     {
       "id": "e30",
-      "type": "pekg:UseCase",
-      "name": "Gestion de crise"
+      "type": "pekg:FinancialMetric",
+      "metricValue": 800000,
+      "metricCurrency": "EUR",
+      "metricUnit": "EBITDA"
     },
     {
       "id": "e31",
-      "type": "pekg:UseCase",
-      "name": "S\u00fbret\u00e9"
-    },
-    {
-      "id": "e32",
-      "type": "pekg:FinancialMetric",
-      "name": "Revenue",
-      "metricValue": 4000000,
-      "metricCurrency": "EUR"
-    },
-    {
-      "id": "e33",
-      "type": "pekg:FinancialMetric",
-      "name": "EBITDA",
-      "metricValue": 800000,
-      "metricCurrency": "EUR"
-    },
-    {
-      "id": "e34",
       "type": "pekg:HeadcountMetric",
       "headcountValue": 30
     },
     {
-      "id": "e35",
+      "id": "e32",
       "type": "pekg:Person",
       "name": "Dominique Tr\u00e9chot"
     },
     {
-      "id": "e36",
+      "id": "e33",
       "type": "pekg:Company",
       "name": "Carmin Finance"
     },
     {
-      "id": "e37",
+      "id": "e34",
       "type": "pekg:Location",
       "name": "153, boulevard Haussmann, 75008 Paris"
-    },
-    {
-      "id": "e38",
-      "type": "pekg:Committee",
-      "name": "ICFG"
     }
   ],
   "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:hasCustomer"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:hasCustomer"
+    },
     {
       "source": "e1",
       "target": "e4",
@@ -274,12 +264,12 @@
     {
       "source": "e1",
       "target": "e19",
-      "type": "pekg:hasCustomer"
+      "type": "pekg:contractsWithGov"
     },
     {
       "source": "e1",
       "target": "e20",
-      "type": "pekg:hasCustomer"
+      "type": "pekg:contractsWithGov"
     },
     {
       "source": "e1",
@@ -314,72 +304,37 @@
     {
       "source": "e1",
       "target": "e27",
-      "type": "pekg:contractsWithGov"
+      "type": "pekg:competesWith"
     },
     {
       "source": "e1",
       "target": "e28",
-      "type": "pekg:contractsWithGov"
+      "type": "pekg:competesWith"
     },
     {
       "source": "e1",
       "target": "e29",
-      "type": "pekg:holdsIP"
+      "type": "pekg:reportsMetric"
     },
     {
-      "source": "e29",
+      "source": "e1",
       "target": "e30",
-      "type": "pekg:targetsUseCase"
+      "type": "pekg:reportsMetric"
     },
     {
-      "source": "e29",
+      "source": "e1",
       "target": "e31",
-      "type": "pekg:targetsUseCase"
+      "type": "pekg:hasHeadcount"
     },
     {
-      "source": "e1",
+      "source": "e33",
       "target": "e32",
-      "type": "pekg:reportsMetric"
+      "type": "pekg:employs"
     },
     {
-      "source": "e1",
-      "target": "e33",
-      "type": "pekg:reportsMetric"
-    },
-    {
-      "source": "e1",
+      "source": "e33",
       "target": "e34",
-      "type": "pekg:employs"
-    },
-    {
-      "source": "e1",
-      "target": "e35",
-      "type": "pekg:hasAdvisor"
-    },
-    {
-      "source": "e35",
-      "target": "e36",
-      "type": "pekg:employs"
-    },
-    {
-      "source": "e36",
-      "target": "e37",
       "type": "pekg:hasOfficeIn"
-    },
-    {
-      "source": "e36",
-      "target": "e38",
-      "type": "pekg:hasCommittee"
-    },
-    {
-      "source": "e1",
-      "target": "e2",
-      "type": "pekg:competesWith"
-    },
-    {
-      "source": "e1",
-      "target": "e3",
-      "type": "pekg:competesWith"
     }
   ]
 }
