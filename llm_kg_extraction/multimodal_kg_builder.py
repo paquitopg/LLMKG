@@ -79,15 +79,12 @@ class MultimodalFinancialKGBuilder:
             img_data = pixmap.tobytes("png")
             img = Image.open(BytesIO(img_data))
             
-            # Convert image to base64 for API
             buffered = BytesIO()
             img.save(buffered, format="PNG")
             img_base64 = base64.b64encode(buffered.getvalue()).decode("utf-8")
             
-            # Get page text as fallback/additional context
             text = page.get_text()
             
-            # Store the page data
             pages.append({
                 "page_num": page_num + 1,
                 "width": width,
@@ -111,7 +108,6 @@ class MultimodalFinancialKGBuilder:
         1. Tables
         2. Charts/Graphs
         3. Diagrams
-        4. Heatmaps
         5. Organizational charts
         6. Flow charts
         7. Financial statements
@@ -139,7 +135,10 @@ class MultimodalFinancialKGBuilder:
         
         visual_analysis = response.choices[0].message.content.strip()
         
-        # Parse the visual analysis into structured data
+        # Clean up the response to ensure it's valid JSON
+        if visual_analysis.startswith("```json"):
+            visual_analysis = visual_analysis.lstrip("```json").rstrip("```").strip()
+        
         return {
             "page_num": page_data["page_num"],
             "analysis": visual_analysis
@@ -157,7 +156,9 @@ class MultimodalFinancialKGBuilder:
         ontology_desc = self.ontology.format_for_prompt()
         
         prompt = f"""
-        I need you to extract financial data from the visual elements in this page according to our ontology.
+        You are a financial data extraction expert.  
+        Your task is to extract an extensive and structured knowledge graph from the financial text provided.
+        The knowledge graph should include entities, relationships, and attributes based on the provided ontology.
         
         The ontology we're using is:
         
@@ -191,6 +192,15 @@ class MultimodalFinancialKGBuilder:
         }}
         
         Focus on extracting as much structured information as possible that aligns with our ontology.
+
+        ### INSTRUCTIONS ###
+        - Pay particular attention to numerical values, dates, and monetary amounts.
+        - If the same entity appears under slightly different names (e.g. "DECK" vs. "DESK"), assume they refer to the same entity and normalize to the most frequent or contextually correct name.
+        - Use your understanding of context to correct obvious typos.
+        - Resolve entity mentions that refer to the same company/person/etc., and merge them into a single entity.
+
+        ### RESPONSE ###
+        Respond with *only* valid JSON in the specified format. Do not include any commentary. Do not include Markdown syntax. Do not include explanations.
         """
 
         response = self.client.chat.completions.create(
@@ -208,11 +218,9 @@ class MultimodalFinancialKGBuilder:
         
         content = response.choices[0].message.content.strip()
         
-        # Clean up the response to ensure it's valid JSON
         if content.startswith("```json"):
             content = content.lstrip("```json").rstrip("```").strip()
         elif "```" in content:
-            # Extract the JSON part if it's embedded in explanatory text
             start = content.find("```")
             end = content.rfind("```")
             if start != -1 and end != -1:
