@@ -1,8 +1,8 @@
 import os
 from openai import AzureOpenAI
 from dotenv import load_dotenv
-from KG_builder import FinancialKGBuilder
-from KG_visualizer import KnowledgeGraphVisualizer
+from llm_kg_extraction.KG_builder import FinancialKGBuilder
+from llm_kg_extraction.KG_visualizer import KnowledgeGraphVisualizer
 import sys
 from pathlib import Path
 
