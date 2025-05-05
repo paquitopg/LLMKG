@@ -140,12 +140,13 @@ class FinancialKGBuilder:
             print("Error parsing LLM response:", e)
             return {}
 
-    def build_knowledge_graph_from_pdf(self, file_path: str) -> Dict:
+    def build_knowledge_graph_from_pdf(self, file_path: str, dump: bool = False) -> Dict:
         """
         Build a knowledge graph iteratively from the pages of a PDF.
         Each page's subgraph is merged with the context of previous pages.
         Args:
             file_path (str): The path to the PDF file.
+            dumping (bool, optional): Flag to indicate if the knowledge subgraphs should be saved.
         Returns:
             dict: The final merged knowledge graph.
         """
@@ -157,7 +158,19 @@ class FinancialKGBuilder:
             page_graph = self.analyze_text_with_llm(page_text, merged_graph)
             merged_graph = self.merge_graphs(merged_graph, page_graph)
 
+            if dump:
+                entity_ids = {entity['id'] for entity in page_graph.get("entities", [])}
+                filtered_relationships = [
+                    rel for rel in page_graph.get("relationships", [])
+                    if rel["source"] in entity_ids and rel["target"] in entity_ids
+                ]   
+                page_graph["relationships"] = filtered_relationships
+                output_file: str = Path(__file__).resolve().parents[3] / "outputs" / f"knowledge_graph_page_{i+1}_{self.model_name}_iterative.json"
+                with open(output_file, "w") as f:
+                    json.dump(page_graph, f, indent=2)
+
         return merged_graph
+    
 
     def merge_graphs(self, graph1: Dict, graph2: Dict) -> Dict:
         """
@@ -196,6 +209,6 @@ class FinancialKGBuilder:
             data (dict): The knowledge graph data to be saved.
             project_name (str): The name of the project for file naming.
         """
-        output_file: str = Path(__file__).resolve().parents[1] / "examples" / f"knowledge_graph_{project_name}_{self.model_name}_iterative.json"
+        output_file: str = Path(__file__).resolve().parents[3] / "outputs" / project_name / f"knowledge_graph_{project_name}_{self.model_name}_iterative.json"
         with open(output_file, "w") as f:
             json.dump(data, f, indent=2)

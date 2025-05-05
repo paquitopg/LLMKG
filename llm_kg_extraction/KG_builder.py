@@ -162,6 +162,6 @@ class FinancialKGBuilder:
             project_name (str): The name of the project for file naming.
         """
 
-        output_file: str = Path(__file__).resolve().parents[1] / "examples" / f"knowledge_graph_{project_name}_{self.model_name}.json"
+        output_file: str = Path(__file__).resolve().parents[3] / "outputs" / project_name / f"knowledge_graph_{project_name}_{self.model_name}.json"
         with open(output_file, "w") as f:
             json.dump(data, f, indent=2)
