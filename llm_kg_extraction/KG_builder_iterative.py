@@ -168,12 +168,25 @@ class FinancialKGBuilder:
         Returns:
             dict: The merged knowledge graph.
         """
-        entities = {**graph1.get('entities', {}), **graph2.get('entities', {})}
-        relationships = {**graph1.get('relationships', {}), **graph2.get('relationships', {})}
-
+        entities1 = graph1.get('entities', [])
+        entities2 = graph2.get('entities', [])
+    
+        relationships1 = graph1.get('relationships', [])
+        relationships2 = graph2.get('relationships', [])
+        
+        entity_dict = {}
+        for entity in entities1 + entities2:
+            entity_id = entity.get('id')
+            if entity_id in entity_dict:
+                entity_dict[entity_id].update(entity)
+            else:
+                entity_dict[entity_id] = entity
+  
+        all_relationships = relationships1 + relationships2
+        
         return {
-            "entities": list(entities.values()),
-            "relationships": list(relationships.values())
+            "entities": list(entity_dict.values()),
+            "relationships": all_relationships
         }
 
     def save_knowledge_graph(self, data: dict, project_name: str):
@@ -183,6 +196,6 @@ class FinancialKGBuilder:
             data (dict): The knowledge graph data to be saved.
             project_name (str): The name of the project for file naming.
         """
-        output_file: str = Path(__file__).resolve().parents[1] / "examples" / f"knowledge_graph_{project_name}_{self.model_name}.json"
+        output_file: str = Path(__file__).resolve().parents[1] / "examples" / f"knowledge_graph_{project_name}_{self.model_name}_iterative.json"
         with open(output_file, "w") as f:
             json.dump(data, f, indent=2)
