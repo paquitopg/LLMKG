@@ -5,6 +5,7 @@ import json
 from typing import List, Dict, Tuple
 from llm_client import AzureOpenAIClient
 from KG_visualizer import KnowledgeGraphVisualizer
+from utils.pdf_utils import PDFProcessor
 from dotenv import load_dotenv
 from pathlib import Path
 from ontology.loader import PEKGOntology
@@ -17,7 +18,7 @@ class FinancialKGBuilder:
     It extracts entities and relationships based on a predefined ontology.
     """
     
-    def __init__(self, model_name, deployment_name, ontology_path: str =  Path(__file__).resolve().parent / "ontology" / "pekg_ontology.yaml"):
+    def __init__(self, model_name, deployment_name, pdf_path, ontology_path: str =  Path(__file__).resolve().parent / "ontology" / "pekg_ontology.yaml"):
         """
         Initialize the FinancialKGBuilder with the model name and deployment name.
         Args:
@@ -25,24 +26,12 @@ class FinancialKGBuilder:
             deployment_name (str): The name of the deployment in Azure OpenAI.
             ontology_path (str): Path to the ontology file.
         """
-        
         self.model_name = model_name
+        self.pdf_path = pdf_path
         self.client = AzureOpenAIClient(model_name=model_name)
-
         self.deployment_name = deployment_name
         self.ontology = PEKGOntology(ontology_path)
-
-    def extract_text_from_pdf(self, file_path: str) -> str:
-        """
-        Extract text from a PDF file using PyMuPDF.
-        Args:
-            file_path (str): Path to the PDF file.
-        Returns:
-            str: Extracted text from the PDF file.
-        """
-
-        doc = pymupdf.open(file_path)
-        return "\n".join([page.get_text() for page in doc])
+        self.pdf_processor = PDFProcessor(pdf_path)
 
     def build_prompt(self, text: str) -> str:
         """
@@ -52,7 +41,6 @@ class FinancialKGBuilder:
         Returns:
             str: The formatted prompt for the LLM.
         """
-
         ontology_desc = self.ontology.format_for_prompt()
         prompt = f"""
         You are a financial information extraction expert.
@@ -97,7 +85,6 @@ class FinancialKGBuilder:
         Returns:
             dict: The extracted knowledge graph in JSON format.
         """
-
         prompt = self.build_prompt(text)
 
         response = self.client.chat.completions.create(
@@ -122,7 +109,7 @@ class FinancialKGBuilder:
             print("Error parsing LLM response:", e)
             return {}
         
-    def build_knowledge_graph_from_pdf(self, pdf_path: str, dump) -> Dict:
+    def build_knowledge_graph_from_pdf(self) -> Dict:
         """
         Build the knowledge graph from a PDF file.
         Args:
@@ -130,12 +117,11 @@ class FinancialKGBuilder:
         Returns:
             dict: The extracted knowledge graph in JSON format.
         """
-
-        text = self.extract_text_from_pdf(pdf_path)
+        text = self.pdf_processor.extract_text()
         knowledge_graph = self.analyze_text_with_llm(text)
         
         return knowledge_graph
-    
+
     def save_knowledge_graph(self, data: dict, project_name: str):
         """
         Save the knowledge graph data to a JSON file.
@@ -143,7 +129,6 @@ class FinancialKGBuilder:
             data (dict): The knowledge graph data to be saved.
             project_name (str): The name of the project for file naming.
         """
-
         output_file: str = Path(__file__).resolve().parents[3] / "outputs" / project_name / f"knowledge_graph_{project_name}_{self.model_name}.json"
         with open(output_file, "w") as f:
             json.dump(data, f, indent=2)

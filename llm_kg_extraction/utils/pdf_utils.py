@@ -2,6 +2,10 @@ from pathlib import Path
 from pypdf import PdfReader, PdfWriter
 import pymupdf
 import io
+from io import BytesIO
+import base64
+from PIL import Image
+from typing import List, Dict
 
 class PDFProcessor:
     """
@@ -14,7 +18,8 @@ class PDFProcessor:
     def __init__(self, pdf_path):
         self.pdf_path = Path(pdf_path)
         self.reader = PdfReader(str(self.pdf_path))
-        self.doc = pymupdf.open(str(self.pdf_path))  
+        self.doc = pymupdf.open(str(self.pdf_path))
+        self.page_dpi = 300 
 
     def extract_text(self):
         """Extract all text from the PDF."""
@@ -55,22 +60,49 @@ class PDFProcessor:
                 writer.write(f)
 
         return f"{len(self.reader.pages)} pages extracted to {output_dir}"
-
-
-    def get_pages_as_pdf_streams(self):
+    
+    def extract_pages_from_pdf(self, file_path: str) -> List[Dict]: 
         """
-        Return a list of PDF byte streams (BytesIO), one for each page.
-        Useful for in-memory processing without writing to disk.
-
+        Extract pages from a PDF file as images using PyMuPDF.
+        Args:
+            file_path (str): Path to the PDF file.
         Returns:
-            List[io.BytesIO]: List of in-memory PDFs, each containing one page.
+            List[Dict]: List of dictionaries containing page images and metadata.
         """
-        pdf_streams = []
-        for page in self.reader.pages:
-            writer = PdfWriter()
-            writer.add_page(page)
-            buffer = io.BytesIO()
-            writer.write(buffer)
-            buffer.seek(0)
-            pdf_streams.append(buffer)
-        return pdf_streams
+        pages = []
+        doc = pymupdf.open(file_path)
+        
+        for page_num, page in enumerate(doc):
+
+            width, height = page.rect.width, page.rect.height
+
+            matrix = pymupdf.Matrix(self.page_dpi/72, self.page_dpi/72) 
+            pixmap = page.get_pixmap(matrix=matrix, alpha=False)
+
+            img_data = pixmap.tobytes("png")
+            img = Image.open(BytesIO(img_data))
+            
+            buffered = BytesIO()
+            img.save(buffered, format="PNG")
+            img_base64 = base64.b64encode(buffered.getvalue()).decode("utf-8")
+            
+            text = page.get_text()
+            
+            pages.append({
+                "page_num": page_num + 1,
+                "width": width,
+                "height": height,
+                "image_base64": img_base64,
+                "text": text
+            })
+        
+        return pages
+    
+    def extract_text_as_list(self):
+        """
+        Extract text from the PDF file using PyMuPDF.
+        Returns:
+            List[str]: A list of texts, one for each page in the PDF.
+        """
+        doc = pymupdf.open(self.pdf_path)
+        return [page.get_text() for page in doc]
