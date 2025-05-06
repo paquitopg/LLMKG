@@ -140,7 +140,7 @@ class FinancialKGBuilder:
             print("Error parsing LLM response:", e)
             return {}
         
-    def build_knowledge_graph_from_pdf(self, pdf_path: str) -> Dict:
+    def build_knowledge_graph_from_pdf(self, pdf_path: str, dump) -> Dict:
         """
         Build the knowledge graph from a PDF file.
         Args:
