@@ -27,10 +27,8 @@ class FinancialKGBuilder:
         """
         
         self.model_name = model_name
+        self.client = AzureOpenAIClient(model_name=model_name)
 
-        client = AzureOpenAIClient(model_name=model_name)
-        self.client = client.make_client()
-        
         self.deployment_name = deployment_name
         self.ontology = PEKGOntology(ontology_path)
 
