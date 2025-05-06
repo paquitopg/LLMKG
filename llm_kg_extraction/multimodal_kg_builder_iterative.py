@@ -70,26 +70,20 @@ class MultimodalFinancialKGBuilder:
         
         page = doc[page_num]
         
-        # Get page dimensions
         width, height = page.rect.width, page.rect.height
         
-        # Render page to a pixmap (image)
-        matrix = pymupdf.Matrix(self.page_dpi/72, self.page_dpi/72)  # Scale to desired DPI
+        matrix = pymupdf.Matrix(self.page_dpi/72, self.page_dpi/72)  
         pixmap = page.get_pixmap(matrix=matrix, alpha=False)
         
-        # Convert pixmap to PIL Image
         img_data = pixmap.tobytes("png")
         img = Image.open(BytesIO(img_data))
         
-        # Convert image to base64 for API
         buffered = BytesIO()
         img.save(buffered, format="PNG")
         img_base64 = base64.b64encode(buffered.getvalue()).decode("utf-8")
         
-        # Get page text as fallback/additional context
         text = page.get_text()
         
-        # Store the page data
         return {
             "page_num": page_num + 1,
             "width": width,
@@ -98,28 +92,37 @@ class MultimodalFinancialKGBuilder:
             "text": text
         }
 
-    def identify_visual_elements(self, page_data: Dict) -> Dict:
+    def identify_visual_elements(self, page_data: Dict, previous_graph: Dict = None) -> Dict:
         """
         Use multimodal LLM to identify and classify visual elements on a page.
         Args:
             page_data (Dict): Dictionary containing page image and metadata.
+            previous_graph (Dict, optional): The merged graph from previous pages to provide context.
         Returns:
             Dict: Information about identified visual elements.
         """
+        # We use the previous graph to inform the extraction process
+        previous_graph_json = json.dumps(previous_graph) if previous_graph else "{}"
+
         prompt = f"""
+        You are a financial document analysis expert.
         Analyze this page from a financial document and identify all visual elements:
         1. Tables
         2. Charts/Graphs
         3. Diagrams
-        4. Heatmaps
         5. Organizational charts
         6. Flow charts
         7. Financial statements
+        8. Logoes
 
         For each identified element:
         - Describe what the element represents
-        - Note the approximate position on the page
         - Describe the key information presented
+
+        Use the previous knowledge graph context to inform your analysis.
+        Previous knowledge graph context (from previous pages):
+        {previous_graph_json}
+
 
         This is page {page_data["page_num"]} of the document.
         """
@@ -139,7 +142,9 @@ class MultimodalFinancialKGBuilder:
         
         visual_analysis = response.choices[0].message.content.strip()
         
-        # Parse the visual analysis into structured data
+        if visual_analysis.startswith("```json"):
+            visual_analysis = visual_analysis.lstrip("```json").rstrip("```").strip()
+        
         return {
             "page_num": page_data["page_num"],
             "analysis": visual_analysis
@@ -155,6 +160,8 @@ class MultimodalFinancialKGBuilder:
         Returns:
             Dict: Extracted data from visual elements in structured format.
         """
+        # We use the previous graph to inform the extraction process
+
         ontology_desc = self.ontology.format_for_prompt()
         previous_graph_json = json.dumps(previous_graph) if previous_graph else "{}"
         
@@ -176,7 +183,9 @@ class MultimodalFinancialKGBuilder:
         2. For tables, extract the data in structured form
         3. For charts/graphs, identify trends, key values, and relationships
         4. For diagrams/flowcharts, identify entities and their relationships
-        5. Use the previous knowledge graph to maintain consistency in entity naming and IDs
+        5. For logos, associate them with the relevant company or brand
+
+        6. Use the previous knowledge graph to maintain consistency in entity naming and IDs
         
         Format your response as JSON following this structure:
         {{
@@ -214,24 +223,14 @@ class MultimodalFinancialKGBuilder:
         
         content = response.choices[0].message.content.strip()
         
-        # Clean up the response to ensure it's valid JSON
         if content.startswith("```json"):
             content = content.lstrip("```json").rstrip("```").strip()
-        elif "```" in content:
-            # Extract the JSON part if it's embedded in explanatory text
-            start = content.find("```")
-            end = content.rfind("```")
-            if start != -1 and end != -1:
-                content = content[start+3:end].strip()
-                if content.startswith("json"):
-                    content = content[4:].strip()
-                    
         try:
             return json.loads(content)
         except Exception as e:
             print(f"Error parsing JSON from page {page_data['page_num']}:", e)
             print("Raw content:", content)
-            # Return a minimal valid structure
+          
             return {"visual_elements": []}
 
     def build_prompt_for_text_analysis(self, text: str, previous_graph: Dict = None) -> str:
@@ -243,6 +242,7 @@ class MultimodalFinancialKGBuilder:
         Returns:
             str: The formatted prompt for the LLM.
         """
+        # We use the previous graph to inform the extraction process
         ontology_desc = self.ontology.format_for_prompt()
         previous_graph_json = json.dumps(previous_graph) if previous_graph else "{}"
         
@@ -327,19 +327,12 @@ class MultimodalFinancialKGBuilder:
         """
         print(f"Processing page {page_data['page_num']}...")
         
-        # Identify visual elements on the page
-        visual_analysis = self.identify_visual_elements(page_data)
-        
-        # Extract structured data from visual elements using previous graph for context
+        visual_analysis = self.identify_visual_elements(page_data, previous_graph)
         visual_kg = self.extract_data_from_visuals(page_data, visual_analysis, previous_graph)
-        
-        # Process the text on the page using previous graph for context
         text_kg = self.analyze_page_text_with_llm(page_data["text"], previous_graph)
-        
-        # Combine the knowledge graphs from visuals and text
+    
         graphs_to_merge = []
-        
-        # Add visual element knowledge graphs
+      
         if "visual_elements" in visual_kg:
             for element in visual_kg["visual_elements"]:
                 element_kg = {
@@ -347,11 +340,9 @@ class MultimodalFinancialKGBuilder:
                     "relationships": element.get("relationships", [])
                 }
                 graphs_to_merge.append(element_kg)
-        
-        # Add text knowledge graph
+    
         graphs_to_merge.append(text_kg)
         
-        # Merge all the knowledge graphs from this page
         page_kg = self.merge_graphs({}, graphs_to_merge)
         
         return page_kg
@@ -365,29 +356,21 @@ class MultimodalFinancialKGBuilder:
         Returns:
             Dict: The merged knowledge graph.
         """
-        # Initialize with base graph or empty
         entities = base_graph.get('entities', [])
         relationships = base_graph.get('relationships', [])
         
-        # Create a dictionary of existing entities by ID for efficient lookups
         entity_dict = {entity.get('id'): entity for entity in entities}
         
-        # Process each graph to add
         for graph in graphs_to_add:
-            # Process entities
             for entity in graph.get('entities', []):
                 entity_id = entity.get('id')
                 if entity_id in entity_dict:
-                    # Update existing entity with any new information
                     entity_dict[entity_id].update(entity)
                 else:
-                    # Add new entity
                     entity_dict[entity_id] = entity
             
-            # Add relationships (we don't deduplicate these since they may have different properties)
             relationships.extend(graph.get('relationships', []))
-        
-        # Create the merged graph
+
         merged_graph = {
             "entities": list(entity_dict.values()),
             "relationships": relationships
@@ -411,24 +394,21 @@ class MultimodalFinancialKGBuilder:
         merged_graph = {"entities": [], "relationships": []}
         
         for page_num in range(num_pages):
-            # Extract single page
             page_data = self.extract_page_from_pdf(file_path, page_num)
             
-            # Process page with context from already processed pages
             page_graph = self.analyze_page(page_data, merged_graph)
             
-            # Merge this page's graph with the accumulated graph
             merged_graph = self.merge_graphs(merged_graph, [page_graph])
             
             print(f"Completed page {page_num + 1}/{num_pages}")
             print(f"Current graph: {len(merged_graph['entities'])} entities, {len(merged_graph['relationships'])} relationships")
         
-        # Final consolidation to resolve any remaining inconsistencies
-        final_graph = self.consolidate_knowledge_graph(merged_graph)
+        #final_graph = self.consolidate_knowledge_graph(merged_graph)
+        final_graph = merged_graph
         
         return final_graph
     
-    def consolidate_knowledge_graph(self, kg: Dict) -> Dict:
+    def consolidate_knowledge_graph(self, kg: Dict) -> Dict: #OPTIONAL
         """
         Use LLM to consolidate and clean up the knowledge graph, resolving duplicates
         and inconsistencies.
@@ -437,7 +417,6 @@ class MultimodalFinancialKGBuilder:
         Returns:
             Dict: The consolidated knowledge graph.
         """
-        # Convert the knowledge graph to a string
         kg_str = json.dumps(kg, indent=2)
         
         prompt = f"""
@@ -483,7 +462,7 @@ class MultimodalFinancialKGBuilder:
             return json.loads(content)
         except Exception as e:
             print("Error parsing consolidated knowledge graph:", e)
-            return kg  # Return original if consolidation fails
+            return kg 
 
     def save_knowledge_graph(self, data: dict, project_name: str):
         """
@@ -492,7 +471,7 @@ class MultimodalFinancialKGBuilder:
             data (dict): The knowledge graph data to be saved.
             project_name (str): The name of the project for file naming.
         """
-        output_file: str = Path(__file__).resolve().parents[1] / "examples" / f"multimodal_knowledge_graph_{project_name}_{self.model_name}_iterative.json"
+        output_file: str = Path(__file__).resolve().parents[3] / "outputs" / project_name / f"multimodal_knowledge_graph_{project_name}_{self.model_name}_iterative.json"
         with open(output_file, "w") as f:
             json.dump(data, f, indent=2)
         
@@ -506,7 +485,7 @@ class MultimodalFinancialKGBuilder:
             project_name (str): The name of the project for file naming.
         """
         visualizer = KnowledgeGraphVisualizer()
-        output_path = Path(__file__).resolve().parents[1] / "examples" / f"multimodal_knowledge_graph_{project_name}_{self.model_name}_iterative.html"
-        visualizer.visualize(data, str(output_path))
+        output_path = Path(__file__).resolve().parents[3] / "outputs" / project_name / f"multimodal_knowledge_graph_{project_name}_{self.model_name}_iterative.html"
+        visualizer.export_interactive_html(data, str(output_path))
         
         print(f"Knowledge graph visualization saved to {output_path}")

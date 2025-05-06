@@ -316,42 +316,35 @@ class MultimodalFinancialKGBuilder:
         """
         merged_graph = {"entities": [], "relationships": []}
         
-        entity_map = {}  # Maps normalized entity name to entity ID
+        entity_map = {}  
         next_entity_id = 1
         next_rel_id = 1
         
         for graph in graphs:
             if "entities" in graph:
                 for entity in graph["entities"]:
-                    # Create a normalized key based on entity type and name
                     entity_key = None
                     if "name" in entity:
                         entity_key = f"{entity['type']}:{entity['name'].lower()}"
-                    elif "id" in entity:  # Use ID as fallback
+                    elif "id" in entity:
                         entity_key = f"{entity['type']}:{entity['id']}"
                     
                     if entity_key:
                         if entity_key not in entity_map:
-                            # Create a new unique ID for this entity
                             new_id = f"e{next_entity_id}"
                             next_entity_id += 1
-                            
-                            # Replace the original ID with our new one
+    
                             old_id = entity["id"]
                             entity["id"] = new_id
                             entity_map[entity_key] = {"new_id": new_id, "old_id": old_id}
-                            
-                            # Add to the merged entities
+                           
                             merged_graph["entities"].append(entity)
             
-            # Process relationships
             if "relationships" in graph:
                 for rel in graph["relationships"]:
-                    # Find the new IDs for the source and target entities
                     source_old = rel["source"]
                     target_old = rel["target"]
-                    
-                    # Find the corresponding new IDs
+                 
                     source_new = None
                     target_new = None
                     
@@ -360,8 +353,7 @@ class MultimodalFinancialKGBuilder:
                             source_new = value["new_id"]
                         if value["old_id"] == target_old:
                             target_new = value["new_id"]
-                    
-                    # Only add the relationship if we found both entities
+
                     if source_new and target_new:
                         new_rel = {
                             "id": f"r{next_rel_id}",
@@ -374,7 +366,7 @@ class MultimodalFinancialKGBuilder:
         
         return merged_graph
 
-    def consolidate_knowledge_graph(self, kg: Dict) -> Dict:
+    def consolidate_knowledge_graph(self, kg: Dict) -> Dict: #OPTIONAL
         """
         Use LLM to consolidate and clean up the knowledge graph, resolving duplicates
         and inconsistencies.
@@ -383,7 +375,7 @@ class MultimodalFinancialKGBuilder:
         Returns:
             Dict: The consolidated knowledge graph.
         """
-        # Convert the knowledge graph to a string
+
         kg_str = json.dumps(kg, indent=2)
         
         prompt = f"""
