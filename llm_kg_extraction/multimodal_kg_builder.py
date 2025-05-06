@@ -5,7 +5,7 @@ import pymupdf
 from io import BytesIO
 from PIL import Image
 from typing import List, Dict, Tuple, Optional
-from openai import AzureOpenAI
+from llm_client import AzureOpenAIClient
 from KG_visualizer import KnowledgeGraphVisualizer
 from dotenv import load_dotenv
 from pathlib import Path
@@ -29,30 +29,11 @@ class MultimodalFinancialKGBuilder:
             ontology_path (str): Path to the ontology file.
         """
         self.model_name = model_name
-        self.client = self.make_client(self.model_name)
+        self.client = AzureOpenAIClient(model_name=model_name)
         self.deployment_name = deployment_name
         self.ontology = PEKGOntology(ontology_path)
         self.page_dpi = 300
 
-    @staticmethod
-    def make_client(model_name: str) -> AzureOpenAI:
-        """
-        Create an Azure OpenAI client based on the model name.
-        Args:
-            model_name (str): The name of the model to be used for extraction.
-        Returns:
-            AzureOpenAI: The Azure OpenAI client.
-        """
-        AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT_" + model_name)
-        AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY_" + model_name)
-        AZURE_DEPLOYMENT_NAME = os.getenv("AZURE_DEPLOYMENT_NAME_" + model_name)
-        AZURE_OPENAI_API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION_" + model_name)
-
-        return AzureOpenAI(
-            api_key=AZURE_OPENAI_API_KEY,
-            api_version=AZURE_OPENAI_API_VERSION,
-            azure_endpoint=AZURE_OPENAI_ENDPOINT
-        )
 
     def extract_pages_from_pdf(self, file_path: str) -> List[Dict]: 
         # To modify : should do this only once and save it, and not every time we run the code
