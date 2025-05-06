@@ -1,6 +1,6 @@
 import os
 from openai import AzureOpenAI
-from KG_builder_iterative import FinancialKGBuilder
+from KG_builder import FinancialKGBuilder
 from KG_visualizer import KnowledgeGraphVisualizer
 import sys
 from pathlib import Path
