@@ -1,7 +1,7 @@
 import os
 from openai import AzureOpenAI
 from dotenv import load_dotenv
-from utils.document_utils import PDFProcessor
+from REPOS.llm_kg_extraction.llm_kg_extraction.utils.pdf_utils import PDFProcessor
 import sys
 from pathlib import Path
 import json

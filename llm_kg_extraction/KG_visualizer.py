@@ -1,5 +1,3 @@
-from pyvis.network import Network
-
 class KnowledgeGraphVisualizer:
     """
     A class to visualize a financial knowledge graph using PyVis and NetworkX.
@@ -35,14 +33,15 @@ class KnowledgeGraphVisualizer:
         plt.show()
 
 
-    def export_interactive_html(self, kg_data: dict, output_path="graph.html"):
+    def export_interactive_html(self, kg_data: dict, output_path: str):
         """
         Export the knowledge graph to an interactive HTML file using PyVis.
         Args:
             kg_data (dict): The knowledge graph data in JSON format.
             output_path (str): The path to save the HTML file.
         """
-        
+        from pyvis.network import Network
+
         net = Network(height="750px", width="100%", directed=True)
 
         id_to_label = {

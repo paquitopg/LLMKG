@@ -5,9 +5,12 @@ import json
 from typing import List, Dict
 from llm_client import AzureOpenAIClient
 from KG_visualizer import KnowledgeGraphVisualizer
-from dotenv import load_dotenv
+from utils.pdf_utils import PDFProcessor
 from pathlib import Path
 from ontology.loader import PEKGOntology
+
+from utils.kg_utils import merge_knowledge_graphs
+from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -18,32 +21,23 @@ class FinancialKGBuilder:
     iteratively building a graph page by page with merged subgraphs.
     """
     
-    def __init__(self, model_name, deployment_name, ontology_path: str =  Path(__file__).resolve().parent / "ontology" / "pekg_ontology.yaml"):
+    def __init__(self, model_name, deployment_name, pdf_path, ontology_path: str =  Path(__file__).resolve().parent / "ontology" / "pekg_ontology.yaml"):
         """
         Initialize the FinancialKGBuilder with the model name and deployment name.
         Args:
             model_name (str): The name of the model to be used for extraction.
             deployment_name (str): The name of the deployment in Azure OpenAI.
+            pdf_path (str): Path to the PDF file to be processed.
             ontology_path (str): Path to the ontology file.
         """
         
         self.model_name = model_name
         self.client = AzureOpenAIClient(model_name=model_name)
-
         self.deployment_name = deployment_name
         self.ontology = PEKGOntology(ontology_path)
-        
-
-    def extract_text_from_pdf(self, file_path: str) -> List[str]:
-        """
-        Extract text from a PDF file using PyMuPDF.
-        Args:
-            file_path (str): Path to the PDF file.
-        Returns:
-            List[str]: A list of texts, one for each page in the PDF.
-        """
-        doc = pymupdf.open(file_path)
-        return [page.get_text() for page in doc]
+        self.pdf_path = pdf_path
+        self.vizualizer = KnowledgeGraphVisualizer()
+        self.pdf_processor = PDFProcessor(pdf_path)
 
     def build_prompt(self, text: str, previous_graph: Dict = None) -> str:
         """
@@ -123,7 +117,7 @@ class FinancialKGBuilder:
             print("Error parsing LLM response:", e)
             return {}
 
-    def build_knowledge_graph_from_pdf(self, file_path: str, dump: bool = False) -> Dict:
+    def build_knowledge_graph_from_pdf(self, dump: bool = False) -> Dict:
         """
         Build a knowledge graph iteratively from the pages of a PDF.
         Each page's subgraph is merged with the context of previous pages.
@@ -133,13 +127,13 @@ class FinancialKGBuilder:
         Returns:
             dict: The final merged knowledge graph.
         """
-        pages_text = self.extract_text_from_pdf(file_path)
+        pages_text = self.pdf_processor.extract_page_text()
         merged_graph = {}
 
         for i, page_text in enumerate(pages_text):
             print(f"Processing page {i+1}...")
             page_graph = self.analyze_text_with_llm(page_text, merged_graph)
-            merged_graph = self.merge_graphs(merged_graph, page_graph)
+            merged_graph = merge_knowledge_graphs(merged_graph, page_graph)
 
             if dump:
                 entity_ids = {entity['id'] for entity in page_graph.get("entities", [])}
@@ -148,47 +142,18 @@ class FinancialKGBuilder:
                     if rel["source"] in entity_ids and rel["target"] in entity_ids
                 ]   
                 page_graph["relationships"] = filtered_relationships
-                output_file: str = Path(__file__).resolve().parents[3] / "outputs" / f"knowledge_graph_page_{i+1}_{self.model_name}_iterative.json"
+        
+                output_file = Path(__file__).resolve().parents[3] / "outputs" / f"knowledge_graph_page_{i+1}_{self.model_name}_iterative.json"
                 with open(output_file, "w") as f:
                     json.dump(page_graph, f, indent=2)
                 
-                visualizer = KnowledgeGraphVisualizer()
                 output_file = str(Path(__file__).resolve().parents[3] / "outputs" / f"knowledge_graph_page_{i + 1}_{self.model_name}_iterative.html")
-                visualizer.export_interactive_html(page_graph, output_file)
+                self.visualizer.export_interactive_html(page_graph, output_file)
+
+        print("Knowledge graph building process completed.")
 
         return merged_graph
     
-
-    def merge_graphs(self, graph1: Dict, graph2: Dict) -> Dict:
-        """
-        Merge two knowledge graphs.
-        Args:
-            graph1 (dict): The first knowledge graph.
-            graph2 (dict): The second knowledge graph.
-        Returns:
-            dict: The merged knowledge graph.
-        """
-        entities1 = graph1.get('entities', [])
-        entities2 = graph2.get('entities', [])
-    
-        relationships1 = graph1.get('relationships', [])
-        relationships2 = graph2.get('relationships', [])
-        
-        entity_dict = {}
-        for entity in entities1 + entities2:
-            entity_id = entity.get('id')
-            if entity_id in entity_dict:
-                entity_dict[entity_id].update(entity)
-            else:
-                entity_dict[entity_id] = entity
-  
-        all_relationships = relationships1 + relationships2
-        
-        return {
-            "entities": list(entity_dict.values()),
-            "relationships": all_relationships
-        }
-
     def save_knowledge_graph(self, data: dict, project_name: str):
         """
         Save the knowledge graph data to a JSON file.
