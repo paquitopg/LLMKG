@@ -1,21 +1,17 @@
 import os
 from openai import AzureOpenAI
 from dotenv import load_dotenv
-from KG_builder import FinancialKGBuilder
-from KG_visualizer import KnowledgeGraphVisualizer
+from utils.document_utils import PDFProcessor
 import sys
 from pathlib import Path
 import json
 
-visualizer = KnowledgeGraphVisualizer()
+folder_path = str(Path(__file__).resolve().parent.parent.parents[1] / "pages" / "DECK" / "Project_DECK_TEASER.pdf")
+
+processor = PDFProcessor(folder_path)
 
 # get the path to the outputs folder 
-folder_path = Path(__file__).resolve().parent.parent.parents[1] / "outputs"
-print(folder_path)
+output_path = Path(__file__).resolve().parent.parent.parents[1] / "pages" / "DECK" / "asPDF"
+print(output_path)
 
-for i in range(1,19):
-    data_path = folder_path / f"knowledge_graph_page_{i}_gpt-4.1_iterative.json"
-    with open(data_path, "r") as f:
-        data = json.load(f)
-    output_path = folder_path / f"knowledge_graph_page_{i}_gpt-4.1_iterative.html"
-    visualizer.export_interactive_html(kg_data=data, output_path= str(output_path))
+processor.extract_pages_as_pdfs(output_path)
