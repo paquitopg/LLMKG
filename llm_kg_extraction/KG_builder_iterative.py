@@ -146,7 +146,7 @@ class FinancialKGBuilder:
         Each page's subgraph is merged with the context of previous pages.
         Args:
             file_path (str): The path to the PDF file.
-            dumping (bool, optional): Flag to indicate if the knowledge subgraphs should be saved.
+            dump (bool, optional): Flag to indicate if the knowledge subgraphs should be saved.
         Returns:
             dict: The final merged knowledge graph.
         """
@@ -168,6 +168,10 @@ class FinancialKGBuilder:
                 output_file: str = Path(__file__).resolve().parents[3] / "outputs" / f"knowledge_graph_page_{i+1}_{self.model_name}_iterative.json"
                 with open(output_file, "w") as f:
                     json.dump(page_graph, f, indent=2)
+                
+                visualizer = KnowledgeGraphVisualizer()
+                output_file = str(Path(__file__).resolve().parents[3] / "outputs" / f"knowledge_graph_page_{i + 1}_{self.model_name}_iterative.html")
+                visualizer.export_interactive_html(page_graph, output_file)
 
         return merged_graph
     

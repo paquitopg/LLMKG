@@ -358,9 +358,13 @@ class MultimodalFinancialKGBuilder:
         """
         entities = base_graph.get('entities', [])
         relationships = base_graph.get('relationships', [])
-        
+
         entity_dict = {entity.get('id'): entity for entity in entities}
-        
+        relationship_set = {
+            (rel['source'], rel['target'], rel['type']) for rel in relationships
+        }
+        merged_relationships = relationships.copy()
+
         for graph in graphs_to_add:
             for entity in graph.get('entities', []):
                 entity_id = entity.get('id')
@@ -368,22 +372,28 @@ class MultimodalFinancialKGBuilder:
                     entity_dict[entity_id].update(entity)
                 else:
                     entity_dict[entity_id] = entity
-            
-            relationships.extend(graph.get('relationships', []))
+
+            for rel in graph.get('relationships', []):
+                key = (rel['source'], rel['target'], rel['type'])
+                if key not in relationship_set:
+                    relationship_set.add(key)
+                    merged_relationships.append(rel)
 
         merged_graph = {
             "entities": list(entity_dict.values()),
-            "relationships": relationships
+            "relationships": merged_relationships
         }
-        
+
         return merged_graph
+
     
-    def build_knowledge_graph_from_pdf(self, file_path: str) -> Dict:
+    def build_knowledge_graph_from_pdf(self, file_path: str, dump: bool = False) -> Dict:
         """
         Build a knowledge graph iteratively from the pages of a PDF.
         Each page's subgraph is merged with the context of previous pages.
         Args:
             file_path (str): The path to the PDF file.
+            dump (bool, optional): Flag to indicate if the knowledge subgraphs should be saved.
         Returns:
             dict: The final merged knowledge graph.
         """
@@ -394,9 +404,25 @@ class MultimodalFinancialKGBuilder:
         merged_graph = {"entities": [], "relationships": []}
         
         for page_num in range(num_pages):
+            print(f"Processing page {page_num + 1} of {num_pages}...")
             page_data = self.extract_page_from_pdf(file_path, page_num)
             
             page_graph = self.analyze_page(page_data, merged_graph)
+
+            if dump:
+                entity_ids = {entity['id'] for entity in page_graph.get("entities", [])}
+                filtered_relationships = [
+                    rel for rel in page_graph.get("relationships", [])
+                    if rel["source"] in entity_ids and rel["target"] in entity_ids
+                ]
+                page_graph["relationships"] = filtered_relationships
+                output_file = Path(__file__).resolve().parents[3] / "outputs" / f"multimodal_knowledge_graph_page_{page_num + 1}_{self.model_name}_iterative.json"
+                with open(output_file, "w") as f:
+                    json.dump(page_graph, f, indent=2)
+                visualizer = KnowledgeGraphVisualizer()
+                output_file = str(Path(__file__).resolve().parents[3] / "outputs" / f"multimodal_knowledge_graph_page_{page_num + 1}_{self.model_name}_iterative.html")
+                visualizer.export_interactive_html(page_graph, output_file)
+                print(f"Knowledge graph visualization saved to {output_file}")
             
             merged_graph = self.merge_graphs(merged_graph, [page_graph])
             
