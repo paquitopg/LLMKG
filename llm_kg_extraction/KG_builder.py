@@ -40,9 +40,12 @@ class FinancialKGBuilder:
         self.deployment_name = deployment_name
         self.ontology = PEKGOntology(ontology_path)
         self.pdf_path = Path(__file__).resolve().parents[3] / "pages" / project_name / f"Project_{project_name}_Teaser.pdf"
-        self.construction_mode = construction_mode
         self.vizualizer = KnowledgeGraphVisualizer()
         self.pdf_processor = PDFProcessor(self.pdf_path)
+
+        if construction_mode not in ["iterative", "onego"]:
+            raise ValueError("construction_mode must be either 'iterative' or 'onego'")
+        self.construction_mode = construction_mode
 
     def build_prompt(self, text: str, previous_graph: Dict = None) -> str:
         """
