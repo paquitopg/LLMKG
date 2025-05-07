@@ -61,6 +61,15 @@ class PDFProcessor:
 
         return f"{len(self.reader.pages)} pages extracted to {output_dir}"
     
+    def extract_text_as_list(self):
+        """
+        Extract text from the PDF file using PyMuPDF.
+        Returns:
+            List[str]: A list of texts, one for each page in the PDF.
+        """
+        doc = pymupdf.open(self.pdf_path)
+        return [page.get_text() for page in doc]
+    
     def extract_pages_from_pdf(self, file_path: str) -> List[Dict]: 
         """
         Extract pages from a PDF file as images using PyMuPDF.
@@ -98,11 +107,36 @@ class PDFProcessor:
         
         return pages
     
-    def extract_text_as_list(self):
+    def extract_page_from_pdf(self, file_path: str, page_number: int) -> Dict:
         """
-        Extract text from the PDF file using PyMuPDF.
+        Extract a specific page from a PDF file as an image using PyMuPDF.
+        Args:
+            file_path (str): Path to the PDF file.
+            page_number (int): Page number to extract (1-indexed).
         Returns:
-            List[str]: A list of texts, one for each page in the PDF.
+            Dict: Dictionary containing the page image and metadata.
         """
-        doc = pymupdf.open(self.pdf_path)
-        return [page.get_text() for page in doc]
+        doc = pymupdf.open(file_path)
+        page = doc[page_number]
+
+        width, height = page.rect.width, page.rect.height
+
+        matrix = pymupdf.Matrix(self.page_dpi/72, self.page_dpi/72) 
+        pixmap = page.get_pixmap(matrix=matrix, alpha=False)
+
+        img_data = pixmap.tobytes("png")
+        img = Image.open(BytesIO(img_data))
+        
+        buffered = BytesIO()
+        img.save(buffered, format="PNG")
+        img_base64 = base64.b64encode(buffered.getvalue()).decode("utf-8")
+        
+        text = page.get_text()
+        
+        return {
+            "page_num": page_number,
+            "width": width,
+            "height": height,
+            "image_base64": img_base64,
+            "text": text
+        }
