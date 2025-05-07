@@ -4,6 +4,8 @@ from KG_builder import FinancialKGBuilder
 from KG_visualizer import KnowledgeGraphVisualizer
 import sys
 from pathlib import Path
+import time
+import json
 
 from dotenv import load_dotenv
 
@@ -28,8 +30,29 @@ def main(name: str, model_name: str, mode: str = "iterative", dump: bool = False
     else:
         print("Building knowledge graph in one go...")
 
+    start_time = time.time()
     kg = builder.build_knowledge_graph_from_pdf(dump=dump)
     builder.save_knowledge_graph(kg)
+    end_time = time.time()
+
+    duration = end_time - start_time
+    print(f"Knowledge graph construction time: {duration:.2f} seconds")
+
+    time_output_path = Path("tests/textual_construction_time.json")
+    key = f"knowledge_graph_{name}_{model_name}_{mode}"
+    data = {}
+
+    if time_output_path.exists():
+        with open(time_output_path, "r") as f:
+            try:
+                data = json.load(f)
+            except json.JSONDecodeError:
+                data = {}
+
+    data[key] = round(duration, 2)
+
+    with open(time_output_path, "w") as f:
+        json.dump(data, f, indent=4)
 
 if __name__ == "__main__":
     if len(sys.argv) != 4 and len(sys.argv) != 5:
