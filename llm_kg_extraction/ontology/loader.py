@@ -12,7 +12,7 @@ class PEKGOntology:
         Args:
             yaml_path (str): Path to the YAML ontology file
         """
-        with open(yaml_path, "r") as f:
+        with open(yaml_path, "r", encoding="utf-8") as f:
             data = yaml.safe_load(f)
         self.entities = data.get("entities", [])
         self.relations = data.get("relations", [])
@@ -131,7 +131,6 @@ class PEKGOntology:
             if rel_type not in self.relations:
                 validation_results["relation_type_validity"].append(relation)
         
-        # Find missing expected entities and relations
         graph_entity_types = set(
             entity.get('type', '').split(':')[-1] 
             for entity in kg_data.get('entities', [])
