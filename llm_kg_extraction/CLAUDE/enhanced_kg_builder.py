@@ -17,7 +17,6 @@ from ontology.loader import PEKGOntology
 from utils.kg_utils import merge_knowledge_graphs
 from dotenv import load_dotenv
 
-# Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger('FinancialKGBuilder')
 
