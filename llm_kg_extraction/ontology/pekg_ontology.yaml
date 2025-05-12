@@ -65,6 +65,7 @@ relations:
   - pekg:holdsIP (Company → IntellectualProperty)
   - pekg:partyToLitigation (Company → Litigation)
   - pekg:hasRisk (Company → Risk)
+  - pekg:advises (Advisor|Person → Company)
   - pekg:subjectTo (Company → RegulatoryRequirement)
   - pekg:hasPolicy (Company → PolicyDocument)
   - pekg:contractsWithGov (Company → GovernmentBody)

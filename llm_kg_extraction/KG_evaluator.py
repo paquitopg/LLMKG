@@ -20,7 +20,7 @@ class KGEvaluator:
         self.ontology = PEKGOntology(ontology_path)
         self.ontology.transform_for_evaluation()
 
-        self.entities = self.ontology.entities
+        self.entities ()= self.ontology.entities
         self.relations = self.ontology.relations
         self.attributes = self.ontology.attributes
 
@@ -184,17 +184,11 @@ class KGEvaluator:
             try:
                 largest_cc = max(nx.weakly_connected_components(self.graph), key=len)
                 subgraph = self.graph.subgraph(largest_cc)
-                results['graph_diameter'] = nx.diameter(subgraph)
+                results['graph_diameter'] = nx.diameter(subgraph.to_undirected())
             except:
                 results['graph_diameter'] = 0
         else:
-            results = {
-                'isolated_nodes_ratio': 0,
-                'attribute_completeness': 0,
-                'financial_metrics_availability': False,
-                'avg_company_relations': 0,
-                'graph_diameter': 0
-            }
+            raise ValueError("Graph is empty, cannot evaluate quality metrics.")
 
         return results
 
@@ -203,19 +197,21 @@ class KGEvaluator:
         Calculate the distribution of relation types in the graph.
         Returns:
             Dict with relation type distribution
+            Dict with relation type counts
         """
         relation_counts = defaultdict(int)
         for _, _, data in self.graph.edges(data=True):
             rel_type = data.get('type', 'unknown')
             relation_counts[rel_type] += 1
         total = sum(relation_counts.values())
-        return {k: v / total for k, v in relation_counts.items()}
+        return {k: v / total for k, v in relation_counts.items()}, {k: v for k, v in relation_counts.items() if v > 0}
 
     def entity_coverage(self) -> Dict[str, float]:
         """
         Calculate the coverage of entity types in the graph.
         Returns:
             Dict with entity type coverage
+            Dict with entity type counts
         """
         entity_counts = defaultdict(int)
         for _, data in self.graph.nodes(data=True):
@@ -223,7 +219,7 @@ class KGEvaluator:
             entity_counts[entity_type] += 1
         coverage = {etype: entity_counts[etype] > 0 for etype in self.entities}
         coverage['overall_entity_coverage'] = sum(coverage.values()) / max(1, len(self.entities))
-        return coverage
+        return coverage, entity_counts
 
     def calculate_overall_score(self, results: Dict[str, Any]) -> float:
         """
@@ -250,7 +246,7 @@ class KGEvaluator:
         )
         score += weights['graph_quality'] * quality_score
 
-        score += weights['entity_coverage'] * results['entity_coverage']['overall_entity_coverage']
+        score += weights['entity_coverage'] * results['entity_coverage'][0]['overall_entity_coverage']
 
         basic_metrics = results['basic_metrics']
         connectivity_score = 1 / max(1, basic_metrics['connected_components'])
@@ -262,3 +258,13 @@ class KGEvaluator:
         score += weights['basic_metrics'] * basic_score
 
         return score
+    
+    def export_evaluation_json(self, output_path: str) -> None:
+        """
+        Export the evaluation results to a JSON file.
+        Args:
+            output_path (str): Path to save the evaluation results.
+        """
+        results = self.evaluate()
+        with open(output_path, 'w') as f:
+            json.dump(results, f, indent=4)
