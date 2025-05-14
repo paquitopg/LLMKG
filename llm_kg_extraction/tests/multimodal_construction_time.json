@@ -1,5 +1,6 @@
 {
     "multimodal_knowledge_graph_INUK_gpt-4.1-mini_iterative": 102.5,
-    "multimodal_knowledge_graph_INUK_gpt-4.1_iterative": 184.9,
-    "multimodal_knowledge_graph_AIRELLE_gpt-4.1_iterative": 975.55
+    "multimodal_knowledge_graph_INUK_gpt-4.1_iterative": 209.39,
+    "multimodal_knowledge_graph_AIRELLE_gpt-4.1_iterative": 975.55,
+    "multimodal_knowledge_graph_HERMES_gpt-4.1_iterative": 299.1
 }
