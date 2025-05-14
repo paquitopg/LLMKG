@@ -20,7 +20,7 @@ class KGEvaluator:
         self.ontology = PEKGOntology(ontology_path)
         self.ontology.transform_for_evaluation()
 
-        self.entities ()= self.ontology.entities
+        self.entities = self.ontology.entities
         self.relations = self.ontology.relations
         self.attributes = self.ontology.attributes
 
@@ -268,3 +268,29 @@ class KGEvaluator:
         results = self.evaluate()
         with open(output_path, 'w') as f:
             json.dump(results, f, indent=4)
+
+
+    def main(self, output_path: Optional[str] = None) -> None:
+        """
+        Main function to run the evaluation.
+        """
+        if output_path:
+            self.export_evaluation_json(output_path)
+        else:
+            results = self.evaluate()
+            print(json.dumps(results, indent=4))
+
+if __name__ == "__main__":
+    import sys 
+    if len(sys.argv) != 3 and len(sys.argv) != 4:
+        print("Invalid number of arguments.")
+        print("Usage: python KG_evaluator.py <kg_json_path> <ontology_path> [<output_path>]")
+        sys.exit(1)
+
+    kg_json_path = sys.argv[1]
+    ontology_path = sys.argv[2]
+    
+    output_path = sys.argv[3] if len(sys.argv) == 4 else None
+
+    evaluator = KGEvaluator(kg_json_path, ontology_path)
+    evaluator.main(output_path)
