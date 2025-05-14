@@ -3,17 +3,18 @@ import sys
 from pathlib import Path
 import time
 import json
-
+from merged_kg_builder import FinancialKGBuilder
 from dotenv import load_dotenv
 
-def main(project_name: str, model_name: str, mode: str = "iterative", modality: str = "textual", dump: bool = False):
+def main(project_name: str, model_name: str, mode: str = "iterative", extraction_mode: str = "text", max_workers: int = 4, dump: bool = False):
     """
     Main function to extract knowledge graph from a PDF file and visualize it.
     Args:
         project_name (str): The name of the project to be used for file paths.
         model_name (str): The name of the model to be used for extraction.
-        mode (str): The mode of operation, either 'iterative' or 'onego'.
-        modality (str): The modality of the knowledge graph, either 'textual' or 'multimodal'.
+        mode (str): The mode of operation: 'iterative', 'onego', or 'parallel'.
+        extraction_mode (str): The modality of the knowledge graph, either 'text' or 'multimodal'.
+        max_workers (int): The maximum number of workers for parallel processing (only used in parallel mode).
         dump (bool): Whether to dump the knowledge subgraphs to a file.
     """
 
@@ -21,19 +22,26 @@ def main(project_name: str, model_name: str, mode: str = "iterative", modality: 
 
     deployment_name = os.getenv(f"AZURE_DEPLOYMENT_NAME_{model_name}")
     
-    if modality == "textual":
+    if extraction_mode == "text":
         print("Using textual modality for knowledge graph construction.")
-        from KG_builder import FinancialKGBuilder
-        builder = FinancialKGBuilder(model_name=model_name, deployment_name=deployment_name, project_name=project_name, construction_mode=mode)
     else:
         print("Using multimodal modality for knowledge graph construction.")
-        from multimodal_KG_builder import MultimodalFinancialKGBuilder
-        builder = MultimodalFinancialKGBuilder(model_name=model_name, deployment_name=deployment_name, project_name=project_name, construction_mode=mode)
+    
+    builder = FinancialKGBuilder(
+        model_name=model_name,
+        deployment_name=deployment_name,
+        project_name=project_name,
+        construction_mode=mode,
+        extraction_mode=extraction_mode,
+        max_workers=max_workers,
+    )
         
     if mode == "iterative":
         print("Building knowledge graph iteratively...")
-    else:
+    elif mode == "onego":
         print("Building knowledge graph in one go...")
+    elif mode == "parallel":
+        print(f"Building knowledge graph in parallel with {max_workers} workers...")
 
     start_time = time.time()
     kg = builder.build_knowledge_graph_from_pdf(dump=dump)
@@ -43,11 +51,17 @@ def main(project_name: str, model_name: str, mode: str = "iterative", modality: 
     duration = end_time - start_time
     print(f"Knowledge graph construction time: {duration:.2f} seconds")
 
-    time_output_path = Path(f"tests/{modality}_construction_time.json")
-    if modality == "textual":
+    # Save timing data
+    time_output_path = Path(f"tests/{extraction_mode}_construction_time.json")
+    if extraction_mode == "text":
         key = f"knowledge_graph_{project_name}_{model_name}_{mode}"
     else:
         key = f"multimodal_knowledge_graph_{project_name}_{model_name}_{mode}"
+        
+    # Add worker count to key if using parallel mode
+    if mode == "parallel":
+        key += f"_workers{max_workers}"
+        
     data = {}
 
     if time_output_path.exists():
@@ -62,24 +76,70 @@ def main(project_name: str, model_name: str, mode: str = "iterative", modality: 
     with open(time_output_path, "w") as f:
         json.dump(data, f, indent=4)
 
+def print_usage():
+    """Print the usage instructions for the script."""
+    print("Usage: python main.py <project_name> <model_name> <mode> <extraction_mode> [--workers N] [--dump]")
+    print("  <project_name>: Name of the project")
+    print("  <model_name>: Name of the model (e.g., gpt-4.1-mini)")
+    print("  <mode>: 'iterative', 'onego', or 'parallel'")
+    print("  <extraction_mode>: 'text' or 'multimodal'")
+    print("  --workers N: Number of parallel workers (optional, only for parallel mode, default=4)")
+    print("  --dump: Whether to save intermediate results (optional)")
+    print("\nExamples:")
+    print("  python main.py EXAMPLE gpt-4.1-mini iterative text --dump")
+    print("  python main.py EXAMPLE gpt-4.1-mini parallel multimodal --workers 8 --dump")
+
 if __name__ == "__main__":
-    if len(sys.argv) != 5 and len(sys.argv) != 6:
-        print("Usage: python main.py <project_name> <model_name> <mode> <modality> [--dump]")
-        print("mode: 'iterative' or 'onego'")
-        print("modality: 'textual' or 'multimodal'")
-        print("Example: python main.py EXAMPLE gpt-4.1-mini iterative textual --dump")
+    if len(sys.argv) < 5:
+        print_usage()
         sys.exit(1)
         
     project_name = sys.argv[1]
     model_name = sys.argv[2]
     mode = sys.argv[3]
-    modality = sys.argv[4]
+    extraction_mode = sys.argv[4]
+    
+    # Default values
+    max_workers = 4
     dump = False
-    if len(sys.argv) == 6 and sys.argv[5] == "--dump":
-        dump = True
-        
-    if mode not in ["iterative", "onego"]:
-        print("Invalid mode. Choose 'iterative' or 'onego'.")
+    
+    # Process optional arguments
+    i = 5
+    while i < len(sys.argv):
+        if sys.argv[i] == "--dump":
+            dump = True
+            i += 1
+        elif sys.argv[i] == "--workers" and i + 1 < len(sys.argv):
+            try:
+                max_workers = int(sys.argv[i + 1])
+                if max_workers <= 0:
+                    print("Error: Number of workers must be a positive integer.")
+                    print_usage()
+                    sys.exit(1)
+            except ValueError:
+                print(f"Error: Invalid number of workers: {sys.argv[i + 1]}")
+                print_usage()
+                sys.exit(1)
+            i += 2
+        else:
+            print(f"Error: Unknown argument: {sys.argv[i]}")
+            print_usage()
+            sys.exit(1)
+    
+    # Validate mode
+    if mode not in ["iterative", "onego", "parallel"]:
+        print("Error: Invalid mode. Choose 'iterative', 'onego', or 'parallel'.")
+        print_usage()
         sys.exit(1)
+    
+    # Validate extraction mode
+    if extraction_mode not in ["text", "multimodal"]:
+        print("Error: Invalid extraction mode. Choose 'text' or 'multimodal'.")
+        print_usage()
+        sys.exit(1)
+    
+    # Validate workers for non-parallel mode
+    if mode != "parallel" and max_workers != 4:
+        print("Warning: --workers parameter is only used with 'parallel' mode. Ignoring it.")
 
-    main(project_name, model_name, mode, modality, dump)
+    main(project_name, model_name, mode, extraction_mode, max_workers, dump)
