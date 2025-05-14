@@ -11,7 +11,10 @@ from dotenv import load_dotenv
 from pathlib import Path
 from ontology.loader import PEKGOntology
 from utils.pdf_utils import PDFProcessor
-from utils.kg_utils import merge_graphs, merge_multiple_knowledge_graphs, clean_knowledge_graph, normalize_entity_ids
+from utils.kg_utils import (
+    merge_knowledge_graphs, merge_multiple_knowledge_graphs, 
+    clean_knowledge_graph, normalize_entity_ids
+)
 
 load_dotenv()
 
@@ -63,6 +66,7 @@ class MultimodalFinancialKGBuilder:
             previous_graph_json = json.dumps(previous_graph) if previous_graph else "{}"
             prompt = f"""
             You are a financial document analysis expert.
+            This is a financial document concerning the company {self.project_name}.
             Analyze this page from a financial document and identify all visual elements:
             1. Tables
             2. Charts/Graphs
@@ -84,7 +88,8 @@ class MultimodalFinancialKGBuilder:
             """
         else:
             prompt = f"""
-            You are a financial document analysis expert.
+            You are a financial document analysis expert. 
+            This is a financial document concerning the company {self.project_name}.
             Analyze this page from a financial document and identify all visual elements:
             1. Tables
             2. Charts/Graphs
@@ -140,6 +145,7 @@ class MultimodalFinancialKGBuilder:
             previous_graph_json = json.dumps(previous_graph) if previous_graph else "{}"
             prompt = f"""
             I need you to extract financial data from the visual elements in this page according to our ontology.
+            This is a financial document concerning the company {self.project_name}.
             
             The ontology we're using is:
             
@@ -183,6 +189,7 @@ class MultimodalFinancialKGBuilder:
             prompt = f"""
             You are a financial data extraction expert.  
             Your task is to extract an extensive and structured knowledge graph from the financial text provided.
+            This is a financial document concerning the company {self.project_name}.
             The knowledge graph should include entities, relationships, and attributes respecting the provided ontology.
             
             The ontology we're using is:
@@ -270,6 +277,7 @@ class MultimodalFinancialKGBuilder:
             prompt = f"""
             You are a financial information extraction expert.
             Your task is to extract an extensive and structured knowledge graph from the financial text provided.
+            This is a financial document concerning the company {self.project_name}.
             The knowledge graph should include entities, relationships, and attributes based on the provided ontology.
             If provided, use the previous knowledge graph context to inform your extraction.
             The ontology is as follows:
@@ -308,6 +316,7 @@ class MultimodalFinancialKGBuilder:
             prompt = f"""
             You are a financial information extraction expert.
             Your task is to extract an extensive and structured knowledge graph from the financial text provided.
+            This is a financial document concerning the company {self.project_name}.
             The knowledge graph should include entities, relationships, and attributes based on the provided ontology.
             The ontology is as follows:
 
@@ -414,7 +423,7 @@ class MultimodalFinancialKGBuilder:
         if self.construction_mode == "iterative":
             return self._build_knowledge_graph_iterative(dump)
         else:
-            return self._build_knowledge_graph_onego()
+            return self._build_knowledge_graph_onego(dump)
     
     def _build_knowledge_graph_iterative(self, dump: bool = False) -> Dict:
         """
@@ -436,8 +445,8 @@ class MultimodalFinancialKGBuilder:
             print(f"Processing page {page_num + 1} of {num_pages}...")
             page_data = self.pdf_processor.extract_page_from_pdf(self.pdf_path, page_num)
             
-            # First, we extract the graphs from the visual elements and text on the current page,
-            # but we DON'T merge with previous graphs yet
+            # First, extract the graphs from the visual elements and text on the current page
+            # Use the previous graph as context but don't merge with it yet
             visual_analysis = self.identify_visual_elements(page_data, merged_graph)
             visual_kg = self.extract_data_from_visuals(page_data, visual_analysis, merged_graph)
             text_kg = self.analyze_page_text_with_llm(page_data["text"], merged_graph)
@@ -453,7 +462,7 @@ class MultimodalFinancialKGBuilder:
                     current_page_graphs.append(element_kg)
             current_page_graphs.append(text_kg)
             
-            # Create a subgraph for the current page only (without merging with previous pages)
+            # Create a subgraph for the current page only
             page_only_graph = merge_multiple_knowledge_graphs(current_page_graphs)
             
             if dump:
@@ -471,9 +480,9 @@ class MultimodalFinancialKGBuilder:
                 self.vizualizer.export_interactive_html(page_viz_graph, output_file)
                 print(f"Knowledge graph visualization for page {page_num + 1} saved to {output_file}")
             
-            # Now merge the current page's graph with the accumulated graph for continued processing
-            page_graph = merge_graphs(merged_graph, [page_only_graph])
-            merged_graph = clean_knowledge_graph(page_graph)
+            # Now merge the current page's graph with the accumulated graph
+            merged_graph = merge_knowledge_graphs(merged_graph, page_only_graph)
+            merged_graph = clean_knowledge_graph(merged_graph)
             
             print(f"Completed page {page_num + 1}/{num_pages}")
             print(f"Current graph: {len(merged_graph['entities'])} entities, {len(merged_graph['relationships'])} relationships")
@@ -482,13 +491,13 @@ class MultimodalFinancialKGBuilder:
         merged_graph = normalize_entity_ids(clean_knowledge_graph(merged_graph))
         return merged_graph
     
-    def _build_knowledge_graph_onego(self) -> Dict:
+    def _build_knowledge_graph_onego(self, dump: bool = False) -> Dict:
         """
         Build the knowledge graph from a PDF file using one-go multimodal analysis.
         Processes all pages independently and then merges results.
         
         Args:
-            file_path (str): Path to the PDF file.
+            dump (bool, optional): Flag to indicate if the individual page subgraphs should be saved.
         Returns:
             dict: The extracted knowledge graph in JSON format.
         """
@@ -500,15 +509,33 @@ class MultimodalFinancialKGBuilder:
         for page_num in range(num_pages):
             print(f"Processing page {page_num + 1} of {num_pages}...")
             page_data = self.pdf_processor.extract_page_from_pdf(self.pdf_path, page_num)
+            
+            # Extract knowledge graph from this page
             page_kg = self.analyze_page(page_data)
+            
+            if dump:
+                output_dir = Path(__file__).resolve().parents[3] / "outputs" / self.project_name / "pages"
+                output_dir.mkdir(parents=True, exist_ok=True)
+                
+                # Clean and normalize the page graph for visualization
+                page_viz_graph = normalize_entity_ids(clean_knowledge_graph(page_kg))
+                
+                output_file = output_dir / f"multimodal_knowledge_graph_page_{page_num + 1}_{self.model_name}_onego.json"
+                with open(output_file, "w") as f:
+                    json.dump(page_viz_graph, f, indent=2)
+                    
+                output_file = str(output_dir / f"multimodal_knowledge_graph_page_{page_num + 1}_{self.model_name}_onego.html")
+                self.vizualizer.export_interactive_html(page_viz_graph, output_file)
+                print(f"Knowledge graph visualization for page {page_num + 1} saved to {output_file}")
+            
             page_kgs.append(page_kg)
             print(f"Completed page {page_num + 1}/{num_pages}")
         
         print("Merging all page knowledge graphs...")
         merged_kg = merge_multiple_knowledge_graphs(page_kgs)
         
-        # Final cleanup
-        merged_kg = clean_knowledge_graph(merged_kg)
+        # Final cleanup and normalization
+        merged_kg = normalize_entity_ids(clean_knowledge_graph(merged_kg))
         
         return merged_kg
 
@@ -537,7 +564,6 @@ class MultimodalFinancialKGBuilder:
         
         1. Identify and merge duplicate entities (entities that refer to the same real-world object)
         2. Standardize entity attributes (e.g., consistent date formats, number formats)
-        3. Resolve any contradictory information
         4. Ensure relationship consistency (remove redundant relationships)
         5. Clean up any missing or null values
         
@@ -564,7 +590,7 @@ class MultimodalFinancialKGBuilder:
         
         try:
             consolidated_kg = json.loads(content)
-            # Apply additional normalization and cleaning
+            # Apply additional merging of similar entities that the LLM might have missed
             return normalize_entity_ids(clean_knowledge_graph(consolidated_kg))
         except Exception as e:
             print("Error parsing consolidated knowledge graph:", e)

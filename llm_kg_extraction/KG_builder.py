@@ -61,6 +61,7 @@ class FinancialKGBuilder:
         prompt = f"""
         You are a financial information extraction expert.
         Your task is to extract an extensive and structured knowledge graph from the financial text provided.
+        This is a financial document concerning the company {self.project_name}.
         The knowledge graph should include entities, relationships, and attributes based on the provided ontology.
         If provided, use the previous knowledge graph context to inform your extraction.
         The ontology is as follows:
