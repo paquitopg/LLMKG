@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 from pathlib import Path
 from ontology.loader import PEKGOntology
 from utils.pdf_utils import PDFProcessor
-from utils.kg_utils import merge_graphs, merge_multiple_knowledge_graphs
+from utils.kg_utils import merge_graphs, merge_multiple_knowledge_graphs, clean_knowledge_graph, normalize_entity_ids
 
 load_dotenv()
 
@@ -379,7 +379,7 @@ class MultimodalFinancialKGBuilder:
         Returns:
             Dict: Combined knowledge graph from the page.
         """
-        
+        # We use the previous graph as context for extraction, but don't merge with it here
         visual_analysis = self.identify_visual_elements(page_data, previous_graph)
         visual_kg = self.extract_data_from_visuals(page_data, visual_analysis, previous_graph)
         text_kg = self.analyze_page_text_with_llm(page_data["text"], previous_graph)
@@ -396,10 +396,9 @@ class MultimodalFinancialKGBuilder:
     
         graphs_to_merge.append(text_kg)
         
-        if self.construction_mode == "iterative":
-            page_kg = merge_graphs({}, graphs_to_merge)
-        else:
-            page_kg = merge_multiple_knowledge_graphs(graphs_to_merge)
+        # For the iterative mode, we'll just combine the current page's components
+        # without merging with previous_graph (that will happen in the calling function)
+        page_kg = merge_multiple_knowledge_graphs(graphs_to_merge)
         
         return page_kg
 
@@ -423,9 +422,7 @@ class MultimodalFinancialKGBuilder:
         Each page's subgraph is merged with the context of previous pages.
         
         Args:
-            file_path (str): The path to the PDF file.
             dump (bool, optional): Flag to indicate if the knowledge subgraphs should be saved.
-            project_name (str, optional): Project name for file naming when saving outputs.
         Returns:
             dict: The final merged knowledge graph.
         """
@@ -439,31 +436,50 @@ class MultimodalFinancialKGBuilder:
             print(f"Processing page {page_num + 1} of {num_pages}...")
             page_data = self.pdf_processor.extract_page_from_pdf(self.pdf_path, page_num)
             
-            page_graph = self.analyze_page(page_data, merged_graph)
-
+            # First, we extract the graphs from the visual elements and text on the current page,
+            # but we DON'T merge with previous graphs yet
+            visual_analysis = self.identify_visual_elements(page_data, merged_graph)
+            visual_kg = self.extract_data_from_visuals(page_data, visual_analysis, merged_graph)
+            text_kg = self.analyze_page_text_with_llm(page_data["text"], merged_graph)
+            
+            # Collect all subgraphs from the current page only
+            current_page_graphs = []
+            if "visual_elements" in visual_kg:
+                for element in visual_kg["visual_elements"]:
+                    element_kg = {
+                        "entities": element.get("entities", []),
+                        "relationships": element.get("relationships", [])
+                    }
+                    current_page_graphs.append(element_kg)
+            current_page_graphs.append(text_kg)
+            
+            # Create a subgraph for the current page only (without merging with previous pages)
+            page_only_graph = merge_multiple_knowledge_graphs(current_page_graphs)
+            
             if dump:
-                entity_ids = {entity['id'] for entity in page_graph.get("entities", [])}
-                filtered_relationships = [
-                    rel for rel in page_graph.get("relationships", [])
-                    if rel["source"] in entity_ids and rel["target"] in entity_ids
-                ]
-                page_graph["relationships"] = filtered_relationships
+                output_dir = Path(__file__).resolve().parents[3] / "outputs" / self.project_name / "pages"
+                output_dir.mkdir(parents=True, exist_ok=True)
                 
-                output_dir = Path(__file__).resolve().parents[3] / "outputs" /  self.project_name / "pages"
+                # Clean and normalize the page graph for visualization
+                page_viz_graph = normalize_entity_ids(clean_knowledge_graph(page_only_graph))
                 
                 output_file = output_dir / f"multimodal_knowledge_graph_page_{page_num + 1}_{self.model_name}_iterative.json"
                 with open(output_file, "w") as f:
-                    json.dump(page_graph, f, indent=2)
+                    json.dump(page_viz_graph, f, indent=2)
                     
                 output_file = str(output_dir / f"multimodal_knowledge_graph_page_{page_num + 1}_{self.model_name}_iterative.html")
-                self.vizualizer.export_interactive_html(page_graph, output_file)
-                print(f"Knowledge graph visualization saved to {output_file}")
+                self.vizualizer.export_interactive_html(page_viz_graph, output_file)
+                print(f"Knowledge graph visualization for page {page_num + 1} saved to {output_file}")
             
-            merged_graph = merge_graphs(merged_graph, [page_graph])
+            # Now merge the current page's graph with the accumulated graph for continued processing
+            page_graph = merge_graphs(merged_graph, [page_only_graph])
+            merged_graph = clean_knowledge_graph(page_graph)
             
             print(f"Completed page {page_num + 1}/{num_pages}")
             print(f"Current graph: {len(merged_graph['entities'])} entities, {len(merged_graph['relationships'])} relationships")
         
+        # Final cleanup and normalization of entity IDs
+        merged_graph = normalize_entity_ids(clean_knowledge_graph(merged_graph))
         return merged_graph
     
     def _build_knowledge_graph_onego(self) -> Dict:
@@ -473,19 +489,26 @@ class MultimodalFinancialKGBuilder:
         
         Args:
             file_path (str): Path to the PDF file.
-            project_name (str, optional): Project name for file naming when saving outputs.
         Returns:
             dict: The extracted knowledge graph in JSON format.
         """
-        pages = self.extract_pages_from_pdf(self.pdf_path)
-        print(f"Extracted {len(pages)} pages from {self.pdf_path}.")
+        doc = pymupdf.open(self.pdf_path)
+        num_pages = len(doc)
+        doc.close()
         
         page_kgs = []
-        for page_data in pages:
+        for page_num in range(num_pages):
+            print(f"Processing page {page_num + 1} of {num_pages}...")
+            page_data = self.pdf_processor.extract_page_from_pdf(self.pdf_path, page_num)
             page_kg = self.analyze_page(page_data)
             page_kgs.append(page_kg)
+            print(f"Completed page {page_num + 1}/{num_pages}")
         
+        print("Merging all page knowledge graphs...")
         merged_kg = merge_multiple_knowledge_graphs(page_kgs)
+        
+        # Final cleanup
+        merged_kg = clean_knowledge_graph(merged_kg)
         
         return merged_kg
 
@@ -540,24 +563,27 @@ class MultimodalFinancialKGBuilder:
             content = content.lstrip("```json").rstrip("```").strip()
         
         try:
-            return json.loads(content)
+            consolidated_kg = json.loads(content)
+            # Apply additional normalization and cleaning
+            return normalize_entity_ids(clean_knowledge_graph(consolidated_kg))
         except Exception as e:
             print("Error parsing consolidated knowledge graph:", e)
-            return kg 
+            return normalize_entity_ids(clean_knowledge_graph(kg))
 
     def save_knowledge_graph(self, data: dict):
         """
         Save the knowledge graph data to a JSON file.
         Args:
             data (dict): The knowledge graph data to be saved.
-            project_name (str): The name of the project for file naming.
         """
-        json_output_file: str = Path(__file__).resolve().parents[3] / "outputs" / self.project_name / f"multimodal_knowledge_graph_{self.project_name}_{self.model_name}_{self.construction_mode}.json"
+        output_dir = Path(__file__).resolve().parents[3] / "outputs" / self.project_name
+        output_dir.mkdir(parents=True, exist_ok=True)
+        
+        json_output_file = output_dir / f"multimodal_knowledge_graph_{self.project_name}_{self.model_name}_{self.construction_mode}.json"
         with open(json_output_file, "w") as f:
             json.dump(data, f, indent=2)
         print(f"Knowledge graph saved to {json_output_file}")
         
-        html_output_file = str(Path(__file__).resolve().parents[3] / "outputs" / self.project_name / f"multimodal_knowledge_graph_{self.project_name}_{self.model_name}_{self.construction_mode}.html")
+        html_output_file = str(output_dir / f"multimodal_knowledge_graph_{self.project_name}_{self.model_name}_{self.construction_mode}.html")
         self.vizualizer.export_interactive_html(data, html_output_file)
         print(f"Knowledge graph visualization saved to {html_output_file}")
-
