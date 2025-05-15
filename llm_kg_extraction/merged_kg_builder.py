@@ -446,9 +446,8 @@ class FinancialKGBuilder:
     
     def _build_knowledge_graph_parallel(self, dump: bool = False) -> Dict:
         """
-        Build a knowledge graph from a PDF file by processing pages in parallel.
-        Each page is processed independently by a separate thread, and results are
-        merged into the main graph as they complete.
+        Build a knowledge graph from a PDF file by processing pages in parallel,
+        but merging them in sequential order to maintain document flow.
         
         Args:
             dump (bool, optional): Flag to indicate if intermediate knowledge subgraphs should be saved.
@@ -487,9 +486,46 @@ class FinancialKGBuilder:
         # Initialize the merged graph
         merged_kg = {"entities": [], "relationships": []}
         
-        # Use a lock to protect the merged_kg during updates
+        # Use a lock to protect shared resources during updates
         from threading import Lock
         merge_lock = Lock()
+        
+        # Dictionary to store completed page graphs, keyed by page number
+        completed_pages = {}
+        
+        # Track the next page number to be merged
+        next_page_to_merge = 0
+        
+        # Function to merge pages in order when possible
+        def merge_pages_in_order():
+            nonlocal next_page_to_merge, merged_kg
+            
+            # Check if we can merge the next page(s) in sequence
+            while next_page_to_merge in completed_pages:
+                page_graph = completed_pages.pop(next_page_to_merge)
+                
+                # Before merging
+                entity_count_before = len(merged_kg["entities"])
+                rel_count_before = len(merged_kg["relationships"])
+                
+                # Merge
+                merged_kg = merge_knowledge_graphs(merged_kg, page_graph)
+                
+                # After merging
+                entity_count_after = len(merged_kg["entities"])
+                rel_count_after = len(merged_kg["relationships"])
+                
+                print(f"Merged page {next_page_to_merge + 1} in sequence - Added {entity_count_after - entity_count_before} entities and "
+                    f"{rel_count_after - rel_count_before} relationships")
+                
+                # Clean the merged graph periodically
+                if next_page_to_merge % 5 == 0:  # Every 5 pages, do a cleanup
+                    merged_kg = clean_knowledge_graph(merged_kg)
+                
+                # Move to the next page
+                next_page_to_merge += 1
+                
+                print(f"Current graph has {len(merged_kg['entities'])} entities and {len(merged_kg['relationships'])} relationships")
         
         # Process pages in parallel using ThreadPoolExecutor
         processed_count = 0
@@ -516,34 +552,29 @@ class FinancialKGBuilder:
                             is_iterative=False
                         )
                     
-                    # Merge this page's graph into the main graph with thread safety
+                    # Add this page's graph to the completed_pages dictionary with thread safety
                     with merge_lock:
-                        print(f"Merging results from page {page_num + 1} into main graph...")
+                        print(f"Page {page_num + 1} processing completed, storing for ordered merging...")
+                        completed_pages[page_num] = page_graph
+                        processed_count += 1
                         
-                        # Before merging
-                        entity_count_before = len(merged_kg["entities"])
-                        rel_count_before = len(merged_kg["relationships"])
+                        # Try to merge pages in order
+                        merge_pages_in_order()
                         
-                        # Merge
-                        merged_kg = merge_knowledge_graphs(merged_kg, page_graph)
-                        
-                        # After merging
-                        entity_count_after = len(merged_kg["entities"])
-                        rel_count_after = len(merged_kg["relationships"])
-                        
-                        # Clean the merged graph periodically
-                        if processed_count % 5 == 0:  # Every 5 pages, do a cleanup
-                            merged_kg = clean_knowledge_graph(merged_kg)
-                        
-                        print(f"Page {page_num + 1} added {entity_count_after - entity_count_before} entities and "
-                              f"{rel_count_after - rel_count_before} relationships to the main graph")
-                    
-                    processed_count += 1
-                    print(f"Processed {processed_count}/{num_pages} pages - Current graph has "
-                          f"{len(merged_kg['entities'])} entities and {len(merged_kg['relationships'])} relationships")
+                        print(f"Processed {processed_count}/{num_pages} pages - Waiting for page {next_page_to_merge + 1} to continue sequential merging")
                     
                 except Exception as e:
                     print(f"Error retrieving result from worker: {e}")
+        
+        # After all futures are completed, check if there are any remaining pages to merge
+        # (This shouldn't happen in normal operation but is a safeguard)
+        with merge_lock:
+            if completed_pages:
+                print(f"Warning: {len(completed_pages)} pages were processed but not merged in sequence.")
+                remaining_pages = sorted(completed_pages.keys())
+                for page_num in remaining_pages:
+                    print(f"Merging remaining page {page_num + 1}...")
+                    merged_kg = merge_knowledge_graphs(merged_kg, completed_pages[page_num])
         
         print(f"Successfully processed {processed_count} pages out of {num_pages}")
         
