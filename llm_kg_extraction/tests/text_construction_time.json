@@ -2,5 +2,9 @@
     "knowledge_graph_DECK_gpt-4.1_onego": 26.89,
     "knowledge_graph_Hermes_gpt-4.1_iterative": 82.22,
     "knowledge_graph_Hermes_gpt-4.1_parallel_workers6": 41.37,
-    "knowledge_graph_DECK_gpt-4.1_iterative": 29.84
+    "knowledge_graph_DECK_gpt-4.1_iterative": 29.84,
+    "knowledge_graph_HERMES_gpt-4.1_iterative": 56.99,
+    "knowledge_graph_HERMES_gpt-4.1_parallel_workers6": 35.25,
+    "knowledge_graph_INUK_gpt-4.1_iterative": 51.38,
+    "knowledge_graph_AIRELLE_gpt-4.1_iterative": 225.54
 }
