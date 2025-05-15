@@ -27,9 +27,7 @@ class PDFProcessor:
 
     def extract_page_text(self, page_number):
         """Extract text from a specific page (1-indexed)."""
-        if 1 <= page_number <= len(self.doc):
-            return self.doc[page_number - 1].get_text()
-        raise ValueError(f"Page {page_number} is out of range.")
+        return self.doc[page_number].get_text()
 
     def save_page_text(self, page_number, output_path):
         """Save the text of a specific page to a .txt file."""
@@ -70,17 +68,15 @@ class PDFProcessor:
         doc = pymupdf.open(self.pdf_path)
         return [page.get_text() for page in doc]
     
-    def extract_pages_from_pdf(self, file_path: str) -> List[Dict]: 
+    def extract_pages_from_pdf(self) -> List[Dict]: 
         """
         Extract pages from a PDF file as images using PyMuPDF.
-        Args:
-            file_path (str): Path to the PDF file.
         Returns:
             List[Dict]: List of dictionaries containing page images and metadata.
         """
         pages = []
-        doc = pymupdf.open(file_path)
-        
+        doc = pymupdf.open(self.pdf_path)
+
         for page_num, page in enumerate(doc):
 
             width, height = page.rect.width, page.rect.height
@@ -107,16 +103,15 @@ class PDFProcessor:
         
         return pages
     
-    def extract_page_from_pdf(self, file_path: str, page_number: int) -> Dict:
+    def extract_page_from_pdf(self, page_number: int) -> Dict:
         """
         Extract a specific page from a PDF file as an image using PyMuPDF.
         Args:
-            file_path (str): Path to the PDF file.
             page_number (int): Page number to extract (1-indexed).
         Returns:
             Dict: Dictionary containing the page image and metadata.
         """
-        doc = pymupdf.open(file_path)
+        doc = pymupdf.open(self.pdf_path)
         page = doc[page_number]
 
         width, height = page.rect.width, page.rect.height

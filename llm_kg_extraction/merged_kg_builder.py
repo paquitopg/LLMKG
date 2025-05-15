@@ -8,6 +8,7 @@ import concurrent.futures
 from typing import List, Dict, Tuple, Optional
 from llm_client import AzureOpenAIClient
 from KG_visualizer import KnowledgeGraphVisualizer
+from company_identifier import CompanyIdentifier
 from dotenv import load_dotenv
 from pathlib import Path
 from ontology.loader import PEKGOntology
@@ -79,6 +80,20 @@ class FinancialKGBuilder:
             raise ValueError("extraction_mode must be either 'text' or 'multimodal'")
         self.extraction_mode = extraction_mode
 
+        # Identify companies in the document (analyze both first and last pages)
+        print("Identifying companies from first and last pages of the document...")
+        self.company_identifier = CompanyIdentifier(self.llm, self.pdf_processor, pages_to_analyze=3)
+        self.companies_info = self.company_identifier.identify_companies(project_name)
+        
+        # Print identified companies information
+        print(f"\nIdentified target company: {self.companies_info['target_company']['name']}")
+        print(f"Target company description: {self.companies_info['target_company']['description']}")
+        print(f"\nIdentified advisory firms:")
+        for firm in self.companies_info['advisory_firms']:
+            print(f"- {firm['name']} ({firm['role']})")
+        print(f"\nProject codename: {self.companies_info['project_codename']}")
+        print("\nCompany identification complete. Proceeding with knowledge graph extraction...\n")
+
     # ---------- TEXT-BASED EXTRACTION METHODS ----------
 
     def build_prompt_for_text_analysis(self, text: str, previous_graph: Dict = None) -> str:
@@ -95,11 +110,26 @@ class FinancialKGBuilder:
         ontology_desc = self.ontology.format_for_prompt()
         previous_graph_json = json.dumps(previous_graph) if previous_graph else "{}"
         
-        # Base prompt
+        # Extract company information
+        target_company = self.companies_info["target_company"]["name"]
+        advisory_firms = [firm["name"] for firm in self.companies_info["advisory_firms"]]
+        project_codename = self.companies_info["project_codename"]
+        
+        # Base prompt with clear company role distinctions
         prompt = f"""
         You are a financial information extraction expert.
         Your task is to extract an extensive and structured knowledge graph from the financial text provided.
-        This is a financial document concerning the company {self.project_name}.
+        
+        This document concerns:
+        - Target Company: {target_company} (the main company being analyzed/offered)
+        - Project Codename: {project_codename} (this is just a codename, not the actual company)
+        - Advisory Firms: {', '.join(advisory_firms)} (these firms prepared the document but are not the subject)
+        
+        When extracting entities, MAKE SURE to clearly distinguish between:
+        1. The TARGET COMPANY ({target_company}) - this is the main subject of the document
+        2. The ADVISORY FIRMS ({', '.join(advisory_firms)}) - these firms prepared the document
+        3. The PROJECT CODENAME ({project_codename}) - this is just a codename, not a real company
+        
         The knowledge graph should include entities, relationships, and attributes based on the provided ontology.
         """
         
@@ -122,7 +152,7 @@ class FinancialKGBuilder:
         Output a JSON object like:
         {{
         "entities": [
-            {{"id": "e1", "type": "pekg:Company", "name": "ABC Capital"}},
+            {{"id": "e1", "type": "pekg:Company", "name": "{target_company}"}},
             {{"id": "e2", "type": "pekg:FundingRound", "roundAmount": 5000000, "roundDate": "2022-06-01"}}
         ],
         "relationships": [
@@ -138,6 +168,8 @@ class FinancialKGBuilder:
         - If the same entity appears under slightly different names (e.g. "DECK" vs. "DESK"), assume they refer to the same entity and normalize to the most frequent or contextually correct name.
         - Use your understanding of context to correct obvious typos.
         - Resolve entity mentions that refer to the same company/person/etc., and merge them into a single entity.
+        - IMPORTANT: Always clearly distinguish between the target company ({target_company}), advisory firms, and the project codename.
+        - Do not confuse the project codename ({project_codename}) with the actual target company ({target_company}).
         """
         
         # Add iterative-specific instructions
@@ -415,7 +447,8 @@ class FinancialKGBuilder:
     def _build_knowledge_graph_parallel(self, dump: bool = False) -> Dict:
         """
         Build a knowledge graph from a PDF file by processing pages in parallel.
-        Each page is processed completely independently by a separate thread.
+        Each page is processed independently by a separate thread, and results are
+        merged into the main graph as they complete.
         
         Args:
             dump (bool, optional): Flag to indicate if intermediate knowledge subgraphs should be saved.
@@ -435,10 +468,10 @@ class FinancialKGBuilder:
         for page_num in range(num_pages):
             print(f"Preparing data for page {page_num + 1}...")
             if self.extraction_mode == "multimodal":
-                page_data = self.pdf_processor.extract_page_from_pdf(self.pdf_path, page_num)
+                page_data = self.pdf_processor.extract_page_from_pdf(page_num)
             else:
                 # For text-only, we need a similar structure but with just the text
-                text = self.pdf_processor.extract_text_from_page(page_num)
+                text = self.pdf_processor.extract_page_text(page_num)
                 page_data = {
                     "page_num": page_num,
                     "text": text
@@ -451,8 +484,15 @@ class FinancialKGBuilder:
         
         print(f"Prepared data for {num_pages} pages, starting parallel processing...")
         
+        # Initialize the merged graph
+        merged_kg = {"entities": [], "relationships": []}
+        
+        # Use a lock to protect the merged_kg during updates
+        from threading import Lock
+        merge_lock = Lock()
+        
         # Process pages in parallel using ThreadPoolExecutor
-        all_page_results = []
+        processed_count = 0
         with concurrent.futures.ThreadPoolExecutor(max_workers=self.max_workers) as executor:
             # Submit all page processing tasks at once
             futures = [
@@ -464,39 +504,51 @@ class FinancialKGBuilder:
             for future in concurrent.futures.as_completed(futures):
                 try:
                     result = future.result()
-                    all_page_results.append(result)
                     page_num = result["page_num"]
-                    print(f"Received results for page {page_num + 1}")
+                    page_graph = result["graph"]
                     
                     # Dump intermediate results if requested
-                    if dump and result["graph"]:
+                    if dump and page_graph:
                         self._save_page_graph(
-                            result["graph"],
+                            page_graph,
                             page_num,
                             "multimodal" if self.extraction_mode == "multimodal" else "text",
                             is_iterative=False
                         )
+                    
+                    # Merge this page's graph into the main graph with thread safety
+                    with merge_lock:
+                        print(f"Merging results from page {page_num + 1} into main graph...")
+                        
+                        # Before merging
+                        entity_count_before = len(merged_kg["entities"])
+                        rel_count_before = len(merged_kg["relationships"])
+                        
+                        # Merge
+                        merged_kg = merge_knowledge_graphs(merged_kg, page_graph)
+                        
+                        # After merging
+                        entity_count_after = len(merged_kg["entities"])
+                        rel_count_after = len(merged_kg["relationships"])
+                        
+                        # Clean the merged graph periodically
+                        if processed_count % 5 == 0:  # Every 5 pages, do a cleanup
+                            merged_kg = clean_knowledge_graph(merged_kg)
+                        
+                        print(f"Page {page_num + 1} added {entity_count_after - entity_count_before} entities and "
+                              f"{rel_count_after - rel_count_before} relationships to the main graph")
+                    
+                    processed_count += 1
+                    print(f"Processed {processed_count}/{num_pages} pages - Current graph has "
+                          f"{len(merged_kg['entities'])} entities and {len(merged_kg['relationships'])} relationships")
+                    
                 except Exception as e:
                     print(f"Error retrieving result from worker: {e}")
         
-        # Sort results by page number to ensure consistent merging
-        all_page_results.sort(key=lambda x: x["page_num"])
-        
-        # Check if we have valid results
-        if not all_page_results:
-            print("Warning: No valid results were returned from parallel processing")
-            return {"entities": [], "relationships": []}
-            
-        # Extract the graph data from results
-        page_kgs = [result["graph"] for result in all_page_results if "graph" in result]
-        
-        print(f"Successfully processed {len(page_kgs)} pages out of {num_pages}")
-        
-        # Merge all page knowledge graphs
-        print("Merging knowledge graphs from all pages...")
-        merged_kg = merge_multiple_knowledge_graphs(page_kgs)
+        print(f"Successfully processed {processed_count} pages out of {num_pages}")
         
         # Final cleanup and normalization
+        print("Performing final cleanup and normalization of the merged knowledge graph...")
         merged_kg = normalize_entity_ids(clean_knowledge_graph(merged_kg))
         
         return merged_kg
@@ -512,9 +564,19 @@ class FinancialKGBuilder:
         Returns:
             Dict: Information about identified visual elements.
         """
+        # Extract company information
+        target_company = self.companies_info["target_company"]["name"]
+        advisory_firms = [firm["name"] for firm in self.companies_info["advisory_firms"]]
+        project_codename = self.companies_info["project_codename"]
+        
         prompt = f"""
         You are a financial document analysis expert.
-        This is a financial document concerning the company {self.project_name}.
+        
+        This document concerns:
+        - Target Company: {target_company} (the main company being analyzed/offered)
+        - Project Codename: {project_codename} (this is just a codename, not the actual company)
+        - Advisory Firms: {', '.join(advisory_firms)} (these firms prepared the document but are not the subject)
+        
         Analyze this page from a financial document and identify all visual elements:
         1. Tables
         2. Charts/Graphs
@@ -527,6 +589,7 @@ class FinancialKGBuilder:
         For each identified element:
         - Describe what the element represents
         - Describe the key information presented
+        - IMPORTANT: Clearly indicate if the visual relates to the target company ({target_company}) or an advisory firm
 
         This is page {page_data["page_num"]} of the document.
         """
@@ -578,10 +641,25 @@ class FinancialKGBuilder:
         """
         ontology_desc = self.ontology.format_for_prompt()
         
+        # Extract company information
+        target_company = self.companies_info["target_company"]["name"]
+        advisory_firms = [firm["name"] for firm in self.companies_info["advisory_firms"]]
+        project_codename = self.companies_info["project_codename"]
+        
         prompt = f"""
         You are a financial data extraction expert.  
         Your task is to extract an extensive and structured knowledge graph from the financial text provided.
-        This is a financial document concerning the company {self.project_name}.
+        
+        This document concerns:
+        - Target Company: {target_company} (the main company being analyzed/offered)
+        - Project Codename: {project_codename} (this is just a codename, not the actual company)
+        - Advisory Firms: {', '.join(advisory_firms)} (these firms prepared the document but are not the subject)
+        
+        When extracting entities, MAKE SURE to clearly distinguish between:
+        1. The TARGET COMPANY ({target_company}) - this is the main subject of the document
+        2. The ADVISORY FIRMS ({', '.join(advisory_firms)}) - these firms prepared the document
+        3. The PROJECT CODENAME ({project_codename}) - this is just a codename, not a real company
+        
         The knowledge graph should include entities, relationships, and attributes respecting the provided ontology.
         
         The ontology we're using is:
@@ -636,6 +714,7 @@ class FinancialKGBuilder:
         - If the same entity appears under slightly different names (e.g. "DECK" vs. "DESK"), assume they refer to the same entity and normalize to the most frequent or contextually correct name.
         - Use your understanding of context to correct obvious typos.
         - Resolve entity mentions that refer to the same company/person/etc., and merge them into a single entity.
+        - IMPORTANT: Always clearly distinguish between the target company, advisory firms, and the project codename.
 
         ### RESPONSE ###
         Respond with *only* valid JSON in the specified format. Do not include any commentary. Do not include Markdown syntax. Do not include explanations.
@@ -658,7 +737,7 @@ class FinancialKGBuilder:
         
         if content.startswith("```json"):
             content = content.lstrip("```json").rstrip("```").strip()
-          
+        
         try:
             return json.loads(content)
         except Exception as e:
@@ -777,8 +856,8 @@ class FinancialKGBuilder:
         
         for page_num in range(num_pages):
             print(f"Processing page {page_num + 1} of {num_pages}...")
-            page_data = self.pdf_processor.extract_page_from_pdf(self.pdf_path, page_num)
-            
+            page_data = self.pdf_processor.extract_page_from_pdf(page_num)
+
             # First, extract the graphs from the visual elements and text on the current page
             # Use the previous graph as context but don't merge with it yet
             visual_analysis = self.identify_visual_elements(page_data, merged_graph)
@@ -831,8 +910,8 @@ class FinancialKGBuilder:
         page_kgs = []
         for page_num in range(num_pages):
             print(f"Processing page {page_num + 1} of {num_pages}...")
-            page_data = self.pdf_processor.extract_page_from_pdf(self.pdf_path, page_num)
-            
+            page_data = self.pdf_processor.extract_page_from_pdf(page_num)
+
             # Extract knowledge graph from this page
             page_kg = self.analyze_page(page_data)
             
@@ -955,27 +1034,17 @@ class FinancialKGBuilder:
         filename_prefix = "multimodal" if self.extraction_mode == "multimodal" else "text"
         
         # Save JSON file
+        
         json_output_file = output_dir / f"{filename_prefix}_knowledge_graph_{self.project_name}_{self.model_name}_{self.construction_mode}.json"
+        if self.construction_mode == "parallel":
+            json_output_file = output_dir / f"{filename_prefix}_knowledge_graph_{self.project_name}_{self.model_name}_{self.construction_mode}_{self.max_workers}.json"
         with open(json_output_file, "w") as f:
             json.dump(data, f, indent=2)
         print(f"Knowledge graph saved to {json_output_file}")
         
         # Save HTML visualization
         html_output_file = str(output_dir / f"{filename_prefix}_knowledge_graph_{self.project_name}_{self.model_name}_{self.construction_mode}.html")
+        if self.construction_mode == "parallel":
+            html_output_file = str(output_dir / f"{filename_prefix}_knowledge_graph_{self.project_name}_{self.model_name}_{self.construction_mode}_{self.max_workers}.html")
         self.vizualizer.export_interactive_html(data, html_output_file)
         print(f"Knowledge graph visualization saved to {html_output_file}")
-        
-        # Save performance metrics if in parallel mode
-        if self.construction_mode == "parallel":
-            metrics = {
-                "construction_mode": self.construction_mode,
-                "extraction_mode": self.extraction_mode,
-                "max_workers": self.max_workers,
-                "entity_count": len(data.get("entities", [])),
-                "relationship_count": len(data.get("relationships", [])),
-            }
-            
-            metrics_file = output_dir / f"{filename_prefix}_metrics_{self.project_name}_{self.model_name}_{self.construction_mode}.json"
-            with open(metrics_file, "w") as f:
-                json.dump(metrics, f, indent=2)
-            print(f"Performance metrics saved to {metrics_file}")
