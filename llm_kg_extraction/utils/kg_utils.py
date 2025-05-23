@@ -16,11 +16,9 @@ def similarity_score(str1: str, str2: str) -> float:
     if not str1 or not str2:
         return 0.0
     
-    # Convert to lowercase for better matching
-    str1 = str1.lower()
-    str2 = str2.lower()
+    str1 = str(str1).lower() # Ensure string conversion
+    str2 = str(str2).lower() # Ensure string conversion
     
-    # Calc similarity score
     return SequenceMatcher(None, str1, str2).ratio()
 
 def normalize_text(text: str) -> str:
@@ -36,22 +34,15 @@ def normalize_text(text: str) -> str:
     """
     if not text:
         return ""
-    
-    # Convert to lowercase
+    text = str(text) # Ensure it's a string
     text = text.lower()
-    
-    # Replace punctuation and special characters with spaces
-    text = re.sub(r'[^\w\s]', ' ', text)
-    
-    # Replace multiple spaces with a single space
+    text = re.sub(r'[^\w\s.-]', ' ', text) # Keep alphanumeric, whitespace, dots, hyphens
     text = re.sub(r'\s+', ' ', text)
-    
-    # Strip leading and trailing spaces
     return text.strip()
 
 def extract_numerical_values(entity: Dict) -> Dict[str, Any]:
     """
-    Extract all numerical values from an entity.
+    Extract all numerical values from an entity based on a predefined list of common numerical fields.
     
     Args:
         entity (Dict): Entity to extract values from
@@ -60,595 +51,516 @@ def extract_numerical_values(entity: Dict) -> Dict[str, Any]:
         Dict[str, Any]: Dictionary of numerical values
     """
     numerical_values = {}
-    
-    # Common numerical fields in the ontology
     numerical_fields = [
         'metricValue', 'percentageValue', 'headcountValue', 
-        'roundAmount', 'valuation', 'revenueAmount'
+        'roundAmount', 'valuation', 'revenueAmount', 'amount', # From pekg:FinancialValue
+        'parsedValue', 'parsedPercentage' # From streamlined pekg:FinancialMetric
     ]
     
     for field in numerical_fields:
         if field in entity and entity[field] is not None:
-            numerical_values[field] = entity[field]
-    
+            try:
+                val_str = str(entity[field]).replace(',', '') # Handle commas in numbers
+                val = float(val_str)
+                numerical_values[field] = val
+            except (ValueError, TypeError):
+                pass 
     return numerical_values
 
 def get_entity_temporal_info(entity: Dict) -> Dict[str, Any]:
     """
     Extract temporal information (years, dates, periods) from an entity.
+    Prioritizes specific temporal fields from the ontology, then tries to parse from name fields.
     
     Args:
         entity (Dict): Entity to extract temporal info from
         
     Returns:
-        Dict[str, Any]: Dictionary of temporal information
+        Dict[str, Any]: Dictionary of temporal information, with 'extractedPeriod' as the primary consolidated field.
     """
     temporal_info = {}
     
-    # Common temporal fields
-    time_fields = ['year', 'date', 'period', 'roundDate', 'eventYear']
+    # Specific ontology fields for temporal data (unprefixed for easier access)
+    # From pekg_ontology_streamlined_v1_2
+    ontology_time_fields = {
+        "financialmetric": "fiscalPeriod",
+        "operationalkpi": "kpiDateOrPeriod",
+        "headcount": "dateOrYear",
+        "historicalevent": "dateOrYear",
+        "company": "foundedYear" 
+        # Add other types and their specific date/year fields if needed
+    }
+    entity_type_unprefixed = entity.get('type', '').lower().split(':')[-1]
+    specific_period_field = ontology_time_fields.get(entity_type_unprefixed)
+
+    if specific_period_field and specific_period_field in entity and entity[specific_period_field] is not None:
+        temporal_info['extractedPeriod'] = str(entity[specific_period_field])
     
-    for field in time_fields:
-        if field in entity and entity[field]:
-            temporal_info[field] = entity[field]
-    
-    # Try to extract year from name if it exists
-    name = entity.get('name', '')
-    if name:
-        # Look for patterns like "FY21", "2020", "FY2021", etc.
-        year_patterns = [
-            r'FY(\d{2})([A-Za-z])',  # FY21A, FY22E, etc.
-            r'FY(\d{4})([A-Za-z])',  # FY2021A, FY2022E, etc.
-            r'FY(\d{2,4})',          # FY21, FY2021
-            r'20(\d{2})'             # 2021, 2022, etc.
-        ]
-        
-        for pattern in year_patterns:
-            match = re.search(pattern, name)
-            if match and 'extractedYear' not in temporal_info:
-                temporal_info['extractedYear'] = match.group(0)
-    
+    # Fallback: Try to extract year/period from name if no specific field was found or populated
+    if 'extractedPeriod' not in temporal_info:
+        name_to_search = entity.get('name', entity.get('metricName', entity.get('kpiName', '')))
+        if name_to_search and isinstance(name_to_search, str):
+            year_patterns = [
+                r'\b(FY|CY|CAL\s*|H[1-2]|Q[1-4])?\s*(20\d{2}|19\d{2})\s*([A-Za-zEBPFL]*)?\b', # FY21A, 2022, Q1 2023, H1-22
+                r'\b(20\d{2}|19\d{2})\s*-\s*(20\d{2}|19\d{2})\b([A-Za-z]*)', # 2020-2022 CAGR
+            ]
+            for pattern in year_patterns:
+                match = re.search(pattern, name_to_search, re.IGNORECASE)
+                if match:
+                    temporal_info['extractedPeriod'] = match.group(0).strip() # Take full match as period
+                    break
     return temporal_info
 
-def create_generic_entity_key(entity: Dict, include_numerical: bool = False, 
-                             include_temporal: bool = False) -> str:
-    """
-    Create a generic entity key based on entity type and name,
-    with options to include numerical and temporal information.
-    
-    Args:
-        entity (Dict): Entity to create key for
-        include_numerical (bool): Whether to include numerical values in the key
-        include_temporal (bool): Whether to include temporal information in the key
-        
-    Returns:
-        str: Entity key
-    """
-    if not entity:
-        return ""
-    
-    entity_type = entity.get('type', '').lower()
-    entity_name = normalize_text(entity.get('name', ''))
-    
-    components = [entity_type]
-    
-    if entity_name:
-        # For products, keep more words for better differentiation
-        if 'product' in entity_type:
-            components.append(f"name:{entity_name}")
-        else:
-            # Extract key terms from name to allow for more flexible matching
-            key_terms = extract_key_terms(entity_name, entity_type)
-            if key_terms:
-                components.append(f"terms:{'-'.join(key_terms)}")
-            else:
-                components.append(f"name:{entity_name}")
-    
-    # Include numerical values if requested
-    if include_numerical:
-        numerical_values = extract_numerical_values(entity)
-        for key, value in sorted(numerical_values.items()):
-            components.append(f"{key}:{value}")
-    
-    # Include temporal information if requested
-    if include_temporal:
-        temporal_info = get_entity_temporal_info(entity)
-        for key, value in sorted(temporal_info.items()):
-            if isinstance(value, str):
-                components.append(f"{key}:{value.lower()}")
-            else:
-                components.append(f"{key}:{value}")
-    
-    return ":".join(components)
-
-def extract_key_terms(text: str, entity_type: str) -> List[str]:
-    """
-    Extract key terms from text based on entity type.
-    
-    Args:
-        text (str): Text to extract terms from
-        entity_type (str): Type of entity
-        
-    Returns:
-        List[str]: List of key terms
-    """
-    if not text:
-        return []
-    
-    # Split into words
-    words = text.split()
-    
-    # For short names (1-3 words), use the whole name
-    if len(words) <= 3:
-        return [text]
-    
-    # For different entity types, extract relevant terms
-    if 'financial' in entity_type or 'metric' in entity_type or 'kpi' in entity_type:
-        # For financial metrics, extract the type of metric and fiscal year if present
-        financial_terms = []
-        
-        # Common financial terms to look for
-        key_financial_terms = [
-            'revenue', 'recurring', 'non-recurring', 'ebitda', 'margin',
-            'profit', 'sales', 'growth', 'cagr', 'share', 'mix'
-        ]
-        
-        # Add key financial terms found in the text
-        for term in key_financial_terms:
-            if term in text:
-                financial_terms.append(term)
-        
-        # Look for fiscal year patterns
-        fiscal_year_match = re.search(r'(fy\d{2,4}[a-z]?|20\d{2})', text)
-        if fiscal_year_match:
-            financial_terms.append(fiscal_year_match.group(0))
-        
-        return financial_terms if financial_terms else [text]
-    
-    elif 'company' in entity_type:
-        # For companies, use the whole name
-        return [text]
-    
-    elif 'product' in entity_type:
-        # For products, find important product terms
-        product_terms = []
-        important_product_words = [
-            'platform', 'solution', 'software', 'service', 'api',
-            'system', 'application', 'tool', 'framework', 'module'
-        ]
-        
-        for word in important_product_words:
-            if word in text:
-                product_terms.append(word)
-        
-        return product_terms if product_terms else [text]
-    
-    # Default: return the first 2-3 significant words
-    significant_words = [w for w in words if len(w) > 3][:3]
-    return [' '.join(significant_words)] if significant_words else [text]
 
 def are_entities_similar(entity1: Dict, entity2: Dict, 
                         threshold: float = 0.8, 
-                        check_numerical: bool = True,
-                        check_temporal: bool = True) -> bool:
+                        check_numerical_values_for_similarity: bool = False, # This flag is now less relevant for FinancialMetric
+                        check_temporal_for_similarity: bool = True) -> bool:
     """
     Determine if two entities are similar enough to be considered the same.
-    
-    Args:
-        entity1 (Dict): First entity
-        entity2 (Dict): Second entity
-        threshold (float): Similarity threshold (0-1)
-        check_numerical (bool): Whether to check numerical values
-        check_temporal (bool): Whether to check temporal information
-        
-    Returns:
-        bool: True if entities are similar, False otherwise
+    For FinancialMetric, requires name similarity AND all other attributes to be identical.
     """
-    # Must be same entity type
-    if entity1.get('type', '').lower() != entity2.get('type', '').lower():
+    type1_full = entity1.get('type', '').lower()
+    type2_full = entity2.get('type', '').lower()
+    type1_unprefixed = type1_full.split(':')[-1]
+    type2_unprefixed = type2_full.split(':')[-1]
+
+    if type1_unprefixed != type2_unprefixed:
         return False
     
-    entity_type = entity1.get('type', '').lower()
+    entity_type_unprefixed = type1_unprefixed
     
-    # Get names
-    name1 = normalize_text(entity1.get('name', ''))
-    name2 = normalize_text(entity2.get('name', ''))
+    name1_str = entity1.get('metricName', entity1.get('name', entity1.get('kpiName', entity1.get('productName', entity1.get('fullName', '')))))
+    name2_str = entity2.get('metricName', entity2.get('name', entity2.get('kpiName', entity2.get('productName', entity2.get('fullName', '')))))
     
-    # If both have names, check name similarity
-    if name1 and name2:
-        # Direct name similarity check
-        name_similarity = similarity_score(name1, name2)
-        
-        # If names are very similar, they're likely the same entity
-        if name_similarity >= threshold:
-            return True
-        
-        # Extract key terms for more flexible matching
-        terms1 = extract_key_terms(name1, entity_type)
-        terms2 = extract_key_terms(name2, entity_type)
-        
-        # Check if any key terms match with high similarity
-        for term1 in terms1:
-            for term2 in terms2:
-                term_similarity = similarity_score(term1, term2)
-                if term_similarity >= threshold:
-                    # If key terms match and we have numerical or temporal checks enabled
-                    if check_numerical or check_temporal:
-                        return check_additional_attributes(
-                            entity1, entity2, 
-                            check_numerical=check_numerical,
-                            check_temporal=check_temporal
-                        )
-                    return True
+    name1 = normalize_text(name1_str)
+    name2 = normalize_text(name2_str)
     
-    # Handle entities without names
-    if not name1 and not name2:
-        # For entities without names, rely on other attributes
-        return check_additional_attributes(
-            entity1, entity2,
-            check_numerical=True,  # Always check numerical for unnamed entities
-            check_temporal=True    # Always check temporal for unnamed entities
-        )
+    if not name1 and not name2: # Both lack names
+        # If types are FinancialMetric, they must have names to be compared this way.
+        if entity_type_unprefixed == "financialmetric": return False
+        # For other types, if no names, rely on other attribute checks if enabled
+        if check_temporal_for_similarity or check_numerical_values_for_similarity:
+             return check_additional_attributes(entity1, entity2, 
+                                                check_numerical_values_for_similarity, 
+                                                check_temporal_for_similarity,
+                                                strict_numerical_value_check=check_numerical_values_for_similarity)
+        return True # Or False, depending on policy for nameless entities of other types
     
+    if not name1 or not name2: # One has name, other doesn't
+        return False
+
+    name_similarity = similarity_score(name1, name2)
+    
+    # Specific strict logic for FinancialMetric as per user request
+    if entity_type_unprefixed == "financialmetric":
+        if name_similarity < 0.95: # Step 1: High name similarity required
+            return False
+
+        # Step 2: Compare all other attributes for exact match
+        keys1 = set(k for k in entity1.keys() if k not in ['id', 'type'])
+        keys2 = set(k for k in entity2.keys() if k not in ['id', 'type'])
+
+        if keys1 != keys2: # Must have the exact same set of attribute keys
+            # print(f"DEBUG: FinancialMetric keys differ. e1: {keys1}, e2: {keys2}")
+            return False
+
+        for key in keys1: # Iterate through one set, as they are identical
+            val1 = entity1.get(key)
+            val2 = entity2.get(key)
+
+            # Handle None values consistently
+            if val1 is None and val2 is None:
+                continue
+            if (val1 is None and val2 is not None) or \
+               (val1 is not None and val2 is None):
+                # print(f"DEBUG: FinancialMetric attribute '{key}' None mismatch: '{val1}' vs '{val2}'")
+                return False
+
+            # Type-aware comparison
+            if isinstance(val1, (int, float)) and isinstance(val2, (int, float)):
+                if abs(val1 - val2) > 1e-9: # Tolerance for float comparison
+                    # print(f"DEBUG: FinancialMetric float mismatch for '{key}': {val1} vs {val2}")
+                    return False
+            elif isinstance(val1, str) and isinstance(val2, str):
+                # For valueString, direct comparison after normalization. For others, could be more lenient if needed.
+                if normalize_text(val1) != normalize_text(val2):
+                    # print(f"DEBUG: FinancialMetric string mismatch for '{key}': '{normalize_text(val1)}' vs '{normalize_text(val2)}'")
+                    return False
+            elif isinstance(val1, bool) and isinstance(val2, bool):
+                if val1 != val2:
+                    # print(f"DEBUG: FinancialMetric bool mismatch for '{key}': {val1} vs {val2}")
+                    return False
+            elif isinstance(val1, list) and isinstance(val2, list):
+                # Simple list comparison: requires same elements in same order.
+                # For financial metrics, lists are not common in the streamlined ontology.
+                if val1 != val2: 
+                    # print(f"DEBUG: FinancialMetric list mismatch for '{key}': {val1} vs {val2}")
+                    return False
+            elif type(val1) != type(val2): # Mismatched types (and not caught by None checks)
+                # print(f"DEBUG: FinancialMetric type mismatch for '{key}': {type(val1)} vs {type(val2)}")
+                return False
+            elif val1 != val2: # Fallback for other types or if above checks didn't catch subtle differences
+                # print(f"DEBUG: FinancialMetric general value mismatch for '{key}': {val1} vs {val2}")
+                return False
+        return True # All attributes matched for FinancialMetric
+
+    # Existing logic for other metric/KPI types (less strict than FinancialMetric)
+    elif 'metric' in entity_type_unprefixed or 'kpi' in entity_type_unprefixed or 'headcount' in entity_type_unprefixed:
+        metric_name_threshold = 0.90 
+        if name_similarity >= metric_name_threshold:
+            # Check temporal info (e.g., fiscalPeriod, kpiDateOrPeriod, dateOrYear)
+            time_info1 = get_entity_temporal_info(entity1) # Uses 'extractedPeriod'
+            time_info2 = get_entity_temporal_info(entity2)
+            period1 = time_info1.get('extractedPeriod')
+            period2 = time_info2.get('extractedPeriod')
+            
+            if period1 and period2 and normalize_text(str(period1)) != normalize_text(str(period2)):
+                return False
+            
+            # For other metrics (not FinancialMetric), we might still use check_additional_attributes
+            # if `check_numerical_values_for_similarity` is true (which it is by default from find_matching_entity)
+            if check_numerical_values_for_similarity:
+                 return check_additional_attributes(entity1, entity2, 
+                                                   check_numerical=True, 
+                                                   check_temporal=False, # Period already checked
+                                                   strict_numerical_value_check=True) # Values must be close
+            return True 
+        else:
+            return False
+
+    # General case for other entity types
+    if name_similarity >= threshold:
+        if check_temporal_for_similarity or check_numerical_values_for_similarity:
+            return check_additional_attributes(entity1, entity2, 
+                                               check_numerical_values_for_similarity, 
+                                               check_temporal_for_similarity,
+                                               strict_numerical_value_check=check_numerical_values_for_similarity)
+        return True
+            
     return False
 
 def check_additional_attributes(entity1: Dict, entity2: Dict, 
-                               check_numerical: bool = True,
-                               check_temporal: bool = True) -> bool:
+                               check_numerical: bool,
+                               check_temporal: bool,
+                               strict_numerical_value_check: bool) -> bool:
     """
-    Check additional attributes (numerical values, temporal info) to 
-    determine if entities are similar.
+    Helper to check non-name attributes for consistency, primarily for non-FinancialMetric types
+    or when a less strict check is needed.
+    """
+    if check_temporal:
+        time_info1 = get_entity_temporal_info(entity1)
+        time_info2 = get_entity_temporal_info(entity2)
+        period1 = time_info1.get('extractedPeriod') # Relies on get_entity_temporal_info's consolidation
+        period2 = time_info2.get('extractedPeriod')
+        if period1 and period2 and normalize_text(str(period1)) != normalize_text(str(period2)):
+            return False 
     
-    Args:
-        entity1 (Dict): First entity
-        entity2 (Dict): Second entity
-        check_numerical (bool): Whether to check numerical values
-        check_temporal (bool): Whether to check temporal information
-        
-    Returns:
-        bool: True if additional attributes indicate similarity
-    """
-    # Check numerical values if requested
     if check_numerical:
         num_values1 = extract_numerical_values(entity1)
         num_values2 = extract_numerical_values(entity2)
         
-        # If both have numerical values, they should match
-        if num_values1 and num_values2:
-            # Check for matching fields
-            common_fields = set(num_values1.keys()) & set(num_values2.keys())
-            
-            # If there are common fields, values should be similar
-            if common_fields:
-                for field in common_fields:
-                    val1 = num_values1[field]
-                    val2 = num_values2[field]
-                    
-                    # Allow small differences for floating point values
-                    if isinstance(val1, (int, float)) and isinstance(val2, (int, float)):
-                        # For percentages, round to nearest integer
-                        if 'percentage' in field and abs(val1 - val2) <= 1:
-                            continue
-                        
-                        # For monetary values, allow 5% difference
-                        if 'value' in field or 'amount' in field:
-                            max_val = max(abs(val1), abs(val2))
-                            if max_val > 0 and abs(val1 - val2) / max_val <= 0.05:
-                                continue
-                        
-                        # For counts, allow exact matches only
-                        if val1 != val2:
-                            return False
-                
-                # If we get here, all common numerical fields are similar enough
-                return True
-    
-    # Check temporal information if requested
-    if check_temporal:
-        time_info1 = get_entity_temporal_info(entity1)
-        time_info2 = get_entity_temporal_info(entity2)
-        
-        # If both have temporal info, they should match
-        if time_info1 and time_info2:
-            # Check for matching fields
-            common_fields = set(time_info1.keys()) & set(time_info2.keys())
-            
-            # If there are common fields, values should match
-            if common_fields:
-                for field in common_fields:
-                    if time_info1[field] != time_info2[field]:
+        # If strict check, all numerical fields present in one must be in other and match.
+        if strict_numerical_value_check:
+            all_num_keys = set(num_values1.keys()) | set(num_values2.keys())
+            if not all_num_keys and (num_values1 or num_values2): # One has numbers, other doesn't, but strict check
+                return False
+
+            for key in all_num_keys:
+                val1 = num_values1.get(key)
+                val2 = num_values2.get(key)
+
+                if val1 is None and val2 is None: continue
+                if (val1 is None and val2 is not None) or \
+                   (val1 is not None and val2 is None):
+                    return False # One has it, other doesn't, considered different under strict
+
+                if isinstance(val1, (int, float)) and isinstance(val2, (int, float)):
+                    if abs(val1 - val2) > 1e-9: # Using a small tolerance for floats
                         return False
-                
-                # If we get here, all common temporal fields match
-                return True
-    
-    # If we don't have enough additional attributes to compare, 
-    # be conservative and return False
-    return False
+                # This function primarily focuses on numericals, string comparison of numericals is less robust
+                # elif str(val1) != str(val2): 
+                # return False 
+            return True # All common or present numericals matched strictly
+
+        # Less strict: only compare common numerical fields if not strict_numerical_value_check
+        else:
+            common_num_fields = set(num_values1.keys()) & set(num_values2.keys())
+            if not common_num_fields and (num_values1 and num_values2): # Both have numericals, but no common fields
+                 return False # Or True, depending on policy. False is safer for "similar".
+
+            for field in common_num_fields:
+                val1 = num_values1[field]
+                val2 = num_values2[field]
+                if isinstance(val1, (int, float)) and isinstance(val2, (int, float)):
+                    if 'percentage' in field.lower() or entity1.get('metricUnit') == '%' or entity2.get('metricUnit') == '%':
+                        if abs(val1 - val2) > 1.0: return False # Allow 1% diff
+                    elif ('value' in field.lower() or 'amount' in field.lower()):
+                        if max(abs(val1), abs(val2)) > 1e-9:
+                           if abs(val1 - val2) / max(abs(val1), abs(val2)) > 0.05: return False # 5% tolerance
+                        elif abs(val1 - val2) > 1e-9 : return False # Both near zero but different
+                    elif abs(val1 - val2) > 1e-9: return False
+                elif str(val1) != str(val2): return False
+        
+    return True
 
 def find_matching_entity(entity: Dict, entities: List[Dict], 
                         threshold: float = 0.75) -> Optional[Dict]:
     """
     Find a matching entity in a list of entities.
-    
-    Args:
-        entity (Dict): Entity to find a match for
-        entities (List[Dict]): List of entities to search in
-        threshold (float): Similarity threshold
-        
-    Returns:
-        Optional[Dict]: Matching entity if found, None otherwise
+    The check_numerical_values_for_similarity flag passed to are_entities_similar
+    will be True for metrics/KPIs, triggering stricter checks within are_entities_similar.
     """
-    entity_type = entity.get('type', '').lower()
+    entity_type_full = entity.get('type','').lower()
+    entity_type_unprefixed = entity_type_full.split(':')[-1]
     
-    # Use different thresholds for different entity types
-    if 'company' in entity_type:
-        # Companies need a higher match threshold
-        threshold = 0.9
-    elif 'product' in entity_type:
-        # Products need a higher match threshold too
-        threshold = 0.85
-    elif 'metric' in entity_type or 'kpi' in entity_type:
-        # Financial metrics can use a lower threshold with additional checks
-        threshold = 0.7
-    
-    for candidate in entities:
-        if are_entities_similar(entity, candidate, threshold=threshold):
-            return candidate
-    
+    # For FinancialMetric, are_entities_similar now has its own very strict "all attributes must match" logic.
+    # For other metrics/KPIs, we still want strict numerical value comparison.
+    check_numericals_strictly = 'metric' in entity_type_unprefixed or \
+                                'kpi' in entity_type_unprefixed or \
+                                'headcount' in entity_type_unprefixed
+        
+    for candidate_entity in entities:
+        if are_entities_similar(entity, candidate_entity, 
+                                threshold=threshold, 
+                                check_numerical_values_for_similarity=check_numericals_strictly,
+                                check_temporal_for_similarity=True): # Always check temporal for relevant types
+            return candidate_entity
+            
     return None
 
 def merge_entity_attributes(entity1: Dict, entity2: Dict) -> Dict:
     """
-    Merge two entities' attributes, keeping the most comprehensive information.
-    
-    Args:
-        entity1 (Dict): First entity
-        entity2 (Dict): Second entity
-        
-    Returns:
-        Dict: Merged entity
+    Merge two entities' attributes (entity1 is existing, entity2 is new).
+    Prioritizes completeness. For conflicting numerical values where entities were deemed similar
+    (e.g., for non-FinancialMetric types), entity1's value is kept.
     """
-    # Start with a copy of entity1
-    result = entity1.copy()
+    merged_entity = entity1.copy()
     
-    # Merge attributes from entity2
-    for key, value in entity2.items():
-        # Skip ID field
+    for key, val2 in entity2.items():
         if key == 'id':
             continue
         
-        # Handle name field specially - keep the more descriptive name
-        if key == 'name' and value:
-            current_name = result.get('name', '')
-            new_name = value
-            
-            # Use the longer name, or keep the first one if equal length
-            if new_name and (not current_name or len(new_name) > len(current_name)):
-                result[key] = new_name
-                
-        # Handle numerical values - choose the most precise
-        elif key in ['metricValue', 'percentageValue', 'headcountValue', 'valuation', 'roundAmount']:
-            if key not in result or result[key] is None:
-                result[key] = value
-            elif isinstance(value, (int, float)) and isinstance(result[key], (int, float)):
-                # Choose the more precise value (the one with more digits)
-                str_val1 = str(result[key])
-                str_val2 = str(value)
-                
-                if len(str_val2) > len(str_val1):
-                    result[key] = value
+        val1 = merged_entity.get(key)
         
-        # For other fields, only add if not present or empty
-        elif key not in result or not result[key]:
-            result[key] = value
+        if val2 is not None and (not isinstance(val2, str) or val2.strip()):
+            if val1 is None or (isinstance(val1, str) and not val1.strip()):
+                merged_entity[key] = val2
+            elif val1 != val2:
+                # Name merging: prefer longer or more specific
+                name_keys = ['name', 'metricName', 'kpiName', 'productName', 'fullName', 'shareholderName', 'contextName', 'eventName', 'locationName']
+                if key in name_keys:
+                    name1_norm = normalize_text(str(val1))
+                    name2_norm = normalize_text(str(val2))
+                    if name1_norm in name2_norm and len(name2_norm) > len(name1_norm): merged_entity[key] = val2
+                    elif name2_norm in name1_norm and len(name1_norm) > len(name2_norm): pass 
+                    elif re.search(r'(fy\d{2,4}|20\d{2})', name2_norm, re.IGNORECASE) and \
+                         not re.search(r'(fy\d{2,4}|20\d{2})', name1_norm, re.IGNORECASE): merged_entity[key] = val2
+                    elif len(name2_norm) > len(name1_norm): merged_entity[key] = val2
+                
+                # For FinancialMetric, this branch should ideally not be hit for differing core attributes
+                # because are_entities_similar would have returned False.
+                # This merge logic is more for other entity types or for non-critical/descriptive attributes.
+                elif key in ['metricValue', 'percentageValue', 'headcountValue', 'amount', 'parsedValue', 'parsedPercentage', 'valueString', 'kpiValueString']:
+                    # If entity1 has a substantive value, keep it. Otherwise, take entity2's.
+                    # This is a general policy; for FinancialMetrics, they wouldn't have merged if these differed significantly.
+                    if val1 is None or val1 == 0 or val1 == 0.0 or (isinstance(val1, str) and not val1.strip()):
+                        merged_entity[key] = val2
+                    # else, val1 is kept.
+                
+                elif isinstance(val1, list) and isinstance(val2, list):
+                    temp_list = list(val1) 
+                    for item in val2:
+                        if item not in temp_list:
+                            temp_list.append(item)
+                    merged_entity[key] = temp_list
+                
+                elif isinstance(val1, dict) and isinstance(val2, dict):
+                    merged_entity[key] = {**val1, **val2}
+                else: 
+                    # For other differing scalar types, generally prefer val2 if val1 is generic or val2 is more specific
+                    # Or if val1 is just a boolean placeholder and val2 has more info.
+                    # If val1 is a meaningful string and val2 is different, might prefer longer or more descriptive.
+                    if isinstance(val1, str) and isinstance(val2, str) and len(val2) > len(val1):
+                        merged_entity[key] = val2
+                    elif val1 is True and val2 is False: # Example: if a flag was true and now it's false
+                        merged_entity[key] = val2
+                    elif val1 is False and val2 is True:
+                         merged_entity[key] = val2
+                    else: # Default to entity2's value if no other rule applies for conflicting scalars
+                        merged_entity[key] = val2
     
-    return result
+    return merged_entity
+
+# --- Graph Merging and Cleaning (largely unchanged, but reviewed for compatibility) ---
 
 def merge_knowledge_graphs(graph1: Dict, graph2: Dict) -> Dict:
     """
-    Merge two knowledge graphs, combining similar entities.
-    
-    Args:
-        graph1 (Dict): First knowledge graph
-        graph2 (Dict): Second knowledge graph
-        
-    Returns:
-        Dict: Merged knowledge graph
+    Merge two knowledge graphs (graph1 is existing, graph2 is new).
+    Combines similar entities and their relationships.
     """
-    # Get entities and relationships from both graphs
     entities1 = graph1.get('entities', [])
     entities2 = graph2.get('entities', [])
-    
     relationships1 = graph1.get('relationships', [])
     relationships2 = graph2.get('relationships', [])
     
-    # Build a list of merged entities
-    merged_entities = []
-    id_mapping = {}  # Maps entity IDs from graph2 to corresponding entities in merged_entities
+    merged_entities_map = {entity['id']: entity.copy() for entity in entities1 if 'id' in entity}
+    id_g2_to_merged_id_map = {} 
     
-    # First, add all entities from graph1
-    for entity in entities1:
-        merged_entities.append(entity.copy())
-    
-    # Then try to merge entities from graph2
-    for entity in entities2:
-        entity_id = entity.get('id', '')
+    for entity_g2 in entities2:
+        if 'id' not in entity_g2:
+            print(f"Warning: Entity in graph2 missing ID, skipping: {entity_g2.get('name', 'Unnamed')}")
+            continue 
+        g2_id = entity_g2['id']
         
-        # Look for a matching entity in merged_entities
-        matching_entity = find_matching_entity(entity, merged_entities)
+        matching_entity_in_merged = find_matching_entity(entity_g2, list(merged_entities_map.values()))
         
-        if matching_entity:
-            # Found a match, update the mapping and merge attributes
-            matching_id = matching_entity.get('id', '')
-            id_mapping[entity_id] = matching_id
-            
-            # Find the matching entity in our merged_entities list and update it
-            for i, e in enumerate(merged_entities):
-                if e.get('id') == matching_id:
-                    merged_entities[i] = merge_entity_attributes(e, entity)
-                    break
+        if matching_entity_in_merged:
+            merged_id = matching_entity_in_merged['id']
+            id_g2_to_merged_id_map[g2_id] = merged_id
+            merged_entities_map[merged_id] = merge_entity_attributes(merged_entities_map[merged_id], entity_g2)
         else:
-            # No match found, add as a new entity
-            merged_entities.append(entity.copy())
-            # Note: we don't need to update id_mapping here as the ID remains the same
-    
-    # Merge relationships
-    merged_relationships = []
-    relationship_set = set()  # To track unique relationships
-    
-    # Add relationships from graph1
-    for rel in relationships1:
-        source = rel.get('source', '')
-        target = rel.get('target', '')
-        rel_type = rel.get('type', '')
-        
-        rel_key = (source, target, rel_type)
-        if rel_key not in relationship_set:
-            relationship_set.add(rel_key)
-            merged_relationships.append(rel.copy())
-    
-    # Add relationships from graph2, updating entity references
-    for rel in relationships2:
-        source = rel.get('source', '')
-        target = rel.get('target', '')
-        rel_type = rel.get('type', '')
-        
-        # Update source and target if they've been mapped
-        source_new = id_mapping.get(source, source)
-        target_new = id_mapping.get(target, target)
-        
-        rel_key = (source_new, target_new, rel_type)
-        if rel_key not in relationship_set:
-            relationship_set.add(rel_key)
+            current_new_id = g2_id
+            id_counter = 0
+            while current_new_id in merged_entities_map: # Handle potential ID collision for distinct entities
+                id_counter += 1
+                current_new_id = f"{g2_id}_dup{id_counter}"
+                print(f"Warning: ID clash for new distinct entity {g2_id}. Remapped to {current_new_id}")
             
-            new_rel = rel.copy()
-            new_rel['source'] = source_new
-            new_rel['target'] = target_new
-            merged_relationships.append(new_rel)
+            new_entity_g2_copy = entity_g2.copy()
+            new_entity_g2_copy['id'] = current_new_id # Assign new ID if it was remapped
+            merged_entities_map[current_new_id] = new_entity_g2_copy
+            id_g2_to_merged_id_map[g2_id] = current_new_id
+
+    final_merged_entities = list(merged_entities_map.values())
+    
+    merged_relationship_fingerprints = set()
+    final_merged_relationships = []
+
+    all_final_entity_ids = {e['id'] for e in final_merged_entities} # For validation
+
+    for rel_g1 in relationships1:
+        if 'source' in rel_g1 and 'target' in rel_g1 and 'type' in rel_g1:
+            s_id, t_id, r_type = rel_g1['source'], rel_g1['target'], rel_g1['type']
+            # Ensure source and target from g1 still exist (they should, as merged_entities_map started with them)
+            if s_id in all_final_entity_ids and t_id in all_final_entity_ids:
+                fingerprint = (s_id, t_id, r_type)
+                if fingerprint not in merged_relationship_fingerprints:
+                    final_merged_relationships.append(rel_g1.copy())
+                    merged_relationship_fingerprints.add(fingerprint)
+    
+    for rel_g2 in relationships2:
+        if 'source' in rel_g2 and 'target' in rel_g2 and 'type' in rel_g2:
+            original_s_g2, original_t_g2 = rel_g2['source'], rel_g2['target']
+            
+            s_id_new = id_g2_to_merged_id_map.get(original_s_g2) 
+            t_id_new = id_g2_to_merged_id_map.get(original_t_g2) 
+            
+            # If original IDs were not found in the map (e.g. entity_g2 was added as new with a potentially remapped ID)
+            # this means the relationship might be orphaned if its source/target entity from g2 was problematic.
+            # However, id_g2_to_merged_id_map should contain all original g2_ids that had corresponding entities.
+            if not s_id_new: s_id_new = original_s_g2 # Fallback, though less ideal
+            if not t_id_new: t_id_new = original_t_g2 # Fallback
+
+            r_type = rel_g2['type']
+            
+            fingerprint = (s_id_new, t_id_new, r_type)
+            if fingerprint not in merged_relationship_fingerprints:
+                if s_id_new in all_final_entity_ids and t_id_new in all_final_entity_ids:
+                    new_rel = rel_g2.copy()
+                    new_rel['source'] = s_id_new
+                    new_rel['target'] = t_id_new
+                    final_merged_relationships.append(new_rel)
+                    merged_relationship_fingerprints.add(fingerprint)
+                # else:
+                    # print(f"Debug: Dropping rel from g2: S:{original_s_g2}->{s_id_new}, T:{original_t_g2}->{t_id_new} not in final entities.")
     
     return {
-        'entities': merged_entities,
-        'relationships': merged_relationships
+        'entities': final_merged_entities,
+        'relationships': final_merged_relationships
     }
 
+
 def merge_multiple_knowledge_graphs(graphs: List[Dict]) -> Dict:
-    """
-    Merge multiple knowledge graphs into one.
-    
-    Args:
-        graphs (List[Dict]): List of knowledge graphs
-        
-    Returns:
-        Dict: Merged knowledge graph
-    """
     if not graphs:
         return {'entities': [], 'relationships': []}
     
-    # Start with the first graph
-    result = graphs[0].copy() if graphs else {'entities': [], 'relationships': []}
+    result_graph = graphs[0].copy() if graphs else {'entities': [], 'relationships': []}
     
-    # Merge each remaining graph into the result
-    for graph in graphs[1:]:
-        result = merge_knowledge_graphs(result, graph)
+    for i in range(1, len(graphs)):
+        result_graph = merge_knowledge_graphs(result_graph, graphs[i])
     
-    return result
+    return result_graph
 
 def normalize_entity_ids(graph: Dict) -> Dict:
-    """
-    Normalize entity IDs to a consistent pattern (e1, e2, etc.) and
-    update relationship references accordingly.
-    
-    Args:
-        graph (Dict): Knowledge graph
-        
-    Returns:
-        Dict: Knowledge graph with normalized IDs
-    """
     entities = graph.get('entities', [])
     relationships = graph.get('relationships', [])
     
-    # Create new IDs for entities
-    id_mapping = {}
+    id_remap = {} 
     new_entities = []
     
-    for i, entity in enumerate(entities):
-        old_id = entity.get('id', '')
-        new_id = f"e{i+1}"  # Start from e1
-        id_mapping[old_id] = new_id
-        id_mapping[old_id.lower()] = new_id  # Also add lowercase mapping
-        
-        # Update the entity with the new ID
-        new_entity = entity.copy()
-        new_entity['id'] = new_id
-        new_entities.append(new_entity)
+    for i, entity_dict in enumerate(entities):
+        if not isinstance(entity_dict, dict):
+            continue
+
+        old_id = entity_dict.get('id', f"missing_id_{i}") 
+        new_id = f"e{i+1}" 
+        id_remap[old_id] = new_id
+
+        new_entity_copy = entity_dict.copy()
+        new_entity_copy['id'] = new_id 
+        new_entities.append(new_entity_copy)
     
-    # Update relationship references
     new_relationships = []
-    for rel in relationships:
-        source = rel.get('source', '')
-        target = rel.get('target', '')
+    valid_new_entity_ids = {e['id'] for e in new_entities} 
+
+    for rel_dict in relationships:
+        if not isinstance(rel_dict, dict):
+            continue
+
+        old_source = rel_dict.get('source', '')
+        old_target = rel_dict.get('target', '')
         
-        # Try to find the mapping using exact case first, then try lowercase
-        source_new = id_mapping.get(source) or id_mapping.get(source.lower(), source)
-        target_new = id_mapping.get(target) or id_mapping.get(target.lower(), target)
+        new_source = id_remap.get(old_source)
+        new_target = id_remap.get(old_target)
         
-        new_rel = rel.copy()
-        new_rel['source'] = source_new
-        new_rel['target'] = target_new
-        new_relationships.append(new_rel)
-    
+        if new_source and new_target and new_source in valid_new_entity_ids and new_target in valid_new_entity_ids:
+            new_rel_copy = rel_dict.copy()
+            new_rel_copy['source'] = new_source
+            new_rel_copy['target'] = new_target
+            new_relationships.append(new_rel_copy)
+            
     return {
         'entities': new_entities,
         'relationships': new_relationships
     }
 
 def clean_knowledge_graph(graph: Dict) -> Dict:
-    """
-    Clean a knowledge graph by removing invalid relationships and
-    standardizing entity references.
-    
-    Args:
-        graph (Dict): Knowledge graph
-        
-    Returns:
-        Dict: Cleaned knowledge graph
-    """
     entities = graph.get('entities', [])
     relationships = graph.get('relationships', [])
     
-    # Create entity ID lookups
-    entity_ids = {entity.get('id'): entity.get('id') for entity in entities}
-    entity_ids_lower = {id.lower(): id for id in entity_ids.values()}
+    valid_entity_ids = {entity.get('id') for entity in entities if isinstance(entity, dict) and entity.get('id')}
     
-    # Filter and clean relationships
-    valid_relationships = []
-    relationship_set = set()
-    
+    cleaned_relationships = []
+    relationship_fingerprints = set() 
+
     for rel in relationships:
-        source = rel.get('source', '')
-        target = rel.get('target', '')
-        rel_type = rel.get('type', '')
-        
-        # Try to resolve case-insensitive matches
-        if source and source.lower() in entity_ids_lower:
-            source = entity_ids_lower[source.lower()]
+        if not isinstance(rel, dict): 
+            continue
+
+        source_id = rel.get('source')
+        target_id = rel.get('target')
+        rel_type = rel.get('type') 
+
+        if source_id in valid_entity_ids and target_id in valid_entity_ids:
+            fingerprint_type = rel_type if rel_type is not None else ""
+            fingerprint = (source_id, target_id, fingerprint_type)
             
-        if target and target.lower() in entity_ids_lower:
-            target = entity_ids_lower[target.lower()]
-        
-        # Check if both source and target entities exist
-        if source in entity_ids and target in entity_ids:
-            key = (source, target, rel_type)
-            if key not in relationship_set:
-                relationship_set.add(key)
-                
-                corrected_rel = rel.copy()
-                corrected_rel['source'] = source
-                corrected_rel['target'] = target
-                valid_relationships.append(corrected_rel)
-    
+            if fingerprint not in relationship_fingerprints:
+                relationship_fingerprints.add(fingerprint)
+                cleaned_relationships.append(rel.copy()) 
+
     return {
-        'entities': entities,
-        'relationships': valid_relationships
+        'entities': entities, 
+        'relationships': cleaned_relationships
     }

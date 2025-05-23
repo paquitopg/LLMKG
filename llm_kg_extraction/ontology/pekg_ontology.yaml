@@ -10,7 +10,6 @@ entities:
   - pekg:Investor
   - pekg:Advisor
   - pekg:GovernmentBody
-  - pekg:FinancialInstrument
   - pekg:OwnershipStake
   - pekg:Contract
   - pekg:IntellectualProperty
@@ -45,6 +44,7 @@ relations:
   - pekg:targetsUseCase (Product → UseCase)
   - pekg:operatesInMarket (Company → UseCase)
   - pekg:competesWith (Company ↔ Company)
+  - pekg:hasMarketMetric (Company → MarketMetric)
   - pekg:hasCustomer (Company → Company)
   - pekg:hasPartnershipWith (Company ↔ Company)
   - pekg:hasContractor (Company → Company)
@@ -91,6 +91,6 @@ attributes:
   pekg:FundingRound:
     - roundDate
     - roundAmount
-  pekg:Location:
-    - latitude
-    - longitude
+  pekg:hasEvent:
+    - eventDate
+    - eventDescription

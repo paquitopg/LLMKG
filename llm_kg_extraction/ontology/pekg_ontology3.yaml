@@ -1,0 +1,169 @@
+entities:
+  - pekg:Company:
+      description: "The primary business entity being analyzed or mentioned. Can be the target, a competitor, a client, or a shareholder of type 'Corporate'."
+      attributes:
+        - name: string # Primary name of the company.
+        - alias: list_string # Alternative names, project codenames (e.g., DECK, Project System).
+        - description: string # Business activities, value proposition, summary of operations, key offerings. May include qualitative risk or IP notes.
+        - industry: string # Primary industry (e.g., Software, Machine Translation, Retail Technology).
+        - sector: string # More specific sector (e.g., Enterprise Software, Unified Commerce Solutions).
+        - foundedYear: integer # Year of foundation if mentioned.
+        - website: string
+        - keyStrengths: list_string # Bullet points or short phrases describing competitive advantages or strengths.
+        - growthStrategySummary: string # Brief overview of growth plans or pillars.
+        - awardsAndCertifications: list_string # Notable awards or certifications mentioned (e.g., "FT120", "Gartner recognition").
+
+  - pekg:GovernmentBody:
+      description: "A government entity or agency, that can be a client or a partner."
+      attributes:
+        - name: string # Name of the government body (e.g., European Commission, French Ministry of Defense).
+        - type: string # Type of government body (e.g., Regulatory Agency, Funding Body, Government Department).
+
+  - pekg:Person:
+      description: "Key individuals associated with companies or transactions, like management or advisors."
+      attributes:
+        - fullName: string # Full name of the person.
+        - biographySummary: string # Brief description of their role, experience, or tenure (e.g., "CEO since 2020", "Ex-McKinsey").
+        - educationHighlights: list_string # Notable educational institutions if mentioned.
+
+  - pekg:Position:
+      description: "A role or title held by a Person within a Company."
+      attributes:
+        - titleName: string # Job title (e.g., CEO, Managing Director, Partner, Analyst).
+        - department: string # Department if specified (e.g., Sales, R&D, Operations).
+
+  - pekg:ProductOrService:
+      description: "A distinct product, service, solution, or platform offered by a company."
+      attributes:
+        - name: string # Name of the product or service (e.g., "Systran Pure Neural Software", "Cash-in Module").
+        - category: string # "Product", "Service", "Platform", "Solution Suite".
+        - description: string # What it does, key features, benefits, target users.
+        - pricingModelInfo: string # Textual description of pricing (e.g., "Subscription model", "Perpetual license with maintenance").
+
+  - pekg:Technology:
+      description: "Key underlying technologies or technological capabilities that are a core differentiator."
+      attributes:
+        - name: string # Name of the technology (e.g., Neural Machine Translation, API-based Platform, PNMT®).
+        - description: string # Brief explanation of the technology or its application/benefit.
+
+  - pekg:MarketContext:
+      description: "Information about the market a company operates in, including size, growth, and key characteristics."
+      attributes:
+        - segmentName: string # Name of the market segment (e.g., "French Omnichannel Software Market", "Global Machine Translation").
+        - geography: string # e.g., France, Global, North America.
+        - sizeInfo: string # Textual description of current/future market size (e.g., "€0.9bn in 2020, growing to €2.1bn by 2027f").
+        - growthInfo: string # Textual description of market growth (e.g., "+13.5% CAGR 2020-2027f").
+        - keyDrivers: list_string # Main factors driving market growth.
+        - characteristics: string # Other notable features (e.g., "Fragmented", "Consolidation ongoing").
+        - sourceOfData: string # If a source for market data is cited (e.g., "CSA Research", "Company Estimates").
+
+  - pekg:UseCaseOrIndustry: # Changed from UseCase to be broader
+      description: "Specific applications, client problems solved, or industry verticals targeted by a company or its products/services."
+      attributes:
+        - name: string # Name of the use case or industry (e.g., "Defense & Security", "Retail Banking", "E-commerce Fulfillment").
+        - description: string # Further details if provided.
+
+  - pekg:FinancialMetric:
+      description: "Quantitative financial data point reported by a company or for a market."
+      attributes:
+        - metricName: string # Descriptive name (e.g., "FY21A Revenue", "Adj. EBITDA Margin FY24BP", "ARR"). Should be specific.
+        - valueString: string # The value as a string to capture formatting (e.g., "€16.0m", "29%", "$7.7m ARR"). Parse components in post-processing.
+        - fiscalPeriod: string # The period this metric refers to (e.g., "FY21A", "2022F", "LTM Q3 2023", "2022-2025 CAGR").
+        - isRecurring: boolean # True if explicitly stated as recurring (e.g., ARR, MRR, recurring maintenance).
+        - isAdjustedOrProforma: boolean # True if terms like "Adjusted", "Normative", "Proforma" are used.
+        - scope: string # e.g., Group, Product X, France (if the metric is not for the whole company by default).
+        - sourceNote: string # Any footnotes or source mentions (e.g., "Excl. IFRS16", "KPMG VDD").
+
+  - pekg:OperationalKPI:
+      description: "Key Performance Indicators that are not strictly financial, market size, or headcount."
+      attributes:
+        - kpiName: string # e.g., "Number of Clients", "Client Retention Rate", "Active Users".
+        - kpiValueString: string # Value as a string (e.g., "c.105", "95%", "3.5k features").
+        - kpiDateOrPeriod: string # Date or period the KPI was measured (e.g., "2022f", "Q1-2023", "as of Dec 2021").
+        - description: string # Additional context or definition of the KPI.
+
+  - pekg:Headcount:
+      description: "Information about employee numbers."
+      attributes:
+        - totalEmployees: integer # The total number of employees.
+        - headcountName : string # Name of the headcount metric (e.g., "Total Employees", "Sales Team").
+        - breakdownDescription: string # Textual description of breakdown (e.g., "72 in Paris, 22 in San Diego", "61% Master's degrees").
+        - dateOrYear: string # The date or year the headcount figure refers to (e.g., "2022", "End of FY21").
+
+  - pekg:Shareholder:
+      description: "An entity (company or individual/group) that owns shares in a company."
+      attributes:
+        - name: string # Name of the shareholder (e.g., STIC, Softbank Ventures Asia, Management Team).
+        - type: string # e.g., Private Equity, Venture Capital, Founder, Management, Corporate, Investment Fund.
+        - percentageOwned: float # Ownership percentage if specified (e.g., 50.4).
+        - description: string # Any other relevant info (e.g., "Lead investor", "Founding shareholder").
+
+  - pekg:Advisor:
+      description: "A firm or individual providing advisory services for a transaction or to a company."
+      attributes:
+        - name: string # Name of the advisory firm or individual.
+        - type: string # e.g., M&A Financial Advisor, Legal Counsel, DD Provider (Financial, Commercial, Technical).
+        - roleInContext: string # Specific role (e.g., "Mandated for disposal of the Group", "Advisor to ChapsVision").
+
+  - pekg:TransactionContext:
+      description: "Describes the context of a deal or corporate finance event being discussed (e.g., a potential sale, acquisition, funding)."
+      attributes:
+        - contextName: string # Name or codename of the transaction (e.g., Project System, Project Hermes, Disposal of Systran).
+        - typeSought: string # e.g., Majority Stake Sale, Acquisition, Growth Equity Investment, Strategic Partnership.
+        - status: string # e.g., Contemplated, Active Mandate, Seeking Offers, Ongoing Discussions.
+        - dealRationaleHighlights: list_string # Key reasons or objectives for the transaction.
+        - keyInvestmentHighlights: list_string # Bullet points often provided in teasers summarizing attractiveness.
+        - transactionPerimeter: string # Description of what assets/entities are included in the transaction.
+
+  - pekg:HistoricalEvent: # Streamlined from CorporateEvent and specific event types
+      description: "A notable past event in a company's history (e.g., acquisition, funding round, major product launch, office opening)."
+      attributes:
+        - eventName: string # Concise description of the event (e.g., "Acquisition by CSLi", "Launch of PNMT®", "Opened San Diego Office").
+        - eventType: string # e.g., Acquisition, Divestment, FundingRound, ProductLaunch, Partnership, NewOffice, AwardReceived, Delisting.
+        - dateOrYear: string # Date or year of the event (e.g., "2014", "Q3 2020").
+        - description: string # Further details about the event.
+        # For M&A events, specific parties can be linked via relations if extractable
+        # For FundingRounds, specific investors can be linked via relations if extractable
+
+  - pekg:Location:
+      description: "A physical office, headquarters, or significant geographical area of operation."
+      attributes:
+        - locationName: string # Name of the location (e.g., Paris, San Diego, France, Europe, EMEA).
+        - locationType: string # e.g., Headquarters, Regional Office, R&D Center, Sales Office, Key Market.
+        - officeSpecificInfo: string # Textual info like "Sales: €8.3m (FY21A), Employees: 72" for a specific office.
+
+relations:
+  # --- Core Company Structure & People ---
+  - pekg:hasSubsidiary (pekg:Company -> pekg:Company) # Parent company has this subsidiary.
+  - pekg:isSubsidiaryOf (pekg:Company -> pekg:Company) # This company is a subsidiary of the target company.
+  - pekg:employs (pekg:Company -> pekg:Person)
+  - pekg:holdsPosition (pekg:Person -> pekg:Position)
+  - pekg:positionAt (pekg:Position -> pekg:Company) # The company where the position is held.
+
+  # --- Products, Services, Technology, Market & Use Cases ---
+  - pekg:offers (pekg:Company -> pekg:ProductOrService)
+  - pekg:targets (pekg:ProductOrService|pekg:Company -> pekg:UseCaseOrIndustry) # Product/Company targets a specific use case or industry.
+  - pekg:operatesIn (pekg:Company -> pekg:MarketContext) # Company operates in this market context.
+  - pekg:usesTechnology (pekg:Company|pekg:ProductOrService -> pekg:Technology)
+  - pekg:hasClientCompany (pekg:Company -> pekg:Company) # If a client is also a company in the KG.
+  - pekg:hasClientGovernment (pekg:Company -> pekg:GovernmentBody) # If a client is a government body.
+  - pekg:hasClientNamed (pekg:Company -> string) # If client is just a name string. (Less ideal, prefer entity if possible)
+
+  # --- Financials & Performance ---
+  - pekg:reportsFinancialMetric (pekg:Company|pekg:ProductOrService|pekg:RevenueStream -> pekg:FinancialMetric) # Added RevenueStream
+  - pekg:reportsOperationalKPI (pekg:Company|pekg:ProductOrService -> pekg:OperationalKPI)
+  - pekg:reportsHeadcount (pekg:Company|pekg:Location -> pekg:Headcount) # Headcount can be for a location.
+  - pekg:hasRevenueStream (pekg:Company -> pekg:RevenueStream) # Entity for revenue breakdown.
+
+  # --- Transactions, Ownership & Advisory ---
+  - pekg:isSubjectOf (pekg:Company -> pekg:TransactionContext) # The company is the subject of this transaction context.
+  - pekg:seeksTransaction (pekg:Company|pekg:Shareholder -> pekg:TransactionContext) # Who is initiating/seeking the transaction.
+  - pekg:advisedBy (pekg:Company|pekg:Shareholder|pekg:TransactionContext -> pekg:Advisor) # Entity advised by an advisor.
+  - pekg:hasShareholder (pekg:Company -> pekg:Shareholder)
+  - pekg:shareholderOf (pekg:Shareholder -> pekg:Company) # Inverse, Shareholder owns part of Company.
+
+  # --- Location & Events ---
+  - pekg:hasOfficeIn (pekg:Company -> pekg:Location) # Includes HQ if locationType is "Headquarters".
+  - pekg:experiencedEvent (pekg:Company -> pekg:HistoricalEvent)
+  - pekg:eventInvolvesParty (pekg:HistoricalEvent -> pekg:Company|pekg:Shareholder) # e.g., Acquirer, Acquired, Investor in a funding round.
+                                                                               # The specific role is in HistoricalEvent.eventType and description.
