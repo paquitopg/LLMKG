@@ -1,0 +1,72 @@
+entities:
+  - pekg:Company
+  - pekg:LegalEntity
+  - pekg:Person
+  - pekg:Department
+  - pekg:Position
+  - pekg:Committee
+  - pekg:Product
+  - pekg:UseCase
+  - pekg:Investor
+  - pekg:GovernmentBody
+  - pekg:Technology
+  - pekg:RegulatoryRequirement
+  - pekg:PolicyDocument
+  - pekg:FinancialMetric
+  - pekg:HeadcountMetric
+  - pekg:MarketMetric
+  - pekg:KPI
+  - pekg:Location
+
+relations:
+  - pekg:ownsEntity (Company → LegalEntity)
+  - pekg:hasExecutive (Company|LegalEntity → Person)
+  - pekg:hasBoardMember (Company → Person)
+  - pekg:employs (Company → Person)
+  - pekg:hasDepartment (Company → Department)
+  - pekg:holdsPosition (Person → Position)
+  - pekg:isMemberOfCommittee (Person → Committee)
+  - pekg:hasCommittee (Company → Committee)
+  - pekg:develops (Company|Person|Department → Product|Technology)
+  - pekg:targetsUseCase (Product → UseCase)
+  - pekg:operatesInMarket (Company → UseCase)
+  - pekg:competesWith (Company|Product ↔ Company)
+  - pekg:hasCustomer (Company → Company|GovernmentBody)
+  - pekg:hasPartnershipWith (Company ↔ Company|GovernmentBody)
+  - pekg:hasContractor (Company → Company)
+  - pekg:hasHeadquartersIn (Company → Location)
+  - pekg:hasOfficeOrIsLocatedIn (Company|GovernmentBody → Location)
+  - pekg:operatesInLocation (Company → Location)
+  - pekg:registeredIn (LegalEntity → Location)
+  - pekg:hasOwnershipStakeIn (Company|Person|LegalEntity → Company)
+  - pekg:hasInvestor (Company → Company|Person|GovernmentBody)
+  - pekg:mergesWith (Company → Company)
+  - pekg:acquires (Company|GovernmentBody → Company)
+  - pekg:exits (Company|Person → Company)
+  - pekg:mergedWith (Company ↔ Company)
+  - pekg:hasContractWith (Company|Person|LegalEntity|GovernmentBody ↔ Company|Person|LegalEntity|GovernmentBody)
+  - pekg:isIntellectualPropertyOf (Technology → Company)
+  - pekg:hasPatentFor (Company → Technology)
+  - pekg:hasLitigationWith (Company|Person|LegalEntity → Company|Person|LegalEntity|GovernmentBody)
+  - pekg:hasAdvisor (Company → Person|Company|LegalEntity)
+  - pekg:subjectTo (Company|LegalEntity → RegulatoryRequirement)
+  - pekg:hasPolicy (Company|LegalEntity → PolicyDocument)
+  - pekg:reportsMetric (Company|LegalEntity|Department → FinancialMetric)
+  - pekg:hasHeadcount (Department|Company|LegalEntity → HeadcountMetric)
+  - pekg:hasMarketMetric (Company → MarketMetric)
+  - pekg:hasKPI (Company → KPI)
+
+
+attributes:
+  pekg:FinancialMetric:
+    - metricValue
+    - metricCurrency
+    - metricUnit
+    - percentageValue
+  pekg:MarketMetric:
+    - metricValue
+    - metricUnit
+  pekg:KPI:
+    - metricUnit
+  pekg:HeadcountMetric:
+    - headcountValue
