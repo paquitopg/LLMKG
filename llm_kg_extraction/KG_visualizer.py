@@ -147,6 +147,8 @@ class KnowledgeGraphVisualizer:
                 label_content = e.get("shareholderName", e.get("name"))
             elif entity_type == "pekg:HistoricalEvent":
                 label_content = e.get("eventName", e.get("name"))
+            elif entity_type == "pekg:Historicalevent":
+                label_content = e.get("eventName", e.get("name"))
             # Add more specific fallbacks if needed for other types
 
             # If still no specific name, try common value fields before ID

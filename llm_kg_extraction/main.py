@@ -4,7 +4,7 @@ from pathlib import Path
 import time
 import json
 import uuid 
-from merged_kg_builder3 import FinancialKGBuilder 
+from REPOS.llm_kg_extraction.llm_kg_extraction.KG_builder import FinancialKGBuilder 
 from dotenv import load_dotenv
 
 try:
@@ -119,7 +119,8 @@ def main(project_name: str,
                         extraction_mode=builder.extraction_mode, # from builder
                         model_name=model_name_sanitized,         # use sanitized version
                         llm_provider=builder.llm_provider,       # from builder
-                        construction_mode=builder.construction_mode # from builder
+                        construction_mode=builder.construction_mode, # from builder
+                        ontology_file=builder.ontology_path if hasattr(builder, 'ontology_path') else None
                     )
                 else:
                     print("Skipping transformation because main KG file path is not available.")

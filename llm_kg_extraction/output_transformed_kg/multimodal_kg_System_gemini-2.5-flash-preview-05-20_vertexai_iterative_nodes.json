@@ -1,0 +1,8588 @@
+[
+  {
+    "request_id": "2",
+    "id": "e1",
+    "label": "Systran USA",
+    "category": "company",
+    "description": "Group operational holding, regrouping all the activity for the French market",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e2",
+    "label": "Investment Opportunity in Systran",
+    "category": "transaction_context",
+    "description": "5 main growth pillars",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e3",
+    "label": "Rothschild & Co",
+    "category": "unknown",
+    "description": "Rothschild & Co (Type: unknown).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e4",
+    "label": "ChapsVision",
+    "category": "company",
+    "description": "Entity associated with the confidentiality of the document (watermark).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e5",
+    "label": "Eleven VDD report",
+    "category": "market_context",
+    "description": "Eleven VDD report: Size Info: €760m. Growth Info: +26% p.a.. Key Drivers: enhanced translation capabilities, rising workflow integration with human translation, advancement of global logistics systems, increased demand from emerging industries. Characteristics: A dynamic market powered by innovation. Source Of Data: Eleven VDD report.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e6",
+    "label": "Rothschild & Co",
+    "category": "company",
+    "description": "Rothschild & Co (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e7",
+    "label": "Samsung Securities",
+    "category": "company",
+    "description": "Samsung Securities (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e8",
+    "label": "Pierre Brencklé",
+    "category": "person",
+    "description": "Pierre Brencklé (Type: person).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e9",
+    "label": "Romain Ritoux",
+    "category": "person",
+    "description": "Romain Ritoux (Type: person).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e10",
+    "label": "Fabien Lenoir",
+    "category": "person",
+    "description": "Fabien Lenoir (Type: person).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e11",
+    "label": "Minah Kim",
+    "category": "person",
+    "description": "Minah Kim (Type: person).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e12",
+    "label": "Yoojin Lee",
+    "category": "person",
+    "description": "Yoojin Lee (Type: person).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e13",
+    "label": "Seungil Back",
+    "category": "person",
+    "description": "Seungil Back (Type: person).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e14",
+    "label": "Marketing manager",
+    "category": "position",
+    "description": "Marketing manager (Type: position).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e15",
+    "label": "Middle East and Africa",
+    "category": "location",
+    "description": "Middle East and Africa: Location Type: City. Office Specific Info: sales office for Japan, Asia oriented language R&D.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e16",
+    "label": "Samsung Securities",
+    "category": "unknown",
+    "description": "Samsung Securities (Type: unknown).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e17",
+    "label": "Rothschild & Co",
+    "category": "advisor",
+    "description": "Rothschild & Co: Type: pekg:Advisor. Role In Context: mandated by the shareholders of Systran SAS for the disposal of the Group.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e18",
+    "label": "Samsung Securities",
+    "category": "advisor",
+    "description": "Samsung Securities: Type: pekg:Advisor. Role In Context: Prepared document.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e19",
+    "label": "American Express",
+    "category": "company",
+    "description": "American Express (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e20",
+    "label": "Citi",
+    "category": "company",
+    "description": "Citi (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e21",
+    "label": "HSBC",
+    "category": "company",
+    "description": "HSBC (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e22",
+    "label": "Societe Generale",
+    "category": "company",
+    "description": "Societe Generale (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e23",
+    "label": "Continental",
+    "category": "company",
+    "description": "Continental (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e24",
+    "label": "Nestle",
+    "category": "company",
+    "description": "Nestle (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e25",
+    "label": "PSA Groupe",
+    "category": "company",
+    "description": "PSA Groupe (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e26",
+    "label": "Schneider Electric",
+    "category": "company",
+    "description": "Schneider Electric (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e27",
+    "label": "AstraZeneca",
+    "category": "company",
+    "description": "AstraZeneca (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e28",
+    "label": "Novartis",
+    "category": "company",
+    "description": "Novartis (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e29",
+    "label": "Roche",
+    "category": "company",
+    "description": "Roche (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e30",
+    "label": "Autodesk",
+    "category": "company",
+    "description": "Autodesk (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e31",
+    "label": "Adobe",
+    "category": "company",
+    "description": "Adobe (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e32",
+    "label": "OVH.com",
+    "category": "company",
+    "description": "OVH.com (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e33",
+    "label": "Micro Focus",
+    "category": "company",
+    "description": "Micro Focus (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e34",
+    "label": "Blizzard",
+    "category": "company",
+    "description": "Blizzard (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e35",
+    "label": "Medallia",
+    "category": "company",
+    "description": "Medallia (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e36",
+    "label": "Gjensidige",
+    "category": "company",
+    "description": "Gjensidige (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e37",
+    "label": "Australian Government Department of Defence",
+    "category": "unknown",
+    "description": "Australian Government Department of Defence (Type: unknown).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e38",
+    "label": "INTERPOL",
+    "category": "unknown",
+    "description": "INTERPOL (Type: unknown).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e39",
+    "label": "French Ministry of Interior",
+    "category": "unknown",
+    "description": "French Ministry of Interior (Type: unknown).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e40",
+    "label": "cloud-based translation software",
+    "category": "product_or_service",
+    "description": "cloud-based translation software: Category: Translation Software.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e41",
+    "label": "Systran Pure Neural® Software",
+    "category": "product_or_service",
+    "description": "Secured and integrated translation software solution",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e42",
+    "label": "Systran Translate Enterprise",
+    "category": "product_or_service",
+    "description": "B2B Cloud SaaS, open to everyone, with online subscription, payment and configuration",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e43",
+    "label": "Systran Model Studio",
+    "category": "product_or_service",
+    "description": "An application to customize Systran’s models by retraining them using private translation data",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e44",
+    "label": "Maintenance",
+    "category": "product_or_service",
+    "description": "Maintenance: Category: Revenue Stream.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e45",
+    "label": "Annual licenses",
+    "category": "product_or_service",
+    "description": "Annual licenses: Category: Revenue Stream.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e46",
+    "label": "Perpetual licenses",
+    "category": "product_or_service",
+    "description": "Perpetual licenses: Category: Revenue Stream.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e47",
+    "label": "Service",
+    "category": "product_or_service",
+    "description": "Service: Category: Revenue Stream.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e48",
+    "label": "Cloud",
+    "category": "product_or_service",
+    "description": "Cloud: Category: Revenue Stream.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e49",
+    "label": "Others",
+    "category": "product_or_service",
+    "description": "Including services & other spot sales",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e50",
+    "label": "neural technologies in machine translation",
+    "category": "technology",
+    "description": "Breakthrough innovation in translation technology",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e51",
+    "label": "Defense and security",
+    "category": "use_case_or_industry",
+    "description": "Defense and security (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e52",
+    "label": "technology & software",
+    "category": "use_case_or_industry",
+    "description": "technology & software (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e53",
+    "label": "industry & services",
+    "category": "use_case_or_industry",
+    "description": "industry & services (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e54",
+    "label": "e-commerce",
+    "category": "use_case_or_industry",
+    "description": "e-commerce (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e55",
+    "label": "language service providers",
+    "category": "use_case_or_industry",
+    "description": "language service providers (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e56",
+    "label": "public sector",
+    "category": "use_case_or_industry",
+    "description": "public sector (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e57",
+    "label": "Financial institutions",
+    "category": "use_case_or_industry",
+    "description": "Financial institutions (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e58",
+    "label": "Manufacturing",
+    "category": "use_case_or_industry",
+    "description": "Manufacturing (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e59",
+    "label": "Healthcare",
+    "category": "use_case_or_industry",
+    "description": "Healthcare (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e60",
+    "label": "Revenues",
+    "category": "financial_metric",
+    "description": "Details for 'Revenues' (Period: FY21A): €16.0m (Scope: Gross reported revenue).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e61",
+    "label": "Annual Recurring Revenue (ARR)",
+    "category": "financial_metric",
+    "description": "Details for 'Annual Recurring Revenue (ARR)' (Period: FY21A): €7.7m (Scope: recurring revenue of the month x 12 for a given product, calculated on SSA and SSI only). Notes: Recurring.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e62",
+    "label": "Revenue CAGR",
+    "category": "financial_metric",
+    "description": "Details for 'Revenue CAGR' (Period: FY19A-FY22B): +11%.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e63",
+    "label": "Revenue CAGR",
+    "category": "financial_metric",
+    "description": "Details for 'Revenue CAGR' (Period: FY22BP-FY26BP): +29%.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e64",
+    "label": "Adjusted Sales",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted Sales' (Period: FY19A): €13.8m. Notes: Adjusted/Proforma.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e65",
+    "label": "Adjusted Sales",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted Sales' (Period: FY20A): €14.8m. Notes: Adjusted/Proforma.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e66",
+    "label": "Adjusted Sales",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted Sales' (Period: FY21A): €15.9m. Notes: Adjusted/Proforma.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e67",
+    "label": "Adjusted Sales",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted Sales' (Period: FY22B): €19.0m. Notes: Adjusted/Proforma.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e68",
+    "label": "Adjusted Sales",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted Sales' (Period: FY23BP): €22.7m. Notes: Adjusted/Proforma.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e69",
+    "label": "Adjusted Sales",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted Sales' (Period: FY24BP): €31.2m. Notes: Adjusted/Proforma.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e70",
+    "label": "Adjusted Sales",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted Sales' (Period: FY25BP): €41.6m. Notes: Adjusted/Proforma.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e71",
+    "label": "Adjusted Sales",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted Sales' (Period: FY26BP): €53.2m. Notes: Adjusted/Proforma.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e72",
+    "label": "Adjusted EBITDA",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA' (Period: FY19A): €1.8m (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e73",
+    "label": "Adjusted EBITDA",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA' (Period: FY20A): €2.1m (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e74",
+    "label": "Adjusted EBITDA",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA' (Period: FY21A): €2.0m (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e75",
+    "label": "Adjusted EBITDA",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA' (Period: FY22B): €2.2m (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e76",
+    "label": "Adjusted EBITDA",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA' (Period: FY23BP): €2.4m (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e77",
+    "label": "Adjusted EBITDA",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA' (Period: FY24BP): €4.8m (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e78",
+    "label": "Adjusted EBITDA",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA' (Period: FY25BP): €10.8m (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e79",
+    "label": "Adjusted EBITDA",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA' (Period: FY26BP): €16.9m (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e80",
+    "label": "Revenue from government organizations",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Revenue from government organizations': Value is 26% (as of FY21A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e81",
+    "label": "e81",
+    "category": "headcount",
+    "description": "e81: Total Employees: 2. Headcount Name: Employees. Date Or Year: Current.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e82",
+    "label": "First player to implement neural technologies in machine translation",
+    "category": "historical_event",
+    "description": "3-year project supported by the French government, to be launched after creation of domestic mass TV channel consortium",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e83",
+    "label": "Maintenance Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Maintenance Revenue Share': Value is 28% (as of FY21A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e84",
+    "label": "Annual Licenses Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Annual Licenses Revenue Share': Value is 22% (as of FY21A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e85",
+    "label": "Perpetual Licenses Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Perpetual Licenses Revenue Share': Value is 32% (as of FY21A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e86",
+    "label": "Service Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Service Revenue Share': Value is 8% (as of FY21A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e87",
+    "label": "Cloud Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Cloud Revenue Share': Value is 1% (as of FY21A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e88",
+    "label": "Others Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Others Revenue Share': Value is 9% (as of FY21A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e89",
+    "label": "Annual Licenses ARR Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Annual Licenses ARR Share': Value is 46% (as of FY21A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e90",
+    "label": "Maintenance ARR Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Maintenance ARR Share': Value is 54% (as of FY21A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e91",
+    "label": "French Gatcho Group",
+    "category": "company",
+    "description": "French Gatcho Group (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e92",
+    "label": "Euronext",
+    "category": "company",
+    "description": "Euronext (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e93",
+    "label": "CSLi",
+    "category": "company",
+    "description": "CSLi (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e94",
+    "label": "Samsung",
+    "category": "company",
+    "description": "Samsung (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e95",
+    "label": "World Computational Linguistics Association",
+    "category": "company",
+    "description": "World Computational Linguistics Association (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e96",
+    "label": "STIC",
+    "category": "unknown",
+    "description": "STIC (Type: unknown).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e97",
+    "label": "Softbank Ventures Asia",
+    "category": "unknown",
+    "description": "Softbank Ventures Asia (Type: unknown).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e98",
+    "label": "KIP",
+    "category": "unknown",
+    "description": "KIP (Type: unknown).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e99",
+    "label": "US Intelligence Community",
+    "category": "unknown",
+    "description": "US Intelligence Community (Type: unknown).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e100",
+    "label": "Peter Toma",
+    "category": "person",
+    "description": "Peter Toma (Type: person).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e101",
+    "label": "V. Godard",
+    "category": "person",
+    "description": "V. Godard (Type: person).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e102",
+    "label": "Babelfish",
+    "category": "product_or_service",
+    "description": "1st online translation tool",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e103",
+    "label": "Hybrid translation engine",
+    "category": "product_or_service",
+    "description": "combining linguistic rules with statistical processing",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e104",
+    "label": "S-Translator",
+    "category": "product_or_service",
+    "description": "(Translation, MT post-editing, transcreation)",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e105",
+    "label": "Samsung Galaxy S series",
+    "category": "product_or_service",
+    "description": "Samsung Galaxy S series: Category: Smartphone.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e106",
+    "label": "Note smartphones",
+    "category": "product_or_service",
+    "description": "Note smartphones: Category: Smartphone.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e107",
+    "label": "PNMT®",
+    "category": "product_or_service",
+    "description": "PNMT®: Category: Neural Translation Engine.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e108",
+    "label": "World’s First Machine Translation for US Intelligence Community",
+    "category": "historical_event",
+    "description": "World’s First Machine Translation for US Intelligence Community: Event Type: Product Launch. Date Or Year: 1975.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e109",
+    "label": "Acquisition by French Gatcho Group",
+    "category": "historical_event",
+    "description": "Acquisition by French Gatcho Group: Event Type: Branch Opening. Date Or Year: 1986.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e110",
+    "label": "Contribution to the creation of Babelfish",
+    "category": "historical_event",
+    "description": "Contribution to the creation of Babelfish: Event Type: Product Development. Date Or Year: 1997.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e111",
+    "label": "Creation of the 1st hybrid translation engine",
+    "category": "historical_event",
+    "description": "Creation of the 1st hybrid translation engine: Event Type: Product Development. Date Or Year: 2008.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e112",
+    "label": "Listed on Euronext",
+    "category": "historical_event",
+    "description": "Listed on Euronext: Event Type: IPO. Date Or Year: 2009.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e113",
+    "label": "Appointment as official provider for S-Translator",
+    "category": "historical_event",
+    "description": "Appointment as official provider for S-Translator: Event Type: Partnership. Date Or Year: 2013.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e114",
+    "label": "Acquisition by CSLi",
+    "category": "historical_event",
+    "description": "Acquisition by CSLi: Event Type: Delisting. Date Or Year: 2014.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e115",
+    "label": "Award from World Computational Linguistics Association",
+    "category": "historical_event",
+    "description": "Award from World Computational Linguistics Association: Event Type: Employment Start. Date Or Year: 2016.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e116",
+    "label": "Launch of the 1st Neural translation engine named PNMT®",
+    "category": "historical_event",
+    "description": "Launch of the 1st Neural translation engine named PNMT®: Event Type: Product Launch. Date Or Year: 2017.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e117",
+    "label": "Acquisition by Funds",
+    "category": "historical_event",
+    "description": "Acquisition by STIC, Softbank Ventures Asia, KIP",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e118",
+    "label": "New generation of the server solution: Systran Pure Neural® Server",
+    "category": "historical_event",
+    "description": "market experienced a 2% contraction due to sectors heavily afflicted by the pandemic",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e119",
+    "label": "Launch of Systran Model Studio",
+    "category": "historical_event",
+    "description": "Launch of Systran Model Studio: Event Type: Product Launch. Date Or Year: 2022.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e120",
+    "label": "Palantir",
+    "category": "company",
+    "description": "Palantir (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e121",
+    "label": "Donnelley",
+    "category": "company",
+    "description": "Donnelley (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e122",
+    "label": "OTT companies",
+    "category": "company",
+    "description": "Companies in Over-The-Top media services",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e123",
+    "label": "Media companies",
+    "category": "company",
+    "description": "Media companies (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e124",
+    "label": "Domestic mass TV channel consortium",
+    "category": "company",
+    "description": "Domestic mass TV channel consortium (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e125",
+    "label": "Machine Translation Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Machine Translation Market Size': €760m (Scope: market).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e126",
+    "label": "Machine Translation Market Growth Rate",
+    "category": "financial_metric",
+    "description": "Details for 'Machine Translation Market Growth Rate': +26% p.a. (Scope: market).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e127",
+    "label": "Corporations expected to use machine translation",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Corporations expected to use machine translation': Value is 10% (as of by 2025).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e128",
+    "label": "Long-term customers",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Long-term customers': Value is 262.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e129",
+    "label": "electronics",
+    "category": "use_case_or_industry",
+    "description": "electronics (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e130",
+    "label": "IT",
+    "category": "use_case_or_industry",
+    "description": "IT (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e131",
+    "label": "gaming",
+    "category": "use_case_or_industry",
+    "description": "gaming (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e132",
+    "label": "e-learning",
+    "category": "use_case_or_industry",
+    "description": "e-learning (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e133",
+    "label": "content",
+    "category": "use_case_or_industry",
+    "description": "content (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e134",
+    "label": "media",
+    "category": "use_case_or_industry",
+    "description": "media (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e135",
+    "label": "big data",
+    "category": "use_case_or_industry",
+    "description": "big data (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e136",
+    "label": "B2C / SME segment",
+    "category": "use_case_or_industry",
+    "description": "B2C / SME segment (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e137",
+    "label": "voice-translation market",
+    "category": "use_case_or_industry",
+    "description": "voice-translation market (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e138",
+    "label": "verified machine translation software",
+    "category": "product_or_service",
+    "description": "verified machine translation software: Category: Translation Software.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e139",
+    "label": "special engines using customer data",
+    "category": "product_or_service",
+    "description": "special engines using customer data: Category: Translation Engine Customization.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e140",
+    "label": "APIs",
+    "category": "product_or_service",
+    "description": "APIs: Category: Integration Tools.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e141",
+    "label": "plugins",
+    "category": "product_or_service",
+    "description": "plugins: Category: Integration Tools.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e142",
+    "label": "connectors",
+    "category": "product_or_service",
+    "description": "connectors: Category: Integration Tools.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e143",
+    "label": "customer-centric support solutions",
+    "category": "product_or_service",
+    "description": "customer-centric support solutions: Category: Support Service.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e144",
+    "label": "dedicated advisory services",
+    "category": "product_or_service",
+    "description": "dedicated advisory services: Category: Advisory Service.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e145",
+    "label": "translation engine upgrades",
+    "category": "product_or_service",
+    "description": "translation engine upgrades: Category: Software Maintenance.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e146",
+    "label": "cloud offering",
+    "category": "product_or_service",
+    "description": "cloud offering: Category: Cloud Service.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e147",
+    "label": "verifying solutions",
+    "category": "product_or_service",
+    "description": "verifying solutions: Category: Software Solution.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e148",
+    "label": "transcript translation",
+    "category": "product_or_service",
+    "description": "transcript translation: Category: Translation Service/Technology.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e149",
+    "label": "context awareness translation",
+    "category": "product_or_service",
+    "description": "context awareness translation: Category: Translation Service/Technology.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e150",
+    "label": "voice-translation",
+    "category": "product_or_service",
+    "description": "voice-translation: Category: Translation Service/Technology.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e151",
+    "label": "open-source local solution",
+    "category": "product_or_service",
+    "description": "open-source local solution: Category: Translation Software.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e152",
+    "label": "context awareness",
+    "category": "technology",
+    "description": "context awareness (Type: technology).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e153",
+    "label": "transcript technology",
+    "category": "technology",
+    "description": "transcript technology (Type: technology).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e154",
+    "label": "advanced machine translation technologies",
+    "category": "technology",
+    "description": "advanced machine translation technologies (Type: technology).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e155",
+    "label": "First player to implement advanced machine translation technologies",
+    "category": "historical_event",
+    "description": "First player to implement advanced machine translation technologies: Event Type: Technology Implementation. Date Or Year: 1970s.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e156",
+    "label": "French government",
+    "category": "unknown",
+    "description": "French government (Type: unknown).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e157",
+    "label": "Sales",
+    "category": "financial_metric",
+    "description": "Details for 'Sales' (Period: FY21A): €6.5m (Scope: San Diego office).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e158",
+    "label": "Sales",
+    "category": "financial_metric",
+    "description": "Details for 'Sales' (Period: FY21A): €8.3m (Scope: Paris office).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e159",
+    "label": "Sales",
+    "category": "financial_metric",
+    "description": "Details for 'Sales' (Period: FY21A): €1.1m (Scope: Daejeon office).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e160",
+    "label": "Sales",
+    "category": "financial_metric",
+    "description": "Details for 'Sales' (Period: FY21A): €0.1m (Scope: Tokyo office).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e161",
+    "label": "Daejeon Branch opening",
+    "category": "historical_event",
+    "description": "Daejeon Branch opening: Event Type: Branch Opening. Date Or Year: 2019.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e162",
+    "label": "Number of offices",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Number of offices': Value is 4.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e163",
+    "label": "Number of continents with offices",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Number of continents with offices': Value is 3.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e164",
+    "label": "Countries with customer proximity",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Countries with customer proximity': Value is 8.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e165",
+    "label": "Funded research projects",
+    "category": "product_or_service",
+    "description": "Research projects mostly for public entities",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e166",
+    "label": "Customized translation model",
+    "category": "product_or_service",
+    "description": "Customized translation model: Category: Translation Model.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e167",
+    "label": "Advanced MT Domain Models",
+    "category": "product_or_service",
+    "description": "Specialized translation models for specific domains",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e168",
+    "label": "Translation engines",
+    "category": "technology",
+    "description": "Technology allowing data owners to train using their own data",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e169",
+    "label": "Revenue Share",
+    "category": "financial_metric",
+    "description": "Details for 'Revenue Share': c.90% (Scope: Systran Pure Neural® Server).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e170",
+    "label": "Revenue Share",
+    "category": "financial_metric",
+    "description": "Details for 'Revenue Share': c.5% (Scope: Systran Translate Enterprise).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e171",
+    "label": "Revenue Share",
+    "category": "financial_metric",
+    "description": "Details for 'Revenue Share': c.5% (Scope: Systran Model Studio).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e172",
+    "label": "Revenue Share",
+    "category": "financial_metric",
+    "description": "Details for 'Revenue Share': c.5% (Scope: Funded research projects).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e173",
+    "label": "Number of supported language pairs",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Number of supported language pairs': Value is 50+.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e174",
+    "label": "Number of advanced MT domain models",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Number of advanced MT domain models': Value is 400+.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e175",
+    "label": "SME's",
+    "category": "use_case_or_industry",
+    "description": "Small and Medium-sized Enterprises",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e176",
+    "label": "Public institutions",
+    "category": "use_case_or_industry",
+    "description": "Main client for On-premise solutions",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e177",
+    "label": "Data owners",
+    "category": "use_case_or_industry",
+    "description": "Entities or individuals who own data used for training translation models",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e178",
+    "label": "Language Weaver",
+    "category": "company",
+    "description": "Main Competitor in machine translation.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e179",
+    "label": "DeepL Pro",
+    "category": "company",
+    "description": "Main Competitor in machine translation.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e180",
+    "label": "Microsoft",
+    "category": "company",
+    "description": "Big Tech competitor in machine translation.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e181",
+    "label": "Amazon Translate",
+    "category": "company",
+    "description": "Big Tech competitor in machine translation.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e182",
+    "label": "Google",
+    "category": "company",
+    "description": "Big Tech competitor in machine translation.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e183",
+    "label": "Customization",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Customization': Value is N/A. Ability to tailor translation solutions..",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e184",
+    "label": "Number of languages",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Number of languages': Value is N/A. Breadth of language pair support..",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e185",
+    "label": "Quality of generic translation",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Quality of generic translation': Value is N/A. Effectiveness of general-purpose translation..",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e186",
+    "label": "Level of confidentiality and security",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Level of confidentiality and security': Value is N/A. Data protection and security features..",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e187",
+    "label": "Customer support",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Customer support': Value is N/A. Availability and quality of client assistance..",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e188",
+    "label": "Price",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Price': Value is N/A. Key Performance Characteristic for Cloud-based solutions.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e189",
+    "label": "Ranking in key client concerns",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Ranking in key client concerns': Value is n°1. Systran is ranked n°1 in customization and level of confidentiality and security..",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e190",
+    "label": "Vincent Godard",
+    "category": "person",
+    "description": "Vincent Godard: Education Highlights: ECAM LaSalle.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e191",
+    "label": "Infor",
+    "category": "company",
+    "description": "Infor (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e192",
+    "label": "Woonoz",
+    "category": "company",
+    "description": "Woonoz (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e193",
+    "label": "Sam Yoosuk Kim",
+    "category": "person",
+    "description": "Sam Yoosuk Kim: Education Highlights: Carnegie Mellon University.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e194",
+    "label": "Melon Partners",
+    "category": "company",
+    "description": "Melon Partners (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e195",
+    "label": "John Paul Barraza",
+    "category": "person",
+    "description": "John Paul Barraza: Education Highlights: UCLA, San Diego State University.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e196",
+    "label": "Yannick Douzant",
+    "category": "person",
+    "description": "Yannick Douzant: Education Highlights: IMT Atlantique, IAE Paris Sorbonne.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e197",
+    "label": "Trace One",
+    "category": "company",
+    "description": "Trace One (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e198",
+    "label": "Gaëlle Bou",
+    "category": "person",
+    "description": "Gaëlle Bou: Education Highlights: Chambéry School of business.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e199",
+    "label": "Nibelis",
+    "category": "company",
+    "description": "Nibelis (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e200",
+    "label": "Linedata",
+    "category": "company",
+    "description": "Linedata (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e201",
+    "label": "Vincent Godard at Infor",
+    "category": "historical_event",
+    "description": "Vincent Godard at Infor: Event Type: Employment Period. Date Or Year: 2020 - 2021.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e202",
+    "label": "Vincent Godard at Woonoz",
+    "category": "historical_event",
+    "description": "Vincent Godard at Woonoz: Event Type: Employment Period. Date Or Year: 2017 - 2020.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e203",
+    "label": "Vincent Godard at Systran (previous)",
+    "category": "historical_event",
+    "description": "Vincent Godard at Systran (previous): Event Type: Employment Period. Date Or Year: 2009 - 2013.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e204",
+    "label": "Sam Yoosuk Kim at Melon Partners",
+    "category": "historical_event",
+    "description": "Sam Yoosuk Kim at Melon Partners: Event Type: Employment Period. Date Or Year: 2018 - 2020.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e205",
+    "label": "Sam Yoosuk Kim at Systran (previous)",
+    "category": "historical_event",
+    "description": "Sam Yoosuk Kim at Systran (previous): Event Type: Employment Period. Date Or Year: 2014 - 2017.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e206",
+    "label": "John Paul Barraza joins Systran",
+    "category": "historical_event",
+    "description": "John Paul Barraza joins Systran: Event Type: Employment Start. Date Or Year: 2004.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e207",
+    "label": "John Paul Barraza's roles at Systran",
+    "category": "historical_event",
+    "description": "John Paul Barraza's roles at Systran: Event Type: Employment Period. Date Or Year: 2004 - 2019.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e208",
+    "label": "Yannick Douzant joins Systran",
+    "category": "historical_event",
+    "description": "Yannick Douzant joins Systran: Event Type: Employment Start. Date Or Year: 2010.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e209",
+    "label": "Yannick Douzant's roles at Systran",
+    "category": "historical_event",
+    "description": "Yannick Douzant's roles at Systran: Event Type: Employment Period. Date Or Year: 2010 - 2018.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e210",
+    "label": "Yannick Douzant at Trace One",
+    "category": "historical_event",
+    "description": "Yannick Douzant at Trace One: Event Type: Employment Period. Date Or Year: 2006 - 2010.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e211",
+    "label": "Gaëlle Bou at Nibelis",
+    "category": "historical_event",
+    "description": "Gaëlle Bou at Nibelis: Event Type: Employment Period. Date Or Year: 2015 - 2016.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e212",
+    "label": "Gaëlle Bou at Linedata",
+    "category": "historical_event",
+    "description": "Gaëlle Bou at Linedata: Event Type: Employment Period. Date Or Year: 2010 - 2014.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e213",
+    "label": "Adjusted Sales",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted Sales' (Period: FY19A): €13.8m. Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e214",
+    "label": "Adjusted Sales",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted Sales' (Period: FY20A): €14.8m. Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e215",
+    "label": "Adjusted Sales",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted Sales' (Period: FY21A): €15.9m. Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e216",
+    "label": "Adjusted Sales",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted Sales' (Period: FY22B): €19.0m. Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e217",
+    "label": "Adjusted Sales",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted Sales' (Period: FY23BP): €22.7m. Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e218",
+    "label": "Adjusted Sales",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted Sales' (Period: FY24BP): €31.2m. Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e219",
+    "label": "Adjusted Sales",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted Sales' (Period: FY25BP): €41.6m. Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e220",
+    "label": "Adjusted Sales",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted Sales' (Period: FY26BP): €53.2m. Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e221",
+    "label": "Adjusted EBITDA",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA' (Period: FY19A): €1.8m (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e222",
+    "label": "Adjusted EBITDA",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA' (Period: FY20A): €2.1m (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e223",
+    "label": "Adjusted EBITDA",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA' (Period: FY21A): €2.0m (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e224",
+    "label": "Adjusted EBITDA",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA' (Period: FY22B): €2.2m (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e225",
+    "label": "Adjusted EBITDA",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA' (Period: FY23BP): €2.4m (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e226",
+    "label": "Adjusted EBITDA",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA' (Period: FY24BP): €4.8m (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e227",
+    "label": "Adjusted EBITDA",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA' (Period: FY25BP): €10.8m (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e228",
+    "label": "Adjusted EBITDA",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA' (Period: FY26BP): €16.9m (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e229",
+    "label": "Adjusted EBITDA margin",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA margin' (Period: FY19A): 12.8% (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e230",
+    "label": "Adjusted EBITDA margin",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA margin' (Period: FY20A): 13.9% (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e231",
+    "label": "Adjusted EBITDA margin",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA margin' (Period: FY21A): 12.8% (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e232",
+    "label": "Adjusted EBITDA margin",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA margin' (Period: FY22B): 11.4% (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e233",
+    "label": "Adjusted EBITDA margin",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA margin' (Period: FY23BP): 10.6% (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e234",
+    "label": "Adjusted EBITDA margin",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA margin' (Period: FY24BP): 15.3% (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e235",
+    "label": "Adjusted EBITDA margin",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA margin' (Period: FY25BP): 25.9% (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e236",
+    "label": "Adjusted EBITDA margin",
+    "category": "financial_metric",
+    "description": "Details for 'Adjusted EBITDA margin' (Period: FY26BP): 31.9% (Scope: excl. IFRS16 leases). Notes: Adjusted/Proforma, Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e237",
+    "label": "Revenue CAGR",
+    "category": "financial_metric",
+    "description": "Details for 'Revenue CAGR' (Period: FY19A-FY22B): +11%. Notes: Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e238",
+    "label": "Revenue CAGR",
+    "category": "financial_metric",
+    "description": "Details for 'Revenue CAGR' (Period: FY22BP-FY26BP): +29%. Notes: Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e239",
+    "label": "Revenue CAGR",
+    "category": "financial_metric",
+    "description": "Details for 'Revenue CAGR' (Period: FY22B-FY27BP): +29%. Notes: Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e240",
+    "label": "Revenue",
+    "category": "financial_metric",
+    "description": "Details for 'Revenue' (Period: FY26BP): €16m+ (Scope: Cloud offer). Notes: Source: KPMG VDD report, Company Information.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e241",
+    "label": "KPMG",
+    "category": "company",
+    "description": "KPMG (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e242",
+    "label": "transcript translation",
+    "category": "technology",
+    "description": "transcript translation (Type: technology).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e243",
+    "label": "R&D fostering",
+    "category": "operational_k_p_i",
+    "description": "KPI 'R&D fostering': Value is N/A. Foster R&D of transcript and context awareness translation.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e244",
+    "label": "MT solutions",
+    "category": "product_or_service",
+    "description": "MT solutions: Category: Machine Translation Solutions.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e245",
+    "label": "Cloud solution development",
+    "category": "product_or_service",
+    "description": "Cloud solution development: Category: Strategic Initiative.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e246",
+    "label": "Marketplace solutions",
+    "category": "product_or_service",
+    "description": "Marketplace solutions: Category: Software Solution.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e247",
+    "label": "quality-control solutions",
+    "category": "product_or_service",
+    "description": "quality-control solutions: Category: Software Solution.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e248",
+    "label": "B2C",
+    "category": "use_case_or_industry",
+    "description": "Business-to-Consumer segment",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e249",
+    "label": "Korea Investment Partners",
+    "category": "unknown",
+    "description": "Korea Investment Partners (Type: unknown).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e250",
+    "label": "SSI",
+    "category": "company",
+    "description": "US subsidiary, based in San Diego and owning 100% shares of: SJGK (Systran Japan) and SCL (Systran Co. Ltd)",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e251",
+    "label": "SJGK",
+    "category": "company",
+    "description": "Japanese subsidiary",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e252",
+    "label": "SCL",
+    "category": "company",
+    "description": "Korean subsidiary",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e253",
+    "label": "Llsollu",
+    "category": "unknown",
+    "description": "Llsollu (Type: unknown).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e254",
+    "label": "Korea Investment & Securities",
+    "category": "unknown",
+    "description": "Korea Investment & Securities (Type: unknown).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e255",
+    "label": "Management",
+    "category": "unknown",
+    "description": "Fully diluted / post distribution of planned free shares",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e256",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size': €760m (Scope: Global MT market).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e257",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size': c. €2bn (Scope: Language technologies market).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e258",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size': c. €22bn (Scope: Language services market).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e259",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size': c. €24bn (Scope: Worldwide language services and technologies market).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e260",
+    "label": "Machine Translation",
+    "category": "product_or_service",
+    "description": "(Neural Machine Translation, speech processing)",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e261",
+    "label": "Other technologies",
+    "category": "product_or_service",
+    "description": "(Terminology management, translation memory, translation quality assessment, text anonymization)",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e262",
+    "label": "Management & Processing",
+    "category": "product_or_service",
+    "description": "(Translation Management System, connectors, interpreting management system)",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e263",
+    "label": "Content Creation & Publishing",
+    "category": "product_or_service",
+    "description": "(Audio-visual tools, Content Management Systems, information extraction, other)",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e264",
+    "label": "Localization & Engineering",
+    "category": "product_or_service",
+    "description": "(Software, website, multimedia, game, mobile, internationalization)",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e265",
+    "label": "telephone interpreting",
+    "category": "product_or_service",
+    "description": "(On-site, telephone, conference, video remote, remote simultaneous, machine interpreting)",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e266",
+    "label": "Other language services",
+    "category": "product_or_service",
+    "description": "(Dubbing, narration, subtitling, voice-over, transcription, international testing & QA SEO)",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e267",
+    "label": "speech processing",
+    "category": "technology",
+    "description": "speech processing (Type: technology).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e268",
+    "label": "Terminology management",
+    "category": "technology",
+    "description": "Terminology management (Type: technology).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e269",
+    "label": "translation memory",
+    "category": "technology",
+    "description": "translation memory (Type: technology).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e270",
+    "label": "translation quality assessment",
+    "category": "technology",
+    "description": "translation quality assessment (Type: technology).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e271",
+    "label": "text anonymization",
+    "category": "technology",
+    "description": "text anonymization (Type: technology).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e272",
+    "label": "Translation Management System",
+    "category": "technology",
+    "description": "Translation Management System (Type: technology).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e273",
+    "label": "interpreting management system",
+    "category": "technology",
+    "description": "interpreting management system (Type: technology).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e274",
+    "label": "Audio-visual tools",
+    "category": "technology",
+    "description": "Audio-visual tools (Type: technology).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e275",
+    "label": "information extraction",
+    "category": "technology",
+    "description": "information extraction (Type: technology).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e276",
+    "label": "MT post-editing",
+    "category": "product_or_service",
+    "description": "MT post-editing: Category: Translation Service.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e277",
+    "label": "transcreation",
+    "category": "product_or_service",
+    "description": "transcreation: Category: Language Service.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e278",
+    "label": "Software localization",
+    "category": "use_case_or_industry",
+    "description": "Software localization (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e279",
+    "label": "website localization",
+    "category": "use_case_or_industry",
+    "description": "website localization (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e280",
+    "label": "multimedia localization",
+    "category": "use_case_or_industry",
+    "description": "multimedia localization (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e281",
+    "label": "internationalization",
+    "category": "use_case_or_industry",
+    "description": "internationalization (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e282",
+    "label": "conference interpreting",
+    "category": "product_or_service",
+    "description": "conference interpreting: Category: Interpreting Service.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e283",
+    "label": "video remote interpreting",
+    "category": "product_or_service",
+    "description": "video remote interpreting: Category: Interpreting Service.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e284",
+    "label": "remote simultaneous interpreting",
+    "category": "product_or_service",
+    "description": "remote simultaneous interpreting: Category: Interpreting Service.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e285",
+    "label": "Dubbing",
+    "category": "product_or_service",
+    "description": "Dubbing: Category: Language Service.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e286",
+    "label": "narration",
+    "category": "product_or_service",
+    "description": "narration: Category: Language Service.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e287",
+    "label": "subtitling",
+    "category": "product_or_service",
+    "description": "subtitling: Category: Language Service.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e288",
+    "label": "voice-over",
+    "category": "product_or_service",
+    "description": "voice-over: Category: Language Service.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e289",
+    "label": "international testing",
+    "category": "product_or_service",
+    "description": "international testing: Category: Language Service.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e290",
+    "label": "QA SEO",
+    "category": "product_or_service",
+    "description": "QA SEO: Category: Language Service.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e291",
+    "label": "Globalese",
+    "category": "company",
+    "description": "Globalese (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e292",
+    "label": "Omniscient Technologies",
+    "category": "company",
+    "description": "Omniscient Technologies (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e293",
+    "label": "ModernMT",
+    "category": "company",
+    "description": "ModernMT (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e294",
+    "label": "PangeaMT",
+    "category": "company",
+    "description": "PangeaMT (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e295",
+    "label": "Memsource",
+    "category": "company",
+    "description": "Memsource (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e296",
+    "label": "memoQ",
+    "category": "company",
+    "description": "memoQ (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e297",
+    "label": "Ubiqus",
+    "category": "company",
+    "description": "Ubiqus (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e298",
+    "label": "HubSpot",
+    "category": "company",
+    "description": "HubSpot (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e299",
+    "label": "Lionbridge",
+    "category": "company",
+    "description": "Lionbridge (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e300",
+    "label": "TransPerfect",
+    "category": "company",
+    "description": "TransPerfect (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e301",
+    "label": "EUROLingo",
+    "category": "company",
+    "description": "EUROLingo (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e302",
+    "label": "CyraCom",
+    "category": "company",
+    "description": "CyraCom (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e303",
+    "label": "Language Services",
+    "category": "company",
+    "description": "Language Services (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e304",
+    "label": "Circle Translations",
+    "category": "company",
+    "description": "Circle Translations (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e305",
+    "label": "Semantix",
+    "category": "company",
+    "description": "Semantix (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e306",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2018A): €21.3bn (Scope: Global Language service and technologies market).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e307",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2019A): €22.2bn (Scope: Global Language service and technologies market).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e308",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2020A): €21.8bn (Scope: Global Language service and technologies market).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e309",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2021A): €24.4bn (Scope: Global Language service and technologies market).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e310",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2022F): €25.9bn (Scope: Global Language service and technologies market).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e311",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2023F): €27.4bn (Scope: Global Language service and technologies market).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e312",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2024F): €29.1bn (Scope: Global Language service and technologies market).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e313",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2018A): €0.4bn (Scope: Machine Translation market).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e314",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2019A): €0.4bn (Scope: Machine Translation market).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e315",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2020A): €0.6bn (Scope: Machine Translation market).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e316",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2021A): €0.8bn (Scope: Machine Translation market).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e317",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2018A): €20.9bn (Scope: Language services & technologies, exc. MT).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e318",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2019A): €21.8bn (Scope: Language services & technologies, exc. MT).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e319",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2020A): €21.3bn (Scope: Language services & technologies, exc. MT).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e320",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2021A): €23.7bn (Scope: Language services & technologies, exc. MT).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e321",
+    "label": "Market Growth Rate",
+    "category": "financial_metric",
+    "description": "Details for 'Market Growth Rate' (Period: anticipated): +16-20% (Scope: MT market).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e322",
+    "label": "CAGR",
+    "category": "financial_metric",
+    "description": "Details for 'CAGR' (Period: 18-21): +26% (Scope: Machine Translation).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e323",
+    "label": "CAGR",
+    "category": "financial_metric",
+    "description": "Details for 'CAGR' (Period: 21-24F): +16-20% (Scope: Machine Translation).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e324",
+    "label": "CAGR",
+    "category": "financial_metric",
+    "description": "Details for 'CAGR' (Period: 18-21): +5% (Scope: Language services & technologies, exc. MT).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e325",
+    "label": "CAGR",
+    "category": "financial_metric",
+    "description": "Details for 'CAGR' (Period: 21-24F): +6% (Scope: Language services & technologies, exc. MT).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e326",
+    "label": "CAGR",
+    "category": "financial_metric",
+    "description": "Details for 'CAGR' (Period: 2018-2020): +5% (Scope: Language services & technologies, exc. MT).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e327",
+    "label": "CAGR",
+    "category": "financial_metric",
+    "description": "Details for 'CAGR' (Period: 2021-2024): +6% (Scope: Language services & technologies, exc. MT).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e328",
+    "label": "Market Contraction",
+    "category": "financial_metric",
+    "description": "Details for 'Market Contraction' (Period: 2020): 2% (Scope: Language services & technologies, exc. MT).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e329",
+    "label": "Market Growth Driver",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Market Growth Driver': Value is N/A. internationalization of supply chains.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e330",
+    "label": "Market Growth Offset",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Market Growth Offset': Value is N/A (as of 2020). structural shift to remote workplace.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e331",
+    "label": "Future Market Growth Driver",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Future Market Growth Driver': Value is N/A. accelerated market penetration in Asia.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e332",
+    "label": "MT models",
+    "category": "technology",
+    "description": "MT models (Type: technology).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e333",
+    "label": "LSP",
+    "category": "company",
+    "description": "Language Service Providers",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e334",
+    "label": "large tech companies",
+    "category": "company",
+    "description": "large tech companies (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e335",
+    "label": "Cloud-based software solutions",
+    "category": "product_or_service",
+    "description": "Cloud-based software solutions: Category: MT Software Deployment Method.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e336",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2018A): 381 €m (Scope: global Machine Translation market). Notes: Source: Global Market Insights, expert calls, Slator, Eleven VDD report.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e337",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2019A): 413 €m (Scope: global Machine Translation market). Notes: Source: Global Market Insights, expert calls, Slator, Eleven VDD report.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e338",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2020A): 554 €m (Scope: global Machine Translation market). Notes: Source: Global Market Insights, expert calls, Slator, Eleven VDD report.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e339",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2021F): 763 €m (Scope: global Machine Translation market). Notes: Source: Global Market Insights, expert calls, Slator, Eleven VDD report.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e340",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2022F): 909 €m (Scope: global Machine Translation market). Notes: Source: Global Market Insights, expert calls, Slator, Eleven VDD report.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e341",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2023F): 1062 €m (Scope: global Machine Translation market). Notes: Source: Global Market Insights, expert calls, Slator, Eleven VDD report.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e342",
+    "label": "Market Size",
+    "category": "financial_metric",
+    "description": "Details for 'Market Size' (Period: 2024F): 1241 €m (Scope: global Machine Translation market). Notes: Source: Global Market Insights, expert calls, Slator, Eleven VDD report.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e343",
+    "label": "CAGR",
+    "category": "financial_metric",
+    "description": "Details for 'CAGR' (Period: 18-20): +26% (Scope: Machine Translation market). Notes: Source: Global Market Insights, expert calls, Slator, Eleven VDD report.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e344",
+    "label": "CAGR",
+    "category": "financial_metric",
+    "description": "Details for 'CAGR' (Period: 21-24F): +16-20% (Scope: Machine Translation market). Notes: Source: Global Market Insights, expert calls, Slator, Eleven VDD report.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e345",
+    "label": "CAGR",
+    "category": "operational_k_p_i",
+    "description": "KPI 'CAGR': Value is +28% (as of 18-21). On-premise solutions growth.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e346",
+    "label": "CAGR",
+    "category": "operational_k_p_i",
+    "description": "KPI 'CAGR': Value is +18-22% (as of 21-24F). On-premise solutions growth.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e347",
+    "label": "Market Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Market Share': Value is 55% (as of 2018A). On-premise solutions share of global Machine Translation market.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e348",
+    "label": "Market Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Market Share': Value is 55% (as of 2019A). On-premise solutions share of global Machine Translation market.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e349",
+    "label": "Market Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Market Share': Value is 54% (as of 2020A). On-premise solutions share of global Machine Translation market.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e350",
+    "label": "Market Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Market Share': Value is 53% (as of 2021F). On-premise solutions share of global Machine Translation market.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e351",
+    "label": "Market Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Market Share': Value is 48% (as of 2022F). On-premise solutions share of global Machine Translation market.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e352",
+    "label": "Market Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Market Share': Value is 49% (as of 2023F). On-premise solutions share of global Machine Translation market.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e353",
+    "label": "Market Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Market Share': Value is 50% (as of 2024F). On-premise solutions share of global Machine Translation market.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e354",
+    "label": "On-premise solutions",
+    "category": "product_or_service",
+    "description": "On-premise solutions: Category: MT Software Deployment Method.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e355",
+    "label": "Finance",
+    "category": "use_case_or_industry",
+    "description": "Finance (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e356",
+    "label": "Defense",
+    "category": "use_case_or_industry",
+    "description": "Defense (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e357",
+    "label": "Governments",
+    "category": "use_case_or_industry",
+    "description": "Main client for On-premise solutions",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e358",
+    "label": "Technology companies",
+    "category": "use_case_or_industry",
+    "description": "Main client for Cloud-based solutions",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e359",
+    "label": "Companies requiring low data security",
+    "category": "use_case_or_industry",
+    "description": "Main client for Cloud-based solutions",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e360",
+    "label": "sectors with heavy data security constraints",
+    "category": "use_case_or_industry",
+    "description": "Characteristic of sectors using On-premise solutions",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e361",
+    "label": "Security",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Security': Value is N/A. Key Performance Characteristic for On-premise solutions.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e362",
+    "label": "Data privacy",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Data privacy': Value is N/A. Key Performance Characteristic for On-premise solutions.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e363",
+    "label": "Support",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Support': Value is N/A. Key Performance Characteristic for On-premise solutions.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e364",
+    "label": "Scalability",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Scalability': Value is N/A. Key Performance Characteristic for Cloud-based solutions.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e365",
+    "label": "Ease-of-use",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Ease-of-use': Value is N/A. Key Performance Characteristic for Cloud-based solutions.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e366",
+    "label": "IT CAPEX reduction",
+    "category": "operational_k_p_i",
+    "description": "KPI 'IT CAPEX reduction': Value is N/A. Advantage of Cloud-based solutions.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e367",
+    "label": "Access to solutions regardless of location",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Access to solutions regardless of location': Value is N/A. Advantage of Cloud-based solutions.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e368",
+    "label": "IT CAPEX",
+    "category": "financial_metric",
+    "description": "Details for 'IT CAPEX': N/A (Scope: IT infrastructure).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e369",
+    "label": "On-premise Market Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'On-premise Market Share': Value is 75% (as of 2017A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e370",
+    "label": "SaaS Market Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'SaaS Market Share': Value is 25% (as of 2017A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e371",
+    "label": "On-premise Market Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'On-premise Market Share': Value is 66% (as of 2019A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e372",
+    "label": "SaaS Market Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'SaaS Market Share': Value is 34% (as of 2019A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e373",
+    "label": "On-premise Market Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'On-premise Market Share': Value is 56% (as of 2021A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e374",
+    "label": "SaaS Market Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'SaaS Market Share': Value is 44% (as of 2021A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e375",
+    "label": "On-premise Market Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'On-premise Market Share': Value is 50% (as of 2023F).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e376",
+    "label": "SaaS Market Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'SaaS Market Share': Value is 50% (as of 2023F).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e377",
+    "label": "On-premise Market Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'On-premise Market Share': Value is 54% (as of 2025F).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e378",
+    "label": "SaaS Market Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'SaaS Market Share': Value is 46% (as of 2025F).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e379",
+    "label": "expert automated translation software solutions",
+    "category": "product_or_service",
+    "description": "One-stop-shop for expert automated translation software solutions",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e380",
+    "label": "language pairing catalogue",
+    "category": "product_or_service",
+    "description": "A wide language pairing catalogue covering very specific customer needs",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e381",
+    "label": "specific engine models",
+    "category": "product_or_service",
+    "description": "Engine models created by pairing common and rare languages",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e382",
+    "label": "Systran Pure Neural® server solution",
+    "category": "product_or_service",
+    "description": "Secured and integrated translation software solution",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e383",
+    "label": "Others",
+    "category": "use_case_or_industry",
+    "description": "Other industries served by Systran",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e384",
+    "label": "US Department of Justice",
+    "category": "unknown",
+    "description": "US Department of Justice (Type: unknown).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e385",
+    "label": "BNP Paribas",
+    "category": "company",
+    "description": "BNP Paribas (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e386",
+    "label": "Deutsche Bank",
+    "category": "company",
+    "description": "Deutsche Bank (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e387",
+    "label": "SHI",
+    "category": "company",
+    "description": "SHI (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e388",
+    "label": "John Deere",
+    "category": "company",
+    "description": "John Deere (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e389",
+    "label": "Stanley Black & Decker",
+    "category": "company",
+    "description": "Stanley Black & Decker (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e390",
+    "label": "Osstem Implant",
+    "category": "company",
+    "description": "Osstem Implant (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e391",
+    "label": "Blizzard Entertainment",
+    "category": "company",
+    "description": "Blizzard Entertainment (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e392",
+    "label": "Training for expert users and administrators",
+    "category": "product_or_service",
+    "description": "Training for expert users and administrators: Category: Customer Support Service.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e393",
+    "label": "Workshop and meetings to define the best approach",
+    "category": "product_or_service",
+    "description": "Workshop and meetings to define the best approach: Category: Customer Advisory Service.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e394",
+    "label": "Collection and management of customer feedbacks",
+    "category": "product_or_service",
+    "description": "Collection and management of customer feedbacks: Category: Customer Relationship Management Service.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e395",
+    "label": "IT and linguistic customer support",
+    "category": "product_or_service",
+    "description": "IT and linguistic customer support: Category: Customer Support Service.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e396",
+    "label": "Customer relationships",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Customer relationships': Value is N/A. Systran ties close relationships with all customers.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e397",
+    "label": "Product improvement based on customer needs",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Product improvement based on customer needs': Value is N/A. Systran’s ability to steadily improve its pure neural server solution based on their actual needs.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e398",
+    "label": "Total Revenue",
+    "category": "financial_metric",
+    "description": "Details for 'Total Revenue' (Period: FY19A): €13.8mn (Scope: total revenue). Notes: Source: Eleven VDD report.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e399",
+    "label": "Total Revenue",
+    "category": "financial_metric",
+    "description": "Details for 'Total Revenue' (Period: FY20A): €15.3mn (Scope: total revenue). Notes: Source: Eleven VDD report.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e400",
+    "label": "Total Revenue",
+    "category": "financial_metric",
+    "description": "Details for 'Total Revenue' (Period: FY21A): €16.0mn (Scope: total revenue). Notes: Source: Eleven VDD report.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e401",
+    "label": "Total Revenue",
+    "category": "financial_metric",
+    "description": "Details for 'Total Revenue' (Period: FY22B): €19.5mn (Scope: total revenue). Notes: Source: Eleven VDD report.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e402",
+    "label": "Revenues CAGR",
+    "category": "financial_metric",
+    "description": "Details for 'Revenues CAGR' (Period: FY19A-22B): +12.2%. Notes: Source: Eleven VDD report.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e403",
+    "label": "Maintenance Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Maintenance Revenue Share': Value is 26% (as of FY19A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e404",
+    "label": "Maintenance Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Maintenance Revenue Share': Value is 27% (as of FY20A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e405",
+    "label": "Maintenance Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Maintenance Revenue Share': Value is 27% (as of FY22B).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e406",
+    "label": "Annual License Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Annual License Revenue Share': Value is 21% (as of FY19A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e407",
+    "label": "Annual License Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Annual License Revenue Share': Value is 21% (as of FY20A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e408",
+    "label": "Annual License Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Annual License Revenue Share': Value is 22% (as of FY22B).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e409",
+    "label": "Cloud Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Cloud Revenue Share': Value is 1% (as of FY19A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e410",
+    "label": "Cloud Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Cloud Revenue Share': Value is 1% (as of FY20A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e411",
+    "label": "Cloud Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Cloud Revenue Share': Value is 3% (as of FY22B).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e412",
+    "label": "Perpetual Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Perpetual Revenue Share': Value is 35% (as of FY19A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e413",
+    "label": "Perpetual Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Perpetual Revenue Share': Value is 28% (as of FY20A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e414",
+    "label": "Perpetual Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Perpetual Revenue Share': Value is 32% (as of FY21A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e415",
+    "label": "Perpetual Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Perpetual Revenue Share': Value is 31% (as of FY22B).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e416",
+    "label": "Other Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Other Revenue Share': Value is 17% (as of FY19A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e417",
+    "label": "Other Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Other Revenue Share': Value is 22% (as of FY20A).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e418",
+    "label": "Other Revenue Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Other Revenue Share': Value is 16% (as of FY22B).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e419",
+    "label": "Recurring Revenues Share of Total Revenue",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Recurring Revenues Share of Total Revenue': Value is c.50%. Comprising both annual licenses and recurring maintenance included in perpetual licenses.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e420",
+    "label": "Perpetual Licenses Recurring Maintenance Share",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Perpetual Licenses Recurring Maintenance Share': Value is c.18-22%. of license fee.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e421",
+    "label": "Cloud Revenue CAGR",
+    "category": "financial_metric",
+    "description": "Details for 'Cloud Revenue CAGR' (Period: FY19A-22B): +71% (Scope: Cloud revenue). Notes: Source: Eleven VDD report.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e422",
+    "label": "Annual License Revenue CAGR",
+    "category": "financial_metric",
+    "description": "Details for 'Annual License Revenue CAGR' (Period: FY19A-22B): +15% (Scope: Annual license revenue). Notes: Source: Eleven VDD report.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e423",
+    "label": "Maintenance Renewal Revenue CAGR",
+    "category": "financial_metric",
+    "description": "Details for 'Maintenance Renewal Revenue CAGR' (Period: FY19A-22B): +10% (Scope: Maintenance renewal revenue). Notes: Source: Eleven VDD report.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e424",
+    "label": "Perpetual Revenue CAGR",
+    "category": "financial_metric",
+    "description": "Details for 'Perpetual Revenue CAGR' (Period: FY19A-22B): +12% (Scope: Perpetual revenue). Notes: Source: Eleven VDD report.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e425",
+    "label": "Other Revenue CAGR",
+    "category": "financial_metric",
+    "description": "Details for 'Other Revenue CAGR' (Period: FY19A-22B): +11% (Scope: Other revenue). Notes: Source: Eleven VDD report.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e426",
+    "label": "Perpetual",
+    "category": "product_or_service",
+    "description": "Perpetual: Category: Revenue Stream.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e427",
+    "label": "Recurring revenues",
+    "category": "product_or_service",
+    "description": "Recurring revenues: Category: Revenue Category.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e428",
+    "label": "One-time revenue",
+    "category": "product_or_service",
+    "description": "One-time revenue: Category: Revenue Category.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e429",
+    "label": "Adidas",
+    "category": "company",
+    "description": "Adidas (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e430",
+    "label": "Stellantis",
+    "category": "company",
+    "description": "Stellantis (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e431",
+    "label": "Lexcelera",
+    "category": "company",
+    "description": "Lexcelera (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e432",
+    "label": "Toyota",
+    "category": "company",
+    "description": "Toyota (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e433",
+    "label": "HCL",
+    "category": "company",
+    "description": "HCL (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e434",
+    "label": "Heidelberg",
+    "category": "company",
+    "description": "Heidelberg (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e435",
+    "label": "The Global Fund",
+    "category": "company",
+    "description": "The Global Fund (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e436",
+    "label": "Tata Consultancy Services",
+    "category": "company",
+    "description": "Tata Consultancy Services (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e437",
+    "label": "Tenneco",
+    "category": "company",
+    "description": "Tenneco (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e438",
+    "label": "ADmantX",
+    "category": "company",
+    "description": "ADmantX (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e439",
+    "label": "Airbus",
+    "category": "company",
+    "description": "Airbus (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e440",
+    "label": "DY4 Gate",
+    "category": "company",
+    "description": "DY4 Gate (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e441",
+    "label": "Ford",
+    "category": "company",
+    "description": "Ford (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e442",
+    "label": "IKEA",
+    "category": "company",
+    "description": "IKEA (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e443",
+    "label": "Alvarez & Marsal",
+    "category": "company",
+    "description": "Alvarez & Marsal (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e444",
+    "label": "RavenPack",
+    "category": "company",
+    "description": "RavenPack (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e445",
+    "label": "Abu Dhabi Police",
+    "category": "unknown",
+    "description": "Abu Dhabi Police (Type: unknown).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e446",
+    "label": "Ministère de la Défense",
+    "category": "unknown",
+    "description": "Ministère de la Défense (Type: unknown).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e447",
+    "label": "European Union Agency for Fundamental Rights",
+    "category": "unknown",
+    "description": "European Union Agency for Fundamental Rights (Type: unknown).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e448",
+    "label": "US Department of Justice",
+    "category": "unknown",
+    "description": "US Department of Justice (Type: unknown).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e449",
+    "label": "Korean Intellectual Property Office",
+    "category": "unknown",
+    "description": "Korean Intellectual Property Office (Type: unknown).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e450",
+    "label": "Rozetta Technology",
+    "category": "company",
+    "description": "Rozetta Technology (Type: company).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e451",
+    "label": "Launch of Systran Translate PRO",
+    "category": "historical_event",
+    "description": "Launch of Systran Translate PRO: Event Type: Product Launch. Date Or Year: 2021.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e452",
+    "label": "Planned Launch of Systran Translate Enterprise",
+    "category": "historical_event",
+    "description": "Planned Launch of Systran Translate Enterprise: Event Type: Product Launch. Date Or Year: 2023.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e453",
+    "label": "New Client Leads Generation",
+    "category": "operational_k_p_i",
+    "description": "KPI 'New Client Leads Generation': Value is N/A. Generate new leads for potential clients for those who are potentially interested in Systran’s various solution.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e454",
+    "label": "Clients with low security needs or no budget for private hosting",
+    "category": "use_case_or_industry",
+    "description": "Individuals, small businesses or departments of large companies that do not have the budget for private hosting or the need for high security levels",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e455",
+    "label": "Individuals",
+    "category": "use_case_or_industry",
+    "description": "Individuals (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e456",
+    "label": "Small Businesses",
+    "category": "use_case_or_industry",
+    "description": "Small Businesses (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e457",
+    "label": "Departments of Large Companies",
+    "category": "use_case_or_industry",
+    "description": "Departments of Large Companies (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e458",
+    "label": "Private Translation Data",
+    "category": "technology",
+    "description": "Private Translation Data (Type: technology).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e459",
+    "label": "Client Autonomy in Model Customization",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Client Autonomy in Model Customization': Value is N/A. Autonomize clients in the process of customizing their models with their own translation memory.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e460",
+    "label": "B2B Clients",
+    "category": "use_case_or_industry",
+    "description": "B2B Clients (Type: use_case_or_industry).",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e461",
+    "label": "B2B Clients for specific domains with low security needs",
+    "category": "use_case_or_industry",
+    "description": "B2B clients those in need of a translation model for a specific domain without the need for high security levels and private hosting",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e462",
+    "label": "e462",
+    "category": "headcount",
+    "description": "e462: Total Employees: 0. Headcount Name: Employees in Daejong. Breakdown Description: Daejong office headcount. Date Or Year: 2019.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e463",
+    "label": "e463",
+    "category": "headcount",
+    "description": "e463: Total Employees: 9. Headcount Name: Employees in Daejong. Breakdown Description: Daejong office headcount. Date Or Year: 2020.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e464",
+    "label": "e464",
+    "category": "headcount",
+    "description": "e464: Total Employees: 11. Headcount Name: Employees in Daejong. Breakdown Description: Daejong office headcount. Date Or Year: 2021.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e465",
+    "label": "e465",
+    "category": "headcount",
+    "description": "e465: Total Employees: 12. Headcount Name: Employees in Daejong. Breakdown Description: Daejong office headcount. Date Or Year: 2022.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e466",
+    "label": "Employee Education Level - Master",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Employee Education Level - Master': Value is 61% (as of 30/11/2022). Percentage of employees with Master's degree.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e467",
+    "label": "Employee Education Level - Bachelor",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Employee Education Level - Bachelor': Value is 27% (as of 30/11/2022). Percentage of employees with Bachelor's degree.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e468",
+    "label": "Employee Education Level - Ph.D.",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Employee Education Level - Ph.D.': Value is 5% (as of 30/11/2022). Percentage of employees with Ph.D..",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e469",
+    "label": "Employee Education Level - Two-year degree",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Employee Education Level - Two-year degree': Value is 6% (as of 30/11/2022). Percentage of employees with two-year degree.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e470",
+    "label": "Employee Education Level - A-level",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Employee Education Level - A-level': Value is 1% (as of 30/11/2022). Percentage of employees with A-level.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e471",
+    "label": "Employee Department - Management",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Employee Department - Management': Value is 5% (as of 31/12/2022). Percentage of employees in Management department.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e472",
+    "label": "Employee Department - Software Engineers",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Employee Department - Software Engineers': Value is 36% (as of 31/12/2022). Percentage of employees in Software Engineers department.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e473",
+    "label": "Employee Department - Computational linguists/language engineers",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Employee Department - Computational linguists/language engineers': Value is 18% (as of 31/12/2022). Percentage of employees in Computational linguists/language engineers department.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e474",
+    "label": "Employee Department - Commercial & Marketing",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Employee Department - Commercial & Marketing': Value is 31% (as of 31/12/2022). Percentage of employees in Commercial & Marketing department.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e475",
+    "label": "Employee Department - Administrative",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Employee Department - Administrative': Value is 11% (as of 31/12/2022). Percentage of employees in Administrative department.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e476",
+    "label": "Employee Seniority - 5-10 years",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Employee Seniority - 5-10 years': Value is 43% (as of 31/12/2022). Percentage of employees with 10+ years seniority.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "request_id": "2",
+    "id": "e477",
+    "label": "Workforce Educational Level",
+    "category": "operational_k_p_i",
+    "description": "KPI 'Workforce Educational Level': Value is N/A. Systran's workforce is characterized by a very high educational level which enables it to address technical functions to further develop the business.",
+    "timeline": [
+      ""
+    ],
+    "sources": [
+      {
+        "FileId": "fc217d05-ac7e-4d63-8abd-20d03c46d5f1",
+        "Snipets": [
+          ""
+        ]
+      }
+    ]
+  }
+]

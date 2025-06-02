@@ -147,7 +147,6 @@ relations:
   - pekg:usesTechnology (pekg:Company|pekg:ProductOrService -> pekg:Technology)
   - pekg:hasClientCompany (pekg:Company -> pekg:Company) # If a client is also a company in the KG.
   - pekg:hasClientGovernment (pekg:Company -> pekg:GovernmentBody) # If a client is a government body.
-  - pekg:hasClientNamed (pekg:Company -> string) # If client is just a name string. (Less ideal, prefer entity if possible)
 
   # --- Financials & Performance ---
   - pekg:reportsFinancialMetric (pekg:Company|pekg:ProductOrService|pekg:RevenueStream -> pekg:FinancialMetric) # Added RevenueStream
