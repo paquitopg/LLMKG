@@ -1,0 +1,147 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Advisor",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Advisor",
+      "name": "DDA & Company France SAS"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:FinancialMetric",
+      "metricName": "COGS",
+      "fiscalPeriod": "FY23A"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Staff Costs",
+      "fiscalPeriod": "FY23A"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Headcount",
+      "totalEmployees": 6,
+      "dateOrYear": "FY23A"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Headcount",
+      "totalEmployees": 2,
+      "dateOrYear": "FY24A"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "External Costs",
+      "fiscalPeriod": "FY23BP",
+      "valueString": "10%"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:FinancialMetric",
+      "metricName": "External Costs",
+      "fiscalPeriod": "FY24BP",
+      "valueString": "10%"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other Expenses",
+      "fiscalPeriod": "FY23BP",
+      "valueString": "6.5%"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other Expenses",
+      "fiscalPeriod": "FY24BP",
+      "valueString": "6.5%"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Taxes",
+      "fiscalPeriod": "FY23BP",
+      "valueString": "3%"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Taxes",
+      "fiscalPeriod": "FY24BP",
+      "valueString": "3%"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "Target company for Project System_big."
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Sale/Acquisition",
+      "status": "Teaser"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:MarketContext",
+      "segmentName": "Translation market",
+      "characteristics": "Quickly mutating market powered by successive disruptions waves"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:MarketContext",
+      "segmentName": "Simultaneous interpretation segment",
+      "growthInfo": "fast-growing"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Speech-to-speech translation",
+      "category": "Translation Technology",
+      "description": "The new frontier and next milestone in translation technology, expected to gain market share within the fast-growing simultaneous interpretation segment. Advantages include retaining non-linguistic information (such as emotions), reducing computational requirements and latency, and expanding translation of languages without written form."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "Human translation",
+      "category": "Translation Method"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "Rules-based Machine Translation",
+      "category": "Translation Technology"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Terminology databases",
+      "category": "Translation Tool"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "Translation Management System",
+      "category": "Translation Tool"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "Cloud CAT tools",
+      "category": "Translation Tool"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:ProductOrService",
+      "name": "Neural Machine Translation",
+      "category": "Translation Technology"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:ProductOrService",
+      "name": "Speech to text",
+      "category": "Translation Component"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:ProductOrService",
+      "name": "Text to speech",
+      "category": "Translation Component"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:ProductOrService",
+      "name": "Translation",
+      "category": "Process Step"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "R&D investments",
+      "description": "Develop datasets of input-output speech pairs to train neural networks."
+    },
+    {
+      "id": "e19",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Technological watch",
+      "description": "Monitor scientific publications; anticipate technological disruption."
+    },
+    {
+      "id": "e20",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Strategic partnerships",
+      "description": "Form partnerships with academic partners and industrial companies."
+    },
+    {
+      "id": "e21",
+      "type": "pekg:Company",
+      "name": "Academic partners",
+      "description": "Type of partner for strategic partnerships."
+    },
+    {
+      "id": "e22",
+      "type": "pekg:Company",
+      "name": "Industrial companies",
+      "description": "Type of partner for strategic partnerships."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "isSubjectOf"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "operatesIn"
+    },
+    {
+      "source": "e6",
+      "target": "e9",
+      "type": "offers"
+    },
+    {
+      "source": "e6",
+      "target": "e10",
+      "type": "offers"
+    },
+    {
+      "source": "e6",
+      "target": "e11",
+      "type": "offers"
+    },
+    {
+      "source": "e6",
+      "target": "e12",
+      "type": "offers"
+    },
+    {
+      "source": "e6",
+      "target": "e13",
+      "type": "offers"
+    },
+    {
+      "source": "e6",
+      "target": "e14",
+      "type": "offers"
+    },
+    {
+      "source": "e6",
+      "target": "e8",
+      "type": "offers"
+    },
+    {
+      "source": "e8",
+      "target": "e7",
+      "type": "targets"
+    },
+    {
+      "source": "e8",
+      "target": "e15",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e8",
+      "target": "e17",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e8",
+      "target": "e16",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "reportsOperationalKPI"
+    },
+    {
+      "source": "e20",
+      "target": "e21",
+      "type": "eventInvolvesParty"
+    },
+    {
+      "source": "e20",
+      "target": "e22",
+      "type": "eventInvolvesParty"
+    }
+  ]
+}

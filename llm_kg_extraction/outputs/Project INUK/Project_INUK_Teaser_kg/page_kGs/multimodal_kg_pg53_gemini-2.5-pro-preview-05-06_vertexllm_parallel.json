@@ -1,0 +1,229 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Target Company mentioned in the financial teaser."
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "alias": [
+        "DDA&Company"
+      ],
+      "roleInContext": "Advisory firm for Project INUK"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK",
+      "description": "Transaction context involving Articque as the target, potentially with ChapsVision."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:FinancialMetric",
+      "metricName": "FY21 Recurring Billings",
+      "valueString": "2747k EUR",
+      "fiscalPeriod": "FY21A",
+      "isRecurring": true,
+      "sourceNote": "Management, billings in \u20ack; Chart: Recurring Billings Bridge",
+      "scope": "Recurring Billings Bridge"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:FinancialMetric",
+      "metricName": "New Logo Billings Contribution",
+      "valueString": "293k EUR",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": true,
+      "sourceNote": "Management, billings in \u20ack; Chart: Recurring Billings Bridge; Comment 1",
+      "scope": "Recurring Billings Bridge"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Upsell Billings Contribution",
+      "valueString": "522k EUR",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": true,
+      "sourceNote": "Management, billings in \u20ack; Chart: Recurring Billings Bridge; Comment 1",
+      "scope": "Recurring Billings Bridge"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:FinancialMetric",
+      "metricName": "3-year Subs Billings Contribution",
+      "valueString": "258k EUR",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": true,
+      "sourceNote": "Management, billings in \u20ack; Chart: Recurring Billings Bridge; Comment 1",
+      "scope": "Recurring Billings Bridge"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Churn Impact on Recurring Billings",
+      "valueString": "-198k EUR",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": true,
+      "sourceNote": "Management, billings in \u20ack; Chart: Recurring Billings Bridge; Comment 2 (value \u20ac198k)",
+      "scope": "Recurring Billings Bridge"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Downsell Impact on Recurring Billings",
+      "valueString": "-90k EUR",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": true,
+      "sourceNote": "Management, billings in \u20ack; Chart: Recurring Billings Bridge; Comment 2 (value \u20ac90k)",
+      "scope": "Recurring Billings Bridge"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:FinancialMetric",
+      "metricName": "End of Legacy Product Impact on Recurring Billings",
+      "valueString": "-64k EUR",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": true,
+      "sourceNote": "Management, billings in \u20ack; Chart: Recurring Billings Bridge; Comment 3 (value \u20ac64k)",
+      "scope": "Recurring Billings Bridge"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:FinancialMetric",
+      "metricName": "FY22 Recurring Billings",
+      "valueString": "3468k EUR",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": true,
+      "sourceNote": "Management, billings in \u20ack; Chart: Recurring Billings Bridge",
+      "scope": "Recurring Billings Bridge"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings Net Variation",
+      "valueString": "+721k EUR",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": true,
+      "sourceNote": "Management, billings in \u20ack; Chart: Recurring Billings Bridge; Comment 1",
+      "scope": "Recurring Billings Bridge"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Churn Rate",
+      "valueString": "7.2%",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": true,
+      "description": "Annual churn rate of 7.2% of total FY21 recurring billings.",
+      "sourceNote": "Comment 2",
+      "scope": "Recurring Billings"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:ProductOrService",
+      "name": "CDD",
+      "category": "Legacy Product",
+      "description": "Articque's legacy product. Its decommissioning in FY22L resulted in a churn of \u20ac64k."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Decommissioning of Legacy Product (CDD)",
+      "eventType": "Product Decommissioning",
+      "dateOrYear": "FY22L",
+      "description": "The decommissioning of Articque's legacy product (CDD) resulted in a churn of \u20ac64k in FY22L."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company mentioned in the footer in relation to Project Inuk."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e3",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e15",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e16",
+      "target": "e3",
+      "type": "pekg:seeksTransaction"
+    }
+  ]
+}

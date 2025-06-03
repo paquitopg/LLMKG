@@ -1,0 +1,232 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "awardsAndCertifications": [
+        "Qualiopi-certified"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:ProductOrService",
+      "name": "Professional Services",
+      "description": "Consulting services including:\n\u2022 Spatial data science expertise\n\u2022 Competitive market analysis support \u2013 to detect and display the existing competition and high potential zones\n\u2022 Site selection \u2013 to pinpoint key target locations for expansion\n\u2022 Commercial activity analysis \u2013 client churn, penetration rate, and other specific metrics\n\nSpecial projects for customized business applications:\n\u2022 Turnkey project where Articque supports the whole project from planning to final execution\n\u2022 Progressive to Total autonomy where Articque is in charge of the initial set-up of the project and assists the client in the handover"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:ProductOrService",
+      "name": "Training services",
+      "description": "\u25aa Training services include:\n\u2022 Analyst training \u2013 use of all basic platform features\n\u2022 Analyst advanced training \u2013 use of all advanced platform features\n\u2022 Geolocation dashboard expert training \u2013 to be able to develop interactive and dynamic geolocation dashboards\n\u2022 Wizard expert training \u2013 to be able to develop analytics and business intelligence applications serving a large scope of business needs (commercial, marketing, logistic, etc.)\n\u2022 Administrator platform training \u2013 to acquire full autonomy in the administration and management of the platform"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenue",
+      "valueString": "114",
+      "fiscalPeriod": "FY18A",
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Revenue",
+      "valueString": "597",
+      "fiscalPeriod": "FY18A",
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenue",
+      "valueString": "109",
+      "fiscalPeriod": "FY19A",
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Revenue",
+      "valueString": "863",
+      "fiscalPeriod": "FY19A",
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenue",
+      "valueString": "182",
+      "fiscalPeriod": "FY20A",
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Revenue",
+      "valueString": "691",
+      "fiscalPeriod": "FY20A",
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenue",
+      "valueString": "191",
+      "fiscalPeriod": "FY21A",
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Revenue",
+      "valueString": "857",
+      "fiscalPeriod": "FY21A",
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenue",
+      "valueString": "223",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Revenue",
+      "valueString": "625",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring CAGR",
+      "valueString": "+18.3%",
+      "fiscalPeriod": "FY18A-22L"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Users Trained",
+      "kpiValueString": "300",
+      "kpiDateOrPeriod": "year"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Trainee Satisfaction",
+      "kpiValueString": "17.8/20"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Trainees per session",
+      "kpiValueString": "5"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:Advisor",
+      "name": "DDA & Company France SAS"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:Advisor",
+      "name": "ChapsVision"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

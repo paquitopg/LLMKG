@@ -1,0 +1,231 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Advisor",
+      "name": "DDA & Company France SAS"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Advisor",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Technology",
+      "name": "Network monitoring"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Technology",
+      "name": "Automated test"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Technology",
+      "name": "Error tracker"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Technology",
+      "name": "API"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Technology",
+      "name": "Geo-Coding"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Technology",
+      "name": "Application development"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Technology",
+      "name": "Project tracking"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Technology",
+      "name": "Project management"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Technology",
+      "name": "PRTG Network Monitor"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Technology",
+      "name": "Jenkins"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Technology",
+      "name": "Cypress"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Technology",
+      "name": "Selenium 4"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Technology",
+      "name": "Sentry"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Technology",
+      "name": "Node.js"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:Technology",
+      "name": "Docker"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:Technology",
+      "name": "Symfony"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:Technology",
+      "name": "Visual Studio"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:Technology",
+      "name": "Confluence"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:Technology",
+      "name": "Jira Software"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:Technology",
+      "name": "Git"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e4",
+      "target": "e12",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e13",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e14",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e15",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e6",
+      "target": "e16",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e7",
+      "target": "e17",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e7",
+      "target": "e18",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e9",
+      "target": "e19",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e9",
+      "target": "e20",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e10",
+      "target": "e21",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e10",
+      "target": "e22",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e11",
+      "target": "e23",
+      "type": "pekg:usesTechnology"
+    }
+  ]
+}

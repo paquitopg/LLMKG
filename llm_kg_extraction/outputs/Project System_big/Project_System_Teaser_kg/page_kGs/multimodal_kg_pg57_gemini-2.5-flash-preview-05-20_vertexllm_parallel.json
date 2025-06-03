@@ -1,0 +1,371 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "Target company with a high-end R&D team and ambitious R&D roadmap."
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisor to Target Company"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisor to Target Company"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Sale/Acquisition"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Location",
+      "locationName": "France",
+      "locationType": "Country",
+      "officeSpecificInfo": "Systran product and R&D organization"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Headcount",
+      "headcountName": "Total R&D FTEs",
+      "totalEmployees": 42,
+      "breakdownDescription": "Total Full-Time Equivalents in Products & Technology R&D team, including 4 PhDs."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Headcount",
+      "headcountName": "R&D PhDs",
+      "totalEmployees": 4,
+      "breakdownDescription": "Number of PhDs within the R&D team."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Headcount",
+      "headcountName": "Quality Assurance FTEs",
+      "totalEmployees": 5,
+      "breakdownDescription": "QA engineers"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Headcount",
+      "headcountName": "Product Management FTEs",
+      "totalEmployees": 5,
+      "breakdownDescription": "Product managers, advanced support & tools, Ops product owner, AI & ML product manager"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Headcount",
+      "headcountName": "Software Engineering FTEs",
+      "totalEmployees": 15,
+      "breakdownDescription": "Tech leads, senior engineers, OpenNMT lead"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Headcount",
+      "headcountName": "NLP Engineering FTEs",
+      "totalEmployees": 14,
+      "breakdownDescription": "Project managers, research engineer, data & language engineers"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Headcount",
+      "headcountName": "Labs FTEs",
+      "totalEmployees": 3,
+      "breakdownDescription": "Research, funded projects"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Expected UX product designer (Quality Assurance)",
+      "kpiValueString": "1",
+      "description": "Expected hire for Quality Assurance department."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Expected UX product designer (Labs)",
+      "kpiValueString": "1",
+      "description": "Expected hire for Labs department."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Expected Software Engineers",
+      "kpiValueString": "2",
+      "description": "Expected hires for Software engineering department."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Expected NMT production expert",
+      "kpiValueString": "1",
+      "description": "Expected hire for NLP Engineering department."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Technology",
+      "name": "NLP Engineering",
+      "description": "Natural Language Processing Engineering, a core capability of Systran's R&D."
+    },
+    {
+      "id": "e18",
+      "type": "pekg:Technology",
+      "name": "AI & ML",
+      "description": "Artificial Intelligence and Machine Learning, integrated into product management and R&D."
+    },
+    {
+      "id": "e19",
+      "type": "pekg:Technology",
+      "name": "OpenNMT",
+      "description": "Open-source Neural Machine Translation framework, used by Systran's software engineering team."
+    },
+    {
+      "id": "e20",
+      "type": "pekg:Technology",
+      "name": "NMT",
+      "description": "Neural Machine Translation, a key technology for Systran's products and R&D."
+    },
+    {
+      "id": "e21",
+      "type": "pekg:ProductOrService",
+      "name": "American Sign Language (ASL) translation",
+      "category": "Translation Service",
+      "description": "A service developed through a large research project with the US government to allow communication between ASL and non-ASL speakers."
+    },
+    {
+      "id": "e22",
+      "type": "Government Agency",
+      "name": "DGA"
+    },
+    {
+      "id": "e23",
+      "type": "Government",
+      "name": "US government"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:Company",
+      "name": "Harvard University",
+      "description": "Leading academic institute, partner in research collaborations."
+    },
+    {
+      "id": "e25",
+      "type": "pekg:Company",
+      "name": "RWTH Aachen University",
+      "description": "Leading academic institute, partner in research collaborations."
+    },
+    {
+      "id": "e26",
+      "type": "pekg:Company",
+      "name": "University of Edinburgh",
+      "description": "Leading academic institute, partner in research collaborations."
+    },
+    {
+      "id": "e27",
+      "type": "pekg:Company",
+      "name": "IUT Le Mans",
+      "description": "Academic institute, partner in research collaborations."
+    },
+    {
+      "id": "e28",
+      "type": "pekg:Company",
+      "name": "LISN",
+      "description": "Laboratoire Interdisciplinaire des Sciences du Num\u00e9rique, a research institute partner."
+    },
+    {
+      "id": "e29",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "PhDs projects with DGA",
+      "eventType": "Research Collaboration",
+      "description": "Several PhDs projects conducted between research institutes and the DGA."
+    },
+    {
+      "id": "e30",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "US government ASL translation project",
+      "eventType": "Research Project",
+      "description": "A large research project with the US government to translate American Sign Language (ASL) and allow communication between ASL and non-ASL speakers."
+    },
+    {
+      "id": "e31",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Entity associated with the document (watermark)."
+    },
+    {
+      "id": "e32",
+      "type": "pekg:Company",
+      "name": "Eleven VDD",
+      "description": "Source of the report."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "experiencedEvent"
+    },
+    {
+      "source": "e29",
+      "target": "e22",
+      "type": "eventInvolvesParty"
+    },
+    {
+      "source": "e29",
+      "target": "e24",
+      "type": "eventInvolvesParty"
+    },
+    {
+      "source": "e29",
+      "target": "e25",
+      "type": "eventInvolvesParty"
+    },
+    {
+      "source": "e29",
+      "target": "e26",
+      "type": "eventInvolvesParty"
+    },
+    {
+      "source": "e29",
+      "target": "e27",
+      "type": "eventInvolvesParty"
+    },
+    {
+      "source": "e29",
+      "target": "e28",
+      "type": "eventInvolvesParty"
+    },
+    {
+      "source": "e30",
+      "target": "e23",
+      "type": "eventInvolvesParty"
+    },
+    {
+      "source": "e30",
+      "target": "e1",
+      "type": "eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "hasClientGovernment"
+    }
+  ]
+}

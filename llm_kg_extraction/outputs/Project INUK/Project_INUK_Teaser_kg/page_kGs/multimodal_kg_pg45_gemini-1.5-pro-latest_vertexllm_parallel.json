@@ -1,0 +1,186 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Person",
+      "fullName": "Martin Lienesch"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Position",
+      "titleName": "Head of Consulting hub"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Person",
+      "fullName": "Mathieu Guitton"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Position",
+      "titleName": "Head of Training hub"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Person",
+      "fullName": "Josip Dupuit"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Position",
+      "titleName": "Head of IT and data compliance"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Person",
+      "fullName": "Laurence Marchais"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Position",
+      "titleName": "Sales administrator and pay manager"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Company",
+      "name": "A\u00e9roports de Paris"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Company",
+      "name": "Universit\u00e9 Cergy"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Company",
+      "name": "Universit\u00e9 Clermont-Ferrand"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Company",
+      "name": "Agence Nationale de la Recherche"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Company",
+      "name": "Direct-Amidis"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Advisor",
+      "name": "DDA & Company France SAS"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Advisor",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e3",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e4",
+      "target": "e5",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e5",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e6",
+      "target": "e7",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e7",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e8",
+      "target": "e9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e9",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e2",
+      "target": "e10",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e4",
+      "target": "e12",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e4",
+      "target": "e13",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e6",
+      "target": "e14",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e17",
+      "target": "e15",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e17",
+      "target": "e16",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

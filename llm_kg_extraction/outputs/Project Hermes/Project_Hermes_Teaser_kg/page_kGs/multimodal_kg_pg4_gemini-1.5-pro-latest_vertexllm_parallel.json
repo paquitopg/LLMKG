@@ -1,0 +1,207 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Herm\u00e8s",
+      "keyStrengths": [
+        "Innovative player",
+        "Modular one-stop-shop unified commerce solutions",
+        "Native omnichannel positioning",
+        "Multi-services provider"
+      ],
+      "growthStrategySummary": "Expanding scope to IT and software integration through strategic build-up"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:MarketContext",
+      "segmentName": "French omnichannel software market",
+      "geography": "France",
+      "sizeInfo": "\u20ac0.9bn in 2020, growing to \u20ac2.1bn by 2027f",
+      "growthInfo": "+13.5% p.a. over 2020-2027f",
+      "keyDrivers": [
+        "E-commerce acceleration",
+        "Retail market steady increase",
+        "Modernization of IT solutions"
+      ],
+      "sourceOfData": "Company, KPMG, PwC"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:MarketContext",
+      "segmentName": "E-commerce",
+      "geography": "France",
+      "sizeInfo": "\u20ac112bn in 2020 to \u20ac221bn by 2027f",
+      "keyDrivers": [
+        "Convergence of online and offline channels",
+        "Change of customer habits"
+      ],
+      "sourceOfData": "Company, KPMG, PwC"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:MarketContext",
+      "segmentName": "Retail market",
+      "geography": "France",
+      "sizeInfo": "\u20ac447bn in 2020 to \u20ac502bn by 2027f",
+      "sourceOfData": "Company, KPMG, PwC"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Cash-in",
+      "description": "Supports companies in key payment stages through omnichannel payment systems, in order to secure all potential sales from physical and digital channels",
+      "category": "Omnichannel Payment Solutions"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Fulfillment",
+      "description": "Supports companies in supply and demand processes to successfully deliver its products or services through the right channel, at the right time and place",
+      "category": "Omnichannel Fulfillment Solutions"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "Loyalty and Promotion",
+      "description": "Supports companies in retaining customers through enhanced omnichannel customer experience",
+      "category": "Omnichannel Loyalty Solutions"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Addressable Market Size",
+      "valueString": "0.9bn",
+      "fiscalPeriod": "2020",
+      "scope": "France"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Addressable Market Size",
+      "valueString": "1.0bn",
+      "fiscalPeriod": "2021",
+      "scope": "France"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Addressable Market Size",
+      "valueString": "1.2bn",
+      "fiscalPeriod": "2022e",
+      "scope": "France"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Addressable Market Size",
+      "valueString": "2.1bn",
+      "fiscalPeriod": "2027f",
+      "scope": "France"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Normative Proforma Revenue Breakdown",
+      "valueString": "65%",
+      "fiscalPeriod": "2021",
+      "scope": "Cash-in"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Normative Proforma Revenue Breakdown",
+      "valueString": "13%",
+      "fiscalPeriod": "2021",
+      "scope": "Fulfillment"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Normative Proforma Revenue Breakdown",
+      "valueString": "13%",
+      "fiscalPeriod": "2021",
+      "scope": "Loyalty and Promotion"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Normative Proforma Revenue Breakdown",
+      "valueString": "9%",
+      "fiscalPeriod": "2021",
+      "scope": "Other"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e2",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e2",
+      "target": "e9",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e2",
+      "target": "e10",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e2",
+      "target": "e11",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    }
+  ]
+}

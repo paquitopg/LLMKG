@@ -1,0 +1,121 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:ProductOrService",
+      "name": "CDO"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:ProductOrService",
+      "name": "AP"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Technology",
+      "name": "PostgreSQL"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Technology",
+      "name": "MySQL"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Technology",
+      "name": ".NET 4.8 Web Service"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Technology",
+      "name": "Symphony/PHP/Apache Web Application"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Articque Platform"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Advisor",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Advisor",
+      "name": "DDA & Company France SAS"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e8",
+      "target": "e4",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e3",
+      "target": "e4",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e4",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e2",
+      "target": "e6",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e3",
+      "target": "e6",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e2",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e3",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    }
+  ]
+}

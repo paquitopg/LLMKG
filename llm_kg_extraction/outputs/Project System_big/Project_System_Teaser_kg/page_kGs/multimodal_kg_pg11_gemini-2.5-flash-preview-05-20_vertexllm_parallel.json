@@ -1,0 +1,366 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "alias": [
+        "SYSTRAN"
+      ],
+      "industry": "Machine Translation"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Potential Sale"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisor for Project System_big"
+    },
+    {
+      "id": "e4",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisor for Project System_big"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:MarketContext",
+      "segmentName": "Competitive landscape",
+      "characteristics": "Machine Translation Market",
+      "sourceOfData": "Expert calls, Intento state of machine translation, Eleven VDD report"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Company",
+      "name": "Language Weaver",
+      "industry": "Machine Translation"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Company",
+      "name": "DeepL Pro",
+      "industry": "Machine Translation"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Company",
+      "name": "Microsoft",
+      "industry": "Machine Translation"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Company",
+      "name": "Amazon Translate",
+      "industry": "Machine Translation"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Company",
+      "name": "Google",
+      "industry": "Machine Translation"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Customization"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Number of languages"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Quality of generic translation"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Level of confidentiality and security"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Customer support"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Price"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "isSubjectOf"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "operatesIn"
+    },
+    {
+      "source": "e6",
+      "target": "e5",
+      "type": "operatesIn"
+    },
+    {
+      "source": "e7",
+      "target": "e5",
+      "type": "operatesIn"
+    },
+    {
+      "source": "e8",
+      "target": "e5",
+      "type": "operatesIn"
+    },
+    {
+      "source": "e9",
+      "target": "e5",
+      "type": "operatesIn"
+    },
+    {
+      "source": "e10",
+      "target": "e5",
+      "type": "operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "High"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low (Very efficient on specific Language Pairs)"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "High"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "High"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e6",
+      "target": "e12",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e6",
+      "target": "e13",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e6",
+      "target": "e14",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "n.a."
+    },
+    {
+      "source": "e6",
+      "target": "e15",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e6",
+      "target": "e16",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e6",
+      "target": "e17",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "n.a."
+    },
+    {
+      "source": "e7",
+      "target": "e12",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low"
+    },
+    {
+      "source": "e7",
+      "target": "e13",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low"
+    },
+    {
+      "source": "e7",
+      "target": "e14",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low (Limited efficiency on specific Language Pairs)"
+    },
+    {
+      "source": "e7",
+      "target": "e15",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e7",
+      "target": "e16",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low"
+    },
+    {
+      "source": "e7",
+      "target": "e17",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low"
+    },
+    {
+      "source": "e8",
+      "target": "e12",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e8",
+      "target": "e13",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low"
+    },
+    {
+      "source": "e8",
+      "target": "e14",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e8",
+      "target": "e15",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low"
+    },
+    {
+      "source": "e8",
+      "target": "e16",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e8",
+      "target": "e17",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low"
+    },
+    {
+      "source": "e9",
+      "target": "e12",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e9",
+      "target": "e13",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low"
+    },
+    {
+      "source": "e9",
+      "target": "e14",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e9",
+      "target": "e15",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low"
+    },
+    {
+      "source": "e9",
+      "target": "e16",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e9",
+      "target": "e17",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low"
+    },
+    {
+      "source": "e10",
+      "target": "e12",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e10",
+      "target": "e13",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low"
+    },
+    {
+      "source": "e10",
+      "target": "e14",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e10",
+      "target": "e15",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low"
+    },
+    {
+      "source": "e10",
+      "target": "e16",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e10",
+      "target": "e17",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low"
+    }
+  ]
+}

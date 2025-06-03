@@ -1,0 +1,417 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Company with a sales strategy primarily relying on a direct go-to-market approach, a land & expand model for new clients, and supporting historical clients in switching from CDD to CDO or AP. Boasts a sales conversion ratio >55% on active pitches.",
+      "keyStrengths": [
+        "Direct go-to-market approach",
+        "Land & expand model",
+        "Sales conversion ratio >55% on active pitches"
+      ],
+      "growthStrategySummary": "Sign up clients at departmental level on the core Articque platform and roll-out through the organization. Support switch of historical clients to CDO or AP. Upsell via complementary modules, higher-level user profiles, and repeat professional services."
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisor for Project Inuk"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Articque platform",
+      "category": "core platform",
+      "description": "Core platform used in Articque's land & expand model for new clients."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "CDD",
+      "description": "Historical product/platform that Articque's clients are being switched from."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "CDO",
+      "description": "Newer product/platform that Articque's historical clients are switching to. Part of subscription and deployment in the upsell strategy."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "AP",
+      "description": "Newer product/platform that Articque's historical clients are switching to. Part of subscription and deployment in the upsell strategy."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "complementary modules",
+      "category": "Upsell product",
+      "description": "Sold as part of Articque's upsell strategy."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "additional and higher-level user profiles",
+      "category": "Upsell product",
+      "description": "Sold as part of Articque's upsell strategy."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "repeat professional services",
+      "category": "Upsell service",
+      "description": "Sold as part of Articque's upsell strategy."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Headcount",
+      "headcountName": "Sales and marketing team",
+      "totalEmployees": 13,
+      "dateOrYear": "Current",
+      "breakdownDescription": "Composed of 2 Sales Development Representatives, 5 Account Executives, 1 Key Account Manager, 2 Client Success Managers, 2 marketing professionals, and 1 web developer."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Position",
+      "titleName": "Sales Development Representative",
+      "department": "Sales and Marketing"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Position",
+      "titleName": "Account Executive",
+      "department": "Sales and Marketing"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Position",
+      "titleName": "Key Account Manager",
+      "department": "Sales and Marketing"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Position",
+      "titleName": "Client Success Manager",
+      "department": "Sales and Marketing"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Position",
+      "titleName": "marketing professional",
+      "department": "Sales and Marketing"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:Position",
+      "titleName": "web developer",
+      "department": "Sales and Marketing"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Sales conversion ratio on active pitches",
+      "kpiValueString": ">55%",
+      "description": "Based on Articque's offering and expertise."
+    },
+    {
+      "id": "e20",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Sales process duration",
+      "kpiValueString": "3 to 12 months",
+      "description": "Depends on the size and magnitude of the project."
+    },
+    {
+      "id": "e21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Average sales cycle",
+      "kpiValueString": "6 months"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "# Leads",
+      "kpiValueString": "1,222",
+      "kpiDateOrPeriod": "FY22A",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "# MQLs",
+      "kpiValueString": "168",
+      "kpiDateOrPeriod": "FY22A",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "# SQLs",
+      "kpiValueString": "78",
+      "kpiDateOrPeriod": "FY22A",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "# Opportunities",
+      "kpiValueString": "55",
+      "kpiDateOrPeriod": "FY22A",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "# New logos",
+      "kpiValueString": "30",
+      "kpiDateOrPeriod": "FY22A",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Leads to MQLs conversion rate",
+      "kpiValueString": "14%",
+      "kpiDateOrPeriod": "FY22A",
+      "sourceNote": "Management",
+      "description": "Derived from funnel: 168 MQLs from 1,222 Leads."
+    },
+    {
+      "id": "e28",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "MQLs to SQLs conversion rate",
+      "kpiValueString": "46%",
+      "kpiDateOrPeriod": "FY22A",
+      "sourceNote": "Management",
+      "description": "Derived from funnel: 78 SQLs from 168 MQLs."
+    },
+    {
+      "id": "e29",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "SQLs to Opportunities conversion rate",
+      "kpiValueString": "71%",
+      "kpiDateOrPeriod": "FY22A",
+      "sourceNote": "Management",
+      "description": "Derived from funnel: 55 Opportunities from 78 SQLs."
+    },
+    {
+      "id": "e30",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Opportunities to New Logos conversion rate",
+      "kpiValueString": "55%",
+      "kpiDateOrPeriod": "FY22A",
+      "sourceNote": "Management",
+      "description": "Derived from funnel: 30 New Logos from 55 Opportunities."
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Digital Advertising Expense",
+      "valueString": "\u20ac25k",
+      "fiscalPeriod": "FY22A",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Marketing tools Expense",
+      "valueString": "\u20ac16k",
+      "fiscalPeriod": "FY22A",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Events Expense",
+      "valueString": "\u20ac5k",
+      "fiscalPeriod": "FY22A",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Training / Coaching Expense",
+      "valueString": "\u20ac22k",
+      "fiscalPeriod": "FY22A",
+      "sourceNote": "Management"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "pekg:seeksTransaction"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e13",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e14",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e15",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e16",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e17",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e18",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:reportsFinancialMetric"
+    }
+  ]
+}

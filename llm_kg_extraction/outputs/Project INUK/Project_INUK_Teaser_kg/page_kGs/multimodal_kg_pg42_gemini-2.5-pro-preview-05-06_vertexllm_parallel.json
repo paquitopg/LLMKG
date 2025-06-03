@@ -1,0 +1,238 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "alias": [
+        "ARTICQUE \u00c9CLAIREUR G\u00c9OD\u00c9CISIONNEL"
+      ],
+      "description": "Positioned as a challenger to the large players offering an affordable superior functional coverage. Market positioning: Medium-High Functional Coverage, Low-Medium Price Level (Source: Management chart).",
+      "keyStrengths": [
+        "An all-in-one and business-oriented solution embracing differentiating advanced features (Dynamic Modeling Tool, Mapping Of Things, Wizards, Spatial Dashboard, forecast scenarios\u2026)",
+        "A unified & easy-to-use solution accessible to a wide range of users \u2013 including non-technical users",
+        "Flexible & modular platform adjustable to a wide range of use cases",
+        "A cost-effective offering positioned in the affordable segment",
+        "A strong client portfolio established for over 30 years",
+        "Strong footprint in the private sector compared to some competitors"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "Advisory Firm",
+      "name": "DDA & Company France SAS",
+      "alias": [
+        "DDA & Company"
+      ],
+      "roleInContext": "Advisor for Project Inuk"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK",
+      "typeSought": "Acquisition/Investment",
+      "status": "Potential",
+      "transactionPerimeter": "Articque",
+      "keyInvestmentHighlights": [
+        "An all-in-one and business-oriented solution embracing differentiating advanced features (Dynamic Modeling Tool, Mapping Of Things, Wizards, Spatial Dashboard, forecast scenarios\u2026)",
+        "A unified & easy-to-use solution accessible to a wide range of users \u2013 including non-technical users",
+        "Flexible & modular platform adjustable to a wide range of use cases",
+        "A cost-effective offering positioned in the affordable segment",
+        "A strong client portfolio established for over 30 years",
+        "Strong footprint in the private sector compared to some competitors"
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "pekg:ProductOrService",
+      "name": "Articque's Geospatial Solution Platform",
+      "category": "Geospatial Analytics Platform",
+      "description": "An all-in-one and business-oriented solution embracing differentiating advanced features (Dynamic Modeling Tool, Mapping Of Things, Wizards, Spatial Dashboard, forecast scenarios\u2026). A unified & easy-to-use solution accessible to a wide range of users \u2013 including non-technical users. Flexible & modular platform adjustable to a wide range of use cases. A cost-effective offering positioned in the affordable segment."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Dynamic Modeling Tool",
+      "category": "Advanced Feature"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Mapping Of Things",
+      "category": "Advanced Feature"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "Wizards",
+      "category": "Advanced Feature"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Spatial Dashboard",
+      "category": "Advanced Feature"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "Forecast Scenarios",
+      "category": "Advanced Feature"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:MarketContext",
+      "segmentName": "Geospatial Analytics Market",
+      "characteristics": "Market for geospatial solutions with players differentiated by functional coverage (Low to High) and price level (Low to High). Articque is positioned as a challenger offering affordable superior functional coverage.",
+      "sourceOfData": "Management"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Client Portfolio Longevity",
+      "kpiValueString": "Established for over 30 years",
+      "description": "A strong client portfolio established for over 30 years."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Private Sector Footprint Strength",
+      "kpiValueString": "Strong",
+      "description": "Strong footprint in the private sector compared to some competitors."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Company",
+      "name": "esri",
+      "description": "Competitor of Articque. Market positioning: High Functional Coverage, High Price Level (Source: Management chart)."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Company",
+      "name": "Spectrum Spatial",
+      "description": "Competitor of Articque. Market positioning: High Functional Coverage, High Price Level (Source: Management chart)."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Company",
+      "name": "Ciril GROUP",
+      "description": "Competitor of Articque. Market positioning: High Functional Coverage, High Price Level (Source: Management chart)."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Company",
+      "name": "Geoconcept",
+      "description": "Competitor of Articque. Market positioning: Medium-High Functional Coverage, Medium-High Price Level (Source: Management chart)."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Company",
+      "name": "MapInfo",
+      "description": "Competitor of Articque. Market positioning: Medium Functional Coverage, Medium Price Level (Source: Management chart)."
+    },
+    {
+      "id": "e18",
+      "type": "pekg:Company",
+      "name": "smappen",
+      "description": "Competitor of Articque. Market positioning: Low Functional Coverage, Low Price Level (Source: Management chart)."
+    },
+    {
+      "id": "e19",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Entity associated with Project Inuk, as mentioned in the document footer 'Project Inuk \u2013 ChapsVision \u2013 Strictly Private & Confidential'. Likely a potential acquirer or key party to the transaction."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e3",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e19",
+      "target": "e3",
+      "type": "pekg:seeksTransaction"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e13",
+      "target": "e10",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e14",
+      "target": "e10",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e15",
+      "target": "e10",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e16",
+      "target": "e10",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e17",
+      "target": "e10",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e18",
+      "target": "e10",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsOperationalKPI"
+    }
+  ]
+}

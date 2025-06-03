@@ -1,0 +1,318 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran",
+      "growthStrategySummary": "An ambitious growth strategy based on accelerated deployment of cloud solutions and diversification into new segment (e.g., media), new geographies and new customers (SMEs, B2C). A clear strategic roadmap with 5 main growth pillars.",
+      "keyStrengths": [
+        "New technological innovations",
+        "Core business growth",
+        "External growth",
+        "Cloud solution development",
+        "International expansion"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "OTT companies",
+      "description": "Target for R&D in transcript and context awareness translation"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "Media companies",
+      "description": "Target for R&D in transcript and context awareness translation"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "SMEs",
+      "description": "New customer type"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "B2C",
+      "description": "New customer type/segment"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisor"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisor"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:TransactionContext",
+      "contextName": "Ambitious Growth Strategy",
+      "dealRationaleHighlights": [
+        "Accelerated deployment of cloud solutions",
+        "Diversification into new segment (e.g., media)",
+        "Diversification into new geographies",
+        "Diversification into new customers (SMEs, B2C)"
+      ]
+    },
+    {
+      "id": "e10",
+      "type": "pekg:TransactionContext",
+      "contextName": "External Growth",
+      "typeSought": "Acquisition",
+      "status": "Ongoing discussions",
+      "keyInvestmentHighlights": [
+        "Attractive targets identified",
+        "Active lead"
+      ]
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Cloud solutions",
+      "category": "Software"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "MT solutions",
+      "category": "Software",
+      "description": "Machine Translation solutions"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Translate Pro",
+      "category": "Software Product",
+      "description": "Marketplace and quality-control solution"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Model Studio",
+      "category": "Software Product",
+      "description": "Marketplace and quality-control solution"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Translate Enterprise",
+      "category": "Software Product",
+      "description": "Marketplace and quality-control solution"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:ProductOrService",
+      "name": "Marketplace solutions",
+      "category": "Software"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:ProductOrService",
+      "name": "Quality-control solutions",
+      "category": "Software"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:Technology",
+      "name": "Transcript translation",
+      "description": "New technological innovation, R&D focus"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:Technology",
+      "name": "Context awareness translation",
+      "description": "New technological innovation, R&D focus"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Media",
+      "description": "New segment for diversification, emerging industry, target for R&D"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Gaming",
+      "description": "Emerging industry with increasing MT solutions demands"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "E-learning",
+      "description": "Emerging industry with increasing MT solutions demands"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Content",
+      "description": "Emerging industry with increasing MT solutions demands"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Big data",
+      "description": "Emerging industry with increasing MT solutions demands"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:Location",
+      "locationName": "Arabian Gulf",
+      "locationType": "Region"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:Location",
+      "locationName": "Latin America",
+      "locationType": "Region"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:Location",
+      "locationName": "Japan",
+      "locationType": "Country"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:seeksTransaction"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e12",
+      "target": "e21",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e12",
+      "target": "e22",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e12",
+      "target": "e23",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e12",
+      "target": "e20",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e12",
+      "target": "e24",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:hasOfficeIn"
+    }
+  ]
+}

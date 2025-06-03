@@ -1,0 +1,321 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script>function neighbourhoodHighlight(params) {
+  // console.log("in nieghbourhoodhighlight");
+  allNodes = nodes.get({ returnType: "Object" });
+  // originalNodes = JSON.parse(JSON.stringify(allNodes));
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    highlightActive = true;
+    var i, j;
+    var selectedNode = params.nodes[0];
+    var degrees = 2;
+
+    // mark all nodes as hard to read.
+    for (let nodeId in allNodes) {
+      // nodeColors[nodeId] = allNodes[nodeId].color;
+      allNodes[nodeId].color = "rgba(200,200,200,0.5)";
+      if (allNodes[nodeId].hiddenLabel === undefined) {
+        allNodes[nodeId].hiddenLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+    var connectedNodes = network.getConnectedNodes(selectedNode);
+    var allConnectedNodes = [];
+
+    // get the second degree nodes
+    for (i = 1; i < degrees; i++) {
+      for (j = 0; j < connectedNodes.length; j++) {
+        allConnectedNodes = allConnectedNodes.concat(
+          network.getConnectedNodes(connectedNodes[j])
+        );
+      }
+    }
+
+    // all second degree nodes get a different color and their label back
+    for (i = 0; i < allConnectedNodes.length; i++) {
+      // allNodes[allConnectedNodes[i]].color = "pink";
+      allNodes[allConnectedNodes[i]].color = "rgba(150,150,150,0.75)";
+      if (allNodes[allConnectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[allConnectedNodes[i]].label =
+          allNodes[allConnectedNodes[i]].hiddenLabel;
+        allNodes[allConnectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // all first degree nodes get their own color and their label back
+    for (i = 0; i < connectedNodes.length; i++) {
+      // allNodes[connectedNodes[i]].color = undefined;
+      allNodes[connectedNodes[i]].color = nodeColors[connectedNodes[i]];
+      if (allNodes[connectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[connectedNodes[i]].label =
+          allNodes[connectedNodes[i]].hiddenLabel;
+        allNodes[connectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // the main node gets its own color and its label back.
+    // allNodes[selectedNode].color = undefined;
+    allNodes[selectedNode].color = nodeColors[selectedNode];
+    if (allNodes[selectedNode].hiddenLabel !== undefined) {
+      allNodes[selectedNode].label = allNodes[selectedNode].hiddenLabel;
+      allNodes[selectedNode].hiddenLabel = undefined;
+    }
+  } else if (highlightActive === true) {
+    // console.log("highlightActive was true");
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      // allNodes[nodeId].color = "purple";
+      allNodes[nodeId].color = nodeColors[nodeId];
+      // delete allNodes[nodeId].color;
+      if (allNodes[nodeId].hiddenLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].hiddenLabel;
+        allNodes[nodeId].hiddenLabel = undefined;
+      }
+    }
+    highlightActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    // console.log("Nothing was selected");
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        // allNodes[nodeId].color = {};
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function filterHighlight(params) {
+  allNodes = nodes.get({ returnType: "Object" });
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    filterActive = true;
+    let selectedNodes = params.nodes;
+
+    // hiding all nodes and saving the label
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = true;
+      if (allNodes[nodeId].savedLabel === undefined) {
+        allNodes[nodeId].savedLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+
+    for (let i=0; i < selectedNodes.length; i++) {
+      allNodes[selectedNodes[i]].hidden = false;
+      if (allNodes[selectedNodes[i]].savedLabel !== undefined) {
+        allNodes[selectedNodes[i]].label = allNodes[selectedNodes[i]].savedLabel;
+        allNodes[selectedNodes[i]].savedLabel = undefined;
+      }
+    }
+
+  } else if (filterActive === true) {
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = false;
+      if (allNodes[nodeId].savedLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].savedLabel;
+        allNodes[nodeId].savedLabel = undefined;
+      }
+    }
+    filterActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function selectNode(nodes) {
+  network.selectNodes(nodes);
+  neighbourhoodHighlight({ nodes: nodes });
+  return nodes;
+}
+
+function selectNodes(nodes) {
+  network.selectNodes(nodes);
+  filterHighlight({nodes: nodes});
+  return nodes;
+}
+
+function highlightFilter(filter) {
+  let selectedNodes = []
+  let selectedProp = filter['property']
+  if (filter['item'] === 'node') {
+    let allNodes = nodes.get({ returnType: "Object" });
+    for (let nodeId in allNodes) {
+      if (allNodes[nodeId][selectedProp] && filter['value'].includes((allNodes[nodeId][selectedProp]).toString())) {
+        selectedNodes.push(nodeId)
+      }
+    }
+  }
+  else if (filter['item'] === 'edge'){
+    let allEdges = edges.get({returnType: 'object'});
+    // check if the selected property exists for selected edge and select the nodes connected to the edge
+    for (let edge in allEdges) {
+      if (allEdges[edge][selectedProp] && filter['value'].includes((allEdges[edge][selectedProp]).toString())) {
+        selectedNodes.push(allEdges[edge]['from'])
+        selectedNodes.push(allEdges[edge]['to'])
+      }
+    }
+  }
+  selectNodes(selectedNodes)
+}</script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            
+            
+            
+            
+            
+
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1f77b4", "id": "e1", "label": "Herm\u00e8s", "shape": "dot", "size": 15, "title": "ID: e1\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Herm\u00e8s\u003cbr\u003ealias: [\u0027Group\u0027]\u003cbr\u003ekeyStrengths: [\u0027Innovative player\u0027, \u0027Modular one-stop-shop unified commerce solutions\u0027, \u0027Native omnichannel positioning\u0027, \u0027Multi-services provider\u0027]\u003cbr\u003egrowthStrategySummary: Expanding scope to IT and software integration through strategic build-up"}, {"color": "#7f7f7f", "id": "e2", "label": "Vulcain S.A.S.", "shape": "dot", "size": 15, "title": "ID: e2\u003cbr\u003eType: pekg:Advisor\u003cbr\u003ename: Vulcain S.A.S.\u003cbr\u003ealias: [\u0027Vulcain\u0027]"}, {"color": "#d62728", "id": "e3", "label": "Proposed Transaction", "shape": "dot", "size": 15, "title": "ID: e3\u003cbr\u003eType: pekg:TransactionContext\u003cbr\u003econtextName: Proposed Transaction\u003cbr\u003etypeSought: Teaser"}, {"color": "#2ca02c", "id": "e4", "label": "Thierry Falque-Pierrotin", "shape": "dot", "size": 15, "title": "ID: e4\u003cbr\u003eType: pekg:Person\u003cbr\u003efullName: Thierry Falque-Pierrotin\u003cbr\u003eposition: [\u0027Partner and CEO\u0027]"}, {"color": "#2ca02c", "id": "e5", "label": "Pierre Roche", "shape": "dot", "size": 15, "title": "ID: e5\u003cbr\u003eType: pekg:Person\u003cbr\u003efullName: Pierre Roche\u003cbr\u003eposition: [\u0027Director\u0027]"}, {"color": "#2ca02c", "id": "e6", "label": "Theo Dahan", "shape": "dot", "size": 15, "title": "ID: e6\u003cbr\u003eType: pekg:Person\u003cbr\u003efullName: Theo Dahan\u003cbr\u003eposition: [\u0027Associate\u0027]"}, {"color": "#2ca02c", "id": "e7", "label": "Michael Schor", "shape": "dot", "size": 15, "title": "ID: e7\u003cbr\u003eType: pekg:Person\u003cbr\u003efullName: Michael Schor\u003cbr\u003eposition: [\u0027Partner\u0027]"}, {"color": "#2ca02c", "id": "e8", "label": "Arnaud Gu\u00e9rin", "shape": "dot", "size": 15, "title": "ID: e8\u003cbr\u003eType: pekg:Person\u003cbr\u003efullName: Arnaud Gu\u00e9rin\u003cbr\u003eposition: [\u0027Analyst\u0027]"}, {"color": "#c7c7c7", "id": "e9", "label": "Paris, France", "shape": "dot", "size": 15, "title": "ID: e9\u003cbr\u003eType: pekg:Location\u003cbr\u003elocationName: Paris, France\u003cbr\u003elocationType: Office"}, {"color": "#ff7f0e", "id": "e10", "label": "Recurring normative revenue (2022)", "shape": "dot", "size": 15, "title": "ID: e10\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Recurring normative revenue\u003cbr\u003evalueString: 63%\u003cbr\u003efiscalPeriod: 2022"}, {"color": "#ff7f0e", "id": "e11", "label": "EBITDA (Q1-2023)", "shape": "dot", "size": 15, "title": "ID: e11\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: EBITDA\u003cbr\u003evalueString: breakeven\u003cbr\u003efiscalPeriod: Q1-2023"}, {"color": "#ff7f0e", "id": "e12", "label": "M\u0026A operations (2021)", "shape": "dot", "size": 15, "title": "ID: e12\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: M\u0026A operations\u003cbr\u003evalueString: 2\u003cbr\u003efiscalPeriod: 2021"}, {"color": "#ff7f0e", "id": "e13", "label": "Total value of transactions managed", "shape": "dot", "size": 15, "title": "ID: e13\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Total value of transactions managed\u003cbr\u003evalueString: \u20ac80bn"}, {"color": "#9467bd", "id": "e14", "label": "One-stop-shop unified commerce solutions", "shape": "dot", "size": 15, "title": "ID: e14\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: One-stop-shop unified commerce solutions"}, {"color": "#9467bd", "id": "e15", "label": "Cash-in", "shape": "dot", "size": 15, "title": "ID: e15\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Cash-in\u003cbr\u003edescription: Supports companies in key payment stages through omnichannel payment systems, in order to secure all potential sales from physical and digital channels\u003cbr\u003ecategory: Omnichannel Payment Solutions"}, {"color": "#9467bd", "id": "e16", "label": "Fulfillment", "shape": "dot", "size": 15, "title": "ID: e16\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Fulfillment\u003cbr\u003edescription: Supports companies in supply and demand processes to successfully deliver its products or services through the right channel, at the right time and place\u003cbr\u003ecategory: Omnichannel Fulfillment Solutions"}, {"color": "#9467bd", "id": "e17", "label": "Loyalty and Promotion", "shape": "dot", "size": 15, "title": "ID: e17\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Loyalty and Promotion\u003cbr\u003edescription: Supports companies in retaining customers through enhanced omnichannel customer experience\u003cbr\u003ecategory: Omnichannel Loyalty Solutions"}, {"color": "#ff7f0e", "id": "e18", "label": "Normative Revenue (2019)", "shape": "dot", "size": 15, "title": "ID: e18\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Normative Revenue\u003cbr\u003evalueString: 1.8m\u20ac\u003cbr\u003efiscalPeriod: 2019"}, {"color": "#ff7f0e", "id": "e19", "label": "Normative Revenue (2020)", "shape": "dot", "size": 15, "title": "ID: e19\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Normative Revenue\u003cbr\u003evalueString: 3.6m\u20ac\u003cbr\u003efiscalPeriod: 2020"}, {"color": "#ff7f0e", "id": "e20", "label": "Normative Revenue (2021)", "shape": "dot", "size": 15, "title": "ID: e20\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Normative Revenue\u003cbr\u003evalueString: 26.7m\u20ac\u003cbr\u003efiscalPeriod: 2021"}, {"color": "#ff7f0e", "id": "e21", "label": "Normative Revenue (2022f)", "shape": "dot", "size": 15, "title": "ID: e21\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Normative Revenue\u003cbr\u003evalueString: 33.6m\u20ac\u003cbr\u003efiscalPeriod: 2022f"}, {"color": "#ff7f0e", "id": "e22", "label": "Normative Revenue (2023e)", "shape": "dot", "size": 15, "title": "ID: e22\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Normative Revenue\u003cbr\u003evalueString: 36.3m\u20ac\u003cbr\u003efiscalPeriod: 2023e"}, {"color": "#ff7f0e", "id": "e23", "label": "Normative Revenue (2024e)", "shape": "dot", "size": 15, "title": "ID: e23\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Normative Revenue\u003cbr\u003evalueString: 41.6m\u20ac\u003cbr\u003efiscalPeriod: 2024e"}, {"color": "#ff7f0e", "id": "e24", "label": "Normative Revenue (2025e)", "shape": "dot", "size": 15, "title": "ID: e24\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Normative Revenue\u003cbr\u003evalueString: 50.6m\u20ac\u003cbr\u003efiscalPeriod: 2025e"}, {"color": "#ff7f0e", "id": "e25", "label": "Normative Revenue (2026e)", "shape": "dot", "size": 15, "title": "ID: e25\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Normative Revenue\u003cbr\u003evalueString: 61.6m\u20ac\u003cbr\u003efiscalPeriod: 2026e"}, {"color": "#ff7f0e", "id": "e26", "label": "Normative Revenue (2027e)", "shape": "dot", "size": 15, "title": "ID: e26\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Normative Revenue\u003cbr\u003evalueString: 77.0m\u20ac\u003cbr\u003efiscalPeriod: 2027e"}, {"color": "#1f77b4", "id": "e27", "label": "Gartner", "shape": "dot", "size": 15, "title": "ID: e27\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Gartner"}, {"color": "#1f77b4", "id": "e28", "label": "Early Metrics", "shape": "dot", "size": 15, "title": "ID: e28\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Early Metrics"}, {"color": "#1f77b4", "id": "e29", "label": "KPMG", "shape": "dot", "size": 15, "title": "ID: e29\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: KPMG"}, {"color": "#1f77b4", "id": "e30", "label": "Ivy", "shape": "dot", "size": 15, "title": "ID: e30\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Ivy\u003cbr\u003ealias: [\u0027Ivy Executive Search\u0027]"}, {"color": "#e377c2", "id": "e31", "label": "French omnichannel software market", "shape": "dot", "size": 15, "title": "ID: e31\u003cbr\u003eType: pekg:MarketContext\u003cbr\u003esegmentName: French omnichannel software market\u003cbr\u003egeography: France\u003cbr\u003esizeInfo: \u20ac0.9bn in 2020, growing to \u20ac2.1bn by 2027f\u003cbr\u003egrowthInfo: +13.5% p.a. over 2020-2027f\u003cbr\u003ekeyDrivers: [\u0027E-commerce acceleration\u0027, \u0027Retail market steady increase\u0027, \u0027Modernization of IT solutions\u0027, \u0027Convergence of online and offline channels\u0027, \u0027Change of customer habits\u0027]\u003cbr\u003esourceOfData: Company, KPMG, PwC"}, {"color": "#ff7f0e", "id": "e32", "label": "Addressable Market Size (2020)", "shape": "dot", "size": 15, "title": "ID: e32\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Addressable Market Size\u003cbr\u003evalueString: 0.9bn\u003cbr\u003efiscalPeriod: 2020\u003cbr\u003escope: France"}, {"color": "#ff7f0e", "id": "e33", "label": "Addressable Market Size (2021)", "shape": "dot", "size": 15, "title": "ID: e33\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Addressable Market Size\u003cbr\u003evalueString: 1.0bn\u003cbr\u003efiscalPeriod: 2021\u003cbr\u003escope: France"}, {"color": "#ff7f0e", "id": "e34", "label": "Addressable Market Size (2022e)", "shape": "dot", "size": 15, "title": "ID: e34\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Addressable Market Size\u003cbr\u003evalueString: 1.2bn\u003cbr\u003efiscalPeriod: 2022e\u003cbr\u003escope: France"}, {"color": "#ff7f0e", "id": "e35", "label": "Addressable Market Size (2027f)", "shape": "dot", "size": 15, "title": "ID: e35\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Addressable Market Size\u003cbr\u003evalueString: 2.1bn\u003cbr\u003efiscalPeriod: 2027f\u003cbr\u003escope: France"}, {"color": "#ff7f0e", "id": "e36", "label": "Normative Proforma Revenue Breakdown (2021)", "shape": "dot", "size": 15, "title": "ID: e36\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Normative Proforma Revenue Breakdown\u003cbr\u003evalueString: 65%\u003cbr\u003efiscalPeriod: 2021\u003cbr\u003escope: Cash-in"}, {"color": "#ff7f0e", "id": "e37", "label": "Normative Proforma Revenue Breakdown (2021)", "shape": "dot", "size": 15, "title": "ID: e37\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Normative Proforma Revenue Breakdown\u003cbr\u003evalueString: 13%\u003cbr\u003efiscalPeriod: 2021\u003cbr\u003escope: Fulfillment"}, {"color": "#ff7f0e", "id": "e38", "label": "Normative Proforma Revenue Breakdown (2021)", "shape": "dot", "size": 15, "title": "ID: e38\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Normative Proforma Revenue Breakdown\u003cbr\u003evalueString: 13%\u003cbr\u003efiscalPeriod: 2021\u003cbr\u003escope: Loyalty and Promotion"}, {"color": "#ff7f0e", "id": "e39", "label": "Normative Proforma Revenue Breakdown (2021)", "shape": "dot", "size": 15, "title": "ID: e39\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Normative Proforma Revenue Breakdown\u003cbr\u003evalueString: 9%\u003cbr\u003efiscalPeriod: 2021\u003cbr\u003escope: Other"}, {"color": "#9467bd", "id": "e40", "label": "Plug, Play and Deploy solution", "shape": "dot", "size": 15, "title": "ID: e40\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Plug, Play and Deploy solution\u003cbr\u003edescription: A middle office solution which can be digitally grafted to existing architecture and does not require any system change, nor modification and update"}, {"color": "#ff7f0e", "id": "e41", "label": "Normative Proforma Revenue (FY2022f)", "shape": "dot", "size": 15, "title": "ID: e41\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Normative Proforma Revenue\u003cbr\u003evalueString: \u20ac33.6m\u003cbr\u003efiscalPeriod: FY2022f"}, {"color": "#ff7f0e", "id": "e42", "label": "Recurring Revenue (FY2022f)", "shape": "dot", "size": 15, "title": "ID: e42\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Recurring Revenue\u003cbr\u003evalueString: 63%\u003cbr\u003efiscalPeriod: FY2022f"}, {"color": "#ff7f0e", "id": "e43", "label": "Non-Recurring Revenue (FY2022f)", "shape": "dot", "size": 15, "title": "ID: e43\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Non-Recurring Revenue\u003cbr\u003evalueString: 37%\u003cbr\u003efiscalPeriod: FY2022f"}, {"color": "#ff7f0e", "id": "e44", "label": "Average Normative Recurring Revenue per Opportunit", "shape": "dot", "size": 15, "title": "ID: e44\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Average Normative Recurring Revenue per Opportunity\u003cbr\u003evalueString: \u20ac272k\u003cbr\u003efiscalPeriod: FY2022f"}, {"color": "#ff7f0e", "id": "e45", "label": "Normative Proforma Revenue (FY2021)", "shape": "dot", "size": 15, "title": "ID: e45\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Normative Proforma Revenue\u003cbr\u003evalueString: 57%\u003cbr\u003efiscalPeriod: FY2021\u003cbr\u003escope: Top 10 Clients"}, {"color": "#ff7f0e", "id": "e46", "label": "Normative Proforma Revenue (FY2021)", "shape": "dot", "size": 15, "title": "ID: e46\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Normative Proforma Revenue\u003cbr\u003evalueString: 77%\u003cbr\u003efiscalPeriod: FY2021\u003cbr\u003escope: Top 20 Clients"}, {"color": "#ff7f0e", "id": "e47", "label": "Normative Proforma Revenue (FY2021)", "shape": "dot", "size": 15, "title": "ID: e47\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Normative Proforma Revenue\u003cbr\u003evalueString: 63%\u003cbr\u003efiscalPeriod: FY2021\u003cbr\u003escope: Tier 1 Clients"}, {"color": "#ff7f0e", "id": "e48", "label": "Normative Proforma Revenue (FY2021)", "shape": "dot", "size": 15, "title": "ID: e48\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Normative Proforma Revenue\u003cbr\u003evalueString: 79%\u003cbr\u003efiscalPeriod: FY2021\u003cbr\u003escope: Food and Specialist Retailers"}, {"color": "#ff7f0e", "id": "e49", "label": "Normative Proforma Revenue outside France (FY2021)", "shape": "dot", "size": 15, "title": "ID: e49\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Normative Proforma Revenue outside France\u003cbr\u003evalueString: 17%\u003cbr\u003efiscalPeriod: FY2021"}, {"color": "#ff7f0e", "id": "e50", "label": "Normative Proforma Revenue outside France (FY2020)", "shape": "dot", "size": 15, "title": "ID: e50\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Normative Proforma Revenue outside France\u003cbr\u003evalueString: 13%\u003cbr\u003efiscalPeriod: FY2020"}, {"color": "#ff7f0e", "id": "e51", "label": "Recurring Activities Revenue (FY2022f)", "shape": "dot", "size": 15, "title": "ID: e51\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Recurring Activities Revenue\u003cbr\u003evalueString: \u20ac21.2m\u003cbr\u003efiscalPeriod: FY2022f"}, {"color": "#ff7f0e", "id": "e52", "label": "Cybersecurity Investment (Since 2018)", "shape": "dot", "size": 15, "title": "ID: e52\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Cybersecurity Investment\u003cbr\u003evalueString: \u20ac5m\u003cbr\u003efiscalPeriod: Since 2018"}, {"color": "#1f77b4", "id": "e53", "label": "Chambre Nationale des Conseillers en Investissemen", "shape": "dot", "size": 15, "title": "ID: e53\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Chambre Nationale des Conseillers en Investissements Financiers\u003cbr\u003ewebsite: www.cncef.org"}, {"color": "#10ac1a", "id": "e54", "label": "Autorit\u00e9 des March\u00e9s Financiers", "shape": "dot", "size": 15, "title": "ID: e54\u003cbr\u003eType: pekg:GovernmentBody\u003cbr\u003ename: Autorit\u00e9 des March\u00e9s Financiers\u003cbr\u003ealias: [\u0027AMF\u0027]"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "e3", "label": "isSubjectOf", "title": "pekg:isSubjectOf", "to": "e1"}, {"arrows": "to", "from": "e3", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e2"}, {"arrows": "to", "from": "e1", "label": "isSubjectOf", "title": "pekg:isSubjectOf", "to": "e3"}, {"arrows": "to", "from": "e1", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e2"}, {"arrows": "to", "from": "e2", "label": "employs", "title": "pekg:employs", "to": "e4"}, {"arrows": "to", "from": "e2", "label": "employs", "title": "pekg:employs", "to": "e5"}, {"arrows": "to", "from": "e2", "label": "employs", "title": "pekg:employs", "to": "e6"}, {"arrows": "to", "from": "e2", "label": "employs", "title": "pekg:employs", "to": "e7"}, {"arrows": "to", "from": "e2", "label": "employs", "title": "pekg:employs", "to": "e8"}, {"arrows": "to", "from": "e2", "label": "hasOfficeIn", "title": "pekg:hasOfficeIn", "to": "e9"}, {"arrows": "to", "from": "e14", "label": "offers", "title": "pekg:offers", "to": "e15"}, {"arrows": "to", "from": "e14", "label": "offers", "title": "pekg:offers", "to": "e16"}, {"arrows": "to", "from": "e14", "label": "offers", "title": "pekg:offers", "to": "e17"}, {"arrows": "to", "from": "e14", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e18"}, {"arrows": "to", "from": "e14", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e19"}, {"arrows": "to", "from": "e14", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e20"}, {"arrows": "to", "from": "e14", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e21"}, {"arrows": "to", "from": "e14", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e22"}, {"arrows": "to", "from": "e14", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e23"}, {"arrows": "to", "from": "e14", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e24"}, {"arrows": "to", "from": "e14", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e25"}, {"arrows": "to", "from": "e14", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e26"}, {"arrows": "to", "from": "e14", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e27"}, {"arrows": "to", "from": "e14", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e28"}, {"arrows": "to", "from": "e14", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e29"}, {"arrows": "to", "from": "e14", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e30"}, {"arrows": "to", "from": "e1", "label": "operatesIn", "title": "pekg:operatesIn", "to": "e31"}, {"arrows": "to", "from": "e31", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e31"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e15"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e16"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e17"}, {"arrows": "to", "from": "e31", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e32"}, {"arrows": "to", "from": "e31", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e33"}, {"arrows": "to", "from": "e31", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e34"}, {"arrows": "to", "from": "e31", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e35"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e36"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e37"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e38"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e39"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e40"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e41"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e42"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e43"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e44"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e45"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e46"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e47"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e48"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e49"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e50"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e51"}, {"arrows": "to", "from": "e1", "label": "hasOfficeIn", "title": "pekg:hasOfficeIn", "to": "e9"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e52"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shape": "dot", "size": 18, "font": {"size": 14, "face": "Tahoma"}}, "edges": {"arrows": {"to": {"enabled": true, "scaleFactor": 0.7}}, "color": {"inherit": "from"}, "smooth": {"type": "continuous", "roundness": 0.2}, "font": {"size": 10, "align": "middle"}}, "physics": {"enabled": true, "barnesHut": {"gravitationalConstant": -30000, "centralGravity": 0.3, "springLength": 250, "springConstant": 0.04, "damping": 0.09}, "minVelocity": 0.75}, "interaction": {"hover": true, "tooltipDelay": 200, "multiselect": true}, "layout": {"hierarchical": false}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

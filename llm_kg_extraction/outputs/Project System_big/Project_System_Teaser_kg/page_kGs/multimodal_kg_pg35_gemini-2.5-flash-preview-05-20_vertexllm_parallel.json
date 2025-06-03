@@ -1,0 +1,179 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "One-stop-shop for expert automated translation software solutions"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "Large industrial clients",
+      "industry": "Industrial"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Pure Neural\u00ae Server",
+      "alias": [
+        "SPNS"
+      ],
+      "description": "Instant and automated translation solutions; Unique ability to address very specific customer needs with tailored machine-learning-based translations",
+      "category": "Automated Translation Software"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Technology",
+      "name": "Machine Learning",
+      "description": "Core technology for tailored machine-learning-based translations"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Technology",
+      "name": "Neural Networks",
+      "description": "Underlying technology for Pure Neural\u00ae Server"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Secure Communication & Collaboration",
+      "description": "Real time translation communication (intranet, emails, etc.); Professionals able to work efficiently in multiple languages"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Customer Service",
+      "description": "Instant email and chat translation; Auto-translation of knowledge bases, FAQs, and technical documentation"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "eDiscovery & Digital Forensics",
+      "description": "Allow clients to translate quickly and efficiently all documents from and eDiscovery (large amount of files with a dynamic nature); Quick processing of multiple languages in one document"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Governance & Regulatory Compliance",
+      "description": "Data compliant translations to avoid data rules violations"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Industry 4.0",
+      "description": "Coordination of all the communication and instruction points from different countries along the processes of sourcing, production and selling for large industrial clients"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Government",
+      "description": "Assistance to defense and security organizations, improving multilingual information retrieval and usage while streamlining interoperability and collaboration"
+    },
+    {
+      "id": "e13",
+      "type": "Government",
+      "name": "Defense and Security Organizations"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Sale",
+      "status": "Teaser Phase",
+      "dealRationaleHighlights": [
+        "One-stop-shop for expert automated translation software solutions",
+        "Unique ability to address very specific customer needs with tailored machine-learning-based translations"
+      ]
+    },
+    {
+      "id": "e15",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Sell-side Advisor"
+    },
+    {
+      "id": "e16",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Sell-side Advisor"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e4",
+      "target": "e5",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e4",
+      "target": "e6",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e14",
+      "target": "e15",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e14",
+      "target": "e16",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

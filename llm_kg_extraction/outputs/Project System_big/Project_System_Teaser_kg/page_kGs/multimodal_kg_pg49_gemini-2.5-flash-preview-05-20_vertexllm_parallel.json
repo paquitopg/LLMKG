@@ -1,0 +1,863 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "Target Company; consistently focused on improving ARR by increasing annual license and maintenance sales"
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Sale/Acquisition"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "KPMG"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Company",
+      "name": "SSA"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Company",
+      "name": "SSI"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Recurring Revenue",
+      "isRecurring": true,
+      "scope": "cohort overview",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "Annual licenses",
+      "category": "Software Licensing"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Maintenance",
+      "category": "Service"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total ARR",
+      "valueString": "\u20ac7.7m",
+      "fiscalPeriod": "FY21A",
+      "isRecurring": true,
+      "scope": "total",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Private Sector"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Public Sector"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Customer Retention",
+      "description": "long-term"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Business Development"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Customer Outreach",
+      "description": "wide and diversified"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Focus on ARR Improvement",
+      "eventType": "Strategic Initiative",
+      "dateOrYear": "FY19A-FY21A",
+      "description": "Systran consistently focused on improving ARR by increasing annual license and maintenance sales"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac2.53m",
+      "fiscalPeriod": "FY19A",
+      "scope": "Private",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac2.89m",
+      "fiscalPeriod": "FY20A",
+      "scope": "Private",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac3.11m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Private",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac1.67m",
+      "fiscalPeriod": "FY19A",
+      "scope": "Private, FY18A & Before cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac0.86m",
+      "fiscalPeriod": "FY19A",
+      "scope": "Private, FY19A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac1.49m",
+      "fiscalPeriod": "FY20A",
+      "scope": "Private, FY18A & Before cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac1.09m",
+      "fiscalPeriod": "FY20A",
+      "scope": "Private, FY19A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac0.31m",
+      "fiscalPeriod": "FY20A",
+      "scope": "Private, FY20A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac1.33m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Private, FY18A & Before cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac0.84m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Private, FY19A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac0.71m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Private, FY20A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac0.22m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Private, FY21A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac1.69m",
+      "fiscalPeriod": "FY19A",
+      "scope": "Private",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac1.62m",
+      "fiscalPeriod": "FY20A",
+      "scope": "Private",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac1.76m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Private",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac1.59m",
+      "fiscalPeriod": "FY19A",
+      "scope": "Private, FY18A & Before cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac0.11m",
+      "fiscalPeriod": "FY19A",
+      "scope": "Private, FY19A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac1.36m",
+      "fiscalPeriod": "FY20A",
+      "scope": "Private, FY18A & Before cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac0.17m",
+      "fiscalPeriod": "FY20A",
+      "scope": "Private, FY19A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac0.09m",
+      "fiscalPeriod": "FY20A",
+      "scope": "Private, FY20A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac1.20m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Private, FY18A & Before cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac0.28m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Private, FY19A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac0.17m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Private, FY20A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac0.09m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Private, FY21A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac0.33m",
+      "fiscalPeriod": "FY19A",
+      "scope": "Public",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac0.37m",
+      "fiscalPeriod": "FY20A",
+      "scope": "Public",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac0.41m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Public",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac0.23m",
+      "fiscalPeriod": "FY19A",
+      "scope": "Public, FY18A & Before cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e47",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac0.10m",
+      "fiscalPeriod": "FY19A",
+      "scope": "Public, FY19A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e48",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac0.20m",
+      "fiscalPeriod": "FY20A",
+      "scope": "Public, FY18A & Before cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e49",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac0.10m",
+      "fiscalPeriod": "FY20A",
+      "scope": "Public, FY19A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e50",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac0.07m",
+      "fiscalPeriod": "FY20A",
+      "scope": "Public, FY20A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e51",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac0.14m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Public, FY18A & Before cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e52",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac0.12m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Public, FY19A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e53",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR",
+      "valueString": "\u20ac0.13m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Public, FY20A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e54",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac1.87m",
+      "fiscalPeriod": "FY19A",
+      "scope": "Public",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e55",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac2.29m",
+      "fiscalPeriod": "FY20A",
+      "scope": "Public",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e56",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac2.38m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Public",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e57",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac1.75m",
+      "fiscalPeriod": "FY19A",
+      "scope": "Public, FY18A & Before cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e58",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac0.13m",
+      "fiscalPeriod": "FY19A",
+      "scope": "Public, FY19A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e59",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac1.85m",
+      "fiscalPeriod": "FY20A",
+      "scope": "Public, FY18A & Before cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e60",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac0.38m",
+      "fiscalPeriod": "FY20A",
+      "scope": "Public, FY19A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e61",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac0.06m",
+      "fiscalPeriod": "FY20A",
+      "scope": "Public, FY20A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e62",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac1.75m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Public, FY18A & Before cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e63",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac0.41m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Public, FY19A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e64",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac0.09m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Public, FY20A cohort",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e65",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR",
+      "valueString": "\u20ac0.13m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Public, FY21A cohort",
+      "sourceNote": "KPMG VDD report"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e18",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:hasSubsidiary"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:hasSubsidiary"
+    },
+    {
+      "source": "e10",
+      "target": "e13",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e10",
+      "target": "e14",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e13",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e14",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e36",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e40",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e41",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e42",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e43",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e44",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e45",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e47",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e48",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e49",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e50",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e51",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e52",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e53",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e54",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e55",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e56",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e57",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e58",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e59",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e60",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e61",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e62",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e63",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e64",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e65",
+      "type": "pekg:reportsFinancialMetric"
+    }
+  ]
+}

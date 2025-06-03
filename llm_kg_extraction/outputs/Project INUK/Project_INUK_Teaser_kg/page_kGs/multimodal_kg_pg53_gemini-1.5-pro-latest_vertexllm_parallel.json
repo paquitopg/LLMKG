@@ -1,0 +1,143 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:FinancialMetric",
+      "metricName": "FY21 Recurring Billings",
+      "valueString": "2747",
+      "fiscalPeriod": "FY21",
+      "isRecurring": true,
+      "scope": "Total Recurring Billings"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:FinancialMetric",
+      "metricName": "New Logo",
+      "valueString": "293",
+      "fiscalPeriod": "FY22",
+      "isRecurring": false,
+      "scope": "New Customer Billings"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Upsell",
+      "valueString": "522",
+      "fiscalPeriod": "FY22",
+      "isRecurring": false,
+      "scope": "Upsell Billings"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:FinancialMetric",
+      "metricName": "3-year subs",
+      "valueString": "258",
+      "fiscalPeriod": "FY22",
+      "isRecurring": false,
+      "scope": "3-Year Subscription Billings"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Churn",
+      "valueString": "-198",
+      "fiscalPeriod": "FY22",
+      "isRecurring": false,
+      "scope": "Churn Billings"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Downsell",
+      "valueString": "-90",
+      "fiscalPeriod": "FY22",
+      "isRecurring": false,
+      "scope": "Downsell Billings"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "End of legacy product",
+      "valueString": "-64",
+      "fiscalPeriod": "FY22",
+      "isRecurring": false,
+      "scope": "Legacy Product Churn"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:FinancialMetric",
+      "metricName": "FY22 Recurring Billings",
+      "valueString": "3468",
+      "fiscalPeriod": "FY22",
+      "isRecurring": true,
+      "scope": "Total Recurring Billings"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Advisor",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Advisor",
+      "name": "DDA & Company France SAS"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

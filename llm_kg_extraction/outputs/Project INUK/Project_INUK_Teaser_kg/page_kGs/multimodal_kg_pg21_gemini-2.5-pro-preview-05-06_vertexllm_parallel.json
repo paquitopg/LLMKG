@@ -1,0 +1,562 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "awardsAndCertifications": [
+        "Qualiopi-certified since Feb. 2022",
+        "Listed on the data dock platform"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisor for Project Inuk"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "transactionPerimeter": "Articque"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Professional services",
+      "category": "Service",
+      "description": "A wide range of tailored professional services offered by Articque, including consulting and special projects."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Consulting services",
+      "category": "Service",
+      "description": "Consulting services including spatial data science expertise, competitive market analysis support, site selection, and commercial activity analysis."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "Spatial data science expertise",
+      "category": "Consulting Service Component"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Competitive market analysis support",
+      "category": "Consulting Service Component",
+      "description": "To detect and display the existing competition and high potential zones."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "Site selection",
+      "category": "Consulting Service Component",
+      "description": "To pinpoint key target locations for expansion."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "Commercial activity analysis",
+      "category": "Consulting Service Component",
+      "description": "Analysis of client churn, penetration rate, and other specific metrics."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Special projects for customized business applications",
+      "category": "Service"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "Turnkey project",
+      "category": "Special Project Type",
+      "description": "Articque supports the whole project from planning to final execution."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "Progressive to Total autonomy project",
+      "category": "Special Project Type",
+      "description": "Articque is in charge of the initial set-up of the project and assists the client in the handover."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:ProductOrService",
+      "name": "Training services",
+      "category": "Service",
+      "description": "Includes various training modules. The training takes place in site, offsite or online. Articque has been Qualiopi-certified since Feb. 2022 and is listed on the data dock platform for training financing."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:ProductOrService",
+      "name": "Analyst training",
+      "category": "Training Module",
+      "description": "Use of all basic platform features."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:ProductOrService",
+      "name": "Analyst advanced training",
+      "category": "Training Module",
+      "description": "Use of all advanced platform features."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:ProductOrService",
+      "name": "Geolocation dashboard expert training",
+      "category": "Training Module",
+      "description": "To be able to develop interactive and dynamic geolocation dashboards."
+    },
+    {
+      "id": "e18",
+      "type": "pekg:ProductOrService",
+      "name": "Wizard expert training",
+      "category": "Training Module",
+      "description": "To be able to develop analytics and business intelligence applications serving a large scope of business needs (commercial, marketing, logistic, etc.)."
+    },
+    {
+      "id": "e19",
+      "type": "pekg:ProductOrService",
+      "name": "Administrator platform training",
+      "category": "Training Module",
+      "description": "To acquire full autonomy in the administration and management of the platform."
+    },
+    {
+      "id": "e20",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Commercial business needs"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Marketing business needs"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Logistic business needs"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Qualiopi Certification",
+      "eventType": "Certification",
+      "dateOrYear": "Feb. 2022",
+      "description": "Articque has been Qualiopi-certified since Feb. 2022."
+    },
+    {
+      "id": "e24",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Users trained per year",
+      "kpiValueString": "300",
+      "kpiDateOrPeriod": "per year",
+      "description": "Key metric for training services."
+    },
+    {
+      "id": "e25",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Satisfaction survey score",
+      "kpiValueString": "17.8/20",
+      "description": "Key metric for training services, based on satisfaction survey."
+    },
+    {
+      "id": "e26",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Maximum trainees per session",
+      "kpiValueString": "5",
+      "description": "Key metric for training services."
+    },
+    {
+      "id": "e27",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "114k EUR",
+      "fiscalPeriod": "FY18A",
+      "isRecurring": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Billings",
+      "valueString": "597k EUR",
+      "fiscalPeriod": "FY18A",
+      "isRecurring": false,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Billings",
+      "valueString": "711k EUR",
+      "fiscalPeriod": "FY18A",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "109k EUR",
+      "fiscalPeriod": "FY19A",
+      "isRecurring": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Billings",
+      "valueString": "863k EUR",
+      "fiscalPeriod": "FY19A",
+      "isRecurring": false,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Billings",
+      "valueString": "972k EUR",
+      "fiscalPeriod": "FY19A",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "182k EUR",
+      "fiscalPeriod": "FY20A",
+      "isRecurring": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Billings",
+      "valueString": "691k EUR",
+      "fiscalPeriod": "FY20A",
+      "isRecurring": false,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Billings",
+      "valueString": "872k EUR",
+      "fiscalPeriod": "FY20A",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "191k EUR",
+      "fiscalPeriod": "FY21A",
+      "isRecurring": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Billings",
+      "valueString": "857k EUR",
+      "fiscalPeriod": "FY21A",
+      "isRecurring": false,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Billings",
+      "valueString": "1047k EUR",
+      "fiscalPeriod": "FY21A",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "223k EUR",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Billings",
+      "valueString": "625k EUR",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": false,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Billings",
+      "valueString": "847k EUR",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings CAGR",
+      "valueString": "+18.3%",
+      "fiscalPeriod": "FY18A-22L",
+      "isRecurring": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:Technology",
+      "name": "Spatial data science"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:Company",
+      "name": "Datadock",
+      "description": "Platform where Articque is listed, enabling eligibility for training financing."
+    },
+    {
+      "id": "e45",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Listing on Datadock platform",
+      "eventType": "Listing",
+      "description": "Articque is listed on the Datadock platform, in order to be eligible for the financing of their training."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e18",
+      "target": "e20",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e18",
+      "target": "e21",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e18",
+      "target": "e22",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e14",
+      "target": "e24",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e14",
+      "target": "e25",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e14",
+      "target": "e26",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e36",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e40",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e41",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e42",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e3",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "pekg:seeksTransaction"
+    },
+    {
+      "source": "e1",
+      "target": "e43",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e7",
+      "target": "e43",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e45",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e45",
+      "target": "e44",
+      "type": "pekg:eventInvolvesParty"
+    }
+  ]
+}

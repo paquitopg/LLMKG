@@ -1,0 +1,197 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "alias": [
+        "Carticque"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:ProductOrService",
+      "name": "GeoCodage",
+      "description": "a geocoding tool allowing users to convert large volume datasets of addresses (customers, prospects, stores, etc.) into geographic coordinates (latitude, longitude, etc.)"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:ProductOrService",
+      "name": "GeoService Data",
+      "description": "a tool to tap into external extensive databases offering official socio-demographic and company data primarily INSEE and SIRENE."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:ProductOrService",
+      "name": "Carticque",
+      "description": "provides a range of third-party domestic and international basemaps including administrative or business-specific basemaps and is sold as an additional module to the client"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenue",
+      "fiscalPeriod": "FY18A",
+      "valueString": "44\u20ack",
+      "isRecurring": true
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Revenue",
+      "fiscalPeriod": "FY18A",
+      "valueString": "32\u20ack",
+      "isRecurring": false
+    },
+    {
+      "id": "e7",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenue",
+      "fiscalPeriod": "FY19A",
+      "valueString": "72\u20ack",
+      "isRecurring": true
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Revenue",
+      "fiscalPeriod": "FY19A",
+      "valueString": "24\u20ack",
+      "isRecurring": false
+    },
+    {
+      "id": "e9",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenue",
+      "fiscalPeriod": "FY20A",
+      "valueString": "149\u20ack",
+      "isRecurring": true
+    },
+    {
+      "id": "e10",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Revenue",
+      "fiscalPeriod": "FY20A",
+      "valueString": "16\u20ack",
+      "isRecurring": false
+    },
+    {
+      "id": "e11",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenue",
+      "fiscalPeriod": "FY21A",
+      "valueString": "202\u20ack",
+      "isRecurring": true
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Revenue",
+      "fiscalPeriod": "FY21A",
+      "valueString": "59\u20ack",
+      "isRecurring": false
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenue",
+      "fiscalPeriod": "FY22L",
+      "valueString": "161\u20ack",
+      "isRecurring": true
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Revenue",
+      "fiscalPeriod": "FY22L",
+      "valueString": "18\u20ack",
+      "isRecurring": false
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Advisor",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Advisor",
+      "name": "DDA & Company France SAS"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

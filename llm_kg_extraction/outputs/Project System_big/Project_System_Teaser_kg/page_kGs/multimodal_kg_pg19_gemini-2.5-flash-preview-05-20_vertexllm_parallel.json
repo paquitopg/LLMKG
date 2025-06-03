@@ -1,0 +1,521 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "Target Company for Project System_big"
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm for Project System_big"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm for Project System_big"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Sale/Acquisition (implied)",
+      "status": "Ongoing (implied)"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:MarketContext",
+      "segmentName": "Machine Translation (MT) market",
+      "growthInfo": "+16-20% market growth anticipated",
+      "keyDrivers": [
+        "Advancement of MT models",
+        "Increased sale of MT solutions by LSP and large tech companies"
+      ]
+    },
+    {
+      "id": "e6",
+      "type": "pekg:MarketContext",
+      "segmentName": "Global Language service and technologies market",
+      "characteristics": "Historically market growth was mainly driven by expansion of global trade, increasing international content demand and internationalization of supply chains. The pandemic market experienced a 2% contraction in 2020 due to sectors heavily afflicted by the pandemic but was offset by diversity of sectors served & structural shift to remote workplace.",
+      "growthInfo": "Future market growth driven by recovery from the pandemic, and accelerated market penetration in Asia",
+      "sourceOfData": "Slator, CSA, Eleven VDD report"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:MarketContext",
+      "segmentName": "Language services & technologies (excluding MT)"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Technology",
+      "name": "MT models",
+      "description": "Machine Translation models"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "MT solutions",
+      "category": "Software/Service",
+      "description": "Machine Translation solutions"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Company",
+      "name": "LSP",
+      "description": "Language Service Providers (general category)"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Company",
+      "name": "Large tech companies",
+      "description": "General category of large technology companies"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Anticipated Market Growth",
+      "valueString": "+16-20%",
+      "fiscalPeriod": "Future",
+      "scope": "MT market"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CAGR",
+      "valueString": "+26%",
+      "fiscalPeriod": "2018-2021",
+      "scope": "Machine Translation"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CAGR",
+      "valueString": "+16-20%",
+      "fiscalPeriod": "2021-2024F",
+      "scope": "Machine Translation"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CAGR",
+      "valueString": "+5%",
+      "fiscalPeriod": "2018-2021",
+      "scope": "Language services & technologies, exc. MT"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CAGR",
+      "valueString": "+6%",
+      "fiscalPeriod": "2021-2024F",
+      "scope": "Language services & technologies, exc. MT"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Pandemic Market Contraction",
+      "eventType": "Market Contraction",
+      "dateOrYear": "2020",
+      "description": "2% contraction in Global Language service and technologies market due to sectors heavily afflicted by the pandemic but was offset by diversity of sectors served & structural shift to remote workplace."
+    },
+    {
+      "id": "e18",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Global trade"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "International content demand"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Internationalization of supply chains"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Remote workplace"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Document owner/publisher"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Market Size",
+      "valueString": "20.9 \u20ac bn",
+      "fiscalPeriod": "2018A",
+      "scope": "Language services & technologies (excluding MT)"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Market Size",
+      "valueString": "0.4 \u20ac bn",
+      "fiscalPeriod": "2018A",
+      "scope": "Machine Translation"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Market Size",
+      "valueString": "21.8 \u20ac bn",
+      "fiscalPeriod": "2019A",
+      "scope": "Language services & technologies (excluding MT)"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Market Size",
+      "valueString": "0.4 \u20ac bn",
+      "fiscalPeriod": "2019A",
+      "scope": "Machine Translation"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Market Size",
+      "valueString": "21.3 \u20ac bn",
+      "fiscalPeriod": "2020A",
+      "scope": "Language services & technologies (excluding MT)"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Market Size",
+      "valueString": "0.6 \u20ac bn",
+      "fiscalPeriod": "2020A",
+      "scope": "Machine Translation"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Market Size",
+      "valueString": "23.7 \u20ac bn",
+      "fiscalPeriod": "2021A",
+      "scope": "Language services & technologies (excluding MT)"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Market Size",
+      "valueString": "0.8 \u20ac bn",
+      "fiscalPeriod": "2021A",
+      "scope": "Machine Translation"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Market Size",
+      "valueString": "24.4 \u20ac bn",
+      "fiscalPeriod": "2022F",
+      "scope": "Language services & technologies (excluding MT)"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Market Size",
+      "valueString": "1.5 \u20ac bn",
+      "fiscalPeriod": "2022F",
+      "scope": "Machine Translation"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Market Size",
+      "valueString": "25.9 \u20ac bn",
+      "fiscalPeriod": "2023F",
+      "scope": "Language services & technologies (excluding MT)"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Market Size",
+      "valueString": "1.5 \u20ac bn",
+      "fiscalPeriod": "2023F",
+      "scope": "Machine Translation"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Market Size",
+      "valueString": "27.4 \u20ac bn",
+      "fiscalPeriod": "2024F",
+      "scope": "Language services & technologies (excluding MT)"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Market Size",
+      "valueString": "1.7 \u20ac bn",
+      "fiscalPeriod": "2024F",
+      "scope": "Machine Translation"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Market Size",
+      "valueString": "21.3 \u20ac bn",
+      "fiscalPeriod": "2018A",
+      "scope": "Global Language service and technologies market"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Market Size",
+      "valueString": "22.2 \u20ac bn",
+      "fiscalPeriod": "2019A",
+      "scope": "Global Language service and technologies market"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Market Size",
+      "valueString": "21.8 \u20ac bn",
+      "fiscalPeriod": "2020A",
+      "scope": "Global Language service and technologies market"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Market Size",
+      "valueString": "24.4 \u20ac bn",
+      "fiscalPeriod": "2021A",
+      "scope": "Global Language service and technologies market"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Market Size",
+      "valueString": "25.9 \u20ac bn",
+      "fiscalPeriod": "2022F",
+      "scope": "Global Language service and technologies market"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Market Size",
+      "valueString": "27.4 \u20ac bn",
+      "fiscalPeriod": "2023F",
+      "scope": "Global Language service and technologies market"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Market Size",
+      "valueString": "29.1 \u20ac bn",
+      "fiscalPeriod": "2024F",
+      "scope": "Global Language service and technologies market"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e5",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e24",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e26",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e28",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e30",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e32",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e34",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e36",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e17",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e6",
+      "target": "e37",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e38",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e39",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e40",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e41",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e42",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e43",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e16",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e25",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e27",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e29",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e31",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e33",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e35",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e8",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e9",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e10",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e11",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6",
+      "target": "e18",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e6",
+      "target": "e19",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e6",
+      "target": "e20",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e6",
+      "target": "e21",
+      "type": "pekg:targets"
+    }
+  ]
+}

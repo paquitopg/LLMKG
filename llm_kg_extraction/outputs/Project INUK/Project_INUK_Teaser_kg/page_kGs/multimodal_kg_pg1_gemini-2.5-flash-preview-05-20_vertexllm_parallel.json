@@ -1,0 +1,33 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "typeSought": "Information Memorandum"
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "DDA & Company",
+      "roleInContext": "Advisor"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e3",
+      "target": "e1",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

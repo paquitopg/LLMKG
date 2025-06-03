@@ -1,0 +1,599 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran",
+      "description": "Target Company for Project System"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System",
+      "typeSought": "potential sale",
+      "status": "active",
+      "dealRationaleHighlights": [],
+      "keyInvestmentHighlights": [],
+      "transactionPerimeter": null
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e4",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:MarketContext",
+      "segmentName": "Global Machine Translation market",
+      "geography": "global",
+      "sizeInfo": "Forecast to reach 1241 \u20acm by 2024F",
+      "growthInfo": "Rising global market forecast (2018-2024F), Strong growth driven by both cloud & on-premise software solutions, CAGR '18-'20 +26%, CAGR '21-'24F 16-20%",
+      "keyDrivers": [
+        "innovation"
+      ],
+      "characteristics": "dynamic market, balanced growth from both segments eventually reaching parity, increasing demand of on-premise solutions in spite of the regular shift toward cloud",
+      "sourceOfData": "Global Market Insights, expert calls, Slator, Eleven VDD report"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Cloud-based software solutions",
+      "category": "Software",
+      "description": "Solutions delivered via cloud model"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "On-premise software solutions",
+      "category": "Software",
+      "description": "Solutions installed and run locally"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Company",
+      "name": "Global Market Insights",
+      "description": "Source of market data for the Global Machine Translation market"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Company",
+      "name": "Slator",
+      "description": "Source of market data for the Global Machine Translation market"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company associated with the document (watermark)"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Market Revenue",
+      "valueString": "381 \u20acm",
+      "fiscalPeriod": "2018A",
+      "scope": "Global Machine Translation Market",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Market Revenue",
+      "valueString": "413 \u20acm",
+      "fiscalPeriod": "2019A",
+      "scope": "Global Machine Translation Market",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Market Revenue",
+      "valueString": "554 \u20acm",
+      "fiscalPeriod": "2020A",
+      "scope": "Global Machine Translation Market",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Market Revenue",
+      "valueString": "763 \u20acm",
+      "fiscalPeriod": "2021F",
+      "scope": "Global Machine Translation Market",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Market Revenue",
+      "valueString": "909 \u20acm",
+      "fiscalPeriod": "2022F",
+      "scope": "Global Machine Translation Market",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Market Revenue",
+      "valueString": "1062 \u20acm",
+      "fiscalPeriod": "2023F",
+      "scope": "Global Machine Translation Market",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Market Revenue",
+      "valueString": "1241 \u20acm",
+      "fiscalPeriod": "2024F",
+      "scope": "Global Machine Translation Market",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CAGR",
+      "valueString": "+26%",
+      "fiscalPeriod": "2018-2020",
+      "scope": "Global Machine Translation Market",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CAGR",
+      "valueString": "16-20%",
+      "fiscalPeriod": "2021-2024F",
+      "scope": "Global Machine Translation Market",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "metricName": "On-premise Revenue",
+      "valueString": "170 \u20acm",
+      "fiscalPeriod": "2018A",
+      "scope": "On-premise software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "On-premise Share",
+      "valueString": "45%",
+      "fiscalPeriod": "2018A",
+      "scope": "On-premise software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "On-premise Revenue",
+      "valueString": "187 \u20acm",
+      "fiscalPeriod": "2019A",
+      "scope": "On-premise software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "On-premise Share",
+      "valueString": "45%",
+      "fiscalPeriod": "2019A",
+      "scope": "On-premise software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "On-premise Revenue",
+      "valueString": "265 \u20acm",
+      "fiscalPeriod": "2020A",
+      "scope": "On-premise software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:FinancialMetric",
+      "metricName": "On-premise Share",
+      "valueString": "46%",
+      "fiscalPeriod": "2020A",
+      "scope": "On-premise software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:FinancialMetric",
+      "metricName": "On-premise Revenue",
+      "valueString": "359 \u20acm",
+      "fiscalPeriod": "2021F",
+      "scope": "On-premise software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:FinancialMetric",
+      "metricName": "On-premise Share",
+      "valueString": "47%",
+      "fiscalPeriod": "2021F",
+      "scope": "On-premise software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:FinancialMetric",
+      "metricName": "On-premise Share",
+      "valueString": "48%",
+      "fiscalPeriod": "2022F",
+      "scope": "On-premise software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:FinancialMetric",
+      "metricName": "On-premise Share",
+      "valueString": "49%",
+      "fiscalPeriod": "2023F",
+      "scope": "On-premise software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:FinancialMetric",
+      "metricName": "On-premise Share",
+      "valueString": "50%",
+      "fiscalPeriod": "2024F",
+      "scope": "On-premise software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CAGR",
+      "valueString": "+24%",
+      "fiscalPeriod": "2018-2021",
+      "scope": "On-premise software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CAGR",
+      "valueString": "+14-18%",
+      "fiscalPeriod": "2021-2024F",
+      "scope": "On-premise software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud-based Revenue",
+      "valueString": "211 \u20acm",
+      "fiscalPeriod": "2018A",
+      "scope": "Cloud-based software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud-based Share",
+      "valueString": "55%",
+      "fiscalPeriod": "2018A",
+      "scope": "Cloud-based software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud-based Revenue",
+      "valueString": "226 \u20acm",
+      "fiscalPeriod": "2019A",
+      "scope": "Cloud-based software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud-based Share",
+      "valueString": "55%",
+      "fiscalPeriod": "2019A",
+      "scope": "Cloud-based software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud-based Revenue",
+      "valueString": "298 \u20acm",
+      "fiscalPeriod": "2020A",
+      "scope": "Cloud-based software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud-based Share",
+      "valueString": "54%",
+      "fiscalPeriod": "2020A",
+      "scope": "Cloud-based software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud-based Revenue",
+      "valueString": "404 \u20acm",
+      "fiscalPeriod": "2021F",
+      "scope": "Cloud-based software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud-based Share",
+      "valueString": "53%",
+      "fiscalPeriod": "2021F",
+      "scope": "Cloud-based software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud-based Share",
+      "valueString": "52%",
+      "fiscalPeriod": "2022F",
+      "scope": "Cloud-based software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud-based Share",
+      "valueString": "51%",
+      "fiscalPeriod": "2023F",
+      "scope": "Cloud-based software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud-based Share",
+      "valueString": "50%",
+      "fiscalPeriod": "2024F",
+      "scope": "Cloud-based software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CAGR",
+      "valueString": "+28%",
+      "fiscalPeriod": "2018-2021",
+      "scope": "Cloud-based software solutions",
+      "sourceNote": "Chart data"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CAGR",
+      "valueString": "+18-22%",
+      "fiscalPeriod": "2021-2024F",
+      "scope": "Cloud-based software solutions",
+      "sourceNote": "Chart data"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e5",
+      "target": "e11",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e16",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e17",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e18",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e22",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e24",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e25",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e26",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e27",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e28",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e29",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e30",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e31",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e32",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e33",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e34",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e35",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e36",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e37",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e38",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e39",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e40",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e41",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e42",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e43",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e44",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e45",
+      "type": "pekg:reportsFinancialMetric"
+    }
+  ]
+}

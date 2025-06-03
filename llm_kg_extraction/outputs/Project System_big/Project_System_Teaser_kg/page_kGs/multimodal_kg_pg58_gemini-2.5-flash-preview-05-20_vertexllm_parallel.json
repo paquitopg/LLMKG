@@ -1,0 +1,88 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "The target organisation of this financial teaser.",
+      "keyStrengths": [
+        "Experienced management team"
+      ],
+      "growthStrategySummary": "Positioned for accelerated growth"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisor for Project System_big"
+    },
+    {
+      "id": "e4",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisor for Project System_big"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "status": "Teaser Document"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Technology",
+      "name": "Artificial Intelligence",
+      "description": "Represented by a brain-like structure with network connections, suggesting advanced computational capabilities."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Technology",
+      "name": "Language Translation Technology",
+      "description": "Represented by language symbols (Chinese character, A-Z icon, speech bubbles) on a laptop screen, indicating capabilities in language processing or translation."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "AI-powered Language Solutions",
+      "category": "Software",
+      "description": "A product or service offered via a laptop interface, leveraging AI for language processing or translation, as depicted in the image."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e5",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e5",
+      "target": "e4",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:offers"
+    }
+  ]
+}

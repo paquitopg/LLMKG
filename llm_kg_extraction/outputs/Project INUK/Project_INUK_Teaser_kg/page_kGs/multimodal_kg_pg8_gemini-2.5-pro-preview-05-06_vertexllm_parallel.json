@@ -1,0 +1,665 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Articque initiated the switch from historical perpetual licensing towards a subscription-based business model in July 2017. The company is transitioning its product range (CDO, AP, CDD) to subscription models, aiming for recurring revenue growth and sustainable cash flow generation. Managed to maintain a sound adjusted EBITDA margin despite the transition.",
+      "keyStrengths": [
+        "increasingly recurring and profitable growth model",
+        "successful transition to full subscription-based licensing",
+        "smart granular execution of business model transition"
+      ],
+      "growthStrategySummary": "Transitioning from perpetual licensing to a subscription-based model across its product range (CDO, AP, CDD), focusing on recurring revenue growth, upselling/conversion of CDD clients, and improving profitability through stack-up effect of subscriptions and favorable 'net dollar' retention."
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "DDA & Company",
+      "alias": [
+        "DDA & Company France SAS"
+      ],
+      "roleInContext": "Advisor for Project Inuk"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "status": "Strictly Private & Confidential",
+      "transactionPerimeter": "Sale of Articque",
+      "keyInvestmentHighlights": [
+        "Supported by an increasingly recurring and profitable growth model in the wake of a successful transition to full subscription-based licensing",
+        "Business model transition across the product range largely completed through smart granular execution",
+        "Fueling recurring revenue growth and building up sustainable cash flow generation"
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company involved in Project Inuk, potentially as an acquirer or partner."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "CDO",
+      "alias": [
+        "Cartes & Donn\u00e9es Online"
+      ],
+      "category": "SaaS solution",
+      "description": "The first cloud-native SaaS solution designed for SMEs, replacing the legacy CDD product. Launched in 2017."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "CDD",
+      "alias": [
+        "Cartes & Donn\u00e9es Desktop"
+      ],
+      "category": "Legacy product",
+      "description": "Historical product with clients being converted to CDO subscription. 45% of Articque's client base still running on CDD, representing significant upsell/conversion potential."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "AP",
+      "alias": [
+        "Articque Platform"
+      ],
+      "description": "Subject to M2S (Maintenance-to-subscription) transition started in early 2021 to move client base towards subscription plans."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "SMEs",
+      "description": "Target clients for CDO (Cartes & Donn\u00e9es Online)."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Launch of CDO (Cartes & Donn\u00e9es Online)",
+      "eventType": "Product Launch",
+      "dateOrYear": "2017",
+      "description": "Launch of the first cloud-native SaaS solution designed for SMEs, replacing the legacy CDD product."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Strict policy to sell only subscriptions to new clients",
+      "eventType": "Policy Change",
+      "dateOrYear": "2022 onwards"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "M2S (Maintenance-to-subscription) transition of AP started",
+      "eventType": "Business Model Transition",
+      "dateOrYear": "beginning of 2021",
+      "description": "Transition to move the AP client base towards subscription plans, while pushing subscription-only approach to new clients."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Conversion of CDD historical clients to CDO subscription",
+      "eventType": "Client Conversion Initiative",
+      "dateOrYear": "Ongoing",
+      "description": "Ongoing conversion of Cartes & Donn\u00e9es Desktop historical clients to CDO subscription."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Switch from perpetual licensing to subscription-based business model initiated",
+      "eventType": "Business Model Transition",
+      "dateOrYear": "July 2017",
+      "description": "Articque initiated the switch from historical perpetual licensing towards a subscription-based business model."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Billings",
+      "valueString": "\u20ac2,737k",
+      "fiscalPeriod": "FY18A",
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Billings",
+      "valueString": "\u20ac3,323k",
+      "fiscalPeriod": "FY19A",
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Billings",
+      "valueString": "\u20ac3,378k",
+      "fiscalPeriod": "FY20A",
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Billings",
+      "valueString": "\u20ac3,831k",
+      "fiscalPeriod": "FY21A",
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Billings",
+      "valueString": "\u20ac4,209k",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "\u20ac1,628k",
+      "fiscalPeriod": "FY18A",
+      "isRecurring": true,
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "\u20ac1,963k",
+      "fiscalPeriod": "FY19A",
+      "isRecurring": true,
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "\u20ac2,291k",
+      "fiscalPeriod": "FY20A",
+      "isRecurring": true,
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "\u20ac2,747k",
+      "fiscalPeriod": "FY21A",
+      "isRecurring": true,
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "\u20ac3,468k",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": true,
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "\u20ac1,181k",
+      "fiscalPeriod": "FY18A",
+      "isAdjustedOrProforma": true,
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "\u20ac1,412k",
+      "fiscalPeriod": "FY19A",
+      "isAdjustedOrProforma": true,
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "\u20ac1,222k",
+      "fiscalPeriod": "FY20A",
+      "isAdjustedOrProforma": true,
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "\u20ac1,409k",
+      "fiscalPeriod": "FY21A",
+      "isAdjustedOrProforma": true,
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "\u20ac1,454k",
+      "fiscalPeriod": "FY22L",
+      "isAdjustedOrProforma": true,
+      "sourceNote": "Management - Billings in \u20ack"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings as % of Total Billings",
+      "valueString": "59%",
+      "fiscalPeriod": "FY18A",
+      "isRecurring": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings as % of Total Billings",
+      "valueString": "72%",
+      "fiscalPeriod": "FY21A",
+      "isRecurring": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings as % of Total Billings",
+      "valueString": "82%",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings CAGR",
+      "valueString": "21%",
+      "fiscalPeriod": "FY18A-FY22L",
+      "isRecurring": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA Margin",
+      "valueString": "39%",
+      "fiscalPeriod": "FY22L",
+      "isAdjustedOrProforma": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA Margin",
+      "valueString": "39%",
+      "fiscalPeriod": "FY20A",
+      "isAdjustedOrProforma": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings",
+      "valueString": "19%",
+      "fiscalPeriod": "FY18A",
+      "sourceNote": "Management (pie chart)"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings",
+      "valueString": "28%",
+      "fiscalPeriod": "FY18A",
+      "sourceNote": "Management (pie chart)"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings",
+      "valueString": "31%",
+      "fiscalPeriod": "FY18A",
+      "sourceNote": "Management (pie chart)"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings",
+      "valueString": "22%",
+      "fiscalPeriod": "FY18A",
+      "sourceNote": "Management (pie chart)"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings",
+      "valueString": "62%",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management (pie chart)"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings",
+      "valueString": "20%",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management (pie chart)"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings",
+      "valueString": "3%",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management (pie chart)"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings",
+      "valueString": "15%",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management (pie chart)"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "CDD Client Base Percentage",
+      "kpiValueString": "45%",
+      "kpiDateOrPeriod": "Current",
+      "description": "Percentage of Articque's client base still running on CDD (Cartes & Donn\u00e9es Desktop), representing upsell/conversion potential."
+    },
+    {
+      "id": "e44",
+      "type": "pekg:Technology",
+      "name": "Cloud-native",
+      "description": "Technology approach used for CDO (Cartes & Donn\u00e9es Online)."
+    },
+    {
+      "id": "e45",
+      "type": "pekg:RevenueStream",
+      "name": "Subscription Billings",
+      "description": "Revenue from subscription-based offerings."
+    },
+    {
+      "id": "e46",
+      "type": "pekg:RevenueStream",
+      "name": "Maintenance Billings",
+      "description": "Revenue from maintenance services."
+    },
+    {
+      "id": "e47",
+      "type": "pekg:RevenueStream",
+      "name": "Perpetual Licenses Billings",
+      "description": "Revenue from selling perpetual software licenses."
+    },
+    {
+      "id": "e48",
+      "type": "pekg:RevenueStream",
+      "name": "Professional Services Billings",
+      "description": "Revenue from professional services."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e3",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "pekg:seeksTransaction"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e5",
+      "target": "e8",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e44",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e9",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e10",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e11",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e12",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e13",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e43",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e45",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e46",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e47",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e48",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e45",
+      "target": "e35",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e46",
+      "target": "e36",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e47",
+      "target": "e37",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e48",
+      "target": "e38",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e45",
+      "target": "e39",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e46",
+      "target": "e40",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e47",
+      "target": "e41",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e48",
+      "target": "e42",
+      "type": "pekg:reportsFinancialMetric"
+    }
+  ]
+}

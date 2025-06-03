@@ -1,0 +1,561 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "Target Company"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "Systran USA"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "Infror"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "Woonoz"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "Melon Partners"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Company",
+      "name": "Nibelis"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Company",
+      "name": "Linedata"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Company",
+      "name": "Trace One"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e10",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e11",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Potential Sale",
+      "status": "Teaser Phase",
+      "keyInvestmentHighlights": [
+        "Experienced and dedicated management",
+        "efficient organization positioned for continued growth",
+        "accelerated growth"
+      ]
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Person",
+      "fullName": "John Paul Barraza",
+      "educationHighlights": [
+        "UCLA",
+        "San Diego State University"
+      ]
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Person",
+      "fullName": "Vincent Godard",
+      "educationHighlights": [
+        "ECAM LaSalle"
+      ]
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Person",
+      "fullName": "Sam Yoosuk Kim",
+      "educationHighlights": [
+        "Carnegie Mellon University"
+      ]
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Person",
+      "fullName": "Ga\u00eblle Bou",
+      "educationHighlights": [
+        "Chamb\u00e9ry School of business"
+      ]
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Person",
+      "fullName": "Yannick Douzant",
+      "educationHighlights": [
+        "IMT Atlantique",
+        "IAE Paris Sorbonne"
+      ]
+    },
+    {
+      "id": "e18",
+      "type": "pekg:Position",
+      "titleName": "CIO and CEO"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:Position",
+      "titleName": "Vice president of operations"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:Position",
+      "titleName": "Director of services"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:Position",
+      "titleName": "Technical services manager"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:Position",
+      "titleName": "IT administrator"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:Position",
+      "titleName": "Chairman - CEO"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:Position",
+      "titleName": "Senior managing director"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:Position",
+      "titleName": "Group strategy vice president"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:Position",
+      "titleName": "Chief Strategy Officer"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:Position",
+      "titleName": "Senior sales manager"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:Position",
+      "titleName": "Vice president sales"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:Position",
+      "titleName": "Vice president operations \u2013 EMEA / APAC"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:Position",
+      "titleName": "Chief Sales and Marketing Officer"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:Position",
+      "titleName": "Marketing director"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:Position",
+      "titleName": "Marketing manager"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:Position",
+      "titleName": "CTO & Head of product"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:Position",
+      "titleName": "Product management and QA director"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:Position",
+      "titleName": "Principal product manager"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:Position",
+      "titleName": "Head of product management"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Vice president of operations",
+      "eventType": "Employment",
+      "dateOrYear": "2004 - 2019"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Director of services",
+      "eventType": "Employment",
+      "dateOrYear": "2004 - 2019"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Technical services manager",
+      "eventType": "Employment",
+      "dateOrYear": "2004 - 2019"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "IT administrator",
+      "eventType": "Employment",
+      "dateOrYear": "2004 - 2019"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Senior managing director",
+      "eventType": "Employment",
+      "dateOrYear": "2018 - 2020"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Group strategy vice president",
+      "eventType": "Employment",
+      "dateOrYear": "2014 - 2017"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Senior sales manager",
+      "eventType": "Employment",
+      "dateOrYear": "2020 - 2021"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Vice president sales",
+      "eventType": "Employment",
+      "dateOrYear": "2017 - 2020"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Vice president operations \u2013 EMEA / APAC",
+      "eventType": "Employment",
+      "dateOrYear": "2009 \u2013 2013"
+    },
+    {
+      "id": "e46",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Marketing director",
+      "eventType": "Employment",
+      "dateOrYear": "2015 - 2016"
+    },
+    {
+      "id": "e47",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Marketing manager",
+      "eventType": "Employment",
+      "dateOrYear": "2010 - 2014"
+    },
+    {
+      "id": "e48",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Product management and QA director",
+      "eventType": "Employment",
+      "dateOrYear": "2010 - 2018"
+    },
+    {
+      "id": "e49",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Principal product manager",
+      "eventType": "Employment",
+      "dateOrYear": "2010 - 2018"
+    },
+    {
+      "id": "e50",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Head of product management",
+      "eventType": "Employment",
+      "dateOrYear": "2006 - 2010"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e12",
+      "target": "e10",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e12",
+      "target": "e11",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e1",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e2",
+      "target": "e13",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e13",
+      "target": "e18",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e18",
+      "target": "e2",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e13",
+      "target": "e37",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e37",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e13",
+      "target": "e38",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e38",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e13",
+      "target": "e39",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e39",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e13",
+      "target": "e40",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e40",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e14",
+      "target": "e23",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e23",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e14",
+      "target": "e41",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e41",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e14",
+      "target": "e42",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e42",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e15",
+      "target": "e26",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e26",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e15",
+      "target": "e43",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e43",
+      "target": "e3",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e15",
+      "target": "e44",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e44",
+      "target": "e4",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e15",
+      "target": "e45",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e45",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e16",
+      "target": "e30",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e30",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e16",
+      "target": "e46",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e46",
+      "target": "e6",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e16",
+      "target": "e47",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e47",
+      "target": "e7",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e17",
+      "target": "e33",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e33",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e17",
+      "target": "e48",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e48",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e17",
+      "target": "e49",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e49",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e17",
+      "target": "e50",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e50",
+      "target": "e8",
+      "type": "pekg:eventInvolvesParty"
+    }
+  ]
+}

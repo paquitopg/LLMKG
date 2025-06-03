@@ -1,0 +1,321 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script>function neighbourhoodHighlight(params) {
+  // console.log("in nieghbourhoodhighlight");
+  allNodes = nodes.get({ returnType: "Object" });
+  // originalNodes = JSON.parse(JSON.stringify(allNodes));
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    highlightActive = true;
+    var i, j;
+    var selectedNode = params.nodes[0];
+    var degrees = 2;
+
+    // mark all nodes as hard to read.
+    for (let nodeId in allNodes) {
+      // nodeColors[nodeId] = allNodes[nodeId].color;
+      allNodes[nodeId].color = "rgba(200,200,200,0.5)";
+      if (allNodes[nodeId].hiddenLabel === undefined) {
+        allNodes[nodeId].hiddenLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+    var connectedNodes = network.getConnectedNodes(selectedNode);
+    var allConnectedNodes = [];
+
+    // get the second degree nodes
+    for (i = 1; i < degrees; i++) {
+      for (j = 0; j < connectedNodes.length; j++) {
+        allConnectedNodes = allConnectedNodes.concat(
+          network.getConnectedNodes(connectedNodes[j])
+        );
+      }
+    }
+
+    // all second degree nodes get a different color and their label back
+    for (i = 0; i < allConnectedNodes.length; i++) {
+      // allNodes[allConnectedNodes[i]].color = "pink";
+      allNodes[allConnectedNodes[i]].color = "rgba(150,150,150,0.75)";
+      if (allNodes[allConnectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[allConnectedNodes[i]].label =
+          allNodes[allConnectedNodes[i]].hiddenLabel;
+        allNodes[allConnectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // all first degree nodes get their own color and their label back
+    for (i = 0; i < connectedNodes.length; i++) {
+      // allNodes[connectedNodes[i]].color = undefined;
+      allNodes[connectedNodes[i]].color = nodeColors[connectedNodes[i]];
+      if (allNodes[connectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[connectedNodes[i]].label =
+          allNodes[connectedNodes[i]].hiddenLabel;
+        allNodes[connectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // the main node gets its own color and its label back.
+    // allNodes[selectedNode].color = undefined;
+    allNodes[selectedNode].color = nodeColors[selectedNode];
+    if (allNodes[selectedNode].hiddenLabel !== undefined) {
+      allNodes[selectedNode].label = allNodes[selectedNode].hiddenLabel;
+      allNodes[selectedNode].hiddenLabel = undefined;
+    }
+  } else if (highlightActive === true) {
+    // console.log("highlightActive was true");
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      // allNodes[nodeId].color = "purple";
+      allNodes[nodeId].color = nodeColors[nodeId];
+      // delete allNodes[nodeId].color;
+      if (allNodes[nodeId].hiddenLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].hiddenLabel;
+        allNodes[nodeId].hiddenLabel = undefined;
+      }
+    }
+    highlightActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    // console.log("Nothing was selected");
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        // allNodes[nodeId].color = {};
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function filterHighlight(params) {
+  allNodes = nodes.get({ returnType: "Object" });
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    filterActive = true;
+    let selectedNodes = params.nodes;
+
+    // hiding all nodes and saving the label
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = true;
+      if (allNodes[nodeId].savedLabel === undefined) {
+        allNodes[nodeId].savedLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+
+    for (let i=0; i < selectedNodes.length; i++) {
+      allNodes[selectedNodes[i]].hidden = false;
+      if (allNodes[selectedNodes[i]].savedLabel !== undefined) {
+        allNodes[selectedNodes[i]].label = allNodes[selectedNodes[i]].savedLabel;
+        allNodes[selectedNodes[i]].savedLabel = undefined;
+      }
+    }
+
+  } else if (filterActive === true) {
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = false;
+      if (allNodes[nodeId].savedLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].savedLabel;
+        allNodes[nodeId].savedLabel = undefined;
+      }
+    }
+    filterActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function selectNode(nodes) {
+  network.selectNodes(nodes);
+  neighbourhoodHighlight({ nodes: nodes });
+  return nodes;
+}
+
+function selectNodes(nodes) {
+  network.selectNodes(nodes);
+  filterHighlight({nodes: nodes});
+  return nodes;
+}
+
+function highlightFilter(filter) {
+  let selectedNodes = []
+  let selectedProp = filter['property']
+  if (filter['item'] === 'node') {
+    let allNodes = nodes.get({ returnType: "Object" });
+    for (let nodeId in allNodes) {
+      if (allNodes[nodeId][selectedProp] && filter['value'].includes((allNodes[nodeId][selectedProp]).toString())) {
+        selectedNodes.push(nodeId)
+      }
+    }
+  }
+  else if (filter['item'] === 'edge'){
+    let allEdges = edges.get({returnType: 'object'});
+    // check if the selected property exists for selected edge and select the nodes connected to the edge
+    for (let edge in allEdges) {
+      if (allEdges[edge][selectedProp] && filter['value'].includes((allEdges[edge][selectedProp]).toString())) {
+        selectedNodes.push(allEdges[edge]['from'])
+        selectedNodes.push(allEdges[edge]['to'])
+      }
+    }
+  }
+  selectNodes(selectedNodes)
+}</script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            
+            
+            
+            
+            
+
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1f77b4", "id": "e1", "label": "Articque", "shape": "dot", "size": 15, "title": "ID: e1\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Articque\u003cbr\u003edescription: Target Company for Project INUK, with a robust offering in software and professional services."}, {"color": "#cccccc", "id": "e2", "label": "DDA \u0026 Company France SAS", "shape": "dot", "size": 15, "title": "ID: e2\u003cbr\u003eType: Financial Advisor\u003cbr\u003ename: DDA \u0026 Company France SAS\u003cbr\u003eroleInContext: Advisor for Project INUK"}, {"color": "#1f77b4", "id": "e3", "label": "ChapsVision", "shape": "dot", "size": 15, "title": "ID: e3\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: ChapsVision\u003cbr\u003edescription: Company associated with Project INUK."}, {"color": "#d62728", "id": "e4", "label": "Project INUK", "shape": "dot", "size": 15, "title": "ID: e4\u003cbr\u003eType: pekg:TransactionContext\u003cbr\u003econtextName: Project INUK\u003cbr\u003estatus: Strictly Private \u0026 Confidential\u003cbr\u003etypeSought: Sale"}, {"color": "#9467bd", "id": "e5", "label": "Software", "shape": "dot", "size": 15, "title": "ID: e5\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Software\u003cbr\u003ecategory: Product Category\u003cbr\u003edescription: Main category of offerings, including CDO, AP, Carticque \u0026 Geoservices, Maintenance \u0026 Support, and Legacy Product."}, {"color": "#9467bd", "id": "e6", "label": "Professional Services", "shape": "dot", "size": 15, "title": "ID: e6\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Professional Services\u003cbr\u003ecategory: Service Category\u003cbr\u003edescription: Main category of services, including Consulting and Training."}, {"color": "#9467bd", "id": "e7", "label": "CDO", "shape": "dot", "size": 15, "title": "ID: e7\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: CDO\u003cbr\u003ecategory: Software Product/Service"}, {"color": "#9467bd", "id": "e8", "label": "AP", "shape": "dot", "size": 15, "title": "ID: e8\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: AP\u003cbr\u003ecategory: Software Product/Service"}, {"color": "#9467bd", "id": "e9", "label": "Carticque \u0026 Geoservices", "shape": "dot", "size": 15, "title": "ID: e9\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Carticque \u0026 Geoservices\u003cbr\u003ecategory: Software Product/Service"}, {"color": "#9467bd", "id": "e10", "label": "Maintenance \u0026 Support", "shape": "dot", "size": 15, "title": "ID: e10\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Maintenance \u0026 Support\u003cbr\u003ecategory: Software Product/Service"}, {"color": "#9467bd", "id": "e11", "label": "Legacy Product", "shape": "dot", "size": 15, "title": "ID: e11\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Legacy Product\u003cbr\u003ecategory: Software Product/Service"}, {"color": "#9467bd", "id": "e12", "label": "Consulting", "shape": "dot", "size": 15, "title": "ID: e12\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Consulting\u003cbr\u003ecategory: Professional Service"}, {"color": "#9467bd", "id": "e13", "label": "Training", "shape": "dot", "size": 15, "title": "ID: e13\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Training\u003cbr\u003ecategory: Professional Service"}, {"color": "#9467bd", "id": "e14", "label": "Miscellaneous", "shape": "dot", "size": 15, "title": "ID: e14\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Miscellaneous\u003cbr\u003ecategory: Other Service"}, {"color": "#ff7f0e", "id": "e15", "label": "Total Billings (FY22L)", "shape": "dot", "size": 15, "title": "ID: e15\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Total Billings\u003cbr\u003evalueString: \u20ac4.2m\u003cbr\u003efiscalPeriod: FY22L\u003cbr\u003escope: Company\u003cbr\u003esourceNote: Management"}, {"color": "#ff7f0e", "id": "e16", "label": "CDO Billings (FY22L)", "shape": "dot", "size": 15, "title": "ID: e16\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: CDO Billings\u003cbr\u003evalueString: \u20ac1,249k\u003cbr\u003efiscalPeriod: FY22L\u003cbr\u003escope: ProductOrService\u003cbr\u003esourceNote: Management"}, {"color": "#ff7f0e", "id": "e17", "label": "AP Billings (FY22L)", "shape": "dot", "size": 15, "title": "ID: e17\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: AP Billings\u003cbr\u003evalueString: \u20ac1,006k\u003cbr\u003efiscalPeriod: FY22L\u003cbr\u003escope: ProductOrService\u003cbr\u003esourceNote: Management"}, {"color": "#ff7f0e", "id": "e18", "label": "Carticque \u0026 Geoservices Billings (FY22L)", "shape": "dot", "size": 15, "title": "ID: e18\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Carticque \u0026 Geoservices Billings\u003cbr\u003evalueString: \u20ac179k\u003cbr\u003efiscalPeriod: FY22L\u003cbr\u003escope: ProductOrService\u003cbr\u003esourceNote: Management"}, {"color": "#ff7f0e", "id": "e19", "label": "Maintenance \u0026 Support Billings (FY22L)", "shape": "dot", "size": 15, "title": "ID: e19\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Maintenance \u0026 Support Billings\u003cbr\u003evalueString: \u20ac843k\u003cbr\u003efiscalPeriod: FY22L\u003cbr\u003escope: ProductOrService\u003cbr\u003esourceNote: Management"}, {"color": "#ff7f0e", "id": "e20", "label": "Legacy Product Billings (FY22L)", "shape": "dot", "size": 15, "title": "ID: e20\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Legacy Product Billings\u003cbr\u003evalueString: \u20ac16k\u003cbr\u003efiscalPeriod: FY22L\u003cbr\u003escope: ProductOrService\u003cbr\u003esourceNote: Management"}, {"color": "#ff7f0e", "id": "e21", "label": "Consulting Billings (FY22L)", "shape": "dot", "size": 15, "title": "ID: e21\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Consulting Billings\u003cbr\u003evalueString: \u20ac545k\u003cbr\u003efiscalPeriod: FY22L\u003cbr\u003escope: ProductOrService\u003cbr\u003esourceNote: Management"}, {"color": "#ff7f0e", "id": "e22", "label": "Training Billings (FY22L)", "shape": "dot", "size": 15, "title": "ID: e22\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Training Billings\u003cbr\u003evalueString: \u20ac302k\u003cbr\u003efiscalPeriod: FY22L\u003cbr\u003escope: ProductOrService\u003cbr\u003esourceNote: Management"}, {"color": "#ff7f0e", "id": "e23", "label": "Miscellaneous Billings (FY22L)", "shape": "dot", "size": 15, "title": "ID: e23\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Miscellaneous Billings\u003cbr\u003evalueString: \u20ac69k\u003cbr\u003efiscalPeriod: FY22L\u003cbr\u003escope: ProductOrService\u003cbr\u003esourceNote: Management"}, {"color": "#ff7f0e", "id": "e24", "label": "CDO Billings (FY20A)", "shape": "dot", "size": 15, "title": "ID: e24\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: CDO Billings\u003cbr\u003evalueString: \u20ac755k\u003cbr\u003efiscalPeriod: FY20A\u003cbr\u003escope: ProductOrService\u003cbr\u003esourceNote: Management"}, {"color": "#ff7f0e", "id": "e25", "label": "AP Billings (FY20A)", "shape": "dot", "size": 15, "title": "ID: e25\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: AP Billings\u003cbr\u003evalueString: \u20ac356k\u003cbr\u003efiscalPeriod: FY20A\u003cbr\u003escope: ProductOrService\u003cbr\u003esourceNote: Management"}, {"color": "#ff7f0e", "id": "e26", "label": "Carticque \u0026 Geoservices Billings (FY20A)", "shape": "dot", "size": 15, "title": "ID: e26\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Carticque \u0026 Geoservices Billings\u003cbr\u003evalueString: \u20ac77k\u003cbr\u003efiscalPeriod: FY20A\u003cbr\u003escope: ProductOrService\u003cbr\u003esourceNote: Management"}, {"color": "#ff7f0e", "id": "e27", "label": "Maintenance \u0026 Support Billings (FY20A)", "shape": "dot", "size": 15, "title": "ID: e27\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Maintenance \u0026 Support Billings\u003cbr\u003evalueString: \u20ac771k\u003cbr\u003efiscalPeriod: FY20A\u003cbr\u003escope: ProductOrService\u003cbr\u003esourceNote: Management"}, {"color": "#ff7f0e", "id": "e28", "label": "Legacy Product Billings (FY20A)", "shape": "dot", "size": 15, "title": "ID: e28\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Legacy Product Billings\u003cbr\u003evalueString: \u20ac131k\u003cbr\u003efiscalPeriod: FY20A\u003cbr\u003escope: ProductOrService\u003cbr\u003esourceNote: Management"}, {"color": "#ff7f0e", "id": "e29", "label": "Consulting Billings (FY20A)", "shape": "dot", "size": 15, "title": "ID: e29\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Consulting Billings\u003cbr\u003evalueString: \u20ac422k\u003cbr\u003efiscalPeriod: FY20A\u003cbr\u003escope: ProductOrService\u003cbr\u003esourceNote: Management"}, {"color": "#ff7f0e", "id": "e30", "label": "Training Billings (FY20A)", "shape": "dot", "size": 15, "title": "ID: e30\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Training Billings\u003cbr\u003evalueString: \u20ac289k\u003cbr\u003efiscalPeriod: FY20A\u003cbr\u003escope: ProductOrService\u003cbr\u003esourceNote: Management"}, {"color": "#ff7f0e", "id": "e31", "label": "Miscellaneous Billings (FY20A)", "shape": "dot", "size": 15, "title": "ID: e31\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Miscellaneous Billings\u003cbr\u003evalueString: \u20ac259k\u003cbr\u003efiscalPeriod: FY20A\u003cbr\u003escope: ProductOrService\u003cbr\u003esourceNote: Management"}, {"color": "#ff7f0e", "id": "e32", "label": "Billings from France (FY21)", "shape": "dot", "size": 15, "title": "ID: e32\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Billings from France\u003cbr\u003evalueString: 97%\u003cbr\u003efiscalPeriod: FY21\u003cbr\u003escope: Geography\u003cbr\u003esourceNote: Management"}, {"color": "#ff7f0e", "id": "e33", "label": "Billings from International (FY21)", "shape": "dot", "size": 15, "title": "ID: e33\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Billings from International\u003cbr\u003evalueString: 3%\u003cbr\u003efiscalPeriod: FY21\u003cbr\u003escope: Geography\u003cbr\u003esourceNote: Management"}, {"color": "#c7c7c7", "id": "e34", "label": "France", "shape": "dot", "size": 15, "title": "ID: e34\u003cbr\u003eType: pekg:Location\u003cbr\u003elocationName: France\u003cbr\u003elocationType: Country"}, {"color": "#c7c7c7", "id": "e35", "label": "International", "shape": "dot", "size": 15, "title": "ID: e35\u003cbr\u003eType: pekg:Location\u003cbr\u003elocationName: International\u003cbr\u003elocationType: Region"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e5"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e6"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e14"}, {"arrows": "to", "from": "e5", "label": "offers", "title": "pekg:offers", "to": "e7"}, {"arrows": "to", "from": "e5", "label": "offers", "title": "pekg:offers", "to": "e8"}, {"arrows": "to", "from": "e5", "label": "offers", "title": "pekg:offers", "to": "e9"}, {"arrows": "to", "from": "e5", "label": "offers", "title": "pekg:offers", "to": "e10"}, {"arrows": "to", "from": "e5", "label": "offers", "title": "pekg:offers", "to": "e11"}, {"arrows": "to", "from": "e6", "label": "offers", "title": "pekg:offers", "to": "e12"}, {"arrows": "to", "from": "e6", "label": "offers", "title": "pekg:offers", "to": "e13"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e15"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e32"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e33"}, {"arrows": "to", "from": "e7", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e16"}, {"arrows": "to", "from": "e7", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e24"}, {"arrows": "to", "from": "e8", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e17"}, {"arrows": "to", "from": "e8", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e25"}, {"arrows": "to", "from": "e9", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e18"}, {"arrows": "to", "from": "e9", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e26"}, {"arrows": "to", "from": "e10", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e19"}, {"arrows": "to", "from": "e10", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e27"}, {"arrows": "to", "from": "e11", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e20"}, {"arrows": "to", "from": "e11", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e28"}, {"arrows": "to", "from": "e12", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e21"}, {"arrows": "to", "from": "e12", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e29"}, {"arrows": "to", "from": "e13", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e22"}, {"arrows": "to", "from": "e13", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e30"}, {"arrows": "to", "from": "e14", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e23"}, {"arrows": "to", "from": "e14", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e31"}, {"arrows": "to", "from": "e1", "label": "isSubjectOf", "title": "pekg:isSubjectOf", "to": "e4"}, {"arrows": "to", "from": "e4", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e3"}, {"arrows": "to", "from": "e1", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e2"}, {"arrows": "to", "from": "e4", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e2"}, {"arrows": "to", "from": "e1", "label": "operatesIn", "title": "pekg:operatesIn", "to": "e34"}, {"arrows": "to", "from": "e1", "label": "operatesIn", "title": "pekg:operatesIn", "to": "e35"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shape": "dot", "size": 18, "font": {"size": 14, "face": "Tahoma"}}, "edges": {"arrows": {"to": {"enabled": true, "scaleFactor": 0.7}}, "color": {"inherit": "from"}, "smooth": {"type": "continuous", "roundness": 0.2}, "font": {"size": 10, "align": "middle"}}, "physics": {"enabled": true, "barnesHut": {"gravitationalConstant": -30000, "centralGravity": 0.3, "springLength": 250, "springConstant": 0.04, "damping": 0.09}, "minVelocity": 0.75}, "interaction": {"hover": true, "tooltipDelay": 200, "multiselect": true}, "layout": {"hierarchical": false}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

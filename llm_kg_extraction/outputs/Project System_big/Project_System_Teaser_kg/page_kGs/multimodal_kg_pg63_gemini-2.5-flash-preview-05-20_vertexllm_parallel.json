@@ -1,0 +1,224 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "Group operational holding, regrouping all the activity for the French market"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "Systran USA",
+      "description": "holding company for all foreign subsidiaries"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "SSI",
+      "alias": [
+        "Systran Software Inc"
+      ],
+      "description": "US subsidiary"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "SJGK",
+      "alias": [
+        "Systran Japan"
+      ],
+      "description": "Japanese subsidiary"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "SCL",
+      "alias": [
+        "Systran Co. Ltd"
+      ],
+      "description": "Korean subsidiary"
+    },
+    {
+      "id": "e6",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Mandated by the shareholders for the disposal of the Group"
+    },
+    {
+      "id": "e7",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:TransactionContext",
+      "contextName": "Disposal of Systran Group",
+      "typeSought": "Disposal",
+      "status": "Active",
+      "transactionPerimeter": "Systran SAS, Systran USA, SSI (Systran Software Inc), SJGK (Systran Japan), SCL (Systran Co. Ltd)"
+    },
+    {
+      "id": "e9",
+      "type": "Corporate",
+      "name": "STIC",
+      "percentageOwned": 50.4
+    },
+    {
+      "id": "e10",
+      "type": "Corporate",
+      "name": "Softbank Ventures Asia",
+      "percentageOwned": 15.4
+    },
+    {
+      "id": "e11",
+      "type": "Corporate",
+      "name": "Korea Investment Partners",
+      "percentageOwned": 20.0
+    },
+    {
+      "id": "e12",
+      "type": "Corporate",
+      "name": "Llsollu",
+      "percentageOwned": 6.4
+    },
+    {
+      "id": "e13",
+      "type": "Corporate",
+      "name": "Korea Investment & Securities",
+      "percentageOwned": 3.1
+    },
+    {
+      "id": "e14",
+      "type": "Individual/Group",
+      "name": "Management",
+      "percentageOwned": 4.7
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Location",
+      "locationName": "Paris",
+      "locationType": "City"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Location",
+      "locationName": "San Diego",
+      "locationType": "City"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Watermark on the document, indicating a potential owner or recipient of the confidential document."
+    },
+    {
+      "id": "e18",
+      "type": "pekg:MarketContext",
+      "segmentName": "French market",
+      "geography": "France"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e3",
+      "target": "e16",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:hasSubsidiary"
+    },
+    {
+      "source": "e2",
+      "target": "e1",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:hasSubsidiary"
+    },
+    {
+      "source": "e3",
+      "target": "e2",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e3",
+      "target": "e4",
+      "type": "pekg:hasSubsidiary"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e3",
+      "target": "e5",
+      "type": "pekg:hasSubsidiary"
+    },
+    {
+      "source": "e5",
+      "target": "e3",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e9",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e10",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e11",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e12",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e13",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e14",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e8",
+      "target": "e6",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e8",
+      "target": "e7",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:operatesIn"
+    }
+  ]
+}

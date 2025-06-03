@@ -1,0 +1,425 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "keyStrengths": [
+        "State-of-the-art tools constituting a solid technical platform",
+        "Efficient tech stack with no legacy or technical debt",
+        "tools enable it to stand out from competitors, offering a complete range of services for the client"
+      ],
+      "growthStrategySummary": "Ambitious R&D roadmap"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "Rothschild & Co"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "Samsung Securities"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "Eleven"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Company",
+      "name": "Google"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Company",
+      "name": "Dropbox"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Company",
+      "name": "Microsoft"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Company",
+      "name": "Nextcloud"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Company",
+      "name": "Atlassian"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Company",
+      "name": "Salesforce"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Company",
+      "name": "Zendesk"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Wiki",
+      "category": "Customer Documentation"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:ProductOrService",
+      "name": "Translate PRO",
+      "category": "Customer Documentation"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:ProductOrService",
+      "name": "SYSTRAN Desktop products",
+      "category": "Customer Documentation",
+      "description": "SYSTRAN eTranslator & SYSTRAN 7 Desktop Products"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:ProductOrService",
+      "name": "SYSTRAN Server products",
+      "category": "Customer Documentation",
+      "description": "SYSTRAN Pure Neural Server & SYSTRAN Enterprise Server"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:ProductOrService",
+      "name": "G Suite",
+      "category": "Office Automation"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:ProductOrService",
+      "name": "Dropbox",
+      "category": "File Sharing"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:ProductOrService",
+      "name": "Sharepoint",
+      "category": "File Sharing"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:ProductOrService",
+      "name": "Nextcloud",
+      "category": "File Sharing"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:ProductOrService",
+      "name": "Jira Software",
+      "category": "Bug Tracking & Development"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:ProductOrService",
+      "name": "Confluence",
+      "category": "Bug Tracking & Development"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:ProductOrService",
+      "name": "Salesforce",
+      "category": "CRM"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:ProductOrService",
+      "name": "Zendesk",
+      "category": "CRM, Client Support"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:Technology",
+      "name": "State-of-the-art tools",
+      "description": "constituting a solid technical platform"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:Technology",
+      "name": "Efficient tech stack",
+      "description": "with no legacy or technical debt"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Project Management Tools"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Customer documentation"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Office automation"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "File sharing"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Bug tracking & development tools"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "CRM"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Client support"
+    },
+    {
+      "id": "e34",
+      "type": "Investment Bank",
+      "name": "Rothschild & Co",
+      "roleInContext": "Financial Advisor"
+    },
+    {
+      "id": "e35",
+      "type": "Investment Bank",
+      "name": "Samsung Securities",
+      "roleInContext": "Financial Advisor"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Sale/Acquisition",
+      "status": "Teaser Phase"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:TransactionContext",
+      "contextName": "Financial Teaser",
+      "typeSought": "Sale/Acquisition"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "one-of-a kind track-record of innovations",
+      "eventType": "Innovation Achievement",
+      "description": "Ambitious R&D roadmap based on a one-of-a kind track-record of innovations"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e13",
+      "target": "e28",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e14",
+      "target": "e28",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e15",
+      "target": "e28",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e16",
+      "target": "e28",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e17",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e17",
+      "target": "e29",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e7",
+      "target": "e18",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e18",
+      "target": "e30",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e8",
+      "target": "e19",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e19",
+      "target": "e30",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e20",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e20",
+      "target": "e30",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e10",
+      "target": "e21",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e21",
+      "target": "e31",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e10",
+      "target": "e22",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e22",
+      "target": "e31",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e23",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e23",
+      "target": "e32",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e12",
+      "target": "e24",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e24",
+      "target": "e32",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e24",
+      "target": "e33",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e36",
+      "target": "e34",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e36",
+      "target": "e35",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e36",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "pekg:isSubjectOf"
+    }
+  ]
+}

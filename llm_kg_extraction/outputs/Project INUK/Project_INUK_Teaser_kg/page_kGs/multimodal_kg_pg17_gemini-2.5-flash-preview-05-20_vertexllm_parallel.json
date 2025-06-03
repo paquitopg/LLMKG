@@ -1,0 +1,601 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "A company specializing in Business Intelligence and analytics solutions."
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisor for Project Inuk"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "status": "Strictly Private & Confidential",
+      "typeSought": "Sale/Acquisition"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Cartes & Donn\u00e9es",
+      "category": "SaaS solution",
+      "description": "A well-honed SaaS solution designed to serve sophisticated Business Intelligence and analytics needs and fit any requirement."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "CDO",
+      "category": "Software version",
+      "description": "A cloud-native software version of Cartes & Donn\u00e9es."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "AP",
+      "category": "Software version",
+      "description": "A version of Cartes & Donn\u00e9es integrated into the client\u2019s infrastructure (onsite/offsite servers)."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "no-code powerful dynamic modeling tool",
+      "category": "Platform Feature",
+      "description": "A cornerstone of the platform, it allows users to intuitively and visually structure and build their desired output blending advanced basemaps, business data, statistics and calculation components."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "library of over 55 geostatistical functionalities",
+      "category": "Platform Feature",
+      "description": "To build more sophisticated business applications combined with simulation and testing capabilities."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "Wizard tool",
+      "category": "Platform Feature",
+      "description": "To turn analysis models into business applications easily accessible to users across the organization."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Collaborative functions",
+      "category": "Platform Feature",
+      "description": "To create working groups, share resources and control access."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "Mapping of Things",
+      "category": "Platform Feature",
+      "description": "Offers the ability to harness the visual and analytic power of thematic mapping directly on everyday objects or across any industry."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "Generation of automatic reports",
+      "category": "Platform Feature"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:ProductOrService",
+      "name": "DataComposer",
+      "category": "Module",
+      "description": "An easy-to-use Extract-Transform-Load tool allowing non-specialists to integrate extremely large volumes of data to perform location intelligence analysis."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:ProductOrService",
+      "name": "DataViz",
+      "category": "Module",
+      "description": "A web graphic rendering engine enabling customized and dynamic output visualization of large datasets processed in DataComposer."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Technology",
+      "name": "SaaS"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Technology",
+      "name": "cloud-native software"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:Technology",
+      "name": "big data processing"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:Technology",
+      "name": "Extract-Transform-Load (ETL)"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:Technology",
+      "name": "web graphic rendering engine"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Business Intelligence"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "analytics"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "retail"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "healthcare"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "marketing"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "supply chain"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "human resources"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "location intelligence analysis"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Billings",
+      "valueString": "\u20ac763k",
+      "fiscalPeriod": "FY18A",
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "\u20ac443k",
+      "fiscalPeriod": "FY18A",
+      "isRecurring": true,
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Billings",
+      "valueString": "\u20ac320k",
+      "fiscalPeriod": "FY18A",
+      "isRecurring": false,
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Billings",
+      "valueString": "\u20ac894k",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "\u20ac690k",
+      "fiscalPeriod": "FY19A",
+      "isRecurring": true,
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Billings",
+      "valueString": "\u20ac203k",
+      "fiscalPeriod": "FY19A",
+      "isRecurring": false,
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Billings",
+      "valueString": "\u20ac1,139k",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "\u20ac868k",
+      "fiscalPeriod": "FY20A",
+      "isRecurring": true,
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Billings",
+      "valueString": "\u20ac272k",
+      "fiscalPeriod": "FY20A",
+      "isRecurring": false,
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Billings",
+      "valueString": "\u20ac1,505k",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "\u20ac1,372k",
+      "fiscalPeriod": "FY21A",
+      "isRecurring": true,
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Billings",
+      "valueString": "\u20ac133k",
+      "fiscalPeriod": "FY21A",
+      "isRecurring": false,
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Billings",
+      "valueString": "\u20ac2,255k",
+      "fiscalPeriod": "FY22L",
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "\u20ac2,211k",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": true,
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Billings",
+      "valueString": "\u20ac44k",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": false,
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring CAGR",
+      "valueString": "+49.5%",
+      "fiscalPeriod": "FY18A-22L",
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CDO Share of Recurring Billings",
+      "valueString": "92%",
+      "fiscalPeriod": "FY18A",
+      "scope": "ProductOrService",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "AP Share of Recurring Billings",
+      "valueString": "8%",
+      "fiscalPeriod": "FY18A",
+      "scope": "ProductOrService",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e47",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CDO Share of Recurring Billings",
+      "valueString": "56%",
+      "fiscalPeriod": "FY22L",
+      "scope": "ProductOrService",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e48",
+      "type": "pekg:FinancialMetric",
+      "metricName": "AP Share of Recurring Billings",
+      "valueString": "44%",
+      "fiscalPeriod": "FY22L",
+      "scope": "ProductOrService",
+      "sourceNote": "Management"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "offers"
+    },
+    {
+      "source": "e5",
+      "target": "e21",
+      "type": "targets"
+    },
+    {
+      "source": "e5",
+      "target": "e22",
+      "type": "targets"
+    },
+    {
+      "source": "e5",
+      "target": "e16",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e6",
+      "type": "offers"
+    },
+    {
+      "source": "e5",
+      "target": "e7",
+      "type": "offers"
+    },
+    {
+      "source": "e6",
+      "target": "e17",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e8",
+      "type": "offers"
+    },
+    {
+      "source": "e5",
+      "target": "e9",
+      "type": "offers"
+    },
+    {
+      "source": "e5",
+      "target": "e10",
+      "type": "offers"
+    },
+    {
+      "source": "e5",
+      "target": "e11",
+      "type": "offers"
+    },
+    {
+      "source": "e5",
+      "target": "e12",
+      "type": "offers"
+    },
+    {
+      "source": "e5",
+      "target": "e13",
+      "type": "offers"
+    },
+    {
+      "source": "e12",
+      "target": "e23",
+      "type": "targets"
+    },
+    {
+      "source": "e12",
+      "target": "e24",
+      "type": "targets"
+    },
+    {
+      "source": "e12",
+      "target": "e25",
+      "type": "targets"
+    },
+    {
+      "source": "e12",
+      "target": "e26",
+      "type": "targets"
+    },
+    {
+      "source": "e12",
+      "target": "e27",
+      "type": "targets"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e14",
+      "target": "e19",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e14",
+      "target": "e28",
+      "type": "targets"
+    },
+    {
+      "source": "e15",
+      "target": "e20",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e15",
+      "target": "e18",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e36",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e40",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e41",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e42",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e43",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e44",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e45",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e46",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e47",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e48",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "isSubjectOf"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "eventInvolvesParty"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "advisedBy"
+    }
+  ]
+}

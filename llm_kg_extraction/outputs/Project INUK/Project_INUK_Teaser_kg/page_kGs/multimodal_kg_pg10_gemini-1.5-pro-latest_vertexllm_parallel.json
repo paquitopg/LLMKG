@@ -1,0 +1,154 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque Informatique",
+      "alias": [
+        "Articque Informatique SA"
+      ],
+      "industry": null,
+      "sector": null,
+      "foundedYear": null,
+      "website": null,
+      "keyStrengths": [],
+      "growthStrategySummary": null,
+      "awardsAndCertifications": []
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "Groupe Articque Solutions",
+      "alias": [],
+      "industry": null,
+      "sector": null,
+      "foundedYear": null,
+      "website": null,
+      "keyStrengths": [],
+      "growthStrategySummary": null,
+      "awardsAndCertifications": []
+    },
+    {
+      "id": "e3",
+      "type": "Private Equity",
+      "name": "Turenne Capital",
+      "percentageOwned": 16.04,
+      "description": null
+    },
+    {
+      "id": "e4",
+      "type": "Founder",
+      "name": "Georges-Antoine Strauch",
+      "percentageOwned": 5.61,
+      "description": null
+    },
+    {
+      "id": "e5",
+      "type": "Founder",
+      "name": "Founder",
+      "percentageOwned": 78.35,
+      "description": "The founder, who has already stepped down from any operational responsibilities"
+    },
+    {
+      "id": "e6",
+      "type": "Financial Advisor",
+      "name": "DDA & Company",
+      "alias": [
+        "DDA & Company France SAS"
+      ],
+      "roleInContext": "exclusive financial advisor"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:TransactionContext",
+      "contextName": "Sale of Articque Informatique",
+      "typeSought": "Sale",
+      "status": "Contemplated",
+      "dealRationaleHighlights": [
+        "The founder, who has already stepped down from any operational responsibilities, is willing to sell the company to a strategic acquirer willing to pursue the development of the business",
+        "Turenne Capital are seeking liquidity on their investment"
+      ],
+      "keyInvestmentHighlights": [],
+      "transactionPerimeter": "up to 100% of the shares of Articque Informatique SA"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Location",
+      "locationName": "Fondettes, France",
+      "locationType": "HQ",
+      "officeSpecificInfo": "149 avenue du G\u00e9n\u00e9ral de Gaulle \u2013 37230 Fondettes, France"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e2",
+      "target": "e1",
+      "type": "pekg:hasSubsidiary"
+    },
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e3",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e2",
+      "target": "e5",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e5",
+      "target": "e2",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e5",
+      "target": "e7",
+      "type": "pekg:seeksTransaction"
+    },
+    {
+      "source": "e3",
+      "target": "e7",
+      "type": "pekg:seeksTransaction"
+    },
+    {
+      "source": "e7",
+      "target": "e6",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e2",
+      "target": "e8",
+      "type": "pekg:hasOfficeIn"
+    }
+  ]
+}

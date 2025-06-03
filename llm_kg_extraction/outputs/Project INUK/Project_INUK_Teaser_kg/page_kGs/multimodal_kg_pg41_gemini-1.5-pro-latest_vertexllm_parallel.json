@@ -1,0 +1,168 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "\u00c9CLAIREUR G\u00c9OD\u00c9CISIONNEL"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:MarketContext",
+      "segmentName": "Business Intelligence",
+      "sizeInfo": "$24bn in 2021",
+      "growthInfo": "8.7% CAGR to $43bn in 2028"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:MarketContext",
+      "segmentName": "Consulting",
+      "sizeInfo": "$250bn"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:MarketContext",
+      "segmentName": "Geographic Information System",
+      "sizeInfo": "$6.3bn in 2020",
+      "growthInfo": "15.2% CAGR to $25.5bn in 2030"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:MarketContext",
+      "segmentName": "Extract-Transform-Load",
+      "growthInfo": "6.5% CAGR until 2030"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Company",
+      "name": "DDA & Company France SAS"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Company",
+      "name": "asterop"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Company",
+      "name": "PARABE//UM",
+      "description": "geographic insight"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Company",
+      "name": "TIBCO",
+      "alias": [
+        "TIBCO Spotfire"
+      ]
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Company",
+      "name": "Qlik"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Company",
+      "name": "salesforce"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Company",
+      "name": "Tableau",
+      "alias": [
+        "+ableau"
+      ]
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Company",
+      "name": "Microsoft",
+      "alias": [
+        "Microsoft Power BI"
+      ]
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Company",
+      "name": "GaliGeo"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Company",
+      "name": "SAS"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Company",
+      "name": "alteryx"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:Company",
+      "name": "STAT ET GEO",
+      "description": "expansion ciblage marketing connaissance clients"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:Company",
+      "name": "TERRITOIRES & MARKETING",
+      "description": "Geomarketing - \u00c9tude de march\u00e9 - Conseil"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:Company",
+      "name": "ciril GROUP",
+      "description": "Business Geografic"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:Company",
+      "name": "esri"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:Company",
+      "name": "MapInfo"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:Company",
+      "name": "Geoconcept",
+      "description": "by nomadia"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:Company",
+      "name": "smappen"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:Company",
+      "name": "Spectrum",
+      "description": "SPATIAL"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:Company",
+      "name": "QGIS"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e6",
+      "target": "e7",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:operatesIn"
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Target Company for Project INUK. Offers data analytics modules like DataComposer and DataViz."
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Advisor",
+      "name": "DDA & Company France SAS",
+      "alias": [
+        "DDA & Company"
+      ],
+      "roleInContext": "Advisor for Project INUK"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK",
+      "transactionPerimeter": "Articque",
+      "status": "Ongoing",
+      "keyInvestmentHighlights": [
+        "Future consolidation of DataComposer and DataViz to unleash the power of big data analytics."
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "pekg:ProductOrService",
+      "name": "DataComposer",
+      "category": "Extract-Transform-Load tool",
+      "description": "An easy-to-use Extract-Transform-Load (ETL) tool allowing non-specialists to integrate extremely large volumes of data to perform location-based analysis. Developed on PostGreSQL and .Net core. Currently in beta testing phase, planned availability by end Q4 2022 / Q1 2023."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "DataViz",
+      "category": "Web graphic rendering engine",
+      "description": "A cutting-edge web graphic rendering engine for tailored dynamic output visualization of large volume datasets processed by DataComposer. Aims to overcome current processing volume barriers and enable on-the-fly analysis iterations. Will replace Leaflet. POC completed; development to begin after DataComposer development is completed."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Technology",
+      "name": "PostGreSQL"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Technology",
+      "name": ".Net core"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Leaflet",
+      "category": "Visualization tool",
+      "description": "Current visualization tool provided by Articque, to be replaced by DataViz."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company associated with Project INUK, potentially as an acquirer or partner."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Technology",
+      "name": "Big Data Analytics",
+      "description": "Technological capability being unleashed by the consolidation of DataComposer and DataViz."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Location-based analysis",
+      "description": "A use case targeted by DataComposer."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "DataComposer Beta Testing Phase",
+      "eventType": "Product Development Milestone",
+      "dateOrYear": "Currently (context of Q4 2022 / Q1 2023)",
+      "description": "DataComposer is in beta testing phase with a selection of clients."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "DataComposer Full Availability",
+      "eventType": "Product Launch",
+      "dateOrYear": "End Q4 2022 / Q1 2023",
+      "description": "DataComposer will be available to all customers."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "DataViz POC Completion",
+      "eventType": "Product Development Milestone",
+      "description": "A Proof of Concept for DataViz has been completed by Articque's R&D team."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "DataViz Development Start",
+      "eventType": "Product Development Milestone",
+      "description": "Development of DataViz will begin once DataComposer development is completed."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e3",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e6",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e4",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e4",
+      "target": "e11",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e4",
+      "target": "e10",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e10",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e4",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e9",
+      "target": "e3",
+      "type": "pekg:seeksTransaction"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e12",
+      "target": "e4",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e13",
+      "target": "e4",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e14",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e15",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    }
+  ]
+}

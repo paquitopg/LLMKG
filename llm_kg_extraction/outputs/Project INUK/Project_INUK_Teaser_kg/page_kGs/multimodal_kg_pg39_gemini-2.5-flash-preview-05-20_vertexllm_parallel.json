@@ -1,0 +1,228 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Target Company"
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK",
+      "status": "Strictly Private & Confidential"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:MarketContext",
+      "segmentName": "Location Intelligence (LI) market",
+      "characteristics": "robust and continued growth",
+      "sourceOfData": "Forbes, Grand View Research, Management"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Location Intelligence Market Size",
+      "valueString": "$16.1Bn",
+      "fiscalPeriod": "2022",
+      "scope": "worldwide",
+      "sourceNote": "Forbes, Grand View Research, Management"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Location Intelligence Market Size",
+      "valueString": "$51.3Bn",
+      "fiscalPeriod": "2030",
+      "scope": "worldwide",
+      "sourceNote": "Forbes, Grand View Research, Management"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Location Intelligence Market CAGR",
+      "valueString": "15.6%",
+      "fiscalPeriod": "2022-2030",
+      "sourceNote": "Forbes, Grand View Research, Management"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "Location Intelligence platforms",
+      "description": "at the junction of several business discipline areas"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "Business Intelligence (BI)",
+      "category": "LI solutions",
+      "description": "provide valuable decision-support software enabling corporate users to analyze and anticipate key trends in their business with dynamic reports"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Geographic Information System (GIS)",
+      "category": "LI solutions",
+      "description": "provide unique capabilities contributing a GIS layer on top of business data"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "Extract-Transform-Load (ETL)",
+      "category": "LI solutions",
+      "description": "provide data collection, parsing and dissemination capabilities",
+      "keyStrengths": [
+        "Ongoing Development"
+      ]
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "Consulting",
+      "category": "LI solutions",
+      "description": "create a wealth of new opportunities across a wide range of consulting applications"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Refine customer knowledge",
+      "description": "through geospatial insights"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Leverage operational excellence",
+      "description": "through more accurate decision making"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Enhance business data intelligence",
+      "description": "by bringing geography into business data"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Improve grasp of business environment",
+      "description": "by blending multiple data sources"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Market analysis"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Site selection"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Observatories"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e5",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e9",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e9",
+      "target": "e12",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e9",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e9",
+      "target": "e14",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e15",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e16",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e13",
+      "target": "e18",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e13",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e13",
+      "target": "e20",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e3",
+      "target": "e4",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e3",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

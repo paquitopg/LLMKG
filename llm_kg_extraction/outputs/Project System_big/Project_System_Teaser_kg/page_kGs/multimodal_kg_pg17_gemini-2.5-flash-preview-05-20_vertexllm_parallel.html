@@ -1,0 +1,321 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script>function neighbourhoodHighlight(params) {
+  // console.log("in nieghbourhoodhighlight");
+  allNodes = nodes.get({ returnType: "Object" });
+  // originalNodes = JSON.parse(JSON.stringify(allNodes));
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    highlightActive = true;
+    var i, j;
+    var selectedNode = params.nodes[0];
+    var degrees = 2;
+
+    // mark all nodes as hard to read.
+    for (let nodeId in allNodes) {
+      // nodeColors[nodeId] = allNodes[nodeId].color;
+      allNodes[nodeId].color = "rgba(200,200,200,0.5)";
+      if (allNodes[nodeId].hiddenLabel === undefined) {
+        allNodes[nodeId].hiddenLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+    var connectedNodes = network.getConnectedNodes(selectedNode);
+    var allConnectedNodes = [];
+
+    // get the second degree nodes
+    for (i = 1; i < degrees; i++) {
+      for (j = 0; j < connectedNodes.length; j++) {
+        allConnectedNodes = allConnectedNodes.concat(
+          network.getConnectedNodes(connectedNodes[j])
+        );
+      }
+    }
+
+    // all second degree nodes get a different color and their label back
+    for (i = 0; i < allConnectedNodes.length; i++) {
+      // allNodes[allConnectedNodes[i]].color = "pink";
+      allNodes[allConnectedNodes[i]].color = "rgba(150,150,150,0.75)";
+      if (allNodes[allConnectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[allConnectedNodes[i]].label =
+          allNodes[allConnectedNodes[i]].hiddenLabel;
+        allNodes[allConnectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // all first degree nodes get their own color and their label back
+    for (i = 0; i < connectedNodes.length; i++) {
+      // allNodes[connectedNodes[i]].color = undefined;
+      allNodes[connectedNodes[i]].color = nodeColors[connectedNodes[i]];
+      if (allNodes[connectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[connectedNodes[i]].label =
+          allNodes[connectedNodes[i]].hiddenLabel;
+        allNodes[connectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // the main node gets its own color and its label back.
+    // allNodes[selectedNode].color = undefined;
+    allNodes[selectedNode].color = nodeColors[selectedNode];
+    if (allNodes[selectedNode].hiddenLabel !== undefined) {
+      allNodes[selectedNode].label = allNodes[selectedNode].hiddenLabel;
+      allNodes[selectedNode].hiddenLabel = undefined;
+    }
+  } else if (highlightActive === true) {
+    // console.log("highlightActive was true");
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      // allNodes[nodeId].color = "purple";
+      allNodes[nodeId].color = nodeColors[nodeId];
+      // delete allNodes[nodeId].color;
+      if (allNodes[nodeId].hiddenLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].hiddenLabel;
+        allNodes[nodeId].hiddenLabel = undefined;
+      }
+    }
+    highlightActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    // console.log("Nothing was selected");
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        // allNodes[nodeId].color = {};
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function filterHighlight(params) {
+  allNodes = nodes.get({ returnType: "Object" });
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    filterActive = true;
+    let selectedNodes = params.nodes;
+
+    // hiding all nodes and saving the label
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = true;
+      if (allNodes[nodeId].savedLabel === undefined) {
+        allNodes[nodeId].savedLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+
+    for (let i=0; i < selectedNodes.length; i++) {
+      allNodes[selectedNodes[i]].hidden = false;
+      if (allNodes[selectedNodes[i]].savedLabel !== undefined) {
+        allNodes[selectedNodes[i]].label = allNodes[selectedNodes[i]].savedLabel;
+        allNodes[selectedNodes[i]].savedLabel = undefined;
+      }
+    }
+
+  } else if (filterActive === true) {
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = false;
+      if (allNodes[nodeId].savedLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].savedLabel;
+        allNodes[nodeId].savedLabel = undefined;
+      }
+    }
+    filterActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function selectNode(nodes) {
+  network.selectNodes(nodes);
+  neighbourhoodHighlight({ nodes: nodes });
+  return nodes;
+}
+
+function selectNodes(nodes) {
+  network.selectNodes(nodes);
+  filterHighlight({nodes: nodes});
+  return nodes;
+}
+
+function highlightFilter(filter) {
+  let selectedNodes = []
+  let selectedProp = filter['property']
+  if (filter['item'] === 'node') {
+    let allNodes = nodes.get({ returnType: "Object" });
+    for (let nodeId in allNodes) {
+      if (allNodes[nodeId][selectedProp] && filter['value'].includes((allNodes[nodeId][selectedProp]).toString())) {
+        selectedNodes.push(nodeId)
+      }
+    }
+  }
+  else if (filter['item'] === 'edge'){
+    let allEdges = edges.get({returnType: 'object'});
+    // check if the selected property exists for selected edge and select the nodes connected to the edge
+    for (let edge in allEdges) {
+      if (allEdges[edge][selectedProp] && filter['value'].includes((allEdges[edge][selectedProp]).toString())) {
+        selectedNodes.push(allEdges[edge]['from'])
+        selectedNodes.push(allEdges[edge]['to'])
+      }
+    }
+  }
+  selectNodes(selectedNodes)
+}</script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            
+            
+            
+            
+            
+
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1f77b4", "id": "e1", "label": "Systran SAS", "shape": "dot", "size": 15, "title": "ID: e1\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Systran SAS\u003cbr\u003edescription: Target Company for Project System_big, operating in the Machine Translation market."}, {"color": "#cccccc", "id": "e2", "label": "Rothschild \u0026 Co", "shape": "dot", "size": 15, "title": "ID: e2\u003cbr\u003eType: Investment Bank\u003cbr\u003ename: Rothschild \u0026 Co\u003cbr\u003eroleInContext: Advisory Firm for Project System_big"}, {"color": "#cccccc", "id": "e3", "label": "Samsung Securities", "shape": "dot", "size": 15, "title": "ID: e3\u003cbr\u003eType: Investment Bank\u003cbr\u003ename: Samsung Securities\u003cbr\u003eroleInContext: Advisory Firm for Project System_big"}, {"color": "#d62728", "id": "e4", "label": "Project System_big", "shape": "dot", "size": 15, "title": "ID: e4\u003cbr\u003eType: pekg:TransactionContext\u003cbr\u003econtextName: Project System_big\u003cbr\u003estatus: Potential Transaction"}, {"color": "#e377c2", "id": "e5", "label": "Worldwide language services and technologies marke", "shape": "dot", "size": 15, "title": "ID: e5\u003cbr\u003eType: pekg:MarketContext\u003cbr\u003esegmentName: Worldwide language services and technologies market\u003cbr\u003egeography: Worldwide\u003cbr\u003esizeInfo: c. \u20ac24bn\u003cbr\u003echaracteristics: Dynamic market powered by innovation"}, {"color": "#e377c2", "id": "e6", "label": "Language technologies market", "shape": "dot", "size": 15, "title": "ID: e6\u003cbr\u003eType: pekg:MarketContext\u003cbr\u003esegmentName: Language technologies market\u003cbr\u003egeography: Worldwide\u003cbr\u003esizeInfo: c. \u20ac2bn"}, {"color": "#e377c2", "id": "e7", "label": "Language services market", "shape": "dot", "size": 15, "title": "ID: e7\u003cbr\u003eType: pekg:MarketContext\u003cbr\u003esegmentName: Language services market\u003cbr\u003egeography: Worldwide\u003cbr\u003esizeInfo: c. \u20ac22bn"}, {"color": "#e377c2", "id": "e8", "label": "Global MT market", "shape": "dot", "size": 15, "title": "ID: e8\u003cbr\u003eType: pekg:MarketContext\u003cbr\u003esegmentName: Global MT market\u003cbr\u003egeography: Worldwide\u003cbr\u003esizeInfo: c. \u20ac760m"}, {"color": "#e377c2", "id": "e9", "label": "Systran\u0027s addressable market (TAM)", "shape": "dot", "size": 15, "title": "ID: e9\u003cbr\u003eType: pekg:MarketContext\u003cbr\u003esegmentName: Systran\u0027s addressable market (TAM)\u003cbr\u003egeography: Worldwide\u003cbr\u003esizeInfo: c. \u20ac760m\u003cbr\u003echaracteristics: Machine Translation market"}, {"color": "#ff7f0e", "id": "e10", "label": "Total worldwide language services and technologies", "shape": "dot", "size": 15, "title": "ID: e10\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Total worldwide language services and technologies market size\u003cbr\u003evalueString: c. \u20ac24bn\u003cbr\u003escope: Worldwide language services and technologies market\u003cbr\u003esourceNote: CSA Research, expert calls, Eleven VDD report"}, {"color": "#ff7f0e", "id": "e11", "label": "Language technologies market size", "shape": "dot", "size": 15, "title": "ID: e11\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Language technologies market size\u003cbr\u003evalueString: c. \u20ac2bn\u003cbr\u003escope: Language technologies market\u003cbr\u003esourceNote: CSA Research, expert calls, Eleven VDD report"}, {"color": "#ff7f0e", "id": "e12", "label": "Language services market size", "shape": "dot", "size": 15, "title": "ID: e12\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Language services market size\u003cbr\u003evalueString: c. \u20ac22bn\u003cbr\u003escope: Language services market\u003cbr\u003esourceNote: CSA Research, expert calls, Eleven VDD report"}, {"color": "#ff7f0e", "id": "e13", "label": "Global Machine Translation (MT) market size", "shape": "dot", "size": 15, "title": "ID: e13\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Global Machine Translation (MT) market size\u003cbr\u003evalueString: c. \u20ac760m\u003cbr\u003escope: Machine Translation market\u003cbr\u003esourceNote: CSA Research, expert calls, Eleven VDD report"}, {"color": "#ff7f0e", "id": "e14", "label": "USD EUR exchange rate (06.04.2021)", "shape": "dot", "size": 15, "title": "ID: e14\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: USD EUR exchange rate\u003cbr\u003evalueString: 1 USD = 0.9176 EUR\u003cbr\u003efiscalPeriod: 06.04.2021\u003cbr\u003esourceNote: Used for converting original USD figures to EUR"}, {"color": "#9467bd", "id": "e15", "label": "Machine Translation", "shape": "dot", "size": 15, "title": "ID: e15\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Machine Translation\u003cbr\u003ecategory: Language technologies\u003cbr\u003edescription: Includes Neural Machine Translation and speech processing."}, {"color": "#9467bd", "id": "e16", "label": "Other technologies", "shape": "dot", "size": 15, "title": "ID: e16\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Other technologies\u003cbr\u003ecategory: Language technologies\u003cbr\u003edescription: Includes Terminology management, translation memory, translation quality assessment, text anonymization."}, {"color": "#9467bd", "id": "e17", "label": "Management \u0026 Processing", "shape": "dot", "size": 15, "title": "ID: e17\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Management \u0026 Processing\u003cbr\u003ecategory: Language technologies\u003cbr\u003edescription: Includes Translation Management System, connectors, interpreting management system."}, {"color": "#9467bd", "id": "e18", "label": "Content Creation \u0026 Publishing", "shape": "dot", "size": 15, "title": "ID: e18\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Content Creation \u0026 Publishing\u003cbr\u003ecategory: Language technologies\u003cbr\u003edescription: Includes Audio-visual tools, Content Management Systems, information extraction."}, {"color": "#9467bd", "id": "e19", "label": "Translation", "shape": "dot", "size": 15, "title": "ID: e19\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Translation\u003cbr\u003ecategory: Language services\u003cbr\u003edescription: Includes Translation, MT post-editing, transcreation."}, {"color": "#9467bd", "id": "e20", "label": "Localization \u0026 Engineering", "shape": "dot", "size": 15, "title": "ID: e20\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Localization \u0026 Engineering\u003cbr\u003ecategory: Language services\u003cbr\u003edescription: Includes Software, website, multimedia, game, mobile, internationalization."}, {"color": "#9467bd", "id": "e21", "label": "Interpreting", "shape": "dot", "size": 15, "title": "ID: e21\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Interpreting\u003cbr\u003ecategory: Language services\u003cbr\u003edescription: Includes On-site, telephone, conference, video remote, remote simultaneous, machine interpreting."}, {"color": "#9467bd", "id": "e22", "label": "Other Language Services", "shape": "dot", "size": 15, "title": "ID: e22\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Other Language Services\u003cbr\u003ecategory: Language services\u003cbr\u003edescription: Includes Dubbing, narration, subtitling, voice-over, transcription, international testing \u0026 QA SEO."}, {"color": "#8c564b", "id": "e23", "label": "Machine Translation", "shape": "dot", "size": 15, "title": "ID: e23\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Machine Translation\u003cbr\u003edescription: General technology for automated translation."}, {"color": "#8c564b", "id": "e24", "label": "Neural Machine Translation", "shape": "dot", "size": 15, "title": "ID: e24\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Neural Machine Translation"}, {"color": "#8c564b", "id": "e25", "label": "Speech processing", "shape": "dot", "size": 15, "title": "ID: e25\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Speech processing"}, {"color": "#8c564b", "id": "e26", "label": "Terminology management", "shape": "dot", "size": 15, "title": "ID: e26\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Terminology management"}, {"color": "#8c564b", "id": "e27", "label": "Translation memory", "shape": "dot", "size": 15, "title": "ID: e27\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Translation memory"}, {"color": "#8c564b", "id": "e28", "label": "Translation quality assessment", "shape": "dot", "size": 15, "title": "ID: e28\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Translation quality assessment"}, {"color": "#8c564b", "id": "e29", "label": "Text anonymization", "shape": "dot", "size": 15, "title": "ID: e29\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Text anonymization"}, {"color": "#8c564b", "id": "e30", "label": "Translation Management System", "shape": "dot", "size": 15, "title": "ID: e30\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Translation Management System"}, {"color": "#8c564b", "id": "e31", "label": "Connectors", "shape": "dot", "size": 15, "title": "ID: e31\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Connectors"}, {"color": "#8c564b", "id": "e32", "label": "Interpreting management system", "shape": "dot", "size": 15, "title": "ID: e32\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Interpreting management system"}, {"color": "#8c564b", "id": "e33", "label": "Audio-visual tools", "shape": "dot", "size": 15, "title": "ID: e33\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Audio-visual tools"}, {"color": "#8c564b", "id": "e34", "label": "Content Management Systems", "shape": "dot", "size": 15, "title": "ID: e34\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Content Management Systems"}, {"color": "#8c564b", "id": "e35", "label": "Information extraction", "shape": "dot", "size": 15, "title": "ID: e35\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Information extraction"}, {"color": "#8c564b", "id": "e36", "label": "Software", "shape": "dot", "size": 15, "title": "ID: e36\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Software"}, {"color": "#8c564b", "id": "e37", "label": "Website", "shape": "dot", "size": 15, "title": "ID: e37\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Website"}, {"color": "#8c564b", "id": "e38", "label": "Multimedia", "shape": "dot", "size": 15, "title": "ID: e38\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Multimedia"}, {"color": "#8c564b", "id": "e39", "label": "Game", "shape": "dot", "size": 15, "title": "ID: e39\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Game"}, {"color": "#8c564b", "id": "e40", "label": "Mobile", "shape": "dot", "size": 15, "title": "ID: e40\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Mobile"}, {"color": "#8c564b", "id": "e41", "label": "Internationalization", "shape": "dot", "size": 15, "title": "ID: e41\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Internationalization"}, {"color": "#8c564b", "id": "e42", "label": "MT post-editing", "shape": "dot", "size": 15, "title": "ID: e42\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: MT post-editing"}, {"color": "#8c564b", "id": "e43", "label": "Transcreation", "shape": "dot", "size": 15, "title": "ID: e43\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Transcreation"}, {"color": "#8c564b", "id": "e44", "label": "Dubbing", "shape": "dot", "size": 15, "title": "ID: e44\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Dubbing"}, {"color": "#8c564b", "id": "e45", "label": "Narration", "shape": "dot", "size": 15, "title": "ID: e45\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Narration"}, {"color": "#8c564b", "id": "e46", "label": "Subtitling", "shape": "dot", "size": 15, "title": "ID: e46\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Subtitling"}, {"color": "#8c564b", "id": "e47", "label": "Voice-over", "shape": "dot", "size": 15, "title": "ID: e47\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Voice-over"}, {"color": "#8c564b", "id": "e48", "label": "Transcription", "shape": "dot", "size": 15, "title": "ID: e48\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Transcription"}, {"color": "#8c564b", "id": "e49", "label": "International testing", "shape": "dot", "size": 15, "title": "ID: e49\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: International testing"}, {"color": "#8c564b", "id": "e50", "label": "QA SEO", "shape": "dot", "size": 15, "title": "ID: e50\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: QA SEO"}, {"color": "#8c564b", "id": "e51", "label": "Machine interpreting", "shape": "dot", "size": 15, "title": "ID: e51\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Machine interpreting"}, {"color": "#1f77b4", "id": "e52", "label": "DeepL Pro", "shape": "dot", "size": 15, "title": "ID: e52\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: DeepL Pro"}, {"color": "#1f77b4", "id": "e53", "label": "Globalese", "shape": "dot", "size": 15, "title": "ID: e53\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Globalese"}, {"color": "#1f77b4", "id": "e54", "label": "Language Weaver", "shape": "dot", "size": 15, "title": "ID: e54\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Language Weaver"}, {"color": "#1f77b4", "id": "e55", "label": "Omniscient", "shape": "dot", "size": 15, "title": "ID: e55\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Omniscient"}, {"color": "#1f77b4", "id": "e56", "label": "ModernMT", "shape": "dot", "size": 15, "title": "ID: e56\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: ModernMT"}, {"color": "#1f77b4", "id": "e57", "label": "PangeaMT", "shape": "dot", "size": 15, "title": "ID: e57\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: PangeaMT"}, {"color": "#1f77b4", "id": "e58", "label": "MEMSOURCE", "shape": "dot", "size": 15, "title": "ID: e58\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: MEMSOURCE"}, {"color": "#1f77b4", "id": "e59", "label": "memoQ", "shape": "dot", "size": 15, "title": "ID: e59\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: memoQ"}, {"color": "#1f77b4", "id": "e60", "label": "ubiqus", "shape": "dot", "size": 15, "title": "ID: e60\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: ubiqus"}, {"color": "#1f77b4", "id": "e61", "label": "HubSpot", "shape": "dot", "size": 15, "title": "ID: e61\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: HubSpot"}, {"color": "#1f77b4", "id": "e62", "label": "LIONBRIDGE", "shape": "dot", "size": 15, "title": "ID: e62\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: LIONBRIDGE"}, {"color": "#1f77b4", "id": "e63", "label": "TRANS PERFECT", "shape": "dot", "size": 15, "title": "ID: e63\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: TRANS PERFECT"}, {"color": "#1f77b4", "id": "e64", "label": "EUROlingo", "shape": "dot", "size": 15, "title": "ID: e64\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: EUROlingo"}, {"color": "#1f77b4", "id": "e65", "label": "CYRACOM", "shape": "dot", "size": 15, "title": "ID: e65\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: CYRACOM"}, {"color": "#1f77b4", "id": "e66", "label": "Language Services", "shape": "dot", "size": 15, "title": "ID: e66\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Language Services\u003cbr\u003edescription: Company providing interpreting services."}, {"color": "#1f77b4", "id": "e67", "label": "Circle Translations", "shape": "dot", "size": 15, "title": "ID: e67\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Circle Translations"}, {"color": "#1f77b4", "id": "e68", "label": "Semantix", "shape": "dot", "size": 15, "title": "ID: e68\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Semantix"}, {"color": "#1f77b4", "id": "e69", "label": "CSA Research", "shape": "dot", "size": 15, "title": "ID: e69\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: CSA Research\u003cbr\u003edescription: Source of market data."}, {"color": "#1f77b4", "id": "e70", "label": "Eleven", "shape": "dot", "size": 15, "title": "ID: e70\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Eleven\u003cbr\u003edescription: Firm associated with VDD report, a source of market data."}, {"color": "#1f77b4", "id": "e71", "label": "ChapsVision", "shape": "dot", "size": 15, "title": "ID: e71\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: ChapsVision\u003cbr\u003edescription: Company mentioned in confidentiality note."}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "e1", "label": "isSubjectOf", "title": "pekg:isSubjectOf", "to": "e4"}, {"arrows": "to", "from": "e4", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e2"}, {"arrows": "to", "from": "e4", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e3"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e10"}, {"arrows": "to", "from": "e5", "label": "hasRevenueStream", "title": "pekg:hasRevenueStream", "to": "e6"}, {"arrows": "to", "from": "e5", "label": "hasRevenueStream", "title": "pekg:hasRevenueStream", "to": "e7"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e11"}, {"arrows": "to", "from": "e7", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e12"}, {"arrows": "to", "from": "e8", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e13"}, {"arrows": "to", "from": "e1", "label": "operatesIn", "title": "pekg:operatesIn", "to": "e9"}, {"arrows": "to", "from": "e9", "label": "targets", "title": "pekg:targets", "to": "e15"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e15"}, {"arrows": "to", "from": "e15", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e24"}, {"arrows": "to", "from": "e15", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e25"}, {"arrows": "to", "from": "e15", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e23"}, {"arrows": "to", "from": "e52", "label": "offers", "title": "pekg:offers", "to": "e15"}, {"arrows": "to", "from": "e53", "label": "offers", "title": "pekg:offers", "to": "e15"}, {"arrows": "to", "from": "e54", "label": "offers", "title": "pekg:offers", "to": "e15"}, {"arrows": "to", "from": "e55", "label": "offers", "title": "pekg:offers", "to": "e15"}, {"arrows": "to", "from": "e56", "label": "offers", "title": "pekg:offers", "to": "e15"}, {"arrows": "to", "from": "e57", "label": "offers", "title": "pekg:offers", "to": "e16"}, {"arrows": "to", "from": "e16", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e26"}, {"arrows": "to", "from": "e16", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e27"}, {"arrows": "to", "from": "e16", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e28"}, {"arrows": "to", "from": "e16", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e29"}, {"arrows": "to", "from": "e58", "label": "offers", "title": "pekg:offers", "to": "e17"}, {"arrows": "to", "from": "e59", "label": "offers", "title": "pekg:offers", "to": "e17"}, {"arrows": "to", "from": "e17", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e30"}, {"arrows": "to", "from": "e17", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e31"}, {"arrows": "to", "from": "e17", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e32"}, {"arrows": "to", "from": "e60", "label": "offers", "title": "pekg:offers", "to": "e18"}, {"arrows": "to", "from": "e61", "label": "offers", "title": "pekg:offers", "to": "e18"}, {"arrows": "to", "from": "e18", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e33"}, {"arrows": "to", "from": "e18", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e34"}, {"arrows": "to", "from": "e18", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e35"}, {"arrows": "to", "from": "e62", "label": "offers", "title": "pekg:offers", "to": "e19"}, {"arrows": "to", "from": "e63", "label": "offers", "title": "pekg:offers", "to": "e19"}, {"arrows": "to", "from": "e19", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e42"}, {"arrows": "to", "from": "e19", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e43"}, {"arrows": "to", "from": "e64", "label": "offers", "title": "pekg:offers", "to": "e20"}, {"arrows": "to", "from": "e20", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e36"}, {"arrows": "to", "from": "e20", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e37"}, {"arrows": "to", "from": "e20", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e38"}, {"arrows": "to", "from": "e20", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e39"}, {"arrows": "to", "from": "e20", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e40"}, {"arrows": "to", "from": "e20", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e41"}, {"arrows": "to", "from": "e65", "label": "offers", "title": "pekg:offers", "to": "e21"}, {"arrows": "to", "from": "e66", "label": "offers", "title": "pekg:offers", "to": "e21"}, {"arrows": "to", "from": "e21", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e51"}, {"arrows": "to", "from": "e67", "label": "offers", "title": "pekg:offers", "to": "e22"}, {"arrows": "to", "from": "e68", "label": "offers", "title": "pekg:offers", "to": "e22"}, {"arrows": "to", "from": "e22", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e44"}, {"arrows": "to", "from": "e22", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e45"}, {"arrows": "to", "from": "e22", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e46"}, {"arrows": "to", "from": "e22", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e47"}, {"arrows": "to", "from": "e22", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e48"}, {"arrows": "to", "from": "e22", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e49"}, {"arrows": "to", "from": "e22", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e50"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shape": "dot", "size": 18, "font": {"size": 14, "face": "Tahoma"}}, "edges": {"arrows": {"to": {"enabled": true, "scaleFactor": 0.7}}, "color": {"inherit": "from"}, "smooth": {"type": "continuous", "roundness": 0.2}, "font": {"size": 10, "align": "middle"}}, "physics": {"enabled": true, "barnesHut": {"gravitationalConstant": -30000, "centralGravity": 0.3, "springLength": 250, "springConstant": 0.04, "damping": 0.09}, "minVelocity": 0.75}, "interaction": {"hover": true, "tooltipDelay": 200, "multiselect": true}, "layout": {"hierarchical": false}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

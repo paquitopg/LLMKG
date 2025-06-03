@@ -1,0 +1,234 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "alias": [
+        "Systran",
+        "the Group"
+      ],
+      "description": "Target company for Project System_big, focusing on an ambitious roadmap to scale-up and cost structure optimization."
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm for Project System_big"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm for Project System_big"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "KPMG",
+      "description": "Source of data for financial metrics."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company mentioned in the confidentiality note."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "EBITDA margin",
+      "valueString": "31.9%",
+      "fiscalPeriod": "FY26BP",
+      "scope": "target",
+      "sourceNote": "Source KPMG, Management"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:FinancialMetric",
+      "metricName": "EBITDA",
+      "valueString": "\u20ac16.9m",
+      "fiscalPeriod": "FY26BP",
+      "scope": "target",
+      "sourceNote": "Source KPMG, Management"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:MarketContext",
+      "segmentName": "Machine Translation (MT) market",
+      "characteristics": "Market where Systran aims to position itself as a leader."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Hosting IT, software expense",
+      "description": "Modelled increase due to energy costs fluctuations, increase in private cloud customers, higher IT costs for R&D (language pairs trainings, large models creation, better IT cost tracking), and increase in software expenses (reselling partner ASR solutions to public sector customers)."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "R&D expenses",
+      "description": "Mainly relying on tools required for developers, infrastructure to produce Language Models, and non-strategic developments outsourcing to reduce costs."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Personnel costs",
+      "description": "Modelled taking into account strong market competition leading to salary increases to attract and retain talents, and FY22B inflation leading to salary raise expectations."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Marketing focus",
+      "description": "Mainly focusing on redesigning the corporate website to increase traffic and attract new customers, generating content to position the Group as a leader on the MT market, and media to ensure company visibility and drive traffic."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Technology",
+      "name": "Language Models",
+      "description": "Technology requiring infrastructure for production, central to R&D efforts."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:ProductOrService",
+      "name": "ASR solutions",
+      "category": "Software",
+      "description": "Partner solutions resold by Systran."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Public sector",
+      "description": "Target customer segment for reselling ASR solutions."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Private cloud customers",
+      "description": "Customer segment experiencing positive sales performance, leading to increased hosting IT expenses."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Location",
+      "locationName": "Vietnam",
+      "locationType": "country",
+      "officeSpecificInfo": "Location for non-strategic developments outsourcing to reduce costs."
+    },
+    {
+      "id": "e18",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "FY22B inflation",
+      "eventType": "Economic Event",
+      "dateOrYear": "FY22B",
+      "description": "Economic event leading to salary raise expectations for personnel costs."
+    },
+    {
+      "id": "e19",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Energy costs fluctuations",
+      "eventType": "Economic Event",
+      "description": "Recent fluctuations leading to an increase in hosting IT and software prices."
+    },
+    {
+      "id": "e20",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Sale/Acquisition",
+      "status": "Teaser phase",
+      "dealRationaleHighlights": [
+        "Ambitious roadmap to scale-up",
+        "Focus on cost structure"
+      ],
+      "keyInvestmentHighlights": [
+        "Target 31.9% EBITDA margin (\u20ac16.9m EBITDA) in FY26BP"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e14",
+      "target": "e15",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e11",
+      "target": "e18",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e9",
+      "target": "e19",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e20",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e20",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

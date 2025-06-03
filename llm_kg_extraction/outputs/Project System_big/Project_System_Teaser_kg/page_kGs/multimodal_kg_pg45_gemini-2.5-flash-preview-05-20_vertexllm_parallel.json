@@ -1,0 +1,634 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "Target Company"
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm for Project System_big"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm for Project System_big"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Watermark on the document, likely related to document ownership/confidentiality."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "Salesforce",
+      "description": "Provider of CRM software."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Company",
+      "name": "Zendesk",
+      "description": "Provider of client support and bug tracking software."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Company",
+      "name": "Jira",
+      "description": "Provider of bug tracking and documentation software."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Company",
+      "name": "Eleven",
+      "description": "Source of the VDD report."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Potential Sale/Acquisition"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "Seamless and consistent translation experience",
+      "category": "Service"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Operating Model",
+      "description": "Systran\u2019s operating model ensures a seamless and consistent translation experience, with a streamlined and robust operational chain."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Technology",
+      "name": "CRM",
+      "description": "Customer Relationship Management technology."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Technology",
+      "name": "Client support",
+      "description": "Technology for managing client support."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Technology",
+      "name": "Bug tracking",
+      "description": "Technology for tracking software bugs."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Technology",
+      "name": "Documentation",
+      "description": "Technology for managing documentation."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Technology",
+      "name": "MT engines",
+      "description": "Machine Translation engines."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Main tasks",
+      "description": "Key operational tasks performed by Systran."
+    },
+    {
+      "id": "e18",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Lead generation"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Client acquisition"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "RFP process for large accounts"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Sales increase on existing accounts"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Project requirements gathering"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Material analysis"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Architecture definition"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Resources defined"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Review of pricing and schedule"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Quote validation by client (sign-off)"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Deployment on client premises or in the cloud"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Training of clients"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Integration of the solution to the existing workflow"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Period maintenance of the software"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Training of the MT engines"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Dedicated aftersales service"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Periodical meeting to gather feedback"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Value chain",
+      "description": "Systran's operational value chain."
+    },
+    {
+      "id": "e36",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Sales process"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Hunting",
+      "description": "Part of Sales process, focused on new client acquisition."
+    },
+    {
+      "id": "e38",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Farming",
+      "description": "Part of Sales process, focused on existing accounts."
+    },
+    {
+      "id": "e39",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Project initiation"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Client request"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Quote generation"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Order validation"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Project execution"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Deployment of the solution"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Training & maintenance"
+    },
+    {
+      "id": "e46",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Customer support"
+    },
+    {
+      "id": "e47",
+      "type": "pekg:Position",
+      "titleName": "Account manager"
+    },
+    {
+      "id": "e48",
+      "type": "pekg:Position",
+      "titleName": "Technical support & pre-sales"
+    },
+    {
+      "id": "e49",
+      "type": "pekg:MarketContext",
+      "segmentName": "Customer outreach",
+      "characteristics": "Wide and diversified"
+    },
+    {
+      "id": "e50",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Eleven VDD report",
+      "eventType": "Report",
+      "description": "Source of data for the operating model description."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e49",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e9",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e9",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e11",
+      "target": "e17",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e11",
+      "target": "e35",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e17",
+      "target": "e18",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e17",
+      "target": "e19",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e17",
+      "target": "e20",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e17",
+      "target": "e21",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e17",
+      "target": "e22",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e17",
+      "target": "e23",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e17",
+      "target": "e24",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e17",
+      "target": "e25",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e17",
+      "target": "e26",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e17",
+      "target": "e27",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e17",
+      "target": "e28",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e17",
+      "target": "e29",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e17",
+      "target": "e30",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e17",
+      "target": "e31",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e17",
+      "target": "e32",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e17",
+      "target": "e33",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e17",
+      "target": "e34",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e35",
+      "target": "e36",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e35",
+      "target": "e39",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e35",
+      "target": "e43",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e35",
+      "target": "e45",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e35",
+      "target": "e46",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e36",
+      "target": "e37",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e36",
+      "target": "e38",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e39",
+      "target": "e40",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e39",
+      "target": "e41",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e39",
+      "target": "e42",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e43",
+      "target": "e44",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e43",
+      "target": "e45",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e43",
+      "target": "e46",
+      "type": "pekg:hasPart"
+    },
+    {
+      "source": "e37",
+      "target": "e18",
+      "type": "pekg:includes"
+    },
+    {
+      "source": "e37",
+      "target": "e19",
+      "type": "pekg:includes"
+    },
+    {
+      "source": "e37",
+      "target": "e20",
+      "type": "pekg:includes"
+    },
+    {
+      "source": "e38",
+      "target": "e21",
+      "type": "pekg:includes"
+    },
+    {
+      "source": "e40",
+      "target": "e22",
+      "type": "pekg:includes"
+    },
+    {
+      "source": "e41",
+      "target": "e23",
+      "type": "pekg:includes"
+    },
+    {
+      "source": "e41",
+      "target": "e24",
+      "type": "pekg:includes"
+    },
+    {
+      "source": "e41",
+      "target": "e25",
+      "type": "pekg:includes"
+    },
+    {
+      "source": "e42",
+      "target": "e26",
+      "type": "pekg:includes"
+    },
+    {
+      "source": "e42",
+      "target": "e27",
+      "type": "pekg:includes"
+    },
+    {
+      "source": "e44",
+      "target": "e28",
+      "type": "pekg:includes"
+    },
+    {
+      "source": "e44",
+      "target": "e29",
+      "type": "pekg:includes"
+    },
+    {
+      "source": "e44",
+      "target": "e30",
+      "type": "pekg:includes"
+    },
+    {
+      "source": "e45",
+      "target": "e31",
+      "type": "pekg:includes"
+    },
+    {
+      "source": "e45",
+      "target": "e32",
+      "type": "pekg:includes"
+    },
+    {
+      "source": "e46",
+      "target": "e33",
+      "type": "pekg:includes"
+    },
+    {
+      "source": "e46",
+      "target": "e34",
+      "type": "pekg:includes"
+    },
+    {
+      "source": "e1",
+      "target": "e47",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e1",
+      "target": "e48",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e12",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6",
+      "target": "e14",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e7",
+      "target": "e14",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e7",
+      "target": "e15",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e50",
+      "target": "e8",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e50",
+      "target": "e11",
+      "type": "pekg:sourceOfDataFor"
+    }
+  ]
+}

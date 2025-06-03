@@ -1,0 +1,321 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script>function neighbourhoodHighlight(params) {
+  // console.log("in nieghbourhoodhighlight");
+  allNodes = nodes.get({ returnType: "Object" });
+  // originalNodes = JSON.parse(JSON.stringify(allNodes));
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    highlightActive = true;
+    var i, j;
+    var selectedNode = params.nodes[0];
+    var degrees = 2;
+
+    // mark all nodes as hard to read.
+    for (let nodeId in allNodes) {
+      // nodeColors[nodeId] = allNodes[nodeId].color;
+      allNodes[nodeId].color = "rgba(200,200,200,0.5)";
+      if (allNodes[nodeId].hiddenLabel === undefined) {
+        allNodes[nodeId].hiddenLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+    var connectedNodes = network.getConnectedNodes(selectedNode);
+    var allConnectedNodes = [];
+
+    // get the second degree nodes
+    for (i = 1; i < degrees; i++) {
+      for (j = 0; j < connectedNodes.length; j++) {
+        allConnectedNodes = allConnectedNodes.concat(
+          network.getConnectedNodes(connectedNodes[j])
+        );
+      }
+    }
+
+    // all second degree nodes get a different color and their label back
+    for (i = 0; i < allConnectedNodes.length; i++) {
+      // allNodes[allConnectedNodes[i]].color = "pink";
+      allNodes[allConnectedNodes[i]].color = "rgba(150,150,150,0.75)";
+      if (allNodes[allConnectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[allConnectedNodes[i]].label =
+          allNodes[allConnectedNodes[i]].hiddenLabel;
+        allNodes[allConnectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // all first degree nodes get their own color and their label back
+    for (i = 0; i < connectedNodes.length; i++) {
+      // allNodes[connectedNodes[i]].color = undefined;
+      allNodes[connectedNodes[i]].color = nodeColors[connectedNodes[i]];
+      if (allNodes[connectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[connectedNodes[i]].label =
+          allNodes[connectedNodes[i]].hiddenLabel;
+        allNodes[connectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // the main node gets its own color and its label back.
+    // allNodes[selectedNode].color = undefined;
+    allNodes[selectedNode].color = nodeColors[selectedNode];
+    if (allNodes[selectedNode].hiddenLabel !== undefined) {
+      allNodes[selectedNode].label = allNodes[selectedNode].hiddenLabel;
+      allNodes[selectedNode].hiddenLabel = undefined;
+    }
+  } else if (highlightActive === true) {
+    // console.log("highlightActive was true");
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      // allNodes[nodeId].color = "purple";
+      allNodes[nodeId].color = nodeColors[nodeId];
+      // delete allNodes[nodeId].color;
+      if (allNodes[nodeId].hiddenLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].hiddenLabel;
+        allNodes[nodeId].hiddenLabel = undefined;
+      }
+    }
+    highlightActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    // console.log("Nothing was selected");
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        // allNodes[nodeId].color = {};
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function filterHighlight(params) {
+  allNodes = nodes.get({ returnType: "Object" });
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    filterActive = true;
+    let selectedNodes = params.nodes;
+
+    // hiding all nodes and saving the label
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = true;
+      if (allNodes[nodeId].savedLabel === undefined) {
+        allNodes[nodeId].savedLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+
+    for (let i=0; i < selectedNodes.length; i++) {
+      allNodes[selectedNodes[i]].hidden = false;
+      if (allNodes[selectedNodes[i]].savedLabel !== undefined) {
+        allNodes[selectedNodes[i]].label = allNodes[selectedNodes[i]].savedLabel;
+        allNodes[selectedNodes[i]].savedLabel = undefined;
+      }
+    }
+
+  } else if (filterActive === true) {
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = false;
+      if (allNodes[nodeId].savedLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].savedLabel;
+        allNodes[nodeId].savedLabel = undefined;
+      }
+    }
+    filterActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function selectNode(nodes) {
+  network.selectNodes(nodes);
+  neighbourhoodHighlight({ nodes: nodes });
+  return nodes;
+}
+
+function selectNodes(nodes) {
+  network.selectNodes(nodes);
+  filterHighlight({nodes: nodes});
+  return nodes;
+}
+
+function highlightFilter(filter) {
+  let selectedNodes = []
+  let selectedProp = filter['property']
+  if (filter['item'] === 'node') {
+    let allNodes = nodes.get({ returnType: "Object" });
+    for (let nodeId in allNodes) {
+      if (allNodes[nodeId][selectedProp] && filter['value'].includes((allNodes[nodeId][selectedProp]).toString())) {
+        selectedNodes.push(nodeId)
+      }
+    }
+  }
+  else if (filter['item'] === 'edge'){
+    let allEdges = edges.get({returnType: 'object'});
+    // check if the selected property exists for selected edge and select the nodes connected to the edge
+    for (let edge in allEdges) {
+      if (allEdges[edge][selectedProp] && filter['value'].includes((allEdges[edge][selectedProp]).toString())) {
+        selectedNodes.push(allEdges[edge]['from'])
+        selectedNodes.push(allEdges[edge]['to'])
+      }
+    }
+  }
+  selectNodes(selectedNodes)
+}</script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            
+            
+            
+            
+            
+
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1f77b4", "id": "e1", "label": "Systran SAS", "shape": "dot", "size": 15, "title": "ID: e1\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Systran SAS\u003cbr\u003edescription: Target company with a high-end R\u0026D team and ambitious R\u0026D roadmap."}, {"color": "#cccccc", "id": "e2", "label": "Rothschild \u0026 Co", "shape": "dot", "size": 15, "title": "ID: e2\u003cbr\u003eType: Financial Advisor\u003cbr\u003ename: Rothschild \u0026 Co\u003cbr\u003eroleInContext: Advisor to Target Company"}, {"color": "#cccccc", "id": "e3", "label": "Samsung Securities", "shape": "dot", "size": 15, "title": "ID: e3\u003cbr\u003eType: Financial Advisor\u003cbr\u003ename: Samsung Securities\u003cbr\u003eroleInContext: Advisor to Target Company"}, {"color": "#d62728", "id": "e4", "label": "Project System_big", "shape": "dot", "size": 15, "title": "ID: e4\u003cbr\u003eType: pekg:TransactionContext\u003cbr\u003econtextName: Project System_big\u003cbr\u003etypeSought: Sale/Acquisition"}, {"color": "#c7c7c7", "id": "e5", "label": "France", "shape": "dot", "size": 15, "title": "ID: e5\u003cbr\u003eType: pekg:Location\u003cbr\u003elocationName: France\u003cbr\u003elocationType: Country\u003cbr\u003eofficeSpecificInfo: Systran product and R\u0026D organization"}, {"color": "#fdd0a2", "id": "e6", "label": "Total R\u0026D FTEs", "shape": "dot", "size": 15, "title": "ID: e6\u003cbr\u003eType: pekg:Headcount\u003cbr\u003eheadcountName: Total R\u0026D FTEs\u003cbr\u003etotalEmployees: 42\u003cbr\u003ebreakdownDescription: Total Full-Time Equivalents in Products \u0026 Technology R\u0026D team, including 4 PhDs."}, {"color": "#fdd0a2", "id": "e7", "label": "R\u0026D PhDs", "shape": "dot", "size": 15, "title": "ID: e7\u003cbr\u003eType: pekg:Headcount\u003cbr\u003eheadcountName: R\u0026D PhDs\u003cbr\u003etotalEmployees: 4\u003cbr\u003ebreakdownDescription: Number of PhDs within the R\u0026D team."}, {"color": "#fdd0a2", "id": "e8", "label": "Quality Assurance FTEs", "shape": "dot", "size": 15, "title": "ID: e8\u003cbr\u003eType: pekg:Headcount\u003cbr\u003eheadcountName: Quality Assurance FTEs\u003cbr\u003etotalEmployees: 5\u003cbr\u003ebreakdownDescription: QA engineers"}, {"color": "#fdd0a2", "id": "e9", "label": "Product Management FTEs", "shape": "dot", "size": 15, "title": "ID: e9\u003cbr\u003eType: pekg:Headcount\u003cbr\u003eheadcountName: Product Management FTEs\u003cbr\u003etotalEmployees: 5\u003cbr\u003ebreakdownDescription: Product managers, advanced support \u0026 tools, Ops product owner, AI \u0026 ML product manager"}, {"color": "#fdd0a2", "id": "e10", "label": "Software Engineering FTEs", "shape": "dot", "size": 15, "title": "ID: e10\u003cbr\u003eType: pekg:Headcount\u003cbr\u003eheadcountName: Software Engineering FTEs\u003cbr\u003etotalEmployees: 15\u003cbr\u003ebreakdownDescription: Tech leads, senior engineers, OpenNMT lead"}, {"color": "#fdd0a2", "id": "e11", "label": "NLP Engineering FTEs", "shape": "dot", "size": 15, "title": "ID: e11\u003cbr\u003eType: pekg:Headcount\u003cbr\u003eheadcountName: NLP Engineering FTEs\u003cbr\u003etotalEmployees: 14\u003cbr\u003ebreakdownDescription: Project managers, research engineer, data \u0026 language engineers"}, {"color": "#fdd0a2", "id": "e12", "label": "Labs FTEs", "shape": "dot", "size": 15, "title": "ID: e12\u003cbr\u003eType: pekg:Headcount\u003cbr\u003eheadcountName: Labs FTEs\u003cbr\u003etotalEmployees: 3\u003cbr\u003ebreakdownDescription: Research, funded projects"}, {"color": "#ffbb78", "id": "e13", "label": "Expected UX product designer (Quality Assurance)", "shape": "dot", "size": 15, "title": "ID: e13\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Expected UX product designer (Quality Assurance)\u003cbr\u003ekpiValueString: 1\u003cbr\u003edescription: Expected hire for Quality Assurance department."}, {"color": "#ffbb78", "id": "e14", "label": "Expected UX product designer (Labs)", "shape": "dot", "size": 15, "title": "ID: e14\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Expected UX product designer (Labs)\u003cbr\u003ekpiValueString: 1\u003cbr\u003edescription: Expected hire for Labs department."}, {"color": "#ffbb78", "id": "e15", "label": "Expected Software Engineers", "shape": "dot", "size": 15, "title": "ID: e15\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Expected Software Engineers\u003cbr\u003ekpiValueString: 2\u003cbr\u003edescription: Expected hires for Software engineering department."}, {"color": "#ffbb78", "id": "e16", "label": "Expected NMT production expert", "shape": "dot", "size": 15, "title": "ID: e16\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Expected NMT production expert\u003cbr\u003ekpiValueString: 1\u003cbr\u003edescription: Expected hire for NLP Engineering department."}, {"color": "#8c564b", "id": "e17", "label": "NLP Engineering", "shape": "dot", "size": 15, "title": "ID: e17\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: NLP Engineering\u003cbr\u003edescription: Natural Language Processing Engineering, a core capability of Systran\u0027s R\u0026D."}, {"color": "#8c564b", "id": "e18", "label": "AI \u0026 ML", "shape": "dot", "size": 15, "title": "ID: e18\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: AI \u0026 ML\u003cbr\u003edescription: Artificial Intelligence and Machine Learning, integrated into product management and R\u0026D."}, {"color": "#8c564b", "id": "e19", "label": "OpenNMT", "shape": "dot", "size": 15, "title": "ID: e19\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: OpenNMT\u003cbr\u003edescription: Open-source Neural Machine Translation framework, used by Systran\u0027s software engineering team."}, {"color": "#8c564b", "id": "e20", "label": "NMT", "shape": "dot", "size": 15, "title": "ID: e20\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: NMT\u003cbr\u003edescription: Neural Machine Translation, a key technology for Systran\u0027s products and R\u0026D."}, {"color": "#9467bd", "id": "e21", "label": "American Sign Language (ASL) translation", "shape": "dot", "size": 15, "title": "ID: e21\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: American Sign Language (ASL) translation\u003cbr\u003ecategory: Translation Service\u003cbr\u003edescription: A service developed through a large research project with the US government to allow communication between ASL and non-ASL speakers."}, {"color": "#cccccc", "id": "e22", "label": "DGA", "shape": "dot", "size": 15, "title": "ID: e22\u003cbr\u003eType: Government Agency\u003cbr\u003ename: DGA"}, {"color": "#cccccc", "id": "e23", "label": "US government", "shape": "dot", "size": 15, "title": "ID: e23\u003cbr\u003eType: Government\u003cbr\u003ename: US government"}, {"color": "#1f77b4", "id": "e24", "label": "Harvard University", "shape": "dot", "size": 15, "title": "ID: e24\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Harvard University\u003cbr\u003edescription: Leading academic institute, partner in research collaborations."}, {"color": "#1f77b4", "id": "e25", "label": "RWTH Aachen University", "shape": "dot", "size": 15, "title": "ID: e25\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: RWTH Aachen University\u003cbr\u003edescription: Leading academic institute, partner in research collaborations."}, {"color": "#1f77b4", "id": "e26", "label": "University of Edinburgh", "shape": "dot", "size": 15, "title": "ID: e26\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: University of Edinburgh\u003cbr\u003edescription: Leading academic institute, partner in research collaborations."}, {"color": "#1f77b4", "id": "e27", "label": "IUT Le Mans", "shape": "dot", "size": 15, "title": "ID: e27\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: IUT Le Mans\u003cbr\u003edescription: Academic institute, partner in research collaborations."}, {"color": "#1f77b4", "id": "e28", "label": "LISN", "shape": "dot", "size": 15, "title": "ID: e28\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: LISN\u003cbr\u003edescription: Laboratoire Interdisciplinaire des Sciences du Num\u00e9rique, a research institute partner."}, {"color": "#e7969c", "id": "e29", "label": "PhDs projects with DGA", "shape": "dot", "size": 15, "title": "ID: e29\u003cbr\u003eType: pekg:HistoricalEvent\u003cbr\u003eeventName: PhDs projects with DGA\u003cbr\u003eeventType: Research Collaboration\u003cbr\u003edescription: Several PhDs projects conducted between research institutes and the DGA."}, {"color": "#e7969c", "id": "e30", "label": "US government ASL translation project", "shape": "dot", "size": 15, "title": "ID: e30\u003cbr\u003eType: pekg:HistoricalEvent\u003cbr\u003eeventName: US government ASL translation project\u003cbr\u003eeventType: Research Project\u003cbr\u003edescription: A large research project with the US government to translate American Sign Language (ASL) and allow communication between ASL and non-ASL speakers."}, {"color": "#1f77b4", "id": "e31", "label": "ChapsVision", "shape": "dot", "size": 15, "title": "ID: e31\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: ChapsVision\u003cbr\u003edescription: Entity associated with the document (watermark)."}, {"color": "#1f77b4", "id": "e32", "label": "Eleven VDD", "shape": "dot", "size": 15, "title": "ID: e32\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Eleven VDD\u003cbr\u003edescription: Source of the report."}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "e1", "label": "isSubjectOf", "title": "isSubjectOf", "to": "e4"}, {"arrows": "to", "from": "e1", "label": "advisedBy", "title": "advisedBy", "to": "e2"}, {"arrows": "to", "from": "e1", "label": "advisedBy", "title": "advisedBy", "to": "e3"}, {"arrows": "to", "from": "e1", "label": "hasOfficeIn", "title": "hasOfficeIn", "to": "e5"}, {"arrows": "to", "from": "e1", "label": "reportsHeadcount", "title": "reportsHeadcount", "to": "e6"}, {"arrows": "to", "from": "e1", "label": "reportsHeadcount", "title": "reportsHeadcount", "to": "e7"}, {"arrows": "to", "from": "e1", "label": "reportsHeadcount", "title": "reportsHeadcount", "to": "e8"}, {"arrows": "to", "from": "e1", "label": "reportsHeadcount", "title": "reportsHeadcount", "to": "e9"}, {"arrows": "to", "from": "e1", "label": "reportsHeadcount", "title": "reportsHeadcount", "to": "e10"}, {"arrows": "to", "from": "e1", "label": "reportsHeadcount", "title": "reportsHeadcount", "to": "e11"}, {"arrows": "to", "from": "e1", "label": "reportsHeadcount", "title": "reportsHeadcount", "to": "e12"}, {"arrows": "to", "from": "e1", "label": "reportsOperationalKPI", "title": "reportsOperationalKPI", "to": "e13"}, {"arrows": "to", "from": "e1", "label": "reportsOperationalKPI", "title": "reportsOperationalKPI", "to": "e14"}, {"arrows": "to", "from": "e1", "label": "reportsOperationalKPI", "title": "reportsOperationalKPI", "to": "e15"}, {"arrows": "to", "from": "e1", "label": "reportsOperationalKPI", "title": "reportsOperationalKPI", "to": "e16"}, {"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "usesTechnology", "to": "e17"}, {"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "usesTechnology", "to": "e18"}, {"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "usesTechnology", "to": "e19"}, {"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "usesTechnology", "to": "e20"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "offers", "to": "e21"}, {"arrows": "to", "from": "e1", "label": "experiencedEvent", "title": "experiencedEvent", "to": "e29"}, {"arrows": "to", "from": "e1", "label": "experiencedEvent", "title": "experiencedEvent", "to": "e30"}, {"arrows": "to", "from": "e29", "label": "eventInvolvesParty", "title": "eventInvolvesParty", "to": "e22"}, {"arrows": "to", "from": "e29", "label": "eventInvolvesParty", "title": "eventInvolvesParty", "to": "e24"}, {"arrows": "to", "from": "e29", "label": "eventInvolvesParty", "title": "eventInvolvesParty", "to": "e25"}, {"arrows": "to", "from": "e29", "label": "eventInvolvesParty", "title": "eventInvolvesParty", "to": "e26"}, {"arrows": "to", "from": "e29", "label": "eventInvolvesParty", "title": "eventInvolvesParty", "to": "e27"}, {"arrows": "to", "from": "e29", "label": "eventInvolvesParty", "title": "eventInvolvesParty", "to": "e28"}, {"arrows": "to", "from": "e30", "label": "eventInvolvesParty", "title": "eventInvolvesParty", "to": "e23"}, {"arrows": "to", "from": "e30", "label": "eventInvolvesParty", "title": "eventInvolvesParty", "to": "e1"}, {"arrows": "to", "from": "e1", "label": "hasClientGovernment", "title": "hasClientGovernment", "to": "e23"}, {"arrows": "to", "from": "e1", "label": "hasClientGovernment", "title": "hasClientGovernment", "to": "e22"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shape": "dot", "size": 18, "font": {"size": 14, "face": "Tahoma"}}, "edges": {"arrows": {"to": {"enabled": true, "scaleFactor": 0.7}}, "color": {"inherit": "from"}, "smooth": {"type": "continuous", "roundness": 0.2}, "font": {"size": 10, "align": "middle"}}, "physics": {"enabled": true, "barnesHut": {"gravitationalConstant": -30000, "centralGravity": 0.3, "springLength": 250, "springConstant": 0.04, "damping": 0.09}, "minVelocity": 0.75}, "interaction": {"hover": true, "tooltipDelay": 200, "multiselect": true}, "layout": {"hierarchical": false}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

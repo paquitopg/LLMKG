@@ -1,0 +1,187 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Advisor",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Advisor",
+      "name": "DDA & Company France SAS"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Quarterly Billings",
+      "fiscalPeriod": "FY2019 Q1",
+      "valueString": "24%",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Quarterly Billings",
+      "fiscalPeriod": "FY2020 Q1",
+      "valueString": "22%",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Quarterly Billings",
+      "fiscalPeriod": "FY2021 Q1",
+      "valueString": "25%",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Quarterly Billings",
+      "fiscalPeriod": "FY2019 Q2",
+      "valueString": "22%",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Quarterly Billings",
+      "fiscalPeriod": "FY2020 Q2",
+      "valueString": "21%",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Quarterly Billings",
+      "fiscalPeriod": "FY2021 Q2",
+      "valueString": "26%",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Quarterly Billings",
+      "fiscalPeriod": "FY2019 Q3",
+      "valueString": "23%",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Quarterly Billings",
+      "fiscalPeriod": "FY2020 Q3",
+      "valueString": "20%",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Quarterly Billings",
+      "fiscalPeriod": "FY2021 Q3",
+      "valueString": "22%",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Quarterly Billings",
+      "fiscalPeriod": "FY2019 Q4",
+      "valueString": "30%",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Quarterly Billings",
+      "fiscalPeriod": "FY2020 Q4",
+      "valueString": "37%",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Quarterly Billings",
+      "fiscalPeriod": "FY2021 Q4",
+      "valueString": "28%",
+      "sourceNote": "Management"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    }
+  ]
+}

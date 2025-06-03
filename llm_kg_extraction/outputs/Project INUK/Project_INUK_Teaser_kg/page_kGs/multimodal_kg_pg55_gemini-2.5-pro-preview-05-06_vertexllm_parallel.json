@@ -1,0 +1,1854 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "SaaS Software Vendor. Working capital is structurally negative, which is typical for this type of company. The business is labor-intensive. Deferred income results from its subscription-based business model.",
+      "industry": "Software",
+      "keyStrengths": [
+        "Subscription-based business model"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisor for Project Inuk"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "transactionPerimeter": "Articque"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "Groupe Articque Solutions"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Person",
+      "fullName": "Georges-Antoine Strauch"
+    },
+    {
+      "id": "e7",
+      "type": "Individual",
+      "name": "Georges-Antoine Strauch",
+      "description": "Provided a shareholder loan to Articque."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Software Development",
+      "category": "Software R&D",
+      "description": "Past and on-going software development comprises a significant part of intangible assets."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "SaaS Platform",
+      "category": "Software as a Service",
+      "description": "The company operates a subscription-based business model typical of a SaaS Software Vendor."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "SaaS Software Vendor",
+      "description": "Industry segment characterized by structurally negative working capital and subscription-based models."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Intangible Assets (Software Development)",
+      "valueString": "\u20ac1,229k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cash advances to Groupe Articque Solutions (component of Financial Assets)",
+      "valueString": "\u20ac107k",
+      "fiscalPeriod": "FY21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cash advances to Groupe Articque Solutions (component of Financial Assets)",
+      "valueString": "\u20ac95k",
+      "fiscalPeriod": "FY20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Working Capital",
+      "valueString": "\u20ac(1,437)k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements. Represents (41.0%) of revenue."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Operating WC",
+      "valueString": "\u20ac(1,114)k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements. Represents (31.8%) of revenue. Mainly made up of account receivables, deferred income, and account payables."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-operating WC",
+      "valueString": "\u20ac(323)k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements. Represents (9.2%) of revenue. Mostly comprising social debts and tax debt (VAT)."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Net cash",
+      "valueString": "\u20ac1,174k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements. Included \u20ac1,883k of cash and \u20ac708k of total financial debt."
+    },
+    {
+      "id": "e18",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cash (component of Net Cash)",
+      "valueString": "\u20ac1,883k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total financial debt",
+      "valueString": "\u20ac708k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements. \u20ac380k to be redeemed at the end of FY22L."
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Bank loans (6, component of Total Financial Debt)",
+      "valueString": "~\u20ac291k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Government-backed loan (PGE) issued amount",
+      "valueString": "\u20ac500k",
+      "fiscalPeriod": "2020",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Government-backed loan (PGE) principal balance (component of Total Financial Debt)",
+      "valueString": "\u20ac390k",
+      "fiscalPeriod": "Dec 2021",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Shareholder loan from Georges-Antoine Strauch (component of Total Financial Debt)",
+      "valueString": "\u20ac27k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Intangible assets",
+      "valueString": "\u20ac1,437k",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Intangible assets",
+      "valueString": "\u20ac1,355k",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Intangible assets",
+      "valueString": "\u20ac1,308k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Intangible assets",
+      "valueString": "\u20ac1,229k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements. Mainly comprise past and on-going software development."
+    },
+    {
+      "id": "e28",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Tangible assets",
+      "valueString": "\u20ac217k",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Tangible assets",
+      "valueString": "\u20ac170k",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Tangible assets",
+      "valueString": "\u20ac151k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Tangible assets",
+      "valueString": "\u20ac208k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements. Including office equipment and company cars."
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Financial assets",
+      "valueString": "\u20ac69k",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Financial assets",
+      "valueString": "\u20ac66k",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Financial assets",
+      "valueString": "\u20ac157k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements. Primarily include cash advances to Groupe Articque Solutions (\u20ac95k in FY20A)."
+    },
+    {
+      "id": "e35",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Financial assets",
+      "valueString": "\u20ac171k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements. Primarily include cash advances to Groupe Articque Solutions (\u20ac107k in FY21A)."
+    },
+    {
+      "id": "e36",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Fixed Assets",
+      "valueString": "\u20ac1,723k",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Fixed Assets",
+      "valueString": "\u20ac1,591k",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Fixed Assets",
+      "valueString": "\u20ac1,617k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Fixed Assets",
+      "valueString": "\u20ac1,608k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Account receivables",
+      "valueString": "\u20ac2,199k",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Account receivables",
+      "valueString": "\u20ac810k",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Account receivables",
+      "valueString": "\u20ac524k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Account receivables",
+      "valueString": "\u20ac716k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Account payables",
+      "valueString": "\u20ac(3,894)k",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Account payables",
+      "valueString": "\u20ac(720)k",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Account payables",
+      "valueString": "\u20ac(105)k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e47",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Account payables",
+      "valueString": "\u20ac(96)k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e48",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Deferred Income",
+      "valueString": "\u20ac(1,013)k",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e49",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Deferred Income",
+      "valueString": "\u20ac(1,150)k",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e50",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Deferred Income",
+      "valueString": "\u20ac(1,386)k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e51",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Deferred Income",
+      "valueString": "\u20ac(1,719)k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements. Resulting from subscription-based business model."
+    },
+    {
+      "id": "e52",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Prepaid Expenses & Advance Payments",
+      "valueString": "\u20ac6k",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e53",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Prepaid Expenses & Advance Payments",
+      "valueString": "\u20ac(5)k",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e54",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Prepaid Expenses & Advance Payments",
+      "valueString": "\u20ac(10)k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e55",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Prepaid Expenses & Advance Payments",
+      "valueString": "\u20ac(15)k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e56",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Operating WC",
+      "valueString": "\u20ac(2,702)k",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e57",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Operating WC",
+      "valueString": "\u20ac(1,065)k",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e58",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Operating WC",
+      "valueString": "\u20ac(978)k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e59",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Operating WC",
+      "valueString": "\u20ac(1,114)k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e60",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Social and tax debt",
+      "valueString": "\u20ac(359)k",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e61",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Social and tax debt",
+      "valueString": "\u20ac(929)k",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e62",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Social and tax debt",
+      "valueString": "\u20ac(338)k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e63",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Social and tax debt",
+      "valueString": "\u20ac(478)k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e64",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other receivables",
+      "valueString": "\u20ac3,737k",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e65",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other receivables",
+      "valueString": "\u20ac2,210k",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e66",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other receivables",
+      "valueString": "\u20ac286k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e67",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other receivables",
+      "valueString": "\u20ac156k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e68",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other debt",
+      "valueString": "\u20ac(52)k",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e69",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other debt",
+      "valueString": "\u20ac(4)k",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e70",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other debt",
+      "valueString": "\u20ac(4)k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e71",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other debt",
+      "valueString": "-",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e72",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-operating WC",
+      "valueString": "\u20ac3,326k",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e73",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-operating WC",
+      "valueString": "\u20ac1,277k",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e74",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-operating WC",
+      "valueString": "\u20ac(56)k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e75",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-operating WC",
+      "valueString": "\u20ac(323)k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e76",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Working Capital",
+      "valueString": "\u20ac624k",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e77",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Working Capital",
+      "valueString": "\u20ac212k",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e78",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Working Capital",
+      "valueString": "\u20ac(1,035)k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e79",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Working Capital",
+      "valueString": "\u20ac(1,437)k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e80",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cash",
+      "valueString": "\u20ac59k",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e81",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cash",
+      "valueString": "\u20ac14k",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e82",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cash",
+      "valueString": "\u20ac1,990k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e83",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cash",
+      "valueString": "\u20ac1,883k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e84",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Short-term investment",
+      "valueString": "\u20ac2k",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e85",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Short-term investment",
+      "valueString": "-",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e86",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Short-term investment",
+      "valueString": "-",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e87",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Short-term investment",
+      "valueString": "-",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e88",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Loans",
+      "valueString": "\u20ac(1,132)k",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e89",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Loans",
+      "valueString": "\u20ac(873)k",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e90",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Loans",
+      "valueString": "\u20ac(1,504)k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e91",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Loans",
+      "valueString": "\u20ac(682)k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements. Comprises bank loans and PGE."
+    },
+    {
+      "id": "e92",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Shareholder loan",
+      "valueString": "\u20ac(270)k",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e93",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Shareholder loan",
+      "valueString": "\u20ac(482)k",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e94",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Shareholder loan",
+      "valueString": "\u20ac(69)k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e95",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Shareholder loan",
+      "valueString": "\u20ac(27)k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements. From Georges-Antoine Strauch."
+    },
+    {
+      "id": "e96",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Net cash / Net debt",
+      "valueString": "\u20ac(1,340)k",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e97",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Net cash / Net debt",
+      "valueString": "\u20ac(1,341)k",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e98",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Net cash / Net debt",
+      "valueString": "\u20ac418k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e99",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Net cash / Net debt",
+      "valueString": "\u20ac1,174k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e100",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Bond redemption premium",
+      "valueString": "-",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e101",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Bond redemption premium",
+      "valueString": "-",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e102",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Bond redemption premium",
+      "valueString": "\u20ac10k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e103",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Bond redemption premium",
+      "valueString": "-",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e104",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Provisions",
+      "valueString": "-",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e105",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Provisions",
+      "valueString": "-",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e106",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Provisions",
+      "valueString": "\u20ac(2)k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e107",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Provisions",
+      "valueString": "\u20ac(5)k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e108",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Conversion gap",
+      "valueString": "-",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e109",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Conversion gap",
+      "valueString": "-",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e110",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Conversion gap",
+      "valueString": "-",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e111",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Conversion gap",
+      "valueString": "\u20ac(3)k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e112",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Net assets",
+      "valueString": "\u20ac1,007k",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e113",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Net assets",
+      "valueString": "\u20ac462k",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e114",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Net assets",
+      "valueString": "\u20ac1,007k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e115",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Net assets",
+      "valueString": "\u20ac1,337k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e116",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Shareholders' Equity",
+      "valueString": "\u20ac1,007k",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e117",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Shareholders' Equity",
+      "valueString": "\u20ac462k",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e118",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Shareholders' Equity",
+      "valueString": "\u20ac1,007k",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e119",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Shareholders' Equity",
+      "valueString": "\u20ac1,337k",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management \u2013 Financial statements"
+    },
+    {
+      "id": "e120",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Operating WC (% of revenue)",
+      "valueString": "(94.2%)",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e121",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Operating WC (% of revenue)",
+      "valueString": "(33.5%)",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e122",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Operating WC (% of revenue)",
+      "valueString": "(31.3%)",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e123",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Operating WC (% of revenue)",
+      "valueString": "(31.8%)",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e124",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-operating WC (% of revenue)",
+      "valueString": "115.9%",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e125",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-operating WC (% of revenue)",
+      "valueString": "40.1%",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e126",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-operating WC (% of revenue)",
+      "valueString": "(1.8%)",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e127",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-operating WC (% of revenue)",
+      "valueString": "(9.2%)",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e128",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Working Capital (% of revenue)",
+      "valueString": "21.7%",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e129",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Working Capital (% of revenue)",
+      "valueString": "6.7%",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e130",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Working Capital (% of revenue)",
+      "valueString": "(33.1%)",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e131",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Working Capital (% of revenue)",
+      "valueString": "(41.0%)",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e132",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Financial debt / EBITDA",
+      "valueString": "1.2x",
+      "fiscalPeriod": "Dec18A",
+      "scope": "Articque",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e133",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Financial debt / EBITDA",
+      "valueString": "1.1x",
+      "fiscalPeriod": "Dec19A",
+      "scope": "Articque",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e134",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Financial debt / EBITDA",
+      "valueString": "1.7x",
+      "fiscalPeriod": "Dec20A",
+      "scope": "Articque",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e135",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Financial debt / EBITDA",
+      "valueString": "0.6x",
+      "fiscalPeriod": "Dec21A",
+      "scope": "Articque",
+      "sourceNote": "Management"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e3",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "pekg:seeksTransaction"
+    },
+    {
+      "source": "e7",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e36",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e40",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e41",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e42",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e43",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e44",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e45",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e47",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e48",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e49",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e50",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e51",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e52",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e53",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e54",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e55",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e56",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e57",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e58",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e59",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e60",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e61",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e62",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e63",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e64",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e65",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e66",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e67",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e68",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e69",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e70",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e71",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e72",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e73",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e74",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e75",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e76",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e77",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e78",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e79",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e80",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e81",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e82",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e83",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e84",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e85",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e86",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e87",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e88",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e89",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e90",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e91",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e92",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e93",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e94",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e95",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e96",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e97",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e98",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e99",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e100",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e101",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e102",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e103",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e104",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e105",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e106",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e107",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e108",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e109",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e110",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e111",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e112",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e113",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e114",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e115",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e116",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e117",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e118",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e119",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e120",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e121",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e122",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e123",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e124",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e125",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e126",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e127",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e128",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e129",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e130",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e131",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e132",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e133",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e134",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e135",
+      "type": "pekg:reportsFinancialMetric"
+    }
+  ]
+}

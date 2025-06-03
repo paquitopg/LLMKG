@@ -1,0 +1,75 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "The target company for Project System_big, offering automated translation software solutions."
+    },
+    {
+      "id": "e2",
+      "type": "pekg:ProductOrService",
+      "name": "Automated Translation Software Solutions",
+      "category": "Software",
+      "description": "One-stop-shop for expert automated translation software solutions."
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Technology",
+      "name": "Automated Translation",
+      "description": "Core technology enabling the translation software solutions."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company mentioned in the confidentiality notice on the page."
+    },
+    {
+      "id": "e5",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisor for Project System_big"
+    },
+    {
+      "id": "e6",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisor for Project System_big"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Potential Sale/Acquisition",
+      "status": "Teaser Phase"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e7",
+      "target": "e5",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e7",
+      "target": "e6",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

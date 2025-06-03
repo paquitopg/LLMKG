@@ -1,0 +1,772 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Articque provides an industry-agnostic technology and platform for spatial data science, serving private, government, and non-for-profit organizations. Its solutions are designed for easy integration and can utilize various data sources. The company has a loyal client base and high revenue spread.",
+      "keyStrengths": [
+        "Highly versatile design adaptable to any organization size and type",
+        "Industry-agnostic technology applicable across various sectors (automotive, healthcare, public institutions, banking, housing, unions, etc.)",
+        "Platform easily integrates into existing IT systems",
+        "Platform can be populated by diverse data sources (proprietary data, public sources, open data)",
+        "Loyal client base with c. 630 clients in FY21A",
+        "Significant client longevity: 450 clients for >=5 years, 200 clients for >=10 years",
+        "High revenue spread with low client concentration (Top 20 clients accounted for 34% of FY21A billings)",
+        "Historically low churn rate (7.2% in FY22L, in line with historical data)",
+        "Strong domestic presence (97% of FY21A billings generated domestically)"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "alias": [
+        "DDA & Company"
+      ],
+      "roleInContext": "Advisor for Project Inuk"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "status": "Strictly Private & Confidential",
+      "transactionPerimeter": "Potential transaction involving Articque, with ChapsVision as a key party."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company involved in Project Inuk."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Articque Platform",
+      "alias": [
+        "C&D Online Articque Platform"
+      ],
+      "category": "Software Platform",
+      "description": "A fully-integrated platform for the private and public sector. It can be integrated easily into existing IT systems and populated by any data source including proprietary data, public sources and/or open data. Includes C&D Online capabilities."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Cartes & Donn\u00e9es",
+      "category": "Software / Data Product",
+      "description": "Product or module by Articque, visually shown as an input or component related to the Articque Platform in the diagram."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Technology",
+      "name": "Spatial data science",
+      "description": "Core technology capability of Articque, used to enhance business outcomes."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Technology",
+      "name": "Open data",
+      "description": "Data source that can populate Articque's platform."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Technology",
+      "name": "Public data",
+      "description": "Data source that can populate Articque's platform, including public sources."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Technology",
+      "name": "Proprietary data",
+      "description": "Data source that can populate Articque's platform."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Total number of clients",
+      "kpiValueString": "c. 630",
+      "kpiDateOrPeriod": "FY21A",
+      "description": "Total loyal client base of Articque."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Number of clients (>= 5 years)",
+      "kpiValueString": "450",
+      "kpiDateOrPeriod": "FY21A",
+      "description": "Number of clients that have been with Articque for at least 5 years."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings from clients (>= 5 years)",
+      "valueString": "\u20ac2.2m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Represents 56% of FY21A billings",
+      "sourceNote": "Source: Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Number of clients (>= 10 years)",
+      "kpiValueString": "200",
+      "kpiDateOrPeriod": "FY21A",
+      "description": "Number of clients that have been with Articque for at least 10 years."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings from clients (>= 10 years)",
+      "valueString": "\u20ac1m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Represents 26% of FY21A billings",
+      "sourceNote": "Source: Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Churn rate",
+      "kpiValueString": "7.2%",
+      "kpiDateOrPeriod": "FY22L",
+      "description": "In line with historical data. Source: Management."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top 20 clients billings percentage of total billings",
+      "valueString": "36%",
+      "fiscalPeriod": "FY19A",
+      "sourceNote": "Source: Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top 20 clients billings percentage of total billings",
+      "valueString": "29%",
+      "fiscalPeriod": "FY20A",
+      "sourceNote": "Source: Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top 20 clients billings percentage of total billings",
+      "valueString": "34%",
+      "fiscalPeriod": "FY21A",
+      "sourceNote": "Source: Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Domestic billings percentage",
+      "valueString": "97%",
+      "fiscalPeriod": "FY21A",
+      "sourceNote": "Source: Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Europe billings percentage",
+      "valueString": "c. 3%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Balance of billings, mainly in Europe",
+      "sourceNote": "Source: Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Automotive"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Healthcare"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Public Institutions"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Banking"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Housing"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Unions"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Retail and Food industry"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Transport"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Bank & Insurance"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Sales",
+      "description": "End user application area for Articque's platform."
+    },
+    {
+      "id": "e32",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Marketing",
+      "description": "End user application area for Articque's platform."
+    },
+    {
+      "id": "e33",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Operations",
+      "description": "End user application area for Articque's platform."
+    },
+    {
+      "id": "e34",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Observatory",
+      "description": "End user application area for Articque's platform."
+    },
+    {
+      "id": "e35",
+      "type": "pekg:Location",
+      "locationName": "Domestic (France)",
+      "locationType": "Market Region"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:Location",
+      "locationName": "Europe",
+      "locationType": "Market Region"
+    },
+    {
+      "id": "e37",
+      "type": "Military Branch",
+      "name": "ARM\u00c9E DE L'AIR"
+    },
+    {
+      "id": "e38",
+      "type": "National Solidarity Fund for Autonomy",
+      "name": "cnsa"
+    },
+    {
+      "id": "e39",
+      "type": "National Health Insurance",
+      "name": "l'Assurance Maladie"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:Company",
+      "name": "OPCO 2i"
+    },
+    {
+      "id": "e41",
+      "type": "National Institute of Sport, Expertise, and Performance",
+      "name": "INSEP"
+    },
+    {
+      "id": "e42",
+      "type": "Central Bank",
+      "name": "BANQUE DE FRANCE"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:Company",
+      "name": "C2RP HAUTS-DE-FRANCE"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:Company",
+      "name": "GROUPE IMA"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:Company",
+      "name": "MUTUALIT\u00c9 FRAN\u00c7AISE"
+    },
+    {
+      "id": "e46",
+      "type": "pekg:Company",
+      "name": "Cr\u00e9dit Agricole",
+      "alias": [
+        "CA"
+      ]
+    },
+    {
+      "id": "e47",
+      "type": "pekg:Company",
+      "name": "CAISSE D'EPARGNE Loire-Centre"
+    },
+    {
+      "id": "e48",
+      "type": "pekg:Company",
+      "name": "SNCF R\u00e9seau",
+      "alias": [
+        "R\u00c9SEAU SNCF"
+      ]
+    },
+    {
+      "id": "e49",
+      "type": "pekg:Company",
+      "name": "WURTH"
+    },
+    {
+      "id": "e50",
+      "type": "pekg:Company",
+      "name": "ALKOR"
+    },
+    {
+      "id": "e51",
+      "type": "pekg:Company",
+      "name": "P\u00c2TISSERIES GOURMANDES"
+    },
+    {
+      "id": "e52",
+      "type": "pekg:Company",
+      "name": "Kubota"
+    },
+    {
+      "id": "e53",
+      "type": "pekg:Company",
+      "name": "xylem"
+    },
+    {
+      "id": "e54",
+      "type": "pekg:Company",
+      "name": "Coloplast"
+    },
+    {
+      "id": "e55",
+      "type": "pekg:Company",
+      "name": "GSK"
+    },
+    {
+      "id": "e56",
+      "type": "pekg:Company",
+      "name": "Bristol Myers Squibb"
+    },
+    {
+      "id": "e57",
+      "type": "pekg:Company",
+      "name": "astellas"
+    },
+    {
+      "id": "e58",
+      "type": "pekg:Company",
+      "name": "NOVARTIS"
+    },
+    {
+      "id": "e59",
+      "type": "pekg:Company",
+      "name": "FO (Force Ouvri\u00e8re)",
+      "description": "Trade Union"
+    },
+    {
+      "id": "e60",
+      "type": "pekg:Company",
+      "name": "UROS"
+    },
+    {
+      "id": "e61",
+      "type": "pekg:Company",
+      "name": "CFE CGC",
+      "description": "Trade Union"
+    },
+    {
+      "id": "e62",
+      "type": "pekg:Company",
+      "name": "CERFRANCE"
+    },
+    {
+      "id": "e63",
+      "type": "pekg:Company",
+      "name": "Interfel",
+      "description": "Interprofessional association for fresh fruit and vegetables"
+    },
+    {
+      "id": "e64",
+      "type": "pekg:Company",
+      "name": "TOYOTA"
+    },
+    {
+      "id": "e65",
+      "type": "pekg:Company",
+      "name": "IVECO"
+    },
+    {
+      "id": "e66",
+      "type": "pekg:Company",
+      "name": "SGS"
+    },
+    {
+      "id": "e67",
+      "type": "pekg:Company",
+      "name": "AUTOSUR"
+    },
+    {
+      "id": "e68",
+      "type": "pekg:Company",
+      "name": "KEOLIS"
+    },
+    {
+      "id": "e69",
+      "type": "pekg:Company",
+      "name": "VOLVO TRUCKS"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e5",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e8",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e9",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e10",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e31",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e32",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e33",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e34",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e36",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e3",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "pekg:seeksTransaction"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e40",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e41",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e42",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e43",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e44",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e45",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e46",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e47",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e48",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e49",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e50",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e51",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e52",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e53",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e54",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e55",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e56",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e57",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e58",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e59",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e60",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e61",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e62",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e63",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e64",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e65",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e66",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e67",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e68",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e69",
+      "type": "pekg:hasClientCompany"
+    }
+  ]
+}

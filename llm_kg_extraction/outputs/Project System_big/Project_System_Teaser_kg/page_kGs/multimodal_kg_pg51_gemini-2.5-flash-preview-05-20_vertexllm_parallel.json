@@ -1,0 +1,304 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "alias": [
+        "Systran",
+        "The Group"
+      ],
+      "keyStrengths": [
+        "Market-leading translation technologies",
+        "cutting-edge machine-learning capabilities",
+        "owns unique rights to web data",
+        "expertise in engines training",
+        "software efficiency",
+        "ambitious R&D roadmap",
+        "track-record of innovations"
+      ],
+      "growthStrategySummary": "data collection is at the core of Systran\u2019s strategy"
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm for Project System_big"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm for Project System_big"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Potential Sale/Acquisition",
+      "status": "Ongoing"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Technology",
+      "name": "Machine-learning capabilities",
+      "description": "Cutting-edge capabilities combined with translation technologies."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Data collection",
+      "description": "At the core of Systran's strategy as a key input to neural machine translation\u2019s accuracy. Data collected by Systran for 20 years and cleaned by Systran\u2019s data scientists."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Technology",
+      "name": "Web data",
+      "description": "Unique data to which Systran owns rights (from an Intellectual Property standpoint), collected for the past 20 years and cleaned to serve as input for translation training processes."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Technology",
+      "name": "Neural machine translation",
+      "description": "Key technology for translation accuracy, with data collection as a core input."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Technology",
+      "name": "Translation models",
+      "description": "Continuously trained by Systran and customers relying on customized terminologies, reflecting industry terminology and translator\u2019s communication habits."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Company",
+      "name": "Customers",
+      "description": "Customers of Systran who continuously train translation models with Systran."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Systran's translation software",
+      "category": "Translation Software",
+      "description": "Can process up to 1bn requests per day and translate text from a large set of files (Incl. MS PowerPoint, PDF, pictures)."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "Maintenance services",
+      "category": "Service",
+      "description": "Includes an update patch that constantly adds additional capabilities."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "Update patch",
+      "category": "Software Update",
+      "description": "Constantly adds additional capabilities, part of maintenance services."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:ProductOrService",
+      "name": "OpenNMT",
+      "category": "Open-source ecosystem",
+      "description": "An open-source ecosystem for neural machine translation and neural sequence learning, created by Harvard NLP Group and Systran. Trained and improved based on inputs of 3rd party developers, with Systran reviewing public developers' inputs for data privacy."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Company",
+      "name": "Harvard NLP Group",
+      "description": "Co-creator of the OpenNMT open-source ecosystem."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Technology",
+      "name": "Neural sequence learning",
+      "description": "Technology related to the OpenNMT ecosystem."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Company",
+      "name": "3rd party developers",
+      "description": "Developers whose inputs train and improve the OpenNMT ecosystem, and whose public inputs are reviewed by Systran."
+    },
+    {
+      "id": "e18",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Software efficiency",
+      "description": "A key characteristic of Systran's translation software."
+    },
+    {
+      "id": "e19",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Expertise in engines training",
+      "description": "A key capability of Systran."
+    },
+    {
+      "id": "e20",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "R&D roadmap",
+      "description": "Ambitious R&D roadmap based on a one-of-a-kind track-record of innovations."
+    },
+    {
+      "id": "e21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Track-record of innovations",
+      "description": "One-of-a-kind track-record of innovations."
+    },
+    {
+      "id": "e22",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Requests processed per day",
+      "kpiValueString": "up to 1bn requests",
+      "kpiDateOrPeriod": "per day",
+      "description": "Capacity of Systran's translation software."
+    },
+    {
+      "id": "e23",
+      "type": "pekg:Technology",
+      "name": "Neural network",
+      "description": "Technology used by Systran and customers to train translation models."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e12",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e15",
+      "target": "e14",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e14",
+      "target": "e8",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e14",
+      "target": "e16",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e14",
+      "target": "e17",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e11",
+      "target": "e22",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e10",
+      "target": "e23",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e6",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e9",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e9",
+      "target": "e23",
+      "type": "pekg:usesTechnology"
+    }
+  ]
+}

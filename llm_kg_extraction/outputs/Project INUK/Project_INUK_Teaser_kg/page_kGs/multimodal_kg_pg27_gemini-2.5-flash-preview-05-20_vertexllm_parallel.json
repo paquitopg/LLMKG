@@ -1,0 +1,454 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Company demonstrating the compelling potential of its recurring revenue model, successfully shifted from traditional perpetual software licensing towards a subscription-only model.",
+      "keyStrengths": [
+        "ability to convert, retain and upsell its customer base"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:ProductOrService",
+      "name": "CDO",
+      "category": "SaaS solution"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Articque Platform",
+      "alias": [
+        "AP"
+      ]
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Perpetual software licensing",
+      "category": "Software Licensing Model",
+      "description": "Traditional software licensing model"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "Subscription-only model",
+      "category": "Software Licensing Model",
+      "description": "New software licensing model focused on recurring revenue"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Maintenance-to-subscription (M2S) transition",
+      "category": "Service Model Transition",
+      "description": "Transition of maintenance services to a subscription model"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK",
+      "status": "Strictly Private & Confidential"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "59%",
+      "fiscalPeriod": "FY18A",
+      "isRecurring": true,
+      "scope": "total billings",
+      "sourceNote": "Management \u2013 Billings"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "59%",
+      "fiscalPeriod": "FY19A",
+      "isRecurring": true,
+      "scope": "total billings",
+      "sourceNote": "Management \u2013 Billings"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "68%",
+      "fiscalPeriod": "FY20A",
+      "isRecurring": true,
+      "scope": "total billings",
+      "sourceNote": "Management \u2013 Billings"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "72%",
+      "fiscalPeriod": "FY21A",
+      "isRecurring": true,
+      "scope": "total billings",
+      "sourceNote": "Management \u2013 Billings"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "82%",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": true,
+      "scope": "total billings",
+      "sourceNote": "Management \u2013 Billings"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Billings",
+      "valueString": "41%",
+      "fiscalPeriod": "FY18A",
+      "isRecurring": false,
+      "scope": "total billings",
+      "sourceNote": "Management \u2013 Billings"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Billings",
+      "valueString": "41%",
+      "fiscalPeriod": "FY19A",
+      "isRecurring": false,
+      "scope": "total billings",
+      "sourceNote": "Management \u2013 Billings"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Billings",
+      "valueString": "32%",
+      "fiscalPeriod": "FY20A",
+      "isRecurring": false,
+      "scope": "total billings",
+      "sourceNote": "Management \u2013 Billings"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Billings",
+      "valueString": "28%",
+      "fiscalPeriod": "FY21A",
+      "isRecurring": false,
+      "scope": "total billings",
+      "sourceNote": "Management \u2013 Billings"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Billings",
+      "valueString": "18%",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": false,
+      "scope": "total billings",
+      "sourceNote": "Management \u2013 Billings"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Average billings per client",
+      "valueString": "\u20ac4,361k",
+      "fiscalPeriod": "FY19A",
+      "sourceNote": "Management \u2013 Billings"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Average billings per client",
+      "valueString": "\u20ac4,925k",
+      "fiscalPeriod": "FY20A",
+      "sourceNote": "Management \u2013 Billings"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Average billings per client",
+      "valueString": "\u20ac6,110k",
+      "fiscalPeriod": "FY21A",
+      "sourceNote": "Management \u2013 Billings"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Average billings per client",
+      "valueString": "\u20ac7,014k",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management \u2013 Billings"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "\u20ac2,747k",
+      "fiscalPeriod": "FY21A",
+      "isRecurring": true,
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "\u20ac3,468k",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": true,
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring billings net variation",
+      "valueString": "+\u20ac721k",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": true,
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:FinancialMetric",
+      "metricName": "New Logo Billings Contribution",
+      "valueString": "\u20ac293k",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Upsell Billings Contribution",
+      "valueString": "\u20ac522k",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:FinancialMetric",
+      "metricName": "3-year subs Billings Contribution",
+      "valueString": "\u20ac258k",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Churn Billings Impact",
+      "valueString": "-\u20ac198k",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Downsell Billings Impact",
+      "valueString": "-\u20ac90k",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "metricName": "End of legacy product Billings Impact",
+      "valueString": "-\u20ac64k",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Switch to subscription initiated",
+      "eventType": "Product Strategy Change",
+      "dateOrYear": "July 2017",
+      "description": "Management\u2019s decision to move away from the traditional perpetual licensing model to push recurring revenue in the product mix."
+    },
+    {
+      "id": "e34",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "AP M2S transition started",
+      "eventType": "Service Model Transition",
+      "dateOrYear": "2021",
+      "description": "Articque Platform (AP) started its Maintenance-to-subscription (M2S) transition."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e33",
+      "target": "e7",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e33",
+      "target": "e6",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e34",
+      "target": "e8",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e9",
+      "target": "e2",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e9",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:reportsFinancialMetric"
+    }
+  ]
+}

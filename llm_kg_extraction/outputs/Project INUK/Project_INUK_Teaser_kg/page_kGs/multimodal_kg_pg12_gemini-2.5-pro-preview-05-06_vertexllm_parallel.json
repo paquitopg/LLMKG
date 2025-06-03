@@ -1,0 +1,47 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "status": "Strictly Private & Confidential",
+      "transactionPerimeter": "Concerns the sale of Articque",
+      "typeSought": "Sale of Target Company"
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisor to Articque for Project Inuk"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Target company in Project Inuk. This page (page 12) is the beginning of the 'Products and Services' section related to Articque."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company mentioned in the footer in direct relation to Project Inuk, potentially as an interested party or acquirer."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e3",
+      "target": "e1",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e3",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e1",
+      "type": "pekg:seeksTransaction"
+    }
+  ]
+}

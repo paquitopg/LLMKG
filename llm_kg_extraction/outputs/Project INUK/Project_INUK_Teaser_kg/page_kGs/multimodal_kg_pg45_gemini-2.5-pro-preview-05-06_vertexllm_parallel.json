@@ -1,0 +1,416 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Target company. Employer of several key managers listed on the page."
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "alias": [
+        "DDA & Company"
+      ],
+      "roleInContext": "Advisor for Project INUK"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK",
+      "description": "Codename for a transaction involving Articque, mentioned in the page footer."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Person",
+      "fullName": "Martin Lienesch",
+      "biographySummary": "+10 years of experience. Professional experience includes roles as Head of Consulting hub, Web Development Project Manager, Geomatics research officer at Articque, and GIS research officer at A\u00e9roports de Paris.",
+      "educationHighlights": [
+        "Master in geomatics applied to urban studies and risks from Universit\u00e9 Cergy",
+        "Certified Prof. Scrum Master 1"
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Position",
+      "titleName": "Head of Consulting hub",
+      "department": "Consulting hub"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Position",
+      "titleName": "Web Development Project Manager"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Position",
+      "titleName": "Geomatics research officer"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Company",
+      "name": "A\u00e9roports de Paris",
+      "description": "Past employer of Martin Lienesch (2013 \u2013 2014)."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Position",
+      "titleName": "GIS research officer"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Person",
+      "fullName": "Mathieu Guitton",
+      "biographySummary": "+10 years of experience. Professional experience includes roles as Head of Training hub and Trainer-cartograph at Articque, Assistant engineer in cartography, GIS technician for Project Laharisk at Agence Nationale de la Recherche, and Teacher in secondary school.",
+      "educationHighlights": [
+        "Master in mountain dynamics and sensitive territories from Universit\u00e9 Clermont-Ferrand"
+      ]
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Position",
+      "titleName": "Head of Training hub",
+      "department": "Training hub"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Position",
+      "titleName": "Trainer-cartograph"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Position",
+      "titleName": "Assistant engineer in cartography",
+      "description": "Role from Universit\u00e9 Clermont-Ferrand (2013 \u2013 2014)."
+    },
+    {
+      "id": "e14",
+      "type": "Research Agency",
+      "name": "Agence Nationale de la Recherche",
+      "description": "Past employer of Mathieu Guitton for Project Laharisk (2012 \u2013 2013)."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Position",
+      "titleName": "GIS technician",
+      "description": "For Project Laharisk at Agence Nationale de la Recherche (2012 \u2013 2013)."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Position",
+      "titleName": "Teacher in secondary school"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Person",
+      "fullName": "Josip Dupuit",
+      "biographySummary": "+20 years of experience. Professional experience includes roles as Head of IT and data compliance at Articque, Project manager at Direct-Amidis, IT system administrator, and Website and IT manger.",
+      "educationHighlights": [
+        "Apprenticeship in software engineering",
+        "BTS in IT management"
+      ]
+    },
+    {
+      "id": "e18",
+      "type": "pekg:Position",
+      "titleName": "Head of IT and data compliance",
+      "department": "IT and data compliance"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:Company",
+      "name": "Direct-Amidis",
+      "description": "Past employer of Josip Dupuit (2010 \u2013 2014)."
+    },
+    {
+      "id": "e20",
+      "type": "pekg:Position",
+      "titleName": "Project manager"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:Position",
+      "titleName": "IT system administrator"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:Position",
+      "titleName": "Website and IT manger"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:Person",
+      "fullName": "Laurence Marchais",
+      "biographySummary": "+20 years of experience. Professional experience includes roles as Sales administrator and pay manager, ADV & Payroll manager, Accountant and HR Assistant, Junior Accountant, Executive Assistant at Articque, and Senior Accountant at Articque Group.",
+      "educationHighlights": [
+        "BTS in Accounting",
+        "BTS in Executive Assistance"
+      ]
+    },
+    {
+      "id": "e24",
+      "type": "pekg:Position",
+      "titleName": "Sales administrator and pay manager"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:Position",
+      "titleName": "ADV & Payroll manager"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:Position",
+      "titleName": "Accountant and HR Assistant"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:Company",
+      "name": "Articque Group",
+      "description": "Past employer of Laurence Marchais (2011 \u2013 2019)."
+    },
+    {
+      "id": "e28",
+      "type": "pekg:Position",
+      "titleName": "Senior Accountant"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:Position",
+      "titleName": "Junior Accountant"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:Position",
+      "titleName": "Executive Assistant"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company mentioned in the footer in relation to Project Inuk."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e3",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e3",
+      "target": "e31",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e4",
+      "target": "e5",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e5",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e4",
+      "target": "e6",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e6",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e4",
+      "target": "e7",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e7",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e8",
+      "target": "e4",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e4",
+      "target": "e9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e9",
+      "target": "e8",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e10",
+      "target": "e11",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e11",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e10",
+      "target": "e12",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e12",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e10",
+      "target": "e13",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e10",
+      "target": "e15",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e15",
+      "target": "e14",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e10",
+      "target": "e16",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e17",
+      "target": "e18",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e18",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e19",
+      "target": "e17",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e17",
+      "target": "e20",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e20",
+      "target": "e19",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e17",
+      "target": "e21",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e17",
+      "target": "e22",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e23",
+      "target": "e24",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e24",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e23",
+      "target": "e25",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e25",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e23",
+      "target": "e26",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e26",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e27",
+      "target": "e23",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e23",
+      "target": "e28",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e28",
+      "target": "e27",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e23",
+      "target": "e29",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e29",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e23",
+      "target": "e30",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e30",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    }
+  ]
+}

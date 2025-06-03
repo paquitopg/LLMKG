@@ -1,0 +1,100 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "industry": "Language Technology",
+      "sector": "Software",
+      "keyStrengths": [
+        "Artificial Intelligence",
+        "Language Processing"
+      ],
+      "description": "Target company for Project System_big, implied to be a leader in AI and language processing based on visual elements."
+    },
+    {
+      "id": "e2",
+      "type": "Investment Bank",
+      "name": "Rothschild & Co",
+      "roleInContext": "Financial Advisor"
+    },
+    {
+      "id": "e3",
+      "type": "Investment Bank",
+      "name": "Samsung Securities",
+      "roleInContext": "Financial Advisor"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Sale",
+      "status": "Ongoing",
+      "dealRationaleHighlights": [
+        "Presentation of historical financials"
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company for whom the document is confidential, likely a party involved in the transaction (e.g., potential acquirer)."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Historical financials",
+      "scope": "Company",
+      "description": "Section title indicating an overview of past financial performance."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Technology",
+      "name": "Artificial Intelligence",
+      "description": "Core technology suggested by the brain-like structure and interconnected nodes in the image, indicating advanced computational capabilities."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Technology",
+      "name": "Language Processing",
+      "description": "Core technology suggested by foreign characters and translation-related icons on the laptop screen in the image, indicating capabilities in language understanding and translation."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e4",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    }
+  ]
+}

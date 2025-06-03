@@ -1,0 +1,173 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:ProductOrService",
+      "name": "DataComposer",
+      "description": "Automated Data Processor"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Launch of Project 1",
+      "eventType": "product launch",
+      "dateOrYear": "2022 - Q2"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Internal tests",
+      "eventType": "testing",
+      "dateOrYear": "2022 - Q2"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Minimum Viable Product (Closed Beta)",
+      "eventType": "product launch",
+      "dateOrYear": "2022 - Q2"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "DataViz",
+      "description": "Graphic Rendering Tool"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Launch of Project 2",
+      "eventType": "product launch",
+      "dateOrYear": "2022 - Q3"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Development on CDO and feedback analysis",
+      "eventType": "development",
+      "dateOrYear": "2022 - Q4"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Deployment to target customers",
+      "eventType": "deployment",
+      "dateOrYear": "2022 - Q4"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Deployment to all customers, including AP clients",
+      "eventType": "deployment",
+      "dateOrYear": "2023 - S1"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Launch of a Graphic Rendering Tool",
+      "eventType": "product launch",
+      "dateOrYear": "2023 - S1"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Launch of a Print Rendering",
+      "eventType": "product launch",
+      "dateOrYear": "2023 - S1"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Articque customer project shift on new technologies",
+      "eventType": "shift in technologies",
+      "dateOrYear": "2023 - S2"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Advisor",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Advisor",
+      "name": "DDA & Company France SAS"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e2",
+      "target": "e5",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e2",
+      "target": "e8",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e2",
+      "target": "e9",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e2",
+      "target": "e10",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e6",
+      "target": "e7",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e6",
+      "target": "e11",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e6",
+      "target": "e12",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

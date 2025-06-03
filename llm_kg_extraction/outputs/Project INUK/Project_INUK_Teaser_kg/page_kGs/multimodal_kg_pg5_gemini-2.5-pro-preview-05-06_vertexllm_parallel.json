@@ -1,0 +1,33 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "status": "Strictly Private & Confidential"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "DDA&Company",
+      "roleInContext": "Advisor for Project Inuk"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e2",
+      "target": "e1",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

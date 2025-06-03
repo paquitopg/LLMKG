@@ -1,0 +1,350 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "Target Company"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "Rothschild & Co"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "Samsung Securities"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "KPMG"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Confidential party related to the document"
+    },
+    {
+      "id": "e6",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm for Project System_big"
+    },
+    {
+      "id": "e7",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm for Project System_big"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Potential Sale/Acquisition",
+      "status": "Teaser Phase"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "Enterprise Annual License Offering",
+      "category": "Enterprise Solution",
+      "description": "Includes product license, maintenance, and services components; Customizable client pricing"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "Enterprise Perpetual License Offering",
+      "category": "Enterprise Solution",
+      "description": "Includes product license, maintenance, and services components; Larger payment charged upon purchase; Customizable client pricing"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Translate pro",
+      "category": "Cloud Solution",
+      "description": "B2C Cloud solution; Multiple paid offer plans depending on use; Charged either monthly or annually"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Translate Enterprise",
+      "category": "Cloud Solution",
+      "description": "B2B Cloud solution; Multiple paid offer plans depending on use; Charged either monthly or annually"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "Cofounded Projects",
+      "category": "Service",
+      "description": "Specific services such as Proof of Concept or research projects for government entities; Invoiced on an agreed amount to cover incurred expenses"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:ProductOrService",
+      "name": "Desktop License",
+      "category": "Product License",
+      "description": "No longer distributed as of December 2021; Run-off of remaining licenses"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:RevenueStream",
+      "name": "Product License and Upgrades Revenue",
+      "description": "Revenue from product licenses and upgrades."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:RevenueStream",
+      "name": "Maintenance Revenue",
+      "description": "Revenue from maintenance services; Bundled with annual license, thus price is included in the license fees; Represents 18-22% of license price"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:RevenueStream",
+      "name": "Services Revenue",
+      "description": "Revenue from on-demand services."
+    },
+    {
+      "id": "e18",
+      "type": "pekg:RevenueStream",
+      "name": "Cloud Revenue Stream",
+      "description": "Revenue from cloud solutions."
+    },
+    {
+      "id": "e19",
+      "type": "pekg:RevenueStream",
+      "name": "Other Revenue Stream",
+      "description": "Revenue from cofounded projects and desktop licenses."
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue Type",
+      "valueString": "Recurring",
+      "isRecurring": true,
+      "scope": "General",
+      "sourceNote": "KPMG"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue Type",
+      "valueString": "One-time basis",
+      "isRecurring": false,
+      "scope": "General",
+      "sourceNote": "KPMG"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance as percentage of license price",
+      "valueString": "18-22%",
+      "scope": "Maintenance Revenue",
+      "sourceNote": "KPMG"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "B2C Cloud Solution",
+      "description": "Business-to-Consumer Cloud solution"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "B2B Cloud Solution",
+      "description": "Business-to-Business Cloud solution"
+    },
+    {
+      "id": "e25",
+      "type": "Government",
+      "name": "Government's organizations"
+    },
+    {
+      "id": "e26",
+      "type": "Government",
+      "name": "Government entities"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Desktop License Discontinuation",
+      "eventType": "Product Discontinuation",
+      "dateOrYear": "December 2021",
+      "description": "Desktop license no longer distributed"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e8",
+      "target": "e6",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e8",
+      "target": "e7",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e9",
+      "target": "e15",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e9",
+      "target": "e16",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e9",
+      "target": "e17",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e10",
+      "target": "e15",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e10",
+      "target": "e16",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e10",
+      "target": "e17",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e11",
+      "target": "e18",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e12",
+      "target": "e18",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e13",
+      "target": "e19",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e14",
+      "target": "e19",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e15",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e15",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e16",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e16",
+      "target": "e22",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e17",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e18",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e19",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e11",
+      "target": "e23",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e12",
+      "target": "e24",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e27",
+      "target": "e14",
+      "type": "pekg:eventInvolvesParty"
+    }
+  ]
+}

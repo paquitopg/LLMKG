@@ -1,0 +1,321 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script>function neighbourhoodHighlight(params) {
+  // console.log("in nieghbourhoodhighlight");
+  allNodes = nodes.get({ returnType: "Object" });
+  // originalNodes = JSON.parse(JSON.stringify(allNodes));
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    highlightActive = true;
+    var i, j;
+    var selectedNode = params.nodes[0];
+    var degrees = 2;
+
+    // mark all nodes as hard to read.
+    for (let nodeId in allNodes) {
+      // nodeColors[nodeId] = allNodes[nodeId].color;
+      allNodes[nodeId].color = "rgba(200,200,200,0.5)";
+      if (allNodes[nodeId].hiddenLabel === undefined) {
+        allNodes[nodeId].hiddenLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+    var connectedNodes = network.getConnectedNodes(selectedNode);
+    var allConnectedNodes = [];
+
+    // get the second degree nodes
+    for (i = 1; i < degrees; i++) {
+      for (j = 0; j < connectedNodes.length; j++) {
+        allConnectedNodes = allConnectedNodes.concat(
+          network.getConnectedNodes(connectedNodes[j])
+        );
+      }
+    }
+
+    // all second degree nodes get a different color and their label back
+    for (i = 0; i < allConnectedNodes.length; i++) {
+      // allNodes[allConnectedNodes[i]].color = "pink";
+      allNodes[allConnectedNodes[i]].color = "rgba(150,150,150,0.75)";
+      if (allNodes[allConnectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[allConnectedNodes[i]].label =
+          allNodes[allConnectedNodes[i]].hiddenLabel;
+        allNodes[allConnectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // all first degree nodes get their own color and their label back
+    for (i = 0; i < connectedNodes.length; i++) {
+      // allNodes[connectedNodes[i]].color = undefined;
+      allNodes[connectedNodes[i]].color = nodeColors[connectedNodes[i]];
+      if (allNodes[connectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[connectedNodes[i]].label =
+          allNodes[connectedNodes[i]].hiddenLabel;
+        allNodes[connectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // the main node gets its own color and its label back.
+    // allNodes[selectedNode].color = undefined;
+    allNodes[selectedNode].color = nodeColors[selectedNode];
+    if (allNodes[selectedNode].hiddenLabel !== undefined) {
+      allNodes[selectedNode].label = allNodes[selectedNode].hiddenLabel;
+      allNodes[selectedNode].hiddenLabel = undefined;
+    }
+  } else if (highlightActive === true) {
+    // console.log("highlightActive was true");
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      // allNodes[nodeId].color = "purple";
+      allNodes[nodeId].color = nodeColors[nodeId];
+      // delete allNodes[nodeId].color;
+      if (allNodes[nodeId].hiddenLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].hiddenLabel;
+        allNodes[nodeId].hiddenLabel = undefined;
+      }
+    }
+    highlightActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    // console.log("Nothing was selected");
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        // allNodes[nodeId].color = {};
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function filterHighlight(params) {
+  allNodes = nodes.get({ returnType: "Object" });
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    filterActive = true;
+    let selectedNodes = params.nodes;
+
+    // hiding all nodes and saving the label
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = true;
+      if (allNodes[nodeId].savedLabel === undefined) {
+        allNodes[nodeId].savedLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+
+    for (let i=0; i < selectedNodes.length; i++) {
+      allNodes[selectedNodes[i]].hidden = false;
+      if (allNodes[selectedNodes[i]].savedLabel !== undefined) {
+        allNodes[selectedNodes[i]].label = allNodes[selectedNodes[i]].savedLabel;
+        allNodes[selectedNodes[i]].savedLabel = undefined;
+      }
+    }
+
+  } else if (filterActive === true) {
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = false;
+      if (allNodes[nodeId].savedLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].savedLabel;
+        allNodes[nodeId].savedLabel = undefined;
+      }
+    }
+    filterActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function selectNode(nodes) {
+  network.selectNodes(nodes);
+  neighbourhoodHighlight({ nodes: nodes });
+  return nodes;
+}
+
+function selectNodes(nodes) {
+  network.selectNodes(nodes);
+  filterHighlight({nodes: nodes});
+  return nodes;
+}
+
+function highlightFilter(filter) {
+  let selectedNodes = []
+  let selectedProp = filter['property']
+  if (filter['item'] === 'node') {
+    let allNodes = nodes.get({ returnType: "Object" });
+    for (let nodeId in allNodes) {
+      if (allNodes[nodeId][selectedProp] && filter['value'].includes((allNodes[nodeId][selectedProp]).toString())) {
+        selectedNodes.push(nodeId)
+      }
+    }
+  }
+  else if (filter['item'] === 'edge'){
+    let allEdges = edges.get({returnType: 'object'});
+    // check if the selected property exists for selected edge and select the nodes connected to the edge
+    for (let edge in allEdges) {
+      if (allEdges[edge][selectedProp] && filter['value'].includes((allEdges[edge][selectedProp]).toString())) {
+        selectedNodes.push(allEdges[edge]['from'])
+        selectedNodes.push(allEdges[edge]['to'])
+      }
+    }
+  }
+  selectNodes(selectedNodes)
+}</script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            
+            
+            
+            
+            
+
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1f77b4", "id": "e1", "label": "Systran SAS", "shape": "dot", "size": 15, "title": "ID: e1\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Systran SAS\u003cbr\u003edescription: Target Company"}, {"color": "#cccccc", "id": "e2", "label": "Rothschild \u0026 Co", "shape": "dot", "size": 15, "title": "ID: e2\u003cbr\u003eType: Financial Advisor\u003cbr\u003ename: Rothschild \u0026 Co\u003cbr\u003eroleInContext: Advisory Firm for Project System_big"}, {"color": "#cccccc", "id": "e3", "label": "Samsung Securities", "shape": "dot", "size": 15, "title": "ID: e3\u003cbr\u003eType: Financial Advisor\u003cbr\u003ename: Samsung Securities\u003cbr\u003eroleInContext: Advisory Firm for Project System_big"}, {"color": "#1f77b4", "id": "e4", "label": "ChapsVision", "shape": "dot", "size": 15, "title": "ID: e4\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: ChapsVision\u003cbr\u003edescription: Watermark on the document, likely related to document ownership/confidentiality."}, {"color": "#1f77b4", "id": "e5", "label": "Salesforce", "shape": "dot", "size": 15, "title": "ID: e5\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Salesforce\u003cbr\u003edescription: Provider of CRM software."}, {"color": "#1f77b4", "id": "e6", "label": "Zendesk", "shape": "dot", "size": 15, "title": "ID: e6\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Zendesk\u003cbr\u003edescription: Provider of client support and bug tracking software."}, {"color": "#1f77b4", "id": "e7", "label": "Jira", "shape": "dot", "size": 15, "title": "ID: e7\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Jira\u003cbr\u003edescription: Provider of bug tracking and documentation software."}, {"color": "#1f77b4", "id": "e8", "label": "Eleven", "shape": "dot", "size": 15, "title": "ID: e8\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Eleven\u003cbr\u003edescription: Source of the VDD report."}, {"color": "#d62728", "id": "e9", "label": "Project System_big", "shape": "dot", "size": 15, "title": "ID: e9\u003cbr\u003eType: pekg:TransactionContext\u003cbr\u003econtextName: Project System_big\u003cbr\u003etypeSought: Potential Sale/Acquisition"}, {"color": "#9467bd", "id": "e10", "label": "Seamless and consistent translation experience", "shape": "dot", "size": 15, "title": "ID: e10\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Seamless and consistent translation experience\u003cbr\u003ecategory: Service"}, {"color": "#ffbb78", "id": "e11", "label": "Operating Model", "shape": "dot", "size": 15, "title": "ID: e11\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Operating Model\u003cbr\u003edescription: Systran\u2019s operating model ensures a seamless and consistent translation experience, with a streamlined and robust operational chain."}, {"color": "#8c564b", "id": "e12", "label": "CRM", "shape": "dot", "size": 15, "title": "ID: e12\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: CRM\u003cbr\u003edescription: Customer Relationship Management technology."}, {"color": "#8c564b", "id": "e13", "label": "Client support", "shape": "dot", "size": 15, "title": "ID: e13\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Client support\u003cbr\u003edescription: Technology for managing client support."}, {"color": "#8c564b", "id": "e14", "label": "Bug tracking", "shape": "dot", "size": 15, "title": "ID: e14\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Bug tracking\u003cbr\u003edescription: Technology for tracking software bugs."}, {"color": "#8c564b", "id": "e15", "label": "Documentation", "shape": "dot", "size": 15, "title": "ID: e15\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Documentation\u003cbr\u003edescription: Technology for managing documentation."}, {"color": "#8c564b", "id": "e16", "label": "MT engines", "shape": "dot", "size": 15, "title": "ID: e16\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: MT engines\u003cbr\u003edescription: Machine Translation engines."}, {"color": "#ffbb78", "id": "e17", "label": "Main tasks", "shape": "dot", "size": 15, "title": "ID: e17\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Main tasks\u003cbr\u003edescription: Key operational tasks performed by Systran."}, {"color": "#ffbb78", "id": "e18", "label": "Lead generation", "shape": "dot", "size": 15, "title": "ID: e18\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Lead generation"}, {"color": "#ffbb78", "id": "e19", "label": "Client acquisition", "shape": "dot", "size": 15, "title": "ID: e19\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Client acquisition"}, {"color": "#ffbb78", "id": "e20", "label": "RFP process for large accounts", "shape": "dot", "size": 15, "title": "ID: e20\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: RFP process for large accounts"}, {"color": "#ffbb78", "id": "e21", "label": "Sales increase on existing accounts", "shape": "dot", "size": 15, "title": "ID: e21\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Sales increase on existing accounts"}, {"color": "#ffbb78", "id": "e22", "label": "Project requirements gathering", "shape": "dot", "size": 15, "title": "ID: e22\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Project requirements gathering"}, {"color": "#ffbb78", "id": "e23", "label": "Material analysis", "shape": "dot", "size": 15, "title": "ID: e23\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Material analysis"}, {"color": "#ffbb78", "id": "e24", "label": "Architecture definition", "shape": "dot", "size": 15, "title": "ID: e24\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Architecture definition"}, {"color": "#ffbb78", "id": "e25", "label": "Resources defined", "shape": "dot", "size": 15, "title": "ID: e25\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Resources defined"}, {"color": "#ffbb78", "id": "e26", "label": "Review of pricing and schedule", "shape": "dot", "size": 15, "title": "ID: e26\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Review of pricing and schedule"}, {"color": "#ffbb78", "id": "e27", "label": "Quote validation by client (sign-off)", "shape": "dot", "size": 15, "title": "ID: e27\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Quote validation by client (sign-off)"}, {"color": "#ffbb78", "id": "e28", "label": "Deployment on client premises or in the cloud", "shape": "dot", "size": 15, "title": "ID: e28\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Deployment on client premises or in the cloud"}, {"color": "#ffbb78", "id": "e29", "label": "Training of clients", "shape": "dot", "size": 15, "title": "ID: e29\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Training of clients"}, {"color": "#ffbb78", "id": "e30", "label": "Integration of the solution to the existing workfl", "shape": "dot", "size": 15, "title": "ID: e30\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Integration of the solution to the existing workflow"}, {"color": "#ffbb78", "id": "e31", "label": "Period maintenance of the software", "shape": "dot", "size": 15, "title": "ID: e31\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Period maintenance of the software"}, {"color": "#ffbb78", "id": "e32", "label": "Training of the MT engines", "shape": "dot", "size": 15, "title": "ID: e32\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Training of the MT engines"}, {"color": "#ffbb78", "id": "e33", "label": "Dedicated aftersales service", "shape": "dot", "size": 15, "title": "ID: e33\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Dedicated aftersales service"}, {"color": "#ffbb78", "id": "e34", "label": "Periodical meeting to gather feedback", "shape": "dot", "size": 15, "title": "ID: e34\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Periodical meeting to gather feedback"}, {"color": "#ffbb78", "id": "e35", "label": "Value chain", "shape": "dot", "size": 15, "title": "ID: e35\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Value chain\u003cbr\u003edescription: Systran\u0027s operational value chain."}, {"color": "#ffbb78", "id": "e36", "label": "Sales process", "shape": "dot", "size": 15, "title": "ID: e36\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Sales process"}, {"color": "#ffbb78", "id": "e37", "label": "Hunting", "shape": "dot", "size": 15, "title": "ID: e37\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Hunting\u003cbr\u003edescription: Part of Sales process, focused on new client acquisition."}, {"color": "#ffbb78", "id": "e38", "label": "Farming", "shape": "dot", "size": 15, "title": "ID: e38\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Farming\u003cbr\u003edescription: Part of Sales process, focused on existing accounts."}, {"color": "#ffbb78", "id": "e39", "label": "Project initiation", "shape": "dot", "size": 15, "title": "ID: e39\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Project initiation"}, {"color": "#ffbb78", "id": "e40", "label": "Client request", "shape": "dot", "size": 15, "title": "ID: e40\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Client request"}, {"color": "#ffbb78", "id": "e41", "label": "Quote generation", "shape": "dot", "size": 15, "title": "ID: e41\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Quote generation"}, {"color": "#ffbb78", "id": "e42", "label": "Order validation", "shape": "dot", "size": 15, "title": "ID: e42\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Order validation"}, {"color": "#ffbb78", "id": "e43", "label": "Project execution", "shape": "dot", "size": 15, "title": "ID: e43\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Project execution"}, {"color": "#ffbb78", "id": "e44", "label": "Deployment of the solution", "shape": "dot", "size": 15, "title": "ID: e44\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Deployment of the solution"}, {"color": "#ffbb78", "id": "e45", "label": "Training \u0026 maintenance", "shape": "dot", "size": 15, "title": "ID: e45\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Training \u0026 maintenance"}, {"color": "#ffbb78", "id": "e46", "label": "Customer support", "shape": "dot", "size": 15, "title": "ID: e46\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Customer support"}, {"color": "#98df8a", "id": "e47", "label": "Account manager", "shape": "dot", "size": 15, "title": "ID: e47\u003cbr\u003eType: pekg:Position\u003cbr\u003etitleName: Account manager"}, {"color": "#98df8a", "id": "e48", "label": "Technical support \u0026 pre-sales", "shape": "dot", "size": 15, "title": "ID: e48\u003cbr\u003eType: pekg:Position\u003cbr\u003etitleName: Technical support \u0026 pre-sales"}, {"color": "#e377c2", "id": "e49", "label": "Customer outreach", "shape": "dot", "size": 15, "title": "ID: e49\u003cbr\u003eType: pekg:MarketContext\u003cbr\u003esegmentName: Customer outreach\u003cbr\u003echaracteristics: Wide and diversified"}, {"color": "#e7969c", "id": "e50", "label": "Eleven VDD report", "shape": "dot", "size": 15, "title": "ID: e50\u003cbr\u003eType: pekg:HistoricalEvent\u003cbr\u003eeventName: Eleven VDD report\u003cbr\u003eeventType: Report\u003cbr\u003edescription: Source of data for the operating model description."}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e10"}, {"arrows": "to", "from": "e1", "label": "reportsOperationalKPI", "title": "pekg:reportsOperationalKPI", "to": "e11"}, {"arrows": "to", "from": "e1", "label": "operatesIn", "title": "pekg:operatesIn", "to": "e49"}, {"arrows": "to", "from": "e1", "label": "isSubjectOf", "title": "pekg:isSubjectOf", "to": "e9"}, {"arrows": "to", "from": "e1", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e2"}, {"arrows": "to", "from": "e1", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e3"}, {"arrows": "to", "from": "e9", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e2"}, {"arrows": "to", "from": "e9", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e3"}, {"arrows": "to", "from": "e11", "label": "hasPart", "title": "pekg:hasPart", "to": "e17"}, {"arrows": "to", "from": "e11", "label": "hasPart", "title": "pekg:hasPart", "to": "e35"}, {"arrows": "to", "from": "e17", "label": "hasPart", "title": "pekg:hasPart", "to": "e18"}, {"arrows": "to", "from": "e17", "label": "hasPart", "title": "pekg:hasPart", "to": "e19"}, {"arrows": "to", "from": "e17", "label": "hasPart", "title": "pekg:hasPart", "to": "e20"}, {"arrows": "to", "from": "e17", "label": "hasPart", "title": "pekg:hasPart", "to": "e21"}, {"arrows": "to", "from": "e17", "label": "hasPart", "title": "pekg:hasPart", "to": "e22"}, {"arrows": "to", "from": "e17", "label": "hasPart", "title": "pekg:hasPart", "to": "e23"}, {"arrows": "to", "from": "e17", "label": "hasPart", "title": "pekg:hasPart", "to": "e24"}, {"arrows": "to", "from": "e17", "label": "hasPart", "title": "pekg:hasPart", "to": "e25"}, {"arrows": "to", "from": "e17", "label": "hasPart", "title": "pekg:hasPart", "to": "e26"}, {"arrows": "to", "from": "e17", "label": "hasPart", "title": "pekg:hasPart", "to": "e27"}, {"arrows": "to", "from": "e17", "label": "hasPart", "title": "pekg:hasPart", "to": "e28"}, {"arrows": "to", "from": "e17", "label": "hasPart", "title": "pekg:hasPart", "to": "e29"}, {"arrows": "to", "from": "e17", "label": "hasPart", "title": "pekg:hasPart", "to": "e30"}, {"arrows": "to", "from": "e17", "label": "hasPart", "title": "pekg:hasPart", "to": "e31"}, {"arrows": "to", "from": "e17", "label": "hasPart", "title": "pekg:hasPart", "to": "e32"}, {"arrows": "to", "from": "e17", "label": "hasPart", "title": "pekg:hasPart", "to": "e33"}, {"arrows": "to", "from": "e17", "label": "hasPart", "title": "pekg:hasPart", "to": "e34"}, {"arrows": "to", "from": "e35", "label": "hasPart", "title": "pekg:hasPart", "to": "e36"}, {"arrows": "to", "from": "e35", "label": "hasPart", "title": "pekg:hasPart", "to": "e39"}, {"arrows": "to", "from": "e35", "label": "hasPart", "title": "pekg:hasPart", "to": "e43"}, {"arrows": "to", "from": "e35", "label": "hasPart", "title": "pekg:hasPart", "to": "e45"}, {"arrows": "to", "from": "e35", "label": "hasPart", "title": "pekg:hasPart", "to": "e46"}, {"arrows": "to", "from": "e36", "label": "hasPart", "title": "pekg:hasPart", "to": "e37"}, {"arrows": "to", "from": "e36", "label": "hasPart", "title": "pekg:hasPart", "to": "e38"}, {"arrows": "to", "from": "e39", "label": "hasPart", "title": "pekg:hasPart", "to": "e40"}, {"arrows": "to", "from": "e39", "label": "hasPart", "title": "pekg:hasPart", "to": "e41"}, {"arrows": "to", "from": "e39", "label": "hasPart", "title": "pekg:hasPart", "to": "e42"}, {"arrows": "to", "from": "e43", "label": "hasPart", "title": "pekg:hasPart", "to": "e44"}, {"arrows": "to", "from": "e43", "label": "hasPart", "title": "pekg:hasPart", "to": "e45"}, {"arrows": "to", "from": "e43", "label": "hasPart", "title": "pekg:hasPart", "to": "e46"}, {"arrows": "to", "from": "e37", "label": "includes", "title": "pekg:includes", "to": "e18"}, {"arrows": "to", "from": "e37", "label": "includes", "title": "pekg:includes", "to": "e19"}, {"arrows": "to", "from": "e37", "label": "includes", "title": "pekg:includes", "to": "e20"}, {"arrows": "to", "from": "e38", "label": "includes", "title": "pekg:includes", "to": "e21"}, {"arrows": "to", "from": "e40", "label": "includes", "title": "pekg:includes", "to": "e22"}, {"arrows": "to", "from": "e41", "label": "includes", "title": "pekg:includes", "to": "e23"}, {"arrows": "to", "from": "e41", "label": "includes", "title": "pekg:includes", "to": "e24"}, {"arrows": "to", "from": "e41", "label": "includes", "title": "pekg:includes", "to": "e25"}, {"arrows": "to", "from": "e42", "label": "includes", "title": "pekg:includes", "to": "e26"}, {"arrows": "to", "from": "e42", "label": "includes", "title": "pekg:includes", "to": "e27"}, {"arrows": "to", "from": "e44", "label": "includes", "title": "pekg:includes", "to": "e28"}, {"arrows": "to", "from": "e44", "label": "includes", "title": "pekg:includes", "to": "e29"}, {"arrows": "to", "from": "e44", "label": "includes", "title": "pekg:includes", "to": "e30"}, {"arrows": "to", "from": "e45", "label": "includes", "title": "pekg:includes", "to": "e31"}, {"arrows": "to", "from": "e45", "label": "includes", "title": "pekg:includes", "to": "e32"}, {"arrows": "to", "from": "e46", "label": "includes", "title": "pekg:includes", "to": "e33"}, {"arrows": "to", "from": "e46", "label": "includes", "title": "pekg:includes", "to": "e34"}, {"arrows": "to", "from": "e1", "label": "employs", "title": "pekg:employs", "to": "e47"}, {"arrows": "to", "from": "e1", "label": "employs", "title": "pekg:employs", "to": "e48"}, {"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e12"}, {"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e13"}, {"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e14"}, {"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e15"}, {"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e16"}, {"arrows": "to", "from": "e5", "label": "offers", "title": "pekg:offers", "to": "e12"}, {"arrows": "to", "from": "e6", "label": "offers", "title": "pekg:offers", "to": "e13"}, {"arrows": "to", "from": "e6", "label": "offers", "title": "pekg:offers", "to": "e14"}, {"arrows": "to", "from": "e7", "label": "offers", "title": "pekg:offers", "to": "e14"}, {"arrows": "to", "from": "e7", "label": "offers", "title": "pekg:offers", "to": "e15"}, {"arrows": "to", "from": "e50", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e8"}, {"arrows": "to", "from": "e50", "label": "sourceOfDataFor", "title": "pekg:sourceOfDataFor", "to": "e11"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shape": "dot", "size": 18, "font": {"size": 14, "face": "Tahoma"}}, "edges": {"arrows": {"to": {"enabled": true, "scaleFactor": 0.7}}, "color": {"inherit": "from"}, "smooth": {"type": "continuous", "roundness": 0.2}, "font": {"size": 10, "align": "middle"}}, "physics": {"enabled": true, "barnesHut": {"gravitationalConstant": -30000, "centralGravity": 0.3, "springLength": 250, "springConstant": 0.04, "damping": 0.09}, "minVelocity": 0.75}, "interaction": {"hover": true, "tooltipDelay": 200, "multiselect": true}, "layout": {"hierarchical": false}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

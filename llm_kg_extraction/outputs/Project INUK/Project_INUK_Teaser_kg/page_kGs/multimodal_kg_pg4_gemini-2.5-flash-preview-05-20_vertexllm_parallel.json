@@ -1,0 +1,243 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK",
+      "status": "Strictly Private & Confidential"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Articque Platform",
+      "category": "Platform"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Cartes & Donn\u00e9es",
+      "category": "Software"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "Cartes & Donn\u00e9es Desktop",
+      "category": "Software"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Cartes & Donn\u00e9es Online",
+      "category": "Software"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Technology",
+      "name": "Geographic Information System",
+      "alias": [
+        "GIS"
+      ]
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Technology",
+      "name": "Software as a Service",
+      "alias": [
+        "SaaS"
+      ]
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Technology",
+      "name": "Platform as a Service",
+      "alias": [
+        "PaaS"
+      ]
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Technology",
+      "name": "General Data Protection Regulation",
+      "alias": [
+        "GDPR"
+      ]
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Technology",
+      "name": "Search Engine Optimization",
+      "alias": [
+        "SEO"
+      ]
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Technology",
+      "name": "Search Engine Advertising",
+      "alias": [
+        "SEA"
+      ]
+    },
+    {
+      "id": "e15",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Location Intelligence",
+      "alias": [
+        "LI"
+      ]
+    },
+    {
+      "id": "e16",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Recurring Revenue",
+      "alias": [
+        "ARR"
+      ]
+    },
+    {
+      "id": "e17",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Maintenance-to-Subscription",
+      "alias": [
+        "M2S"
+      ]
+    },
+    {
+      "id": "e18",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Marketing Qualified Lead",
+      "alias": [
+        "MQL"
+      ]
+    },
+    {
+      "id": "e19",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Sales Qualified Lead",
+      "alias": [
+        "SQL"
+      ]
+    },
+    {
+      "id": "e20",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Ideal Customer Profile",
+      "alias": [
+        "ICP"
+      ]
+    },
+    {
+      "id": "e21",
+      "type": "pekg:Position",
+      "titleName": "Chief Marketing Officer",
+      "alias": [
+        "CMO"
+      ]
+    },
+    {
+      "id": "e22",
+      "type": "pekg:Position",
+      "titleName": "Customer Relationship Manager",
+      "alias": [
+        "CRM"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "isSubjectOf"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "reportsOperationalKPI"
+    }
+  ]
+}

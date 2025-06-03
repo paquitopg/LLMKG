@@ -1,0 +1,421 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "foundedYear": 1989,
+      "description": "A rich and consistent history climaxing into the successful business and technology transition to a SaaS model. The timeline of milestones is sourced from Management.",
+      "keyStrengths": [
+        "Successful business and technology transition to a SaaS model"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "DDA & Company",
+      "roleInContext": "Advisor for Project Inuk"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "transactionPerimeter": "ChapsVision",
+      "status": "Strictly Private & Confidential"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Creation of Articque",
+      "eventType": "Company Foundation",
+      "dateOrYear": "1989"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "C&D Desktop",
+      "alias": [
+        "Cartes & Donn\u00e9es"
+      ],
+      "category": "Software",
+      "description": "Desktop software, 1st version launched in 1994. Part of the 'Products Evolution' sourced from Management."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Launch of Cartes & Donn\u00e9es software",
+      "eventType": "Product Launch",
+      "dateOrYear": "1994",
+      "description": "Launch of the 1st version of \u201cCartes & Donn\u00e9es\u201d software (C&D Desktop)."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "maps",
+      "category": "Data/Product"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "data",
+      "category": "Data/Product"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "software online",
+      "category": "Software"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Articque starts selling maps, data and software online",
+      "eventType": "Business Model Shift",
+      "dateOrYear": "1997"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Company",
+      "name": "Geobs",
+      "description": "project management consulting company"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Acquisition of Geobs",
+      "eventType": "Acquisition",
+      "dateOrYear": "2007",
+      "description": "Acquisition of Geobs, project management consulting company."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Company",
+      "name": "Articque Group"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Creation of Articque Group",
+      "eventType": "Restructuring/Formation",
+      "dateOrYear": "2009"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Company",
+      "name": "InterCarto",
+      "description": "basemap developer"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Acquisition of InterCarto",
+      "eventType": "Acquisition",
+      "dateOrYear": "2010",
+      "description": "Acquisition of InterCarto, basemap developer."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Company",
+      "name": "Qlik",
+      "description": "business intelligence and data visualization software provider"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Partnership with Qlik",
+      "eventType": "Partnership",
+      "dateOrYear": "2014",
+      "description": "Partnership with Qlik, business intelligence and data visualization software provider."
+    },
+    {
+      "id": "e19",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Set-up of the executive committee",
+      "eventType": "Organizational Change",
+      "dateOrYear": "2016"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:ProductOrService",
+      "name": "Articque Platform",
+      "alias": [
+        "AP"
+      ],
+      "category": "Platform/Software",
+      "description": "SaaS offering. Part of the 'Products Evolution' sourced from Management."
+    },
+    {
+      "id": "e21",
+      "type": "pekg:ProductOrService",
+      "name": "C&D Online",
+      "alias": [
+        "CDO"
+      ],
+      "category": "Software/Platform",
+      "description": "SaaS offering. Part of the 'Products Evolution' sourced from Management."
+    },
+    {
+      "id": "e22",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Launch of AP and CDO",
+      "eventType": "Product Launch",
+      "dateOrYear": "2017",
+      "description": "Launch of Articque Platform (AP) and C&D Online (CDO)."
+    },
+    {
+      "id": "e23",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Introduction of the subscription model (SaaS)",
+      "eventType": "Business Model Shift",
+      "dateOrYear": "2017",
+      "description": "Introduction of the subscription model (SaaS)."
+    },
+    {
+      "id": "e24",
+      "type": "Investment Fund",
+      "name": "Turenne",
+      "alias": [
+        "Turenne Groupe"
+      ]
+    },
+    {
+      "id": "e25",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Capital increase led by Turenne",
+      "eventType": "Funding",
+      "dateOrYear": "2020",
+      "description": "Capital increase led by investment fund Turenne."
+    },
+    {
+      "id": "e26",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Transition to a full subscription model",
+      "eventType": "Business Model Shift",
+      "dateOrYear": "2021"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring revenues",
+      "valueString": "> \u20ac3 million",
+      "fiscalPeriod": "2022",
+      "isRecurring": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Recurring revenues reached > \u20ac3 million",
+      "eventType": "Financial Milestone",
+      "dateOrYear": "2022"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:ProductOrService",
+      "name": "DataViz",
+      "category": "Software/Tool"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:ProductOrService",
+      "name": "Data Composer",
+      "category": "Software/Tool"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Launch of DataViz & Data Composer",
+      "eventType": "Product Launch",
+      "dateOrYear": "2023"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:ProductOrService",
+      "name": "CDD",
+      "category": "Software/Product Line",
+      "description": "Evolution of C&D Desktop, precursor to C&D Online and Articque Platform. Part of the 'Products Evolution' sourced from Management."
+    },
+    {
+      "id": "e33",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e12",
+      "target": "e11",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e12",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e14",
+      "target": "e13",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e16",
+      "target": "e15",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e16",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e18",
+      "target": "e17",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e18",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e25",
+      "target": "e24",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e3",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

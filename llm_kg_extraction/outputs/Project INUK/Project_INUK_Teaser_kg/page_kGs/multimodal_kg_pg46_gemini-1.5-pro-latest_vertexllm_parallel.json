@@ -1,0 +1,130 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "alias": [
+        "Articque Informatique"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Person",
+      "fullName": "Georges-Antoine Strauch"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Person",
+      "fullName": "Nicolas Cuartero",
+      "position": "Services Director"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Person",
+      "fullName": "H\u00e9l\u00e8ne Auguet",
+      "position": "CEO"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Person",
+      "fullName": "J\u00e9r\u00f4me Guyot",
+      "position": "Chief Growth & Innovation Officer"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Advisor",
+      "name": "DDA & Company France SAS"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Advisor",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Headcount",
+      "totalEmployees": 43
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Person",
+      "fullName": "Head of Consulting",
+      "department": "Consulting"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Person",
+      "fullName": "Head of Training",
+      "department": "Training"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Person",
+      "fullName": "Head of IT & data compliance",
+      "department": "IT & IS"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Person",
+      "fullName": "Head of CSM",
+      "department": "Sales development"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Person",
+      "fullName": "Key Account Manager",
+      "department": "Sales development"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Person",
+      "fullName": "Head of Marketing",
+      "department": "Marketing"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Person",
+      "fullName": "Sales administrator and pay manager",
+      "department": "Sales administration"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Person",
+      "fullName": "Jurist",
+      "department": "Legal"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

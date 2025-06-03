@@ -1,0 +1,100 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "alias": [
+        "Group",
+        "Company"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Advisor",
+      "name": "DDA & Company France SAS",
+      "alias": [
+        "DDA"
+      ]
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Advisor",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Person",
+      "fullName": "Alexandre Odin",
+      "position": "Partner"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Location",
+      "locationName": "Paris",
+      "locationType": "City"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Location",
+      "locationName": "65 rue d\u2019Anjou",
+      "locationType": "Address",
+      "officeSpecificInfo": "75008 Paris"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Person",
+      "fullName": "Gr\u00e9goire Bizouerne",
+      "position": "Analyst"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Person",
+      "fullName": "Victor Humberdot",
+      "position": "Vice President"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK",
+      "typeSought": "Investigation"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e9",
+      "target": "e1",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e2",
+      "target": "e7",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e2",
+      "target": "e8",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e2",
+      "target": "e6",
+      "type": "pekg:hasOfficeIn"
+    }
+  ]
+}

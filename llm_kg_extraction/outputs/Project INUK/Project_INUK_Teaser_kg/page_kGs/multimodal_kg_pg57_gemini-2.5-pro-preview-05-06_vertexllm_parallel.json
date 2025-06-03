@@ -1,0 +1,121 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Target Company for Project INUK. Financials presented are for this company.",
+      "growthStrategySummary": "Revenues are expected to reach almost \u20ac6.5m by FY24BP and grow at a CAGR of +24% over the projected period. The revenue mix should continue to switch towards additional recurring revenue, representing \u20ac5.3m by FY24BP (82% of total revenues). The Adjusted EBITDA margin is forecast to continue to improve up to 49% in FY24BP thanks to the favorable scaling effect."
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisor for Project INUK"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK",
+      "status": "Ongoing",
+      "transactionPerimeter": "Articque",
+      "keyInvestmentHighlights": [
+        "Revenues expected to reach almost \u20ac6.5m by FY24BP",
+        "Revenue CAGR of +24% over the projected period (FY22L-FY24BP)",
+        "Revenue mix switching towards additional recurring revenue, representing \u20ac5.3m by FY24BP (82% of total revenues)",
+        "Adjusted EBITDA margin forecast to improve up to 49% in FY24BP due to favorable scaling effect"
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company associated with Project INUK, as per document footer."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Projected Total Revenue FY24BP (Comment)",
+      "valueString": "almost \u20ac6.5m",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "Comments based on Management projections"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Projected Revenue CAGR (Comment)",
+      "valueString": "+24%",
+      "fiscalPeriod": "FY22L-FY24BP (projected period)",
+      "sourceNote": "Comments based on Management projections"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Projected Recurring Revenue FY24BP (Comment)",
+      "valueString": "\u20ac5.3m",
+      "fiscalPeriod": "FY24BP",
+      "isRecurring": true,
+      "sourceNote": "Comments based on Management projections"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Projected Recurring Revenue % of Total Revenue FY24BP (Comment)",
+      "kpiValueString": "82%",
+      "kpiDateOrPeriod": "FY24BP",
+      "description": "Projected recurring revenue as 82% of total revenues by FY24BP",
+      "sourceNote": "Comments based on Management projections"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Projected Adjusted EBITDA Margin FY24BP (Comment)",
+      "kpiValueString": "49%",
+      "kpiDateOrPeriod": "FY24BP",
+      "description": "Adjusted EBITDA margin forecast to improve up to 49% in FY24BP",
+      "sourceNote": "Comments based on Management projections"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e3",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e3",
+      "target": "e4",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsOperationalKPI"
+    }
+  ]
+}

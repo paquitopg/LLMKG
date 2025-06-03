@@ -1,0 +1,96 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Billings",
+      "valueString": "2.2m",
+      "fiscalPeriod": "FY21A",
+      "scope": "450 clients for at least 5 years"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Billings",
+      "valueString": "1m",
+      "fiscalPeriod": "FY21A",
+      "scope": "200 clients for at least 10 years"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Billings",
+      "valueString": "36%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Top 20 Clients"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Billings",
+      "valueString": "29%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Top 20 Clients"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Billings",
+      "valueString": "34%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Top 20 Clients"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Advisor",
+      "name": "DDA & Company France SAS"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Advisor",
+      "name": "ChapsVision"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

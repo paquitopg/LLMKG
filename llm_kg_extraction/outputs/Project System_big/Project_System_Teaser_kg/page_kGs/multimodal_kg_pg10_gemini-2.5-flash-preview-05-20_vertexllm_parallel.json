@@ -1,0 +1,296 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "Well positioned to address any type of customer need with top-notch solutions; a unique combination of expert translation solutions."
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisor to Systran SAS"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisor to Systran SAS"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Pure Neural\u00ae Server",
+      "description": "Secured and integrated translation software solution",
+      "pricingModelInfo": "Annual license; Perpetual license are charged upon purchase"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Translate Pro",
+      "description": "Cloud-based solution for advanced professional translation",
+      "pricingModelInfo": "Multiple plans based on usage; Upfront fee charged upon purchase and monthly hosting fee (for Translate Pro clients)"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Translate Enterprise",
+      "description": "Cloud-based solution for SME",
+      "pricingModelInfo": "Annual license"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Model Studio",
+      "description": "The one and only solution in the world allowing data owners to train its translation engines using its own data resulting in a customized translation model; offered via cloud or on premise; Usually sold with SPNS",
+      "pricingModelInfo": "Annual subscription composed of fixed fee, % of license fee and usage fee (for SPNS clients)"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Translate",
+      "description": "Free web-based translation tool",
+      "website": "www.systran.net/en/translate"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:RevenueStream",
+      "name": "Funded research projects",
+      "description": "Mostly for public entities",
+      "pricingModelInfo": "Case by case"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue Contribution",
+      "valueString": "c.90%",
+      "scope": "Systran Pure Neural\u00ae Server"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue Contribution",
+      "valueString": "c.5%",
+      "scope": "Systran Translate Pro"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue Contribution",
+      "valueString": "c.5%",
+      "scope": "Systran Translate Enterprise"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue Contribution",
+      "valueString": "c.5%",
+      "scope": "Funded research projects"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Advanced professional translation"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "SME"
+    },
+    {
+      "id": "e16",
+      "type": "Government",
+      "name": "Public entities"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Data owners"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:Technology",
+      "name": "Neural",
+      "description": "Underlying technology for Systran Pure Neural\u00ae Server"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:Technology",
+      "name": "Cloud-based solution",
+      "description": "Deployment model for various Systran products"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:Technology",
+      "name": "On-premise",
+      "description": "Deployment model for Systran Model Studio"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Supported Languages",
+      "kpiValueString": "50+",
+      "description": "Number of languages supported by Systran's solutions"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Supported Language Pairs",
+      "kpiValueString": "140+",
+      "description": "Number of language pairs supported by Systran's solutions"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Advanced MT Domain Models",
+      "kpiValueString": "400+",
+      "description": "Number of advanced Machine Translation domain models available"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:Technology",
+      "name": "Machine Translation (MT)",
+      "description": "Core technology for translation engines and domain models"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Sale",
+      "status": "Ongoing"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e4",
+      "target": "e10",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e11",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e14",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e15",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e16",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e7",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e4",
+      "target": "e18",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e19",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e6",
+      "target": "e19",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e7",
+      "target": "e19",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e7",
+      "target": "e20",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e23",
+      "target": "e24",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:isSubjectOf"
+    }
+  ]
+}

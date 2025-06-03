@@ -1,0 +1,321 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script>function neighbourhoodHighlight(params) {
+  // console.log("in nieghbourhoodhighlight");
+  allNodes = nodes.get({ returnType: "Object" });
+  // originalNodes = JSON.parse(JSON.stringify(allNodes));
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    highlightActive = true;
+    var i, j;
+    var selectedNode = params.nodes[0];
+    var degrees = 2;
+
+    // mark all nodes as hard to read.
+    for (let nodeId in allNodes) {
+      // nodeColors[nodeId] = allNodes[nodeId].color;
+      allNodes[nodeId].color = "rgba(200,200,200,0.5)";
+      if (allNodes[nodeId].hiddenLabel === undefined) {
+        allNodes[nodeId].hiddenLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+    var connectedNodes = network.getConnectedNodes(selectedNode);
+    var allConnectedNodes = [];
+
+    // get the second degree nodes
+    for (i = 1; i < degrees; i++) {
+      for (j = 0; j < connectedNodes.length; j++) {
+        allConnectedNodes = allConnectedNodes.concat(
+          network.getConnectedNodes(connectedNodes[j])
+        );
+      }
+    }
+
+    // all second degree nodes get a different color and their label back
+    for (i = 0; i < allConnectedNodes.length; i++) {
+      // allNodes[allConnectedNodes[i]].color = "pink";
+      allNodes[allConnectedNodes[i]].color = "rgba(150,150,150,0.75)";
+      if (allNodes[allConnectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[allConnectedNodes[i]].label =
+          allNodes[allConnectedNodes[i]].hiddenLabel;
+        allNodes[allConnectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // all first degree nodes get their own color and their label back
+    for (i = 0; i < connectedNodes.length; i++) {
+      // allNodes[connectedNodes[i]].color = undefined;
+      allNodes[connectedNodes[i]].color = nodeColors[connectedNodes[i]];
+      if (allNodes[connectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[connectedNodes[i]].label =
+          allNodes[connectedNodes[i]].hiddenLabel;
+        allNodes[connectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // the main node gets its own color and its label back.
+    // allNodes[selectedNode].color = undefined;
+    allNodes[selectedNode].color = nodeColors[selectedNode];
+    if (allNodes[selectedNode].hiddenLabel !== undefined) {
+      allNodes[selectedNode].label = allNodes[selectedNode].hiddenLabel;
+      allNodes[selectedNode].hiddenLabel = undefined;
+    }
+  } else if (highlightActive === true) {
+    // console.log("highlightActive was true");
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      // allNodes[nodeId].color = "purple";
+      allNodes[nodeId].color = nodeColors[nodeId];
+      // delete allNodes[nodeId].color;
+      if (allNodes[nodeId].hiddenLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].hiddenLabel;
+        allNodes[nodeId].hiddenLabel = undefined;
+      }
+    }
+    highlightActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    // console.log("Nothing was selected");
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        // allNodes[nodeId].color = {};
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function filterHighlight(params) {
+  allNodes = nodes.get({ returnType: "Object" });
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    filterActive = true;
+    let selectedNodes = params.nodes;
+
+    // hiding all nodes and saving the label
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = true;
+      if (allNodes[nodeId].savedLabel === undefined) {
+        allNodes[nodeId].savedLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+
+    for (let i=0; i < selectedNodes.length; i++) {
+      allNodes[selectedNodes[i]].hidden = false;
+      if (allNodes[selectedNodes[i]].savedLabel !== undefined) {
+        allNodes[selectedNodes[i]].label = allNodes[selectedNodes[i]].savedLabel;
+        allNodes[selectedNodes[i]].savedLabel = undefined;
+      }
+    }
+
+  } else if (filterActive === true) {
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = false;
+      if (allNodes[nodeId].savedLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].savedLabel;
+        allNodes[nodeId].savedLabel = undefined;
+      }
+    }
+    filterActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function selectNode(nodes) {
+  network.selectNodes(nodes);
+  neighbourhoodHighlight({ nodes: nodes });
+  return nodes;
+}
+
+function selectNodes(nodes) {
+  network.selectNodes(nodes);
+  filterHighlight({nodes: nodes});
+  return nodes;
+}
+
+function highlightFilter(filter) {
+  let selectedNodes = []
+  let selectedProp = filter['property']
+  if (filter['item'] === 'node') {
+    let allNodes = nodes.get({ returnType: "Object" });
+    for (let nodeId in allNodes) {
+      if (allNodes[nodeId][selectedProp] && filter['value'].includes((allNodes[nodeId][selectedProp]).toString())) {
+        selectedNodes.push(nodeId)
+      }
+    }
+  }
+  else if (filter['item'] === 'edge'){
+    let allEdges = edges.get({returnType: 'object'});
+    // check if the selected property exists for selected edge and select the nodes connected to the edge
+    for (let edge in allEdges) {
+      if (allEdges[edge][selectedProp] && filter['value'].includes((allEdges[edge][selectedProp]).toString())) {
+        selectedNodes.push(allEdges[edge]['from'])
+        selectedNodes.push(allEdges[edge]['to'])
+      }
+    }
+  }
+  selectNodes(selectedNodes)
+}</script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            
+            
+            
+            
+            
+
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1f77b4", "id": "e1", "label": "Systran", "shape": "dot", "size": 15, "title": "ID: e1\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Systran\u003cbr\u003ekeyStrengths: [\u0027cutting edge neural machine translation software for sensitive clients\u0027, \u0027pioneering use of new technologies\u0027, \u0027systematic and validated support 1st-class services\u0027, \u0027unique customer portfolio across highly sensitive sectors\u0027, \u0027unmatched offering of verified machine translation software\u0027]\u003cbr\u003egrowthStrategySummary: Accelerate on the cloud offering, Increase sales efforts to foster penetration of the B2C / SME segment, Foster R\u0026D of transcript and context awareness translation, Enter voice-translation market"}, {"color": "#cccccc", "id": "e2", "label": "Rothschild \u0026 Co", "shape": "dot", "size": 15, "title": "ID: e2\u003cbr\u003eType: Financial Advisor\u003cbr\u003ename: Rothschild \u0026 Co\u003cbr\u003eroleInContext: Advisory Firm"}, {"color": "#cccccc", "id": "e3", "label": "Samsung Securities", "shape": "dot", "size": 15, "title": "ID: e3\u003cbr\u003eType: Financial Advisor\u003cbr\u003ename: Samsung Securities\u003cbr\u003eroleInContext: Advisory Firm"}, {"color": "#d62728", "id": "e4", "label": "Key investment highlights", "shape": "dot", "size": 15, "title": "ID: e4\u003cbr\u003eType: pekg:TransactionContext\u003cbr\u003econtextName: Key investment highlights\u003cbr\u003etypeSought: Investment\u003cbr\u003estatus: Opportunity\u003cbr\u003ekeyInvestmentHighlights: [\u0027A unique opportunity to invest in a cutting edge neural machine translation software for sensitive clients\u0027, \u0027An expanding \u20ac760m machine translation market (+26% p.a.)\u0027, \u0027Unmatched offering of verified machine translation software\u0027, \u0027Pioneering use of new technologies\u0027, \u0027Systematic and validated support 1st-class services\u0027, \u0027Unique customer portfolio across highly sensitive sectors\u0027, \u0027An ambitious strategy to fuel further growth and explore new business segments\u0027]"}, {"color": "#9467bd", "id": "e5", "label": "neural machine translation software", "shape": "dot", "size": 15, "title": "ID: e5\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: neural machine translation software\u003cbr\u003ecategory: Software\u003cbr\u003edescription: cutting edge software for sensitive clients"}, {"color": "#e377c2", "id": "e6", "label": "machine translation", "shape": "dot", "size": 15, "title": "ID: e6\u003cbr\u003eType: pekg:MarketContext\u003cbr\u003esegmentName: machine translation\u003cbr\u003esizeInfo: \u20ac760m\u003cbr\u003egrowthInfo: +26% p.a.\u003cbr\u003echaracteristics: expanding\u003cbr\u003esourceOfData: Current Page Text"}, {"color": "#ff7f0e", "id": "e7", "label": "Market Size", "shape": "dot", "size": 15, "title": "ID: e7\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Market Size\u003cbr\u003evalueString: \u20ac760m\u003cbr\u003escope: machine translation market"}, {"color": "#ff7f0e", "id": "e8", "label": "Market Growth Rate", "shape": "dot", "size": 15, "title": "ID: e8\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Market Growth Rate\u003cbr\u003evalueString: +26% p.a.\u003cbr\u003escope: machine translation market"}, {"color": "#ce6dbd", "id": "e9", "label": "electronics", "shape": "dot", "size": 15, "title": "ID: e9\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: electronics"}, {"color": "#ce6dbd", "id": "e10", "label": "defense/security", "shape": "dot", "size": 15, "title": "ID: e10\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: defense/security"}, {"color": "#ce6dbd", "id": "e11", "label": "IT", "shape": "dot", "size": 15, "title": "ID: e11\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: IT"}, {"color": "#ce6dbd", "id": "e12", "label": "financial services", "shape": "dot", "size": 15, "title": "ID: e12\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: financial services"}, {"color": "#ce6dbd", "id": "e13", "label": "public sector", "shape": "dot", "size": 15, "title": "ID: e13\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: public sector"}, {"color": "#8c564b", "id": "e14", "label": "context awareness", "shape": "dot", "size": 15, "title": "ID: e14\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: context awareness\u003cbr\u003edescription: new technology R\u0026D"}, {"color": "#8c564b", "id": "e15", "label": "transcript technology", "shape": "dot", "size": 15, "title": "ID: e15\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: transcript technology\u003cbr\u003edescription: new technology R\u0026D"}, {"color": "#e7969c", "id": "e16", "label": "1st player to implement advanced machine translati", "shape": "dot", "size": 15, "title": "ID: e16\u003cbr\u003eType: pekg:HistoricalEvent\u003cbr\u003eeventName: 1st player to implement advanced machine translation technologies\u003cbr\u003eeventType: Technology Adoption\u003cbr\u003edateOrYear: 1970s"}, {"color": "#e7969c", "id": "e17", "label": "1st player to implement neural technologies in mac", "shape": "dot", "size": 15, "title": "ID: e17\u003cbr\u003eType: pekg:HistoricalEvent\u003cbr\u003eeventName: 1st player to implement neural technologies in machine translation\u003cbr\u003eeventType: Technology Adoption"}, {"color": "#c7c7c7", "id": "e18", "label": "US", "shape": "dot", "size": 15, "title": "ID: e18\u003cbr\u003eType: pekg:Location\u003cbr\u003elocationName: US\u003cbr\u003elocationType: Country"}, {"color": "#c7c7c7", "id": "e19", "label": "France", "shape": "dot", "size": 15, "title": "ID: e19\u003cbr\u003eType: pekg:Location\u003cbr\u003elocationName: France\u003cbr\u003elocationType: Country"}, {"color": "#c7c7c7", "id": "e20", "label": "Korea", "shape": "dot", "size": 15, "title": "ID: e20\u003cbr\u003eType: pekg:Location\u003cbr\u003elocationName: Korea\u003cbr\u003elocationType: Country"}, {"color": "#ffbb78", "id": "e21", "label": "Long-term customers", "shape": "dot", "size": 15, "title": "ID: e21\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Long-term customers\u003cbr\u003ekpiValueString: 262\u003cbr\u003edescription: quickly-rising demand"}, {"color": "#1f77b4", "id": "e22", "label": "Palantir", "shape": "dot", "size": 15, "title": "ID: e22\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Palantir"}, {"color": "#1f77b4", "id": "e23", "label": "Donnelley", "shape": "dot", "size": 15, "title": "ID: e23\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Donnelley"}, {"color": "#9467bd", "id": "e24", "label": "cloud offering", "shape": "dot", "size": 15, "title": "ID: e24\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: cloud offering\u003cbr\u003ecategory: Service"}, {"color": "#9467bd", "id": "e25", "label": "Systran translate Pro", "shape": "dot", "size": 15, "title": "ID: e25\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Systran translate Pro\u003cbr\u003ecategory: Cloud Offering"}, {"color": "#9467bd", "id": "e26", "label": "verifying solutions", "shape": "dot", "size": 15, "title": "ID: e26\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: verifying solutions\u003cbr\u003ecategory: Software"}, {"color": "#ce6dbd", "id": "e27", "label": "B2C segment", "shape": "dot", "size": 15, "title": "ID: e27\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: B2C segment"}, {"color": "#ce6dbd", "id": "e28", "label": "SME segment", "shape": "dot", "size": 15, "title": "ID: e28\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: SME segment"}, {"color": "#1f77b4", "id": "e29", "label": "OTT companies", "shape": "dot", "size": 15, "title": "ID: e29\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: OTT companies"}, {"color": "#1f77b4", "id": "e30", "label": "media companies", "shape": "dot", "size": 15, "title": "ID: e30\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: media companies"}, {"color": "#9467bd", "id": "e31", "label": "voice-translation", "shape": "dot", "size": 15, "title": "ID: e31\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: voice-translation\u003cbr\u003ecategory: Product/Service\u003cbr\u003edescription: new market/segment to enter"}, {"color": "#9467bd", "id": "e32", "label": "open-source local solution", "shape": "dot", "size": 15, "title": "ID: e32\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: open-source local solution\u003cbr\u003ecategory: Software\u003cbr\u003edescription: offers comprehensive translation capabilities, with qualitative products verified by various customers (on-premise, private and public cloud)"}, {"color": "#9467bd", "id": "e33", "label": "special engines", "shape": "dot", "size": 15, "title": "ID: e33\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: special engines\u003cbr\u003ecategory: Software\u003cbr\u003edescription: created using customer data"}, {"color": "#9467bd", "id": "e34", "label": "APIs", "shape": "dot", "size": 15, "title": "ID: e34\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: APIs\u003cbr\u003ecategory: Software Component"}, {"color": "#9467bd", "id": "e35", "label": "plugins", "shape": "dot", "size": 15, "title": "ID: e35\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: plugins\u003cbr\u003ecategory: Software Component"}, {"color": "#9467bd", "id": "e36", "label": "connectors", "shape": "dot", "size": 15, "title": "ID: e36\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: connectors\u003cbr\u003ecategory: Software Component"}, {"color": "#9467bd", "id": "e37", "label": "customer-centric support solutions", "shape": "dot", "size": 15, "title": "ID: e37\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: customer-centric support solutions\u003cbr\u003ecategory: Support Service\u003cbr\u003edescription: 24/7 support across US, France, Korea"}, {"color": "#9467bd", "id": "e38", "label": "translation engine upgrades", "shape": "dot", "size": 15, "title": "ID: e38\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: translation engine upgrades\u003cbr\u003ecategory: Service"}, {"color": "#cccccc", "id": "e39", "label": "French government", "shape": "dot", "size": 15, "title": "ID: e39\u003cbr\u003eType: National\u003cbr\u003ename: French government"}, {"color": "#9467bd", "id": "e40", "label": "Business Intelligence solutions", "shape": "dot", "size": 15, "title": "ID: e40\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Business Intelligence solutions\u003cbr\u003ecategory: Software"}, {"color": "#9467bd", "id": "e41", "label": "big data solutions", "shape": "dot", "size": 15, "title": "ID: e41\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: big data solutions\u003cbr\u003ecategory: Software"}, {"color": "#9467bd", "id": "e42", "label": "analytical solutions", "shape": "dot", "size": 15, "title": "ID: e42\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: analytical solutions\u003cbr\u003ecategory: Software"}, {"color": "#1f77b4", "id": "e43", "label": "Corporations", "shape": "dot", "size": 15, "title": "ID: e43\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Corporations"}, {"color": "#ffbb78", "id": "e44", "label": "Corporations using machine translation", "shape": "dot", "size": 15, "title": "ID: e44\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Corporations using machine translation\u003cbr\u003ekpiValueString: 10%\u003cbr\u003ekpiDateOrPeriod: by 2025\u003cbr\u003edescription: expected penetration"}, {"color": "#9467bd", "id": "e45", "label": "machine translation", "shape": "dot", "size": 15, "title": "ID: e45\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: machine translation\u003cbr\u003ecategory: Software"}, {"color": "#1f77b4", "id": "e46", "label": "ChapsVision", "shape": "dot", "size": 15, "title": "ID: e46\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: ChapsVision"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "e1", "label": "isSubjectOf", "title": "pekg:isSubjectOf", "to": "e4"}, {"arrows": "to", "from": "e4", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e2"}, {"arrows": "to", "from": "e4", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e3"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e5"}, {"arrows": "to", "from": "e1", "label": "operatesIn", "title": "pekg:operatesIn", "to": "e6"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e7"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e8"}, {"arrows": "to", "from": "e43", "label": "targets", "title": "pekg:targets", "to": "e45"}, {"arrows": "to", "from": "e43", "label": "reportsOperationalKPI", "title": "pekg:reportsOperationalKPI", "to": "e44"}, {"arrows": "to", "from": "e1", "label": "targets", "title": "pekg:targets", "to": "e9"}, {"arrows": "to", "from": "e1", "label": "targets", "title": "pekg:targets", "to": "e10"}, {"arrows": "to", "from": "e1", "label": "targets", "title": "pekg:targets", "to": "e11"}, {"arrows": "to", "from": "e1", "label": "targets", "title": "pekg:targets", "to": "e12"}, {"arrows": "to", "from": "e1", "label": "targets", "title": "pekg:targets", "to": "e13"}, {"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e14"}, {"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e15"}, {"arrows": "to", "from": "e1", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e16"}, {"arrows": "to", "from": "e16", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e1"}, {"arrows": "to", "from": "e1", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e17"}, {"arrows": "to", "from": "e17", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e1"}, {"arrows": "to", "from": "e1", "label": "hasOfficeIn", "title": "pekg:hasOfficeIn", "to": "e18"}, {"arrows": "to", "from": "e1", "label": "hasOfficeIn", "title": "pekg:hasOfficeIn", "to": "e19"}, {"arrows": "to", "from": "e1", "label": "hasOfficeIn", "title": "pekg:hasOfficeIn", "to": "e20"}, {"arrows": "to", "from": "e1", "label": "reportsOperationalKPI", "title": "pekg:reportsOperationalKPI", "to": "e21"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e22"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e23"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e24"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e25"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e26"}, {"arrows": "to", "from": "e1", "label": "targets", "title": "pekg:targets", "to": "e27"}, {"arrows": "to", "from": "e1", "label": "targets", "title": "pekg:targets", "to": "e28"}, {"arrows": "to", "from": "e1", "label": "targets", "title": "pekg:targets", "to": "e29"}, {"arrows": "to", "from": "e1", "label": "targets", "title": "pekg:targets", "to": "e30"}, {"arrows": "to", "from": "e1", "label": "seeksTransaction", "title": "pekg:seeksTransaction", "to": "e31"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e32"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e33"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e34"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e35"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e36"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e37"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e38"}, {"arrows": "to", "from": "e39", "label": "hasClientGovernment", "title": "pekg:hasClientGovernment", "to": "e1"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e40"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e41"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e42"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shape": "dot", "size": 18, "font": {"size": 14, "face": "Tahoma"}}, "edges": {"arrows": {"to": {"enabled": true, "scaleFactor": 0.7}}, "color": {"inherit": "from"}, "smooth": {"type": "continuous", "roundness": 0.2}, "font": {"size": 10, "align": "middle"}}, "physics": {"enabled": true, "barnesHut": {"gravitationalConstant": -30000, "centralGravity": 0.3, "springLength": 250, "springConstant": 0.04, "damping": 0.09}, "minVelocity": 0.75}, "interaction": {"hover": true, "tooltipDelay": 200, "multiselect": true}, "layout": {"hierarchical": false}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
