@@ -1,0 +1,223 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "Target Company"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Sale/Acquisition",
+      "dealRationaleHighlights": [
+        "Focus on Enterprise offer",
+        "2 fees' models to address customer needs"
+      ]
+    },
+    {
+      "id": "e3",
+      "type": "Investment Bank",
+      "name": "Rothschild & Co",
+      "roleInContext": "Financial Advisor"
+    },
+    {
+      "id": "e4",
+      "type": "Investment Bank",
+      "name": "Samsung Securities",
+      "roleInContext": "Financial Advisor"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Perpetual license model",
+      "category": "License Model",
+      "description": "One-time charged perpetual license, completed with recurring maintenance and optional services/upgrades.",
+      "pricingModelInfo": "One-time fee for license, annual maintenance (optional), one-time service (optional), upgrades (optional)"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Annual license model",
+      "category": "License Model",
+      "description": "Annual license including maintenance, leading to steady revenue and stickiness of customers, with optional services/upgrades.",
+      "pricingModelInfo": "Annual license fees, annual maintenance, one-time service (optional), upgrades (optional)"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "Enterprise offer",
+      "category": "Product/Service Offering",
+      "description": "Specific offering focused on enterprise customers."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Customer Needs",
+      "description": "The license models are designed to address diverse customer needs."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Steady Revenue",
+      "kpiValueString": "Achieved through annual license model",
+      "description": "Benefit of annual license model."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Customer Stickiness",
+      "kpiValueString": "Achieved through annual license model",
+      "description": "Benefit of annual license model."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Company",
+      "name": "Eleven",
+      "description": "Source of VDD report"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company mentioned in confidential watermark"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:RevenueStream",
+      "name": "License Revenue",
+      "description": "Revenue from license fees (one-time or annual)."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:RevenueStream",
+      "name": "Maintenance Revenue",
+      "description": "Revenue from optional annual maintenance."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:RevenueStream",
+      "name": "Services Revenue",
+      "description": "Revenue from optional one-time services (e.g., training)."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:RevenueStream",
+      "name": "Upgrades Revenue",
+      "description": "Revenue from optional upgrades (new version, additional users)."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e5",
+      "target": "e8",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e8",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e9",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6",
+      "target": "e10",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e5",
+      "target": "e13",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e5",
+      "target": "e14",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e5",
+      "target": "e15",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e5",
+      "target": "e16",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e6",
+      "target": "e13",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e6",
+      "target": "e14",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e6",
+      "target": "e15",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e6",
+      "target": "e16",
+      "type": "pekg:hasRevenueStream"
+    }
+  ]
+}

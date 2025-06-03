@@ -1,0 +1,2281 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm for Project System_big"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm for Project System_big"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Potential Sale/Acquisition",
+      "status": "Teaser Phase"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Annual Licenses",
+      "category": "License"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Maintenance",
+      "category": "Service"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "Perpetual Licenses",
+      "category": "License"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Services",
+      "category": "Service"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "Cloud",
+      "category": "Service"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Model Studio",
+      "category": "Product"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "SPNS v.10",
+      "category": "Product"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Translate Enterprise",
+      "category": "Product"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Private sector clients",
+      "description": "Clients transitioning from perpetual to annual licenses"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Public clients",
+      "description": "Existing clients for perpetual licenses"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Defense & security markets",
+      "description": "Target market for perpetual licenses"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Individuals",
+      "description": "Target for cloud customer base expansion"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Small and mid-size LSPs",
+      "description": "Target for cloud customer base expansion"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:MarketContext",
+      "segmentName": "Untapped markets",
+      "characteristics": "Geographical expansion opportunity"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:Company",
+      "name": "KPMG",
+      "description": "Source of financial data"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:Company",
+      "name": "Management",
+      "description": "Source of financial data"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Owner/originator of the confidential document"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue CAGR",
+      "valueString": "+23.7%",
+      "fiscalPeriod": "FY23BP to FY26BP",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses CAGR",
+      "valueString": "+24.6%",
+      "fiscalPeriod": "FY23BP to FY26BP",
+      "scope": "Product/Service",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance CAGR",
+      "valueString": "+14.6%",
+      "fiscalPeriod": "FY23BP to FY26BP",
+      "scope": "Product/Service",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perpetual Licenses CAGR",
+      "valueString": "+12.8%",
+      "fiscalPeriod": "FY23BP to FY26BP",
+      "scope": "Product/Service",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud CAGR",
+      "valueString": "+57.2%",
+      "fiscalPeriod": "FY23BP to FY26BP",
+      "scope": "Product/Service",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses",
+      "valueString": "4,974",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses",
+      "valueString": "7,134",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses",
+      "valueString": "9,548",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses",
+      "valueString": "11,988",
+      "fiscalPeriod": "FY26BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance",
+      "valueString": "5,741",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance",
+      "valueString": "6,999",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance",
+      "valueString": "8,351",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance",
+      "valueString": "9,886",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perpetual Licenses",
+      "valueString": "6,857",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perpetual Licenses",
+      "valueString": "8,190",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perpetual Licenses",
+      "valueString": "9,604",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perpetual Licenses",
+      "valueString": "11,112",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Services",
+      "valueString": "714",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Services",
+      "valueString": "941",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Services",
+      "valueString": "1,187",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Services",
+      "valueString": "1,437",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud",
+      "valueString": "2,660",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud",
+      "valueString": "5,971",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud",
+      "valueString": "10,707",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud",
+      "valueString": "16,247",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e47",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other Revenue",
+      "valueString": "1,769",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e48",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other Revenue",
+      "valueString": "1,973",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e49",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other Revenue",
+      "valueString": "2,200",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e50",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other Revenue",
+      "valueString": "2,480",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e51",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue",
+      "valueString": "19,032",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e52",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue",
+      "valueString": "22,714",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e53",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue",
+      "valueString": "31,209",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e54",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue",
+      "valueString": "41,597",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e55",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue",
+      "valueString": "53,151",
+      "fiscalPeriod": "FY26BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Absolute",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e56",
+      "type": "pekg:FinancialMetric",
+      "metricName": "% growth",
+      "valueString": "16.3%",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Percentage"
+    },
+    {
+      "id": "e57",
+      "type": "pekg:FinancialMetric",
+      "metricName": "% growth",
+      "valueString": "37.4%",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Percentage"
+    },
+    {
+      "id": "e58",
+      "type": "pekg:FinancialMetric",
+      "metricName": "% growth",
+      "valueString": "33.2%",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Percentage"
+    },
+    {
+      "id": "e59",
+      "type": "pekg:FinancialMetric",
+      "metricName": "% growth",
+      "valueString": "27.7%",
+      "fiscalPeriod": "FY26BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Percentage"
+    },
+    {
+      "id": "e60",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Hosting and IT expenses",
+      "valueString": "(1,081)",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e61",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Hosting and IT expenses",
+      "valueString": "(1,410)",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e62",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Hosting and IT expenses",
+      "valueString": "(1,886)",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e63",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Hosting and IT expenses",
+      "valueString": "(2,537)",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e64",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Hosting and IT expenses",
+      "valueString": "(3,611)",
+      "fiscalPeriod": "FY26BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e65",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Software license & maintenance",
+      "valueString": "(642)",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e66",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Software license & maintenance",
+      "valueString": "(829)",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e67",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Software license & maintenance",
+      "valueString": "(889)",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e68",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Software license & maintenance",
+      "valueString": "(954)",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e69",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Software license & maintenance",
+      "valueString": "(1,024)",
+      "fiscalPeriod": "FY26BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e70",
+      "type": "pekg:FinancialMetric",
+      "metricName": "R&D expenses",
+      "valueString": "(152)",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e71",
+      "type": "pekg:FinancialMetric",
+      "metricName": "R&D expenses",
+      "valueString": "(199)",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e72",
+      "type": "pekg:FinancialMetric",
+      "metricName": "R&D expenses",
+      "valueString": "(278)",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e73",
+      "type": "pekg:FinancialMetric",
+      "metricName": "R&D expenses",
+      "valueString": "(286)",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e74",
+      "type": "pekg:FinancialMetric",
+      "metricName": "R&D expenses",
+      "valueString": "(295)",
+      "fiscalPeriod": "FY26BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e75",
+      "type": "pekg:FinancialMetric",
+      "metricName": "R&D staff costs",
+      "valueString": "(4,722)",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e76",
+      "type": "pekg:FinancialMetric",
+      "metricName": "R&D staff costs",
+      "valueString": "(5,137)",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e77",
+      "type": "pekg:FinancialMetric",
+      "metricName": "R&D staff costs",
+      "valueString": "(6,685)",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e78",
+      "type": "pekg:FinancialMetric",
+      "metricName": "R&D staff costs",
+      "valueString": "(7,784)",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e79",
+      "type": "pekg:FinancialMetric",
+      "metricName": "R&D staff costs",
+      "valueString": "(9,062)",
+      "fiscalPeriod": "FY26BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e80",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Outsourcing",
+      "valueString": "(468)",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e81",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Outsourcing",
+      "valueString": "(653)",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e82",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Outsourcing",
+      "valueString": "(807)",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e83",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Outsourcing",
+      "valueString": "(847)",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e84",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Outsourcing",
+      "valueString": "(890)",
+      "fiscalPeriod": "FY26BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e85",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Partner/reseller's Commission",
+      "valueString": "(47)",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e86",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Partner/reseller's Commission",
+      "valueString": "(122)",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e87",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Partner/reseller's Commission",
+      "valueString": "(141)",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e88",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Partner/reseller's Commission",
+      "valueString": "(168)",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e89",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Partner/reseller's Commission",
+      "valueString": "(211)",
+      "fiscalPeriod": "FY26BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e90",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Net margin",
+      "valueString": "11,920",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Profitability",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e91",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Net margin",
+      "valueString": "14,364",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Profitability",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e92",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Net margin",
+      "valueString": "20,523",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Profitability",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e93",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Net margin",
+      "valueString": "29,021",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Profitability",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e94",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Net margin",
+      "valueString": "38,058",
+      "fiscalPeriod": "FY26BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Profitability",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e95",
+      "type": "pekg:FinancialMetric",
+      "metricName": "% of revenue (Net margin)",
+      "valueString": "62.6%",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Percentage"
+    },
+    {
+      "id": "e96",
+      "type": "pekg:FinancialMetric",
+      "metricName": "% of revenue (Net margin)",
+      "valueString": "63.2%",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Percentage"
+    },
+    {
+      "id": "e97",
+      "type": "pekg:FinancialMetric",
+      "metricName": "% of revenue (Net margin)",
+      "valueString": "65.8%",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Percentage"
+    },
+    {
+      "id": "e98",
+      "type": "pekg:FinancialMetric",
+      "metricName": "% of revenue (Net margin)",
+      "valueString": "69.8%",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Percentage"
+    },
+    {
+      "id": "e99",
+      "type": "pekg:FinancialMetric",
+      "metricName": "% of revenue (Net margin)",
+      "valueString": "71.6%",
+      "fiscalPeriod": "FY26BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Percentage"
+    },
+    {
+      "id": "e100",
+      "type": "pekg:FinancialMetric",
+      "metricName": "RTC",
+      "valueString": "641",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e101",
+      "type": "pekg:FinancialMetric",
+      "metricName": "RTC",
+      "valueString": "641",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e102",
+      "type": "pekg:FinancialMetric",
+      "metricName": "RTC",
+      "valueString": "493",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e103",
+      "type": "pekg:FinancialMetric",
+      "metricName": "RTC",
+      "valueString": "505",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e104",
+      "type": "pekg:FinancialMetric",
+      "metricName": "RTC",
+      "valueString": "516",
+      "fiscalPeriod": "FY26BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e105",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other staff costs",
+      "valueString": "(8,403)",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e106",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other staff costs",
+      "valueString": "(9,905)",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e107",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other staff costs",
+      "valueString": "(12,652)",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e108",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other staff costs",
+      "valueString": "(14,819)",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e109",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other staff costs",
+      "valueString": "(17,310)",
+      "fiscalPeriod": "FY26BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e110",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Rent & building",
+      "valueString": "(115)",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e111",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Rent & building",
+      "valueString": "(135)",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e112",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Rent & building",
+      "valueString": "(141)",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e113",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Rent & building",
+      "valueString": "(147)",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e114",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Rent & building",
+      "valueString": "(154)",
+      "fiscalPeriod": "FY26BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e115",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Advertising & marketing",
+      "valueString": "(760)",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e116",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Advertising & marketing",
+      "valueString": "(1,126)",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e117",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Advertising & marketing",
+      "valueString": "(1,886)",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e118",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Advertising & marketing",
+      "valueString": "(2,123)",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e119",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Advertising & marketing",
+      "valueString": "(2,407)",
+      "fiscalPeriod": "FY26BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e120",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Professional fee",
+      "valueString": "(537)",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e121",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Professional fee",
+      "valueString": "(610)",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e122",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Professional fee",
+      "valueString": "(681)",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e123",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Professional fee",
+      "valueString": "(707)",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e124",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Professional fee",
+      "valueString": "(733)",
+      "fiscalPeriod": "FY26BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e125",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other operating expenses",
+      "valueString": "(589)",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e126",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other operating expenses",
+      "valueString": "(831)",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e127",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other operating expenses",
+      "valueString": "(825)",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e128",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other operating expenses",
+      "valueString": "(891)",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e129",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other operating expenses",
+      "valueString": "(970)",
+      "fiscalPeriod": "FY26BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e130",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Taxes",
+      "valueString": "13",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e131",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Taxes",
+      "valueString": "15",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e132",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Taxes",
+      "valueString": "(60)",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e133",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Taxes",
+      "valueString": "(62)",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e134",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Taxes",
+      "valueString": "(64)",
+      "fiscalPeriod": "FY26BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Expense",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e135",
+      "type": "pekg:FinancialMetric",
+      "metricName": "EBITDA (excl. IFRS16 leases)",
+      "valueString": "2,170",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Profitability",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e136",
+      "type": "pekg:FinancialMetric",
+      "metricName": "EBITDA (excl. IFRS16 leases)",
+      "valueString": "2,411",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Profitability",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e137",
+      "type": "pekg:FinancialMetric",
+      "metricName": "EBITDA (excl. IFRS16 leases)",
+      "valueString": "4,770",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Profitability",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e138",
+      "type": "pekg:FinancialMetric",
+      "metricName": "EBITDA (excl. IFRS16 leases)",
+      "valueString": "10,776",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Profitability",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e139",
+      "type": "pekg:FinancialMetric",
+      "metricName": "EBITDA (excl. IFRS16 leases)",
+      "valueString": "16,936",
+      "fiscalPeriod": "FY26BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Profitability",
+      "metricCurrency": "Euro k"
+    },
+    {
+      "id": "e140",
+      "type": "pekg:FinancialMetric",
+      "metricName": "% of revenue (EBITDA)",
+      "valueString": "11.4%",
+      "fiscalPeriod": "FY22B",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": true,
+      "metricType": "Percentage"
+    },
+    {
+      "id": "e141",
+      "type": "pekg:FinancialMetric",
+      "metricName": "% of revenue (EBITDA)",
+      "valueString": "10.6%",
+      "fiscalPeriod": "FY23BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Percentage"
+    },
+    {
+      "id": "e142",
+      "type": "pekg:FinancialMetric",
+      "metricName": "% of revenue (EBITDA)",
+      "valueString": "15.3%",
+      "fiscalPeriod": "FY24BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Percentage"
+    },
+    {
+      "id": "e143",
+      "type": "pekg:FinancialMetric",
+      "metricName": "% of revenue (EBITDA)",
+      "valueString": "25.9%",
+      "fiscalPeriod": "FY25BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Percentage"
+    },
+    {
+      "id": "e144",
+      "type": "pekg:FinancialMetric",
+      "metricName": "% of revenue (EBITDA)",
+      "valueString": "31.9%",
+      "fiscalPeriod": "FY26BP",
+      "sourceNote": "KPMG, Management",
+      "isAdjustedOrProforma": false,
+      "metricType": "Percentage"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "isSubjectOf"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "offers"
+    },
+    {
+      "source": "e5",
+      "target": "e13",
+      "type": "targets"
+    },
+    {
+      "source": "e5",
+      "target": "e18",
+      "type": "targets"
+    },
+    {
+      "source": "e10",
+      "target": "e13",
+      "type": "targets"
+    },
+    {
+      "source": "e7",
+      "target": "e14",
+      "type": "targets"
+    },
+    {
+      "source": "e7",
+      "target": "e15",
+      "type": "targets"
+    },
+    {
+      "source": "e11",
+      "target": "e14",
+      "type": "targets"
+    },
+    {
+      "source": "e9",
+      "target": "e16",
+      "type": "targets"
+    },
+    {
+      "source": "e9",
+      "target": "e17",
+      "type": "targets"
+    },
+    {
+      "source": "e12",
+      "target": "e16",
+      "type": "targets"
+    },
+    {
+      "source": "e12",
+      "target": "e17",
+      "type": "targets"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e27",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e28",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e29",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e30",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e31",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e32",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e33",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e34",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e35",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e36",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e36",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e37",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e38",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e39",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e40",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e40",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e41",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e41",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e42",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e42",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e43",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e43",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e44",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e44",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e45",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e45",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e46",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e46",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e47",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e48",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e49",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e50",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e51",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e52",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e53",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e54",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e55",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e56",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e57",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e58",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e59",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e60",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e61",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e62",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e63",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e64",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e65",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e66",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e67",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e68",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e69",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e70",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e71",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e72",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e73",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e74",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e75",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e76",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e77",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e78",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e79",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e80",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e81",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e82",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e83",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e84",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e85",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e86",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e87",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e88",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e89",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e90",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e91",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e92",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e93",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e94",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e95",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e96",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e97",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e98",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e99",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e100",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e101",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e102",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e103",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e104",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e105",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e106",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e107",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e108",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e109",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e110",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e111",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e112",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e113",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e114",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e115",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e116",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e117",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e118",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e119",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e120",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e121",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e122",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e123",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e124",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e125",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e126",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e127",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e128",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e129",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e130",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e131",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e132",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e133",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e134",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e135",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e136",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e137",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e138",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e139",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e140",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e141",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e142",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e143",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e144",
+      "type": "reportsFinancialMetric"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Herm\u00e8s",
+      "alias": [
+        "Group"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Advisor",
+      "name": "Vulcain S.A.S.",
+      "alias": [
+        "Vulcain"
+      ]
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Person",
+      "fullName": "Thierry Falque-Pierrotin",
+      "position": [
+        "Partner and CEO"
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Person",
+      "fullName": "Pierre Roche",
+      "position": [
+        "Director"
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Person",
+      "fullName": "Theo Dahan",
+      "position": [
+        "Associate"
+      ]
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Person",
+      "fullName": "Michael Schor",
+      "position": [
+        "Partner"
+      ]
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Person",
+      "fullName": "Arnaud Gu\u00e9rin",
+      "position": [
+        "Analyst"
+      ]
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Location",
+      "locationName": "Paris, France",
+      "locationType": "Office"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:TransactionContext",
+      "contextName": "Proposed Transaction"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e2",
+      "target": "e5",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e2",
+      "target": "e6",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e2",
+      "target": "e7",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e2",
+      "target": "e8",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e9",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

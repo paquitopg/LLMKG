@@ -1,0 +1,322 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Articque's client portfolio is highly diversified. The company has historically experienced a high revenue spread, with little or no dependance to a limited number of clients."
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisor for Project INUK"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK",
+      "status": "Strictly Private & Confidential"
+    },
+    {
+      "id": "e5",
+      "type": "Government",
+      "name": "Public institutions"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Automotive & transports"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Unions"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Housing & construction"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "IT"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Agriculture"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Banking & insurance"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Consulting"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Retail and food industry"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Healthcare"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Total Clients",
+      "kpiValueString": "627 clients",
+      "kpiDateOrPeriod": "FY21A"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Clients with 5+ years loyalty",
+      "kpiValueString": "450 clients",
+      "kpiDateOrPeriod": "FY21A",
+      "description": "clients of Articque for at least 5 years"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Clients with 10+ years loyalty",
+      "kpiValueString": "200 clients",
+      "kpiDateOrPeriod": "FY21A",
+      "description": "clients of Articque for at least 10 years"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Top 20 Clients Concentration",
+      "kpiValueString": "36%",
+      "kpiDateOrPeriod": "FY19A"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Top 20 Clients Concentration",
+      "kpiValueString": "29%",
+      "kpiDateOrPeriod": "FY20A"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Top 20 Clients Concentration",
+      "kpiValueString": "34%",
+      "kpiDateOrPeriod": "FY21A"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings from clients with 5+ years loyalty",
+      "valueString": "\u20ac2.2m",
+      "fiscalPeriod": "FY21A",
+      "scope": "56% of FY21A billings"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings from clients with 10+ years loyalty",
+      "valueString": "\u20ac1m",
+      "fiscalPeriod": "FY21A",
+      "scope": "26% of FY21A billings"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top 20 Clients Billings",
+      "valueString": "\u20ac1,198k",
+      "fiscalPeriod": "FY19",
+      "scope": "35.6% of total billings"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top 10 Clients Billings",
+      "valueString": "\u20ac896k",
+      "fiscalPeriod": "FY19",
+      "scope": "26.6% of total billings"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top 20 Clients Billings",
+      "valueString": "\u20ac1,107k",
+      "fiscalPeriod": "FY20",
+      "scope": "28.9% of total billings"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top 10 Clients Billings",
+      "valueString": "\u20ac737k",
+      "fiscalPeriod": "FY20",
+      "scope": "19.2% of total billings"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top 20 Clients Billings",
+      "valueString": "\u20ac1,345k",
+      "fiscalPeriod": "FY21",
+      "scope": "34.3% of total billings"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top 10 Clients Billings",
+      "valueString": "\u20ac1,018k",
+      "fiscalPeriod": "FY21",
+      "scope": "25.9% of total billings"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:hasClientGovernment"
+    }
+  ]
+}

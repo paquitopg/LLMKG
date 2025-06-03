@@ -1,0 +1,968 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "keyStrengths": [
+        "Wide and diversified customer outreach"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Sale",
+      "status": "Teaser",
+      "keyInvestmentHighlights": [
+        "Solid customer traction and rising ARPA driving strong recurring revenue growth"
+      ]
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e4",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "KPMG"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Company",
+      "name": "Ford"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Company",
+      "name": "SSA",
+      "description": "Segment or product line of Systran SAS"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Company",
+      "name": "SSI",
+      "description": "Segment or product line of Systran SAS"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:MarketContext",
+      "segmentName": "Recurring Revenue",
+      "characteristics": "Solid customer traction and rising ARPA driving strong recurring revenue growth"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:MarketContext",
+      "segmentName": "Customer Outreach",
+      "characteristics": "Wide and diversified"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARR",
+      "valueString": "2.4 \u20acm",
+      "fiscalPeriod": "Dec-19",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARR",
+      "valueString": "2.6 \u20acm",
+      "fiscalPeriod": "Dec-20",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARR",
+      "valueString": "3.2 \u20acm",
+      "fiscalPeriod": "Dec-21",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARR",
+      "valueString": "3.3 \u20acm",
+      "fiscalPeriod": "Sep-22",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:FinancialMetric",
+      "metricName": "New ARR",
+      "valueString": "0.8 \u20acm",
+      "fiscalPeriod": "Dec-19 to Dec-20",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Upsell ARR",
+      "valueString": "0.2 \u20acm",
+      "fiscalPeriod": "Dec-19 to Dec-20",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Downsell ARR",
+      "valueString": "(0.3) \u20acm",
+      "fiscalPeriod": "Dec-19 to Dec-20",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Churn ARR",
+      "valueString": "(0.3) \u20acm",
+      "fiscalPeriod": "Dec-19 to Dec-20",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Churn Cross-sell ARR",
+      "valueString": "(0.1) \u20acm",
+      "fiscalPeriod": "Dec-19 to Dec-20",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "New ARR",
+      "valueString": "0.7 \u20acm",
+      "fiscalPeriod": "Dec-20 to Dec-21",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Upsell ARR",
+      "valueString": "0.5 \u20acm",
+      "fiscalPeriod": "Dec-20 to Dec-21",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Downsell ARR",
+      "valueString": "(0.2) \u20acm",
+      "fiscalPeriod": "Dec-20 to Dec-21",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Churn ARR",
+      "valueString": "(0.3) \u20acm",
+      "fiscalPeriod": "Dec-20 to Dec-21",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Churn Cross-sell ARR",
+      "valueString": "(0.1) \u20acm",
+      "fiscalPeriod": "Dec-20 to Dec-21",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:FinancialMetric",
+      "metricName": "New ARR",
+      "valueString": "0.3 \u20acm",
+      "fiscalPeriod": "Dec-21 to Sep-22",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Upsell ARR",
+      "valueString": "0.3 \u20acm",
+      "fiscalPeriod": "Dec-21 to Sep-22",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Downsell ARR",
+      "valueString": "(0.2) \u20acm",
+      "fiscalPeriod": "Dec-21 to Sep-22",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Churn ARR",
+      "valueString": "(0.4) \u20acm",
+      "fiscalPeriod": "Dec-21 to Sep-22",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Churn Cross-sell ARR",
+      "valueString": "0.1 \u20acm",
+      "fiscalPeriod": "Dec-21 to Sep-22",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARPA",
+      "valueString": "0.34 \u20ack",
+      "fiscalPeriod": "Dec-19",
+      "scope": "SSA",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARPA",
+      "valueString": "0.35 \u20ack",
+      "fiscalPeriod": "Dec-20",
+      "scope": "SSA",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARPA",
+      "valueString": "0.43 \u20ack",
+      "fiscalPeriod": "Dec-21",
+      "scope": "SSA",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARPA",
+      "valueString": "0.44 \u20ack",
+      "fiscalPeriod": "Sep-22",
+      "scope": "SSA",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual License Sales Change",
+      "valueString": "+\u20ac912k",
+      "fiscalPeriod": "Dec-19 to Dec-22",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARR Growth",
+      "valueString": "+38.6%",
+      "fiscalPeriod": "Dec-19 to Sep-22",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARPA Increase",
+      "valueString": "from \u20ac33.8k to \u20ac43.7k",
+      "fiscalPeriod": "Dec-19 to Sep-22",
+      "scope": "SSA",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARR Bridge Change",
+      "valueString": "+\u20ac252k / +10.7%",
+      "fiscalPeriod": "Dec-19 to Dec-20",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARR Bridge Change",
+      "valueString": "+\u20ac576k / +22.0%",
+      "fiscalPeriod": "Dec-20 to Dec-21",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARR Bridge Change",
+      "valueString": "+\u20ac84k / +2.6%",
+      "fiscalPeriod": "Dec-21 to Sep-22",
+      "scope": "SSA",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARR",
+      "valueString": "0.7 \u20acm",
+      "fiscalPeriod": "Dec-19",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARR",
+      "valueString": "0.5 \u20acm",
+      "fiscalPeriod": "Dec-20",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARR",
+      "valueString": "0.5 \u20acm",
+      "fiscalPeriod": "Dec-21",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARR",
+      "valueString": "0.5 \u20acm",
+      "fiscalPeriod": "Sep-22",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:FinancialMetric",
+      "metricName": "New ARR",
+      "valueString": "0.16 \u20acm",
+      "fiscalPeriod": "Dec-19 to Dec-20",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Upsell ARR",
+      "valueString": "0.01 \u20acm",
+      "fiscalPeriod": "Dec-19 to Dec-20",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e47",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Downsell ARR",
+      "valueString": "(0.09) \u20acm",
+      "fiscalPeriod": "Dec-19 to Dec-20",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e48",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Churn ARR",
+      "valueString": "(0.22) \u20acm",
+      "fiscalPeriod": "Dec-19 to Dec-20",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e49",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Churn Cross-sell ARR",
+      "valueString": "(0.03) \u20acm",
+      "fiscalPeriod": "Dec-19 to Dec-20",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e50",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Renew ARR",
+      "valueString": "(0.06) \u20acm",
+      "fiscalPeriod": "Dec-19 to Dec-20",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e51",
+      "type": "pekg:FinancialMetric",
+      "metricName": "New ARR",
+      "valueString": "0.06 \u20acm",
+      "fiscalPeriod": "Dec-20 to Dec-21",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e52",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Upsell ARR",
+      "valueString": "0.01 \u20acm",
+      "fiscalPeriod": "Dec-20 to Dec-21",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e53",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Downsell ARR",
+      "valueString": "(0.06) \u20acm",
+      "fiscalPeriod": "Dec-20 to Dec-21",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e54",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Churn ARR",
+      "valueString": "(0.02) \u20acm",
+      "fiscalPeriod": "Dec-20 to Dec-21",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e55",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Renew ARR",
+      "valueString": "(0.02) \u20acm",
+      "fiscalPeriod": "Dec-20 to Dec-21",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e56",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Upsell ARR",
+      "valueString": "0.04 \u20acm",
+      "fiscalPeriod": "Dec-21 to Sep-22",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e57",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Downsell ARR",
+      "valueString": "(0.02) \u20acm",
+      "fiscalPeriod": "Dec-21 to Sep-22",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e58",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Churn ARR",
+      "valueString": "(0.02) \u20acm",
+      "fiscalPeriod": "Dec-21 to Sep-22",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e59",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARPA",
+      "valueString": "0.44 \u20ack",
+      "fiscalPeriod": "Dec-19",
+      "scope": "SSI",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e60",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARPA",
+      "valueString": "0.31 \u20ack",
+      "fiscalPeriod": "Dec-20",
+      "scope": "SSI",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e61",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARPA",
+      "valueString": "0.27 \u20ack",
+      "fiscalPeriod": "Dec-21",
+      "scope": "SSI",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e62",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARPA",
+      "valueString": "0.32 \u20ack",
+      "fiscalPeriod": "Sep-22",
+      "scope": "SSI",
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e63",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual License Sales Change",
+      "valueString": "\u20ac(218)k",
+      "fiscalPeriod": "Dec-19 to Sep-22",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e64",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARR Decrease",
+      "valueString": "(31.1)%",
+      "fiscalPeriod": "Dec-19 to Sep-22",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e65",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Churn",
+      "valueString": "\u20ac(124)k",
+      "scope": "SSI",
+      "sourceNote": "Ford"
+    },
+    {
+      "id": "e66",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARR Bridge Change",
+      "valueString": "\u20ac(229)k / (32.7)%",
+      "fiscalPeriod": "Dec-19 to Dec-20",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e67",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARR Bridge Change",
+      "valueString": "+\u20ac11k / 2.3%",
+      "fiscalPeriod": "Dec-20 to Dec-21",
+      "scope": "SSI",
+      "isRecurring": true,
+      "sourceNote": "KPMG VDD report"
+    },
+    {
+      "id": "e68",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Retention Rate Management",
+      "kpiValueString": "good",
+      "scope": "SSA"
+    },
+    {
+      "id": "e69",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Ability to attract new clients with higher ARR",
+      "kpiValueString": "strong",
+      "scope": "SSA"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e8",
+      "target": "e1",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e9",
+      "target": "e1",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e8",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e16",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e17",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e18",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e22",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e24",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e25",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e26",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e27",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e28",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e29",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e30",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e31",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e32",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e33",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e34",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e35",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e36",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e37",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e38",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e39",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e40",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e41",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e42",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e43",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e44",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e45",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e47",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e48",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e49",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e50",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e51",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e52",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e53",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e54",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e55",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e56",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e57",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e58",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e59",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e60",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e61",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e62",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e63",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e64",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e65",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e66",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e67",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e6",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e8",
+      "target": "e68",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e8",
+      "target": "e69",
+      "type": "pekg:reportsOperationalKPI"
+    }
+  ]
+}

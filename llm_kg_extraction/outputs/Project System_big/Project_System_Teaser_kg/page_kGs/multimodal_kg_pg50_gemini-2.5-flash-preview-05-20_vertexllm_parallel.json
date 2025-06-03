@@ -1,0 +1,92 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "Target company of the financial teaser, characterized by its strong R&D and innovation capabilities.",
+      "keyStrengths": [
+        "Ambitious R&D roadmap",
+        "One-of-a-kind track-record of innovations"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisor for Project System_big"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisor for Project System_big"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Sale/Acquisition",
+      "status": "Teaser Phase",
+      "dealRationaleHighlights": [
+        "Ambitious R&D roadmap based on a one-of-a kind track-record of innovations"
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company mentioned as the owner or publisher of the confidential document."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Technology",
+      "name": "Artificial Intelligence",
+      "description": "Inferred from the brain-like structure and interconnected nodes in the image, suggesting advanced computational and learning capabilities."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Technology",
+      "name": "Natural Language Processing",
+      "description": "Inferred from the presence of various language characters (e.g., Chinese/Japanese/Korean characters, 'A\u6587' icon) on the laptop screen in the image, indicating language understanding and processing."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Technology",
+      "name": "Machine Translation",
+      "description": "Inferred from the visual cues of language characters and translation-related icons (e.g., speech bubbles) in the image, indicating automated language conversion."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:usesTechnology"
+    }
+  ]
+}

@@ -1,0 +1,352 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "operates on the blooming Location Intelligence market",
+      "keyStrengths": [
+        "solid stand-alone and compelling business plan"
+      ],
+      "growthStrategySummary": "expects its recurring billings to show consistent y-o-y growth of ~25% to reach \u20ac5.3m in FY24BP (85% of total billings), generating a 49% adjusted EBITDA margin in FY24BP, driven by: The completion of M2S transition of AP, The completion of the migration of CDD clients to CDO, The ramp-up of CDO & AP subscription offering to new clients, The Development and launch of two additional modules: DataComposer, DataViz"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "status": "Strictly Private & Confidential",
+      "typeSought": "Sale",
+      "dealRationaleHighlights": [
+        "favorable environment driving a robust mid-term business plan",
+        "underpinning a solid stand-alone and compelling business plan"
+      ],
+      "keyInvestmentHighlights": [
+        "consistent y-o-y growth of ~25% in recurring billings",
+        "49% adjusted EBITDA margin in FY24BP"
+      ]
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisor for Project Inuk"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:MarketContext",
+      "segmentName": "Location Intelligence",
+      "geography": "worldwide",
+      "sizeInfo": "$16.1Bn in 2022",
+      "growthInfo": "expected to reach $51.3Bn by 2030 growing at a 15.6% CAGR over the period",
+      "keyDrivers": [
+        "Augmented analytics for even better business outcomes",
+        "technology has considerably improved to increasingly allow non-technical users to access LI tools opening a vast field of untapped potential",
+        "Refine customer knowledge through geospatial insights",
+        "Leverage operational and execution excellence through more accurate decision making",
+        "Enhance business data intelligence by bringing geography into business data",
+        "Improve grasp and awareness of business environment by blending multiple data sources"
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "DataComposer",
+      "category": "ETL tool",
+      "description": "An easy-to-use Extract-Transform-Load tool allowing non-specialists to integrate extremely large volumes of data to perform geodecisional analysis"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "DataViz",
+      "category": "Data Visualization Engine",
+      "description": "A web graphic rendering engine enabling customized and dynamic output visualization of large datasets processed in DataComposer"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "M2S",
+      "description": "Transition of AP"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "AP",
+      "description": "Subscription offering"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "CDD",
+      "description": "Clients migrated to CDO"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "CDO",
+      "description": "Subscription offering"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings",
+      "valueString": "3,831 \u20ack",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings",
+      "valueString": "4,209 \u20ack",
+      "fiscalPeriod": "FY22L",
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings",
+      "valueString": "5,169 \u20ack",
+      "fiscalPeriod": "FY23BP",
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings",
+      "valueString": "6,450 \u20ack",
+      "fiscalPeriod": "FY24BP",
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring billings",
+      "valueString": "2,747 \u20ack",
+      "fiscalPeriod": "FY21A",
+      "isRecurring": true,
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring billings",
+      "valueString": "3,468 \u20ack",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": true,
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring billings",
+      "valueString": "4,033 \u20ack",
+      "fiscalPeriod": "FY23BP",
+      "isRecurring": true,
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring billings",
+      "valueString": "5,279 \u20ack",
+      "fiscalPeriod": "FY24BP",
+      "isRecurring": true,
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "metricName": "EBITDA",
+      "valueString": "1,409 \u20ack",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "EBITDA",
+      "valueString": "1,454 \u20ack",
+      "fiscalPeriod": "FY22L",
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "EBITDA",
+      "valueString": "2,008 \u20ack",
+      "fiscalPeriod": "FY23BP",
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "EBITDA",
+      "valueString": "2,845 \u20ack",
+      "fiscalPeriod": "FY24BP",
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring CAGR",
+      "valueString": "+24.3%",
+      "fiscalPeriod": "FY21A-24BP",
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA Margin",
+      "valueString": "49%",
+      "fiscalPeriod": "FY24BP",
+      "isAdjustedOrProforma": true,
+      "scope": "Company",
+      "sourceNote": "Management"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e11",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6",
+      "target": "e5",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:reportsFinancialMetric"
+    }
+  ]
+}

@@ -1,0 +1,322 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "Pioneering translation solutions to human translation facilitation"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "Rothschild & Co"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "Samsung Securities"
+    },
+    {
+      "id": "e4",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e5",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "status": "Teaser Document"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:MarketContext",
+      "segmentName": "Machine Translation market",
+      "characteristics": "Technology-driven",
+      "growthInfo": "dynamic market powered by innovation"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:MarketContext",
+      "segmentName": "Global Machine Translation market",
+      "sizeInfo": "c. \u20ac760m",
+      "sourceOfData": "Traditional and Emerging Use-Cases for Machine Translation by Any Way, expert calls, Eleven VDD report"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "Machine Translation (MT) - Entirely with MT",
+      "category": "Translation Solution",
+      "description": "Translation entirely with MT, for large volumes that could not be translated by humans due to time or cost constraints."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "Machine Translation (MT) - Little or No Human Post-editing",
+      "category": "Translation Solution",
+      "description": "MT with little or no human post-editing, for low-mid level criticality content that bear limited risk in translation errors."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Machine Translation (MT) - With Human Post-editing",
+      "category": "Translation Solution",
+      "description": "MT with human post-editing, for mid-high level criticality content requiring high accuracy translation to avoid brand, monetary or legal risks."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "Computer Assisted Translation tools (CAT)",
+      "category": "Translation Tool",
+      "description": "Tools assisting human translation."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "Translation Memory (TM)",
+      "category": "Translation Tool",
+      "description": "A record of previously created translation aligned with source texts."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Online chat"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Real-time chats with customers"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Product information"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "User-generated content"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Discovery for intelligence/military"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Blogs"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Questionnaire and survey responses"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Real-time translation of stock reports"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Manuals with little security or safety risks"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Conferences"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Contracts"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Advertisements"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Press release"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Life science material"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Video games"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Patents"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Research papers"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Market Size",
+      "valueString": "c. \u20ac760m",
+      "scope": "Global Machine Translation market",
+      "fiscalPeriod": "Current"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e6",
+      "target": "e4",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e6",
+      "target": "e5",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e7",
+      "target": "e31",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e31",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e11",
+      "target": "e12",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e11",
+      "target": "e13",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e9",
+      "target": "e14",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e15",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e16",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e18",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e10",
+      "target": "e20",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e10",
+      "target": "e21",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e10",
+      "target": "e22",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e23",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e24",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e25",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e26",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e27",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e28",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e29",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e30",
+      "type": "pekg:targets"
+    }
+  ]
+}

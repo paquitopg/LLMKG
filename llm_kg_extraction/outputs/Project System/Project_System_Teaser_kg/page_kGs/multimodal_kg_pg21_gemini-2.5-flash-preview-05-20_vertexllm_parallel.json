@@ -1,0 +1,212 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran",
+      "description": "workforce is characterized by a very high educational level which enables it to address technical functions to further develop the business",
+      "keyStrengths": [
+        "Very high educational level of workforce",
+        "Workforce enables addressing technical functions to further develop the business"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "Rothschild & Co"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "Samsung Securities"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System",
+      "typeSought": "Sale/Acquisition",
+      "status": "Teaser Phase",
+      "keyInvestmentHighlights": [
+        "Experienced management team steering an organisation positioned for accelerated growth"
+      ]
+    },
+    {
+      "id": "e6",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisor for Project System"
+    },
+    {
+      "id": "e7",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisor for Project System"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Headcount",
+      "headcountName": "Total Employees",
+      "totalEmployees": 108,
+      "dateOrYear": "31/12/2022",
+      "sourceNote": "Company Information"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Headcount",
+      "headcountName": "Employee breakdown by level of education",
+      "dateOrYear": "30/11/2022",
+      "breakdownDescription": "Master: 61%, Bachelor: 27%, Ph.D.: 5%, two-year degree: 6%, A-level: 1%"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Headcount",
+      "headcountName": "Employee breakdown by department",
+      "dateOrYear": "31/12/2022",
+      "breakdownDescription": "Management: 5%, Software Engineers: 36%, Computational linguists/language engineers: 18%, Commercial & Marketing: 31%, Administrative: 11%"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Headcount",
+      "headcountName": "Employee breakdown by seniority",
+      "dateOrYear": "31/12/2022",
+      "breakdownDescription": "0-2 years: 43%, 2-5 years: 25%, 5-10 years: 17%, 10+ years: 16%"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Headcount",
+      "headcountName": "Total Employees",
+      "totalEmployees": 84,
+      "dateOrYear": "2019",
+      "breakdownDescription": "Paris: 61, San Diego: 23"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Headcount",
+      "headcountName": "Total Employees",
+      "totalEmployees": 95,
+      "dateOrYear": "2020",
+      "breakdownDescription": "Paris: 61, San Diego: 25, Tokyo: 9"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Headcount",
+      "headcountName": "Total Employees",
+      "totalEmployees": 110,
+      "dateOrYear": "2021",
+      "breakdownDescription": "Paris: 72, San Diego: 25, Tokyo: 11, Daejong: 2"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Location",
+      "locationName": "Paris",
+      "locationType": "Office"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Location",
+      "locationName": "San Diego",
+      "locationType": "Office"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Location",
+      "locationName": "Tokyo",
+      "locationType": "Office"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:Location",
+      "locationName": "Daejong",
+      "locationType": "Office"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Employee Historical Evolution",
+      "eventType": "Workforce Development",
+      "description": "Evolution of employee numbers and distribution across offices from 2019 to 2022."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e5",
+      "target": "e6",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e5",
+      "target": "e7",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:experiencedEvent"
+    }
+  ]
+}

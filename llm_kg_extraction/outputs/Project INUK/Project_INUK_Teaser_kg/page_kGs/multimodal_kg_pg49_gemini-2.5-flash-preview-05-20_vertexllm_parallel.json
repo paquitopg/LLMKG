@@ -1,0 +1,42 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "status": "Strictly Private & Confidential",
+      "dealRationaleHighlights": [
+        "FINANCIALS & GROWTH STRATEGY"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company explicitly linked to Project Inuk on this page."
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisor"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e2",
+      "target": "e1",
+      "type": "isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "advisedBy"
+    }
+  ]
+}

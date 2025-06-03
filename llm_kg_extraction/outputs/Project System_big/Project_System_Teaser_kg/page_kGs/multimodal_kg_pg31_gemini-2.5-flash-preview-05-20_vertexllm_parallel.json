@@ -1,0 +1,173 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "One-stop-shop for expert automated translation software solutions",
+      "keyStrengths": [
+        "Best-in-class product portfolio leveraging strong technological assets",
+        "High brand recognition fostered by unparalleled innovations and quality of service",
+        "Strong R&D culture",
+        "Both On-premise and SaaS deployment coverage",
+        "Outstanding client support with customer-centric organization and highly available support teams",
+        "Strong integration capabilities with end-users' work environments",
+        "Robust data security ensuring client data privacy",
+        "Large base of captive blue-chip clients with established historic relationships and strong retention",
+        "Strong international brand name and employer brand",
+        "Long successful track-record with blue-chip accounts"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "status": "Teaser"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "NMT product",
+      "category": "Software",
+      "description": "A best-in-class NMT product"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "automated translation software solutions",
+      "category": "Software",
+      "description": "Expert automated translation software solutions"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "Tailored engines",
+      "category": "Software",
+      "description": "Tailored engines to client\u2019s specific tone of Voice"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Technology",
+      "name": "NMT technology",
+      "description": "Leading Neural Machine Translation (NMT) technology"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Public Sector"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Defence Sector"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Financial Services Sector"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Location",
+      "locationName": "North America",
+      "locationType": "Continent"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Location",
+      "locationName": "Europe",
+      "locationType": "Continent"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Machine translation pure player for over 50 years",
+      "eventType": "Company History",
+      "dateOrYear": "over 50 years"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e8",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:experiencedEvent"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings",
+      "valueString": "\u20ac3.8m",
+      "fiscalPeriod": "FY21A",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Domestic Billings Percentage",
+      "valueString": "97%",
+      "fiscalPeriod": "FY21A",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Churn Rate",
+      "valueString": "7.2%",
+      "fiscalPeriod": "FY22",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "CDD",
+      "description": "historical desktop product"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "CDO",
+      "description": "replacing SaaS version"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "AP"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Number of Clients",
+      "valueString": "627",
+      "fiscalPeriod": "FY21A",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CDD Client Percentage",
+      "valueString": "45%",
+      "fiscalPeriod": "FY21A",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Advisor",
+      "name": "DDA & Company France SAS"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Advisor",
+      "name": "ChapsVision"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e9",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

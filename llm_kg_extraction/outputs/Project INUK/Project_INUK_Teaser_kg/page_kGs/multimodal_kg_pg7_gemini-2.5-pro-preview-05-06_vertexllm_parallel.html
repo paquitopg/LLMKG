@@ -1,0 +1,321 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script>function neighbourhoodHighlight(params) {
+  // console.log("in nieghbourhoodhighlight");
+  allNodes = nodes.get({ returnType: "Object" });
+  // originalNodes = JSON.parse(JSON.stringify(allNodes));
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    highlightActive = true;
+    var i, j;
+    var selectedNode = params.nodes[0];
+    var degrees = 2;
+
+    // mark all nodes as hard to read.
+    for (let nodeId in allNodes) {
+      // nodeColors[nodeId] = allNodes[nodeId].color;
+      allNodes[nodeId].color = "rgba(200,200,200,0.5)";
+      if (allNodes[nodeId].hiddenLabel === undefined) {
+        allNodes[nodeId].hiddenLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+    var connectedNodes = network.getConnectedNodes(selectedNode);
+    var allConnectedNodes = [];
+
+    // get the second degree nodes
+    for (i = 1; i < degrees; i++) {
+      for (j = 0; j < connectedNodes.length; j++) {
+        allConnectedNodes = allConnectedNodes.concat(
+          network.getConnectedNodes(connectedNodes[j])
+        );
+      }
+    }
+
+    // all second degree nodes get a different color and their label back
+    for (i = 0; i < allConnectedNodes.length; i++) {
+      // allNodes[allConnectedNodes[i]].color = "pink";
+      allNodes[allConnectedNodes[i]].color = "rgba(150,150,150,0.75)";
+      if (allNodes[allConnectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[allConnectedNodes[i]].label =
+          allNodes[allConnectedNodes[i]].hiddenLabel;
+        allNodes[allConnectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // all first degree nodes get their own color and their label back
+    for (i = 0; i < connectedNodes.length; i++) {
+      // allNodes[connectedNodes[i]].color = undefined;
+      allNodes[connectedNodes[i]].color = nodeColors[connectedNodes[i]];
+      if (allNodes[connectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[connectedNodes[i]].label =
+          allNodes[connectedNodes[i]].hiddenLabel;
+        allNodes[connectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // the main node gets its own color and its label back.
+    // allNodes[selectedNode].color = undefined;
+    allNodes[selectedNode].color = nodeColors[selectedNode];
+    if (allNodes[selectedNode].hiddenLabel !== undefined) {
+      allNodes[selectedNode].label = allNodes[selectedNode].hiddenLabel;
+      allNodes[selectedNode].hiddenLabel = undefined;
+    }
+  } else if (highlightActive === true) {
+    // console.log("highlightActive was true");
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      // allNodes[nodeId].color = "purple";
+      allNodes[nodeId].color = nodeColors[nodeId];
+      // delete allNodes[nodeId].color;
+      if (allNodes[nodeId].hiddenLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].hiddenLabel;
+        allNodes[nodeId].hiddenLabel = undefined;
+      }
+    }
+    highlightActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    // console.log("Nothing was selected");
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        // allNodes[nodeId].color = {};
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function filterHighlight(params) {
+  allNodes = nodes.get({ returnType: "Object" });
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    filterActive = true;
+    let selectedNodes = params.nodes;
+
+    // hiding all nodes and saving the label
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = true;
+      if (allNodes[nodeId].savedLabel === undefined) {
+        allNodes[nodeId].savedLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+
+    for (let i=0; i < selectedNodes.length; i++) {
+      allNodes[selectedNodes[i]].hidden = false;
+      if (allNodes[selectedNodes[i]].savedLabel !== undefined) {
+        allNodes[selectedNodes[i]].label = allNodes[selectedNodes[i]].savedLabel;
+        allNodes[selectedNodes[i]].savedLabel = undefined;
+      }
+    }
+
+  } else if (filterActive === true) {
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = false;
+      if (allNodes[nodeId].savedLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].savedLabel;
+        allNodes[nodeId].savedLabel = undefined;
+      }
+    }
+    filterActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function selectNode(nodes) {
+  network.selectNodes(nodes);
+  neighbourhoodHighlight({ nodes: nodes });
+  return nodes;
+}
+
+function selectNodes(nodes) {
+  network.selectNodes(nodes);
+  filterHighlight({nodes: nodes});
+  return nodes;
+}
+
+function highlightFilter(filter) {
+  let selectedNodes = []
+  let selectedProp = filter['property']
+  if (filter['item'] === 'node') {
+    let allNodes = nodes.get({ returnType: "Object" });
+    for (let nodeId in allNodes) {
+      if (allNodes[nodeId][selectedProp] && filter['value'].includes((allNodes[nodeId][selectedProp]).toString())) {
+        selectedNodes.push(nodeId)
+      }
+    }
+  }
+  else if (filter['item'] === 'edge'){
+    let allEdges = edges.get({returnType: 'object'});
+    // check if the selected property exists for selected edge and select the nodes connected to the edge
+    for (let edge in allEdges) {
+      if (allEdges[edge][selectedProp] && filter['value'].includes((allEdges[edge][selectedProp]).toString())) {
+        selectedNodes.push(allEdges[edge]['from'])
+        selectedNodes.push(allEdges[edge]['to'])
+      }
+    }
+  }
+  selectNodes(selectedNodes)
+}</script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            
+            
+            
+            
+            
+
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1f77b4", "id": "e1", "label": "Articque", "shape": "dot", "size": 15, "title": "ID: e1\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Articque\u003cbr\u003edescription: Articque provides an industry-agnostic technology and platform for spatial data science, serving private, government, and non-for-profit organizations. Its solutions are designed for easy integration and can utilize various data sources. The company has a loyal client base and high revenue spread.\u003cbr\u003ekeyStrengths: [\u0027Highly versatile design adaptable to any organization size and type\u0027, \u0027Industry-agnostic technology applicable across various sectors (automotive, healthcare, public institutions, banking, housing, unions, etc.)\u0027, \u0027Platform easily integrates into existing IT systems\u0027, \u0027Platform can be populated by diverse data sources (proprietary data, public sources, open data)\u0027, \u0027Loyal client base with c. 630 clients in FY21A\u0027, \u0027Significant client longevity: 450 clients for \u003e=5 years, 200 clients for \u003e=10 years\u0027, \u0027High revenue spread with low client concentration (Top 20 clients accounted for 34% of FY21A billings)\u0027, \u0027Historically low churn rate (7.2% in FY22L, in line with historical data)\u0027, \u0027Strong domestic presence (97% of FY21A billings generated domestically)\u0027]"}, {"color": "#cccccc", "id": "e2", "label": "DDA \u0026 Company France SAS", "shape": "dot", "size": 15, "title": "ID: e2\u003cbr\u003eType: Financial Advisor\u003cbr\u003ename: DDA \u0026 Company France SAS\u003cbr\u003ealias: [\u0027DDA \u0026 Company\u0027]\u003cbr\u003eroleInContext: Advisor for Project Inuk"}, {"color": "#d62728", "id": "e3", "label": "Project Inuk", "shape": "dot", "size": 15, "title": "ID: e3\u003cbr\u003eType: pekg:TransactionContext\u003cbr\u003econtextName: Project Inuk\u003cbr\u003estatus: Strictly Private \u0026 Confidential\u003cbr\u003etransactionPerimeter: Potential transaction involving Articque, with ChapsVision as a key party."}, {"color": "#1f77b4", "id": "e4", "label": "ChapsVision", "shape": "dot", "size": 15, "title": "ID: e4\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: ChapsVision\u003cbr\u003edescription: Company involved in Project Inuk."}, {"color": "#9467bd", "id": "e5", "label": "Articque Platform", "shape": "dot", "size": 15, "title": "ID: e5\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Articque Platform\u003cbr\u003ealias: [\u0027C\u0026D Online Articque Platform\u0027]\u003cbr\u003ecategory: Software Platform\u003cbr\u003edescription: A fully-integrated platform for the private and public sector. It can be integrated easily into existing IT systems and populated by any data source including proprietary data, public sources and/or open data. Includes C\u0026D Online capabilities."}, {"color": "#9467bd", "id": "e6", "label": "Cartes \u0026 Donn\u00e9es", "shape": "dot", "size": 15, "title": "ID: e6\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Cartes \u0026 Donn\u00e9es\u003cbr\u003ecategory: Software / Data Product\u003cbr\u003edescription: Product or module by Articque, visually shown as an input or component related to the Articque Platform in the diagram."}, {"color": "#8c564b", "id": "e7", "label": "Spatial data science", "shape": "dot", "size": 15, "title": "ID: e7\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Spatial data science\u003cbr\u003edescription: Core technology capability of Articque, used to enhance business outcomes."}, {"color": "#8c564b", "id": "e8", "label": "Open data", "shape": "dot", "size": 15, "title": "ID: e8\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Open data\u003cbr\u003edescription: Data source that can populate Articque\u0027s platform."}, {"color": "#8c564b", "id": "e9", "label": "Public data", "shape": "dot", "size": 15, "title": "ID: e9\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Public data\u003cbr\u003edescription: Data source that can populate Articque\u0027s platform, including public sources."}, {"color": "#8c564b", "id": "e10", "label": "Proprietary data", "shape": "dot", "size": 15, "title": "ID: e10\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Proprietary data\u003cbr\u003edescription: Data source that can populate Articque\u0027s platform."}, {"color": "#ffbb78", "id": "e11", "label": "Total number of clients", "shape": "dot", "size": 15, "title": "ID: e11\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Total number of clients\u003cbr\u003ekpiValueString: c. 630\u003cbr\u003ekpiDateOrPeriod: FY21A\u003cbr\u003edescription: Total loyal client base of Articque."}, {"color": "#ffbb78", "id": "e12", "label": "Number of clients (\u003e= 5 years)", "shape": "dot", "size": 15, "title": "ID: e12\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Number of clients (\u003e= 5 years)\u003cbr\u003ekpiValueString: 450\u003cbr\u003ekpiDateOrPeriod: FY21A\u003cbr\u003edescription: Number of clients that have been with Articque for at least 5 years."}, {"color": "#ff7f0e", "id": "e13", "label": "Billings from clients (\u003e= 5 years) (FY21A)", "shape": "dot", "size": 15, "title": "ID: e13\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Billings from clients (\u003e= 5 years)\u003cbr\u003evalueString: \u20ac2.2m\u003cbr\u003efiscalPeriod: FY21A\u003cbr\u003escope: Represents 56% of FY21A billings\u003cbr\u003esourceNote: Source: Management \u2013 Billings in \u20ack"}, {"color": "#ffbb78", "id": "e14", "label": "Number of clients (\u003e= 10 years)", "shape": "dot", "size": 15, "title": "ID: e14\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Number of clients (\u003e= 10 years)\u003cbr\u003ekpiValueString: 200\u003cbr\u003ekpiDateOrPeriod: FY21A\u003cbr\u003edescription: Number of clients that have been with Articque for at least 10 years."}, {"color": "#ff7f0e", "id": "e15", "label": "Billings from clients (\u003e= 10 years) (FY21A)", "shape": "dot", "size": 15, "title": "ID: e15\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Billings from clients (\u003e= 10 years)\u003cbr\u003evalueString: \u20ac1m\u003cbr\u003efiscalPeriod: FY21A\u003cbr\u003escope: Represents 26% of FY21A billings\u003cbr\u003esourceNote: Source: Management \u2013 Billings in \u20ack"}, {"color": "#ffbb78", "id": "e16", "label": "Churn rate", "shape": "dot", "size": 15, "title": "ID: e16\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Churn rate\u003cbr\u003ekpiValueString: 7.2%\u003cbr\u003ekpiDateOrPeriod: FY22L\u003cbr\u003edescription: In line with historical data. Source: Management."}, {"color": "#ff7f0e", "id": "e17", "label": "Top 20 clients billings percentage of total billin", "shape": "dot", "size": 15, "title": "ID: e17\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Top 20 clients billings percentage of total billings\u003cbr\u003evalueString: 36%\u003cbr\u003efiscalPeriod: FY19A\u003cbr\u003esourceNote: Source: Management \u2013 Billings in \u20ack"}, {"color": "#ff7f0e", "id": "e18", "label": "Top 20 clients billings percentage of total billin", "shape": "dot", "size": 15, "title": "ID: e18\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Top 20 clients billings percentage of total billings\u003cbr\u003evalueString: 29%\u003cbr\u003efiscalPeriod: FY20A\u003cbr\u003esourceNote: Source: Management \u2013 Billings in \u20ack"}, {"color": "#ff7f0e", "id": "e19", "label": "Top 20 clients billings percentage of total billin", "shape": "dot", "size": 15, "title": "ID: e19\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Top 20 clients billings percentage of total billings\u003cbr\u003evalueString: 34%\u003cbr\u003efiscalPeriod: FY21A\u003cbr\u003esourceNote: Source: Management \u2013 Billings in \u20ack"}, {"color": "#ff7f0e", "id": "e20", "label": "Domestic billings percentage (FY21A)", "shape": "dot", "size": 15, "title": "ID: e20\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Domestic billings percentage\u003cbr\u003evalueString: 97%\u003cbr\u003efiscalPeriod: FY21A\u003cbr\u003esourceNote: Source: Management \u2013 Billings in \u20ack"}, {"color": "#ff7f0e", "id": "e21", "label": "Europe billings percentage (FY21A)", "shape": "dot", "size": 15, "title": "ID: e21\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Europe billings percentage\u003cbr\u003evalueString: c. 3%\u003cbr\u003efiscalPeriod: FY21A\u003cbr\u003escope: Balance of billings, mainly in Europe\u003cbr\u003esourceNote: Source: Management \u2013 Billings in \u20ack"}, {"color": "#ce6dbd", "id": "e22", "label": "Automotive", "shape": "dot", "size": 15, "title": "ID: e22\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Automotive"}, {"color": "#ce6dbd", "id": "e23", "label": "Healthcare", "shape": "dot", "size": 15, "title": "ID: e23\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Healthcare"}, {"color": "#ce6dbd", "id": "e24", "label": "Public Institutions", "shape": "dot", "size": 15, "title": "ID: e24\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Public Institutions"}, {"color": "#ce6dbd", "id": "e25", "label": "Banking", "shape": "dot", "size": 15, "title": "ID: e25\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Banking"}, {"color": "#ce6dbd", "id": "e26", "label": "Housing", "shape": "dot", "size": 15, "title": "ID: e26\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Housing"}, {"color": "#ce6dbd", "id": "e27", "label": "Unions", "shape": "dot", "size": 15, "title": "ID: e27\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Unions"}, {"color": "#ce6dbd", "id": "e28", "label": "Retail and Food industry", "shape": "dot", "size": 15, "title": "ID: e28\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Retail and Food industry"}, {"color": "#ce6dbd", "id": "e29", "label": "Transport", "shape": "dot", "size": 15, "title": "ID: e29\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Transport"}, {"color": "#ce6dbd", "id": "e30", "label": "Bank \u0026 Insurance", "shape": "dot", "size": 15, "title": "ID: e30\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Bank \u0026 Insurance"}, {"color": "#ce6dbd", "id": "e31", "label": "Sales", "shape": "dot", "size": 15, "title": "ID: e31\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Sales\u003cbr\u003edescription: End user application area for Articque\u0027s platform."}, {"color": "#ce6dbd", "id": "e32", "label": "Marketing", "shape": "dot", "size": 15, "title": "ID: e32\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Marketing\u003cbr\u003edescription: End user application area for Articque\u0027s platform."}, {"color": "#ce6dbd", "id": "e33", "label": "Operations", "shape": "dot", "size": 15, "title": "ID: e33\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Operations\u003cbr\u003edescription: End user application area for Articque\u0027s platform."}, {"color": "#ce6dbd", "id": "e34", "label": "Observatory", "shape": "dot", "size": 15, "title": "ID: e34\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Observatory\u003cbr\u003edescription: End user application area for Articque\u0027s platform."}, {"color": "#c7c7c7", "id": "e35", "label": "Domestic (France)", "shape": "dot", "size": 15, "title": "ID: e35\u003cbr\u003eType: pekg:Location\u003cbr\u003elocationName: Domestic (France)\u003cbr\u003elocationType: Market Region"}, {"color": "#c7c7c7", "id": "e36", "label": "Europe", "shape": "dot", "size": 15, "title": "ID: e36\u003cbr\u003eType: pekg:Location\u003cbr\u003elocationName: Europe\u003cbr\u003elocationType: Market Region"}, {"color": "#cccccc", "id": "e37", "label": "ARM\u00c9E DE L\u0027AIR", "shape": "dot", "size": 15, "title": "ID: e37\u003cbr\u003eType: Military Branch\u003cbr\u003ename: ARM\u00c9E DE L\u0027AIR"}, {"color": "#cccccc", "id": "e38", "label": "cnsa", "shape": "dot", "size": 15, "title": "ID: e38\u003cbr\u003eType: National Solidarity Fund for Autonomy\u003cbr\u003ename: cnsa"}, {"color": "#cccccc", "id": "e39", "label": "l\u0027Assurance Maladie", "shape": "dot", "size": 15, "title": "ID: e39\u003cbr\u003eType: National Health Insurance\u003cbr\u003ename: l\u0027Assurance Maladie"}, {"color": "#1f77b4", "id": "e40", "label": "OPCO 2i", "shape": "dot", "size": 15, "title": "ID: e40\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: OPCO 2i"}, {"color": "#cccccc", "id": "e41", "label": "INSEP", "shape": "dot", "size": 15, "title": "ID: e41\u003cbr\u003eType: National Institute of Sport, Expertise, and Performance\u003cbr\u003ename: INSEP"}, {"color": "#cccccc", "id": "e42", "label": "BANQUE DE FRANCE", "shape": "dot", "size": 15, "title": "ID: e42\u003cbr\u003eType: Central Bank\u003cbr\u003ename: BANQUE DE FRANCE"}, {"color": "#1f77b4", "id": "e43", "label": "C2RP HAUTS-DE-FRANCE", "shape": "dot", "size": 15, "title": "ID: e43\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: C2RP HAUTS-DE-FRANCE"}, {"color": "#1f77b4", "id": "e44", "label": "GROUPE IMA", "shape": "dot", "size": 15, "title": "ID: e44\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: GROUPE IMA"}, {"color": "#1f77b4", "id": "e45", "label": "MUTUALIT\u00c9 FRAN\u00c7AISE", "shape": "dot", "size": 15, "title": "ID: e45\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: MUTUALIT\u00c9 FRAN\u00c7AISE"}, {"color": "#1f77b4", "id": "e46", "label": "Cr\u00e9dit Agricole", "shape": "dot", "size": 15, "title": "ID: e46\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Cr\u00e9dit Agricole\u003cbr\u003ealias: [\u0027CA\u0027]"}, {"color": "#1f77b4", "id": "e47", "label": "CAISSE D\u0027EPARGNE Loire-Centre", "shape": "dot", "size": 15, "title": "ID: e47\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: CAISSE D\u0027EPARGNE Loire-Centre"}, {"color": "#1f77b4", "id": "e48", "label": "SNCF R\u00e9seau", "shape": "dot", "size": 15, "title": "ID: e48\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: SNCF R\u00e9seau\u003cbr\u003ealias: [\u0027R\u00c9SEAU SNCF\u0027]"}, {"color": "#1f77b4", "id": "e49", "label": "WURTH", "shape": "dot", "size": 15, "title": "ID: e49\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: WURTH"}, {"color": "#1f77b4", "id": "e50", "label": "ALKOR", "shape": "dot", "size": 15, "title": "ID: e50\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: ALKOR"}, {"color": "#1f77b4", "id": "e51", "label": "P\u00c2TISSERIES GOURMANDES", "shape": "dot", "size": 15, "title": "ID: e51\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: P\u00c2TISSERIES GOURMANDES"}, {"color": "#1f77b4", "id": "e52", "label": "Kubota", "shape": "dot", "size": 15, "title": "ID: e52\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Kubota"}, {"color": "#1f77b4", "id": "e53", "label": "xylem", "shape": "dot", "size": 15, "title": "ID: e53\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: xylem"}, {"color": "#1f77b4", "id": "e54", "label": "Coloplast", "shape": "dot", "size": 15, "title": "ID: e54\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Coloplast"}, {"color": "#1f77b4", "id": "e55", "label": "GSK", "shape": "dot", "size": 15, "title": "ID: e55\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: GSK"}, {"color": "#1f77b4", "id": "e56", "label": "Bristol Myers Squibb", "shape": "dot", "size": 15, "title": "ID: e56\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Bristol Myers Squibb"}, {"color": "#1f77b4", "id": "e57", "label": "astellas", "shape": "dot", "size": 15, "title": "ID: e57\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: astellas"}, {"color": "#1f77b4", "id": "e58", "label": "NOVARTIS", "shape": "dot", "size": 15, "title": "ID: e58\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: NOVARTIS"}, {"color": "#1f77b4", "id": "e59", "label": "FO (Force Ouvri\u00e8re)", "shape": "dot", "size": 15, "title": "ID: e59\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: FO (Force Ouvri\u00e8re)\u003cbr\u003edescription: Trade Union"}, {"color": "#1f77b4", "id": "e60", "label": "UROS", "shape": "dot", "size": 15, "title": "ID: e60\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: UROS"}, {"color": "#1f77b4", "id": "e61", "label": "CFE CGC", "shape": "dot", "size": 15, "title": "ID: e61\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: CFE CGC\u003cbr\u003edescription: Trade Union"}, {"color": "#1f77b4", "id": "e62", "label": "CERFRANCE", "shape": "dot", "size": 15, "title": "ID: e62\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: CERFRANCE"}, {"color": "#1f77b4", "id": "e63", "label": "Interfel", "shape": "dot", "size": 15, "title": "ID: e63\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Interfel\u003cbr\u003edescription: Interprofessional association for fresh fruit and vegetables"}, {"color": "#1f77b4", "id": "e64", "label": "TOYOTA", "shape": "dot", "size": 15, "title": "ID: e64\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: TOYOTA"}, {"color": "#1f77b4", "id": "e65", "label": "IVECO", "shape": "dot", "size": 15, "title": "ID: e65\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: IVECO"}, {"color": "#1f77b4", "id": "e66", "label": "SGS", "shape": "dot", "size": 15, "title": "ID: e66\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: SGS"}, {"color": "#1f77b4", "id": "e67", "label": "AUTOSUR", "shape": "dot", "size": 15, "title": "ID: e67\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: AUTOSUR"}, {"color": "#1f77b4", "id": "e68", "label": "KEOLIS", "shape": "dot", "size": 15, "title": "ID: e68\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: KEOLIS"}, {"color": "#1f77b4", "id": "e69", "label": "VOLVO TRUCKS", "shape": "dot", "size": 15, "title": "ID: e69\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: VOLVO TRUCKS"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e5"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e6"}, {"arrows": "to", "from": "e5", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e7"}, {"arrows": "to", "from": "e5", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e8"}, {"arrows": "to", "from": "e5", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e9"}, {"arrows": "to", "from": "e5", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e10"}, {"arrows": "to", "from": "e5", "label": "targets", "title": "pekg:targets", "to": "e31"}, {"arrows": "to", "from": "e5", "label": "targets", "title": "pekg:targets", "to": "e32"}, {"arrows": "to", "from": "e5", "label": "targets", "title": "pekg:targets", "to": "e33"}, {"arrows": "to", "from": "e5", "label": "targets", "title": "pekg:targets", "to": "e34"}, {"arrows": "to", "from": "e1", "label": "targets", "title": "pekg:targets", "to": "e22"}, {"arrows": "to", "from": "e1", "label": "targets", "title": "pekg:targets", "to": "e23"}, {"arrows": "to", "from": "e1", "label": "targets", "title": "pekg:targets", "to": "e24"}, {"arrows": "to", "from": "e1", "label": "targets", "title": "pekg:targets", "to": "e25"}, {"arrows": "to", "from": "e1", "label": "targets", "title": "pekg:targets", "to": "e26"}, {"arrows": "to", "from": "e1", "label": "targets", "title": "pekg:targets", "to": "e27"}, {"arrows": "to", "from": "e1", "label": "targets", "title": "pekg:targets", "to": "e28"}, {"arrows": "to", "from": "e1", "label": "targets", "title": "pekg:targets", "to": "e29"}, {"arrows": "to", "from": "e1", "label": "targets", "title": "pekg:targets", "to": "e30"}, {"arrows": "to", "from": "e1", "label": "reportsOperationalKPI", "title": "pekg:reportsOperationalKPI", "to": "e11"}, {"arrows": "to", "from": "e1", "label": "reportsOperationalKPI", "title": "pekg:reportsOperationalKPI", "to": "e12"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e13"}, {"arrows": "to", "from": "e1", "label": "reportsOperationalKPI", "title": "pekg:reportsOperationalKPI", "to": "e14"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e15"}, {"arrows": "to", "from": "e1", "label": "reportsOperationalKPI", "title": "pekg:reportsOperationalKPI", "to": "e16"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e17"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e18"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e19"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e20"}, {"arrows": "to", "from": "e1", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e21"}, {"arrows": "to", "from": "e1", "label": "operatesIn", "title": "pekg:operatesIn", "to": "e35"}, {"arrows": "to", "from": "e1", "label": "operatesIn", "title": "pekg:operatesIn", "to": "e36"}, {"arrows": "to", "from": "e1", "label": "isSubjectOf", "title": "pekg:isSubjectOf", "to": "e3"}, {"arrows": "to", "from": "e3", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e2"}, {"arrows": "to", "from": "e4", "label": "seeksTransaction", "title": "pekg:seeksTransaction", "to": "e3"}, {"arrows": "to", "from": "e1", "label": "hasClientGovernment", "title": "pekg:hasClientGovernment", "to": "e37"}, {"arrows": "to", "from": "e1", "label": "hasClientGovernment", "title": "pekg:hasClientGovernment", "to": "e38"}, {"arrows": "to", "from": "e1", "label": "hasClientGovernment", "title": "pekg:hasClientGovernment", "to": "e39"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e40"}, {"arrows": "to", "from": "e1", "label": "hasClientGovernment", "title": "pekg:hasClientGovernment", "to": "e41"}, {"arrows": "to", "from": "e1", "label": "hasClientGovernment", "title": "pekg:hasClientGovernment", "to": "e42"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e43"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e44"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e45"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e46"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e47"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e48"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e49"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e50"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e51"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e52"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e53"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e54"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e55"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e56"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e57"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e58"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e59"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e60"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e61"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e62"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e63"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e64"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e65"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e66"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e67"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e68"}, {"arrows": "to", "from": "e1", "label": "hasClientCompany", "title": "pekg:hasClientCompany", "to": "e69"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shape": "dot", "size": 18, "font": {"size": 14, "face": "Tahoma"}}, "edges": {"arrows": {"to": {"enabled": true, "scaleFactor": 0.7}}, "color": {"inherit": "from"}, "smooth": {"type": "continuous", "roundness": 0.2}, "font": {"size": 10, "align": "middle"}}, "physics": {"enabled": true, "barnesHut": {"gravitationalConstant": -30000, "centralGravity": 0.3, "springLength": 250, "springConstant": 0.04, "damping": 0.09}, "minVelocity": 0.75}, "interaction": {"hover": true, "tooltipDelay": 200, "multiselect": true}, "layout": {"hierarchical": false}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

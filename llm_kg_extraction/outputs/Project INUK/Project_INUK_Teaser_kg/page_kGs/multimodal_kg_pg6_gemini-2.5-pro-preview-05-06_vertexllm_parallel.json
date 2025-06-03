@@ -1,0 +1,407 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "alias": [
+        "ARTICQUE \u00c9CLAIREUR G\u00c9OD\u00c9CISIONNEL"
+      ],
+      "description": "A specialist provider of Location Intelligence (LI) analytics solutions and a pure-play software platform provider focused on unlocking critical insights from geo-data analysis. Articque cumulates several decades of experience in developing innovative geospatial data-led solutions. Articque\u2019s pure-play and best-of-breed approach has propelled the company in the top-3 LI platform providers in France.",
+      "industry": "Location Intelligence Software",
+      "sector": "Software",
+      "keyStrengths": [
+        "Several decades of experience in developing innovative geospatial data-led solutions",
+        "Pure-play and best-of-breed approach",
+        "Top-3 LI platform providers in France",
+        "Cloud-based, powerful and scalable LI Platform",
+        "Unique proprietary no-code modeling approach"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:ProductOrService",
+      "name": "Location Intelligence (LI) analytics solutions",
+      "category": "Software Solution",
+      "description": "Solutions that transform geospatial data into strategic insights to solve a variety of use cases and business challenges, improve productivity, data experience, decision-making and innovation, and empower clients\u2019 strategies to drive growth opportunities, operational excellence and competitive edge."
+    },
+    {
+      "id": "e3",
+      "type": "pekg:ProductOrService",
+      "name": "LI Platform",
+      "category": "Software Platform",
+      "description": "A cloud-based, powerful and scalable Location Intelligence Platform embracing a wide spectrum of analytics requirements. Designed to accommodate any user, leveraging a unique proprietary no-code modeling approach to facilitate LI application development and access by non-technical resources."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:ProductOrService",
+      "name": "CDO (Cartes & Donn\u00e9es Online)",
+      "category": "Software Platform Version",
+      "description": "The cloud-native version of the LI platform (e3_pg6) designed for SMEs requiring a limited number of seats."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "AP (Articque Platform)",
+      "category": "Software Platform Version",
+      "description": "The self-hosted version of CDO (e4_pg6) with identical features, fitted for larger companies."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "GeoCodage",
+      "category": "Complementary Module / Tool",
+      "description": "A geocoding tool to convert large volume datasets of addresses into geographic coordinates."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "GeoService Data",
+      "category": "Complementary Module / Tool",
+      "description": "An enabling tool to tap into a wide range of third-party databases offering socio-demographic data."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Carticque Basemaps",
+      "category": "Data Product / Service",
+      "description": "Provides a range of third-party domestic and international basemaps including administrative or business-specific basemaps."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Technology",
+      "name": "Location Intelligence (LI)",
+      "description": "Technology and methods for analyzing geospatial data to derive insights. Intersects with Business Intelligence (BI), Consulting, Geographic Information System (GIS), and Extract-Transform Load (ETL)."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Technology",
+      "name": "Geospatial Data Analysis",
+      "description": "The process of examining, interpreting, and modeling geographic data to uncover patterns, trends, and insights."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Technology",
+      "name": "No-code modeling",
+      "description": "A unique proprietary approach that facilitates LI application development and access by non-technical resources."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings CAGR",
+      "valueString": "~20%",
+      "fiscalPeriod": "FY18A-22L",
+      "isRecurring": true,
+      "sourceNote": "Source: Management"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings Percentage",
+      "valueString": "~82%",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": true,
+      "scope": "Percentage of total billings",
+      "sourceNote": "Source: Management"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": ">\u20ac4.0m",
+      "fiscalPeriod": "FY23BP",
+      "isRecurring": true,
+      "sourceNote": "Source: Management"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA margin",
+      "valueString": "39%",
+      "fiscalPeriod": "FY22L",
+      "isAdjustedOrProforma": true,
+      "sourceNote": "Source: Management"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Number of Client Logos",
+      "kpiValueString": "~600",
+      "kpiDateOrPeriod": "FY22L",
+      "description": "Number of client companies/organizations.",
+      "sourceNote": "Source: Management"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Headcount",
+      "totalEmployees": 43,
+      "headcountName": "Total Employees",
+      "dateOrYear": "FY22",
+      "sourceNote": "Source: Management"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:MarketContext",
+      "segmentName": "Location Intelligence Platform Providers",
+      "geography": "France",
+      "characteristics": "Articque is in the top-3 LI platform providers in France.",
+      "sourceOfData": "Page text"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Strategic Insight Generation from Geospatial Data",
+      "description": "Transform geospatial data into strategic insights to solve a variety of use cases and business challenges."
+    },
+    {
+      "id": "e20",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Productivity and Decision-Making Improvement",
+      "description": "Improve productivity, data experience, decision-making and innovation by delivering superior intelligence."
+    },
+    {
+      "id": "e21",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Client Strategy Acceleration",
+      "description": "Empower and accelerate clients\u2019 strategies to drive growth opportunities, operational excellence and competitive edge."
+    },
+    {
+      "id": "e22",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "LI Application Development",
+      "description": "Facilitate LI application development, particularly for non-technical resources."
+    },
+    {
+      "id": "e23",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Smarter Data Preparation and Enrichment",
+      "description": "Use cases supported by complementary modules like GeoCodage and GeoService Data."
+    },
+    {
+      "id": "e24",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Small and Medium-sized Enterprises (SMEs)",
+      "description": "Target market for CDO (Cartes & Donn\u00e9es Online) requiring a limited number of seats."
+    },
+    {
+      "id": "e25",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Larger Companies",
+      "description": "Target market for AP (Articque Platform)."
+    },
+    {
+      "id": "e26",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "typeSought": "Implied Sale or Investment",
+      "status": "Ongoing",
+      "transactionPerimeter": "Articque",
+      "description": "Financial transaction concerning Articque, potentially involving ChapsVision."
+    },
+    {
+      "id": "e27",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "alias": [
+        "DDA & Company"
+      ],
+      "roleInContext": "Advisor for Project Inuk"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:MarketContext",
+      "segmentName": "Business Intelligence (BI)",
+      "description": "One of the four key business fields Location Intelligence intersects with.",
+      "sourceOfData": "Management (diagram)"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:MarketContext",
+      "segmentName": "Consulting",
+      "description": "One of the four key business fields Location Intelligence intersects with.",
+      "sourceOfData": "Management (diagram)"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:MarketContext",
+      "segmentName": "Geographic Information System (GIS)",
+      "description": "One of the four key business fields Location Intelligence intersects with.",
+      "sourceOfData": "Management (diagram)"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:MarketContext",
+      "segmentName": "Extract-Transform Load (ETL)",
+      "description": "One of the four key business fields Location Intelligence intersects with. Marked as 'Ongoing Development'.",
+      "sourceOfData": "Management (diagram)"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company mentioned in the context of Project Inuk."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e3",
+      "target": "e11",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e2",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e2",
+      "target": "e20",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e2",
+      "target": "e21",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e22",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e23",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e7",
+      "target": "e23",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e4",
+      "target": "e24",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e25",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e26",
+      "target": "e27",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e32",
+      "target": "e26",
+      "type": "pekg:seeksTransaction"
+    },
+    {
+      "source": "e9",
+      "target": "e28",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e29",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e30",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e31",
+      "type": "pekg:targets"
+    }
+  ]
+}

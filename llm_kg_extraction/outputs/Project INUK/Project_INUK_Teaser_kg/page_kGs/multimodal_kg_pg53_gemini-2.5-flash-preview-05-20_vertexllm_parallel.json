@@ -1,0 +1,267 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Target Company"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e3",
+      "type": "Advisory Firm",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisor for Project INUK"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK",
+      "status": "Strictly Private & Confidential",
+      "description": "Project Codename"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "\u20ac2,747k",
+      "fiscalPeriod": "FY21",
+      "scope": "Company-wide",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "\u20ac3,468k",
+      "fiscalPeriod": "FY22L",
+      "scope": "Company-wide",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:FinancialMetric",
+      "metricName": "New Logo Billings",
+      "valueString": "\u20ac293k",
+      "fiscalPeriod": "FY22L",
+      "description": "Gain of new customers",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Upsell Billings",
+      "valueString": "\u20ac522k",
+      "fiscalPeriod": "FY22L",
+      "description": "Upsell on the existing large client base",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:FinancialMetric",
+      "metricName": "3-year Subscription Billings",
+      "valueString": "\u20ac258k",
+      "fiscalPeriod": "FY22L",
+      "description": "Initial ramp-up 3-year subscription plans",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Churn Billings",
+      "valueString": "\u20ac198k",
+      "fiscalPeriod": "FY22L",
+      "description": "Annual churn",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Downsell Billings",
+      "valueString": "\u20ac90k",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Legacy Product Churn Billings",
+      "valueString": "\u20ac64k",
+      "fiscalPeriod": "FY22L",
+      "description": "Churn due to decommissioning of legacy product (CDD)",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings Net Variation",
+      "valueString": "+\u20ac721k",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Annual Churn Rate",
+      "kpiValueString": "7.2%",
+      "kpiDateOrPeriod": "FY22L",
+      "description": "of total FY21 recurring billings"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:ProductOrService",
+      "name": "3-year subscription plans",
+      "category": "Subscription Service"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:ProductOrService",
+      "name": "CDD",
+      "category": "Legacy Product",
+      "description": "Legacy product that was decommissioned"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Decommissioning of CDD product",
+      "eventType": "Product Decommissioning",
+      "dateOrYear": "FY22L"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e7",
+      "target": "e13",
+      "type": "pekg:contributesTo"
+    },
+    {
+      "source": "e8",
+      "target": "e13",
+      "type": "pekg:contributesTo"
+    },
+    {
+      "source": "e9",
+      "target": "e13",
+      "type": "pekg:contributesTo"
+    },
+    {
+      "source": "e10",
+      "target": "e13",
+      "type": "pekg:impacts"
+    },
+    {
+      "source": "e11",
+      "target": "e13",
+      "type": "pekg:impacts"
+    },
+    {
+      "source": "e12",
+      "target": "e13",
+      "type": "pekg:impacts"
+    },
+    {
+      "source": "e13",
+      "target": "e6",
+      "type": "pekg:contributesTo"
+    },
+    {
+      "source": "e14",
+      "target": "e5",
+      "type": "pekg:relatesTo"
+    },
+    {
+      "source": "e10",
+      "target": "e14",
+      "type": "pekg:relatesTo"
+    },
+    {
+      "source": "e16",
+      "target": "e17",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e17",
+      "target": "e12",
+      "type": "pekg:impacts"
+    }
+  ]
+}

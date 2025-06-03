@@ -1,0 +1,201 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Articque operates in the dynamic and sprawling Location Intelligence market..."
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisor for Project Inuk"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "status": "Ongoing",
+      "transactionPerimeter": "Articque"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:MarketContext",
+      "segmentName": "Location Intelligence (LI) market",
+      "geography": "worldwide",
+      "sizeInfo": "$16.1Bn in 2022, expected to reach $51.3Bn by 2030",
+      "growthInfo": "15.6% CAGR over the period (2022-2030)",
+      "characteristics": "robust and continued growth; dynamic and sprawling",
+      "sourceOfData": "Forbes, Grand View Research, Management",
+      "keyDrivers": [
+        "Refine customer knowledge through geospatial insights",
+        "Leverage operational excellence through more accurate decision making",
+        "Enhance business data intelligence by bringing geography into business data",
+        "Improve grasp of business environment by blending multiple data sources"
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Location Intelligence Market Size 2022",
+      "valueString": "$16.1Bn",
+      "fiscalPeriod": "2022",
+      "scope": "worldwide",
+      "sourceNote": "Forbes, Grand View Research, Management"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Location Intelligence Market Size 2030 (Expected)",
+      "valueString": "$51.3Bn",
+      "fiscalPeriod": "2030",
+      "scope": "worldwide",
+      "sourceNote": "Forbes, Grand View Research, Management"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Location Intelligence Market CAGR 2022-2030",
+      "valueString": "15.6%",
+      "fiscalPeriod": "2022-2030",
+      "sourceNote": "Forbes, Grand View Research, Management"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Location Intelligence (LI) solutions",
+      "alias": [
+        "Location Intelligence platforms"
+      ],
+      "category": "Software Platform",
+      "description": "Location Intelligence platforms are at the junction of several business discipline areas: Business Intelligence, Geographic Information System (GIS), Extract-Transform-Load, Consulting. Positioning diagram source: Management."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Technology",
+      "name": "Location Intelligence (LI)",
+      "description": "Technology that unlocks and fuels business possibilities by refining customer knowledge through geospatial insights, leveraging operational excellence, enhancing business data intelligence by bringing geography into business data, and improving grasp of business environment by blending multiple data sources."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Business Intelligence (BI)",
+      "description": "LI solutions provide valuable decision-support software enabling corporate users to analyze and anticipate key trends in their business with dynamic reports."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Geographic Information System (GIS)",
+      "description": "LI solutions provide unique capabilities contributing a GIS layer on top of business data."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Extract-Transform-Load (ETL)",
+      "description": "LI solutions provide data collection, parsing and dissemination capabilities. Indicated as 'Ongoing Development' in the positioning diagram."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Consulting",
+      "description": "LI solutions create a wealth of new opportunities across a wide range of consulting applications including market analysis, site selection, observatories, and more..."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Company",
+      "name": "Forbes",
+      "description": "Source for Location Intelligence Market data."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Company",
+      "name": "Grand View Research",
+      "description": "Source for Location Intelligence Market data."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Company",
+      "name": "Management",
+      "description": "Source for Location Intelligence Market data and Positioning of Location Intelligence diagram."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Mentioned in relation to Project Inuk in the footer."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e4",
+      "target": "e5",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e4",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e4",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e3",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e8",
+      "target": "e10",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e8",
+      "target": "e11",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e8",
+      "target": "e12",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e8",
+      "target": "e13",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e8",
+      "target": "e9",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e3",
+      "target": "e17",
+      "type": "pekg:eventInvolvesParty"
+    }
+  ]
+}

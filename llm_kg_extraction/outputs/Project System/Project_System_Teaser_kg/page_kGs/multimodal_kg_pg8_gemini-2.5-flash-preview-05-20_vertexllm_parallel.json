@@ -1,0 +1,387 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran",
+      "description": "Target company in the competitive landscape analysis."
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "Language Weaver",
+      "description": "Main competitor in machine translation."
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "DeepL Pro",
+      "description": "Main competitor in machine translation."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "Microsoft",
+      "description": "Big Tech competitor in machine translation."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "Amazon Translate",
+      "description": "Big Tech competitor in machine translation."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Company",
+      "name": "Google",
+      "description": "Big Tech competitor in machine translation."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company associated with the document (watermark 'Confidential - ChapsVision')."
+    },
+    {
+      "id": "e8",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory firm for Project System and Systran."
+    },
+    {
+      "id": "e9",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory firm for Project System and Systran."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System",
+      "status": "Ongoing",
+      "typeSought": "Sale/Acquisition (implied by financial teaser)"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:MarketContext",
+      "segmentName": "Machine Translation Market",
+      "characteristics": "Competitive landscape with 'Main Competitors' and 'Big Tech' players. Degree of Competitiveness scale from High (5) to Low (1).",
+      "sourceOfData": [
+        "Expert calls",
+        "Intento state of machine translation",
+        "Eleven VDD report"
+      ]
+    },
+    {
+      "id": "e12",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Customization",
+      "description": "Key client concern and competitive metric."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Number of languages",
+      "description": "Competitive metric."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Quality of generic translation",
+      "description": "Competitive metric."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Level of confidentiality and security",
+      "description": "Key client concern and competitive metric."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Customer support",
+      "description": "Competitive metric."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Price",
+      "description": "Competitive metric."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "advisedBy"
+    },
+    {
+      "source": "e10",
+      "target": "e8",
+      "type": "advisedBy"
+    },
+    {
+      "source": "e10",
+      "target": "e9",
+      "type": "advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "operatesIn"
+    },
+    {
+      "source": "e2",
+      "target": "e11",
+      "type": "operatesIn"
+    },
+    {
+      "source": "e3",
+      "target": "e11",
+      "type": "operatesIn"
+    },
+    {
+      "source": "e4",
+      "target": "e11",
+      "type": "operatesIn"
+    },
+    {
+      "source": "e5",
+      "target": "e11",
+      "type": "operatesIn"
+    },
+    {
+      "source": "e6",
+      "target": "e11",
+      "type": "operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "High"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low",
+      "description": "Very efficient on specific Language Pairs"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "High"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "High"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e2",
+      "target": "e12",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e2",
+      "target": "e13",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e2",
+      "target": "e14",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "n.a."
+    },
+    {
+      "source": "e2",
+      "target": "e15",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e2",
+      "target": "e16",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e2",
+      "target": "e17",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "n.a."
+    },
+    {
+      "source": "e3",
+      "target": "e12",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "High"
+    },
+    {
+      "source": "e3",
+      "target": "e13",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "High"
+    },
+    {
+      "source": "e3",
+      "target": "e14",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low",
+      "description": "Limited efficiency on specific Language Pairs"
+    },
+    {
+      "source": "e3",
+      "target": "e15",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e3",
+      "target": "e16",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e3",
+      "target": "e17",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "High"
+    },
+    {
+      "source": "e4",
+      "target": "e12",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e4",
+      "target": "e13",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "High"
+    },
+    {
+      "source": "e4",
+      "target": "e14",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e4",
+      "target": "e15",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low"
+    },
+    {
+      "source": "e4",
+      "target": "e16",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low"
+    },
+    {
+      "source": "e4",
+      "target": "e17",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e5",
+      "target": "e12",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e5",
+      "target": "e13",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "High"
+    },
+    {
+      "source": "e5",
+      "target": "e14",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e5",
+      "target": "e15",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low"
+    },
+    {
+      "source": "e5",
+      "target": "e16",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low"
+    },
+    {
+      "source": "e5",
+      "target": "e17",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e6",
+      "target": "e12",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e6",
+      "target": "e13",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "High"
+    },
+    {
+      "source": "e6",
+      "target": "e14",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    },
+    {
+      "source": "e6",
+      "target": "e15",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low"
+    },
+    {
+      "source": "e6",
+      "target": "e16",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Low"
+    },
+    {
+      "source": "e6",
+      "target": "e17",
+      "type": "reportsOperationalKPI",
+      "kpiValueString": "Medium"
+    }
+  ]
+}

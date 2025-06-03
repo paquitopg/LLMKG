@@ -1,0 +1,165 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "awardsAndCertifications": []
+    },
+    {
+      "id": "e2",
+      "type": "pekg:ProductOrService",
+      "name": "Articque Platform",
+      "description": "A fully-integrated platform for the private and public sector"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Client Base",
+      "valueString": "630",
+      "fiscalPeriod": "FY21A"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings",
+      "valueString": "\u20ac2.2m",
+      "fiscalPeriod": "FY21A",
+      "scope": "450 clients for at least 5 years",
+      "sourceNote": "Represents 56% of FY21A billings"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings",
+      "valueString": "\u20ac1m",
+      "fiscalPeriod": "FY21A",
+      "scope": "200 clients for at least 10 years",
+      "sourceNote": "Represents 26% of FY21A billings"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Churn Rate",
+      "valueString": "7.2%",
+      "fiscalPeriod": "FY22L"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings from Top 20 Clients",
+      "valueString": "36%",
+      "fiscalPeriod": "FY19A"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings from Top 20 Clients",
+      "valueString": "29%",
+      "fiscalPeriod": "FY20A"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings from Top 20 Clients",
+      "valueString": "34%",
+      "fiscalPeriod": "FY21A"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Domestic Billings",
+      "valueString": "97%",
+      "fiscalPeriod": "FY21A"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:FinancialMetric",
+      "metricName": "European Billings",
+      "valueString": "Balance",
+      "fiscalPeriod": "FY21A"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Advisor",
+      "name": "DDA & Company France SAS"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Advisor",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e14",
+      "target": "e12",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e14",
+      "target": "e13",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

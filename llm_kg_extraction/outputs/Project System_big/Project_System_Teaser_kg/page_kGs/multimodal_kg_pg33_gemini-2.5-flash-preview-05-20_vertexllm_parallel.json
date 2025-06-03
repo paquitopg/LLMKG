@@ -1,0 +1,1054 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "Target Company for Project System_big, offering expert automated translation software solutions."
+    },
+    {
+      "id": "e2",
+      "type": "pekg:ProductOrService",
+      "name": "Automated Translation Software Solutions",
+      "category": "Software",
+      "description": "One-stop-shop for expert automated translation software solutions."
+    },
+    {
+      "id": "e3",
+      "type": "pekg:ProductOrService",
+      "name": "Language Pairing Catalogue",
+      "category": "Feature/Capability",
+      "description": "A wide language pairing catalogue covering very specific customer needs, with unique ability to pair 50+ common and rare languages into specific engine models."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:ProductOrService",
+      "name": "Translation Engine Models",
+      "category": "Technology Component",
+      "description": "Specific engine models for translation, capable of pairing 50+ common and rare languages."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Danish Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Dutch Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "English Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Finnish Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "French Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "German Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Greek Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "Icelandic Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "Italian Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:ProductOrService",
+      "name": "Norwegian Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:ProductOrService",
+      "name": "Portuguese Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:ProductOrService",
+      "name": "Spanish Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:ProductOrService",
+      "name": "Swedish Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:ProductOrService",
+      "name": "Welsh Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:ProductOrService",
+      "name": "Albanian Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:ProductOrService",
+      "name": "Bulgarian Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:ProductOrService",
+      "name": "Croatian Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:ProductOrService",
+      "name": "Czech Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:ProductOrService",
+      "name": "Estonian Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:ProductOrService",
+      "name": "Hungarian Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:ProductOrService",
+      "name": "Latvian Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:ProductOrService",
+      "name": "Lithuanian Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:ProductOrService",
+      "name": "Polish Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:ProductOrService",
+      "name": "Romanian Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:ProductOrService",
+      "name": "Russian Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:ProductOrService",
+      "name": "Serbian Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:ProductOrService",
+      "name": "Slovak Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:ProductOrService",
+      "name": "Slovenian Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:ProductOrService",
+      "name": "Ukrainian Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:ProductOrService",
+      "name": "Arabic Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:ProductOrService",
+      "name": "Dari Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:ProductOrService",
+      "name": "Farsi (Persian) Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:ProductOrService",
+      "name": "Hebrew Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:ProductOrService",
+      "name": "Pashto Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:ProductOrService",
+      "name": "Somali Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:ProductOrService",
+      "name": "Tajik Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:ProductOrService",
+      "name": "Turkish Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:ProductOrService",
+      "name": "Urdu Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:ProductOrService",
+      "name": "Chinese (simp) Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:ProductOrService",
+      "name": "Chinese (Trd) Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:ProductOrService",
+      "name": "Hindi Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e46",
+      "type": "pekg:ProductOrService",
+      "name": "Indonesian Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e47",
+      "type": "pekg:ProductOrService",
+      "name": "Japanese Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e48",
+      "type": "pekg:ProductOrService",
+      "name": "Korean Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e49",
+      "type": "pekg:ProductOrService",
+      "name": "Malay Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e50",
+      "type": "pekg:ProductOrService",
+      "name": "Punjabi Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e51",
+      "type": "pekg:ProductOrService",
+      "name": "Tagalog Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e52",
+      "type": "pekg:ProductOrService",
+      "name": "Tamil Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e53",
+      "type": "pekg:ProductOrService",
+      "name": "Thai Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e54",
+      "type": "pekg:ProductOrService",
+      "name": "Vietnamese Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e55",
+      "type": "pekg:ProductOrService",
+      "name": "Brazilian Portuguese Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e56",
+      "type": "pekg:ProductOrService",
+      "name": "Latin am. Spanish Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e57",
+      "type": "pekg:ProductOrService",
+      "name": "US English Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e58",
+      "type": "pekg:ProductOrService",
+      "name": "Canada French Language Support",
+      "category": "Language Support"
+    },
+    {
+      "id": "e59",
+      "type": "pekg:Technology",
+      "name": "Automated Translation Technology",
+      "description": "Underlying technology for expert automated translation software solutions."
+    },
+    {
+      "id": "e60",
+      "type": "pekg:Technology",
+      "name": "Language Pairing Technology",
+      "description": "Technology enabling the pairing of 50+ common and rare languages into specific engine models."
+    },
+    {
+      "id": "e61",
+      "type": "pekg:MarketContext",
+      "segmentName": "Western Europe",
+      "geography": "Western Europe"
+    },
+    {
+      "id": "e62",
+      "type": "pekg:MarketContext",
+      "segmentName": "Eastern Europe",
+      "geography": "Eastern Europe"
+    },
+    {
+      "id": "e63",
+      "type": "pekg:MarketContext",
+      "segmentName": "Middle East and Africa",
+      "geography": "Middle East and Africa"
+    },
+    {
+      "id": "e64",
+      "type": "pekg:MarketContext",
+      "segmentName": "Asia",
+      "geography": "Asia"
+    },
+    {
+      "id": "e65",
+      "type": "pekg:MarketContext",
+      "segmentName": "North America",
+      "geography": "North America"
+    },
+    {
+      "id": "e66",
+      "type": "pekg:MarketContext",
+      "segmentName": "South America",
+      "geography": "South America"
+    },
+    {
+      "id": "e67",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Number of Supported Languages",
+      "kpiValueString": "50+",
+      "description": "Unique ability to pair 50+ common and rare languages into specific engine models."
+    },
+    {
+      "id": "e68",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Sale",
+      "status": "Teaser Stage",
+      "dealRationaleHighlights": [
+        "Financial teaser document for a potential transaction involving Systran SAS."
+      ]
+    },
+    {
+      "id": "e69",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisor for Project System_big"
+    },
+    {
+      "id": "e70",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisor for Project System_big"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e2",
+      "target": "e59",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e3",
+      "target": "e60",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e4",
+      "target": "e60",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e67",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e61",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e62",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e63",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e64",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e65",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e66",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e68",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e68",
+      "target": "e69",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e68",
+      "target": "e70",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e3",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e12",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e14",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e15",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e16",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e17",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e18",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e19",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e20",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e21",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e22",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e23",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e24",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e25",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e26",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e27",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e28",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e29",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e30",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e31",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e32",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e33",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e34",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e35",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e36",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e37",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e38",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e39",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e40",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e41",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e42",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e43",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e44",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e45",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e46",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e47",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e48",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e49",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e50",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e51",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e52",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e53",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e54",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e55",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e56",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e57",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e58",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e5",
+      "target": "e61",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e61",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e7",
+      "target": "e61",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e8",
+      "target": "e61",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e61",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e10",
+      "target": "e61",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e61",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e12",
+      "target": "e61",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e13",
+      "target": "e61",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e14",
+      "target": "e61",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e15",
+      "target": "e61",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e16",
+      "target": "e61",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e17",
+      "target": "e61",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e18",
+      "target": "e61",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e19",
+      "target": "e62",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e20",
+      "target": "e62",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e21",
+      "target": "e62",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e22",
+      "target": "e62",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e23",
+      "target": "e62",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e24",
+      "target": "e62",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e25",
+      "target": "e62",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e26",
+      "target": "e62",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e27",
+      "target": "e62",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e28",
+      "target": "e62",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e29",
+      "target": "e62",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e30",
+      "target": "e62",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e31",
+      "target": "e62",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e32",
+      "target": "e62",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e33",
+      "target": "e62",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e34",
+      "target": "e63",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e35",
+      "target": "e63",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e36",
+      "target": "e63",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e37",
+      "target": "e63",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e38",
+      "target": "e63",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e39",
+      "target": "e63",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e40",
+      "target": "e63",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e41",
+      "target": "e63",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e42",
+      "target": "e63",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e43",
+      "target": "e64",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e44",
+      "target": "e64",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e45",
+      "target": "e64",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e46",
+      "target": "e64",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e47",
+      "target": "e64",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e48",
+      "target": "e64",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e49",
+      "target": "e64",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e50",
+      "target": "e64",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e51",
+      "target": "e64",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e52",
+      "target": "e64",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e53",
+      "target": "e64",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e54",
+      "target": "e64",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e57",
+      "target": "e65",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e58",
+      "target": "e65",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e55",
+      "target": "e66",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e56",
+      "target": "e66",
+      "type": "pekg:targets"
+    }
+  ]
+}

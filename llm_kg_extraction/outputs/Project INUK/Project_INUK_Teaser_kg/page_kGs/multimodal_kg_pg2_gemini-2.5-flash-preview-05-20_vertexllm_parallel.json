@@ -1,0 +1,149 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "alias": [
+        "The Group",
+        "The Company"
+      ],
+      "description": "Target company for a potential transaction, subject of the Information Memorandum."
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "DDA & Company France SAS",
+      "alias": [
+        "DDA"
+      ],
+      "description": "Financial advisory firm that prepared the Information Memorandum."
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company mentioned in the context of 'Project Inuk'."
+    },
+    {
+      "id": "e4",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Prepared Information Memorandum and is the contact for inquiries regarding the contemplated transaction."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "typeSought": "Potential Sale/Investment",
+      "status": "Investigation Phase",
+      "dealRationaleHighlights": [
+        "Assist recipient in deciding whether to proceed with further investigation of Articque"
+      ],
+      "transactionPerimeter": "Articque"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Person",
+      "fullName": "Alexandre Odin"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Person",
+      "fullName": "Gr\u00e9goire Bizouerne"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Person",
+      "fullName": "Victor Humberdot"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Position",
+      "titleName": "Partner"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Position",
+      "titleName": "Analyst"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Position",
+      "titleName": "Vice President"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Location",
+      "locationName": "65 rue d\u2019Anjou, 75008 Paris",
+      "locationType": "Office"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e5",
+      "target": "e4",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e6",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e6",
+      "target": "e9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e9",
+      "target": "e2",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e2",
+      "target": "e7",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e7",
+      "target": "e10",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e10",
+      "target": "e2",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e2",
+      "target": "e8",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e8",
+      "target": "e11",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e11",
+      "target": "e2",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e2",
+      "target": "e12",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e5",
+      "target": "e3",
+      "type": "pekg:eventInvolvesParty"
+    }
+  ]
+}

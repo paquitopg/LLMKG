@@ -1,0 +1,51 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:MarketContext",
+      "segmentName": "Dynamic market",
+      "characteristics": "powered by innovation",
+      "keyDrivers": [
+        "Artificial Intelligence",
+        "Natural Language Processing"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Mentioned in a confidential document, likely as a recipient or related party."
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Technology",
+      "name": "Artificial Intelligence",
+      "description": "Visually represented by a brain-like structure with network connections, implying advanced computational capabilities."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Technology",
+      "name": "Natural Language Processing",
+      "description": "Visually represented by language translation symbols (e.g., '\u6587', 'A', 'A\u6587'), indicating capabilities in understanding and processing human language."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Digital Software Platform",
+      "category": "Software",
+      "description": "Represented by a laptop displaying language characters and interacting with an AI brain, suggesting a platform for advanced software applications."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e5",
+      "target": "e3",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e4",
+      "type": "pekg:usesTechnology"
+    }
+  ]
+}

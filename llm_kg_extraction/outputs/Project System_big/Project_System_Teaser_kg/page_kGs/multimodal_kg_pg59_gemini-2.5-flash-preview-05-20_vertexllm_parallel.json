@@ -1,0 +1,556 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "Target Company"
+    },
+    {
+      "id": "e2",
+      "type": "Investment Bank",
+      "name": "Rothschild & Co",
+      "roleInContext": "Financial Advisor"
+    },
+    {
+      "id": "e3",
+      "type": "Investment Bank",
+      "name": "Samsung Securities",
+      "roleInContext": "Financial Advisor"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Confidential party related to the document"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "SJGK",
+      "description": "Japanese entity"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Person",
+      "fullName": "Vincent Godard"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Person",
+      "fullName": "Y. Douzant"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Person",
+      "fullName": "G. Bou"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Person",
+      "fullName": "C. Royer"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Person",
+      "fullName": "John Paul Barraza"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Person",
+      "fullName": "Diskin Lee"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Person",
+      "fullName": "Sam Kim"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Person",
+      "fullName": "Kim Hokyoung"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Position",
+      "titleName": "Group CEO",
+      "department": "Top Management"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Position",
+      "titleName": "Director",
+      "department": "Top Management"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Position",
+      "titleName": "CIO",
+      "department": "Top Management"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Position",
+      "titleName": "Managing Director",
+      "department": "Top Management"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:Position",
+      "titleName": "Director Sales",
+      "department": "Sales & Marketing"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:Position",
+      "titleName": "Sales SPNS & Cloud",
+      "department": "Sales & Marketing"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:Position",
+      "titleName": "Customer success & Marketing",
+      "department": "Sales & Marketing"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:Position",
+      "titleName": "Software Engineer",
+      "department": "R&D (Products & Technology)"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:Position",
+      "titleName": "Linguists/Language Engineers",
+      "department": "R&D (Products & Technology)"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:Position",
+      "titleName": "Human Resources",
+      "department": "Administration and HR"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:Position",
+      "titleName": "IT & Accounting",
+      "department": "Administration and HR"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:Position",
+      "titleName": "Sales, Marketing & Customer Care",
+      "department": "Sales & Marketing"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:Position",
+      "titleName": "Linguist",
+      "department": "R&D (Products & Technology)"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:Position",
+      "titleName": "Intern",
+      "department": "Administration and HR"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:Position",
+      "titleName": "Sales",
+      "department": "Sales & Marketing"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:Position",
+      "titleName": "Others"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:Headcount",
+      "totalEmployees": 106,
+      "headcountName": "Total Headcount",
+      "dateOrYear": "Dec. 2022"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:Headcount",
+      "totalEmployees": 72,
+      "headcountName": "France Headcount",
+      "dateOrYear": "Dec. 2022",
+      "breakdownDescription": "France operations"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:Headcount",
+      "totalEmployees": 22,
+      "headcountName": "USA Headcount",
+      "dateOrYear": "Dec. 2022",
+      "breakdownDescription": "USA operations"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:Headcount",
+      "totalEmployees": 12,
+      "headcountName": "South Korea Headcount",
+      "dateOrYear": "Dec. 2022",
+      "breakdownDescription": "South Korea operations"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:Location",
+      "locationName": "France",
+      "locationType": "Country"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:Location",
+      "locationName": "USA",
+      "locationType": "Country"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:Location",
+      "locationName": "South Korea",
+      "locationType": "Country"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:Location",
+      "locationName": "Japan",
+      "locationType": "Country"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Organizational Structure",
+      "kpiValueString": "well-shaped organisation build around 3 core geographies",
+      "kpiDateOrPeriod": "Dec. 2022"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Management Team & Growth Positioning",
+      "kpiValueString": "Experienced management team steering an organisation positioned for accelerated growth"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Sale",
+      "status": "Teaser Phase"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e40",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e40",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e40",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e6",
+      "target": "e14",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e14",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e7",
+      "target": "e15",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e15",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e7",
+      "target": "e21",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e21",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e7",
+      "target": "e22",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e22",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e8",
+      "target": "e15",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e8",
+      "target": "e19",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e19",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e8",
+      "target": "e20",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e20",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e9",
+      "target": "e15",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e9",
+      "target": "e23",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e23",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e9",
+      "target": "e24",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e24",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e10",
+      "target": "e16",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e16",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e10",
+      "target": "e25",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e25",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e10",
+      "target": "e21",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e10",
+      "target": "e26",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e26",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e10",
+      "target": "e29",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e29",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e11",
+      "target": "e15",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e11",
+      "target": "e27",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e27",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e12",
+      "target": "e17",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e17",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e12",
+      "target": "e29",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e12",
+      "target": "e22",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e12",
+      "target": "e21",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e13",
+      "target": "e18",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e18",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e13",
+      "target": "e28",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e28",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e36",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:hasSubsidiary"
+    },
+    {
+      "source": "e5",
+      "target": "e1",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e5",
+      "target": "e37",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "pekg:reportsOperationalKPI"
+    }
+  ]
+}

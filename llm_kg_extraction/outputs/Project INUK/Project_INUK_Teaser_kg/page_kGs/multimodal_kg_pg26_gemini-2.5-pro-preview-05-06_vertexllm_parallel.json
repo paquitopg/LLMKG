@@ -1,0 +1,630 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Articque has developed a horizontal and industry-agnostic solution serving clients operating in 10+ sectors.",
+      "keyStrengths": [
+        "horizontal and industry-agnostic solution",
+        "cross-industry client portfolio",
+        "sticky domestic client portfolio"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:ProductOrService",
+      "name": "CDO",
+      "category": "SaaS version",
+      "description": "The replacing SaaS version of CDD."
+    },
+    {
+      "id": "e3",
+      "type": "pekg:ProductOrService",
+      "name": "CDD",
+      "category": "historical desktop product",
+      "description": "Historical desktop product."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:ProductOrService",
+      "name": "AP"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings",
+      "valueString": "\u20ac3.8m",
+      "fiscalPeriod": "FY21A",
+      "sourceNote": "Management - Billings"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Domestic Billings Percentage",
+      "valueString": "97%",
+      "fiscalPeriod": "FY21A",
+      "scope": "domestic"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Churn Rate",
+      "valueString": "7.2%",
+      "fiscalPeriod": "FY22",
+      "description": "In line with historical data."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Launch of CDO",
+      "eventType": "Product Launch",
+      "dateOrYear": "FY17"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Percentage of client base on CDD",
+      "kpiValueString": "45%",
+      "description": "Represents a significant switching upsell potential in the foreseeable future."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Total Clients",
+      "kpiValueString": "627",
+      "kpiDateOrPeriod": "FY21A",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Number of clients on CDO",
+      "kpiValueString": "275",
+      "kpiDateOrPeriod": "FY21A",
+      "sourceNote": "Management",
+      "scope": "CDO"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Number of clients on AP",
+      "kpiValueString": "238",
+      "kpiDateOrPeriod": "FY21A",
+      "sourceNote": "Management",
+      "scope": "AP"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Number of clients on CDD",
+      "kpiValueString": "62",
+      "kpiDateOrPeriod": "FY21A",
+      "sourceNote": "Management",
+      "scope": "CDD"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Number of clients on Miscellaneous",
+      "kpiValueString": "27",
+      "kpiDateOrPeriod": "FY21A",
+      "sourceNote": "Management",
+      "scope": "Miscellaneous"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Number of clients on Articque Map",
+      "kpiValueString": "15",
+      "kpiDateOrPeriod": "FY21A",
+      "sourceNote": "Management",
+      "scope": "Articque Map"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Number of clients on Consulting",
+      "kpiValueString": "10",
+      "kpiDateOrPeriod": "FY21A",
+      "sourceNote": "Management",
+      "scope": "Consulting"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:ProductOrService",
+      "name": "Articque Map"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:ProductOrService",
+      "name": "Consulting",
+      "category": "Service"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:ProductOrService",
+      "name": "Miscellaneous",
+      "category": "Product/Service Category"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:Location",
+      "locationName": "Europe",
+      "locationType": "Region"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Automotive"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Healthcare"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Public institutions"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Banking"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Housing"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Unions"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Housing & construction"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Consulting",
+      "description": "Industry vertical for billings breakdown"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Industry & Energy"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Retail & food industry"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Banking & insurance"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Automotive & transports"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "IT"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Agriculture"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Others",
+      "description": "Industry vertical for billings breakdown"
+    },
+    {
+      "id": "e36",
+      "type": "Financial Advisor",
+      "name": "DDA & Company",
+      "roleInContext": "Financial Advisor for Project Inuk"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "status": "Ongoing",
+      "transactionPerimeter": "Articque",
+      "keyInvestmentHighlights": [
+        "Significant switching upsell potential from CDD to CDO/AP",
+        "45% of client base still running on CDD",
+        "Extensive additional conversion potential"
+      ]
+    },
+    {
+      "id": "e38",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings Percentage (Housing & construction)",
+      "valueString": "14%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Housing & construction",
+      "sourceNote": "Management - Billings"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings Percentage (Consulting)",
+      "valueString": "13%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Consulting",
+      "sourceNote": "Management - Billings"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings Percentage (Industry & Energy)",
+      "valueString": "13%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Industry & Energy",
+      "sourceNote": "Management - Billings"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings Percentage (Public institutions)",
+      "valueString": "12%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Public institutions",
+      "sourceNote": "Management - Billings"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings Percentage (Retail & food industry)",
+      "valueString": "11%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Retail & food industry",
+      "sourceNote": "Management - Billings"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings Percentage (Banking & insurance)",
+      "valueString": "10%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Banking & insurance",
+      "sourceNote": "Management - Billings"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings Percentage (Automotive & transports)",
+      "valueString": "7%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Automotive & transports",
+      "sourceNote": "Management - Billings"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings Percentage (Healthcare)",
+      "valueString": "6%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Healthcare",
+      "sourceNote": "Management - Billings"
+    },
+    {
+      "id": "e46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings Percentage (Unions)",
+      "valueString": "6%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Unions",
+      "sourceNote": "Management - Billings"
+    },
+    {
+      "id": "e47",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings Percentage (IT)",
+      "valueString": "3%",
+      "fiscalPeriod": "FY21A",
+      "scope": "IT",
+      "sourceNote": "Management - Billings"
+    },
+    {
+      "id": "e48",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings Percentage (Agriculture)",
+      "valueString": "3%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Agriculture",
+      "sourceNote": "Management - Billings"
+    },
+    {
+      "id": "e49",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings Percentage (Others)",
+      "valueString": "2%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Others",
+      "sourceNote": "Management - Billings"
+    },
+    {
+      "id": "e50",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Mentioned in relation to Project Inuk."
+    },
+    {
+      "id": "e51",
+      "type": "pekg:MarketContext",
+      "segmentName": "European Market",
+      "geography": "Europe"
+    },
+    {
+      "id": "e52",
+      "type": "pekg:MarketContext",
+      "segmentName": "Domestic Market",
+      "geography": "Domestic"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e40",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e41",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e42",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e43",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e44",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e45",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e47",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e48",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e49",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e37",
+      "target": "e36",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e51",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e52",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e50",
+      "target": "e37",
+      "type": "pekg:seeksTransaction"
+    }
+  ]
+}

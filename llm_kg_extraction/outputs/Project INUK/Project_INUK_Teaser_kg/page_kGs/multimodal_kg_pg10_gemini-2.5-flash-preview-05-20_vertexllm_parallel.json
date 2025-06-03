@@ -1,0 +1,208 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque Informatique SA",
+      "description": "French Soci\u00e9t\u00e9 par actions simplifi\u00e9e (RCS Tours 349 254 995)",
+      "alias": [
+        "Articque Informatique"
+      ],
+      "sector": "Operating Entity"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "Groupe Articque Solutions",
+      "description": "French Entreprise unipersonnelle \u00e0 responsabilit\u00e9 limit\u00e9e",
+      "sector": "Holding"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "Turenne Capital"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "DDA & Company"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Person",
+      "fullName": "Georges-Antoine Strauch",
+      "biographySummary": "Founder of Articque Informatique SA, has stepped down from operational responsibilities."
+    },
+    {
+      "id": "e7",
+      "type": "Individual",
+      "name": "Georges-Antoine Strauch",
+      "percentageOwned": 5.61
+    },
+    {
+      "id": "e8",
+      "type": "Corporate",
+      "name": "Turenne Capital",
+      "percentageOwned": 16.04,
+      "description": "Private Equity Shareholder"
+    },
+    {
+      "id": "e9",
+      "type": "Corporate",
+      "name": "Groupe Articque Solutions",
+      "percentageOwned": 78.35,
+      "description": "Holding company"
+    },
+    {
+      "id": "e10",
+      "type": "Individual",
+      "name": "Georges-Antoine Strauch",
+      "percentageOwned": 100.0
+    },
+    {
+      "id": "e11",
+      "type": "Financial Advisor",
+      "name": "DDA & Company",
+      "roleInContext": "Exclusive financial advisor to all Articque Informatique shareholders"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK",
+      "typeSought": "Sale",
+      "status": "Contemplated",
+      "dealRationaleHighlights": [
+        "Founder willing to sell to strategic acquirer",
+        "Turenne Capital seeking liquidity on investment"
+      ],
+      "keyInvestmentHighlights": [
+        "Sale of up to 100% of the shares of Articque Informatique SA"
+      ],
+      "transactionPerimeter": "Sale of up to 100% of the shares of Articque Informatique SA"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Location",
+      "locationName": "Fondettes, France",
+      "locationType": "City",
+      "officeSpecificInfo": "149 avenue du G\u00e9n\u00e9ral de Gaulle \u2013 37230 Fondettes, France"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Position",
+      "titleName": "Founder"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e12",
+      "target": "e11",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e2",
+      "target": "e13",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e7",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e8",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e9",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e2",
+      "target": "e10",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e10",
+      "target": "e2",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e6",
+      "target": "e14",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e14",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e3",
+      "target": "e12",
+      "type": "pekg:seeksTransaction"
+    },
+    {
+      "source": "e6",
+      "target": "e12",
+      "type": "pekg:seeksTransaction"
+    },
+    {
+      "source": "e7",
+      "target": "e11",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e8",
+      "target": "e11",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e9",
+      "target": "e11",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e1",
+      "type": "pekg:hasSubsidiary"
+    },
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubsidiaryOf"
+    }
+  ]
+}

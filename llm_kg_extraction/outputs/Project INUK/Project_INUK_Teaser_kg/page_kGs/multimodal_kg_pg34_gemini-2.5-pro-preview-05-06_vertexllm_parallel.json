@@ -1,0 +1,415 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Target company. Articque\u2019s software relies on a scalable SaaS architecture."
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "alias": [
+        "DDA & Company"
+      ],
+      "roleInContext": "Advisor for Project Inuk"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:ProductOrService",
+      "name": "Articque's software",
+      "description": "General term for Articque's software offerings, relies on a scalable SaaS architecture.",
+      "category": "Software Suite"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:ProductOrService",
+      "name": "CDO",
+      "category": "Web Application",
+      "description": "Web application deployable on Windows servers. Composed of: Data Base (PostgreSQL in replacement of MySQL for rights, accounts, user roles and file management), .Net 4.8 Web Service and its API (performing spatial/statistical calculation, generating map representations and exports), and Symphony/PHP/Apache Web Application (making up the user interface and the map rendering engine in a browser)."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "AP",
+      "category": "Web Application",
+      "description": "Web application deployable on Windows servers. Composed of: Data Base (PostgreSQL in replacement of MySQL for rights, accounts, user roles and file management), .Net 4.8 Web Service and its API (performing spatial/statistical calculation, generating map representations and exports), and Symphony/PHP/Apache Web Application (making up the user interface and the map rendering engine in a browser)."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Articque Platform",
+      "category": "Platform",
+      "description": "Core backend platform offered by Articque, as shown in the architecture diagram."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "C&D Online",
+      "category": "Online Platform/Service",
+      "description": "Product or brand associated with Articque's platform offerings, logo shown with Articque Platform."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Platform Web Service",
+      "category": "Software Component",
+      "description": "Core web service component of the Articque Platform."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "Articque Library",
+      "category": "Software Component",
+      "description": "Library component of the Platform Web Service."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "Platform Library",
+      "category": "Software Component",
+      "description": "Library component of the Platform Web Service."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Platform API",
+      "category": "Software Component",
+      "description": "API component of the Platform Web Service, used for interactions."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "Geocoding",
+      "category": "Additional module",
+      "description": "Additional module for the Articque Platform."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "Geoservice Data",
+      "category": "Additional module",
+      "description": "Additional module for the Articque Platform."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:ProductOrService",
+      "name": "Basemaps",
+      "category": "Additional module",
+      "description": "Additional module for the Articque Platform."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Technology",
+      "name": "SaaS",
+      "description": "Scalable SaaS architecture."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Technology",
+      "name": "Windows servers"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Technology",
+      "name": "PostgreSQL",
+      "description": "Used for Data Base; for rights, accounts, user roles and file management. In replacement of MySQL."
+    },
+    {
+      "id": "e18",
+      "type": "pekg:Technology",
+      "name": "MySQL",
+      "description": "Previously used for Data Base, replaced by PostgreSQL."
+    },
+    {
+      "id": "e19",
+      "type": "pekg:Technology",
+      "name": ".Net 4.8",
+      "description": "Technology used by the .Net 4.8 Web Service. Also referred to as Framework .net 4.8 in diagram for Platform Web Service."
+    },
+    {
+      "id": "e20",
+      "type": "pekg:Technology",
+      "name": "API",
+      "description": "Application Programming Interface, specifically mentioned for the .Net 4.8 Web Service."
+    },
+    {
+      "id": "e21",
+      "type": "pekg:Technology",
+      "name": "Symphony",
+      "description": "PHP framework, version v4.4 shown in diagram."
+    },
+    {
+      "id": "e22",
+      "type": "pekg:Technology",
+      "name": "PHP",
+      "description": "Scripting language, version v8 shown in diagram."
+    },
+    {
+      "id": "e23",
+      "type": "pekg:Technology",
+      "name": "Apache",
+      "description": "Web server, version v2 shown in diagram."
+    },
+    {
+      "id": "e24",
+      "type": "pekg:Technology",
+      "name": "Leaflet",
+      "description": "JavaScript library for interactive maps, used in Frontend."
+    },
+    {
+      "id": "e25",
+      "type": "pekg:Technology",
+      "name": "ReactJS",
+      "description": "JavaScript library for building user interfaces, used in Frontend."
+    },
+    {
+      "id": "e26",
+      "type": "pekg:Technology",
+      "name": "JavaScript",
+      "description": "Programming language for web development, used in Frontend."
+    },
+    {
+      "id": "e27",
+      "type": "pekg:Technology",
+      "name": ".NET Framework .net 4.8",
+      "description": "Microsoft software framework, used by Platform Web Service."
+    },
+    {
+      "id": "e28",
+      "type": "pekg:Technology",
+      "name": "Proxy",
+      "description": "Intermediary server/service shown in architecture diagram between Web Application and Platform Web Service."
+    },
+    {
+      "id": "e29",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "transactionPerimeter": "Concerns Articque, involves ChapsVision."
+    },
+    {
+      "id": "e30",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company mentioned in relation to Project Inuk."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e15",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e4",
+      "target": "e16",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e16",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e4",
+      "target": "e17",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e17",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e4",
+      "target": "e19",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e19",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e4",
+      "target": "e20",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e20",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e4",
+      "target": "e21",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e21",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e4",
+      "target": "e22",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e22",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e4",
+      "target": "e23",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e23",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e4",
+      "target": "e24",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e24",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e4",
+      "target": "e25",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e25",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e4",
+      "target": "e26",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e26",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e8",
+      "target": "e27",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e8",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e8",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e8",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e4",
+      "target": "e28",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e28",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e4",
+      "target": "e11",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e11",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e12",
+      "target": "e11",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e13",
+      "target": "e11",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e14",
+      "target": "e11",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e29",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

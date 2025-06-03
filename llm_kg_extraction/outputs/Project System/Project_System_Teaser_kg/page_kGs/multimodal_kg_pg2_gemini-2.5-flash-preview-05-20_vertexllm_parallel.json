@@ -1,0 +1,215 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran",
+      "description": "The target company for the transaction, referred to as 'the Group' in the document."
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System",
+      "typeSought": "Sale/Acquisition",
+      "status": "Ongoing",
+      "description": "The transaction concerning Systran, for which financial advisors are appointed, referred to as 'the Transaction' in the document."
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Financial Advisor for Project System"
+    },
+    {
+      "id": "e4",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Financial Advisor for Project System"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Location",
+      "locationName": "23 bis, avenue de Messine, 75008 Paris, France",
+      "locationType": "Office"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Location",
+      "locationName": "11 Seocho-daero 74-gil, Seocho-gu, 06620 Seoul, South Korea",
+      "locationType": "Office"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Person",
+      "fullName": "Pierre Brenckl\u00e9"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Position",
+      "titleName": "Associate"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Person",
+      "fullName": "Romain Ritoux"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Position",
+      "titleName": "Analyst"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Person",
+      "fullName": "Fabien Lenoir"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Position",
+      "titleName": "Managing Director"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Person",
+      "fullName": "Minah Kim"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Person",
+      "fullName": "Yoojin Lee"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Person",
+      "fullName": "Seungil Back"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Position",
+      "titleName": "Director"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company associated with the document (watermark/confidentiality note)."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "isSubjectOf"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "advisedBy"
+    },
+    {
+      "source": "e3",
+      "target": "e5",
+      "type": "hasOfficeIn"
+    },
+    {
+      "source": "e4",
+      "target": "e6",
+      "type": "hasOfficeIn"
+    },
+    {
+      "source": "e3",
+      "target": "e7",
+      "type": "employs"
+    },
+    {
+      "source": "e7",
+      "target": "e8",
+      "type": "holdsPosition"
+    },
+    {
+      "source": "e8",
+      "target": "e3",
+      "type": "positionAt"
+    },
+    {
+      "source": "e3",
+      "target": "e9",
+      "type": "employs"
+    },
+    {
+      "source": "e9",
+      "target": "e10",
+      "type": "holdsPosition"
+    },
+    {
+      "source": "e10",
+      "target": "e3",
+      "type": "positionAt"
+    },
+    {
+      "source": "e3",
+      "target": "e11",
+      "type": "employs"
+    },
+    {
+      "source": "e11",
+      "target": "e12",
+      "type": "holdsPosition"
+    },
+    {
+      "source": "e12",
+      "target": "e3",
+      "type": "positionAt"
+    },
+    {
+      "source": "e4",
+      "target": "e13",
+      "type": "employs"
+    },
+    {
+      "source": "e13",
+      "target": "e8",
+      "type": "holdsPosition"
+    },
+    {
+      "source": "e8",
+      "target": "e4",
+      "type": "positionAt"
+    },
+    {
+      "source": "e4",
+      "target": "e14",
+      "type": "employs"
+    },
+    {
+      "source": "e14",
+      "target": "e10",
+      "type": "holdsPosition"
+    },
+    {
+      "source": "e10",
+      "target": "e4",
+      "type": "positionAt"
+    },
+    {
+      "source": "e4",
+      "target": "e15",
+      "type": "employs"
+    },
+    {
+      "source": "e15",
+      "target": "e16",
+      "type": "holdsPosition"
+    },
+    {
+      "source": "e16",
+      "target": "e4",
+      "type": "positionAt"
+    }
+  ]
+}

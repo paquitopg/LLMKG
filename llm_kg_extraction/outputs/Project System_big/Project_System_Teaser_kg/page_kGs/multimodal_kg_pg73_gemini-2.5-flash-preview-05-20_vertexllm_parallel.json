@@ -1,0 +1,512 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "alias": [
+        "Systran"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "Investment Bank",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e3",
+      "type": "Investment Bank",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Sale"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Annual licenses",
+      "category": "License"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Maintenance licenses",
+      "category": "License"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "Perpetual licenses",
+      "category": "License"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Cloud",
+      "category": "Service"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "Model Studio",
+      "description": "allows for quick and cost-efficient translation engines customization, bringing higher translation quality to localization teams and end-users"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "SPNS v10",
+      "category": "Software Release"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Translate Pro",
+      "category": "Product"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "Translate enterprise solution",
+      "category": "Product"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "Translate Enterprise",
+      "category": "Product",
+      "description": "target mid-size companies providing security and localization costs messages"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Technology",
+      "name": "Automatic Speech Recognition",
+      "alias": [
+        "ASR"
+      ]
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Technology",
+      "name": "Neural Fuzzy Adaptation",
+      "alias": [
+        "NFA"
+      ]
+    },
+    {
+      "id": "e16",
+      "type": "pekg:MarketContext",
+      "segmentName": "Private sector customers"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:MarketContext",
+      "segmentName": "Tier-2 countries larger accounts"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:MarketContext",
+      "segmentName": "FSI",
+      "description": "Financial Services Industry"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:MarketContext",
+      "segmentName": "Life science"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:MarketContext",
+      "segmentName": "Manufacturing"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:MarketContext",
+      "segmentName": "Services"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:MarketContext",
+      "segmentName": "eCommerce"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Localization teams"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "End-users"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:MarketContext",
+      "segmentName": "Defense market",
+      "geography": "US"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:MarketContext",
+      "segmentName": "Defense market",
+      "geography": "Canada"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:MarketContext",
+      "segmentName": "Defense market",
+      "geography": "Japan"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Customer satisfaction measurement",
+      "description": "through surveys",
+      "kpiDateOrPeriod": "S2 2023"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:Headcount",
+      "headcountName": "customer success manager",
+      "breakdownDescription": "in France",
+      "dateOrYear": "Feb. 23"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:Headcount",
+      "headcountName": "additional sales rep.",
+      "breakdownDescription": "in France and in the US"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:Location",
+      "locationName": "France",
+      "locationType": "Country"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:Location",
+      "locationName": "US",
+      "locationType": "Country"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:Location",
+      "locationName": "Middle-East",
+      "locationType": "Region"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:Location",
+      "locationName": "Saudi Arabia",
+      "locationType": "Country"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:Location",
+      "locationName": "European countries",
+      "locationType": "Region"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:Location",
+      "locationName": "Canada",
+      "locationType": "Country"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:Location",
+      "locationName": "Japan",
+      "locationType": "Country"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:TransactionContext",
+      "contextName": "Business Plan",
+      "status": "Introduction (1/2)",
+      "dealRationaleHighlights": [
+        "Ambitious roadmap to scale-up"
+      ]
+    },
+    {
+      "id": "e39",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Launch of a new Translate enterprise solution",
+      "eventType": "Product Launch",
+      "dateOrYear": "Q2 2023"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:Company",
+      "name": "KPMG"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:Company",
+      "name": "Ailan"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:Company",
+      "name": "LSPs",
+      "description": "small and mid-size Language Service Providers"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:Company",
+      "name": "Mid-size companies",
+      "description": "companies providing security and localization costs messages"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e43",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e44",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e9",
+      "target": "e23",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e24",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e14",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e10",
+      "target": "e14",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e10",
+      "target": "e15",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e11",
+      "target": "e43",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e12",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e12",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e13",
+      "target": "e44",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e42",
+      "target": "e34",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e38",
+      "target": "e40",
+      "type": "pekg:sourceOfData"
+    }
+  ]
+}

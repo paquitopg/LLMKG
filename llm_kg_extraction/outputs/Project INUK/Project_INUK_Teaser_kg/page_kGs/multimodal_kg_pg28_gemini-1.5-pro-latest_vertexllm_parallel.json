@@ -1,0 +1,254 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Advisor",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Advisor",
+      "name": "DDA & Company France SAS"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:ProductOrService",
+      "name": "Articque platform"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "CDD"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "CDO"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "AP"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Position",
+      "titleName": "Sales Development Representatives"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Position",
+      "titleName": "Account Executives"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Position",
+      "titleName": "Key Account Manager"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Position",
+      "titleName": "Client Success Managers"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Headcount",
+      "totalEmployees": 13,
+      "dateOrYear": "FY22A"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Sales conversion ratio",
+      "valueString": ">55%",
+      "fiscalPeriod": "FY22A"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Sales cycle",
+      "valueString": "6 months",
+      "fiscalPeriod": "FY22A"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Leads",
+      "valueString": "1,222",
+      "fiscalPeriod": "FY22A"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:FinancialMetric",
+      "metricName": "MQLs",
+      "valueString": "168",
+      "fiscalPeriod": "FY22A"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:FinancialMetric",
+      "metricName": "SQLs",
+      "valueString": "78",
+      "fiscalPeriod": "FY22A"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Opportunities",
+      "valueString": "55",
+      "fiscalPeriod": "FY22A"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "metricName": "New Logos",
+      "valueString": "30",
+      "fiscalPeriod": "FY22A"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Digital Advertising",
+      "valueString": "\u20ac25k",
+      "fiscalPeriod": "FY22A"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Training / Coaching",
+      "valueString": "\u20ac22k",
+      "fiscalPeriod": "FY22A"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Marketing tools",
+      "valueString": "\u20ac16k",
+      "fiscalPeriod": "FY22A"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Events",
+      "valueString": "\u20ac5k",
+      "fiscalPeriod": "FY22A"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:hasPosition"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:hasPosition"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:hasPosition"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:hasPosition"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    }
+  ]
+}

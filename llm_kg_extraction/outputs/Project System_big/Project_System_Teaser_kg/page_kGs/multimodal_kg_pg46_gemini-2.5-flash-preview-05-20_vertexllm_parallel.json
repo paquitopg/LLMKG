@@ -1,0 +1,778 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "A company with a strong base of recurring revenues and a proven ability to generate them."
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Sale/Acquisition"
+    },
+    {
+      "id": "e3",
+      "type": "Investment Bank",
+      "name": "Rothschild & Co",
+      "roleInContext": "Financial Advisor"
+    },
+    {
+      "id": "e4",
+      "type": "Investment Bank",
+      "name": "Samsung Securities",
+      "roleInContext": "Financial Advisor"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Revenue",
+      "valueString": "\u20ac13.8mn",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Revenue",
+      "valueString": "\u20ac15.3mn",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Revenue",
+      "valueString": "\u20ac16.0mn",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Revenue",
+      "valueString": "\u20ac19.5mn",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue CAGR",
+      "valueString": "+12.2%",
+      "fiscalPeriod": "2019-2022B",
+      "scope": "Company"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance Revenue Percentage",
+      "valueString": "26%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Revenue Percentage",
+      "valueString": "21%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud Revenue Percentage",
+      "valueString": "1%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perpetual Revenue Percentage",
+      "valueString": "35%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other Revenue Percentage",
+      "valueString": "17%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance Revenue Percentage",
+      "valueString": "27%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Revenue Percentage",
+      "valueString": "21%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud Revenue Percentage",
+      "valueString": "1%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perpetual Revenue Percentage",
+      "valueString": "28%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other Revenue Percentage",
+      "valueString": "22%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance Revenue Percentage",
+      "valueString": "28%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Revenue Percentage",
+      "valueString": "22%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud Revenue Percentage",
+      "valueString": "1%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perpetual Revenue Percentage",
+      "valueString": "32%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other Revenue Percentage",
+      "valueString": "17%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance Revenue Percentage",
+      "valueString": "27%",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Revenue Percentage",
+      "valueString": "22%",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud Revenue Percentage",
+      "valueString": "3%",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perpetual Revenue Percentage",
+      "valueString": "31%",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other Revenue Percentage",
+      "valueString": "16%",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenues Percentage of Total Revenue",
+      "valueString": "c.50%",
+      "fiscalPeriod": "Annual",
+      "isRecurring": true,
+      "scope": "Company"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perpetual Licenses Percentage of License Fee",
+      "valueString": "c.18-22%",
+      "scope": "Company"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud Revenue CAGR",
+      "valueString": "+71%",
+      "fiscalPeriod": "FY19A-22B",
+      "scope": "Revenue Stream"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual License Revenue CAGR",
+      "valueString": "+15%",
+      "fiscalPeriod": "FY19A-22B",
+      "scope": "Revenue Stream"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance Renewal Revenue CAGR",
+      "valueString": "+10%",
+      "fiscalPeriod": "FY19A-22B",
+      "scope": "Revenue Stream"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perpetual Revenue CAGR",
+      "valueString": "+12%",
+      "fiscalPeriod": "FY19A-22B",
+      "scope": "Revenue Stream"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other Revenue CAGR",
+      "valueString": "+11%",
+      "fiscalPeriod": "FY19A-22B",
+      "scope": "Revenue Stream",
+      "sourceNote": "Including services & other spot sales"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:RevenueStream",
+      "name": "Maintenance",
+      "category": "Recurring Revenue"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:RevenueStream",
+      "name": "Annual license",
+      "category": "Recurring Revenue"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:RevenueStream",
+      "name": "Cloud",
+      "category": "Recurring Revenue"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:RevenueStream",
+      "name": "Perpetual",
+      "category": "One-time Revenue"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:RevenueStream",
+      "name": "Others",
+      "category": "One-time Revenue",
+      "description": "Including services & other spot sales"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:Company",
+      "name": "Adidas"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:Company",
+      "name": "Stellantis"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:Company",
+      "name": "Blizzard"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:Company",
+      "name": "Lexcelera"
+    },
+    {
+      "id": "e46",
+      "type": "pekg:Company",
+      "name": "Toyota"
+    },
+    {
+      "id": "e47",
+      "type": "pekg:Company",
+      "name": "HCL"
+    },
+    {
+      "id": "e48",
+      "type": "pekg:Company",
+      "name": "Heidelberg"
+    },
+    {
+      "id": "e49",
+      "type": "pekg:Company",
+      "name": "Tata Consultancy Services"
+    },
+    {
+      "id": "e50",
+      "type": "pekg:Company",
+      "name": "The Global Fund"
+    },
+    {
+      "id": "e51",
+      "type": "pekg:Company",
+      "name": "Tenneco"
+    },
+    {
+      "id": "e52",
+      "type": "pekg:Company",
+      "name": "AstraZeneca"
+    },
+    {
+      "id": "e53",
+      "type": "pekg:Company",
+      "name": "ADmantX"
+    },
+    {
+      "id": "e54",
+      "type": "pekg:Company",
+      "name": "Airbus"
+    },
+    {
+      "id": "e55",
+      "type": "pekg:Company",
+      "name": "Continental"
+    },
+    {
+      "id": "e56",
+      "type": "pekg:Company",
+      "name": "DY4 Gate"
+    },
+    {
+      "id": "e57",
+      "type": "pekg:Company",
+      "name": "Ford"
+    },
+    {
+      "id": "e58",
+      "type": "pekg:Company",
+      "name": "IKEA"
+    },
+    {
+      "id": "e59",
+      "type": "pekg:Company",
+      "name": "Alvarez & Marsal"
+    },
+    {
+      "id": "e60",
+      "type": "pekg:Company",
+      "name": "RavenPack"
+    },
+    {
+      "id": "e61",
+      "type": "pekg:Company",
+      "name": "ROZETTA TECHNOLOGY"
+    },
+    {
+      "id": "e62",
+      "type": "Government",
+      "name": "Abu Dhabi Police"
+    },
+    {
+      "id": "e63",
+      "type": "Government",
+      "name": "R\u00e9publique Fran\u00e7aise"
+    },
+    {
+      "id": "e64",
+      "type": "Government",
+      "name": "Minist\u00e8re de la D\u00e9fense"
+    },
+    {
+      "id": "e65",
+      "type": "Government",
+      "name": "European Union Agency for Fundamental Rights (FRA)"
+    },
+    {
+      "id": "e66",
+      "type": "Government",
+      "name": "Korean Intellectual Property Office"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e40",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e41",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e39",
+      "target": "e32",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e38",
+      "target": "e33",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e37",
+      "target": "e34",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e40",
+      "target": "e35",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e41",
+      "target": "e36",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e42",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e43",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e44",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e45",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e46",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e47",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e48",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e49",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e50",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e51",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e52",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e53",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e54",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e55",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e56",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e57",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e58",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e59",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e60",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e61",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e62",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e63",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e64",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e65",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e66",
+      "type": "pekg:hasClientGovernment"
+    }
+  ]
+}

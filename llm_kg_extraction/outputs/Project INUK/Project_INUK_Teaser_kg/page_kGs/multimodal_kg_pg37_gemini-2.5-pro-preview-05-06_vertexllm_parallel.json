@@ -1,0 +1,186 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Target Company identified in the financial teaser context."
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisory Firm",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisor for Project Inuk"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "transactionPerimeter": "Articque"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "DataComposer",
+      "description": "Automated Data Processor"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "DataViz",
+      "description": "Graphic Rendering Tool"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "DataComposer (Automated Data Processor) \u2013 Launch of Project 1",
+      "eventType": "Product Initiative Launch",
+      "dateOrYear": "2022 \u2013 Q2"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "DataComposer \u2013 Internal tests",
+      "eventType": "Product Testing",
+      "dateOrYear": "2022 \u2013 Q2"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "DataComposer \u2013 Minimum Viable Product (Closed Beta)",
+      "eventType": "Product Release",
+      "dateOrYear": "2022 \u2013 Q2"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "DataViz (Graphic Rendering Tool) \u2013 Launch of Project 2",
+      "eventType": "Product Initiative Launch",
+      "dateOrYear": "2022 \u2013 Q3"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "DataComposer \u2013 Development on CDO and feedback analysis",
+      "eventType": "Product Development",
+      "dateOrYear": "2022 \u2013 Q4"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "DataComposer \u2013 Deployment to target customers",
+      "eventType": "Product Deployment",
+      "dateOrYear": "2022 \u2013 Q4"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "DataComposer \u2013 Deployment to all customers, including AP clients",
+      "eventType": "Product Deployment",
+      "dateOrYear": "2023 \u2013 S1"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "DataViz \u2013 Launch of a Graphic Rendering Tool",
+      "eventType": "Product Launch",
+      "dateOrYear": "2023 \u2013 S1"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "DataViz \u2013 Launch of a Print Rendering",
+      "eventType": "Feature Launch",
+      "dateOrYear": "2023 \u2013 S1"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Articque customer project shift on new technologies",
+      "eventType": "Strategic Initiative",
+      "dateOrYear": "2023 \u2013 S2"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e3",
+      "target": "e4",
+      "type": "pekg:seeksTransaction"
+    }
+  ]
+}

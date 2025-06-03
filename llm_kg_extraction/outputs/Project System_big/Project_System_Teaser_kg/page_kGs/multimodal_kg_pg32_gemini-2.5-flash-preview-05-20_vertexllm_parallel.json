@@ -1,0 +1,384 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "alias": [
+        "Systran"
+      ],
+      "description": "The target company, offering expert automated translation software solutions with key advantages in security, performance, user experience, and customization."
+    },
+    {
+      "id": "e2",
+      "type": "Investment Bank",
+      "name": "Rothschild & Co",
+      "roleInContext": "Financial Advisor"
+    },
+    {
+      "id": "e3",
+      "type": "Investment Bank",
+      "name": "Samsung Securities",
+      "roleInContext": "Financial Advisor"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company mentioned in the confidentiality note of the document."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "XTM international",
+      "description": "A provider of Computer-Assisted Translation (CAT) tools that Systran's solutions integrate with."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Company",
+      "name": "SDL",
+      "description": "A provider of Computer-Assisted Translation (CAT) tools that Systran's solutions integrate with."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Company",
+      "name": "MEMSOURCE",
+      "description": "A provider of Computer-Assisted Translation (CAT) tools that Systran's solutions integrate with."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Company",
+      "name": "Eleven",
+      "description": "The firm that produced the VDD report, cited as a source of information."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Sale",
+      "status": "Teaser Phase",
+      "dealRationaleHighlights": [
+        "Overview of Systran's product key advantages"
+      ]
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "Automated translation software solutions",
+      "category": "Software",
+      "description": "Systran's core offering, positioned as a one-stop-shop for expert automated translation."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Systran's translation engine",
+      "category": "Software Component",
+      "description": "The core technology of Systran's products, whose performance can be improved by clients using their own translation data."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "Model Studio",
+      "category": "Application",
+      "description": "An application developed by Systran to empower clients to autonomously improve their translation engine performance using their own data."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "Pre-trained models",
+      "category": "AI Model",
+      "description": "Models offered by Systran, pre-trained on specific datasets for specialized use cases."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:ProductOrService",
+      "name": "Web browser plugins",
+      "category": "Integration",
+      "description": "Integration solution provided by Systran for seamless user experience within web browsers."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:ProductOrService",
+      "name": "Microsoft Connectors",
+      "category": "Integration",
+      "description": "Connectors developed by Systran for integration with various Microsoft environments."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:ProductOrService",
+      "name": "Microsoft Office Add Ins",
+      "category": "Integration",
+      "description": "Specific add-ins for Microsoft Office applications, part of Microsoft Connectors."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:ProductOrService",
+      "name": "Microsoft Teams",
+      "category": "Integration",
+      "description": "Integration for Microsoft Teams, part of Microsoft Connectors."
+    },
+    {
+      "id": "e18",
+      "type": "pekg:ProductOrService",
+      "name": "Windows Explorer",
+      "category": "Integration",
+      "description": "Integration for Windows Explorer, part of Microsoft Connectors."
+    },
+    {
+      "id": "e19",
+      "type": "pekg:ProductOrService",
+      "name": "Emails automatics translation On clients\u2019 email (SMTP) server",
+      "category": "Service",
+      "description": "An automatic email translation service that operates directly on clients' SMTP servers."
+    },
+    {
+      "id": "e20",
+      "type": "pekg:ProductOrService",
+      "name": "Cat tools integration",
+      "category": "Integration",
+      "description": "Systran's capability to integrate with popular Computer-Assisted Translation (CAT) tools such as XTM international, SDL, and MEMSOURCE."
+    },
+    {
+      "id": "e21",
+      "type": "pekg:Technology",
+      "name": "Security",
+      "description": "A key product advantage of Systran, ensuring data protection and compliance. Features include flexible hosting options (on-premise, client servers, private Cloud), full disconnection from the Internet, and a policy of not using client data for general model improvement. This complies with demanding client requirements."
+    },
+    {
+      "id": "e22",
+      "type": "pekg:Technology",
+      "name": "Performance",
+      "description": "A key product advantage of Systran, related to translation quality and breadth. Supports over 140 language pairs (including rare ones like Takij and Tagalok) and numerous file formats (MS Office, PDF, Open office, Web, Localization, Audio, Images (OCR), Archives). It aims to answer multiple client needs and use-cases with great translation quality."
+    },
+    {
+      "id": "e23",
+      "type": "pekg:Technology",
+      "name": "User experience",
+      "description": "A key product advantage of Systran, focusing on seamless integration into user workflows. Includes integration with popular work environments via web browser plugins, Microsoft Connectors, and CAT tools. The goal is to integrate seamlessly into the user\u2019s work environment."
+    },
+    {
+      "id": "e24",
+      "type": "pekg:Technology",
+      "name": "Customization",
+      "description": "A key product advantage of Systran, allowing adaptation to client-specific needs. Clients can use their own translation data (translation memory) to improve Systran\u2019s engine performance. Systran also offers pre-trained models on specific datasets and assists clients with Model Studio. This feature adapts to clients\u2019 specific Tone of Voice."
+    },
+    {
+      "id": "e25",
+      "type": "pekg:Technology",
+      "name": "OCR",
+      "description": "Optical Character Recognition technology, specifically mentioned for translating content from images."
+    },
+    {
+      "id": "e26",
+      "type": "pekg:Technology",
+      "name": "Translation memory",
+      "description": "Client's own translation data that can be used to improve Systran\u2019s translation engine performance, a core aspect of its customization capabilities."
+    },
+    {
+      "id": "e27",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Legal",
+      "description": "An industry vertical for which Systran offers specialized pre-trained models."
+    },
+    {
+      "id": "e28",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Health",
+      "description": "An industry vertical for which Systran offers specialized pre-trained models."
+    },
+    {
+      "id": "e29",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Automated translation",
+      "description": "The primary use case addressed by Systran's software solutions, providing expert automated translation."
+    },
+    {
+      "id": "e30",
+      "type": "pekg:MarketContext",
+      "segmentName": "Automated Translation Software",
+      "characteristics": "Positioned as a one-stop-shop for expert solutions.",
+      "sourceOfData": "Eleven VDD report"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Model Studio Development",
+      "eventType": "Product Launch",
+      "dateOrYear": "recently",
+      "description": "Systran recently developed Model Studio, an application designed to empower clients in customizing their translation engine."
+    },
+    {
+      "id": "e32",
+      "type": "pekg:Location",
+      "locationName": "On-premise",
+      "locationType": "Hosting Environment",
+      "officeSpecificInfo": "Systran's solutions can be hosted on-premise, providing enhanced security and control."
+    },
+    {
+      "id": "e33",
+      "type": "pekg:Location",
+      "locationName": "Client servers",
+      "locationType": "Hosting Environment",
+      "officeSpecificInfo": "Systran's solutions can be hosted directly on client servers."
+    },
+    {
+      "id": "e34",
+      "type": "pekg:Location",
+      "locationName": "Private Cloud environment",
+      "locationType": "Hosting Environment",
+      "officeSpecificInfo": "Systran's solutions can be hosted in a private Cloud environment."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e9",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e9",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e15",
+      "target": "e16",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e15",
+      "target": "e17",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e15",
+      "target": "e18",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e13",
+      "target": "e27",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e13",
+      "target": "e28",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e31",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e31",
+      "target": "e12",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:hasOfficeIn"
+    }
+  ]
+}

@@ -1,0 +1,306 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "alias": [
+        "Articque Informatique",
+        "Groupe Articque Solutions"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Advisor",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Advisor",
+      "name": "DDA & Company France SAS"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "TomTom Multinet"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "Blay Foldex"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue",
+      "valueString": "2,870",
+      "fiscalPeriod": "FY18A",
+      "isRecurring": false
+    },
+    {
+      "id": "e7",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue",
+      "valueString": "3,181",
+      "fiscalPeriod": "FY19A",
+      "isRecurring": false
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue",
+      "valueString": "3,125",
+      "fiscalPeriod": "FY20A",
+      "isRecurring": false
+    },
+    {
+      "id": "e9",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue",
+      "valueString": "3,501",
+      "fiscalPeriod": "FY21A",
+      "isRecurring": false
+    },
+    {
+      "id": "e10",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue",
+      "valueString": "3,716",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": false
+    },
+    {
+      "id": "e11",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenue",
+      "valueString": "1,465",
+      "fiscalPeriod": "FY18A"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenue",
+      "valueString": "1,824",
+      "fiscalPeriod": "FY19A"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenue",
+      "valueString": "2,051",
+      "fiscalPeriod": "FY20A"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenue",
+      "valueString": "2,436",
+      "fiscalPeriod": "FY21A"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenue",
+      "valueString": "2,934",
+      "fiscalPeriod": "FY22L"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "1,181",
+      "fiscalPeriod": "FY18A"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "1,412",
+      "fiscalPeriod": "FY19A"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "1,222",
+      "fiscalPeriod": "FY20A"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "1,409",
+      "fiscalPeriod": "FY21A"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "1,454",
+      "fiscalPeriod": "FY22L"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:Headcount",
+      "totalEmployees": 38,
+      "dateOrYear": "FY18A"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:Headcount",
+      "totalEmployees": 38,
+      "dateOrYear": "FY19A"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:Headcount",
+      "totalEmployees": 42,
+      "dateOrYear": "FY20A"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:Headcount",
+      "totalEmployees": 38,
+      "dateOrYear": "FY21A"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:Headcount",
+      "totalEmployees": 35,
+      "dateOrYear": "FY22L"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:Location",
+      "locationName": "Tours",
+      "locationType": "HQ"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e4",
+      "target": "e1",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e5",
+      "target": "e1",
+      "type": "pekg:hasClientCompany"
+    }
+  ]
+}

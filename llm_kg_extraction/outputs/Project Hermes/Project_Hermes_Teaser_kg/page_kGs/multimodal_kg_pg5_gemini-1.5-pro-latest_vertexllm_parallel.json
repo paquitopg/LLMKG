@@ -1,0 +1,220 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Herm\u00e8s"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:ProductOrService",
+      "name": "Plug, Play and Deploy solution",
+      "description": "A middle office solution which can be digitally grafted to existing architecture and does not require any system change, nor modification and update"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Normative Proforma Revenue",
+      "valueString": "\u20ac33.6m",
+      "fiscalPeriod": "FY2022f"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenue",
+      "valueString": "63%",
+      "fiscalPeriod": "FY2022f"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-Recurring Revenue",
+      "valueString": "37%",
+      "fiscalPeriod": "FY2022f"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Average Normative Recurring Revenue per Opportunity",
+      "valueString": "\u20ac272k",
+      "fiscalPeriod": "FY2022f"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Normative Proforma Revenue",
+      "valueString": "57%",
+      "fiscalPeriod": "FY2021",
+      "scope": "Top 10 Clients"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Normative Proforma Revenue",
+      "valueString": "77%",
+      "fiscalPeriod": "FY2021",
+      "scope": "Top 20 Clients"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Normative Proforma Revenue",
+      "valueString": "63%",
+      "fiscalPeriod": "FY2021",
+      "scope": "Tier 1 Clients"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Normative Proforma Revenue",
+      "valueString": "79%",
+      "fiscalPeriod": "FY2021",
+      "scope": "Food and Specialist Retailers"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Normative Proforma Revenue outside France",
+      "valueString": "17%",
+      "fiscalPeriod": "FY2021"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Normative Proforma Revenue outside France",
+      "valueString": "13%",
+      "fiscalPeriod": "FY2020"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Activities Revenue",
+      "valueString": "\u20ac21.2m",
+      "fiscalPeriod": "FY2022f"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:MarketContext",
+      "segmentName": "Food Retail"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:MarketContext",
+      "segmentName": "Specialty Retail"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:MarketContext",
+      "segmentName": "Hospitality"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:MarketContext",
+      "segmentName": "Luxury/Cosmetic"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:Location",
+      "locationName": "France"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cybersecurity Investment",
+      "valueString": "\u20ac5m",
+      "fiscalPeriod": "Since 2018"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    }
+  ]
+}

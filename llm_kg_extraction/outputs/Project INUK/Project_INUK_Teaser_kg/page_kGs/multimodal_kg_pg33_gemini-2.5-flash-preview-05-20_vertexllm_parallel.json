@@ -1,0 +1,241 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK",
+      "typeSought": "Sale",
+      "status": "Ongoing"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisor for Project INUK"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Network monitoring"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "PRTG Network Monitor",
+      "category": "Network Monitoring Tool"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Automated test"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Jenkins",
+      "category": "Automation Server"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "Cypress",
+      "category": "Testing Framework"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "Selenium 4",
+      "category": "Testing Framework"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Error tracker"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "SENTRY",
+      "category": "Error Tracking Tool"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "API & Geo-Coding"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Technology",
+      "name": "Node.js",
+      "description": "JavaScript runtime environment"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Technology",
+      "name": "Docker",
+      "description": "Containerization platform"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Application development"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Technology",
+      "name": "Symfony",
+      "description": "PHP web application framework"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:ProductOrService",
+      "name": "Visual Studio",
+      "category": "Integrated Development Environment (IDE)"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Project tracking"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:ProductOrService",
+      "name": "Confluence",
+      "category": "Collaboration Software"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:ProductOrService",
+      "name": "Jira Software",
+      "category": "Project Management Software"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Project management"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:Technology",
+      "name": "Git",
+      "description": "Version control system"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:usesTechnology"
+    }
+  ]
+}

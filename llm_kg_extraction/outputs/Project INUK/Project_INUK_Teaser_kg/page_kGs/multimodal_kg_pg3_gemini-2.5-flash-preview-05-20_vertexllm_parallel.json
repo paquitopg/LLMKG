@@ -1,0 +1,115 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Target Company for Project INUK"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK",
+      "status": "Strictly Private & Confidential"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "alias": [
+        "DDA&Company"
+      ],
+      "roleInContext": "Advisor for Project INUK"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company mentioned in relation to Project Inuk"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Products & Services",
+      "category": "Section Topic",
+      "description": "Overview of company's offerings, detailed on page 12."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Business Models, Client Base & Sales",
+      "description": "Details on company's business models, client base, and sales strategies, detailed on page 22."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Technology",
+      "name": "Technology Platform",
+      "description": "Overview of company's underlying technologies, detailed on page 31."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:MarketContext",
+      "segmentName": "Market Positioning, and Competitive Landscape",
+      "description": "Analysis of company's market position and competitive environment, detailed on page 38."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Organization Highlights",
+      "description": "Key organizational aspects and historical events, detailed on page 43."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Financials & Growth Strategy",
+      "description": "Overview of company's financial performance and growth strategy, detailed on page 49."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsFinancialMetric"
+    }
+  ]
+}

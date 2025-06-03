@@ -1,0 +1,441 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "One-stop-shop for expert automated translation software solutions",
+      "keyStrengths": [
+        "Advanced professional cloud-based translation services for highly sensitive individuals & SMEs"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Translate Pro & Enterprise",
+      "category": "Translation Software",
+      "description": "Provides advanced professional translation features such as document translation and customization via a Web Interface or a REST API."
+    },
+    {
+      "id": "e3",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Translate Pro",
+      "category": "Cloud-based Translation Service",
+      "description": "Cloud-based offer focusing on SMEs and individuals with pay-per-use plans, adapting the translation model to the client\u2019s domain.",
+      "pricingModelInfo": "pay-per use plans"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Translate Enterprise",
+      "category": "Translation Software",
+      "description": "Targets SME\u2019s that require translation engines for specific domain/sector with a budget between Translate Pro and Systran Pure Neural Server(SPNS). Offers SSO/SAML and other key features required by SME\u2019s."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Pure Neural Server",
+      "alias": [
+        "SPNS"
+      ],
+      "category": "Translation Engine"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Technology",
+      "name": "Web Interface"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Technology",
+      "name": "REST API",
+      "description": "software architectural style"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Technology",
+      "name": "SSO",
+      "description": "Single Sign on"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Technology",
+      "name": "SAML",
+      "description": "Security Assertion Markup Language"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "SMEs"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Individuals"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Legal Domain"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Business"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Finance"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Agriculture"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Technology"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Patent"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Health"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Industry"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Energy"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "IT"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Education"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Collaboration"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Active paid users",
+      "valueString": "Jan: 660k, Feb: 750k, Mar: 806k, Apr: 838k, May: 866k, Jun: 888k, Jul: 878k, Aug: 925k, Sept: 953k, Oct: 964k, Nov: 998k, Dec: 1094k",
+      "fiscalPeriod": "FY22B",
+      "isRecurring": null,
+      "isAdjustedOrProforma": null,
+      "scope": "Company",
+      "sourceNote": "Source Company Information"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Active paid users growth",
+      "kpiValueString": "+66%",
+      "kpiDateOrPeriod": "FY22B",
+      "description": null
+    },
+    {
+      "id": "e26",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Systran Translate Pro Official Launch",
+      "eventType": "Product Launch",
+      "dateOrYear": "2021",
+      "description": null
+    },
+    {
+      "id": "e27",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Systran Translate Enterprise Planned Launch",
+      "eventType": "Product Launch",
+      "dateOrYear": "2023",
+      "description": null
+    },
+    {
+      "id": "e28",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Translate Pro Marketing Campaign Launch",
+      "eventType": "Marketing Campaign",
+      "dateOrYear": "Sept-21",
+      "description": "Launch of an ambitious marketing campaign in France with a focus on the legal domain"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:Company",
+      "name": "HCL"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:Company",
+      "name": "Tenneco"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:Company",
+      "name": "The Global Fund"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:Company",
+      "name": "TATA Consultancy Services"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:Company",
+      "name": "Heidelberg"
+    },
+    {
+      "id": "e34",
+      "type": "Government Body",
+      "name": "Premier ministre"
+    },
+    {
+      "id": "e35",
+      "type": "Government Body",
+      "name": "DIRECTION DE L'INFORMATION LEGALE ET ADMINISTRATIVE"
+    },
+    {
+      "id": "e36",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm for Project System_big"
+    },
+    {
+      "id": "e37",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm for Project System_big"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Sale",
+      "status": null,
+      "dealRationaleHighlights": null,
+      "keyInvestmentHighlights": [
+        "A targeted solution for professionals and SME\u2019s now ready to ramp-up and scale across new verticals and geographies"
+      ],
+      "transactionPerimeter": null
+    },
+    {
+      "id": "e39",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e2",
+      "target": "e6",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e2",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e3",
+      "target": "e10",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e11",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e4",
+      "target": "e10",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e4",
+      "target": "e8",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e4",
+      "target": "e9",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e28",
+      "target": "e12",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e38",
+      "target": "e36",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e38",
+      "target": "e37",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:targets"
+    }
+  ]
+}

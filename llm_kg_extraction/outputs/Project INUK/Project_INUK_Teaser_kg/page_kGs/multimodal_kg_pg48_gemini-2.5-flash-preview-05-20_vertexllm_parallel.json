@@ -1,0 +1,234 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "\u00c9CLAIREUR G\u00c9OD\u00c9CISIONNEL"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "status": "Strictly Private & Confidential"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisor for Project Inuk"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Sage 100",
+      "category": "Accounting and Payroll Software"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Hootsuite",
+      "category": "Marketing Software"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "SEMRUSH",
+      "category": "Marketing Software"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Confluence",
+      "category": "Project Management Software"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "Jira Software",
+      "category": "Project Management Software"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "Kelio",
+      "category": "Time Management Software"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "lemList",
+      "category": "Prospecting Software"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "LinkedIn Sales Navigator",
+      "category": "Prospecting Software"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "skrapp.io",
+      "category": "Prospecting Software"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:ProductOrService",
+      "name": "Sendinblue",
+      "category": "Prospecting Software"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Accounting and payroll",
+      "description": "Internal IT system category"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Marketing",
+      "description": "Internal IT system category"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Project management",
+      "description": "Internal IT system category"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Time management",
+      "description": "Internal IT system category"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Prospecting",
+      "description": "Internal IT system category"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e15",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e6",
+      "target": "e16",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e7",
+      "target": "e16",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e8",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e9",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e10",
+      "target": "e18",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e11",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e12",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e13",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e14",
+      "target": "e19",
+      "type": "pekg:targets"
+    }
+  ]
+}

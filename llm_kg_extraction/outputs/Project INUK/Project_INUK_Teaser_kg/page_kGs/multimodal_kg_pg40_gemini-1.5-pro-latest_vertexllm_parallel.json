@@ -1,0 +1,131 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:MarketContext",
+      "name": "Location Intelligence Market",
+      "segmentName": "Location Intelligence"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:ProductOrService",
+      "name": "Location Intelligence Platform",
+      "category": "Software"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "alias": [
+        "\u00c9CLAIREUR G\u00c9OD\u00c9CISIONNEL"
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Workforce Management"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Sales Optimization"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Geo-Marketing"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Human Resources Management"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Risk Management"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Supply Chain Optimization"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Data Visualization"
+    },
+    {
+      "id": "e11",
+      "type": "Financial Advisory",
+      "name": "DDA & Company France SAS"
+    },
+    {
+      "id": "e12",
+      "type": "Financial Advisory",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e3",
+      "target": "e2",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e3",
+      "target": "e4",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e5",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e6",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e7",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e8",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e9",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e10",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e13",
+      "target": "e3",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e13",
+      "target": "e11",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e13",
+      "target": "e12",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

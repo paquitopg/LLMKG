@@ -1,0 +1,225 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Company that has undergone a successful business model switch.",
+      "keyStrengths": [
+        "Successful switch of business model leading to high recurring billings"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisor for Project Inuk"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "status": "Strictly Private & Confidential"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings",
+      "valueString": "\u20ac4.2m",
+      "fiscalPeriod": "FY22L",
+      "scope": "Company-wide",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "82%",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": true,
+      "scope": "Total Billings",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-recurring Billings",
+      "valueString": "18%",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": false,
+      "scope": "Total Billings",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenues",
+      "valueString": "57%",
+      "fiscalPeriod": "FY19A",
+      "isRecurring": true,
+      "scope": "Total Revenues"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "Subscription",
+      "category": "Software Sales"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "Maintenance",
+      "category": "Software Sales"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Prof. Services"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "Perpetual licenses"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "Software Sales",
+      "description": "Generates recurring billings, includes maintenance and subscriptions."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Subscription Share of Billings",
+      "valueString": "62%",
+      "fiscalPeriod": "FY22L",
+      "scope": "Billings Category"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance Share of Billings",
+      "valueString": "20%",
+      "fiscalPeriod": "FY22L",
+      "scope": "Billings Category"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Professional Services Share of Billings",
+      "valueString": "15%",
+      "fiscalPeriod": "FY22L",
+      "scope": "Billings Category"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perpetual Licenses Share of Billings",
+      "valueString": "3%",
+      "fiscalPeriod": "FY22L",
+      "scope": "Billings Category"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e9",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e10",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e11",
+      "target": "e16",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e12",
+      "target": "e17",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e13",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e13",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6",
+      "target": "e13",
+      "type": "pekg:hasRevenueStream"
+    }
+  ]
+}

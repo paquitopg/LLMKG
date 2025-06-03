@@ -1,0 +1,238 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "transactionPerimeter": "Articque",
+      "typeSought": "Sale of Target Company",
+      "status": "Ongoing"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisor for Project Inuk"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Administrator Licensing Tier",
+      "category": "Software Licensing Tier",
+      "description": "User Profile: Power user (CIO). Features: Full administration capabilities. Rights: Can deliver Expert & Analyst Access to new users."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Base price - Administrator Licensing Tier",
+      "valueString": "From \u20ac19k per year",
+      "fiscalPeriod": "per year",
+      "isRecurring": true,
+      "scope": "Licensing Tier"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Days of training - Administrator Licensing Tier",
+      "kpiValueString": "0.5",
+      "kpiDateOrPeriod": "Per User Profile",
+      "description": "Days of training required for Administrator user profile."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Large corporates",
+      "description": "Target client segment for specific licensing tiers."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "Expert Licensing Tier",
+      "category": "Software Licensing Tier",
+      "description": "User Profile: Business user proficient in Excel. Features: Analysis modeling (static and dynamic maps and reports), Dashboards & Wizard production. Rights: Can create analysis and deliver Explorer Access to new users."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Base price - Expert Licensing Tier",
+      "valueString": "From \u20ac9k per year",
+      "fiscalPeriod": "per year",
+      "isRecurring": true,
+      "scope": "Licensing Tier"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Days of training - Expert Licensing Tier",
+      "kpiValueString": "5",
+      "kpiDateOrPeriod": "Per User Profile",
+      "description": "Days of training required for Expert user profile."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "SMEs",
+      "description": "Target client segment for specific licensing tiers (Small and Medium-sized Enterprises)."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "Analyst Licensing Tier",
+      "category": "Software Licensing Tier",
+      "description": "User Profile: Business user with a basic knowledge of Excel. Features: Basic analysis modeling (static maps and reports). Rights: Can create analysis and reports."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Base price - Analyst Licensing Tier",
+      "valueString": "From \u20ac5k per year",
+      "fiscalPeriod": "per year",
+      "isRecurring": true,
+      "scope": "Licensing Tier"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Days of training - Analyst Licensing Tier",
+      "kpiValueString": "3",
+      "kpiDateOrPeriod": "Per User Profile",
+      "description": "Days of training required for Analyst user profile."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:ProductOrService",
+      "name": "Explorer Licensing Tier",
+      "category": "Software Licensing Tier",
+      "description": "User Profile: Basic user. Features: Dashboards and business applications view. Rights: Read-only."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Base price - Explorer Licensing Tier",
+      "valueString": "From \u20ac330 per year",
+      "fiscalPeriod": "per year",
+      "isRecurring": true,
+      "scope": "Licensing Tier"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Days of training - Explorer Licensing Tier",
+      "kpiValueString": "None",
+      "kpiDateOrPeriod": "Per User Profile",
+      "description": "Days of training required for Explorer user profile."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "pekg:seeksTransaction"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e5",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e7",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e5",
+      "target": "e8",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e10",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e11",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e9",
+      "target": "e12",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e13",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e13",
+      "target": "e15",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e13",
+      "target": "e12",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e16",
+      "target": "e17",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e16",
+      "target": "e18",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e16",
+      "target": "e8",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e16",
+      "target": "e12",
+      "type": "pekg:targets"
+    }
+  ]
+}

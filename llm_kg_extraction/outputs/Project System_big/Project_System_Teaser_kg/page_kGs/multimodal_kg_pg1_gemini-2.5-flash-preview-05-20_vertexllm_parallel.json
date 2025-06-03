@@ -1,0 +1,113 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "Target Company for Project System_big"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Information Memorandum",
+      "status": "Strictly confidential",
+      "description": "Information Memorandum dated March 2023"
+    },
+    {
+      "id": "e3",
+      "type": "Investment Bank",
+      "name": "Rothschild & Co",
+      "roleInContext": "Financial Advisor"
+    },
+    {
+      "id": "e4",
+      "type": "Investment Bank",
+      "name": "Samsung Securities",
+      "roleInContext": "Financial Advisor"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Entity associated with the confidentiality of the Information Memorandum"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:MarketContext",
+      "segmentName": "Digital Marketplace",
+      "characteristics": "Global connectivity, user interaction, platform-based"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Technology",
+      "name": "Artificial Intelligence",
+      "description": "Core technology indicated by brain and neural network imagery"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Technology",
+      "name": "Data Analytics",
+      "description": "Core technology indicated by digital circuitry and abstract data networks"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Technology",
+      "name": "Cloud Computing",
+      "description": "Core technology indicated by a cloud icon"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Technology",
+      "name": "Data Security",
+      "description": "Core technology indicated by a padlock on a cloud icon"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:usesTechnology"
+    }
+  ]
+}

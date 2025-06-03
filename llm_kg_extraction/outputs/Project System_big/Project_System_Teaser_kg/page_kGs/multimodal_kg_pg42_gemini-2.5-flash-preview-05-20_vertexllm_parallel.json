@@ -1,0 +1,450 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "alias": [
+        "Systran"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisor for Project System_big"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisor for Project System_big"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "status": "Teaser",
+      "typeSought": "Sale"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Product license & upgrades",
+      "category": "Revenue Stream",
+      "description": "Revenue from Pure Neural Server solution license hosted privately (on-premise or private cloud) and solution upgrades (major updates, additional users). Specifically, SSA & SSI\u2019s Product license & upgrade revenue only."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Maintenance",
+      "category": "Revenue Stream",
+      "description": "Yearly maintenance, including minor updates. Includes one-shot maintenance."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "Services",
+      "category": "Revenue Stream",
+      "description": "Training, installation, advisory, hosting, etc. Includes service revenue from SCL & SJGK."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Cloud",
+      "category": "Revenue Stream",
+      "description": "Systran\u2019s cloud solution with multiple paid offer plans depending on use."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "Other",
+      "category": "Revenue Stream",
+      "description": "Funded research projects. Includes desktop and other solutions."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "Pure Neural Server solution",
+      "category": "Product",
+      "description": "License hosted privately (on-premise or private cloud); Includes solution upgrades (major updates, additional users)."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Systran's cloud solution",
+      "category": "Product",
+      "description": "Multiple paid offer plans depending on use."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "Funded research projects",
+      "category": "Service"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "Desktop and other solutions",
+      "category": "Product"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Clients looking for secured solutions",
+      "description": "Includes data privacy for high volumes of data"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Professional Clients",
+      "description": "Clients with spend < \u20ac1k"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Enterprise SME Clients",
+      "description": "Clients with spend c. \u20ac 10K"
+    },
+    {
+      "id": "e17",
+      "type": "Government",
+      "name": "Government entities"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Share of FY21A sales",
+      "valueString": "54%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Product license & upgrades",
+      "sourceNote": "Company Information, KPMG"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Share of FY21A sales",
+      "valueString": "28%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Maintenance",
+      "sourceNote": "Company Information, KPMG"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Share of FY21A sales",
+      "valueString": "8%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Services",
+      "sourceNote": "Company Information, KPMG"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Share of FY21A sales",
+      "valueString": "1%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Cloud",
+      "sourceNote": "Company Information, KPMG"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Share of FY21A sales",
+      "valueString": "9%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Other",
+      "sourceNote": "Company Information, KPMG"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Share of FY21A revenues from Enterprise offer",
+      "valueString": "90%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "Company Information, KPMG"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:Company",
+      "name": "KPMG"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:Company",
+      "name": "SSA & SSI"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:Company",
+      "name": "SCL & SJGK"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:ProductOrService",
+      "name": "SYSTRAN pure neural Server",
+      "category": "Product Brand"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:ProductOrService",
+      "name": "SYSTRAN translate Pro",
+      "category": "Product Brand"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:ProductOrService",
+      "name": "SYSTRAN translate Enterprise",
+      "category": "Product Brand"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:Technology",
+      "name": "Neural Server technology"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:ProductOrService",
+      "name": "Enterprise Offer",
+      "category": "Go-to-market Model",
+      "description": "A go-to-market model that includes Product license & upgrades, Maintenance, and Services revenue streams."
+    },
+    {
+      "id": "e32",
+      "type": "pekg:ProductOrService",
+      "name": "Cloud Offer",
+      "category": "Go-to-market Model",
+      "description": "A go-to-market model that includes the Cloud revenue stream."
+    },
+    {
+      "id": "e33",
+      "type": "pekg:ProductOrService",
+      "name": "Other Offer",
+      "category": "Go-to-market Model",
+      "description": "A go-to-market model that includes the Other revenue stream."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e5",
+      "target": "e14",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e14",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e7",
+      "target": "e14",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e8",
+      "target": "e15",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e8",
+      "target": "e16",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e5",
+      "target": "e25",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e7",
+      "target": "e26",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e10",
+      "target": "e30",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e27",
+      "target": "e30",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e31",
+      "target": "e5",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e31",
+      "target": "e6",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e31",
+      "target": "e7",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e32",
+      "target": "e8",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e33",
+      "target": "e9",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e31",
+      "target": "e14",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e32",
+      "target": "e15",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e32",
+      "target": "e16",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e33",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e31",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    }
+  ]
+}

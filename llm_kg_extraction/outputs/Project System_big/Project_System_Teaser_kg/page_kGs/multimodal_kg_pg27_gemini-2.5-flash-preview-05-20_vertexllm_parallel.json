@@ -1,0 +1,418 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "alias": [
+        "Systran"
+      ],
+      "description": "Target company in the machine translation market, highlighted as a leader in customization and confidentiality/security.",
+      "industry": "Machine Translation Software"
+    },
+    {
+      "id": "e2",
+      "type": "Investment Bank",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e3",
+      "type": "Investment Bank",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Potential Sale",
+      "status": "Teaser Document"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "Language Weaver",
+      "description": "Main competitor in the machine translation market.",
+      "industry": "Machine Translation Software"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Company",
+      "name": "DeepL Pro",
+      "description": "Main competitor in the machine translation market.",
+      "industry": "Machine Translation Software"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Company",
+      "name": "Microsoft",
+      "description": "Big Tech competitor in the machine translation market.",
+      "industry": "Technology"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Company",
+      "name": "Amazon Translate",
+      "description": "Big Tech competitor in the machine translation market.",
+      "industry": "Technology"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Company",
+      "name": "Google",
+      "description": "Big Tech competitor in the machine translation market.",
+      "industry": "Technology"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company associated with the document (watermark indicating confidentiality)."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Company",
+      "name": "Intento",
+      "description": "Provider of data for competitive analysis (Intento state of machine translation report).",
+      "industry": "Market Research"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Company",
+      "name": "Eleven",
+      "description": "Provider of data for competitive analysis (Eleven VDD report).",
+      "industry": "Consulting"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Customization",
+      "description": "Ability to tailor translation solutions to specific client needs."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Number of languages",
+      "description": "Breadth of language pairs supported by the translation service."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Quality of generic translation",
+      "description": "Accuracy and fluency of general-purpose translation."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Level of confidentiality and security",
+      "description": "Measures taken to protect sensitive data during translation processes."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Customer support",
+      "description": "Availability and quality of assistance provided to users."
+    },
+    {
+      "id": "e18",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Price",
+      "description": "Cost-effectiveness of translation services."
+    },
+    {
+      "id": "e19",
+      "type": "pekg:MarketContext",
+      "segmentName": "Machine Translation Market",
+      "characteristics": "Dynamic market powered by innovation. Degree of Competitiveness ranges from High (5) to Low (1).",
+      "growthInfo": "Dynamic market powered by innovation"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e5",
+      "target": "e19",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e6",
+      "target": "e19",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e7",
+      "target": "e19",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e8",
+      "target": "e19",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e9",
+      "target": "e19",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "High (ranked n\u00b01, full circle)"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Medium (half circle)"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Low (quarter circle, Note 1: Very efficient on specific Language Pairs)"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "High (ranked n\u00b01, full circle)"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "High (full circle)"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Medium (half circle)"
+    },
+    {
+      "source": "e5",
+      "target": "e13",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Medium (half circle)"
+    },
+    {
+      "source": "e5",
+      "target": "e14",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Medium (half circle)"
+    },
+    {
+      "source": "e5",
+      "target": "e15",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Not available (n.a., Note 2: Limited efficiency on specific Language Pairs)"
+    },
+    {
+      "source": "e5",
+      "target": "e16",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Medium (half circle)"
+    },
+    {
+      "source": "e5",
+      "target": "e17",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "High (full circle)"
+    },
+    {
+      "source": "e5",
+      "target": "e18",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Not available (n.a.)"
+    },
+    {
+      "source": "e6",
+      "target": "e13",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Medium (half circle)"
+    },
+    {
+      "source": "e6",
+      "target": "e14",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "High (full circle)"
+    },
+    {
+      "source": "e6",
+      "target": "e15",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Low (quarter circle)"
+    },
+    {
+      "source": "e6",
+      "target": "e16",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Medium (half circle)"
+    },
+    {
+      "source": "e6",
+      "target": "e17",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Medium (half circle)"
+    },
+    {
+      "source": "e6",
+      "target": "e18",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Very Low (empty circle)"
+    },
+    {
+      "source": "e7",
+      "target": "e13",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Medium (half circle)"
+    },
+    {
+      "source": "e7",
+      "target": "e14",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "High (full circle)"
+    },
+    {
+      "source": "e7",
+      "target": "e15",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Very Low (empty circle)"
+    },
+    {
+      "source": "e7",
+      "target": "e16",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Very Low (empty circle)"
+    },
+    {
+      "source": "e7",
+      "target": "e17",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Very Low (empty circle)"
+    },
+    {
+      "source": "e7",
+      "target": "e18",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Medium (half circle)"
+    },
+    {
+      "source": "e8",
+      "target": "e13",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Medium (half circle)"
+    },
+    {
+      "source": "e8",
+      "target": "e14",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "High (full circle)"
+    },
+    {
+      "source": "e8",
+      "target": "e15",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Medium (half circle)"
+    },
+    {
+      "source": "e8",
+      "target": "e16",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Very Low (empty circle)"
+    },
+    {
+      "source": "e8",
+      "target": "e17",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Very Low (empty circle)"
+    },
+    {
+      "source": "e8",
+      "target": "e18",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Medium (half circle)"
+    },
+    {
+      "source": "e9",
+      "target": "e13",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Medium (half circle)"
+    },
+    {
+      "source": "e9",
+      "target": "e14",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "High (full circle)"
+    },
+    {
+      "source": "e9",
+      "target": "e15",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Medium (half circle)"
+    },
+    {
+      "source": "e9",
+      "target": "e16",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Very Low (empty circle)"
+    },
+    {
+      "source": "e9",
+      "target": "e17",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Very Low (empty circle)"
+    },
+    {
+      "source": "e9",
+      "target": "e18",
+      "type": "pekg:reportsOperationalKPI",
+      "kpiValueString": "Medium (half circle)"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:targets",
+      "description": "Key client concern where Systran is ranked n\u00b01"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:targets",
+      "description": "Key client concern where Systran is ranked n\u00b01"
+    },
+    {
+      "source": "e19",
+      "target": "e11",
+      "type": "pekg:sourceOfData",
+      "sourceNote": "Intento state of machine translation"
+    },
+    {
+      "source": "e19",
+      "target": "e12",
+      "type": "pekg:sourceOfData",
+      "sourceNote": "Eleven VDD report"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "alias": [
+        "\u00c9CLAIREUR G\u00c9OD\u00c9CISIONNEL"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:ProductOrService",
+      "name": "Sage 100",
+      "category": "Accounting and payroll"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:ProductOrService",
+      "name": "lemlist",
+      "category": "Prospecting"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:ProductOrService",
+      "name": "LinkedIn Sales Navigator",
+      "category": "Prospecting"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "skrapp.io",
+      "category": "Prospecting"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "sendinblue",
+      "category": "Prospecting"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "Hootsuite",
+      "category": "Marketing"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "SEMRUSH",
+      "category": "Marketing"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "Confluence",
+      "category": "Project management"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "Jira Software",
+      "category": "Project management"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Kelio",
+      "category": "Time management"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Advisor",
+      "name": "DDA & Company France SAS"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Advisor",
+      "name": "ChapsVision"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

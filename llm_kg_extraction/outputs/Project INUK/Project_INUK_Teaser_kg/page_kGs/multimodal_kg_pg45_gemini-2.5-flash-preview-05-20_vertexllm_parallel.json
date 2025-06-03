@@ -1,0 +1,793 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Target Company"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "A\u00e9roports de Paris"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "Agence Nationale de la Recherche"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "Direct-Amidis"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "Articque Group"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Person",
+      "fullName": "Martin Lienesch"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Person",
+      "fullName": "Mathieu Guitton"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Person",
+      "fullName": "Josip Dupuit"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Person",
+      "fullName": "Laurence Marchais"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Position",
+      "titleName": "Head of Consulting hub"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Position",
+      "titleName": "Web Development Project Manager"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Position",
+      "titleName": "Geomatics research officer"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Position",
+      "titleName": "GIS research officer"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Position",
+      "titleName": "Head of Training hub"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Position",
+      "titleName": "Trainer-cartograph"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Position",
+      "titleName": "Assistant engineer in cartography"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:Position",
+      "titleName": "GIS technician"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:Position",
+      "titleName": "Teacher"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:Position",
+      "titleName": "Head of IT and data compliance"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:Position",
+      "titleName": "Project manager"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:Position",
+      "titleName": "IT system administrator"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:Position",
+      "titleName": "Website and IT manager"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:Position",
+      "titleName": "Sales administrator and pay manager"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:Position",
+      "titleName": "ADV & Payroll manager"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:Position",
+      "titleName": "Accountant and HR Assistant"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:Position",
+      "titleName": "Senior Accountant"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:Position",
+      "titleName": "Junior Accountant"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:Position",
+      "titleName": "Executive Assistant"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "geomatics applied to urban studies and risks"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "mountain dynamics and sensitive territories"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "software engineering"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "IT management"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Accounting"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Executive Assistance"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:Technology",
+      "name": "geomatics"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:Technology",
+      "name": "Certified Prof. Scrum Master 1"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:Technology",
+      "name": "Web Development"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:Technology",
+      "name": "GIS"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:Technology",
+      "name": "IT system"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:Technology",
+      "name": "data compliance"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:Technology",
+      "name": "cartography"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Head of Consulting hub",
+      "eventType": "Employment",
+      "dateOrYear": "2020 \u2013 Present"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Web Development Project Manager",
+      "eventType": "Employment",
+      "dateOrYear": "2016 \u2013 2020"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Geomatics research officer",
+      "eventType": "Employment",
+      "dateOrYear": "2014 \u2013 2016"
+    },
+    {
+      "id": "e46",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "GIS research officer",
+      "eventType": "Employment",
+      "dateOrYear": "2013 \u2013 2014"
+    },
+    {
+      "id": "e47",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Trainer-cartograph",
+      "eventType": "Employment",
+      "dateOrYear": "2014 \u2013 Present"
+    },
+    {
+      "id": "e48",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Assistant engineer in cartography",
+      "eventType": "Employment",
+      "dateOrYear": "2013 \u2013 2014"
+    },
+    {
+      "id": "e49",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "GIS technician",
+      "eventType": "Employment",
+      "dateOrYear": "2012 \u2013 2013"
+    },
+    {
+      "id": "e50",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Teacher",
+      "eventType": "Employment",
+      "dateOrYear": "2011"
+    },
+    {
+      "id": "e51",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Head of IT and data compliance",
+      "eventType": "Employment",
+      "dateOrYear": "2015 \u2013 Present"
+    },
+    {
+      "id": "e52",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Project manager",
+      "eventType": "Employment",
+      "dateOrYear": "2010 \u2013 2014"
+    },
+    {
+      "id": "e53",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "IT system administrator",
+      "eventType": "Employment",
+      "dateOrYear": "2008 \u2013 2010"
+    },
+    {
+      "id": "e54",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Website and IT manager",
+      "eventType": "Employment",
+      "dateOrYear": "2003 \u2013 2007"
+    },
+    {
+      "id": "e55",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "ADV & Payroll manager",
+      "eventType": "Employment",
+      "dateOrYear": "2022 \u2013 Present"
+    },
+    {
+      "id": "e56",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Accountant and HR Assistant",
+      "eventType": "Employment",
+      "dateOrYear": "2019 \u2013 2022"
+    },
+    {
+      "id": "e57",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Senior Accountant",
+      "eventType": "Employment",
+      "dateOrYear": "2011 \u2013 2019"
+    },
+    {
+      "id": "e58",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Junior Accountant",
+      "eventType": "Employment",
+      "dateOrYear": "2003 \u2013 2011"
+    },
+    {
+      "id": "e59",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Executive Assistant",
+      "eventType": "Employment"
+    },
+    {
+      "id": "e60",
+      "type": "pekg:Location",
+      "locationName": "Universit\u00e9 Cergy",
+      "locationType": "Educational Institution"
+    },
+    {
+      "id": "e61",
+      "type": "pekg:Location",
+      "locationName": "Universit\u00e9 Clermont-Ferrand",
+      "locationType": "Educational Institution"
+    },
+    {
+      "id": "e62",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e63",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "typeSought": "Sale/Acquisition (implied)",
+      "status": "Ongoing (implied)",
+      "dealRationaleHighlights": [
+        "supported by key managers"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e1",
+      "target": "e63",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e43",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e44",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e45",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e47",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e51",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e55",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e56",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e58",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e59",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e5",
+      "target": "e57",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e7",
+      "target": "e11",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e7",
+      "target": "e12",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e7",
+      "target": "e13",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e7",
+      "target": "e14",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e7",
+      "target": "e43",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e7",
+      "target": "e44",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e7",
+      "target": "e45",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e7",
+      "target": "e46",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e8",
+      "target": "e15",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e8",
+      "target": "e16",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e8",
+      "target": "e17",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e8",
+      "target": "e18",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e8",
+      "target": "e19",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e8",
+      "target": "e47",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e8",
+      "target": "e48",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e8",
+      "target": "e49",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e8",
+      "target": "e50",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e9",
+      "target": "e20",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e9",
+      "target": "e21",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e9",
+      "target": "e22",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e9",
+      "target": "e23",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e9",
+      "target": "e51",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e9",
+      "target": "e52",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e9",
+      "target": "e53",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e9",
+      "target": "e54",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e10",
+      "target": "e24",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e10",
+      "target": "e25",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e10",
+      "target": "e26",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e10",
+      "target": "e27",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e10",
+      "target": "e28",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e10",
+      "target": "e29",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e10",
+      "target": "e55",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e10",
+      "target": "e56",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e10",
+      "target": "e57",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e10",
+      "target": "e58",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e10",
+      "target": "e59",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e11",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e12",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e13",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e14",
+      "target": "e2",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e15",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e16",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e17",
+      "target": "e61",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e18",
+      "target": "e3",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e20",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e21",
+      "target": "e4",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e24",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e25",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e26",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e27",
+      "target": "e5",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e28",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e29",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e2",
+      "target": "e46",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e61",
+      "target": "e48",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e3",
+      "target": "e49",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e4",
+      "target": "e52",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e63",
+      "target": "e62",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e7",
+      "target": "e36",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e7",
+      "target": "e39",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e7",
+      "target": "e38",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e7",
+      "target": "e37",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e8",
+      "target": "e42",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e8",
+      "target": "e39",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e9",
+      "target": "e40",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e9",
+      "target": "e41",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e9",
+      "target": "e32",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e9",
+      "target": "e33",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e7",
+      "target": "e30",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e8",
+      "target": "e31",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e10",
+      "target": "e34",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e10",
+      "target": "e35",
+      "type": "pekg:targets"
+    }
+  ]
+}

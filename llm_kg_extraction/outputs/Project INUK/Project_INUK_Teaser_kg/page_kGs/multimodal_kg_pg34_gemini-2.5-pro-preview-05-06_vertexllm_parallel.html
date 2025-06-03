@@ -1,0 +1,321 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script>function neighbourhoodHighlight(params) {
+  // console.log("in nieghbourhoodhighlight");
+  allNodes = nodes.get({ returnType: "Object" });
+  // originalNodes = JSON.parse(JSON.stringify(allNodes));
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    highlightActive = true;
+    var i, j;
+    var selectedNode = params.nodes[0];
+    var degrees = 2;
+
+    // mark all nodes as hard to read.
+    for (let nodeId in allNodes) {
+      // nodeColors[nodeId] = allNodes[nodeId].color;
+      allNodes[nodeId].color = "rgba(200,200,200,0.5)";
+      if (allNodes[nodeId].hiddenLabel === undefined) {
+        allNodes[nodeId].hiddenLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+    var connectedNodes = network.getConnectedNodes(selectedNode);
+    var allConnectedNodes = [];
+
+    // get the second degree nodes
+    for (i = 1; i < degrees; i++) {
+      for (j = 0; j < connectedNodes.length; j++) {
+        allConnectedNodes = allConnectedNodes.concat(
+          network.getConnectedNodes(connectedNodes[j])
+        );
+      }
+    }
+
+    // all second degree nodes get a different color and their label back
+    for (i = 0; i < allConnectedNodes.length; i++) {
+      // allNodes[allConnectedNodes[i]].color = "pink";
+      allNodes[allConnectedNodes[i]].color = "rgba(150,150,150,0.75)";
+      if (allNodes[allConnectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[allConnectedNodes[i]].label =
+          allNodes[allConnectedNodes[i]].hiddenLabel;
+        allNodes[allConnectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // all first degree nodes get their own color and their label back
+    for (i = 0; i < connectedNodes.length; i++) {
+      // allNodes[connectedNodes[i]].color = undefined;
+      allNodes[connectedNodes[i]].color = nodeColors[connectedNodes[i]];
+      if (allNodes[connectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[connectedNodes[i]].label =
+          allNodes[connectedNodes[i]].hiddenLabel;
+        allNodes[connectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // the main node gets its own color and its label back.
+    // allNodes[selectedNode].color = undefined;
+    allNodes[selectedNode].color = nodeColors[selectedNode];
+    if (allNodes[selectedNode].hiddenLabel !== undefined) {
+      allNodes[selectedNode].label = allNodes[selectedNode].hiddenLabel;
+      allNodes[selectedNode].hiddenLabel = undefined;
+    }
+  } else if (highlightActive === true) {
+    // console.log("highlightActive was true");
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      // allNodes[nodeId].color = "purple";
+      allNodes[nodeId].color = nodeColors[nodeId];
+      // delete allNodes[nodeId].color;
+      if (allNodes[nodeId].hiddenLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].hiddenLabel;
+        allNodes[nodeId].hiddenLabel = undefined;
+      }
+    }
+    highlightActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    // console.log("Nothing was selected");
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        // allNodes[nodeId].color = {};
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function filterHighlight(params) {
+  allNodes = nodes.get({ returnType: "Object" });
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    filterActive = true;
+    let selectedNodes = params.nodes;
+
+    // hiding all nodes and saving the label
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = true;
+      if (allNodes[nodeId].savedLabel === undefined) {
+        allNodes[nodeId].savedLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+
+    for (let i=0; i < selectedNodes.length; i++) {
+      allNodes[selectedNodes[i]].hidden = false;
+      if (allNodes[selectedNodes[i]].savedLabel !== undefined) {
+        allNodes[selectedNodes[i]].label = allNodes[selectedNodes[i]].savedLabel;
+        allNodes[selectedNodes[i]].savedLabel = undefined;
+      }
+    }
+
+  } else if (filterActive === true) {
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = false;
+      if (allNodes[nodeId].savedLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].savedLabel;
+        allNodes[nodeId].savedLabel = undefined;
+      }
+    }
+    filterActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function selectNode(nodes) {
+  network.selectNodes(nodes);
+  neighbourhoodHighlight({ nodes: nodes });
+  return nodes;
+}
+
+function selectNodes(nodes) {
+  network.selectNodes(nodes);
+  filterHighlight({nodes: nodes});
+  return nodes;
+}
+
+function highlightFilter(filter) {
+  let selectedNodes = []
+  let selectedProp = filter['property']
+  if (filter['item'] === 'node') {
+    let allNodes = nodes.get({ returnType: "Object" });
+    for (let nodeId in allNodes) {
+      if (allNodes[nodeId][selectedProp] && filter['value'].includes((allNodes[nodeId][selectedProp]).toString())) {
+        selectedNodes.push(nodeId)
+      }
+    }
+  }
+  else if (filter['item'] === 'edge'){
+    let allEdges = edges.get({returnType: 'object'});
+    // check if the selected property exists for selected edge and select the nodes connected to the edge
+    for (let edge in allEdges) {
+      if (allEdges[edge][selectedProp] && filter['value'].includes((allEdges[edge][selectedProp]).toString())) {
+        selectedNodes.push(allEdges[edge]['from'])
+        selectedNodes.push(allEdges[edge]['to'])
+      }
+    }
+  }
+  selectNodes(selectedNodes)
+}</script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            
+            
+            
+            
+            
+
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1f77b4", "id": "e1", "label": "Articque", "shape": "dot", "size": 15, "title": "ID: e1\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Articque\u003cbr\u003edescription: Target company. Articque\u2019s software relies on a scalable SaaS architecture."}, {"color": "#cccccc", "id": "e2", "label": "DDA \u0026 Company France SAS", "shape": "dot", "size": 15, "title": "ID: e2\u003cbr\u003eType: Financial Advisor\u003cbr\u003ename: DDA \u0026 Company France SAS\u003cbr\u003ealias: [\u0027DDA \u0026 Company\u0027]\u003cbr\u003eroleInContext: Advisor for Project Inuk"}, {"color": "#9467bd", "id": "e3", "label": "Articque\u0027s software", "shape": "dot", "size": 15, "title": "ID: e3\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Articque\u0027s software\u003cbr\u003edescription: General term for Articque\u0027s software offerings, relies on a scalable SaaS architecture.\u003cbr\u003ecategory: Software Suite"}, {"color": "#9467bd", "id": "e4", "label": "CDO", "shape": "dot", "size": 15, "title": "ID: e4\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: CDO\u003cbr\u003ecategory: Web Application\u003cbr\u003edescription: Web application deployable on Windows servers. Composed of: Data Base (PostgreSQL in replacement of MySQL for rights, accounts, user roles and file management), .Net 4.8 Web Service and its API (performing spatial/statistical calculation, generating map representations and exports), and Symphony/PHP/Apache Web Application (making up the user interface and the map rendering engine in a browser)."}, {"color": "#9467bd", "id": "e5", "label": "AP", "shape": "dot", "size": 15, "title": "ID: e5\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: AP\u003cbr\u003ecategory: Web Application\u003cbr\u003edescription: Web application deployable on Windows servers. Composed of: Data Base (PostgreSQL in replacement of MySQL for rights, accounts, user roles and file management), .Net 4.8 Web Service and its API (performing spatial/statistical calculation, generating map representations and exports), and Symphony/PHP/Apache Web Application (making up the user interface and the map rendering engine in a browser)."}, {"color": "#9467bd", "id": "e6", "label": "Articque Platform", "shape": "dot", "size": 15, "title": "ID: e6\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Articque Platform\u003cbr\u003ecategory: Platform\u003cbr\u003edescription: Core backend platform offered by Articque, as shown in the architecture diagram."}, {"color": "#9467bd", "id": "e7", "label": "C\u0026D Online", "shape": "dot", "size": 15, "title": "ID: e7\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: C\u0026D Online\u003cbr\u003ecategory: Online Platform/Service\u003cbr\u003edescription: Product or brand associated with Articque\u0027s platform offerings, logo shown with Articque Platform."}, {"color": "#9467bd", "id": "e8", "label": "Platform Web Service", "shape": "dot", "size": 15, "title": "ID: e8\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Platform Web Service\u003cbr\u003ecategory: Software Component\u003cbr\u003edescription: Core web service component of the Articque Platform."}, {"color": "#9467bd", "id": "e9", "label": "Articque Library", "shape": "dot", "size": 15, "title": "ID: e9\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Articque Library\u003cbr\u003ecategory: Software Component\u003cbr\u003edescription: Library component of the Platform Web Service."}, {"color": "#9467bd", "id": "e10", "label": "Platform Library", "shape": "dot", "size": 15, "title": "ID: e10\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Platform Library\u003cbr\u003ecategory: Software Component\u003cbr\u003edescription: Library component of the Platform Web Service."}, {"color": "#9467bd", "id": "e11", "label": "Platform API", "shape": "dot", "size": 15, "title": "ID: e11\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Platform API\u003cbr\u003ecategory: Software Component\u003cbr\u003edescription: API component of the Platform Web Service, used for interactions."}, {"color": "#9467bd", "id": "e12", "label": "Geocoding", "shape": "dot", "size": 15, "title": "ID: e12\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Geocoding\u003cbr\u003ecategory: Additional module\u003cbr\u003edescription: Additional module for the Articque Platform."}, {"color": "#9467bd", "id": "e13", "label": "Geoservice Data", "shape": "dot", "size": 15, "title": "ID: e13\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Geoservice Data\u003cbr\u003ecategory: Additional module\u003cbr\u003edescription: Additional module for the Articque Platform."}, {"color": "#9467bd", "id": "e14", "label": "Basemaps", "shape": "dot", "size": 15, "title": "ID: e14\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Basemaps\u003cbr\u003ecategory: Additional module\u003cbr\u003edescription: Additional module for the Articque Platform."}, {"color": "#8c564b", "id": "e15", "label": "SaaS", "shape": "dot", "size": 15, "title": "ID: e15\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: SaaS\u003cbr\u003edescription: Scalable SaaS architecture."}, {"color": "#8c564b", "id": "e16", "label": "Windows servers", "shape": "dot", "size": 15, "title": "ID: e16\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Windows servers"}, {"color": "#8c564b", "id": "e17", "label": "PostgreSQL", "shape": "dot", "size": 15, "title": "ID: e17\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: PostgreSQL\u003cbr\u003edescription: Used for Data Base; for rights, accounts, user roles and file management. In replacement of MySQL."}, {"color": "#8c564b", "id": "e18", "label": "MySQL", "shape": "dot", "size": 15, "title": "ID: e18\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: MySQL\u003cbr\u003edescription: Previously used for Data Base, replaced by PostgreSQL."}, {"color": "#8c564b", "id": "e19", "label": ".Net 4.8", "shape": "dot", "size": 15, "title": "ID: e19\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: .Net 4.8\u003cbr\u003edescription: Technology used by the .Net 4.8 Web Service. Also referred to as Framework .net 4.8 in diagram for Platform Web Service."}, {"color": "#8c564b", "id": "e20", "label": "API", "shape": "dot", "size": 15, "title": "ID: e20\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: API\u003cbr\u003edescription: Application Programming Interface, specifically mentioned for the .Net 4.8 Web Service."}, {"color": "#8c564b", "id": "e21", "label": "Symphony", "shape": "dot", "size": 15, "title": "ID: e21\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Symphony\u003cbr\u003edescription: PHP framework, version v4.4 shown in diagram."}, {"color": "#8c564b", "id": "e22", "label": "PHP", "shape": "dot", "size": 15, "title": "ID: e22\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: PHP\u003cbr\u003edescription: Scripting language, version v8 shown in diagram."}, {"color": "#8c564b", "id": "e23", "label": "Apache", "shape": "dot", "size": 15, "title": "ID: e23\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Apache\u003cbr\u003edescription: Web server, version v2 shown in diagram."}, {"color": "#8c564b", "id": "e24", "label": "Leaflet", "shape": "dot", "size": 15, "title": "ID: e24\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Leaflet\u003cbr\u003edescription: JavaScript library for interactive maps, used in Frontend."}, {"color": "#8c564b", "id": "e25", "label": "ReactJS", "shape": "dot", "size": 15, "title": "ID: e25\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: ReactJS\u003cbr\u003edescription: JavaScript library for building user interfaces, used in Frontend."}, {"color": "#8c564b", "id": "e26", "label": "JavaScript", "shape": "dot", "size": 15, "title": "ID: e26\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: JavaScript\u003cbr\u003edescription: Programming language for web development, used in Frontend."}, {"color": "#8c564b", "id": "e27", "label": ".NET Framework .net 4.8", "shape": "dot", "size": 15, "title": "ID: e27\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: .NET Framework .net 4.8\u003cbr\u003edescription: Microsoft software framework, used by Platform Web Service."}, {"color": "#8c564b", "id": "e28", "label": "Proxy", "shape": "dot", "size": 15, "title": "ID: e28\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Proxy\u003cbr\u003edescription: Intermediary server/service shown in architecture diagram between Web Application and Platform Web Service."}, {"color": "#d62728", "id": "e29", "label": "Project Inuk", "shape": "dot", "size": 15, "title": "ID: e29\u003cbr\u003eType: pekg:TransactionContext\u003cbr\u003econtextName: Project Inuk\u003cbr\u003etransactionPerimeter: Concerns Articque, involves ChapsVision."}, {"color": "#1f77b4", "id": "e30", "label": "ChapsVision", "shape": "dot", "size": 15, "title": "ID: e30\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: ChapsVision\u003cbr\u003edescription: Company mentioned in relation to Project Inuk."}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e3"}, {"arrows": "to", "from": "e3", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e15"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e4"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e5"}, {"arrows": "to", "from": "e4", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e16"}, {"arrows": "to", "from": "e5", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e16"}, {"arrows": "to", "from": "e4", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e17"}, {"arrows": "to", "from": "e5", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e17"}, {"arrows": "to", "from": "e4", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e19"}, {"arrows": "to", "from": "e5", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e19"}, {"arrows": "to", "from": "e4", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e20"}, {"arrows": "to", "from": "e5", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e20"}, {"arrows": "to", "from": "e4", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e21"}, {"arrows": "to", "from": "e5", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e21"}, {"arrows": "to", "from": "e4", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e22"}, {"arrows": "to", "from": "e5", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e22"}, {"arrows": "to", "from": "e4", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e23"}, {"arrows": "to", "from": "e5", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e23"}, {"arrows": "to", "from": "e4", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e24"}, {"arrows": "to", "from": "e5", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e24"}, {"arrows": "to", "from": "e4", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e25"}, {"arrows": "to", "from": "e5", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e25"}, {"arrows": "to", "from": "e4", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e26"}, {"arrows": "to", "from": "e5", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e26"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e6"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e7"}, {"arrows": "to", "from": "e6", "label": "offers", "title": "pekg:offers", "to": "e8"}, {"arrows": "to", "from": "e8", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e27"}, {"arrows": "to", "from": "e8", "label": "offers", "title": "pekg:offers", "to": "e9"}, {"arrows": "to", "from": "e8", "label": "offers", "title": "pekg:offers", "to": "e10"}, {"arrows": "to", "from": "e8", "label": "offers", "title": "pekg:offers", "to": "e11"}, {"arrows": "to", "from": "e4", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e28"}, {"arrows": "to", "from": "e5", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e28"}, {"arrows": "to", "from": "e4", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e11"}, {"arrows": "to", "from": "e5", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e11"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e12"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e13"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e14"}, {"arrows": "to", "from": "e12", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e11"}, {"arrows": "to", "from": "e13", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e11"}, {"arrows": "to", "from": "e14", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e11"}, {"arrows": "to", "from": "e1", "label": "isSubjectOf", "title": "pekg:isSubjectOf", "to": "e29"}, {"arrows": "to", "from": "e29", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e2"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shape": "dot", "size": 18, "font": {"size": 14, "face": "Tahoma"}}, "edges": {"arrows": {"to": {"enabled": true, "scaleFactor": 0.7}}, "color": {"inherit": "from"}, "smooth": {"type": "continuous", "roundness": 0.2}, "font": {"size": 10, "align": "middle"}}, "physics": {"enabled": true, "barnesHut": {"gravitationalConstant": -30000, "centralGravity": 0.3, "springLength": 250, "springConstant": 0.04, "damping": 0.09}, "minVelocity": 0.75}, "interaction": {"hover": true, "tooltipDelay": 200, "multiselect": true}, "layout": {"hierarchical": false}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

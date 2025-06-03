@@ -1,0 +1,339 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "alias": [
+        "Systran"
+      ],
+      "description": "The target company, known for its effective marketing and lead-gen strategy and wide customer outreach.",
+      "keyStrengths": [
+        "effective marketing and lead-gen strategy",
+        "wide and diversified customer outreach",
+        "long track-record (for website indexation)"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm for Project System_big"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm for Project System_big"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "Eleven VDD",
+      "description": "Source of the VDD report mentioned in the document."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "Tata Consultancy Services",
+      "description": "A client of Systran, featured in a 'Customer Talk' event."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Company",
+      "name": "Airbus",
+      "description": "An example of a partner integrator for Systran's large contracts, especially those with high integration requirements (e.g., Defence)."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Company",
+      "name": "Thales",
+      "description": "An example of a partner integrator for Systran's large contracts, especially those with high integration requirements (e.g., government contracts)."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company mentioned in the confidentiality footer of the document."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "status": "Potential Transaction",
+      "typeSought": "Sale (implied by financial teaser document)"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "Systran's cloud offer",
+      "category": "Software as a Service",
+      "description": "An offer developed by Systran specifically for clients with lower budgets, characterized by a very fast sales process (few weeks)."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Enterprise offers",
+      "category": "Software/Solution",
+      "description": "Systran's offerings for clients with security requirements and high budgets, typically involving a longer pre-sale process."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "Aftersales support",
+      "category": "Service",
+      "description": "A service provided by a dedicated team of aftersales engineers to help clients integrate Systran's solutions."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "Solution integration service",
+      "category": "Service",
+      "description": "Assistance provided to clients for integrating Systran's solutions, particularly crucial for large contracts with high integration requirements."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:ProductOrService",
+      "name": "End-user and administrator trainings",
+      "category": "Service",
+      "description": "Training sessions offered to end-users and administrators for effective use of Systran's solutions."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:ProductOrService",
+      "name": "Advisory for solution use",
+      "category": "Service",
+      "description": "Advisory services provided to clients for optimal utilization of Systran's solutions."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:MarketContext",
+      "segmentName": "Clients with security requirements and high budgets",
+      "characteristics": "A client segment targeted by Systran's Enterprise offers, typically involving a longer and more complex sales process."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:MarketContext",
+      "segmentName": "Clients with lower budgets",
+      "characteristics": "A client segment targeted by Systran's cloud offer, characterized by a fast sales process."
+    },
+    {
+      "id": "e18",
+      "type": "pekg:MarketContext",
+      "segmentName": "Public contracts market",
+      "characteristics": "A market segment representing 70-80% of Systran's contracts, often involving lengthy pre-sale processes (up to 2 years) and RFPs."
+    },
+    {
+      "id": "e19",
+      "type": "pekg:MarketContext",
+      "segmentName": "Private contracts market",
+      "characteristics": "A market segment representing 20-30% of Systran's contracts."
+    },
+    {
+      "id": "e20",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Leads from Marketing (Direct)",
+      "kpiValueString": "40-50%",
+      "description": "Percentage of leads generated through direct marketing channels such as website, events, webinars, newsletters, and outbound prospection."
+    },
+    {
+      "id": "e21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Leads from Account-managers (Direct)",
+      "kpiValueString": "20-30%",
+      "description": "Percentage of leads generated through direct prospection by account managers leveraging their personal network."
+    },
+    {
+      "id": "e22",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Leads from Indirect channels (Partners)",
+      "kpiValueString": "~30%",
+      "description": "Percentage of leads generated through indirect channels, primarily partners like integrators and resellers."
+    },
+    {
+      "id": "e23",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Share of public contracts",
+      "kpiValueString": "70-80%",
+      "description": "The proportion of Systran's total contracts that are public."
+    },
+    {
+      "id": "e24",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Share of private contracts",
+      "kpiValueString": "20-30%",
+      "description": "The proportion of Systran's total contracts that are private."
+    },
+    {
+      "id": "e25",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Pre-sale duration",
+      "kpiValueString": "1-2 months to >2 years (public contracts), average 6-9 months",
+      "description": "The typical duration of the pre-sale process for Systran's enterprise offerings, often involving RFPs, translation benchmarks, model customization, and security checks."
+    },
+    {
+      "id": "e26",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Cloud offer sales process duration",
+      "kpiValueString": "few weeks",
+      "description": "The typical duration of the sales process for Systran's cloud offer, noted for its speed."
+    },
+    {
+      "id": "e27",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Customer Talk #2: Tata Consultancy Services | How to support Client Business Process in any language",
+      "eventType": "Customer Event",
+      "dateOrYear": "Mar.22",
+      "description": "A customer talk event hosted by Systran featuring Tata Consultancy Services, highlighting how to support client business processes in any language."
+    },
+    {
+      "id": "e28",
+      "type": "pekg:Technology",
+      "name": "APIs",
+      "description": "Application Programming Interfaces, a key technical capability that clients check for integration capacities during the pre-sale phase."
+    },
+    {
+      "id": "e29",
+      "type": "Government Agency",
+      "name": "Government",
+      "description": "A type of client for Systran, particularly for large contracts with high integration requirements."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e9",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e9",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e10",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e16",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e27",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:usesTechnology"
+    }
+  ]
+}

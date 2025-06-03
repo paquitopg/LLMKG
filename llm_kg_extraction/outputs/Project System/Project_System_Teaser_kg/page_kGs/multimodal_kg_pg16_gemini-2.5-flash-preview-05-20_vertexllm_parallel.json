@@ -1,0 +1,495 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran",
+      "description": "optimally positioned to absorb demand from on-premise and cloud markets"
+    },
+    {
+      "id": "e2",
+      "type": "Investment Bank",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e3",
+      "type": "Investment Bank",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "Omniscien Technologies"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "Language Weaver"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Company",
+      "name": "Amazon Translate"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Company",
+      "name": "DeepL Pro"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Company",
+      "name": "Microsoft"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Company",
+      "name": "Google"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System",
+      "typeSought": "Potential Sale",
+      "status": "Teaser Stage"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:TransactionContext",
+      "contextName": "Financial Teaser",
+      "description": "Page 16 of a financial teaser document"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:MarketContext",
+      "segmentName": "On-premise market",
+      "characteristics": "Consistent demand from sectors with heavy data security constraints"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:MarketContext",
+      "segmentName": "Cloud market",
+      "characteristics": "Driven by its advantage in access to solutions regardless of location and reduction of IT CAPEX"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Finance"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Defense"
+    },
+    {
+      "id": "e17",
+      "type": "Government",
+      "name": "Public institutions"
+    },
+    {
+      "id": "e18",
+      "type": "Government",
+      "name": "Governments"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Technology companies"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Companies requiring low data security"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:ProductOrService",
+      "name": "MT Software",
+      "category": "Machine Translation Software"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:ProductOrService",
+      "name": "On-premise solutions",
+      "category": "Deployment Method",
+      "description": "Due to consistent demand from sectors with heavy data security constraints (finance, defense, etc.), on premise solutions are irreplaceable"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:ProductOrService",
+      "name": "Cloud-based solutions",
+      "category": "Deployment Method",
+      "description": "Driven by its advantage in its access to solutions regardless of location and reduction of IT CAPEX in contrast to on-premise solutions; Approximately half (44%) of MT clients have chosen cloud solutions in 2021"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "On-premise Deployment Share",
+      "valueString": "75%",
+      "fiscalPeriod": "2017A",
+      "scope": "MT Software deployment methods"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:FinancialMetric",
+      "metricName": "SaaS Deployment Share",
+      "valueString": "25%",
+      "fiscalPeriod": "2017A",
+      "scope": "MT Software deployment methods"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:FinancialMetric",
+      "metricName": "On-premise Deployment Share",
+      "valueString": "66%",
+      "fiscalPeriod": "2019A",
+      "scope": "MT Software deployment methods"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:FinancialMetric",
+      "metricName": "SaaS Deployment Share",
+      "valueString": "34%",
+      "fiscalPeriod": "2019A",
+      "scope": "MT Software deployment methods"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:FinancialMetric",
+      "metricName": "On-premise Deployment Share",
+      "valueString": "56%",
+      "fiscalPeriod": "2021A",
+      "scope": "MT Software deployment methods"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:FinancialMetric",
+      "metricName": "SaaS Deployment Share",
+      "valueString": "44%",
+      "fiscalPeriod": "2021A",
+      "scope": "MT Software deployment methods"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:FinancialMetric",
+      "metricName": "On-premise Deployment Share",
+      "valueString": "50%",
+      "fiscalPeriod": "2023F",
+      "scope": "MT Software deployment methods"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "metricName": "SaaS Deployment Share",
+      "valueString": "50%",
+      "fiscalPeriod": "2023F",
+      "scope": "MT Software deployment methods"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "metricName": "On-premise Deployment Share",
+      "valueString": "54%",
+      "fiscalPeriod": "2025F",
+      "scope": "MT Software deployment methods"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "metricName": "SaaS Deployment Share",
+      "valueString": "46%",
+      "fiscalPeriod": "2025F",
+      "scope": "MT Software deployment methods"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Security",
+      "description": "Key Performance Characteristic (KPC) for On-premise solutions"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Data privacy",
+      "description": "Key Performance Characteristic (KPC) for On-premise solutions"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Support",
+      "description": "Key Performance Characteristic (KPC) for On-premise solutions"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Scalability",
+      "description": "Key Performance Characteristic (KPC) for Cloud-based solutions"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Price",
+      "description": "Key Performance Characteristic (KPC) for Cloud-based solutions"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Ease-of-use",
+      "description": "Key Performance Characteristic (KPC) for Cloud-based solutions"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "IT CAPEX Reduction",
+      "description": "Advantage of Cloud-based solutions"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Access to solutions regardless of location",
+      "description": "Advantage of Cloud-based solutions"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Significant advancement of cloud solutions",
+      "eventType": "Technological Advancement",
+      "dateOrYear": "Last decade",
+      "description": "Cloud solutions have significantly advanced in the last decade, leading to increased client adoption."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "isSubjectOf"
+    },
+    {
+      "source": "e11",
+      "target": "e2",
+      "type": "advisedBy"
+    },
+    {
+      "source": "e11",
+      "target": "e3",
+      "type": "advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "offers"
+    },
+    {
+      "source": "e21",
+      "target": "e22",
+      "type": "hasDeploymentMethod"
+    },
+    {
+      "source": "e21",
+      "target": "e23",
+      "type": "hasDeploymentMethod"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "reportsFinancialMetric"
+    },
+    {
+      "source": "e22",
+      "target": "e15",
+      "type": "targets"
+    },
+    {
+      "source": "e22",
+      "target": "e16",
+      "type": "targets"
+    },
+    {
+      "source": "e22",
+      "target": "e17",
+      "type": "targets"
+    },
+    {
+      "source": "e22",
+      "target": "e18",
+      "type": "targets"
+    },
+    {
+      "source": "e23",
+      "target": "e19",
+      "type": "targets"
+    },
+    {
+      "source": "e23",
+      "target": "e20",
+      "type": "targets"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "hasClientGovernment"
+    },
+    {
+      "source": "e22",
+      "target": "e34",
+      "type": "reportsOperationalKPI"
+    },
+    {
+      "source": "e22",
+      "target": "e35",
+      "type": "reportsOperationalKPI"
+    },
+    {
+      "source": "e22",
+      "target": "e36",
+      "type": "reportsOperationalKPI"
+    },
+    {
+      "source": "e23",
+      "target": "e37",
+      "type": "reportsOperationalKPI"
+    },
+    {
+      "source": "e23",
+      "target": "e38",
+      "type": "reportsOperationalKPI"
+    },
+    {
+      "source": "e23",
+      "target": "e39",
+      "type": "reportsOperationalKPI"
+    },
+    {
+      "source": "e23",
+      "target": "e40",
+      "type": "reportsOperationalKPI"
+    },
+    {
+      "source": "e23",
+      "target": "e41",
+      "type": "reportsOperationalKPI"
+    },
+    {
+      "source": "e4",
+      "target": "e21",
+      "type": "offers"
+    },
+    {
+      "source": "e5",
+      "target": "e21",
+      "type": "offers"
+    },
+    {
+      "source": "e6",
+      "target": "e21",
+      "type": "offers"
+    },
+    {
+      "source": "e7",
+      "target": "e21",
+      "type": "offers"
+    },
+    {
+      "source": "e8",
+      "target": "e21",
+      "type": "offers"
+    },
+    {
+      "source": "e9",
+      "target": "e21",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e42",
+      "type": "experiencedEvent"
+    }
+  ]
+}

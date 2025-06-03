@@ -1,0 +1,239 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Positioned as a challenger to the large players offering an affordable superior functional coverage.",
+      "keyStrengths": [
+        "Positioned as a challenger to the large players",
+        "Offers an affordable superior functional coverage",
+        "Has a strong client portfolio established for over 30 years",
+        "Has a strong footprint in the private sector compared to some competitors"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "Esri"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "Spectrum Spatial"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "Ciril Group"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "Geoconcept"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Company",
+      "name": "MapInfo"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Company",
+      "name": "Smappen"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e9",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisor for Project INUK"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK",
+      "status": "Strictly Private & Confidential",
+      "typeSought": "Potential Sale"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Articque Solution",
+      "category": "Geodecisionnel Software",
+      "description": "An all-in-one and business-oriented solution embracing differentiating advanced features. A flexible & modular platform adjustable to a wide range of use cases. A cost-effective offering positioned in the affordable segment. A unified & easy-to-use solution accessible to a wide range of users \u2013 including non-technical users."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Technology",
+      "name": "Dynamic Modeling Tool"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Technology",
+      "name": "Mapping Of Things"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Technology",
+      "name": "Wizards"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Technology",
+      "name": "Spatial Dashboard"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Technology",
+      "name": "Forecast Scenarios"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:MarketContext",
+      "segmentName": "Affordable Segment",
+      "characteristics": "Cost-effective offering"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Wide Range of Use Cases"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Private Sector"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Client Portfolio Longevity",
+      "kpiValueString": "established for over 30 years",
+      "description": "A strong client portfolio"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Private Sector Footprint",
+      "kpiValueString": "Strong",
+      "description": "Strong footprint in the private sector compared to some competitors"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:MarketContext",
+      "segmentName": "Market Positioning and Competitive Landscape",
+      "characteristics": "Articque is positioned as a challenger to large players. Competitors include Esri, Spectrum Spatial, Ciril Group, Geoconcept, MapInfo, Smappen. Positioning based on Price Level (Low/High) and Functional Coverage (Low/High)."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e10",
+      "target": "e9",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e10",
+      "target": "e8",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e11",
+      "target": "e12",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e11",
+      "target": "e13",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e11",
+      "target": "e14",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e11",
+      "target": "e15",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e11",
+      "target": "e16",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e11",
+      "target": "e18",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e2",
+      "target": "e22",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e3",
+      "target": "e22",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e4",
+      "target": "e22",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e5",
+      "target": "e22",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e6",
+      "target": "e22",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e7",
+      "target": "e22",
+      "type": "pekg:operatesIn"
+    }
+  ]
+}

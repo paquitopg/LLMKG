@@ -1,0 +1,490 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran",
+      "keyStrengths": [
+        "Wide base of blue-chip customers",
+        "Close customer relationships",
+        "Ability to steadily improve pure neural server solution based on customer needs",
+        "Offers top notch assistance at every step of customer journey"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm for Project System / Systran"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm for Project System / Systran"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Pure Neural\u00ae",
+      "category": "Software Solution",
+      "description": "pure neural server solution"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Defense and security"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Financial institutions"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "IT services"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Manufacturing"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Healthcare"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Others"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Company",
+      "name": "American Express",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Company",
+      "name": "BNP Paribas",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Company",
+      "name": "Citi",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Company",
+      "name": "Deutsche Bank",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Company",
+      "name": "HSBC",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Company",
+      "name": "Societe Generale",
+      "industry": "Financial Services"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Company",
+      "name": "Adobe",
+      "industry": "IT Services"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:Company",
+      "name": "Autodesk",
+      "industry": "IT Services"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:Company",
+      "name": "OVH.com",
+      "industry": "IT Services"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:Company",
+      "name": "Micro Focus",
+      "industry": "IT Services"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:Company",
+      "name": "SHI",
+      "industry": "IT Services"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:Company",
+      "name": "Continental",
+      "industry": "Manufacturing"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:Company",
+      "name": "John Deere",
+      "industry": "Manufacturing"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:Company",
+      "name": "Nestl\u00e9",
+      "industry": "Manufacturing"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:Company",
+      "name": "PSA Groupe",
+      "industry": "Manufacturing"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:Company",
+      "name": "Schneider Electric",
+      "industry": "Manufacturing"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:Company",
+      "name": "Stanley Black & Decker",
+      "industry": "Manufacturing"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:Company",
+      "name": "AstraZeneca",
+      "industry": "Healthcare"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:Company",
+      "name": "Novartis",
+      "industry": "Healthcare"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:Company",
+      "name": "Osstem Implant",
+      "industry": "Healthcare"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:Company",
+      "name": "Roche",
+      "industry": "Healthcare"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:Company",
+      "name": "Blizzard Entertainment",
+      "industry": "Entertainment"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:Company",
+      "name": "Gjensidige",
+      "industry": "Insurance"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:Company",
+      "name": "Medallia",
+      "industry": "Software"
+    },
+    {
+      "id": "e35",
+      "type": "Government Agency",
+      "name": "U.S. Department of Justice"
+    },
+    {
+      "id": "e36",
+      "type": "Government Agency",
+      "name": "Australian Government Department of Defence"
+    },
+    {
+      "id": "e37",
+      "type": "Government Agency",
+      "name": "Minist\u00e8re des Arm\u00e9es (France)"
+    },
+    {
+      "id": "e38",
+      "type": "Government Agency",
+      "name": "Minist\u00e8re de l'Int\u00e9rieur (France)"
+    },
+    {
+      "id": "e39",
+      "type": "Government Agency",
+      "name": "U.S. Department of Homeland Security"
+    },
+    {
+      "id": "e40",
+      "type": "International Organization",
+      "name": "INTERPOL"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:ProductOrService",
+      "name": "Training for expert users and administrators",
+      "category": "Customer Support Service"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:ProductOrService",
+      "name": "Workshop and meetings to define the best approach",
+      "category": "Customer Support Service"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:ProductOrService",
+      "name": "Collection and management of customer feedbacks",
+      "category": "Customer Support Service"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:ProductOrService",
+      "name": "IT and linguistic customer support",
+      "category": "Customer Support Service"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System",
+      "status": "Teaser Phase"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e36",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e40",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e41",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e42",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e43",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e44",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e45",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e45",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e45",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

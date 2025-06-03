@@ -1,0 +1,451 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Target Company for Project INUK, with a robust offering in software and professional services."
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisor for Project INUK"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company associated with Project INUK."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK",
+      "status": "Strictly Private & Confidential",
+      "typeSought": "Sale"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Software",
+      "category": "Product Category",
+      "description": "Main category of offerings, including CDO, AP, Carticque & Geoservices, Maintenance & Support, and Legacy Product."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Professional Services",
+      "category": "Service Category",
+      "description": "Main category of services, including Consulting and Training."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "CDO",
+      "category": "Software Product/Service"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "AP",
+      "category": "Software Product/Service"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "Carticque & Geoservices",
+      "category": "Software Product/Service"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "Maintenance & Support",
+      "category": "Software Product/Service"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Legacy Product",
+      "category": "Software Product/Service"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "Consulting",
+      "category": "Professional Service"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "Training",
+      "category": "Professional Service"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:ProductOrService",
+      "name": "Miscellaneous",
+      "category": "Other Service"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Billings",
+      "valueString": "\u20ac4.2m",
+      "fiscalPeriod": "FY22L",
+      "scope": "Company",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CDO Billings",
+      "valueString": "\u20ac1,249k",
+      "fiscalPeriod": "FY22L",
+      "scope": "ProductOrService",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:FinancialMetric",
+      "metricName": "AP Billings",
+      "valueString": "\u20ac1,006k",
+      "fiscalPeriod": "FY22L",
+      "scope": "ProductOrService",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Carticque & Geoservices Billings",
+      "valueString": "\u20ac179k",
+      "fiscalPeriod": "FY22L",
+      "scope": "ProductOrService",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance & Support Billings",
+      "valueString": "\u20ac843k",
+      "fiscalPeriod": "FY22L",
+      "scope": "ProductOrService",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Legacy Product Billings",
+      "valueString": "\u20ac16k",
+      "fiscalPeriod": "FY22L",
+      "scope": "ProductOrService",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Consulting Billings",
+      "valueString": "\u20ac545k",
+      "fiscalPeriod": "FY22L",
+      "scope": "ProductOrService",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Training Billings",
+      "valueString": "\u20ac302k",
+      "fiscalPeriod": "FY22L",
+      "scope": "ProductOrService",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Miscellaneous Billings",
+      "valueString": "\u20ac69k",
+      "fiscalPeriod": "FY22L",
+      "scope": "ProductOrService",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CDO Billings",
+      "valueString": "\u20ac755k",
+      "fiscalPeriod": "FY20A",
+      "scope": "ProductOrService",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:FinancialMetric",
+      "metricName": "AP Billings",
+      "valueString": "\u20ac356k",
+      "fiscalPeriod": "FY20A",
+      "scope": "ProductOrService",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Carticque & Geoservices Billings",
+      "valueString": "\u20ac77k",
+      "fiscalPeriod": "FY20A",
+      "scope": "ProductOrService",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance & Support Billings",
+      "valueString": "\u20ac771k",
+      "fiscalPeriod": "FY20A",
+      "scope": "ProductOrService",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Legacy Product Billings",
+      "valueString": "\u20ac131k",
+      "fiscalPeriod": "FY20A",
+      "scope": "ProductOrService",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Consulting Billings",
+      "valueString": "\u20ac422k",
+      "fiscalPeriod": "FY20A",
+      "scope": "ProductOrService",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Training Billings",
+      "valueString": "\u20ac289k",
+      "fiscalPeriod": "FY20A",
+      "scope": "ProductOrService",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Miscellaneous Billings",
+      "valueString": "\u20ac259k",
+      "fiscalPeriod": "FY20A",
+      "scope": "ProductOrService",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings from France",
+      "valueString": "97%",
+      "fiscalPeriod": "FY21",
+      "scope": "Geography",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings from International",
+      "valueString": "3%",
+      "fiscalPeriod": "FY21",
+      "scope": "Geography",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:Location",
+      "locationName": "France",
+      "locationType": "Country"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:Location",
+      "locationName": "International",
+      "locationType": "Region"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e5",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e5",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e5",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e5",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e5",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6",
+      "target": "e12",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e16",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e24",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e17",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e25",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e18",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e26",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e10",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e10",
+      "target": "e27",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e11",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e11",
+      "target": "e28",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e12",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e12",
+      "target": "e29",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e13",
+      "target": "e22",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e13",
+      "target": "e30",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e14",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e14",
+      "target": "e31",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:operatesIn"
+    }
+  ]
+}

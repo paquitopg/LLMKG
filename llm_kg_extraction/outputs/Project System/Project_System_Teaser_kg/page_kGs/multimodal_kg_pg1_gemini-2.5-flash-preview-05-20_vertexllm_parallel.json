@@ -1,0 +1,111 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System",
+      "typeSought": "Sale Process",
+      "status": "Ongoing",
+      "date": "March 2023",
+      "description": "Information Memorandum for a strictly confidential transaction."
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisor"
+    },
+    {
+      "id": "e4",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisor"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:MarketContext",
+      "segmentName": "Marketplace"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Technology",
+      "name": "Artificial Intelligence / Neural Networks",
+      "description": "Represented by brain-like structures with interconnected nodes, suggesting advanced computing and intelligence."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Technology",
+      "name": "Cloud Computing",
+      "description": "Represented by a cloud icon with a padlock, indicating secure cloud services."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Technology",
+      "name": "Data Networks / Connectivity",
+      "description": "Represented by interconnected nodes and lines, suggesting data flow and network infrastructure."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Technology",
+      "name": "Digital Transformation / Data Processing",
+      "description": "Represented by circuit board patterns and binary code, indicating digital systems and data processing."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e5",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:usesTechnology"
+    }
+  ]
+}

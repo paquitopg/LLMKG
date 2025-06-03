@@ -1,0 +1,87 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "keyStrengths": [
+        "Wide and diversified customer outreach"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisor for Project System_big"
+    },
+    {
+      "id": "e4",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisor for Project System_big"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Sale/Acquisition",
+      "status": "Ongoing"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Technology",
+      "name": "Artificial Intelligence (AI)",
+      "description": "Core technology represented by the brain-like structure and interconnected nodes in the image, suggesting advanced computational capabilities."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Technology",
+      "name": "Language Processing",
+      "description": "Technology implied by language-related icons (text, alphabet, translation) on the laptop screen and in the background."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Machine Translation",
+      "category": "Software/Service",
+      "description": "Key product/service offered, inferred from language processing technology and Systran's known domain."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "isSubjectOf"
+    },
+    {
+      "source": "e5",
+      "target": "e3",
+      "type": "advisedBy"
+    },
+    {
+      "source": "e5",
+      "target": "e4",
+      "type": "advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "offers"
+    }
+  ]
+}

@@ -1,0 +1,321 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script>function neighbourhoodHighlight(params) {
+  // console.log("in nieghbourhoodhighlight");
+  allNodes = nodes.get({ returnType: "Object" });
+  // originalNodes = JSON.parse(JSON.stringify(allNodes));
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    highlightActive = true;
+    var i, j;
+    var selectedNode = params.nodes[0];
+    var degrees = 2;
+
+    // mark all nodes as hard to read.
+    for (let nodeId in allNodes) {
+      // nodeColors[nodeId] = allNodes[nodeId].color;
+      allNodes[nodeId].color = "rgba(200,200,200,0.5)";
+      if (allNodes[nodeId].hiddenLabel === undefined) {
+        allNodes[nodeId].hiddenLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+    var connectedNodes = network.getConnectedNodes(selectedNode);
+    var allConnectedNodes = [];
+
+    // get the second degree nodes
+    for (i = 1; i < degrees; i++) {
+      for (j = 0; j < connectedNodes.length; j++) {
+        allConnectedNodes = allConnectedNodes.concat(
+          network.getConnectedNodes(connectedNodes[j])
+        );
+      }
+    }
+
+    // all second degree nodes get a different color and their label back
+    for (i = 0; i < allConnectedNodes.length; i++) {
+      // allNodes[allConnectedNodes[i]].color = "pink";
+      allNodes[allConnectedNodes[i]].color = "rgba(150,150,150,0.75)";
+      if (allNodes[allConnectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[allConnectedNodes[i]].label =
+          allNodes[allConnectedNodes[i]].hiddenLabel;
+        allNodes[allConnectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // all first degree nodes get their own color and their label back
+    for (i = 0; i < connectedNodes.length; i++) {
+      // allNodes[connectedNodes[i]].color = undefined;
+      allNodes[connectedNodes[i]].color = nodeColors[connectedNodes[i]];
+      if (allNodes[connectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[connectedNodes[i]].label =
+          allNodes[connectedNodes[i]].hiddenLabel;
+        allNodes[connectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // the main node gets its own color and its label back.
+    // allNodes[selectedNode].color = undefined;
+    allNodes[selectedNode].color = nodeColors[selectedNode];
+    if (allNodes[selectedNode].hiddenLabel !== undefined) {
+      allNodes[selectedNode].label = allNodes[selectedNode].hiddenLabel;
+      allNodes[selectedNode].hiddenLabel = undefined;
+    }
+  } else if (highlightActive === true) {
+    // console.log("highlightActive was true");
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      // allNodes[nodeId].color = "purple";
+      allNodes[nodeId].color = nodeColors[nodeId];
+      // delete allNodes[nodeId].color;
+      if (allNodes[nodeId].hiddenLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].hiddenLabel;
+        allNodes[nodeId].hiddenLabel = undefined;
+      }
+    }
+    highlightActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    // console.log("Nothing was selected");
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        // allNodes[nodeId].color = {};
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function filterHighlight(params) {
+  allNodes = nodes.get({ returnType: "Object" });
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    filterActive = true;
+    let selectedNodes = params.nodes;
+
+    // hiding all nodes and saving the label
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = true;
+      if (allNodes[nodeId].savedLabel === undefined) {
+        allNodes[nodeId].savedLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+
+    for (let i=0; i < selectedNodes.length; i++) {
+      allNodes[selectedNodes[i]].hidden = false;
+      if (allNodes[selectedNodes[i]].savedLabel !== undefined) {
+        allNodes[selectedNodes[i]].label = allNodes[selectedNodes[i]].savedLabel;
+        allNodes[selectedNodes[i]].savedLabel = undefined;
+      }
+    }
+
+  } else if (filterActive === true) {
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = false;
+      if (allNodes[nodeId].savedLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].savedLabel;
+        allNodes[nodeId].savedLabel = undefined;
+      }
+    }
+    filterActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function selectNode(nodes) {
+  network.selectNodes(nodes);
+  neighbourhoodHighlight({ nodes: nodes });
+  return nodes;
+}
+
+function selectNodes(nodes) {
+  network.selectNodes(nodes);
+  filterHighlight({nodes: nodes});
+  return nodes;
+}
+
+function highlightFilter(filter) {
+  let selectedNodes = []
+  let selectedProp = filter['property']
+  if (filter['item'] === 'node') {
+    let allNodes = nodes.get({ returnType: "Object" });
+    for (let nodeId in allNodes) {
+      if (allNodes[nodeId][selectedProp] && filter['value'].includes((allNodes[nodeId][selectedProp]).toString())) {
+        selectedNodes.push(nodeId)
+      }
+    }
+  }
+  else if (filter['item'] === 'edge'){
+    let allEdges = edges.get({returnType: 'object'});
+    // check if the selected property exists for selected edge and select the nodes connected to the edge
+    for (let edge in allEdges) {
+      if (allEdges[edge][selectedProp] && filter['value'].includes((allEdges[edge][selectedProp]).toString())) {
+        selectedNodes.push(allEdges[edge]['from'])
+        selectedNodes.push(allEdges[edge]['to'])
+      }
+    }
+  }
+  selectNodes(selectedNodes)
+}</script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            
+            
+            
+            
+            
+
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1f77b4", "id": "e1", "label": "Systran SAS", "shape": "dot", "size": 15, "title": "ID: e1\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Systran SAS\u003cbr\u003ekeyStrengths: [\u0027State-of-the-art tools constituting a solid technical platform\u0027, \u0027Efficient tech stack with no legacy or technical debt\u0027, \u0027tools enable it to stand out from competitors, offering a complete range of services for the client\u0027]\u003cbr\u003egrowthStrategySummary: Ambitious R\u0026D roadmap"}, {"color": "#1f77b4", "id": "e2", "label": "Rothschild \u0026 Co", "shape": "dot", "size": 15, "title": "ID: e2\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Rothschild \u0026 Co"}, {"color": "#1f77b4", "id": "e3", "label": "Samsung Securities", "shape": "dot", "size": 15, "title": "ID: e3\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Samsung Securities"}, {"color": "#1f77b4", "id": "e4", "label": "ChapsVision", "shape": "dot", "size": 15, "title": "ID: e4\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: ChapsVision"}, {"color": "#1f77b4", "id": "e5", "label": "Eleven", "shape": "dot", "size": 15, "title": "ID: e5\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Eleven"}, {"color": "#1f77b4", "id": "e6", "label": "Google", "shape": "dot", "size": 15, "title": "ID: e6\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Google"}, {"color": "#1f77b4", "id": "e7", "label": "Dropbox", "shape": "dot", "size": 15, "title": "ID: e7\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Dropbox"}, {"color": "#1f77b4", "id": "e8", "label": "Microsoft", "shape": "dot", "size": 15, "title": "ID: e8\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Microsoft"}, {"color": "#1f77b4", "id": "e9", "label": "Nextcloud", "shape": "dot", "size": 15, "title": "ID: e9\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Nextcloud"}, {"color": "#1f77b4", "id": "e10", "label": "Atlassian", "shape": "dot", "size": 15, "title": "ID: e10\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Atlassian"}, {"color": "#1f77b4", "id": "e11", "label": "Salesforce", "shape": "dot", "size": 15, "title": "ID: e11\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Salesforce"}, {"color": "#1f77b4", "id": "e12", "label": "Zendesk", "shape": "dot", "size": 15, "title": "ID: e12\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Zendesk"}, {"color": "#9467bd", "id": "e13", "label": "Systran Wiki", "shape": "dot", "size": 15, "title": "ID: e13\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Systran Wiki\u003cbr\u003ecategory: Customer Documentation"}, {"color": "#9467bd", "id": "e14", "label": "Translate PRO", "shape": "dot", "size": 15, "title": "ID: e14\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Translate PRO\u003cbr\u003ecategory: Customer Documentation"}, {"color": "#9467bd", "id": "e15", "label": "SYSTRAN Desktop products", "shape": "dot", "size": 15, "title": "ID: e15\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: SYSTRAN Desktop products\u003cbr\u003ecategory: Customer Documentation\u003cbr\u003edescription: SYSTRAN eTranslator \u0026 SYSTRAN 7 Desktop Products"}, {"color": "#9467bd", "id": "e16", "label": "SYSTRAN Server products", "shape": "dot", "size": 15, "title": "ID: e16\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: SYSTRAN Server products\u003cbr\u003ecategory: Customer Documentation\u003cbr\u003edescription: SYSTRAN Pure Neural Server \u0026 SYSTRAN Enterprise Server"}, {"color": "#9467bd", "id": "e17", "label": "G Suite", "shape": "dot", "size": 15, "title": "ID: e17\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: G Suite\u003cbr\u003ecategory: Office Automation"}, {"color": "#9467bd", "id": "e18", "label": "Dropbox", "shape": "dot", "size": 15, "title": "ID: e18\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Dropbox\u003cbr\u003ecategory: File Sharing"}, {"color": "#9467bd", "id": "e19", "label": "Sharepoint", "shape": "dot", "size": 15, "title": "ID: e19\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Sharepoint\u003cbr\u003ecategory: File Sharing"}, {"color": "#9467bd", "id": "e20", "label": "Nextcloud", "shape": "dot", "size": 15, "title": "ID: e20\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Nextcloud\u003cbr\u003ecategory: File Sharing"}, {"color": "#9467bd", "id": "e21", "label": "Jira Software", "shape": "dot", "size": 15, "title": "ID: e21\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Jira Software\u003cbr\u003ecategory: Bug Tracking \u0026 Development"}, {"color": "#9467bd", "id": "e22", "label": "Confluence", "shape": "dot", "size": 15, "title": "ID: e22\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Confluence\u003cbr\u003ecategory: Bug Tracking \u0026 Development"}, {"color": "#9467bd", "id": "e23", "label": "Salesforce", "shape": "dot", "size": 15, "title": "ID: e23\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Salesforce\u003cbr\u003ecategory: CRM"}, {"color": "#9467bd", "id": "e24", "label": "Zendesk", "shape": "dot", "size": 15, "title": "ID: e24\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Zendesk\u003cbr\u003ecategory: CRM, Client Support"}, {"color": "#8c564b", "id": "e25", "label": "State-of-the-art tools", "shape": "dot", "size": 15, "title": "ID: e25\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: State-of-the-art tools\u003cbr\u003edescription: constituting a solid technical platform"}, {"color": "#8c564b", "id": "e26", "label": "Efficient tech stack", "shape": "dot", "size": 15, "title": "ID: e26\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Efficient tech stack\u003cbr\u003edescription: with no legacy or technical debt"}, {"color": "#ce6dbd", "id": "e27", "label": "Project Management Tools", "shape": "dot", "size": 15, "title": "ID: e27\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Project Management Tools"}, {"color": "#ce6dbd", "id": "e28", "label": "Customer documentation", "shape": "dot", "size": 15, "title": "ID: e28\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Customer documentation"}, {"color": "#ce6dbd", "id": "e29", "label": "Office automation", "shape": "dot", "size": 15, "title": "ID: e29\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Office automation"}, {"color": "#ce6dbd", "id": "e30", "label": "File sharing", "shape": "dot", "size": 15, "title": "ID: e30\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: File sharing"}, {"color": "#ce6dbd", "id": "e31", "label": "Bug tracking \u0026 development tools", "shape": "dot", "size": 15, "title": "ID: e31\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Bug tracking \u0026 development tools"}, {"color": "#ce6dbd", "id": "e32", "label": "CRM", "shape": "dot", "size": 15, "title": "ID: e32\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: CRM"}, {"color": "#ce6dbd", "id": "e33", "label": "Client support", "shape": "dot", "size": 15, "title": "ID: e33\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Client support"}, {"color": "#cccccc", "id": "e34", "label": "Rothschild \u0026 Co", "shape": "dot", "size": 15, "title": "ID: e34\u003cbr\u003eType: Investment Bank\u003cbr\u003ename: Rothschild \u0026 Co\u003cbr\u003eroleInContext: Financial Advisor"}, {"color": "#cccccc", "id": "e35", "label": "Samsung Securities", "shape": "dot", "size": 15, "title": "ID: e35\u003cbr\u003eType: Investment Bank\u003cbr\u003ename: Samsung Securities\u003cbr\u003eroleInContext: Financial Advisor"}, {"color": "#d62728", "id": "e36", "label": "Project System_big", "shape": "dot", "size": 15, "title": "ID: e36\u003cbr\u003eType: pekg:TransactionContext\u003cbr\u003econtextName: Project System_big\u003cbr\u003etypeSought: Sale/Acquisition\u003cbr\u003estatus: Teaser Phase"}, {"color": "#d62728", "id": "e37", "label": "Financial Teaser", "shape": "dot", "size": 15, "title": "ID: e37\u003cbr\u003eType: pekg:TransactionContext\u003cbr\u003econtextName: Financial Teaser\u003cbr\u003etypeSought: Sale/Acquisition"}, {"color": "#e7969c", "id": "e38", "label": "one-of-a kind track-record of innovations", "shape": "dot", "size": 15, "title": "ID: e38\u003cbr\u003eType: pekg:HistoricalEvent\u003cbr\u003eeventName: one-of-a kind track-record of innovations\u003cbr\u003eeventType: Innovation Achievement\u003cbr\u003edescription: Ambitious R\u0026D roadmap based on a one-of-a kind track-record of innovations"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e25"}, {"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e26"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e13"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e14"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e15"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e16"}, {"arrows": "to", "from": "e1", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e38"}, {"arrows": "to", "from": "e13", "label": "targets", "title": "pekg:targets", "to": "e28"}, {"arrows": "to", "from": "e14", "label": "targets", "title": "pekg:targets", "to": "e28"}, {"arrows": "to", "from": "e15", "label": "targets", "title": "pekg:targets", "to": "e28"}, {"arrows": "to", "from": "e16", "label": "targets", "title": "pekg:targets", "to": "e28"}, {"arrows": "to", "from": "e6", "label": "offers", "title": "pekg:offers", "to": "e17"}, {"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e17"}, {"arrows": "to", "from": "e17", "label": "targets", "title": "pekg:targets", "to": "e29"}, {"arrows": "to", "from": "e7", "label": "offers", "title": "pekg:offers", "to": "e18"}, {"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e18"}, {"arrows": "to", "from": "e18", "label": "targets", "title": "pekg:targets", "to": "e30"}, {"arrows": "to", "from": "e8", "label": "offers", "title": "pekg:offers", "to": "e19"}, {"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e19"}, {"arrows": "to", "from": "e19", "label": "targets", "title": "pekg:targets", "to": "e30"}, {"arrows": "to", "from": "e9", "label": "offers", "title": "pekg:offers", "to": "e20"}, {"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e20"}, {"arrows": "to", "from": "e20", "label": "targets", "title": "pekg:targets", "to": "e30"}, {"arrows": "to", "from": "e10", "label": "offers", "title": "pekg:offers", "to": "e21"}, {"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e21"}, {"arrows": "to", "from": "e21", "label": "targets", "title": "pekg:targets", "to": "e31"}, {"arrows": "to", "from": "e10", "label": "offers", "title": "pekg:offers", "to": "e22"}, {"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e22"}, {"arrows": "to", "from": "e22", "label": "targets", "title": "pekg:targets", "to": "e31"}, {"arrows": "to", "from": "e11", "label": "offers", "title": "pekg:offers", "to": "e23"}, {"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e23"}, {"arrows": "to", "from": "e23", "label": "targets", "title": "pekg:targets", "to": "e32"}, {"arrows": "to", "from": "e12", "label": "offers", "title": "pekg:offers", "to": "e24"}, {"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e24"}, {"arrows": "to", "from": "e24", "label": "targets", "title": "pekg:targets", "to": "e32"}, {"arrows": "to", "from": "e24", "label": "targets", "title": "pekg:targets", "to": "e33"}, {"arrows": "to", "from": "e36", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e34"}, {"arrows": "to", "from": "e36", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e35"}, {"arrows": "to", "from": "e1", "label": "isSubjectOf", "title": "pekg:isSubjectOf", "to": "e36"}, {"arrows": "to", "from": "e1", "label": "isSubjectOf", "title": "pekg:isSubjectOf", "to": "e37"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shape": "dot", "size": 18, "font": {"size": 14, "face": "Tahoma"}}, "edges": {"arrows": {"to": {"enabled": true, "scaleFactor": 0.7}}, "color": {"inherit": "from"}, "smooth": {"type": "continuous", "roundness": 0.2}, "font": {"size": 10, "align": "middle"}}, "physics": {"enabled": true, "barnesHut": {"gravitationalConstant": -30000, "centralGravity": 0.3, "springLength": 250, "springConstant": 0.04, "damping": 0.09}, "minVelocity": 0.75}, "interaction": {"hover": true, "tooltipDelay": 200, "multiselect": true}, "layout": {"hierarchical": false}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

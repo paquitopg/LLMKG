@@ -1,0 +1,248 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Target Company. Management prepared the FY22L-FY24BP business plan. This page details its standalone growth strategy, topline and cost assumptions.",
+      "growthStrategySummary": "Standalone based growth strategy. Key assumptions include: continue M2S switch on AP client base, continued upselling effort on existing client base, focus on repeat business, and new logo acquisition. The company also anticipates gaining market share. Revenue assumptions are built bottom-up by offering line and historical recurring/non-recurring contributions. Cost assumptions cover COGS, staff costs (hirings and inflation), external costs, other expenses, and taxes."
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "alias": [
+        "DDA&Company"
+      ],
+      "roleInContext": "Advisory firm associated with Project Inuk"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "description": "Codename for a project involving Articque and ChapsVision. This page (56) focuses on Articque's financials and growth strategy within this project.",
+      "transactionPerimeter": "Articque's standalone growth strategy and financials, as part of Project Inuk. ChapsVision is also associated with this project."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Articque FY22L-FY24BP Business Plan",
+      "typeSought": "Business Plan Presentation",
+      "description": "Business plan for Articque covering the period from FY22 Last Twelve Months (or Latest) to FY24 Budgeted/Planned figures. Prepared by the management of Articque. Outlines strategic roadmap, topline assumptions, and cost assumptions.",
+      "status": "Presented"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "M2S switch on AP client base",
+      "kpiValueString": "Continue",
+      "description": "A key assumption for Articque's strategic roadmap."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Upselling effort on existing client base",
+      "kpiValueString": "Continued",
+      "description": "A key assumption for Articque's strategic roadmap."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Focus on repeat business",
+      "kpiValueString": "Focus",
+      "description": "A key assumption for Articque's strategic roadmap."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "New logo acquisition",
+      "description": "A key assumption for Articque's strategic roadmap."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Market share gain",
+      "description": "Anticipated by Articque due to favorable competitive environment movements."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:FinancialMetric",
+      "metricName": "COGS Growth",
+      "valueString": "Similar growth as billing revenues",
+      "scope": "Cost assumption for Articque."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Headcount",
+      "headcountName": "New Hirings FY23A",
+      "totalEmployees": 6,
+      "dateOrYear": "FY23A",
+      "breakdownDescription": "Includes 3 apprentices converting into full-time jobs."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Headcount",
+      "headcountName": "New Hirings FY24A",
+      "totalEmployees": 2,
+      "dateOrYear": "FY24A"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Staff Costs Inflation Rate",
+      "valueString": "3%",
+      "scope": "Applied to staff costs in conjunction with new hirings for Articque."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "External Costs Growth",
+      "valueString": "10%",
+      "fiscalPeriod": "FY23BP",
+      "scope": "Projected for Articque."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "External Costs Growth",
+      "valueString": "10%",
+      "fiscalPeriod": "FY24BP",
+      "scope": "Projected for Articque."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other Expenses as Percentage of Revenue",
+      "valueString": "6.5%",
+      "fiscalPeriod": "FY23BP",
+      "scope": "Projected for Articque, to remain flat on a percentage basis."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other Expenses as Percentage of Revenue",
+      "valueString": "6.5%",
+      "fiscalPeriod": "FY24BP",
+      "scope": "Projected for Articque, to remain flat on a percentage basis."
+    },
+    {
+      "id": "e18",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Taxes Growth",
+      "valueString": "3% y-on-y",
+      "fiscalPeriod": "FY23BP",
+      "scope": "Projected for Articque."
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Taxes Growth",
+      "valueString": "3% y-on-y",
+      "fiscalPeriod": "FY24BP",
+      "scope": "Projected for Articque."
+    },
+    {
+      "id": "e20",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company mentioned in the footer in relation to Project Inuk. Role not specified on this page beyond association with the project."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e3",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e20",
+      "target": "e3",
+      "type": "pekg:isSubjectOf"
+    }
+  ]
+}

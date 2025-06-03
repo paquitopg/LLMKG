@@ -1,0 +1,1286 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "Target company for Project System_big, whose balance sheet is presented."
+    },
+    {
+      "id": "e2",
+      "type": "Investment Bank",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e3",
+      "type": "Investment Bank",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "KPMG",
+      "description": "Source of financial data presented in the balance sheet."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company noted in the confidentiality footer of the document."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "status": "Teaser Phase",
+      "typeSought": "Sale/Acquisition"
+    },
+    {
+      "id": "e7",
+      "type": "Government",
+      "name": "French administration"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Fixed assets",
+      "valueString": "6,882",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Fixed assets",
+      "valueString": "11,687",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Fixed assets",
+      "valueString": "12,112",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Goodwill",
+      "valueString": "1,379",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Goodwill",
+      "valueString": "1,379",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Goodwill",
+      "valueString": "1,379",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Intangible assets",
+      "valueString": "3,538",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Intangible assets",
+      "valueString": "4,325",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Intangible assets",
+      "valueString": "3,732",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Tangible assets",
+      "valueString": "223",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Tangible assets",
+      "valueString": "5,117",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Tangible assets",
+      "valueString": "6,043",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Financial assets",
+      "valueString": "1,741",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Financial assets",
+      "valueString": "866",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Financial assets",
+      "valueString": "958",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Working capital (excl. Income tax & RTC)",
+      "valueString": "(2,533)",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Working capital (excl. Income tax & RTC)",
+      "valueString": "(2,111)",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Working capital (excl. Income tax & RTC)",
+      "valueString": "(5,452)",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Trade working capital",
+      "valueString": "(576)",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Trade working capital",
+      "valueString": "78",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Trade working capital",
+      "valueString": "(2,354)",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Inventories",
+      "valueString": "5",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Inventories",
+      "valueString": "5",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Inventories",
+      "valueString": "1",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Accounts receivables",
+      "valueString": "4,412",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Accounts receivables",
+      "valueString": "4,858",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Accounts receivables",
+      "valueString": "3,347",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Accounts payables",
+      "valueString": "(921)",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Accounts payables",
+      "valueString": "(949)",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Accounts payables",
+      "valueString": "(1,157)",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Prepaid expenses",
+      "valueString": "864",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Prepaid expenses",
+      "valueString": "977",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Prepaid expenses",
+      "valueString": "1,133",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Deferred revenue",
+      "valueString": "(4,935)",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Deferred revenue",
+      "valueString": "(4,813)",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Deferred revenue",
+      "valueString": "(5,676)",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non trade working capital",
+      "valueString": "(1,957)",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non trade working capital",
+      "valueString": "(2,188)",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non trade working capital",
+      "valueString": "(3,099)",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e47",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Social debt",
+      "valueString": "(1,692)",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e48",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Social debt",
+      "valueString": "(1,942)",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e49",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Social debt",
+      "valueString": "(2,287)",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e50",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Fiscal debt",
+      "valueString": "(93)",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e51",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Fiscal debt",
+      "valueString": "(18)",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e52",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Fiscal debt",
+      "valueString": "(246)",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e53",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other debt / (creditors)",
+      "valueString": "(171)",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e54",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other debt / (creditors)",
+      "valueString": "(228)",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e55",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other debt / (creditors)",
+      "valueString": "(566)",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e56",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Provisions for risk and liab.",
+      "valueString": "(341)",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e57",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Provisions for risk and liab.",
+      "valueString": "(91)",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e58",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Provisions for risk and liab.",
+      "valueString": "(310)",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e59",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Income tax receivables / (liab.)",
+      "valueString": "0",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e60",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Income tax receivables / (liab.)",
+      "valueString": "0",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e61",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Income tax receivables / (liab.)",
+      "valueString": "10",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e62",
+      "type": "pekg:FinancialMetric",
+      "metricName": "RTC receivables",
+      "valueString": "698",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e63",
+      "type": "pekg:FinancialMetric",
+      "metricName": "RTC receivables",
+      "valueString": "1,308",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e64",
+      "type": "pekg:FinancialMetric",
+      "metricName": "RTC receivables",
+      "valueString": "1,657",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e65",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Net cash / (debt)",
+      "valueString": "1,387",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e66",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Net cash / (debt)",
+      "valueString": "(1,641)",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e67",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Net cash / (debt)",
+      "valueString": "(223)",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e68",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cash and equivalents",
+      "valueString": "3,896",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e69",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cash and equivalents",
+      "valueString": "4,799",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e70",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cash and equivalents",
+      "valueString": "6,892",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e71",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Loans and similar debts",
+      "valueString": "(2,509)",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e72",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Loans and similar debts",
+      "valueString": "(6,440)",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e73",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Loans and similar debts",
+      "valueString": "(7,115)",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e74",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Conditional advances",
+      "valueString": "(2,000)",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e75",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Conditional advances",
+      "valueString": "(1,762)",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e76",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Conditional advances",
+      "valueString": "(1,829)",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e77",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Financial debts by leasing",
+      "valueString": "(34)",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e78",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Financial debts by leasing",
+      "valueString": "(4,592)",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e79",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Financial debts by leasing",
+      "valueString": "(5,279)",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e80",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Financial debt",
+      "valueString": "(475)",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e81",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Financial debt",
+      "valueString": "(87)",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e82",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Financial debt",
+      "valueString": "(25)",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e83",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Accrued interest",
+      "valueString": "0",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e84",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Accrued interest",
+      "valueString": "0",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e85",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Accrued interest",
+      "valueString": "18",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e86",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Net asset",
+      "valueString": "6,093",
+      "fiscalPeriod": "Dec.20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e87",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Net asset",
+      "valueString": "9,153",
+      "fiscalPeriod": "Dec.21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e88",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Net asset",
+      "valueString": "7,793",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e89",
+      "type": "pekg:FinancialMetric",
+      "metricName": "RTC receivables increase",
+      "valueString": "1.0m",
+      "fiscalPeriod": "Dec.20A-Sept.22A",
+      "scope": "Company",
+      "sourceNote": "Comments"
+    },
+    {
+      "id": "e90",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Group net debt",
+      "valueString": "0.2m",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "Comments"
+    },
+    {
+      "id": "e91",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cash available",
+      "valueString": "6.9m",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "Comments"
+    },
+    {
+      "id": "e92",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Financial debt",
+      "valueString": "7.1m",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "Comments"
+    },
+    {
+      "id": "e93",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Leasing debt",
+      "valueString": "5.2m",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "Comments"
+    },
+    {
+      "id": "e94",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Conditional loans",
+      "valueString": "1.8m",
+      "fiscalPeriod": "Sept.22A",
+      "scope": "Company",
+      "sourceNote": "Comments"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e6",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e6",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e36",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e40",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e41",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e42",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e43",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e44",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e45",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e47",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e48",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e49",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e50",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e51",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e52",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e53",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e54",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e55",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e56",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e57",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e58",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e59",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e60",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e61",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e62",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e63",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e64",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e65",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e66",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e67",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e68",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e69",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e70",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e71",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e72",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e73",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e74",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e75",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e76",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e77",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e78",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e79",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e80",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e81",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e82",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e83",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e84",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e85",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e86",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e87",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e88",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e89",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e90",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e91",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e92",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e93",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e94",
+      "type": "pekg:reportsFinancialMetric"
+    }
+  ]
+}

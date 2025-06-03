@@ -1,0 +1,258 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Target Company for Project INUK"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "DDA & Company France SAS"
+    },
+    {
+      "id": "e4",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK",
+      "status": "Strictly Private & Confidential",
+      "typeSought": "Sale/Funding (implied by financial teaser)"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Administrator License",
+      "category": "Licensing Tier",
+      "description": "Full administration capabilities; Can deliver Expert & Analyst Access to new users"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "Expert License",
+      "category": "Licensing Tier",
+      "description": "Analysis modeling (static and dynamic maps and reports); Dashboards & Wizard production; Can create analysis and deliver Explorer Access to new users"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Analyst License",
+      "category": "Licensing Tier",
+      "description": "Basic analysis modeling (static maps and reports); Can create analysis and reports"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "Explorer License",
+      "category": "Licensing Tier",
+      "description": "Dashboards and business applications view; Read-only"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Base price",
+      "valueString": "From \u20ac19k per year",
+      "isRecurring": true,
+      "scope": "per year"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Base price",
+      "valueString": "From \u20ac9k per year",
+      "isRecurring": true,
+      "scope": "per year"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Base price",
+      "valueString": "From \u20ac5k per year",
+      "isRecurring": true,
+      "scope": "per year"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Base price",
+      "valueString": "From \u20ac330 per year",
+      "isRecurring": true,
+      "scope": "per year"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Days of training",
+      "kpiValueString": "0.5"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Days of training",
+      "kpiValueString": "5"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Days of training",
+      "kpiValueString": "3"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Days of training",
+      "kpiValueString": "None"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Large corporates",
+      "description": "Target client segment"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "SMEs",
+      "description": "Target client segment"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:Technology",
+      "name": "Excel",
+      "description": "Software proficiency required for certain user profiles"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:Position",
+      "titleName": "CIO",
+      "department": "IT/Business"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e5",
+      "target": "e2",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6",
+      "target": "e10",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e14",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6",
+      "target": "e18",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e21",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e7",
+      "target": "e11",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e15",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e7",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e7",
+      "target": "e20",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e8",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e8",
+      "target": "e16",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e8",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e8",
+      "target": "e20",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e9",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e9",
+      "target": "e17",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e9",
+      "target": "e18",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e19",
+      "type": "pekg:targets"
+    }
+  ]
+}

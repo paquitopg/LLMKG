@@ -1,0 +1,63 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "A company identified as a confidential party in the document."
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Technology",
+      "name": "Artificial Intelligence",
+      "description": "Visually represented by a brain-like structure with interconnected nodes, suggesting advanced computational capabilities."
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Technology",
+      "name": "Natural Language Processing",
+      "description": "Visually indicated by translation icons (A->\u6587) and foreign characters on a laptop screen, suggesting capabilities in language understanding and translation."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:ProductOrService",
+      "name": "Language Translation Software/Services",
+      "category": "Software",
+      "description": "A product or service related to language translation, visually suggested by translation icons and foreign characters on a laptop screen."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:TransactionContext",
+      "contextName": "Scale-up Initiative",
+      "typeSought": "Growth",
+      "dealRationaleHighlights": [
+        "Ambitious roadmap to scale-up"
+      ],
+      "keyInvestmentHighlights": [
+        "Ambitious roadmap to scale-up"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:offers"
+    }
+  ]
+}

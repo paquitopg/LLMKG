@@ -1,0 +1,667 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "foundedYear": 1989,
+      "description": "A specialist provider of location intelligence software solution. The company\u2019s platform is able to accommodate any analytics or business intelligence use case where location-related data support strategic decision-making. An accomplished solution provider combining the power of spatial data science and tech-savvy to support organisations to unlock critical insights from geo-data analysis and make better informed decisions.",
+      "industry": "Software",
+      "sector": "Location Intelligence"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Financial Advisor to Project Inuk"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "transactionPerimeter": "Articque"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "CDD (Cartes & Donn\u00e9es Desktop)",
+      "category": "Legacy on-premise software",
+      "description": "The legacy on-premise version of CDO. Discontinued in 2022."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "CDO (Cartes & Donn\u00e9es Online)",
+      "category": "Cloud-native platform",
+      "description": "The cloud-native version of the platform designed for SMEs requiring a limited number of seats. Core product that replaced CDD."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "AP (Articque Platform)",
+      "category": "Self-hosted platform",
+      "description": "The self-hosted version of CDO with identical features, fitted for larger companies. Core product that replaced CDD."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Geocodage",
+      "category": "Geocoding service module",
+      "description": "A geocoding service allowing users to locate large volume of addresses (customers, prospects, stores, etc.) from datasets to geographic coordinates (latitude, longitude, etc.) and to fix incorrect addresses."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "Geoservice Data",
+      "category": "Data module",
+      "description": "Made up of a selection of third-party databases, including socio-demographic and businesses data such as INSEE or SIREN\u00ae bases, used to enrich customers\u2019 data."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "Carticque",
+      "category": "Basemaps module",
+      "description": "Provides a range of third-party domestic and international basemaps including administrative or business-specific basemaps."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Proprietary Software (Subscription)",
+      "category": "Software Licensing and Support",
+      "description": "Development, sale, and support of proprietary software, delivered primarily under subscription. This includes software licensing, updates, support, hosting and allotment of professional services necessary to go live.",
+      "pricingModelInfo": "Subscription model. Historical perpetual license and maintenance model has been discontinued for new clients from Jan 1st, 2022, onwards."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "Training",
+      "category": "Professional Services",
+      "description": "Comprehensive training programs."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "Consulting",
+      "category": "Professional Services",
+      "description": "Consulting services supporting clients in making the most of their geographic data or providing specific geomarketing studies."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:ProductOrService",
+      "name": "Special Project",
+      "category": "Professional Services",
+      "description": "Assistance in the design and development of specific cartographic applications."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Headcount",
+      "totalEmployees": 43,
+      "headcountName": "Total Employees",
+      "dateOrYear": "Current"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Location",
+      "locationName": "near Tours",
+      "locationType": "Headquarters"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Articque Founded",
+      "eventType": "Founding",
+      "dateOrYear": "1989"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Discontinuation of perpetual license and maintenance model for new clients",
+      "eventType": "Business Model Change",
+      "dateOrYear": "Jan 1st, 2022"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "CDD Discontinued",
+      "eventType": "Product Discontinuation",
+      "dateOrYear": "2022",
+      "description": "CDD* (Cartes & Donn\u00e9es Desktop) discontinued in 2022"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings",
+      "valueString": "\u20ac2,737k",
+      "fiscalPeriod": "FY18A",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings",
+      "valueString": "\u20ac3,323k",
+      "fiscalPeriod": "FY19A",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings",
+      "valueString": "\u20ac3,378k",
+      "fiscalPeriod": "FY20A",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings",
+      "valueString": "\u20ac3,831k",
+      "fiscalPeriod": "FY21A",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings",
+      "valueString": "\u20ac4,209k",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "\u20ac1,628k",
+      "fiscalPeriod": "FY18A",
+      "isRecurring": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "\u20ac1,963k",
+      "fiscalPeriod": "FY19A",
+      "isRecurring": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "\u20ac2,291k",
+      "fiscalPeriod": "FY20A",
+      "isRecurring": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "\u20ac2,747k",
+      "fiscalPeriod": "FY21A",
+      "isRecurring": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Billings",
+      "valueString": "\u20ac3,468k",
+      "fiscalPeriod": "FY22L",
+      "isRecurring": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adj. EBITDA",
+      "valueString": "\u20ac1,181k",
+      "fiscalPeriod": "FY18A",
+      "isAdjustedOrProforma": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adj. EBITDA",
+      "valueString": "\u20ac1,412k",
+      "fiscalPeriod": "FY19A",
+      "isAdjustedOrProforma": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adj. EBITDA",
+      "valueString": "\u20ac1,222k",
+      "fiscalPeriod": "FY20A",
+      "isAdjustedOrProforma": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adj. EBITDA",
+      "valueString": "\u20ac1,409k",
+      "fiscalPeriod": "FY21A",
+      "isAdjustedOrProforma": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adj. EBITDA",
+      "valueString": "\u20ac1,454k",
+      "fiscalPeriod": "FY22L",
+      "isAdjustedOrProforma": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring CAGR FY18A-22L",
+      "valueString": "+20.8%",
+      "fiscalPeriod": "FY18A-FY22L",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:FinancialMetric",
+      "metricName": "% of Total Billings from Recurring Sources",
+      "valueString": "c. 59%",
+      "fiscalPeriod": "FY18A",
+      "sourceNote": "Management (derived from image: 1628/2737)"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:FinancialMetric",
+      "metricName": "% of Total Billings from Recurring Sources",
+      "valueString": "c. 82%",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management (derived from image: 3468/4209)"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Subscription Billings % of Total",
+      "valueString": "31%",
+      "fiscalPeriod": "FY18A",
+      "sourceNote": "Management (pie chart)"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Professional Services Billings % of Total",
+      "valueString": "28%",
+      "fiscalPeriod": "FY18A",
+      "sourceNote": "Management (pie chart)"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance Billings % of Total",
+      "valueString": "22%",
+      "fiscalPeriod": "FY18A",
+      "sourceNote": "Management (pie chart)"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perpetual Licenses Billings % of Total",
+      "valueString": "19%",
+      "fiscalPeriod": "FY18A",
+      "sourceNote": "Management (pie chart)"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Subscription Billings % of Total",
+      "valueString": "62%",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management (pie chart)"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Professional Services Billings % of Total",
+      "valueString": "20%",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management (pie chart)"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance Billings % of Total",
+      "valueString": "15%",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management (pie chart)"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perpetual Licenses Billings % of Total",
+      "valueString": "3%",
+      "fiscalPeriod": "FY22L",
+      "sourceNote": "Management (pie chart)"
+    },
+    {
+      "id": "e46",
+      "type": "pekg:Technology",
+      "name": "Location Intelligence"
+    },
+    {
+      "id": "e47",
+      "type": "pekg:Technology",
+      "name": "Spatial Data Science"
+    },
+    {
+      "id": "e48",
+      "type": "pekg:Technology",
+      "name": "Geo-data Analysis"
+    },
+    {
+      "id": "e49",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "SMEs"
+    },
+    {
+      "id": "e50",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Larger Companies"
+    },
+    {
+      "id": "e51",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Strategic Decision Making",
+      "description": "Any analytics or business intelligence use case where location-related data support strategic decision-making."
+    },
+    {
+      "id": "e52",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Geomarketing Studies"
+    },
+    {
+      "id": "e53",
+      "type": "Data Source (Socio-demographic)",
+      "name": "INSEE"
+    },
+    {
+      "id": "e54",
+      "type": "Data Source (Businesses)",
+      "name": "SIREN\u00ae bases"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e3",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e3",
+      "target": "e4",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6",
+      "target": "e49",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e7",
+      "target": "e50",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e13",
+      "target": "e52",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e19",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e36",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e20",
+      "target": "e38",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e20",
+      "target": "e39",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e20",
+      "target": "e40",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e20",
+      "target": "e41",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e24",
+      "target": "e42",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e24",
+      "target": "e43",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e24",
+      "target": "e44",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e24",
+      "target": "e45",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e46",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e47",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e48",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e51",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e53",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e9",
+      "target": "e54",
+      "type": "pekg:usesTechnology"
+    }
+  ]
+}

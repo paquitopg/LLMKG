@@ -1,0 +1,143 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "alias": [
+        "the Group",
+        "the Company"
+      ],
+      "description": "Subject of investigation for a potential transaction (Project Inuk)."
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "alias": [
+        "DDA"
+      ],
+      "roleInContext": "Prepared the Information Memorandum for Project Inuk concerning Articque. All inquiries regarding the contemplated transaction should be directed to DDA contacts."
+    },
+    {
+      "id": "e3",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Inuk",
+      "transactionPerimeter": "Articque",
+      "status": "Prospective / Investigation",
+      "dealRationaleHighlights": [
+        "To assist the recipient (Business Partner, potentially ChapsVision) in deciding whether to proceed with further investigation of Articque."
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Person",
+      "fullName": "Alexandre Odin"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Position",
+      "titleName": "Partner"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Person",
+      "fullName": "Victor Humberdot"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Position",
+      "titleName": "Vice President"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Person",
+      "fullName": "Gr\u00e9goire Bizouerne"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Position",
+      "titleName": "Analyst"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Location",
+      "locationName": "DDA & Company Paris Office",
+      "locationType": "Office",
+      "officeSpecificInfo": "65 rue d\u2019Anjou \u2022 75008 Paris"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Potential Business Partner / Recipient of the Information Memorandum for Project Inuk, considering an investigation of Articque. Mentioned in document footer in relation to Project Inuk."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e3",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e4",
+      "target": "e5",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e5",
+      "target": "e2",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e2",
+      "target": "e6",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e6",
+      "target": "e7",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e7",
+      "target": "e2",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e2",
+      "target": "e8",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e8",
+      "target": "e9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e9",
+      "target": "e2",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e2",
+      "target": "e10",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e11",
+      "target": "e3",
+      "type": "pekg:seeksTransaction"
+    }
+  ]
+}

@@ -1,0 +1,321 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script>function neighbourhoodHighlight(params) {
+  // console.log("in nieghbourhoodhighlight");
+  allNodes = nodes.get({ returnType: "Object" });
+  // originalNodes = JSON.parse(JSON.stringify(allNodes));
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    highlightActive = true;
+    var i, j;
+    var selectedNode = params.nodes[0];
+    var degrees = 2;
+
+    // mark all nodes as hard to read.
+    for (let nodeId in allNodes) {
+      // nodeColors[nodeId] = allNodes[nodeId].color;
+      allNodes[nodeId].color = "rgba(200,200,200,0.5)";
+      if (allNodes[nodeId].hiddenLabel === undefined) {
+        allNodes[nodeId].hiddenLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+    var connectedNodes = network.getConnectedNodes(selectedNode);
+    var allConnectedNodes = [];
+
+    // get the second degree nodes
+    for (i = 1; i < degrees; i++) {
+      for (j = 0; j < connectedNodes.length; j++) {
+        allConnectedNodes = allConnectedNodes.concat(
+          network.getConnectedNodes(connectedNodes[j])
+        );
+      }
+    }
+
+    // all second degree nodes get a different color and their label back
+    for (i = 0; i < allConnectedNodes.length; i++) {
+      // allNodes[allConnectedNodes[i]].color = "pink";
+      allNodes[allConnectedNodes[i]].color = "rgba(150,150,150,0.75)";
+      if (allNodes[allConnectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[allConnectedNodes[i]].label =
+          allNodes[allConnectedNodes[i]].hiddenLabel;
+        allNodes[allConnectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // all first degree nodes get their own color and their label back
+    for (i = 0; i < connectedNodes.length; i++) {
+      // allNodes[connectedNodes[i]].color = undefined;
+      allNodes[connectedNodes[i]].color = nodeColors[connectedNodes[i]];
+      if (allNodes[connectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[connectedNodes[i]].label =
+          allNodes[connectedNodes[i]].hiddenLabel;
+        allNodes[connectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // the main node gets its own color and its label back.
+    // allNodes[selectedNode].color = undefined;
+    allNodes[selectedNode].color = nodeColors[selectedNode];
+    if (allNodes[selectedNode].hiddenLabel !== undefined) {
+      allNodes[selectedNode].label = allNodes[selectedNode].hiddenLabel;
+      allNodes[selectedNode].hiddenLabel = undefined;
+    }
+  } else if (highlightActive === true) {
+    // console.log("highlightActive was true");
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      // allNodes[nodeId].color = "purple";
+      allNodes[nodeId].color = nodeColors[nodeId];
+      // delete allNodes[nodeId].color;
+      if (allNodes[nodeId].hiddenLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].hiddenLabel;
+        allNodes[nodeId].hiddenLabel = undefined;
+      }
+    }
+    highlightActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    // console.log("Nothing was selected");
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        // allNodes[nodeId].color = {};
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function filterHighlight(params) {
+  allNodes = nodes.get({ returnType: "Object" });
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    filterActive = true;
+    let selectedNodes = params.nodes;
+
+    // hiding all nodes and saving the label
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = true;
+      if (allNodes[nodeId].savedLabel === undefined) {
+        allNodes[nodeId].savedLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+
+    for (let i=0; i < selectedNodes.length; i++) {
+      allNodes[selectedNodes[i]].hidden = false;
+      if (allNodes[selectedNodes[i]].savedLabel !== undefined) {
+        allNodes[selectedNodes[i]].label = allNodes[selectedNodes[i]].savedLabel;
+        allNodes[selectedNodes[i]].savedLabel = undefined;
+      }
+    }
+
+  } else if (filterActive === true) {
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = false;
+      if (allNodes[nodeId].savedLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].savedLabel;
+        allNodes[nodeId].savedLabel = undefined;
+      }
+    }
+    filterActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function selectNode(nodes) {
+  network.selectNodes(nodes);
+  neighbourhoodHighlight({ nodes: nodes });
+  return nodes;
+}
+
+function selectNodes(nodes) {
+  network.selectNodes(nodes);
+  filterHighlight({nodes: nodes});
+  return nodes;
+}
+
+function highlightFilter(filter) {
+  let selectedNodes = []
+  let selectedProp = filter['property']
+  if (filter['item'] === 'node') {
+    let allNodes = nodes.get({ returnType: "Object" });
+    for (let nodeId in allNodes) {
+      if (allNodes[nodeId][selectedProp] && filter['value'].includes((allNodes[nodeId][selectedProp]).toString())) {
+        selectedNodes.push(nodeId)
+      }
+    }
+  }
+  else if (filter['item'] === 'edge'){
+    let allEdges = edges.get({returnType: 'object'});
+    // check if the selected property exists for selected edge and select the nodes connected to the edge
+    for (let edge in allEdges) {
+      if (allEdges[edge][selectedProp] && filter['value'].includes((allEdges[edge][selectedProp]).toString())) {
+        selectedNodes.push(allEdges[edge]['from'])
+        selectedNodes.push(allEdges[edge]['to'])
+      }
+    }
+  }
+  selectNodes(selectedNodes)
+}</script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            
+            
+            
+            
+            
+
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1f77b4", "id": "e1", "label": "Systran SAS", "shape": "dot", "size": 15, "title": "ID: e1\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: Systran SAS\u003cbr\u003edescription: Target company for the financial teaser."}, {"color": "#d62728", "id": "e2", "label": "Project System_big", "shape": "dot", "size": 15, "title": "ID: e2\u003cbr\u003eType: pekg:TransactionContext\u003cbr\u003econtextName: Project System_big\u003cbr\u003etypeSought: Sale/Acquisition\u003cbr\u003estatus: Teaser phase\u003cbr\u003edealRationaleHighlights: [\u0027Solid customer traction\u0027, \u0027Rising ARPA driving strong recurring revenue growth\u0027]"}, {"color": "#cccccc", "id": "e3", "label": "Rothschild \u0026 Co", "shape": "dot", "size": 15, "title": "ID: e3\u003cbr\u003eType: Financial Advisor\u003cbr\u003ename: Rothschild \u0026 Co\u003cbr\u003eroleInContext: Advisory firm for Project System_big"}, {"color": "#cccccc", "id": "e4", "label": "Samsung Securities", "shape": "dot", "size": 15, "title": "ID: e4\u003cbr\u003eType: Financial Advisor\u003cbr\u003ename: Samsung Securities\u003cbr\u003eroleInContext: Advisory firm for Project System_big"}, {"color": "#1f77b4", "id": "e5", "label": "SSA", "shape": "dot", "size": 15, "title": "ID: e5\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: SSA\u003cbr\u003edescription: An entity or business unit, reporting financial and operational metrics, likely part of Systran SAS."}, {"color": "#1f77b4", "id": "e6", "label": "SSI", "shape": "dot", "size": 15, "title": "ID: e6\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: SSI\u003cbr\u003edescription: An entity or business unit, reporting financial and operational metrics, likely part of Systran SAS."}, {"color": "#1f77b4", "id": "e7", "label": "KPMG", "shape": "dot", "size": 15, "title": "ID: e7\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: KPMG\u003cbr\u003edescription: Source of the VDD report mentioned on the page."}, {"color": "#1f77b4", "id": "e8", "label": "ChapsVision", "shape": "dot", "size": 15, "title": "ID: e8\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: ChapsVision\u003cbr\u003edescription: Mentioned in the footer as \u0027Confidential - ChapsVision\u0027, possibly a party involved or recipient of the document."}, {"color": "#9467bd", "id": "e9", "label": "Perpetual licenses", "shape": "dot", "size": 15, "title": "ID: e9\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Perpetual licenses\u003cbr\u003ecategory: Software Licensing\u003cbr\u003edescription: Sales of licenses that often result in associated annual recurring maintenance."}, {"color": "#9467bd", "id": "e10", "label": "Annual recurring maintenance", "shape": "dot", "size": 15, "title": "ID: e10\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Annual recurring maintenance\u003cbr\u003ecategory: Service\u003cbr\u003edescription: Maintenance revenue associated with perpetual licenses, growing with ARPA."}, {"color": "#ff7f0e", "id": "e11", "label": "ARPA", "shape": "dot", "size": 15, "title": "ID: e11\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: ARPA\u003cbr\u003edescription: Average Revenue Per Account, constantly growing for both SSA and SSI."}, {"color": "#ff7f0e", "id": "e12", "label": "ARR", "shape": "dot", "size": 15, "title": "ID: e12\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: ARR\u003cbr\u003edescription: Annual Recurring Revenue, specifically for maintenance."}, {"color": "#ff7f0e", "id": "e13", "label": "Recurring revenue growth", "shape": "dot", "size": 15, "title": "ID: e13\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Recurring revenue growth\u003cbr\u003edescription: Overall growth in recurring revenue, driven by solid customer traction and rising ARPA."}, {"color": "#ffbb78", "id": "e14", "label": "Net retention rate", "shape": "dot", "size": 15, "title": "ID: e14\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Net retention rate\u003cbr\u003ekpiValueString: Positive\u003cbr\u003edescription: Positive net retention rate on both entities, contributing to ARPA growth."}, {"color": "#ffbb78", "id": "e15", "label": "Number of clients", "shape": "dot", "size": 15, "title": "ID: e15\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Number of clients\u003cbr\u003edescription: Number of clients for SSA and SSI."}, {"color": "#ff7f0e", "id": "e16", "label": "ARPA (Dec-19)", "shape": "dot", "size": 15, "title": "ID: e16\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: ARPA\u003cbr\u003evalueString: \u20ac20.7k\u003cbr\u003efiscalPeriod: Dec-19\u003cbr\u003escope: SSA\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e17", "label": "ARPA (Sep-22)", "shape": "dot", "size": 15, "title": "ID: e17\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: ARPA\u003cbr\u003evalueString: \u20ac32.5k\u003cbr\u003efiscalPeriod: Sep-22\u003cbr\u003escope: SSA\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e18", "label": "ARPA (Dec-19)", "shape": "dot", "size": 15, "title": "ID: e18\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: ARPA\u003cbr\u003evalueString: \u20ac40.1k\u003cbr\u003efiscalPeriod: Dec-19\u003cbr\u003escope: SSI\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e19", "label": "ARPA (Sep-22)", "shape": "dot", "size": 15, "title": "ID: e19\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: ARPA\u003cbr\u003evalueString: \u20ac50.5k\u003cbr\u003efiscalPeriod: Sep-22\u003cbr\u003escope: SSI\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e20", "label": "ARR (Dec-19)", "shape": "dot", "size": 15, "title": "ID: e20\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: ARR\u003cbr\u003evalueString: \u20ac1.6m\u003cbr\u003efiscalPeriod: Dec-19\u003cbr\u003escope: SSA\u003cbr\u003eisRecurring: True\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e21", "label": "ARR (Dec-20)", "shape": "dot", "size": 15, "title": "ID: e21\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: ARR\u003cbr\u003evalueString: \u20ac1.9m\u003cbr\u003efiscalPeriod: Dec-20\u003cbr\u003escope: SSA\u003cbr\u003eisRecurring: True\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e22", "label": "ARR (Dec-21)", "shape": "dot", "size": 15, "title": "ID: e22\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: ARR\u003cbr\u003evalueString: \u20ac2.0m\u003cbr\u003efiscalPeriod: Dec-21\u003cbr\u003escope: SSA\u003cbr\u003eisRecurring: True\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e23", "label": "ARR (Sep-22)", "shape": "dot", "size": 15, "title": "ID: e23\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: ARR\u003cbr\u003evalueString: \u20ac2.4m\u003cbr\u003efiscalPeriod: Sep-22\u003cbr\u003escope: SSA\u003cbr\u003eisRecurring: True\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e24", "label": "ARR (Dec-19)", "shape": "dot", "size": 15, "title": "ID: e24\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: ARR\u003cbr\u003evalueString: \u20ac2.0m\u003cbr\u003efiscalPeriod: Dec-19\u003cbr\u003escope: SSI\u003cbr\u003eisRecurring: True\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e25", "label": "ARR (Dec-20)", "shape": "dot", "size": 15, "title": "ID: e25\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: ARR\u003cbr\u003evalueString: \u20ac2.3m\u003cbr\u003efiscalPeriod: Dec-20\u003cbr\u003escope: SSI\u003cbr\u003eisRecurring: True\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e26", "label": "ARR (Dec-21)", "shape": "dot", "size": 15, "title": "ID: e26\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: ARR\u003cbr\u003evalueString: \u20ac2.1m\u003cbr\u003efiscalPeriod: Dec-21\u003cbr\u003escope: SSI\u003cbr\u003eisRecurring: True\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e27", "label": "ARR (Sep-22)", "shape": "dot", "size": 15, "title": "ID: e27\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: ARR\u003cbr\u003evalueString: \u20ac2.3m\u003cbr\u003efiscalPeriod: Sep-22\u003cbr\u003escope: SSI\u003cbr\u003eisRecurring: True\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e28", "label": "ARR Change (Dec-19 to Dec-20)", "shape": "dot", "size": 15, "title": "ID: e28\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: ARR Change\u003cbr\u003evalueString: +\u20ac315k\u003cbr\u003efiscalPeriod: Dec-19 to Dec-20\u003cbr\u003escope: SSA\u003cbr\u003edescription: Change in ARR, +19.7%\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e29", "label": "ARR Change (Dec-20 to Dec-21)", "shape": "dot", "size": 15, "title": "ID: e29\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: ARR Change\u003cbr\u003evalueString: +\u20ac51k\u003cbr\u003efiscalPeriod: Dec-20 to Dec-21\u003cbr\u003escope: SSA\u003cbr\u003edescription: Change in ARR, +2.6%\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e30", "label": "ARR Change (Dec-21 to Sep-22)", "shape": "dot", "size": 15, "title": "ID: e30\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: ARR Change\u003cbr\u003evalueString: +\u20ac414k\u003cbr\u003efiscalPeriod: Dec-21 to Sep-22\u003cbr\u003escope: SSA\u003cbr\u003edescription: Change in ARR, +21.1%\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e31", "label": "ARR Change (Dec-19 to Dec-20)", "shape": "dot", "size": 15, "title": "ID: e31\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: ARR Change\u003cbr\u003evalueString: +\u20ac246k\u003cbr\u003efiscalPeriod: Dec-19 to Dec-20\u003cbr\u003escope: SSI\u003cbr\u003edescription: Change in ARR, +12.1%\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e32", "label": "ARR Change (Dec-20 to Dec-21)", "shape": "dot", "size": 15, "title": "ID: e32\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: ARR Change\u003cbr\u003evalueString: \u20ac(225)k\u003cbr\u003efiscalPeriod: Dec-20 to Dec-21\u003cbr\u003escope: SSI\u003cbr\u003edescription: Change in ARR, (9.8)%\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e33", "label": "ARR Change (Dec-21 to Sep-22)", "shape": "dot", "size": 15, "title": "ID: e33\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: ARR Change\u003cbr\u003evalueString: +\u20ac257k\u003cbr\u003efiscalPeriod: Dec-21 to Sep-22\u003cbr\u003escope: SSI\u003cbr\u003edescription: Change in ARR, +12.4%\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e34", "label": "New ARR (Dec-19 to Dec-20)", "shape": "dot", "size": 15, "title": "ID: e34\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: New ARR\u003cbr\u003evalueString: \u20ac0.2m\u003cbr\u003efiscalPeriod: Dec-19 to Dec-20\u003cbr\u003escope: SSA\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e35", "label": "Upsell ARR (Dec-19 to Dec-20)", "shape": "dot", "size": 15, "title": "ID: e35\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Upsell ARR\u003cbr\u003evalueString: \u20ac0.3m\u003cbr\u003efiscalPeriod: Dec-19 to Dec-20\u003cbr\u003escope: SSA\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e36", "label": "Downsell ARR (Dec-19 to Dec-20)", "shape": "dot", "size": 15, "title": "ID: e36\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Downsell ARR\u003cbr\u003evalueString: \u20ac(0.0)m\u003cbr\u003efiscalPeriod: Dec-19 to Dec-20\u003cbr\u003escope: SSA\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e37", "label": "Churn ARR (Dec-19 to Dec-20)", "shape": "dot", "size": 15, "title": "ID: e37\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Churn ARR\u003cbr\u003evalueString: \u20ac(0.1)m\u003cbr\u003efiscalPeriod: Dec-19 to Dec-20\u003cbr\u003escope: SSA\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e38", "label": "Renew ARR (Dec-19 to Dec-20)", "shape": "dot", "size": 15, "title": "ID: e38\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Renew ARR\u003cbr\u003evalueString: \u20ac0.0m\u003cbr\u003efiscalPeriod: Dec-19 to Dec-20\u003cbr\u003escope: SSA\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e39", "label": "New ARR (Dec-20 to Dec-21)", "shape": "dot", "size": 15, "title": "ID: e39\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: New ARR\u003cbr\u003evalueString: \u20ac0.2m\u003cbr\u003efiscalPeriod: Dec-20 to Dec-21\u003cbr\u003escope: SSA\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e40", "label": "Upsell ARR (Dec-20 to Dec-21)", "shape": "dot", "size": 15, "title": "ID: e40\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Upsell ARR\u003cbr\u003evalueString: \u20ac0.3m\u003cbr\u003efiscalPeriod: Dec-20 to Dec-21\u003cbr\u003escope: SSA\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e41", "label": "Downsell ARR (Dec-20 to Dec-21)", "shape": "dot", "size": 15, "title": "ID: e41\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Downsell ARR\u003cbr\u003evalueString: \u20ac(0.1)m\u003cbr\u003efiscalPeriod: Dec-20 to Dec-21\u003cbr\u003escope: SSA\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e42", "label": "Churn ARR (Dec-20 to Dec-21)", "shape": "dot", "size": 15, "title": "ID: e42\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Churn ARR\u003cbr\u003evalueString: \u20ac(0.1)m\u003cbr\u003efiscalPeriod: Dec-20 to Dec-21\u003cbr\u003escope: SSA\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e43", "label": "Renew ARR (Dec-20 to Dec-21)", "shape": "dot", "size": 15, "title": "ID: e43\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Renew ARR\u003cbr\u003evalueString: \u20ac0.1m\u003cbr\u003efiscalPeriod: Dec-20 to Dec-21\u003cbr\u003escope: SSA\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e44", "label": "New ARR (Dec-21 to Sep-22)", "shape": "dot", "size": 15, "title": "ID: e44\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: New ARR\u003cbr\u003evalueString: \u20ac0.3m\u003cbr\u003efiscalPeriod: Dec-21 to Sep-22\u003cbr\u003escope: SSA\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e45", "label": "Upsell ARR (Dec-21 to Sep-22)", "shape": "dot", "size": 15, "title": "ID: e45\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Upsell ARR\u003cbr\u003evalueString: \u20ac0.3m\u003cbr\u003efiscalPeriod: Dec-21 to Sep-22\u003cbr\u003escope: SSA\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e46", "label": "Downsell ARR (Dec-21 to Sep-22)", "shape": "dot", "size": 15, "title": "ID: e46\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Downsell ARR\u003cbr\u003evalueString: \u20ac(0.1)m\u003cbr\u003efiscalPeriod: Dec-21 to Sep-22\u003cbr\u003escope: SSA\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e47", "label": "Churn ARR (Dec-21 to Sep-22)", "shape": "dot", "size": 15, "title": "ID: e47\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Churn ARR\u003cbr\u003evalueString: \u20ac(0.2)m\u003cbr\u003efiscalPeriod: Dec-21 to Sep-22\u003cbr\u003escope: SSA\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e48", "label": "Renew ARR (Dec-21 to Sep-22)", "shape": "dot", "size": 15, "title": "ID: e48\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Renew ARR\u003cbr\u003evalueString: \u20ac0.1m\u003cbr\u003efiscalPeriod: Dec-21 to Sep-22\u003cbr\u003escope: SSA\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e49", "label": "New ARR (Dec-19 to Dec-20)", "shape": "dot", "size": 15, "title": "ID: e49\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: New ARR\u003cbr\u003evalueString: \u20ac0.1m\u003cbr\u003efiscalPeriod: Dec-19 to Dec-20\u003cbr\u003escope: SSI\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e50", "label": "Upsell ARR (Dec-19 to Dec-20)", "shape": "dot", "size": 15, "title": "ID: e50\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Upsell ARR\u003cbr\u003evalueString: \u20ac0.5m\u003cbr\u003efiscalPeriod: Dec-19 to Dec-20\u003cbr\u003escope: SSI\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e51", "label": "Downsell ARR (Dec-19 to Dec-20)", "shape": "dot", "size": 15, "title": "ID: e51\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Downsell ARR\u003cbr\u003evalueString: \u20ac(0.1)m\u003cbr\u003efiscalPeriod: Dec-19 to Dec-20\u003cbr\u003escope: SSI\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e52", "label": "Churn ARR (Dec-19 to Dec-20)", "shape": "dot", "size": 15, "title": "ID: e52\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Churn ARR\u003cbr\u003evalueString: \u20ac(0.1)m\u003cbr\u003efiscalPeriod: Dec-19 to Dec-20\u003cbr\u003escope: SSI\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e53", "label": "Renew ARR (Dec-19 to Dec-20)", "shape": "dot", "size": 15, "title": "ID: e53\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Renew ARR\u003cbr\u003evalueString: \u20ac0.1m\u003cbr\u003efiscalPeriod: Dec-19 to Dec-20\u003cbr\u003escope: SSI\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e54", "label": "New ARR (Dec-20 to Dec-21)", "shape": "dot", "size": 15, "title": "ID: e54\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: New ARR\u003cbr\u003evalueString: \u20ac0.1m\u003cbr\u003efiscalPeriod: Dec-20 to Dec-21\u003cbr\u003escope: SSI\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e55", "label": "Upsell ARR (Dec-20 to Dec-21)", "shape": "dot", "size": 15, "title": "ID: e55\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Upsell ARR\u003cbr\u003evalueString: \u20ac0.0m\u003cbr\u003efiscalPeriod: Dec-20 to Dec-21\u003cbr\u003escope: SSI\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e56", "label": "Downsell ARR (Dec-20 to Dec-21)", "shape": "dot", "size": 15, "title": "ID: e56\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Downsell ARR\u003cbr\u003evalueString: \u20ac(0.2)m\u003cbr\u003efiscalPeriod: Dec-20 to Dec-21\u003cbr\u003escope: SSI\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e57", "label": "Churn ARR (Dec-20 to Dec-21)", "shape": "dot", "size": 15, "title": "ID: e57\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Churn ARR\u003cbr\u003evalueString: \u20ac(0.3)m\u003cbr\u003efiscalPeriod: Dec-20 to Dec-21\u003cbr\u003escope: SSI\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e58", "label": "Renew ARR (Dec-20 to Dec-21)", "shape": "dot", "size": 15, "title": "ID: e58\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Renew ARR\u003cbr\u003evalueString: \u20ac0.3m\u003cbr\u003efiscalPeriod: Dec-20 to Dec-21\u003cbr\u003escope: SSI\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e59", "label": "New ARR (Dec-21 to Sep-22)", "shape": "dot", "size": 15, "title": "ID: e59\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: New ARR\u003cbr\u003evalueString: \u20ac0.1m\u003cbr\u003efiscalPeriod: Dec-21 to Sep-22\u003cbr\u003escope: SSI\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e60", "label": "Upsell ARR (Dec-21 to Sep-22)", "shape": "dot", "size": 15, "title": "ID: e60\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Upsell ARR\u003cbr\u003evalueString: \u20ac0.3m\u003cbr\u003efiscalPeriod: Dec-21 to Sep-22\u003cbr\u003escope: SSI\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e61", "label": "Downsell ARR (Dec-21 to Sep-22)", "shape": "dot", "size": 15, "title": "ID: e61\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Downsell ARR\u003cbr\u003evalueString: \u20ac(0.0)m\u003cbr\u003efiscalPeriod: Dec-21 to Sep-22\u003cbr\u003escope: SSI\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e62", "label": "Churn ARR (Dec-21 to Sep-22)", "shape": "dot", "size": 15, "title": "ID: e62\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Churn ARR\u003cbr\u003evalueString: \u20ac(0.1)m\u003cbr\u003efiscalPeriod: Dec-21 to Sep-22\u003cbr\u003escope: SSI\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ff7f0e", "id": "e63", "label": "Renew ARR (Dec-21 to Sep-22)", "shape": "dot", "size": 15, "title": "ID: e63\u003cbr\u003eType: pekg:FinancialMetric\u003cbr\u003emetricName: Renew ARR\u003cbr\u003evalueString: \u20ac0.0m\u003cbr\u003efiscalPeriod: Dec-21 to Sep-22\u003cbr\u003escope: SSI\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ffbb78", "id": "e64", "label": "Number of clients", "shape": "dot", "size": 15, "title": "ID: e64\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Number of clients\u003cbr\u003ekpiValueString: 46\u003cbr\u003ekpiDateOrPeriod: Sep-22\u003cbr\u003edescription: Number of clients for SSI.\u003cbr\u003esourceNote: KPMG VDD report"}, {"color": "#ffbb78", "id": "e65", "label": "Number of clients", "shape": "dot", "size": 15, "title": "ID: e65\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Number of clients\u003cbr\u003ekpiValueString: 73\u003cbr\u003ekpiDateOrPeriod: Sep-22\u003cbr\u003edescription: Number of clients for SSA.\u003cbr\u003esourceNote: KPMG VDD report"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "e1", "label": "isSubjectOf", "title": "pekg:isSubjectOf", "to": "e2"}, {"arrows": "to", "from": "e1", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e3"}, {"arrows": "to", "from": "e1", "label": "advisedBy", "title": "pekg:advisedBy", "to": "e4"}, {"arrows": "to", "from": "e1", "label": "hasSubsidiary", "title": "pekg:hasSubsidiary", "to": "e5"}, {"arrows": "to", "from": "e1", "label": "hasSubsidiary", "title": "pekg:hasSubsidiary", "to": "e6"}, {"arrows": "to", "from": "e5", "label": "offers", "title": "pekg:offers", "to": "e10"}, {"arrows": "to", "from": "e6", "label": "offers", "title": "pekg:offers", "to": "e10"}, {"arrows": "to", "from": "e9", "label": "resultsIn", "title": "pekg:resultsIn", "to": "e10"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e16"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e17"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e18"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e19"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e20"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e21"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e22"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e23"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e24"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e25"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e26"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e27"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e28"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e29"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e30"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e31"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e32"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e33"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e34"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e35"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e36"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e37"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e38"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e39"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e40"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e41"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e42"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e43"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e44"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e45"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e46"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e47"}, {"arrows": "to", "from": "e5", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e48"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e49"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e50"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e51"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e52"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e53"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e54"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e55"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e56"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e57"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e58"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e59"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e60"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e61"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e62"}, {"arrows": "to", "from": "e6", "label": "reportsFinancialMetric", "title": "pekg:reportsFinancialMetric", "to": "e63"}, {"arrows": "to", "from": "e5", "label": "reportsOperationalKPI", "title": "pekg:reportsOperationalKPI", "to": "e14"}, {"arrows": "to", "from": "e6", "label": "reportsOperationalKPI", "title": "pekg:reportsOperationalKPI", "to": "e14"}, {"arrows": "to", "from": "e5", "label": "reportsOperationalKPI", "title": "pekg:reportsOperationalKPI", "to": "e65"}, {"arrows": "to", "from": "e6", "label": "reportsOperationalKPI", "title": "pekg:reportsOperationalKPI", "to": "e64"}, {"arrows": "to", "from": "e11", "label": "drives", "title": "pekg:drives", "to": "e13"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shape": "dot", "size": 18, "font": {"size": 14, "face": "Tahoma"}}, "edges": {"arrows": {"to": {"enabled": true, "scaleFactor": 0.7}}, "color": {"inherit": "from"}, "smooth": {"type": "continuous", "roundness": 0.2}, "font": {"size": 10, "align": "middle"}}, "physics": {"enabled": true, "barnesHut": {"gravitationalConstant": -30000, "centralGravity": 0.3, "springLength": 250, "springConstant": 0.04, "damping": 0.09}, "minVelocity": 0.75}, "interaction": {"hover": true, "tooltipDelay": 200, "multiselect": true}, "layout": {"hierarchical": false}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

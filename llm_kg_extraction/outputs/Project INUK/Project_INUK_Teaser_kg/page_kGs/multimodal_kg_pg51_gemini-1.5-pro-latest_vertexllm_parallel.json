@@ -1,0 +1,182 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CDO Billings",
+      "valueString": "407",
+      "fiscalPeriod": "FY18A",
+      "scope": "Recurring"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CDO Billings",
+      "valueString": "640",
+      "fiscalPeriod": "FY19A",
+      "scope": "Recurring"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CDO Billings",
+      "valueString": "755",
+      "fiscalPeriod": "FY20A",
+      "scope": "Recurring"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CDO Billings",
+      "valueString": "1,043",
+      "fiscalPeriod": "FY21A",
+      "scope": "Recurring"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CDO Billings",
+      "valueString": "1,249",
+      "fiscalPeriod": "FY22L",
+      "scope": "Recurring"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CAGR",
+      "valueString": "32%",
+      "fiscalPeriod": "FY18-22",
+      "scope": "CDO Billings"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Var.",
+      "valueString": "16%",
+      "fiscalPeriod": "21-22",
+      "scope": "CDO Billings"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "CDO"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "AP"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Carticque & Geoservices"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "Maintenance & Support"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "Legacy Licenses"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:ProductOrService",
+      "name": "Consulting"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Advisor",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Advisor",
+      "name": "DDA & Company France SAS"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

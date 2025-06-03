@@ -1,0 +1,332 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "A specialist provider of Location Intelligence (LI) analytics solutions, Articque is a pure-play software platform provider focused on unlocking critical insights from geo-data analysis. Its pure-play and best-of-breed approach has propelled the company into the top-3 LI platform providers in France.",
+      "keyStrengths": [
+        "decades of experience in developing innovative geospatial data-led solutions",
+        "cloud-based, powerful and scalable LI Platform",
+        "unique proprietary no-code modeling approach"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK",
+      "status": "Strictly Private & Confidential"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e4",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Location Intelligence (LI) analytics solutions",
+      "category": "Software Platform",
+      "description": "Software platform focused on unlocking critical insights from geo-data analysis."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Technology",
+      "name": "geospatial data-led solutions"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:MarketContext",
+      "segmentName": "LI platform providers",
+      "geography": "France",
+      "characteristics": "top-3 position"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "LI Platform",
+      "category": "Software Platform",
+      "description": "A cloud-based, powerful and scalable LI Platform embracing a wide spectrum of analytics requirements."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Technology",
+      "name": "cloud-based"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "CDO (Cartes & Donn\u00e9es Online)",
+      "category": "Software Platform Version",
+      "description": "Cloud-native version of the LI platform designed for SMEs requiring a limited number of seats."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Technology",
+      "name": "cloud-native"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "SMEs"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "AP (Articque Platform)",
+      "category": "Software Platform Version",
+      "description": "Self-hosted version of CDO with identical features, fitted for larger companies."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "larger companies"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Technology",
+      "name": "proprietary no-code modeling approach"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:ProductOrService",
+      "name": "GeoCodage",
+      "category": "Complementary Module",
+      "description": "A geocoding tool to convert large volume datasets of addresses into geographic coordinates."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:ProductOrService",
+      "name": "GeoService Data",
+      "category": "Complementary Module",
+      "description": "An enabling tool to tap into a wide range of third-party databases offering socio-demographic data."
+    },
+    {
+      "id": "e18",
+      "type": "pekg:ProductOrService",
+      "name": "Carticque",
+      "category": "Complementary Module",
+      "description": "Provides a range of third-party domestic and international basemaps including administrative or business-specific basemaps."
+    },
+    {
+      "id": "e19",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Business Intelligence (BI)"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Consulting"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Geographic Information System (GIS)"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Extract-Transform Load (ETL)"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Ongoing Development"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "recurring billings CAGR",
+      "valueString": "~20%",
+      "fiscalPeriod": "FY18A-22L",
+      "scope": "recurring billings",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:FinancialMetric",
+      "metricName": "recurring billings",
+      "valueString": "~82%",
+      "fiscalPeriod": "FY22L",
+      "scope": "recurring billings",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:FinancialMetric",
+      "metricName": "recurring billings",
+      "valueString": ">\u20ac4.0m",
+      "fiscalPeriod": "FY23BP",
+      "scope": "recurring billings",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adj. EBITDA margin",
+      "valueString": "39%",
+      "fiscalPeriod": "FY22L",
+      "isAdjustedOrProforma": true,
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "logos",
+      "kpiValueString": "~600",
+      "kpiDateOrPeriod": "FY22L",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:Headcount",
+      "headcountName": "employees",
+      "totalEmployees": 43,
+      "dateOrYear": "FY22",
+      "sourceNote": "Management"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e8",
+      "target": "e9",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e10",
+      "target": "e11",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e10",
+      "target": "e12",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e13",
+      "target": "e14",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e8",
+      "target": "e15",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e5",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e20",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e21",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e22",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e22",
+      "target": "e23",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

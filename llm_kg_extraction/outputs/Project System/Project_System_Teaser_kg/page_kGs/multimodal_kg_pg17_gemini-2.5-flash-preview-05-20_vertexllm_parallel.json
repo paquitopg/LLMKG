@@ -1,0 +1,209 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran",
+      "description": "Target company in a financial teaser for Project System.",
+      "keyStrengths": [
+        "Unique ability to pair 50+ common and rare languages into specific engine models",
+        "One-stop-shop for expert automated translation software solutions",
+        "Wide language pairing catalogue covering very specific customer needs"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System",
+      "status": "Teaser document",
+      "typeSought": "Sale",
+      "dealRationaleHighlights": [
+        "One-stop-shop for expert automated translation software solutions",
+        "Unique ability to pair 50+ common and rare languages into specific engine models",
+        "Wide language pairing catalogue covering very specific customer needs"
+      ]
+    },
+    {
+      "id": "e3",
+      "type": "Investment Bank",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e4",
+      "type": "Investment Bank",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Automated Translation Software Solutions",
+      "category": "Software",
+      "description": "Expert solutions for automated translation, described as a one-stop-shop, leveraging a wide language pairing catalogue."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Technology",
+      "name": "Language Engine Models",
+      "description": "Specific engine models with the unique ability to pair 50+ common and rare languages."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Number of supported languages",
+      "kpiValueString": "50+",
+      "description": "Number of common and rare languages that can be paired into specific engine models by the company's technology."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Entity mentioned as confidential recipient/party on the document."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:MarketContext",
+      "segmentName": "Western Europe Language Market",
+      "geography": "Western Europe",
+      "characteristics": "Supported languages include Danish, Dutch, English, Finnish, French, German, Greek, Icelandic, Italian, Norwegian, Portuguese, Spanish, Swedish, Welsh."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:MarketContext",
+      "segmentName": "Eastern Europe Language Market",
+      "geography": "Eastern Europe",
+      "characteristics": "Supported languages include Albanian, Bulgarian, Croatian, Czech, Estonian, Hungarian, Latvian, Lithuanian, Polish, Romanian, Russian, Serbian, Slovak, Slovenian, Ukrainian."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:MarketContext",
+      "segmentName": "Middle East and Africa Language Market",
+      "geography": "Middle East and Africa",
+      "characteristics": "Supported languages include Arabic, Dari, Farsi (Persian), Hebrew, Pashto, Somali, Tajik, Turkish, Urdu."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:MarketContext",
+      "segmentName": "Asia Language Market",
+      "geography": "Asia",
+      "characteristics": "Supported languages include Chinese (simp), Chinese (Trd), Hindi, Indonesian, Japanese, Korean, Malay, Punjabi, Tagalog, Tamil, Thai, Vietnamese."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:MarketContext",
+      "segmentName": "North America Language Market",
+      "geography": "North America",
+      "characteristics": "Supported languages include US English, Canada French."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:MarketContext",
+      "segmentName": "South America Language Market",
+      "geography": "South America",
+      "characteristics": "Supported languages include Brazilian Portuguese, Latin am. Spanish."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e6",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6",
+      "target": "e7",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e5",
+      "target": "e9",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e10",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e11",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e12",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e13",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e14",
+      "type": "pekg:targets"
+    }
+  ]
+}

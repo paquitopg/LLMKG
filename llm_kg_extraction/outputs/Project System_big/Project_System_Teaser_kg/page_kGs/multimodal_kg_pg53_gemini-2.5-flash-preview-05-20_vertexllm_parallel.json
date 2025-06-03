@@ -1,0 +1,242 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "Ambitious R&D roadmap based on a one-of-a kind track-record of innovations",
+      "keyStrengths": [
+        "innovations",
+        "track-record of innovations",
+        "R&D roadmap"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "Eleven VDD"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "SYSTRAN translate",
+      "category": "Free web translation",
+      "description": "Systran\u2019s solution as a Free web translation, open to everyone"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "SYSTRAN translate PRO",
+      "category": "B2C Cloud SaaS",
+      "description": "Systran\u2019s solution as a B2C Cloud SaaS, open to everyone, with online subscription, payment and configuration"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "SYSTRAN modelStudio",
+      "category": "Application",
+      "description": "An application to customize Systran\u2019s models by retraining them using private translation data"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "SYSTRAN translate Enterprise",
+      "category": "B2B Cloud SaaS",
+      "description": "Systran\u2019s solution as a B2B Cloud SaaS, open to everyone, with online subscription, payment and configuration"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "MODEL GENERATOR",
+      "description": "Capability or feature for customizing models"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:MarketContext",
+      "segmentName": "Cloud based products"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "New client leads",
+      "description": "Generate new leads for potential clients for those who are potentially interested in Systran\u2019s various solution"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "New client typologies (B2C)",
+      "description": "Address different client typologies: individuals, small businesses or departments of large companies that do not have the budget for private hosting or the need for high security levels"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Added value for clients",
+      "description": "Autonomize clients in the process of customizing their models with their own translation memory"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "New client typologies (B2B)",
+      "description": "Address B2B clients those in need of a translation model for a specific domain without the need for high security levels and private hosting"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Technology",
+      "name": "Translation memory"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Technology",
+      "name": "Private translation data"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "status": "Teaser",
+      "typeSought": "Sale"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "SYSTRAN translate launch",
+      "eventType": "Product Launch",
+      "dateOrYear": "2020"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "SYSTRAN translate PRO launch",
+      "eventType": "Product Launch",
+      "dateOrYear": "2021"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "SYSTRAN modelStudio launch",
+      "eventType": "Product Launch",
+      "dateOrYear": "2022"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "SYSTRAN translate Enterprise planned launch",
+      "eventType": "Product Launch (Planned)",
+      "dateOrYear": "2023"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6",
+      "target": "e12",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e7",
+      "target": "e13",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e8",
+      "target": "e14",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e15",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e8",
+      "target": "e17",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e8",
+      "target": "e16",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e18",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e18",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:experiencedEvent"
+    }
+  ]
+}

@@ -1,0 +1,907 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran",
+      "description": "A pioneer and global leader in on-premise and cloud-based translation software, and a trusted global leader in neural machine translation software. The Group has evolved continuously with breakthrough innovations and secured solutions.",
+      "foundedYear": 1968,
+      "keyStrengths": [
+        "Acclaimed tech stack",
+        "unique portfolio of sensitive clients",
+        "breakthrough innovations",
+        "secured solutions",
+        "wide, diversified, loyal and growing customer base",
+        "solid track record of sustainable growth"
+      ],
+      "industry": "Translation Software",
+      "sector": "Technology"
+    },
+    {
+      "id": "e2",
+      "type": "Investment Bank",
+      "name": "Rothschild & Co",
+      "roleInContext": "Financial Advisor"
+    },
+    {
+      "id": "e3",
+      "type": "Investment Bank",
+      "name": "Samsung Securities",
+      "roleInContext": "Financial Advisor"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System",
+      "status": "Teaser Stage",
+      "typeSought": "Sale",
+      "keyInvestmentHighlights": [
+        "Acclaimed tech stack and unique portfolio of sensitive clients",
+        "Founded in 1968 and based in Paris, Systran is a pioneer and global leader in on-premise and cloud-based translation software",
+        "The Group has evolved continuously with breakthrough innovations and secured solutions, recently introducing Neural Machine Translation to corporate users via 3 offers: Systran Pure Neural\u00ae Software(\u201cSPNS\u201d), Systran Translate Pro and Systran Model Studio",
+        "Systran has successfully built a wide, diversified, loyal and growing customer across highly sensitive sectors: defense & security, technology & software, industry & services, e-commerce, language service providers and the public sector",
+        "The Group employs 108 people in 4 offices: Paris, San Diego, Tokyo and Daejeon",
+        "Systran has shown a solid track record of sustainable growth with a +11% CAGR over the FY19A-FY22B period"
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "on-premise translation software",
+      "category": "Translation Software"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "cloud-based translation software",
+      "category": "Translation Software"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Technology",
+      "name": "Neural Machine Translation",
+      "description": "breakthrough innovation in translation software"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Pure Neural\u00ae Software",
+      "alias": [
+        "SPNS"
+      ],
+      "category": "Translation Software",
+      "description": "Neural Machine Translation for corporate users"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Translate Pro",
+      "category": "Translation Software",
+      "description": "Neural Machine Translation for corporate users"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Model Studio",
+      "category": "Translation Software",
+      "description": "Neural Machine Translation for corporate users"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:MarketContext",
+      "segmentName": "on-premise translation software",
+      "characteristics": "Systran is a global leader"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:MarketContext",
+      "segmentName": "cloud-based translation software",
+      "characteristics": "Systran is a global leader"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "defense & security",
+      "description": "highly sensitive sector"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "technology & software",
+      "description": "highly sensitive sector"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "industry & services",
+      "description": "highly sensitive sector"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "e-commerce",
+      "description": "highly sensitive sector"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "language service providers",
+      "description": "highly sensitive sector"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "public sector",
+      "description": "highly sensitive sector"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Financial institutions"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "IT services"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Manufacturing"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Healthcare"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:Company",
+      "name": "American Express"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:Company",
+      "name": "HSBC"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:Company",
+      "name": "Citi"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:Company",
+      "name": "Societe Generale"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:Company",
+      "name": "Autodesk"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:Company",
+      "name": "Adobe"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:Company",
+      "name": "OVH.com"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:Company",
+      "name": "Micro Focus"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:Company",
+      "name": "Continental"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:Company",
+      "name": "Nestle"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:Company",
+      "name": "PSA Groupe"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:Company",
+      "name": "Schneider Electric"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:Company",
+      "name": "AstraZeneca"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:Company",
+      "name": "Novartis"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:Company",
+      "name": "Roche"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:Company",
+      "name": "Blizzard"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:Company",
+      "name": "Medallia"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:Company",
+      "name": "Gjensidige"
+    },
+    {
+      "id": "e41",
+      "type": "Government Agency",
+      "name": "French Ministry of Defense"
+    },
+    {
+      "id": "e42",
+      "type": "Government Agency",
+      "name": "Australian Government Department of Defence"
+    },
+    {
+      "id": "e43",
+      "type": "International Organization",
+      "name": "Interpol"
+    },
+    {
+      "id": "e44",
+      "type": "Government Agency",
+      "name": "US Department of Defense"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenues",
+      "valueString": "\u20ac16.0m",
+      "fiscalPeriod": "FY21A",
+      "scope": "Gross reported revenue"
+    },
+    {
+      "id": "e46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARR",
+      "valueString": "\u20ac7.7m",
+      "fiscalPeriod": "FY21A",
+      "isRecurring": true,
+      "scope": "recurring revenue of the month x 12 for a given product, calculated on SSA and SSI only"
+    },
+    {
+      "id": "e47",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Sale",
+      "valueString": "\u20ac13.8m",
+      "fiscalPeriod": "FY19A",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e48",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Sale",
+      "valueString": "\u20ac14.8m",
+      "fiscalPeriod": "FY20A",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e49",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Sale",
+      "valueString": "\u20ac15.9m",
+      "fiscalPeriod": "FY21A",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e50",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Sale",
+      "valueString": "\u20ac19.0m",
+      "fiscalPeriod": "FY22B",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e51",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Sale",
+      "valueString": "\u20ac22.7m",
+      "fiscalPeriod": "FY23BP",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e52",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Sale",
+      "valueString": "\u20ac31.2m",
+      "fiscalPeriod": "FY24BP",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e53",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Sale",
+      "valueString": "\u20ac41.6m",
+      "fiscalPeriod": "FY25BP",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e54",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Sale",
+      "valueString": "\u20ac53.2m",
+      "fiscalPeriod": "FY26BP",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e55",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "\u20ac1.8m",
+      "fiscalPeriod": "FY19A",
+      "isAdjustedOrProforma": true,
+      "scope": "excl. IFRS16 leases"
+    },
+    {
+      "id": "e56",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "\u20ac2.1m",
+      "fiscalPeriod": "FY20A",
+      "isAdjustedOrProforma": true,
+      "scope": "excl. IFRS16 leases"
+    },
+    {
+      "id": "e57",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "\u20ac2.0m",
+      "fiscalPeriod": "FY21A",
+      "isAdjustedOrProforma": true,
+      "scope": "excl. IFRS16 leases"
+    },
+    {
+      "id": "e58",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "\u20ac2.2m",
+      "fiscalPeriod": "FY22B",
+      "isAdjustedOrProforma": true,
+      "scope": "excl. IFRS16 leases"
+    },
+    {
+      "id": "e59",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "\u20ac2.4m",
+      "fiscalPeriod": "FY23BP",
+      "isAdjustedOrProforma": true,
+      "scope": "excl. IFRS16 leases"
+    },
+    {
+      "id": "e60",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "\u20ac4.8m",
+      "fiscalPeriod": "FY24BP",
+      "isAdjustedOrProforma": true,
+      "scope": "excl. IFRS16 leases"
+    },
+    {
+      "id": "e61",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "\u20ac10.8m",
+      "fiscalPeriod": "FY25BP",
+      "isAdjustedOrProforma": true,
+      "scope": "excl. IFRS16 leases"
+    },
+    {
+      "id": "e62",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "\u20ac16.9m",
+      "fiscalPeriod": "FY26BP",
+      "isAdjustedOrProforma": true,
+      "scope": "excl. IFRS16 leases"
+    },
+    {
+      "id": "e63",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue CAGR",
+      "valueString": "+11%",
+      "fiscalPeriod": "FY19A-FY22B"
+    },
+    {
+      "id": "e64",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue CAGR",
+      "valueString": "+29%",
+      "fiscalPeriod": "FY22BP-FY26BP"
+    },
+    {
+      "id": "e65",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from government org.",
+      "valueString": "26%",
+      "fiscalPeriod": "FY21A"
+    },
+    {
+      "id": "e66",
+      "type": "pekg:Headcount",
+      "headcountName": "Total Employees",
+      "totalEmployees": 108,
+      "dateOrYear": "Current"
+    },
+    {
+      "id": "e67",
+      "type": "pekg:Location",
+      "locationName": "Paris",
+      "locationType": "Office"
+    },
+    {
+      "id": "e68",
+      "type": "pekg:Location",
+      "locationName": "San Diego",
+      "locationType": "Office"
+    },
+    {
+      "id": "e69",
+      "type": "pekg:Location",
+      "locationName": "Tokyo",
+      "locationType": "Office"
+    },
+    {
+      "id": "e70",
+      "type": "pekg:Location",
+      "locationName": "Daejeon",
+      "locationType": "Office"
+    },
+    {
+      "id": "e71",
+      "type": "pekg:ProductOrService",
+      "name": "Annual licenses",
+      "category": "Revenue Stream",
+      "pricingModelInfo": "46% of FY21A ARR, 22% of FY21A Revenue"
+    },
+    {
+      "id": "e72",
+      "type": "pekg:ProductOrService",
+      "name": "Perpetual licenses",
+      "category": "Revenue Stream",
+      "pricingModelInfo": "32% of FY21A Revenue"
+    },
+    {
+      "id": "e73",
+      "type": "pekg:ProductOrService",
+      "name": "Maintenance",
+      "category": "Revenue Stream",
+      "pricingModelInfo": "54% of FY21A ARR, 28% of FY21A Revenue"
+    },
+    {
+      "id": "e74",
+      "type": "pekg:ProductOrService",
+      "name": "Service",
+      "category": "Revenue Stream",
+      "pricingModelInfo": "8% of FY21A Revenue"
+    },
+    {
+      "id": "e75",
+      "type": "pekg:ProductOrService",
+      "name": "Cloud",
+      "category": "Revenue Stream",
+      "pricingModelInfo": "1% of FY21A Revenue"
+    },
+    {
+      "id": "e76",
+      "type": "pekg:ProductOrService",
+      "name": "Others",
+      "category": "Revenue Stream",
+      "pricingModelInfo": "9% of FY21A Revenue"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e8",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e9",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e10",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e36",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e40",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e41",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e42",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e43",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e44",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e45",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e47",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e48",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e49",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e50",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e51",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e52",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e53",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e54",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e55",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e56",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e57",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e58",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e59",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e60",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e61",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e62",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e63",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e64",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e65",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e66",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e67",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e68",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e69",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e70",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e71",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e72",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e73",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e74",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e75",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e76",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

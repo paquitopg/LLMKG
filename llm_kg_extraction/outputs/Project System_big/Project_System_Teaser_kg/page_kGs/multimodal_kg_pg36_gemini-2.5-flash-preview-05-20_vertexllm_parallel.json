@@ -1,0 +1,374 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "alias": [
+        "Systran"
+      ],
+      "description": "Trusted specialized translation services partner to all defense players worldwide",
+      "keyStrengths": [
+        "highly secure and powerful solution",
+        "processes multi-lingual and multi-source data at large scale to provide actionable intelligence"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Pure Neural\u00ae Server",
+      "category": "automated translation software",
+      "description": "On-premise offering designed for government environments with sensitive data; Scalable products to meet required throughput levels and connect with other government platforms tool"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Specialized Translation Services",
+      "category": "translation services",
+      "description": "Trusted specialized translation services partner to all defense players worldwide"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "Automated Translation Software Solutions",
+      "category": "software solutions"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Technology",
+      "name": "Pure Neural",
+      "description": "Underlying technology for Systran Pure Neural\u00ae Server"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Technology",
+      "name": "Customized Language E-pairing Capabilities"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Technology",
+      "name": "Specialized Data Models"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Technology",
+      "name": "In-house Linguistic Expertise"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Defense"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Security Organizations"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Military Intelligence"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Territory Surveillance"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Counter-terrorism"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Cyber Defense"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Anti-money Laundering"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Terrorist Financing"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Government Environments"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Language Pairs Supported",
+      "kpiValueString": "140+",
+      "description": "with customized language e-pairing capabilities"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "status": "potential transaction",
+      "typeSought": "unspecified"
+    },
+    {
+      "id": "e23",
+      "type": "Governmental",
+      "name": "Defense and Security Organizations"
+    },
+    {
+      "id": "e24",
+      "type": "Governmental",
+      "name": "Government Platforms"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:Location",
+      "locationName": "North America",
+      "locationType": "Region",
+      "officeSpecificInfo": "Defense and governmental customer presence"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:Location",
+      "locationName": "Europe",
+      "locationType": "Region",
+      "officeSpecificInfo": "Defense and governmental customer presence"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:Location",
+      "locationName": "Middle East",
+      "locationType": "Region",
+      "officeSpecificInfo": "Defense and governmental customer presence"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:Location",
+      "locationName": "Asia",
+      "locationType": "Region",
+      "officeSpecificInfo": "Defense and governmental customer presence"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:Location",
+      "locationName": "Oceania",
+      "locationType": "Region",
+      "officeSpecificInfo": "Defense and governmental customer presence"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:Location",
+      "locationName": "Africa",
+      "locationType": "Region",
+      "officeSpecificInfo": "Defense and governmental customer presence"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:Location",
+      "locationName": "HQ",
+      "locationType": "Deployment Location"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:Location",
+      "locationName": "On the Field",
+      "locationType": "Deployment Location"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:MarketContext",
+      "segmentName": "Defense Translation Services",
+      "geography": "Worldwide",
+      "characteristics": "Trusted specialized translation services partner to all defense players worldwide"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:MarketContext",
+      "segmentName": "Governmental Translation Solutions",
+      "geography": "Worldwide",
+      "characteristics": "Worldwide solution deployment"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e5",
+      "target": "e8",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e5",
+      "target": "e14",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e15",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e16",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e18",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e22",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e22",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e5",
+      "target": "e24",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:operatesIn"
+    }
+  ]
+}

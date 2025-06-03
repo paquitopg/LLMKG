@@ -1,0 +1,518 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "Longstanding track record of innovation; A long history as translation forerunner to support demanding customers in a quickly mutating translation environment",
+      "keyStrengths": [
+        "Specialty translation",
+        "Pioneering digital translation player",
+        "Leading Neural Machine translation player"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "Gatcho Group"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "Euronext"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "CSLi"
+    },
+    {
+      "id": "e5",
+      "type": "Corporate",
+      "name": "STIC"
+    },
+    {
+      "id": "e6",
+      "type": "Corporate",
+      "name": "Softbank Ventures Asia"
+    },
+    {
+      "id": "e7",
+      "type": "Corporate",
+      "name": "KIP",
+      "alias": [
+        "Korea Investment Partners Co. Ltd."
+      ]
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Company",
+      "name": "Samsung"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Company",
+      "name": "World Computational Linguistics Association"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Person",
+      "fullName": "Peter Toma"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Person",
+      "fullName": "V. Godard"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Position",
+      "titleName": "CEO"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "Machine Translation",
+      "description": "World\u2019s First Machine Translation"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:ProductOrService",
+      "name": "Babelfish",
+      "description": "1st online translation tool"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:ProductOrService",
+      "name": "Hybrid Translation Engine",
+      "description": "1st hybrid translation engine combining linguistic rules with statistical processing"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:ProductOrService",
+      "name": "Translation Solutions"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:ProductOrService",
+      "name": "S-Translator",
+      "category": "application"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:ProductOrService",
+      "name": "Samsung Galaxy S series",
+      "category": "smartphone"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:ProductOrService",
+      "name": "Note smartphones",
+      "category": "smartphone"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:ProductOrService",
+      "name": "PNMT\u00ae",
+      "description": "1st Neural translation engine",
+      "category": "Neural translation engine"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Pure Neural\u00ae Server",
+      "description": "New generation of the server solution, with a new user interface and an optimized architecture to enhance neural translations\u2019 performance",
+      "category": "server solution"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:Technology",
+      "name": "Neural Translation"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "US Intelligence Community"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:MarketContext",
+      "segmentName": "Translation Environment",
+      "characteristics": "quickly mutating translation environment"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Creation of the Group in San Diego",
+      "eventType": "Founding",
+      "dateOrYear": "1968"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Acquisition by French Gatcho Group",
+      "eventType": "Acquisition",
+      "dateOrYear": "1975"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Listed on Euronext",
+      "eventType": "Public Listing",
+      "dateOrYear": "1997"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Acquisition by CSLi",
+      "eventType": "Acquisition",
+      "dateOrYear": "2008"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Euronext delisting",
+      "eventType": "Delisting",
+      "dateOrYear": "2009"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Acquisition by Funds",
+      "eventType": "Acquisition",
+      "dateOrYear": "2018"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "V. Godard becomes CEO",
+      "eventType": "Leadership Change",
+      "dateOrYear": "2022"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "World\u2019s First Machine Translation for the US Intelligence Community",
+      "eventType": "Product Launch",
+      "dateOrYear": "1975"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Contribution to the creation of the legendary Babelfish",
+      "eventType": "Product Development",
+      "dateOrYear": "2008"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Creation of the 1st hybrid translation engine",
+      "eventType": "Product Development",
+      "dateOrYear": "2009"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Appointment as official provider of translation solutions for Samsung",
+      "eventType": "Partnership",
+      "dateOrYear": "2013"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Launch of the 1st Neural translation engine named PNMT\u00ae",
+      "eventType": "Product Launch",
+      "dateOrYear": "2016"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Award from World Computational Linguistics Association",
+      "eventType": "Award",
+      "dateOrYear": "2017"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "New generation of the server solution: Systran Pure Neural\u00ae Server",
+      "eventType": "Product Launch",
+      "dateOrYear": "2020"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:Location",
+      "locationName": "San Diego",
+      "locationType": "City"
+    },
+    {
+      "id": "e40",
+      "type": "Investment Bank",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e41",
+      "type": "Investment Bank",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "status": "Ongoing"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e25",
+      "target": "e10",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e26",
+      "target": "e2",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e27",
+      "target": "e3",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e28",
+      "target": "e4",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e29",
+      "target": "e3",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e30",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e30",
+      "target": "e6",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e30",
+      "target": "e7",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e5",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e6",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e7",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e11",
+      "target": "e12",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e12",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e13",
+      "target": "e23",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e16",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e17",
+      "target": "e18",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e17",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e36",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e37",
+      "target": "e9",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e21",
+      "target": "e22",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e42",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e40",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e41",
+      "type": "pekg:advisedBy"
+    }
+  ]
+}

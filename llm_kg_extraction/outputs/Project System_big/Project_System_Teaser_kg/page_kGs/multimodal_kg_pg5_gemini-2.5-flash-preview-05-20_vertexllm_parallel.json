@@ -1,0 +1,93 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Sale",
+      "status": "Teaser Phase",
+      "dealRationaleHighlights": [],
+      "keyInvestmentHighlights": [],
+      "transactionPerimeter": "Target Company Systran SAS"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Sell-side Advisor"
+    },
+    {
+      "id": "e4",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Sell-side Advisor"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company mentioned in the confidentiality statement, likely a potential acquirer or a party involved in the transaction."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Technology",
+      "name": "Artificial Intelligence",
+      "description": "Represented visually by the brain-like structure composed of interconnected nodes emerging from a laptop, suggesting advanced computational and learning capabilities."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Technology",
+      "name": "Natural Language Processing",
+      "description": "Represented visually by various language characters (e.g., Chinese/Japanese characters, 'A' with a star) and translation-related icons on the laptop screen, indicating capabilities in understanding, processing, and generating human language."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Language Translation Solutions",
+      "category": "Software",
+      "description": "Implied by the visual elements of language characters and translation icons on the laptop screen, suggesting a core offering related to automated language translation."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e2",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    }
+  ]
+}

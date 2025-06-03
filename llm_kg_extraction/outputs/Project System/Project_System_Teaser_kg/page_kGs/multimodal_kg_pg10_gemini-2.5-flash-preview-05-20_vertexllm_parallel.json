@@ -1,0 +1,521 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran",
+      "description": "The Group has shown a solid track record of sustainable growth and strong resilience",
+      "keyStrengths": [
+        "solid track record of sustainable growth",
+        "strong resilience"
+      ],
+      "growthStrategySummary": "Systran recently operated a change in its business strategy with the launch of complementary offers (Systran Translate Pro and Systran Model Studio) and will launch Systran Translate Enterprise targeted at SME\u2019s. The launch of the Cloud offer is expected to drive \u20ac16m+ revenue in FY26BP, allowing the Group to significantly increase its EBITDA margin over the Business Plan."
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm for Project System"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm for Project System"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System",
+      "status": "Teaser",
+      "keyInvestmentHighlights": [
+        "Resilient historical financials, paving the way for Systran\u2019s global scale-up",
+        "solid track record of sustainable growth and strong resilience with a +11% CAGR over the FY19A-FY22B period",
+        "expected to generate a +29% CAGR over the FY22B-FY27BP period",
+        "change in its business strategy with the launch of complementary offers (Systran Translate Pro and Systran Model Studio)",
+        "launch Systran Translate Enterprise targeted at SME\u2019s",
+        "launch of the Cloud offer is expected to drive \u20ac16m+ revenue in FY26BP, allowing the Group to significantly increase its EBITDA margin over the Business Plan"
+      ],
+      "dealRationaleHighlights": [
+        "global scale-up"
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Translate Pro",
+      "category": "complementary offer"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Model Studio",
+      "category": "complementary offer"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Translate Enterprise",
+      "category": "new launch"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Cloud offer",
+      "category": "service",
+      "description": "expected to drive \u20ac16m+ revenue in FY26BP"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "SME's"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Company",
+      "name": "KPMG"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Revenue",
+      "valueString": "13.8",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Revenue",
+      "valueString": "14.8",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Revenue",
+      "valueString": "15.9",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Revenue",
+      "valueString": "19.0",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Revenue",
+      "valueString": "22.7",
+      "fiscalPeriod": "FY23BP",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Revenue",
+      "valueString": "31.2",
+      "fiscalPeriod": "FY24BP",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Revenue",
+      "valueString": "41.6",
+      "fiscalPeriod": "FY25BP",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Revenue",
+      "valueString": "53.2",
+      "fiscalPeriod": "FY26BP",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA (excl. IFRS16 leases)",
+      "valueString": "1.8",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA (excl. IFRS16 leases)",
+      "valueString": "2.1",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA (excl. IFRS16 leases)",
+      "valueString": "2.0",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA (excl. IFRS16 leases)",
+      "valueString": "2.2",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA (excl. IFRS16 leases)",
+      "valueString": "2.4",
+      "fiscalPeriod": "FY23BP",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA (excl. IFRS16 leases)",
+      "valueString": "4.8",
+      "fiscalPeriod": "FY24BP",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA (excl. IFRS16 leases)",
+      "valueString": "10.8",
+      "fiscalPeriod": "FY25BP",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA (excl. IFRS16 leases)",
+      "valueString": "16.9",
+      "fiscalPeriod": "FY26BP",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA margin (excl. IFRS16 leases)",
+      "valueString": "12.8%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA margin (excl. IFRS16 leases)",
+      "valueString": "13.9%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA margin (excl. IFRS16 leases)",
+      "valueString": "12.8%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA margin (excl. IFRS16 leases)",
+      "valueString": "11.4%",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA margin (excl. IFRS16 leases)",
+      "valueString": "10.6%",
+      "fiscalPeriod": "FY23BP",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA margin (excl. IFRS16 leases)",
+      "valueString": "15.3%",
+      "fiscalPeriod": "FY24BP",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA margin (excl. IFRS16 leases)",
+      "valueString": "25.9%",
+      "fiscalPeriod": "FY25BP",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA margin (excl. IFRS16 leases)",
+      "valueString": "31.9%",
+      "fiscalPeriod": "FY26BP",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Change in Business Strategy",
+      "eventType": "Strategic Change",
+      "description": "Systran recently operated a change in its business strategy with the launch of complementary offers (Systran Translate Pro and Systran Model Studio) and will launch Systran Translate Enterprise targeted at SME\u2019s"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenues CAGR",
+      "valueString": "+11%",
+      "fiscalPeriod": "FY19A-FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenues CAGR",
+      "valueString": "+29%",
+      "fiscalPeriod": "FY22BP-FY26BP",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report, Company Information"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CAGR",
+      "valueString": "+29%",
+      "fiscalPeriod": "FY22B-FY27BP",
+      "scope": "Group",
+      "sourceNote": "KPMG VDD report, Company Information"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e7",
+      "target": "e9",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e36",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e36",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    }
+  ]
+}

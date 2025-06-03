@@ -1,0 +1,524 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran",
+      "keyStrengths": [
+        "cutting edge neural machine translation software for sensitive clients",
+        "pioneering use of new technologies",
+        "systematic and validated support 1st-class services",
+        "unique customer portfolio across highly sensitive sectors",
+        "unmatched offering of verified machine translation software"
+      ],
+      "growthStrategySummary": "Accelerate on the cloud offering, Increase sales efforts to foster penetration of the B2C / SME segment, Foster R&D of transcript and context awareness translation, Enter voice-translation market"
+    },
+    {
+      "id": "e2",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:TransactionContext",
+      "contextName": "Key investment highlights",
+      "typeSought": "Investment",
+      "status": "Opportunity",
+      "keyInvestmentHighlights": [
+        "A unique opportunity to invest in a cutting edge neural machine translation software for sensitive clients",
+        "An expanding \u20ac760m machine translation market (+26% p.a.)",
+        "Unmatched offering of verified machine translation software",
+        "Pioneering use of new technologies",
+        "Systematic and validated support 1st-class services",
+        "Unique customer portfolio across highly sensitive sectors",
+        "An ambitious strategy to fuel further growth and explore new business segments"
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "neural machine translation software",
+      "category": "Software",
+      "description": "cutting edge software for sensitive clients"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:MarketContext",
+      "segmentName": "machine translation",
+      "sizeInfo": "\u20ac760m",
+      "growthInfo": "+26% p.a.",
+      "characteristics": "expanding",
+      "sourceOfData": "Current Page Text"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Market Size",
+      "valueString": "\u20ac760m",
+      "scope": "machine translation market"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Market Growth Rate",
+      "valueString": "+26% p.a.",
+      "scope": "machine translation market"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "electronics"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "defense/security"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "IT"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "financial services"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "public sector"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Technology",
+      "name": "context awareness",
+      "description": "new technology R&D"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Technology",
+      "name": "transcript technology",
+      "description": "new technology R&D"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "1st player to implement advanced machine translation technologies",
+      "eventType": "Technology Adoption",
+      "dateOrYear": "1970s"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "1st player to implement neural technologies in machine translation",
+      "eventType": "Technology Adoption"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:Location",
+      "locationName": "US",
+      "locationType": "Country"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:Location",
+      "locationName": "France",
+      "locationType": "Country"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:Location",
+      "locationName": "Korea",
+      "locationType": "Country"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Long-term customers",
+      "kpiValueString": "262",
+      "description": "quickly-rising demand"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:Company",
+      "name": "Palantir"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:Company",
+      "name": "Donnelley"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:ProductOrService",
+      "name": "cloud offering",
+      "category": "Service"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:ProductOrService",
+      "name": "Systran translate Pro",
+      "category": "Cloud Offering"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:ProductOrService",
+      "name": "verifying solutions",
+      "category": "Software"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "B2C segment"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "SME segment"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:Company",
+      "name": "OTT companies"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:Company",
+      "name": "media companies"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:ProductOrService",
+      "name": "voice-translation",
+      "category": "Product/Service",
+      "description": "new market/segment to enter"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:ProductOrService",
+      "name": "open-source local solution",
+      "category": "Software",
+      "description": "offers comprehensive translation capabilities, with qualitative products verified by various customers (on-premise, private and public cloud)"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:ProductOrService",
+      "name": "special engines",
+      "category": "Software",
+      "description": "created using customer data"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:ProductOrService",
+      "name": "APIs",
+      "category": "Software Component"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:ProductOrService",
+      "name": "plugins",
+      "category": "Software Component"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:ProductOrService",
+      "name": "connectors",
+      "category": "Software Component"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:ProductOrService",
+      "name": "customer-centric support solutions",
+      "category": "Support Service",
+      "description": "24/7 support across US, France, Korea"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:ProductOrService",
+      "name": "translation engine upgrades",
+      "category": "Service"
+    },
+    {
+      "id": "e39",
+      "type": "National",
+      "name": "French government"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:ProductOrService",
+      "name": "Business Intelligence solutions",
+      "category": "Software"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:ProductOrService",
+      "name": "big data solutions",
+      "category": "Software"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:ProductOrService",
+      "name": "analytical solutions",
+      "category": "Software"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:Company",
+      "name": "Corporations"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Corporations using machine translation",
+      "kpiValueString": "10%",
+      "kpiDateOrPeriod": "by 2025",
+      "description": "expected penetration"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:ProductOrService",
+      "name": "machine translation",
+      "category": "Software"
+    },
+    {
+      "id": "e46",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e6",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e43",
+      "target": "e45",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e43",
+      "target": "e44",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e16",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e17",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:seeksTransaction"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e36",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e39",
+      "target": "e1",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e40",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e41",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e42",
+      "type": "pekg:offers"
+    }
+  ]
+}

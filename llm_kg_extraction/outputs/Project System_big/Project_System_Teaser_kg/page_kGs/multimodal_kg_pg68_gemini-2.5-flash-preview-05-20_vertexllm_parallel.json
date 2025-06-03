@@ -1,0 +1,1486 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "Target Company for Project System_big"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "Rothschild & Co"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "Samsung Securities"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "KPMG"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Document owner or related party (Confidential watermark)"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Company",
+      "name": "SLATAM",
+      "description": "Subsidiary of Systran SAS, mentioned in financial adjustments"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Company",
+      "name": "SJGK",
+      "description": "Subsidiary of Systran SAS, mentioned in financial adjustments"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Company",
+      "name": "SYSLUX",
+      "description": "Dormant holding company of Systran SAS, mentioned in financial adjustments"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "status": "Ongoing",
+      "typeSought": "Sale/Acquisition (implied by teaser document)"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Location",
+      "locationName": "Japan",
+      "locationType": "Country"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Location",
+      "locationName": "Mexico",
+      "locationType": "Country"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "SJGK signed large non-recurring contract",
+      "eventType": "Contract Signing",
+      "dateOrYear": "2021"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Subsidiaries opened in Japan",
+      "eventType": "Subsidiary Opening",
+      "dateOrYear": "end of 2019"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Subsidiaries opened in Mexico",
+      "eventType": "Subsidiary Opening",
+      "dateOrYear": "end of 2021"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Reported EBITDA",
+      "valueString": "1,367",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Reported EBITDA",
+      "valueString": "1,627",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Reported EBITDA",
+      "valueString": "579",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Reported EBITDA",
+      "valueString": "691",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Reported EBITDA as % of revenue",
+      "valueString": "9.9%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Reported EBITDA as % of revenue",
+      "valueString": "10.6%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Reported EBITDA as % of revenue",
+      "valueString": "3.6%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Reported EBITDA as % of revenue",
+      "valueString": "3.5%",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Accounting adjustments",
+      "valueString": "(151)",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Accounting adjustments",
+      "valueString": "83",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Accounting adjustments",
+      "valueString": "149",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Accounting adjustments",
+      "valueString": "108",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Value added tax (VAT)",
+      "valueString": "79",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Value added tax (VAT)",
+      "valueString": "107",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Value added tax (VAT)",
+      "valueString": "58",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Value added tax (VAT)",
+      "valueString": "67",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Apprenticeship tax",
+      "valueString": "(22)",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Apprenticeship tax",
+      "valueString": "-",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Apprenticeship tax",
+      "valueString": "-",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Apprenticeship tax",
+      "valueString": "-",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Research Tax Credit (RTC)",
+      "valueString": "(207)",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Research Tax Credit (RTC)",
+      "valueString": "(24)",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Research Tax Credit (RTC)",
+      "valueString": "91",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Research Tax Credit (RTC)",
+      "valueString": "41",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Normative adjustments",
+      "valueString": "540",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Normative adjustments",
+      "valueString": "626",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Normative adjustments",
+      "valueString": "1,188",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Normative adjustments",
+      "valueString": "1,375",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-recurring items",
+      "valueString": "200",
+      "fiscalPeriod": "FY19A",
+      "isRecurring": false,
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-recurring items",
+      "valueString": "(1)",
+      "fiscalPeriod": "FY20A",
+      "isRecurring": false,
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e47",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-recurring items",
+      "valueString": "311",
+      "fiscalPeriod": "FY21A",
+      "isRecurring": false,
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e48",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Non-recurring items",
+      "valueString": "724",
+      "fiscalPeriod": "FY22B",
+      "isRecurring": false,
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e49",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Fees",
+      "valueString": "(25)",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e50",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Fees",
+      "valueString": "255",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e51",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Fees",
+      "valueString": "217",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e52",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Fees",
+      "valueString": "105",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e53",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Change in business structure",
+      "valueString": "(42)",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e54",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Change in business structure",
+      "valueString": "89",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e55",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Change in business structure",
+      "valueString": "490",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e56",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Change in business structure",
+      "valueString": "463",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e57",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top management remuneration",
+      "valueString": "244",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e58",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top management remuneration",
+      "valueString": "241",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e59",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top management remuneration",
+      "valueString": "42",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e60",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top management remuneration",
+      "valueString": "83",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e61",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Client risk",
+      "valueString": "-",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e62",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Client risk",
+      "valueString": "-",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e63",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Client risk",
+      "valueString": "123",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e64",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Client risk",
+      "valueString": "-",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e65",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Severance paid",
+      "valueString": "163",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e66",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Severance paid",
+      "valueString": "42",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e67",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Severance paid",
+      "valueString": "6",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e68",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Severance paid",
+      "valueString": "-",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e69",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perimeter adjustments",
+      "valueString": "16",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e70",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perimeter adjustments",
+      "valueString": "(281)",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e71",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perimeter adjustments",
+      "valueString": "114",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e72",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perimeter adjustments",
+      "valueString": "(4)",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e73",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Contrib. SLATAM & SJGK (Perimeter)",
+      "valueString": "7",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e74",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Contrib. SLATAM & SJGK (Perimeter)",
+      "valueString": "(292)",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e75",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Contrib. SLATAM & SJGK (Perimeter)",
+      "valueString": "104",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e76",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Contrib. SLATAM & SJGK (Perimeter)",
+      "valueString": "(4)",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e77",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Contrib. Holdings (Perimeter)",
+      "valueString": "9",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e78",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Contrib. Holdings (Perimeter)",
+      "valueString": "11",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e79",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Contrib. Holdings (Perimeter)",
+      "valueString": "10",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e80",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Contrib. Holdings (Perimeter)",
+      "valueString": "-",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e81",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total adjustments",
+      "valueString": "406",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e82",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total adjustments",
+      "valueString": "428",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e83",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total adjustments",
+      "valueString": "1,451",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e84",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total adjustments",
+      "valueString": "1,479",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e85",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "1,772",
+      "fiscalPeriod": "FY19A",
+      "isAdjustedOrProforma": true,
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e86",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "2,056",
+      "fiscalPeriod": "FY20A",
+      "isAdjustedOrProforma": true,
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e87",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "2,029",
+      "fiscalPeriod": "FY21A",
+      "isAdjustedOrProforma": true,
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e88",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA",
+      "valueString": "2,170",
+      "fiscalPeriod": "FY22B",
+      "isAdjustedOrProforma": true,
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e89",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA as % of adjusted revenue",
+      "valueString": "12.8%",
+      "fiscalPeriod": "FY19A",
+      "isAdjustedOrProforma": true,
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e90",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA as % of adjusted revenue",
+      "valueString": "13.9%",
+      "fiscalPeriod": "FY20A",
+      "isAdjustedOrProforma": true,
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e91",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA as % of adjusted revenue",
+      "valueString": "12.8%",
+      "fiscalPeriod": "FY21A",
+      "isAdjustedOrProforma": true,
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e92",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA as % of adjusted revenue",
+      "valueString": "11.4%",
+      "fiscalPeriod": "FY22B",
+      "isAdjustedOrProforma": true,
+      "scope": "Company",
+      "sourceNote": "KPMG, Management"
+    },
+    {
+      "id": "e93",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue",
+      "valueString": "13,810",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e94",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue",
+      "valueString": "15,296",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e95",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue",
+      "valueString": "16,027",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e96",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue",
+      "valueString": "19,529",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e97",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Contrib. SLATAM & SJGK (Revenue)",
+      "valueString": "-",
+      "fiscalPeriod": "FY19A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e98",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Contrib. SLATAM & SJGK (Revenue)",
+      "valueString": "(463)",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e99",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Contrib. SLATAM & SJGK (Revenue)",
+      "valueString": "(152)",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e100",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Contrib. SLATAM & SJGK (Revenue)",
+      "valueString": "(497)",
+      "fiscalPeriod": "FY22B",
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e101",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted revenue",
+      "valueString": "13,810",
+      "fiscalPeriod": "FY19A",
+      "isAdjustedOrProforma": true,
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e102",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted revenue",
+      "valueString": "14,833",
+      "fiscalPeriod": "FY20A",
+      "isAdjustedOrProforma": true,
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e103",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted revenue",
+      "valueString": "15,875",
+      "fiscalPeriod": "FY21A",
+      "isAdjustedOrProforma": true,
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e104",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted revenue",
+      "valueString": "19,032",
+      "fiscalPeriod": "FY22B",
+      "isAdjustedOrProforma": true,
+      "scope": "Company",
+      "sourceNote": "KPMG, Management",
+      "currency": "Euro k"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e9",
+      "target": "e10",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e9",
+      "target": "e11",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:hasSubsidiary"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:hasSubsidiary"
+    },
+    {
+      "source": "e8",
+      "target": "e1",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e7",
+      "target": "e14",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e6",
+      "target": "e16",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e7",
+      "target": "e15",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e15",
+      "target": "e12",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e16",
+      "target": "e13",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e36",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e40",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e41",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e42",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e43",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e44",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e45",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e47",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e48",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e49",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e50",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e51",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e52",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e53",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e54",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e55",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e56",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e57",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e58",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e59",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e60",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e61",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e62",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e63",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e64",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e65",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e66",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e67",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e68",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e69",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e70",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e71",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e72",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e73",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e74",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e75",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e76",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e77",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e78",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e79",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e80",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e81",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e82",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e83",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e84",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e85",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e86",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e87",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e88",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e89",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e90",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e91",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e92",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e93",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e94",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e95",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e96",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e97",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e98",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e99",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e100",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e101",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e102",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e103",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e104",
+      "type": "pekg:reportsFinancialMetric"
+    }
+  ]
+}

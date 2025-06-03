@@ -1,0 +1,2106 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Articque",
+      "description": "Articque\u2019s client portfolio is highly diversified. The Company has historically experienced a high revenue spread, with little or no dependance to a limited number of clients.",
+      "keyStrengths": [
+        "Loyal client base",
+        "Diversified client portfolio",
+        "High revenue spread",
+        "Little or no dependence on a limited number of clients"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project INUK",
+      "transactionPerimeter": "Articque"
+    },
+    {
+      "id": "e3",
+      "type": "Financial Advisor",
+      "name": "DDA & Company France SAS",
+      "alias": [
+        "DDA&Company"
+      ],
+      "roleInContext": "Advisor for Project INUK"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Total Clients",
+      "kpiValueString": "627",
+      "kpiDateOrPeriod": "FY21A",
+      "description": "Total number of clients for Articque in FY21A."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Clients for at least 5 years",
+      "kpiValueString": "450",
+      "kpiDateOrPeriod": "FY21A",
+      "description": "Number of clients who have been with Articque for at least 5 years as of FY21A."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Clients for at least 10 years",
+      "kpiValueString": "200",
+      "kpiDateOrPeriod": "FY21A",
+      "description": "Number of clients who have been with Articque for at least 10 years as of FY21A."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings from clients >= 5 years",
+      "valueString": "2200000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Clients of at least 5 years",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:FinancialMetric",
+      "metricName": "% of FY21A billings from clients >= 5 years",
+      "valueString": "56%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Clients of at least 5 years",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Billings from clients >= 10 years",
+      "valueString": "1000000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Clients of at least 10 years",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:FinancialMetric",
+      "metricName": "% of FY21A billings from clients >= 10 years",
+      "valueString": "26%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Clients of at least 10 years",
+      "sourceNote": "Management"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top 20 Clients Billings FY19A",
+      "valueString": "1198000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Top 20 Clients",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top 20 Clients % of Total Billings FY19A",
+      "valueString": "35.6%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Top 20 Clients",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top 20 Clients Billings FY20A",
+      "valueString": "1107000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Top 20 Clients",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top 20 Clients % of Total Billings FY20A",
+      "valueString": "28.9%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Top 20 Clients",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top 20 Clients Billings FY21A",
+      "valueString": "1345000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Top 20 Clients",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top 20 Clients % of Total Billings FY21A",
+      "valueString": "34.3%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Top 20 Clients",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top 10 Clients Billings FY19A",
+      "valueString": "896000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Top 10 Clients",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top 10 Clients % of Total Billings FY19A",
+      "valueString": "26.6%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Top 10 Clients",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top 10 Clients Billings FY20A",
+      "valueString": "737000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Top 10 Clients",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top 10 Clients % of Total Billings FY20A",
+      "valueString": "19.2%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Top 10 Clients",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top 10 Clients Billings FY21A",
+      "valueString": "1018000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Top 10 Clients",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Top 10 Clients % of Total Billings FY21A",
+      "valueString": "25.9%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Top 10 Clients",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Automotive & transports"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Unions"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Housing & construction"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "IT"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Agriculture"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Banking & insurance"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Public institutions"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Retail and food industry"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Consulting"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Healthcare"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Automotive"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #1 FY19",
+      "valueString": "246000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #1 (Automotive & transports)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #1 FY19",
+      "valueString": "7.3%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #1 (Automotive & transports)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #2 FY19",
+      "valueString": "110000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #2 (Unions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #2 FY19",
+      "valueString": "3.3%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #2 (Unions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #3 FY19",
+      "valueString": "90000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #3 (Automotive & transports)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #3 FY19",
+      "valueString": "2.7%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #3 (Automotive & transports)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #4 FY19",
+      "valueString": "84000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #4 (Housing & construction)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #4 FY19",
+      "valueString": "2.5%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #4 (Housing & construction)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #5 FY19",
+      "valueString": "79000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #5 (IT)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #5 FY19",
+      "valueString": "2.4%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #5 (IT)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #6 FY19",
+      "valueString": "68000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #6 (Agriculture)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #6 FY19",
+      "valueString": "2.0%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #6 (Agriculture)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e47",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #7 FY19",
+      "valueString": "65000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #7 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e48",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #7 FY19",
+      "valueString": "1.9%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #7 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e49",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #8 FY19",
+      "valueString": "54000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #8 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e50",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #8 FY19",
+      "valueString": "1.6%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #8 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e51",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #9 FY19",
+      "valueString": "51000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #9 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e52",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #9 FY19",
+      "valueString": "1.5%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #9 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e53",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #10 FY19",
+      "valueString": "50000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #10 (Housing & construction)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e54",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #10 FY19",
+      "valueString": "1.5%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #10 (Housing & construction)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e55",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #11 FY19",
+      "valueString": "45000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #11 (Public institutions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e56",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #11 FY19",
+      "valueString": "1.3%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #11 (Public institutions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e57",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #12 FY19",
+      "valueString": "39000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #12 (Automotive & transports)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e58",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #12 FY19",
+      "valueString": "1.1%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #12 (Automotive & transports)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e59",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #13 FY19",
+      "valueString": "36000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #13 (IT)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e60",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #13 FY19",
+      "valueString": "1.1%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #13 (IT)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e61",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #14 FY19",
+      "valueString": "34000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #14 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e62",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #14 FY19",
+      "valueString": "1.0%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #14 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e63",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #15 FY19",
+      "valueString": "34000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #15 (Housing & construction)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e64",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #15 FY19",
+      "valueString": "1.0%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #15 (Housing & construction)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e65",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #16 FY19",
+      "valueString": "26000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #16 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e66",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #16 FY19",
+      "valueString": "0.8%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #16 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e67",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #17 FY19",
+      "valueString": "24000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #17 (Housing & construction)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e68",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #17 FY19",
+      "valueString": "0.7%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #17 (Housing & construction)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e69",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #18 FY19",
+      "valueString": "22000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #18 (Unions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e70",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #18 FY19",
+      "valueString": "0.6%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #18 (Unions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e71",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #19 FY19",
+      "valueString": "22000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #19 (IT)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e72",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #19 FY19",
+      "valueString": "0.6%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #19 (IT)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e73",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #20 FY19",
+      "valueString": "21000 EUR",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #20 (Public institutions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e74",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #20 FY19",
+      "valueString": "0.6%",
+      "fiscalPeriod": "FY19A",
+      "scope": "Client #20 (Public institutions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e75",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #1 FY20",
+      "valueString": "150000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #1 (Unions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e76",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #1 FY20",
+      "valueString": "3.9%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #1 (Unions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e77",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #2 FY20",
+      "valueString": "78000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #2 (Automotive & transports)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e78",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #2 FY20",
+      "valueString": "2.0%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #2 (Automotive & transports)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e79",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #3 FY20",
+      "valueString": "72000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #3 (Consulting)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e80",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #3 FY20",
+      "valueString": "1.9%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #3 (Consulting)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e81",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #4 FY20",
+      "valueString": "71000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #4 (Housing & construction)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e82",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #4 FY20",
+      "valueString": "1.9%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #4 (Housing & construction)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e83",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #5 FY20",
+      "valueString": "67000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #5 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e84",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #5 FY20",
+      "valueString": "1.7%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #5 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e85",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #6 FY20",
+      "valueString": "66000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #6 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e86",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #6 FY20",
+      "valueString": "1.7%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #6 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e87",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #7 FY20",
+      "valueString": "65000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #7 (Automotive & transports)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e88",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #7 FY20",
+      "valueString": "1.7%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #7 (Automotive & transports)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e89",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #8 FY20",
+      "valueString": "62000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #8 (Housing & construction)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e90",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #8 FY20",
+      "valueString": "1.6%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #8 (Housing & construction)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e91",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #9 FY20",
+      "valueString": "53000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #9 (Public institutions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e92",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #9 FY20",
+      "valueString": "1.4%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #9 (Public institutions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e93",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #10 FY20",
+      "valueString": "53000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #10 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e94",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #10 FY20",
+      "valueString": "1.4%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #10 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e95",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #11 FY20",
+      "valueString": "45000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #11 (Housing & construction)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e96",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #11 FY20",
+      "valueString": "1.2%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #11 (Housing & construction)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e97",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #12 FY20",
+      "valueString": "42000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #12 (Unions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e98",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #12 FY20",
+      "valueString": "1.1%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #12 (Unions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e99",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #13 FY20",
+      "valueString": "39000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #13 (Automotive & transports)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e100",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #13 FY20",
+      "valueString": "1.0%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #13 (Automotive & transports)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e101",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #14 FY20",
+      "valueString": "38000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #14 (Agriculture)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e102",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #14 FY20",
+      "valueString": "1.0%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #14 (Agriculture)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e103",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #15 FY20",
+      "valueString": "37000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #15 (IT)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e104",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #15 FY20",
+      "valueString": "1.0%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #15 (IT)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e105",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #16 FY20",
+      "valueString": "36000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #16 (IT)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e106",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #16 FY20",
+      "valueString": "0.9%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #16 (IT)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e107",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #17 FY20",
+      "valueString": "35000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #17 (Automotive)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e108",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #17 FY20",
+      "valueString": "0.9%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #17 (Automotive)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e109",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #18 FY20",
+      "valueString": "34000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #18 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e110",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #18 FY20",
+      "valueString": "0.9%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #18 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e111",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #19 FY20",
+      "valueString": "32000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #19 (Public institutions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e112",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #19 FY20",
+      "valueString": "0.8%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #19 (Public institutions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e113",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #20 FY20",
+      "valueString": "31000 EUR",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #20 (Public institutions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e114",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #20 FY20",
+      "valueString": "0.8%",
+      "fiscalPeriod": "FY20A",
+      "scope": "Client #20 (Public institutions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e115",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #1 FY21",
+      "valueString": "258000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #1 (Retail and food industry)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e116",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #1 FY21",
+      "valueString": "6.6%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #1 (Retail and food industry)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e117",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #2 FY21",
+      "valueString": "240000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #2 (Automotive & transports)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e118",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #2 FY21",
+      "valueString": "6.1%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #2 (Automotive & transports)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e119",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #3 FY21",
+      "valueString": "118000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #3 (Unions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e120",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #3 FY21",
+      "valueString": "3.0%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #3 (Unions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e121",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #4 FY21",
+      "valueString": "70000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #4 (Automotive & transports)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e122",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #4 FY21",
+      "valueString": "1.8%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #4 (Automotive & transports)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e123",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #5 FY21",
+      "valueString": "65000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #5 (Public institutions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e124",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #5 FY21",
+      "valueString": "1.7%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #5 (Public institutions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e125",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #6 FY21",
+      "valueString": "59000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #6 (Unions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e126",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #6 FY21",
+      "valueString": "1.5%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #6 (Unions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e127",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #7 FY21",
+      "valueString": "57000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #7 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e128",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #7 FY21",
+      "valueString": "1.5%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #7 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e129",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #8 FY21",
+      "valueString": "55000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #8 (Housing & construction)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e130",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #8 FY21",
+      "valueString": "1.4%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #8 (Housing & construction)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e131",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #9 FY21",
+      "valueString": "47000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #9 (Consulting)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e132",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #9 FY21",
+      "valueString": "1.2%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #9 (Consulting)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e133",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #10 FY21",
+      "valueString": "47000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #10 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e134",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #10 FY21",
+      "valueString": "1.2%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #10 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e135",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #11 FY21",
+      "valueString": "45000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #11 (Unions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e136",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #11 FY21",
+      "valueString": "1.1%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #11 (Unions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e137",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #12 FY21",
+      "valueString": "37000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #12 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e138",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #12 FY21",
+      "valueString": "1.0%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #12 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e139",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #13 FY21",
+      "valueString": "34000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #13 (Public institutions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e140",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #13 FY21",
+      "valueString": "0.9%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #13 (Public institutions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e141",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #14 FY21",
+      "valueString": "33000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #14 (Unions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e142",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #14 FY21",
+      "valueString": "0.8%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #14 (Unions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e143",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #15 FY21",
+      "valueString": "32000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #15 (Healthcare)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e144",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #15 FY21",
+      "valueString": "0.8%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #15 (Healthcare)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e145",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #16 FY21",
+      "valueString": "32000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #16 (Automotive & transports)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e146",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #16 FY21",
+      "valueString": "0.8%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #16 (Automotive & transports)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e147",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #17 FY21",
+      "valueString": "30000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #17 (Retail and food industry)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e148",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #17 FY21",
+      "valueString": "0.8%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #17 (Retail and food industry)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e149",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #18 FY21",
+      "valueString": "29000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #18 (Public institutions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e150",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #18 FY21",
+      "valueString": "0.7%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #18 (Public institutions)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e151",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #19 FY21",
+      "valueString": "28000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #19 (Agriculture)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e152",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #19 FY21",
+      "valueString": "0.7%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #19 (Agriculture)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e153",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from Client #20 FY21",
+      "valueString": "27000 EUR",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #20 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    },
+    {
+      "id": "e154",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Percentage of Total Billings from Client #20 FY21",
+      "valueString": "0.7%",
+      "fiscalPeriod": "FY21A",
+      "scope": "Client #20 (Banking & insurance)",
+      "sourceNote": "Management \u2013 Billings in \u20ack"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e36",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e40",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e41",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e42",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e43",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e44",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e45",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e47",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e48",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e49",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e50",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e51",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e52",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e53",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e54",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e55",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e56",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e57",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e58",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e59",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e60",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e61",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e62",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e63",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e64",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e65",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e66",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e67",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e68",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e69",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e70",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e71",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e72",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e73",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e74",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e75",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e76",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e77",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e78",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e79",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e80",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e81",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e82",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e83",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e84",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e85",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e86",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e87",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e88",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e89",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e90",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e91",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e92",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e93",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e94",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e95",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e96",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e97",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e98",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e99",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e100",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e101",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e102",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e103",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e104",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e105",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e106",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e107",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e108",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e109",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e110",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e111",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e112",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e113",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e114",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e115",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e116",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e117",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e118",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e119",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e120",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e121",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e122",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e123",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e124",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e125",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e126",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e127",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e128",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e129",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e130",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e131",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e132",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e133",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e134",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e135",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e136",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e137",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e138",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e139",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e140",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e141",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e142",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e143",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e144",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e145",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e146",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e147",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e148",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e149",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e150",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e151",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e152",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e153",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e154",
+      "type": "pekg:reportsFinancialMetric"
+    }
+  ]
+}

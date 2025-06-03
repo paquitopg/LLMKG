@@ -1,0 +1,624 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "alias": [
+        "Systran"
+      ],
+      "description": "Target Company for Project System_big"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Company",
+      "name": "SSI",
+      "description": "Likely a subsidiary or related entity of Systran SAS"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Company mentioned as 'Confidential - ChapsVision'"
+    },
+    {
+      "id": "e4",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Advisory Firm for Project System_big"
+    },
+    {
+      "id": "e5",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Advisory Firm for Project System_big"
+    },
+    {
+      "id": "e6",
+      "type": "Consultant",
+      "name": "KPMG",
+      "roleInContext": "Provided VDD report"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project System_big",
+      "typeSought": "Sale/Acquisition",
+      "status": "Teaser Phase",
+      "description": "Project codename for the transaction involving Systran SAS"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:TransactionContext",
+      "contextName": "Financial Teaser",
+      "typeSought": "Information Disclosure",
+      "status": "Published",
+      "description": "Document type for page 71"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "Systran translate pro",
+      "category": "Software",
+      "description": "Product under development by Systran"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "Perpetual licenses",
+      "category": "Licensing Model",
+      "description": "Licensing model impacting working capital swings"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Recurring revenue",
+      "category": "Revenue Stream",
+      "description": "Revenue mainly invoiced on a yearly basis"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Technology",
+      "name": "IFRS16",
+      "description": "Accounting standard for leases"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Systran translate pro development costs",
+      "eventType": "Product Development",
+      "dateOrYear": "FY20A and FY21A"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "SSI office relocation",
+      "eventType": "Office Relocation",
+      "dateOrYear": "2022",
+      "description": "Cost of \u20ac0.4m"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "IFRS16 first application",
+      "eventType": "Accounting Standard Change",
+      "dateOrYear": "2021",
+      "description": "Rentals under lease subject to IFRS16"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "RTC (Research Tax Credit) declaration period",
+      "kpiValueString": "3 years after declaration instead of 1 year",
+      "kpiDateOrPeriod": "starting 2021",
+      "description": "Change in RTC receipt policy for Systran"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:FinancialMetric",
+      "metricName": "EBITDA",
+      "valueString": "1,627",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:FinancialMetric",
+      "metricName": "EBITDA",
+      "valueString": "579",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "metricName": "EBITDA",
+      "valueString": "(198)",
+      "fiscalPeriod": "YTD22",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Change in WC",
+      "valueString": "1,333",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Change in WC",
+      "valueString": "(440)",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Change in WC",
+      "valueString": "3,305",
+      "fiscalPeriod": "YTD22",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Change in RTC receivable",
+      "valueString": "221",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Change in RTC receivable",
+      "valueString": "(610)",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Change in RTC receivable",
+      "valueString": "(350)",
+      "fiscalPeriod": "YTD22",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Operating cash flow",
+      "valueString": "3,181",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Operating cash flow",
+      "valueString": "(471)",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e28",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Operating cash flow",
+      "valueString": "2,756",
+      "fiscalPeriod": "YTD22",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Income Tax",
+      "valueString": "106",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Income Tax",
+      "valueString": "(1)",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Income Tax",
+      "valueString": "(10)",
+      "fiscalPeriod": "YTD22",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cash flow from activity",
+      "valueString": "3,287",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cash flow from activity",
+      "valueString": "(472)",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cash flow from activity",
+      "valueString": "2,746",
+      "fiscalPeriod": "YTD22",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Capex",
+      "valueString": "(227)",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Capex",
+      "valueString": "(1,264)",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Capex",
+      "valueString": "(508)",
+      "fiscalPeriod": "YTD22",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Rentals under lease impact",
+      "valueString": "(1,191)",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Rentals under lease impact",
+      "valueString": "(1,184)",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Rentals under lease impact",
+      "valueString": "(504)",
+      "fiscalPeriod": "YTD22",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Investing cash flow",
+      "valueString": "(1,419)",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Investing cash flow",
+      "valueString": "(2,447)",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e43",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Investing cash flow",
+      "valueString": "(1,012)",
+      "fiscalPeriod": "YTD22",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Free cash flow",
+      "valueString": "1,868",
+      "fiscalPeriod": "FY20A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e45",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Free cash flow",
+      "valueString": "(2,920)",
+      "fiscalPeriod": "FY21A",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    },
+    {
+      "id": "e46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Free cash flow",
+      "valueString": "1,734",
+      "fiscalPeriod": "YTD22",
+      "scope": "Company",
+      "sourceNote": "KPMG VDD report",
+      "currency": "Euro k"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e7",
+      "target": "e4",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e7",
+      "target": "e5",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e36",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e40",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e41",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e42",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e43",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e44",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e45",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e2",
+      "target": "e1",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e2",
+      "target": "e14",
+      "type": "pekg:experiencedEvent"
+    }
+  ]
+}
