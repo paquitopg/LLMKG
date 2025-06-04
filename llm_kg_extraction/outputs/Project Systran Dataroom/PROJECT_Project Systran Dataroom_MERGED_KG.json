@@ -1,0 +1,6273 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": [
+        {
+          "value": "SYSTRAN SAS",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "alias": [
+        {
+          "value": [
+            "SSA"
+          ],
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "description": [
+        {
+          "value": "Target Company",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Location",
+      "locationName": [
+        {
+          "value": "Paris-France",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        },
+        {
+          "value": "San Diego-USA",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        },
+        {
+          "value": "Mexico",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        },
+        {
+          "value": "Tokyo-Japan",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        },
+        {
+          "value": "Daejon-Rep. of Korea",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        },
+        {
+          "value": "Luxembourg",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        },
+        {
+          "value": "5-9 rue Feydeau, 75002 PARIS",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "locationType": [
+        {
+          "value": "Headquarters",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        },
+        {
+          "value": "Office",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        },
+        {
+          "value": "Office/Premises",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24",
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ],
+      "officeSpecificInfo": [
+        {
+          "value": "Location associated with SYSTRAN's intranet resources.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Company",
+      "name": [
+        {
+          "value": "SYSTRAN Software Inc.",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "alias": [
+        {
+          "value": [
+            "SSI"
+          ],
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Company",
+      "name": [
+        {
+          "value": "SYSTRAN LatinAmerica",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "alias": [
+        {
+          "value": [
+            "SLATAM"
+          ],
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Company",
+      "name": [
+        {
+          "value": "SYSTRAN Japan GK",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "alias": [
+        {
+          "value": [
+            "SJGK"
+          ],
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Company",
+      "name": [
+        {
+          "value": "SYSTRAN Co. Ltd",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "alias": [
+        {
+          "value": [
+            "SCL"
+          ],
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Company",
+      "name": [
+        {
+          "value": "SYSTRAN USA",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "alias": [
+        {
+          "value": [
+            "SUSA"
+          ],
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "description": [
+        {
+          "value": "holding, dormant",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Company",
+      "name": [
+        {
+          "value": "SYSTRAN SA",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "alias": [
+        {
+          "value": [
+            "SYSLUX"
+          ],
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "description": [
+        {
+          "value": "dormant",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "id": "e9",
+      "type": "pekg:TransactionContext",
+      "contextName": [
+        {
+          "value": "Project Systran Dataroom",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        },
+        {
+          "value": "Project Systran Dataroom",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "typeSought": [
+        {
+          "value": "Sale",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        },
+        {
+          "value": "Potential Sale/Investment",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24",
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ],
+      "status": [
+        {
+          "value": "Dataroom",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "keyInvestmentHighlights": [
+        {
+          "value": [],
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "dealRationaleHighlights": [
+        {
+          "value": [],
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "transactionPerimeter": [
+        {
+          "value": "SYSTRAN SAS",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ]
+    },
+    {
+      "id": "e10",
+      "type": "pekg:HistoricalEvent",
+      "eventName": [
+        {
+          "value": "Dissolution of SYSTRAN LatinAmerica",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "eventType": [
+        {
+          "value": "Dissolution",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "dateOrYear": [
+        {
+          "value": "2022-12-21",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "description": [
+        {
+          "value": "Dissolution on going, BOD 21/12/2022",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "id": "e11",
+      "type": "pekg:HistoricalEvent",
+      "eventName": [
+        {
+          "value": "Dissolution of SYSTRAN SA (SYSLUX)",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "eventType": [
+        {
+          "value": "Dissolution",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "dateOrYear": [
+        {
+          "value": "2022-12-21",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "description": [
+        {
+          "value": "Dissolution on going, BOD 21/12/2022",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "id": "e12",
+      "type": "Investment Fund",
+      "name": [
+        {
+          "value": "Korean investment funds",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "percentageOwned": [
+        {
+          "value": 90.0,
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "id": "e13",
+      "type": "Corporate",
+      "name": [
+        {
+          "value": "private company",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "percentageOwned": [
+        {
+          "value": 6.0,
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "id": "e14",
+      "type": "Employee Shareholder",
+      "name": [
+        {
+          "value": "employees",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "percentageOwned": [
+        {
+          "value": 4.0,
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "id": "e15",
+      "type": "Corporate",
+      "name": [
+        {
+          "value": "Wert Intelligence",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "percentageOwned": [
+        {
+          "value": 10.0,
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "id": "e16",
+      "type": "Corporate",
+      "name": [
+        {
+          "value": "Handcom Interfree",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "percentageOwned": [
+        {
+          "value": 18.7,
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "id": "e17",
+      "type": "Corporate",
+      "name": [
+        {
+          "value": "SYSTRAN SAS (owner of SUSA)",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "percentageOwned": [
+        {
+          "value": 100.0,
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "id": "e18",
+      "type": "Corporate",
+      "name": [
+        {
+          "value": "SYSTRAN SAS (owner of SYSLUX)",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "percentageOwned": [
+        {
+          "value": 100.0,
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "id": "e19",
+      "type": "Corporate",
+      "name": [
+        {
+          "value": "SYSTRAN USA (owner of SSI)",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "percentageOwned": [
+        {
+          "value": 100.0,
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "id": "e20",
+      "type": "Corporate",
+      "name": [
+        {
+          "value": "SYSTRAN Software Inc. (owner of SLATAM)",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "percentageOwned": [
+        {
+          "value": 99.0,
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "id": "e21",
+      "type": "Corporate",
+      "name": [
+        {
+          "value": "SYSTRAN USA (owner of SLATAM)",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "percentageOwned": [
+        {
+          "value": 1.0,
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "id": "e22",
+      "type": "Corporate",
+      "name": [
+        {
+          "value": "SYSTRAN Software Inc. (owner of SJGK)",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "percentageOwned": [
+        {
+          "value": 100.0,
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "id": "e23",
+      "type": "Corporate",
+      "name": [
+        {
+          "value": "SYSTRAN Software Inc. (owner of SCL)",
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "percentageOwned": [
+        {
+          "value": 100.0,
+          "source_doc_id": "1.1.1.1-SYSTRAN_Group_2023-02-24"
+        }
+      ],
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "id": "e24",
+      "type": "pekg:Company",
+      "name": [
+        {
+          "value": "SYSTRAN SAS",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "A company that provides and manages internal IT resources and systems, operating under an IT charter to ensure security, confidentiality, performance, and compliance with legal and regulatory provisions regarding data.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "alias": [
+        {
+          "value": [
+            "SYSTRAN",
+            "SYSTRAN SAS",
+            "l'entreprise"
+          ],
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "industry": [
+        {
+          "value": "Information Technology",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e25",
+      "type": "pekg:HistoricalEvent",
+      "eventName": [
+        {
+          "value": "Collaborator Data Destruction Policy",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "eventType": [
+        {
+          "value": "Policy Implementation",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "dateOrYear": [
+        {
+          "value": "January 2022",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Policy for destruction of personal/private data within one month after a collaborator's departure.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e26",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "syst\u00e8me d\u2019information et de communication num\u00e9rique",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "IT Infrastructure",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "SYSTRAN's internal information and communication system, which employees use for professional and personal purposes.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e27",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "1Password",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Password Management Software",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "A password manager mandated by SYSTRAN for storing professional passwords and access codes.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e28",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Messagerie \u00e9lectronique",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Communication Service",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Electronic messaging service for professional communication within SYSTRAN.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e29",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Internet",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Part of IT resources, allowed for limited private use.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e30",
+      "type": "pekg:Position",
+      "titleName": [
+        {
+          "value": "Responsable de la s\u00e9curit\u00e9 du syst\u00e8me d\u2019informations",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Responsible for the proper functioning, availability, maintenance, security, and evolution of SYSTRAN's information system, and for providing services and support to users.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "department": [
+        {
+          "value": "Sales Administration and Human Resources",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e31",
+      "type": "pekg:HistoricalEvent",
+      "eventName": [
+        {
+          "value": "Charte Informatique v11 Issuance/Update",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "eventType": [
+        {
+          "value": "Document Release",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "dateOrYear": [
+        {
+          "value": "2022-01-17",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Update of SYSTRAN's IT charter, outlining rules for system use, responsibility, equipment, confidentiality, and electronic messaging.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e32",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Charte Informatique",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Internal Policy Document",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "An IT Charter document outlining company policies regarding information technology.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e33",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Personal IT Usage",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Guidelines for personal use of IT resources within the company.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e34",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "IT Security",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Management and implementation of IT security measures and policies.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e35",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Professional Mobile Phone Usage",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Guidelines and policies for the use of professional mobile phones by employees.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e36",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "IT System Monitoring",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Policies regarding the monitoring of the IT system, including its purpose and monitored elements.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e37",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Sanctions",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Policies regarding the application of sanctions for IT policy violations.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e38",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "IT Fraud Prevention",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Measures and legal reminders concerning IT fraud.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e39",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Copyright Compliance",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Adherence to copyright law, including legal reminders.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e40",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Employee Information",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Procedures for informing employees about IT policies and related matters.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e41",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Charter Entry into Force",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Date and conditions for the IT Charter's effectiveness.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e42",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Systran Information System",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Internal IT System",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "The information system provided by SYSTRAN to its personnel, governed by an IT charter to promote fair, responsible, and secure usage.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e43",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Company IT Resources",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Internal IT Infrastructure",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Computer resources provided by SYSTRAN for use by its personnel, subject to the IT charter for proper usage and functioning.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e44",
+      "type": "pekg:HistoricalEvent",
+      "eventName": [
+        {
+          "value": "French Data Protection Law (Loi Informatique et Libert\u00e9s)",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "eventType": [
+        {
+          "value": "Legislation",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "dateOrYear": [
+        {
+          "value": "1978-01-06",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Law n\u00b0 78-17 of January 6, 1978, concerning data processing, files and freedoms, modified by law n\u00b0 2004-801 of August 6, 2004, which SYSTRAN commits to respect.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e45",
+      "type": "pekg:HistoricalEvent",
+      "eventName": [
+        {
+          "value": "GDPR Implementation",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "eventType": [
+        {
+          "value": "Regulation Enforcement",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "dateOrYear": [
+        {
+          "value": "2018-05-25",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "General Data Protection Regulation (GDPR) became applicable, which SYSTRAN commits to respect.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e46",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Ordinateurs",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Hardware",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Fixed or portable computers, part of the information system.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e47",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "P\u00e9riph\u00e9riques",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Hardware",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Peripherals, part of the information system.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e48",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "R\u00e9seau informatique",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Computer network including servers, routers, and connectivity, part of the information system.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e49",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Photocopieurs",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Hardware",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Photocopiers, part of the information system.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e50",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "T\u00e9l\u00e9phones",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Hardware",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Telephones, part of the information system.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e51",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Logiciels",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Software, part of the information system.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e52",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Services en ligne",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Service",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Online services, part of the information system.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e53",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Fichiers",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Data",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Files, part of the information system.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e54",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Donn\u00e9es",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Data",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Data, part of the information system.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e55",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Bases de donn\u00e9es",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Databases, part of the information system.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e56",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Syst\u00e8me de messagerie",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Messaging system, part of the information system.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e57",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Extranet",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Extranet, part of the information system.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e58",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Abonnements \u00e0 des services interactifs",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Service",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Subscriptions to interactive services, part of the information system.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e59",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Mat\u00e9riel personnel des salari\u00e9s",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Hardware",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Employees' personal equipment connected to the company network or containing professional information, considered part of the information system for security reasons.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e60",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "SYSTRAN - Guest Network Access",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Network Service",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Guest network access provided by SYSTRAN, exclusively for internet browsing.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e61",
+      "type": "pekg:Person",
+      "fullName": [
+        {
+          "value": "IT administrators",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Subject to professional secrecy, prohibiting disclosure of personal or private information accessed in their function. Exclusively install, configure, and set up equipment, software, and IT resources.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e62",
+      "type": "pekg:Company",
+      "name": [
+        {
+          "value": "IT service",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Assures Information Systems Security.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e63",
+      "type": "pekg:Company",
+      "name": [
+        {
+          "value": "Comit\u00e9 de Direction (CODIR)",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Directly responsible for Information Systems Security.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e64",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Information Systems Security",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Security Service",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Ensured by IT service under direct responsibility of CODIR.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e65",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Storage resources",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Includes communication tools, Internet, messaging, workstations, equipment, software, office PCs, phones, storage resources, network bandwidth. Provided for professional use, with tolerated reasonable private use. Property of SYSTRAN.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e66",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Communication tools",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Part of IT resources, provided for professional use.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e67",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Messaging",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Part of IT resources, allowed for limited private use.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e68",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Workstations",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Part of IT resources.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e69",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Professional data",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Includes files, mails, images; considered property of SYSTRAN.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e70",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Equipment",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Can be replaced or retrieved by SYSTRAN for maintenance, security, or technological evolutions. Installed, configured, and set up by IT administrators.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e71",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Software",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Installed, configured, and set up by IT administrators.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e72",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Office PCs",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Allowed for limited private use.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e73",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Phones",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Allowed for limited private use.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e74",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Business resources",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Excluded from private use.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e75",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Centralized storage spaces",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Excluded from private use.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e76",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Professional applications",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Must not be endangered by private use.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e77",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Network bandwidth",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Excessive use to be avoided during private use.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e78",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Outils informatiques",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Digital Tools",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "General IT tools provided by SYSTRAN to its employees, including portable equipment.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e79",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "\u00c9quipements portables",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Hardware",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Portable IT equipment made available by SYSTRAN to its employees.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e80",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Mat\u00e9riels",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Hardware",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Hardware components provided by SYSTRAN for use within its IT system.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e81",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Programmes",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Software",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Software programs provided by SYSTRAN for use within its IT system.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e82",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Progiciels",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Enterprise Software",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Enterprise software packages provided by SYSTRAN for use within its IT system.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e83",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Virus",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Malicious software that can disrupt IT systems, against which SYSTRAN's systems need protection.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e84",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Chevaux de Troie",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Malicious software disguised as legitimate programs, against which SYSTRAN's systems need protection.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e85",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Bombes logiques",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Malicious code designed to activate under specific conditions, against which SYSTRAN's systems need protection.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e86",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Bande passante",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiValueString": [
+        {
+          "value": null,
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiDateOrPeriod": [
+        {
+          "value": null,
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Network bandwidth, which SYSTRAN monitors and manages to prevent saturation from personal use.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e87",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Internet Access",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Internal Service",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Access to the public internet provided via SYSTRAN's network, subject to security policies, monitoring, and content restrictions.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e88",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Data Security Policy Adherence",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiValueString": [
+        {
+          "value": "Mandatory",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiDateOrPeriod": [
+        {
+          "value": "2022-01-17",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Rules for users regarding data handling (reading, modifying, copying, destroying), professional data storage on personal equipment, private data storage on network drives, and systematic session locking.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e89",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Mobile Device Security",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiValueString": [
+        {
+          "value": "Mandatory",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiDateOrPeriod": [
+        {
+          "value": "2022-01-17",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Precautions for securing mobile information and communication devices, including authentication (password, fingerprint, facial recognition), limited local data storage on laptops, and physical anti-theft measures.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e90",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Web Browsing Monitoring",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiValueString": [
+        {
+          "value": "User ID recorded",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiDateOrPeriod": [
+        {
+          "value": "2022-01-17",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "User identifiers are recorded when navigating the web, allowing visited site managers to link activity to SYSTRAN.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e91",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Restricted Internet Access",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiValueString": [
+        {
+          "value": "Limited/Prohibited",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiDateOrPeriod": [
+        {
+          "value": "2022-01-17",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Access to certain sites, browser configuration, and file downloads may be restricted or prohibited for security reasons.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e92",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Prohibited Content Access",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiValueString": [
+        {
+          "value": "Prohibited",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiDateOrPeriod": [
+        {
+          "value": "2022-01-17",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Prohibition of connecting to degrading, abusive, violent, racist, discriminatory, pornographic, defamatory, or publicly offensive sites.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e93",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Intellectual Property Rights Protection",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiValueString": [
+        {
+          "value": "Mandatory",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiDateOrPeriod": [
+        {
+          "value": "2022-01-17",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Prohibition of using SYSTRAN's network to violate third-party intellectual or industrial property rights.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e94",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "IT Incident Reporting",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiValueString": [
+        {
+          "value": "Immediate reporting required",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiDateOrPeriod": [
+        {
+          "value": "2022-01-17",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Users must immediately inform the IT service of any technical malfunction or anomaly.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e95",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "\u00c9quipements",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "General term for hardware and software equipment provided by SYSTRAN",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e96",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Postes de travail",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Workstations provided by SYSTRAN",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e97",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "R\u00e9seaux",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Company networks",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e98",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Technologies sans fil",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Wireless technologies",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e99",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Mat\u00e9riels nomades",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Mobile devices provided by SYSTRAN",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e100",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Antivirus",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Antivirus software",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e101",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Firewall",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Network firewall",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e102",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Routeurs",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Network routers",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e103",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Bornes Wifi",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Wifi hotspots/access points",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e104",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Mesures de s\u00e9curit\u00e9",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Security measures implemented on IT systems and equipment",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e105",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "R\u00e8gles de confidentialit\u00e9",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Confidentiality rules for data access and handling",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e106",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Mobile Devices",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Hardware",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Company-provided mobile computing equipment including laptops (PC portables), tablets (tablettes), and smartphones.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e107",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Security Protection Devices",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Protection mechanisms equipped on company-provided mobile devices to ensure secure internet connection and access to company resources.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e108",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "3G Connectivity",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "A mobile network technology used for direct internet access on some mobile devices, such as via a 3G card.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e109",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Mobile Equipment Usage Policy",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Rules and guidelines for the secure use of company-provided mobile devices, including connection protocols and prohibition of removing protection.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e110",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Personal Equipment Usage Policy",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Guidelines discouraging the use of personal devices for professional activities and requiring prior express authorization from an administrator for connection to the company's information system, subjecting them to company security rules.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e111",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Access Credential Policy",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Rules for managing user credentials (identifiers and passwords), including initial password change, complexity requirements, and mandatory storage in 1Password.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e112",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "M\u00e9canisme de sauvegarde des donn\u00e9es informatiques professionnelles",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Data Backup Service",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "A mechanism implemented by SYSTRAN for professional IT data stored on its information system.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e113",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "OneDrive",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Cloud Storage Service",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e114",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Syst\u00e8me d'information SYSTRAN",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "SYSTRAN's internal information system.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e115",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Dispositifs techniques mat\u00e9riels ou logiciels d'authentification",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Hardware or software technical authentication devices, such as tokens and smart cards.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e116",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Tokens",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e117",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Cartes \u00e0 puce",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e118",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Disque dur externe chiffr\u00e9",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Encrypted external hard drive provided by the IT service.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e119",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Syst\u00e8mes de traitement",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "General processing systems.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e120",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Sauvegarde des donn\u00e9es",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Data backup policy/process.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e121",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Pr\u00e9servation de la confidentialit\u00e9",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Confidentiality preservation policy/process.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e122",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Donn\u00e9es confidentielles",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Confidential company data, including finance and human resources related information.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e123",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Finance",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Domain of confidential data within the company.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e124",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Ressources humaines",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Domain of confidential data within the company.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e125",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Propri\u00e9t\u00e9 intellectuelle",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Domain of confidential data within the company, protected by legislation.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e126",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Donn\u00e9es personnelles",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Domain of confidential data within the company, protected by legislation.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e127",
+      "type": "pekg:Person",
+      "fullName": [
+        {
+          "value": "Utilisateur/Salari\u00e9",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "biographySummary": [
+        {
+          "value": "An employee or user of SYSTRAN's IT resources.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e128",
+      "type": "pekg:Person",
+      "fullName": [
+        {
+          "value": "User",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e129",
+      "type": "pekg:Person",
+      "fullName": [
+        {
+          "value": "Collaborator",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e130",
+      "type": "pekg:Person",
+      "fullName": [
+        {
+          "value": "Hierarchical Superior",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e131",
+      "type": "pekg:Person",
+      "fullName": [
+        {
+          "value": "Management",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e132",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Information and Communication System",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Internal IT Infrastructure",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "System used by the company for information and communication.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e133",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "IT Support",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Internal Service",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Internal support for IT and security incidents, accessible via email support_it@systrangroup.com and ticket system.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e134",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Ticket System",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Internal IT Tool",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "System for reporting IT or security incidents.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e135",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Automated Data Processing",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e136",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "User Data",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Includes data, files, and electronic messages of users.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e137",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Confidential Data",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Information whose disclosure could cause serious harm to persons or organizations.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e138",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Email",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e139",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Internet Navigation",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e140",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Right to Image of Persons",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Policy area concerning the right to image of individuals.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e141",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Protection against Exposure of Minors to Harmful Content",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Policy area concerning the protection of minors from harmful content.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e142",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Confidentiality of User Information",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Policy area concerning the confidentiality obligations of IT administrators regarding user information.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e143",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Privacy Protection",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Policy area concerning the protection of personal data and privacy.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e144",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Confidential Data Protection",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Policy area concerning the protection of sensitive and confidential information.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e145",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Security Incident Reporting",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Policy area concerning the process for reporting security incidents.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e146",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Malicious IT Use",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Events considered as malicious use of IT tools against the company or its collaborators.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e147",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Material Theft",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Type of security incident.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e148",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Impersonation Emails (Phishing/Fraud)",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Type of security incident involving emails for fraud or information theft.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e149",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Abnormal Workstation Behavior",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Type of security incident after visiting certain websites.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e150",
+      "type": "pekg:MarketContext",
+      "segmentName": [
+        {
+          "value": "IT System Monitoring",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "characteristics": [
+        {
+          "value": "Ensures security, proper functioning of information system, and compliance with IT charter.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e151",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Professional Email Messaging",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Communication Service",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Digital messaging service provided by SYSTRAN for professional communication with third parties and internal use, subject to specific policies regarding content, unsolicited messages, and personal use.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e152",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Anti-spam Tool",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Security Software",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "A tool utilized by SYSTRAN to combat the propagation of unsolicited messages (spam) within its network.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e153",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Antiviral Control",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Technology implemented to scan and control digital messages for viruses, applied to professional email messaging.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e154",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Attachment Size Limit",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiValueString": [
+        {
+          "value": "20 Mo",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiDateOrPeriod": [
+        {
+          "value": "Current",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "The maximum size for email attachments to prevent congestion of the messaging system.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e155",
+      "type": "pekg:Company",
+      "name": [
+        {
+          "value": "Service IT",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "The internal IT department of SYSTRAN, responsible for monitoring and supporting the security devices and addressing dysfunctions.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e156",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Professional Mobile Phone Service",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Telecommunication Service",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Monthly plan subscribed by SYSTRAN for professional use, including unlimited calls, SMS, MMS, and 25 GB data.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e157",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Double SIM",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Mobile phone compartment allowing two SIM cards.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e158",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Smartphone",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Mobile device provided to employees for professional activity.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e159",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Call Limit",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiValueString": [
+        {
+          "value": "Unlimited",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiDateOrPeriod": [
+        {
+          "value": "Monthly",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e160",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "SMS Limit",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiValueString": [
+        {
+          "value": "Unlimited",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiDateOrPeriod": [
+        {
+          "value": "Monthly",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e161",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "MMS Limit",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiValueString": [
+        {
+          "value": "Unlimited",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiDateOrPeriod": [
+        {
+          "value": "Monthly",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e162",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Data Limit",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiValueString": [
+        {
+          "value": "25 Go",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiDateOrPeriod": [
+        {
+          "value": "Monthly",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e163",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "Dossier s\u00e9curis\u00e9",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Security Software",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Application used to separate personal and professional data on mobile phones.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e164",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "PIN code",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "A non-trivial PIN code used to protect SIM cards.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e165",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Password",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "A password or other authentication solution used to secure access to mobile terminals.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e166",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Authentication Solution",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "A solution for securing access to mobile terminals, alongside PIN codes and passwords.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e167",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Monitoring Tools",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Tools used by SYSTRAN to monitor and measure system resources.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e168",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "VPN",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Virtual Private Network, used for external access to the company's network via the internet.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e169",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Connection Time and Duration",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Data point recorded during IT system monitoring.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e170",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Source IP Address",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Data point recorded during IT system monitoring.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e171",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Destination IP Address/URL",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Data point recorded during IT system monitoring.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e172",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Protocols and Applications Used",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Data point recorded during IT system monitoring.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e173",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "External User Identifier",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Data point recorded during IT system monitoring for external visitors or VPN access.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e174",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "syst\u00e8me d'information",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "IT System",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Information system of SYSTRAN, subject to security policies and monitoring.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e175",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "syst\u00e8me de traitement automatis\u00e9",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "IT System",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Automated data processing system, subject to legal penalties for fraudulent data manipulation.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e176",
+      "type": "pekg:ProductOrService",
+      "name": [
+        {
+          "value": "intranet",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "category": [
+        {
+          "value": "Internal Platform",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "SYSTRAN's internal network platform where the IT Charter is made available to employees.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e177",
+      "type": "Government Agency",
+      "name": [
+        {
+          "value": "Autorit\u00e9s Publiques Comp\u00e9tentes",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Competent public authorities to whom SYSTRAN's data may be communicated upon judicial requisition.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e178",
+      "type": "Legal Advisor",
+      "name": [
+        {
+          "value": "Conseils Juridiques",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "roleInContext": [
+        {
+          "value": "Recipient of data in case of judicial requisition.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e179",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "D\u00e9tection de comportements malveillants",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Purpose for recording data, to detect malicious behavior.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e180",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Politiques de s\u00e9curit\u00e9 de l'entreprise",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Company security policies, which recorded data helps to enforce.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e181",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Dysfonctionnements du syst\u00e8me d'information",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Purpose for recording data, to detect information system malfunctions.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e182",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Analyse a posteriori d'incidents de s\u00e9curit\u00e9",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Purpose for recording data, for post-incident security analysis.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e183",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Conformit\u00e9 r\u00e9glementaire",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Purpose for recording data, to conform to texts and regulations in force.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e184",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Contr\u00f4le du respect de la charte",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Purpose for recording data, to control adherence to the IT Charter.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e185",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Fraude Informatique",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Illegal act involving computer systems, subject to specific penalties defined by the Penal Code.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e186",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Respect du droit d\u2019auteur",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Compliance with copyright law.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e187",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": [
+        {
+          "value": "Contrefa\u00e7on",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Act of counterfeiting, subject to civil and criminal penalties defined by the Intellectual Property Code.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e188",
+      "type": "pekg:FinancialMetric",
+      "metricName": [
+        {
+          "value": "Fine Amount",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "valueString": [
+        {
+          "value": "30.000 \u20ac",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "scope": [
+        {
+          "value": "Legal Penalty",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Fine for alteration or suppression of data, accompanied by 2 years prison.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e189",
+      "type": "pekg:FinancialMetric",
+      "metricName": [
+        {
+          "value": "Fine Amount",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "valueString": [
+        {
+          "value": "45.000 \u20ac",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "scope": [
+        {
+          "value": "Legal Penalty",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Fine for fraudulently introducing, suppressing, or modifying data, accompanied by 3 years prison.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e190",
+      "type": "pekg:FinancialMetric",
+      "metricName": [
+        {
+          "value": "Fine Amount",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "valueString": [
+        {
+          "value": "300.000 \u20ac",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "scope": [
+        {
+          "value": "Legal Penalty",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Fine for counterfeiting, accompanied by 3 years prison.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e191",
+      "type": "pekg:HistoricalEvent",
+      "eventName": [
+        {
+          "value": "Charte Informatique Effective Date",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "eventType": [
+        {
+          "value": "Policy Implementation",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "dateOrYear": [
+        {
+          "value": "March 1, 2022",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "The date from which the SYSTRAN IT Charter became applicable.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e192",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Document Version",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiValueString": [
+        {
+          "value": "v11_2022-01-17",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "kpiDateOrPeriod": [
+        {
+          "value": "January 17, 2022",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Version and date of the SYSTRAN IT Charter document.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e193",
+      "type": "pekg:OperationalKPI",
+      "kpiName": [
+        {
+          "value": "Internal Policy Document",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "SYSTRAN's internal regulations, to which the IT Charter is an annex and which define disciplinary sanctions.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e194",
+      "type": "pekg:Headcount",
+      "headcountName": [
+        {
+          "value": "Employees",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "breakdownDescription": [
+        {
+          "value": "Employees of SYSTRAN who are informed about the IT Charter and digital tool usage.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "id": "e195",
+      "type": "pekg:Technology",
+      "name": [
+        {
+          "value": "Techniques de s\u00e9curit\u00e9",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "description": [
+        {
+          "value": "Security techniques implemented within SYSTRAN that users must be informed about.",
+          "source_doc_id": "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+        }
+      ],
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:hasOfficeIn",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e3",
+      "target": "e2",
+      "type": "pekg:hasOfficeIn",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "pekg:hasOfficeIn",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e5",
+      "target": "e2",
+      "type": "pekg:hasOfficeIn",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e6",
+      "target": "e2",
+      "type": "pekg:hasOfficeIn",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e8",
+      "target": "e2",
+      "type": "pekg:hasOfficeIn",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:hasShareholder",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e12",
+      "target": "e1",
+      "type": "pekg:shareholderOf",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:hasShareholder",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e13",
+      "target": "e1",
+      "type": "pekg:shareholderOf",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:hasShareholder",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e14",
+      "target": "e1",
+      "type": "pekg:shareholderOf",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e7",
+      "target": "e17",
+      "type": "pekg:hasShareholder",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e17",
+      "target": "e7",
+      "type": "pekg:shareholderOf",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e8",
+      "target": "e18",
+      "type": "pekg:hasShareholder",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e18",
+      "target": "e8",
+      "type": "pekg:shareholderOf",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e3",
+      "target": "e19",
+      "type": "pekg:hasShareholder",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e19",
+      "target": "e3",
+      "type": "pekg:shareholderOf",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e4",
+      "target": "e20",
+      "type": "pekg:hasShareholder",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e20",
+      "target": "e4",
+      "type": "pekg:shareholderOf",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e4",
+      "target": "e21",
+      "type": "pekg:hasShareholder",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e21",
+      "target": "e4",
+      "type": "pekg:shareholderOf",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e5",
+      "target": "e22",
+      "type": "pekg:hasShareholder",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e22",
+      "target": "e5",
+      "type": "pekg:shareholderOf",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e6",
+      "target": "e23",
+      "type": "pekg:hasShareholder",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e23",
+      "target": "e6",
+      "type": "pekg:shareholderOf",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e6",
+      "target": "e15",
+      "type": "pekg:hasShareholder",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e15",
+      "target": "e6",
+      "type": "pekg:shareholderOf",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e3",
+      "target": "e16",
+      "type": "pekg:hasShareholder",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e16",
+      "target": "e3",
+      "type": "pekg:shareholderOf",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:isSubjectOf",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e4",
+      "target": "e10",
+      "type": "pekg:experiencedEvent",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e10",
+      "target": "e4",
+      "type": "pekg:eventInvolvesParty",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e8",
+      "target": "e11",
+      "type": "pekg:experiencedEvent",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e11",
+      "target": "e8",
+      "type": "pekg:eventInvolvesParty",
+      "_source_document_ids": [
+        "1.1.1.1-SYSTRAN_Group_2023-02-24"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e2",
+      "type": "pekg:hasOfficeIn",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e9",
+      "type": "pekg:isSubjectOf",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e25",
+      "type": "pekg:experiencedEvent",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e9",
+      "type": "isSubjectOf",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e26",
+      "type": "offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e28",
+      "type": "offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e29",
+      "type": "usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e27",
+      "type": "usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e30",
+      "target": "e24",
+      "type": "positionAt",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e31",
+      "type": "experiencedEvent",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e32",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e31",
+      "type": "pekg:experiencedEvent",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e31",
+      "target": "e24",
+      "type": "pekg:eventInvolvesParty",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e32",
+      "target": "e33",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e32",
+      "target": "e34",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e32",
+      "target": "e35",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e32",
+      "target": "e36",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e32",
+      "target": "e37",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e32",
+      "target": "e38",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e32",
+      "target": "e39",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e32",
+      "target": "e40",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e32",
+      "target": "e41",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e42",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e43",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e44",
+      "type": "pekg:experiencedEvent",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e45",
+      "type": "pekg:experiencedEvent",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e30",
+      "type": "pekg:employs",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e30",
+      "target": "e24",
+      "type": "pekg:positionAt",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e26",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e60",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e26",
+      "target": "e48",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e26",
+      "target": "e51",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e26",
+      "target": "e55",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e26",
+      "target": "e56",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e26",
+      "target": "e29",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e26",
+      "target": "e57",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e46",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e47",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e49",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e50",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e52",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e53",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e54",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e58",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e59",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e26",
+      "target": "e30",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e60",
+      "target": "e30",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e30",
+      "target": "e26",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e30",
+      "target": "e30",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e30",
+      "target": "e60",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e61",
+      "type": "pekg:employs",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e62",
+      "target": "e24",
+      "type": "pekg:isSubsidiaryOf",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e63",
+      "target": "e24",
+      "type": "pekg:isSubsidiaryOf",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e62",
+      "target": "e64",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e63",
+      "target": "e64",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e65",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e66",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e29",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e67",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e68",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e70",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e71",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e72",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e73",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e74",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e75",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e76",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e77",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e78",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e79",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e80",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e81",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e82",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e86",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e87",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e88",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e89",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e90",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e91",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e92",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e93",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e94",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e30",
+      "target": "e26",
+      "type": "isResponsibleFor",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e30",
+      "target": "e30",
+      "type": "reliesOn",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e30",
+      "target": "e26",
+      "type": "manages",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e30",
+      "target": "e97",
+      "type": "deploys",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e30",
+      "target": "e80",
+      "type": "connects",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e30",
+      "target": "e98",
+      "type": "usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e30",
+      "target": "e96",
+      "type": "accesses",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e95",
+      "type": "offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e80",
+      "type": "offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e82",
+      "type": "offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e96",
+      "type": "offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e99",
+      "type": "offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e100",
+      "type": "usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e101",
+      "type": "usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e102",
+      "type": "usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e103",
+      "type": "usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e104",
+      "target": "e100",
+      "type": "includes",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e104",
+      "target": "e101",
+      "type": "includes",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e26",
+      "target": "e104",
+      "type": "hasOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e26",
+      "target": "e105",
+      "type": "hasOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e106",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e27",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e106",
+      "target": "e107",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e106",
+      "target": "e108",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e109",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e110",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e111",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e112",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e114",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e115",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e120",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e121",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e118",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e119",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e122",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e122",
+      "target": "e123",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e122",
+      "target": "e124",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e127",
+      "type": "pekg:employs",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e127",
+      "target": "e113",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e127",
+      "target": "e118",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e127",
+      "target": "e120",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e127",
+      "target": "e121",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e127",
+      "target": "e24",
+      "type": "pekg:positionAt",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e128",
+      "type": "pekg:employs",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e129",
+      "type": "pekg:employs",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e130",
+      "type": "pekg:employs",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e131",
+      "type": "pekg:employs",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e132",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e133",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e134",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e135",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e65",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e136",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e137",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e138",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e139",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e150",
+      "type": "pekg:operatesIn",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e140",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e141",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e142",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e143",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e144",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e145",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e146",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e147",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e148",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e149",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e128",
+      "target": "e30",
+      "type": "pekg:holdsPosition",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e61",
+      "target": "e30",
+      "type": "pekg:holdsPosition",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e130",
+      "target": "e30",
+      "type": "pekg:holdsPosition",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e131",
+      "target": "e30",
+      "type": "pekg:holdsPosition",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e132",
+      "target": "e65",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e132",
+      "target": "e136",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e132",
+      "target": "e137",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e133",
+      "target": "e138",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e133",
+      "target": "e134",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e128",
+      "target": "e146",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e128",
+      "target": "e147",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e128",
+      "target": "e148",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e128",
+      "target": "e149",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e61",
+      "target": "e142",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e25",
+      "target": "e129",
+      "type": "pekg:eventInvolvesParty",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e151",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e152",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e153",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e154",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e155",
+      "target": "e24",
+      "type": "pekg:isSubsidiaryOf",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e156",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e156",
+      "target": "e157",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e156",
+      "target": "e158",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e156",
+      "target": "e159",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e156",
+      "target": "e160",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e156",
+      "target": "e161",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e156",
+      "target": "e162",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e156",
+      "target": "e2",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e163",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e164",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e165",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e166",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e167",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e168",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e169",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e170",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e171",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e172",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e173",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e174",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e175",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e176",
+      "type": "pekg:offers",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e192",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e193",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e194",
+      "type": "pekg:reportsHeadcount",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e195",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e174",
+      "target": "e179",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e174",
+      "target": "e181",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e174",
+      "target": "e182",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e180",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e183",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e184",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e32",
+      "target": "e191",
+      "type": "pekg:experiencedEvent",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e32",
+      "target": "e192",
+      "type": "pekg:reportsOperationalKPI",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e32",
+      "target": "e184",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e193",
+      "target": "e32",
+      "type": "pekg:hasSubsidiary",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e26",
+      "target": "e185",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e175",
+      "target": "e185",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e177",
+      "type": "pekg:hasClientGovernment",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e24",
+      "target": "e178",
+      "type": "pekg:advisedBy",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e185",
+      "target": "e188",
+      "type": "pekg:reportsFinancialMetric",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e185",
+      "target": "e189",
+      "type": "pekg:reportsFinancialMetric",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e187",
+      "target": "e190",
+      "type": "pekg:reportsFinancialMetric",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e186",
+      "target": "e187",
+      "type": "pekg:targets",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e194",
+      "target": "e24",
+      "type": "pekg:positionAt",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e194",
+      "target": "e195",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e194",
+      "target": "e78",
+      "type": "pekg:usesTechnology",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    },
+    {
+      "source": "e176",
+      "target": "e2",
+      "type": "pekg:hasOfficeIn",
+      "_source_document_ids": [
+        "1.8.3.1-Charte informatique SYSTRAN_v11_2022-01-17"
+      ]
+    }
+  ]
+}

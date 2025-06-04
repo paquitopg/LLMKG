@@ -1,0 +1,198 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN SAS"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Person",
+      "fullName": "M. Vincent GODARD"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Position",
+      "titleName": "President"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Location",
+      "locationName": "SYSTRAN SAS's registered office",
+      "locationType": "Office"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Location",
+      "locationName": "United States",
+      "locationType": "Country"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Location",
+      "locationName": "Korea",
+      "locationType": "Country"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Monthly Remuneration",
+      "valueString": "monthly as indicated in the chapter on \"remuneration\"",
+      "scope": "individual"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Additional Severance",
+      "scope": "individual"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Severance Fee (first 24 months)",
+      "valueString": "two year's total gross remuneration",
+      "scope": "individual"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Severance Fee Indemnity (after one year)",
+      "valueString": "equivalent to 6 months of last full year annual compensation (base salary + bonus)",
+      "scope": "individual"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Business-class Travel Expenses",
+      "scope": "individual"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Catering and Hotel Expenses",
+      "scope": "individual"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Notice Period for Mandate Revocation",
+      "kpiValueString": "1 month",
+      "description": "Subject to one month's notice, whether performed or not, but remunerated monthly."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Notice Period for Mandate Resignation",
+      "kpiValueString": "6 months",
+      "description": "Fully remunerated if President wishes to do it completely."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Revocation of Mandate",
+      "eventType": "Employment Termination"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Resignation from Mandate",
+      "eventType": "Employment Termination"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Revocation of Mandate (within 24 months)",
+      "eventType": "Employment Termination",
+      "dateOrYear": "first 24 months (730 days)"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Severance Fee Indemnity Reduction",
+      "eventType": "Compensation Policy Change",
+      "dateOrYear": "After one year of exercising the mandate"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e3",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e2",
+      "target": "e15",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e15",
+      "target": "e13",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e2",
+      "target": "e16",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e16",
+      "target": "e14",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e2",
+      "target": "e17",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e2",
+      "target": "e18",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    }
+  ]
+}

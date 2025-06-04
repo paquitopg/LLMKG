@@ -1,0 +1,76 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN SAS"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Bylaws Update",
+      "eventType": "Bylaws Update",
+      "dateOrYear": "30 November 2022",
+      "description": "Bylaws of SYSTRAN SAS were updated."
+    },
+    {
+      "id": "e3",
+      "type": "Group",
+      "name": "Shareholders of SYSTRAN SAS",
+      "description": "General group of shareholders of SYSTRAN SAS."
+    },
+    {
+      "id": "e4",
+      "type": "Judicial Body",
+      "name": "Commercial Court"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Location",
+      "locationName": "Registered Office",
+      "locationType": "Legal Address"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Position",
+      "titleName": "President"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e2",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e3",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e6",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e4",
+      "target": "e5",
+      "type": "pekg:hasOfficeIn"
+    }
+  ]
+}

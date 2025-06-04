@@ -1,0 +1,373 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN",
+      "alias": [
+        "SYSTRAN S.A., soci\u00e9t\u00e9 anonyme",
+        "SYSTRAN, SAS"
+      ],
+      "description": "Target Company"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Systran Dataroom",
+      "typeSought": "Dataroom",
+      "status": "Ongoing"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:ProductOrService",
+      "name": "SYSTRAD",
+      "category": "Trademark",
+      "description": "Trademark FR1716248"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:ProductOrService",
+      "name": "PNMT",
+      "category": "Trademark",
+      "description": "Trademark FR4305970"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "PURE NEURAL MT",
+      "category": "Trademark",
+      "description": "Trademark FR4323882"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Trademark FR1440415",
+      "category": "Trademark"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Technology",
+      "name": "Neural Machine Translation",
+      "description": "Underlying technology for PNMT and PURE NEURAL MT products."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Location",
+      "locationName": "France",
+      "locationType": "Country"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "SYSTRAD Trademark Filing",
+      "eventType": "Trademark Filing",
+      "dateOrYear": "07/12/1990"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "SYSTRAD Trademark Expiration",
+      "eventType": "Trademark Expiration",
+      "description": "Status: Marque expir\u00e9e"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "PNMT Trademark Filing",
+      "eventType": "Trademark Filing",
+      "dateOrYear": "10/10/2016"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "PNMT Trademark Registration",
+      "eventType": "Trademark Registration",
+      "description": "Status: Marque enregistr\u00e9e"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "PURE NEURAL MT Trademark Filing",
+      "eventType": "Trademark Filing",
+      "dateOrYear": "20/12/2016"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "PURE NEURAL MT Trademark Registration",
+      "eventType": "Trademark Registration",
+      "description": "Status: Marque enregistr\u00e9e"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Trademark FR1440415 Renewal",
+      "eventType": "Trademark Renewal",
+      "description": "Status: Marque renouvel\u00e9e"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Nice Classification 00",
+      "description": "Products and services category 00"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Nice Classification 09",
+      "description": "Products and services category 09"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Nice Classification 16",
+      "description": "Products and services category 16"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Nice Classification 35",
+      "description": "Products and services category 35"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Nice Classification 38",
+      "description": "Products and services category 38"
+    },
+    {
+      "id": "e21",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Nice Classification 41",
+      "description": "Products and services category 41"
+    },
+    {
+      "id": "e22",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Nice Classification 42",
+      "description": "Products and services category 42"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e3",
+      "target": "e9",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e9",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e3",
+      "target": "e10",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e10",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e3",
+      "target": "e16",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e18",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e20",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e22",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e4",
+      "target": "e11",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e11",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e4",
+      "target": "e12",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e12",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e4",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e4",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e4",
+      "target": "e20",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e4",
+      "target": "e21",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e4",
+      "target": "e22",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e13",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e13",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e5",
+      "target": "e14",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e14",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e5",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e20",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e21",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e22",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e15",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e15",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e6",
+      "target": "e16",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e18",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e20",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e21",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e22",
+      "type": "pekg:targets"
+    }
+  ]
+}

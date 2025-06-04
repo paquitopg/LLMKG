@@ -1,0 +1,248 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN SAS"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Person",
+      "fullName": "Vincent GODARD"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Position",
+      "titleName": "President"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Position",
+      "titleName": "Executives"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Position",
+      "titleName": "CEO"
+    },
+    {
+      "id": "e6",
+      "type": "Corporate/Group",
+      "name": "The shareholder"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Company",
+      "name": "CHUBB",
+      "industry": "Insurance"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Benefit in kind (vehicle use)",
+      "valueString": "\u20ac10k",
+      "fiscalPeriod": "per year",
+      "isRecurring": true,
+      "scope": "individual"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Free shares to be acquired",
+      "kpiValueString": "15,000 shares",
+      "description": "upon expiry of vesting period"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Company phone benefit",
+      "description": "paid by the company"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Social Security General regime coverage",
+      "description": "all remuneration received under the mandate conferred will be subject to the general Social Security regime, except the unemployment guarantee"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Complementary and supplementary pension funds coverage",
+      "description": "tranches A, B and C"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Health and Welfare schemes coverage",
+      "description": "under group contracts, from which the company's executives benefit"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:ProductOrService",
+      "name": "Loss of employment insurance",
+      "category": "Insurance",
+      "description": "for company executives; one-year waiting period; one-year coverage with 70% salary after one year of mandate; two years coverage with 70% salary after two years of mandate"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:ProductOrService",
+      "name": "GSC FORMULE 70/24",
+      "category": "Insurance product",
+      "description": "Specific loss of employment insurance contract with 70% salary coverage for 24 months"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:ProductOrService",
+      "name": "3rd Party legal liability for CEO insurance",
+      "category": "Insurance",
+      "description": "also known as 'responsabilit\u00e9 des dirigeants'"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e3",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e2",
+      "target": "e5",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e5",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e6",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e2",
+      "target": "e9",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e2",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e2",
+      "target": "e10",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e2",
+      "target": "e11",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e2",
+      "target": "e12",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e2",
+      "target": "e13",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e2",
+      "target": "e14",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e2",
+      "target": "e15",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e7",
+      "target": "e16",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e5",
+      "target": "e16",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e13",
+      "target": "e4",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e14",
+      "target": "e4",
+      "type": "pekg:targets"
+    }
+  ]
+}

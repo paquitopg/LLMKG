@@ -1,0 +1,194 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN",
+      "alias": [
+        "SYSTRAN Soci\u00e9t\u00e9 Anonyme",
+        "SYSTRAN S.A.",
+        "SYSTRAN SA Soci\u00e9t\u00e9 anonyme",
+        "SYSTRAN, Soci\u00e9t\u00e9 par actions simplifi\u00e9e \u00e0 associ\u00e9 unique"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:ProductOrService",
+      "name": "SYSTRAN TRANSLATOR",
+      "category": "Trademark",
+      "description": "Trademark for translation products and services, registered under Nice Classification classes 00, 09, 38, 41, 42."
+    },
+    {
+      "id": "e3",
+      "type": "pekg:ProductOrService",
+      "name": "SYSTRANET",
+      "category": "Trademark",
+      "description": "Trademark for products and services, registered under Nice Classification classes 00, 09, 38, 42."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:ProductOrService",
+      "name": "SIDATEL",
+      "category": "Trademark",
+      "description": "Trademark for products and services, registered under Nice Classification classes 00, 16, 38, 41, 42."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "SYSTRAN INTERNATIONAL",
+      "category": "Trademark",
+      "description": "Trademark for products and services."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "SYSTRAN TRANSLATOR Trademark Filing",
+      "eventType": "Trademark Filing",
+      "dateOrYear": "29/11/2005",
+      "description": "Filing of SYSTRAN TRANSLATOR trademark (N\u00ba FR3394573), status renewed."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "SYSTRANET Trademark Filing",
+      "eventType": "Trademark Filing",
+      "dateOrYear": "10/01/1997",
+      "description": "Filing of SYSTRANET trademark (N\u00ba FR97658673), status expired."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "SIDATEL Trademark Filing",
+      "eventType": "Trademark Filing",
+      "dateOrYear": "24/06/1987",
+      "description": "Filing of SIDATEL trademark (N\u00ba FR1415137), status expired."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "SYSTRAN INTERNATIONAL Trademark Filing",
+      "eventType": "Trademark Filing",
+      "dateOrYear": "16/12/1987",
+      "description": "Filing of SYSTRAN INTERNATIONAL trademark."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Location",
+      "locationName": "France",
+      "locationType": "Country"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Systran Dataroom",
+      "status": "Dataroom"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e6",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e6",
+      "target": "e2",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e6",
+      "target": "e10",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e7",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e7",
+      "target": "e3",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e7",
+      "target": "e10",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e8",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e8",
+      "target": "e4",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e8",
+      "target": "e10",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e9",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e9",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e9",
+      "target": "e10",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:isSubjectOf"
+    }
+  ]
+}

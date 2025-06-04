@@ -1,0 +1,364 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN SAS",
+      "alias": [
+        "SYSTRAN",
+        "l'entreprise"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Systran Dataroom",
+      "status": "Dataroom"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:ProductOrService",
+      "name": "Charte Informatique",
+      "category": "Policy Document",
+      "description": "Internal IT Charter of SYSTRAN."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:ProductOrService",
+      "name": "syst\u00e8me d'information",
+      "category": "IT System",
+      "description": "Information system of SYSTRAN, subject to security policies and monitoring."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "syst\u00e8me d\u2019information et de communication num\u00e9rique",
+      "category": "IT System",
+      "description": "Digital information and communication system of SYSTRAN, subject to internal regulations regarding abuse."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "syst\u00e8me de traitement automatis\u00e9",
+      "category": "IT System",
+      "description": "Automated data processing system, subject to legal penalties for fraudulent data manipulation."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "intranet",
+      "category": "Internal Platform",
+      "description": "SYSTRAN's internal network platform where the IT Charter is made available to employees."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "outils num\u00e9riques",
+      "category": "Digital Tools",
+      "description": "Digital tools used by employees, subject to recommended usage practices."
+    },
+    {
+      "id": "e9",
+      "type": "Government Agency",
+      "name": "Autorit\u00e9s Publiques Comp\u00e9tentes",
+      "description": "Competent public authorities to whom SYSTRAN's data may be communicated upon judicial requisition."
+    },
+    {
+      "id": "e10",
+      "type": "Legal Advisor",
+      "name": "Conseils Juridiques",
+      "roleInContext": "Recipient of data in case of judicial requisition."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "D\u00e9tection de comportements malveillants",
+      "description": "Purpose for recording data, to detect malicious behavior."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Politiques de s\u00e9curit\u00e9 de l'entreprise",
+      "description": "Company security policies, which recorded data helps to enforce."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Dysfonctionnements du syst\u00e8me d'information",
+      "description": "Purpose for recording data, to detect information system malfunctions."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Analyse a posteriori d'incidents de s\u00e9curit\u00e9",
+      "description": "Purpose for recording data, for post-incident security analysis."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Conformit\u00e9 r\u00e9glementaire",
+      "description": "Purpose for recording data, to conform to texts and regulations in force."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Contr\u00f4le du respect de la charte",
+      "description": "Purpose for recording data, to control adherence to the IT Charter."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Fraude Informatique",
+      "description": "Illegal act involving computer systems, subject to specific penalties defined by the Penal Code."
+    },
+    {
+      "id": "e18",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Respect du droit d\u2019auteur",
+      "description": "Compliance with copyright law."
+    },
+    {
+      "id": "e19",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Contrefa\u00e7on",
+      "description": "Act of counterfeiting, subject to civil and criminal penalties defined by the Intellectual Property Code."
+    },
+    {
+      "id": "e20",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Fine Amount",
+      "valueString": "30.000 \u20ac",
+      "scope": "Legal Penalty",
+      "description": "Fine for alteration or suppression of data, accompanied by 2 years prison."
+    },
+    {
+      "id": "e21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Fine Amount",
+      "valueString": "45.000 \u20ac",
+      "scope": "Legal Penalty",
+      "description": "Fine for fraudulently introducing, suppressing, or modifying data, accompanied by 3 years prison."
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Fine Amount",
+      "valueString": "300.000 \u20ac",
+      "scope": "Legal Penalty",
+      "description": "Fine for counterfeiting, accompanied by 3 years prison."
+    },
+    {
+      "id": "e23",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Charte Informatique Effective Date",
+      "eventType": "Policy Implementation",
+      "dateOrYear": "March 1, 2022",
+      "description": "The date from which the SYSTRAN IT Charter became applicable."
+    },
+    {
+      "id": "e24",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Document Version",
+      "kpiValueString": "v11_2022-01-17",
+      "kpiDateOrPeriod": "January 17, 2022",
+      "description": "Version and date of the SYSTRAN IT Charter document."
+    },
+    {
+      "id": "e25",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Internal Policy Document",
+      "description": "SYSTRAN's internal regulations, to which the IT Charter is an annex and which define disciplinary sanctions."
+    },
+    {
+      "id": "e26",
+      "type": "pekg:Headcount",
+      "headcountName": "Employees",
+      "breakdownDescription": "Employees of SYSTRAN who are informed about the IT Charter and digital tool usage."
+    },
+    {
+      "id": "e27",
+      "type": "pekg:Technology",
+      "name": "Techniques de s\u00e9curit\u00e9",
+      "description": "Security techniques implemented within SYSTRAN that users must be informed about."
+    },
+    {
+      "id": "e28",
+      "type": "pekg:Location",
+      "locationName": "Paris",
+      "locationType": "Office",
+      "officeSpecificInfo": "Location associated with SYSTRAN's intranet resources."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e4",
+      "target": "e11",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e4",
+      "target": "e13",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e4",
+      "target": "e14",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e23",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e3",
+      "target": "e24",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e3",
+      "target": "e16",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e25",
+      "target": "e3",
+      "type": "pekg:hasSubsidiary"
+    },
+    {
+      "source": "e5",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e17",
+      "target": "e20",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e17",
+      "target": "e21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e19",
+      "target": "e22",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e18",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e26",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e26",
+      "target": "e27",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e26",
+      "target": "e8",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e7",
+      "target": "e28",
+      "type": "pekg:hasOfficeIn"
+    }
+  ]
+}

@@ -1,0 +1,2213 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN SAS",
+      "description": "A company that provides and manages internal IT resources and systems, operating under an IT charter to ensure security, confidentiality, performance, and compliance with legal and regulatory provisions regarding data.",
+      "alias": [
+        "SYSTRAN",
+        "SYSTRAN SAS",
+        "l'entreprise"
+      ],
+      "industry": "Information Technology"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Location",
+      "locationName": "5-9 rue Feydeau, 75002 PARIS",
+      "locationType": "Office/Premises",
+      "officeSpecificInfo": "Location associated with SYSTRAN's intranet resources."
+    },
+    {
+      "id": "e3",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Systran Dataroom",
+      "status": "Dataroom",
+      "typeSought": "Potential Sale/Investment",
+      "keyInvestmentHighlights": [],
+      "dealRationaleHighlights": [],
+      "transactionPerimeter": "SYSTRAN SAS"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Collaborator Data Destruction Policy",
+      "eventType": "Policy Implementation",
+      "dateOrYear": "January 2022",
+      "description": "Policy for destruction of personal/private data within one month after a collaborator's departure."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "syst\u00e8me d\u2019information et de communication num\u00e9rique",
+      "category": "IT Infrastructure",
+      "description": "SYSTRAN's internal information and communication system, which employees use for professional and personal purposes."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "1Password",
+      "category": "Password Management Software",
+      "description": "A password manager mandated by SYSTRAN for storing professional passwords and access codes."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "Messagerie \u00e9lectronique",
+      "category": "Communication Service",
+      "description": "Electronic messaging service for professional communication within SYSTRAN."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Technology",
+      "name": "Internet",
+      "description": "Part of IT resources, allowed for limited private use."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Position",
+      "titleName": "Responsable de la s\u00e9curit\u00e9 du syst\u00e8me d\u2019informations",
+      "description": "Responsible for the proper functioning, availability, maintenance, security, and evolution of SYSTRAN's information system, and for providing services and support to users.",
+      "department": "Sales Administration and Human Resources"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Charte Informatique v11 Issuance/Update",
+      "eventType": "Document Release",
+      "dateOrYear": "2022-01-17",
+      "description": "Update of SYSTRAN's IT charter, outlining rules for system use, responsibility, equipment, confidentiality, and electronic messaging."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Charte Informatique",
+      "category": "Internal Policy Document",
+      "description": "An IT Charter document outlining company policies regarding information technology."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Personal IT Usage",
+      "description": "Guidelines for personal use of IT resources within the company."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "IT Security",
+      "description": "Management and implementation of IT security measures and policies."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Professional Mobile Phone Usage",
+      "description": "Guidelines and policies for the use of professional mobile phones by employees."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "IT System Monitoring",
+      "description": "Policies regarding the monitoring of the IT system, including its purpose and monitored elements."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Sanctions",
+      "description": "Policies regarding the application of sanctions for IT policy violations."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "IT Fraud Prevention",
+      "description": "Measures and legal reminders concerning IT fraud."
+    },
+    {
+      "id": "e18",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Copyright Compliance",
+      "description": "Adherence to copyright law, including legal reminders."
+    },
+    {
+      "id": "e19",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Employee Information",
+      "description": "Procedures for informing employees about IT policies and related matters."
+    },
+    {
+      "id": "e20",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Charter Entry into Force",
+      "description": "Date and conditions for the IT Charter's effectiveness."
+    },
+    {
+      "id": "e21",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Information System",
+      "category": "Internal IT System",
+      "description": "The information system provided by SYSTRAN to its personnel, governed by an IT charter to promote fair, responsible, and secure usage."
+    },
+    {
+      "id": "e22",
+      "type": "pekg:ProductOrService",
+      "name": "Company IT Resources",
+      "category": "Internal IT Infrastructure",
+      "description": "Computer resources provided by SYSTRAN for use by its personnel, subject to the IT charter for proper usage and functioning."
+    },
+    {
+      "id": "e23",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "French Data Protection Law (Loi Informatique et Libert\u00e9s)",
+      "eventType": "Legislation",
+      "dateOrYear": "1978-01-06",
+      "description": "Law n\u00b0 78-17 of January 6, 1978, concerning data processing, files and freedoms, modified by law n\u00b0 2004-801 of August 6, 2004, which SYSTRAN commits to respect."
+    },
+    {
+      "id": "e24",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "GDPR Implementation",
+      "eventType": "Regulation Enforcement",
+      "dateOrYear": "2018-05-25",
+      "description": "General Data Protection Regulation (GDPR) became applicable, which SYSTRAN commits to respect."
+    },
+    {
+      "id": "e25",
+      "type": "pekg:ProductOrService",
+      "name": "Ordinateurs",
+      "category": "Hardware",
+      "description": "Fixed or portable computers, part of the information system."
+    },
+    {
+      "id": "e26",
+      "type": "pekg:ProductOrService",
+      "name": "P\u00e9riph\u00e9riques",
+      "category": "Hardware",
+      "description": "Peripherals, part of the information system."
+    },
+    {
+      "id": "e27",
+      "type": "pekg:Technology",
+      "name": "R\u00e9seau informatique",
+      "description": "Computer network including servers, routers, and connectivity, part of the information system."
+    },
+    {
+      "id": "e28",
+      "type": "pekg:ProductOrService",
+      "name": "Photocopieurs",
+      "category": "Hardware",
+      "description": "Photocopiers, part of the information system."
+    },
+    {
+      "id": "e29",
+      "type": "pekg:ProductOrService",
+      "name": "T\u00e9l\u00e9phones",
+      "category": "Hardware",
+      "description": "Telephones, part of the information system."
+    },
+    {
+      "id": "e30",
+      "type": "pekg:Technology",
+      "name": "Logiciels",
+      "description": "Software, part of the information system."
+    },
+    {
+      "id": "e31",
+      "type": "pekg:ProductOrService",
+      "name": "Services en ligne",
+      "category": "Service",
+      "description": "Online services, part of the information system."
+    },
+    {
+      "id": "e32",
+      "type": "pekg:ProductOrService",
+      "name": "Fichiers",
+      "category": "Data",
+      "description": "Files, part of the information system."
+    },
+    {
+      "id": "e33",
+      "type": "pekg:ProductOrService",
+      "name": "Donn\u00e9es",
+      "category": "Data",
+      "description": "Data, part of the information system."
+    },
+    {
+      "id": "e34",
+      "type": "pekg:Technology",
+      "name": "Bases de donn\u00e9es",
+      "description": "Databases, part of the information system."
+    },
+    {
+      "id": "e35",
+      "type": "pekg:Technology",
+      "name": "Syst\u00e8me de messagerie",
+      "description": "Messaging system, part of the information system."
+    },
+    {
+      "id": "e36",
+      "type": "pekg:Technology",
+      "name": "Extranet",
+      "description": "Extranet, part of the information system."
+    },
+    {
+      "id": "e37",
+      "type": "pekg:ProductOrService",
+      "name": "Abonnements \u00e0 des services interactifs",
+      "category": "Service",
+      "description": "Subscriptions to interactive services, part of the information system."
+    },
+    {
+      "id": "e38",
+      "type": "pekg:ProductOrService",
+      "name": "Mat\u00e9riel personnel des salari\u00e9s",
+      "category": "Hardware",
+      "description": "Employees' personal equipment connected to the company network or containing professional information, considered part of the information system for security reasons."
+    },
+    {
+      "id": "e39",
+      "type": "pekg:ProductOrService",
+      "name": "SYSTRAN - Guest Network Access",
+      "category": "Network Service",
+      "description": "Guest network access provided by SYSTRAN, exclusively for internet browsing."
+    },
+    {
+      "id": "e40",
+      "type": "pekg:Person",
+      "fullName": "IT administrators",
+      "description": "Subject to professional secrecy, prohibiting disclosure of personal or private information accessed in their function. Exclusively install, configure, and set up equipment, software, and IT resources."
+    },
+    {
+      "id": "e41",
+      "type": "pekg:Company",
+      "name": "IT service",
+      "description": "Assures Information Systems Security."
+    },
+    {
+      "id": "e42",
+      "type": "pekg:Company",
+      "name": "Comit\u00e9 de Direction (CODIR)",
+      "description": "Directly responsible for Information Systems Security."
+    },
+    {
+      "id": "e43",
+      "type": "pekg:ProductOrService",
+      "name": "Information Systems Security",
+      "category": "Security Service",
+      "description": "Ensured by IT service under direct responsibility of CODIR."
+    },
+    {
+      "id": "e44",
+      "type": "pekg:Technology",
+      "name": "Storage resources",
+      "description": "Includes communication tools, Internet, messaging, workstations, equipment, software, office PCs, phones, storage resources, network bandwidth. Provided for professional use, with tolerated reasonable private use. Property of SYSTRAN."
+    },
+    {
+      "id": "e45",
+      "type": "pekg:ProductOrService",
+      "name": "Communication tools",
+      "description": "Part of IT resources, provided for professional use."
+    },
+    {
+      "id": "e46",
+      "type": "pekg:ProductOrService",
+      "name": "Messaging",
+      "description": "Part of IT resources, allowed for limited private use."
+    },
+    {
+      "id": "e47",
+      "type": "pekg:Technology",
+      "name": "Workstations",
+      "description": "Part of IT resources."
+    },
+    {
+      "id": "e48",
+      "type": "pekg:ProductOrService",
+      "name": "Professional data",
+      "description": "Includes files, mails, images; considered property of SYSTRAN."
+    },
+    {
+      "id": "e49",
+      "type": "pekg:Technology",
+      "name": "Equipment",
+      "description": "Can be replaced or retrieved by SYSTRAN for maintenance, security, or technological evolutions. Installed, configured, and set up by IT administrators."
+    },
+    {
+      "id": "e50",
+      "type": "pekg:Technology",
+      "name": "Software",
+      "description": "Installed, configured, and set up by IT administrators."
+    },
+    {
+      "id": "e51",
+      "type": "pekg:Technology",
+      "name": "Office PCs",
+      "description": "Allowed for limited private use."
+    },
+    {
+      "id": "e52",
+      "type": "pekg:Technology",
+      "name": "Phones",
+      "description": "Allowed for limited private use."
+    },
+    {
+      "id": "e53",
+      "type": "pekg:ProductOrService",
+      "name": "Business resources",
+      "description": "Excluded from private use."
+    },
+    {
+      "id": "e54",
+      "type": "pekg:Technology",
+      "name": "Centralized storage spaces",
+      "description": "Excluded from private use."
+    },
+    {
+      "id": "e55",
+      "type": "pekg:ProductOrService",
+      "name": "Professional applications",
+      "description": "Must not be endangered by private use."
+    },
+    {
+      "id": "e56",
+      "type": "pekg:Technology",
+      "name": "Network bandwidth",
+      "description": "Excessive use to be avoided during private use."
+    },
+    {
+      "id": "e57",
+      "type": "pekg:ProductOrService",
+      "name": "Outils informatiques",
+      "category": "Digital Tools",
+      "description": "General IT tools provided by SYSTRAN to its employees, including portable equipment."
+    },
+    {
+      "id": "e58",
+      "type": "pekg:ProductOrService",
+      "name": "\u00c9quipements portables",
+      "category": "Hardware",
+      "description": "Portable IT equipment made available by SYSTRAN to its employees."
+    },
+    {
+      "id": "e59",
+      "type": "pekg:ProductOrService",
+      "name": "Mat\u00e9riels",
+      "category": "Hardware",
+      "description": "Hardware components provided by SYSTRAN for use within its IT system."
+    },
+    {
+      "id": "e60",
+      "type": "pekg:ProductOrService",
+      "name": "Programmes",
+      "category": "Software",
+      "description": "Software programs provided by SYSTRAN for use within its IT system."
+    },
+    {
+      "id": "e61",
+      "type": "pekg:ProductOrService",
+      "name": "Progiciels",
+      "category": "Enterprise Software",
+      "description": "Enterprise software packages provided by SYSTRAN for use within its IT system."
+    },
+    {
+      "id": "e62",
+      "type": "pekg:Technology",
+      "name": "Virus",
+      "description": "Malicious software that can disrupt IT systems, against which SYSTRAN's systems need protection."
+    },
+    {
+      "id": "e63",
+      "type": "pekg:Technology",
+      "name": "Chevaux de Troie",
+      "description": "Malicious software disguised as legitimate programs, against which SYSTRAN's systems need protection."
+    },
+    {
+      "id": "e64",
+      "type": "pekg:Technology",
+      "name": "Bombes logiques",
+      "description": "Malicious code designed to activate under specific conditions, against which SYSTRAN's systems need protection."
+    },
+    {
+      "id": "e65",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Bande passante",
+      "kpiValueString": null,
+      "kpiDateOrPeriod": null,
+      "description": "Network bandwidth, which SYSTRAN monitors and manages to prevent saturation from personal use."
+    },
+    {
+      "id": "e66",
+      "type": "pekg:ProductOrService",
+      "name": "Internet Access",
+      "category": "Internal Service",
+      "description": "Access to the public internet provided via SYSTRAN's network, subject to security policies, monitoring, and content restrictions."
+    },
+    {
+      "id": "e67",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Data Security Policy Adherence",
+      "kpiValueString": "Mandatory",
+      "kpiDateOrPeriod": "2022-01-17",
+      "description": "Rules for users regarding data handling (reading, modifying, copying, destroying), professional data storage on personal equipment, private data storage on network drives, and systematic session locking."
+    },
+    {
+      "id": "e68",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Mobile Device Security",
+      "kpiValueString": "Mandatory",
+      "kpiDateOrPeriod": "2022-01-17",
+      "description": "Precautions for securing mobile information and communication devices, including authentication (password, fingerprint, facial recognition), limited local data storage on laptops, and physical anti-theft measures."
+    },
+    {
+      "id": "e69",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Web Browsing Monitoring",
+      "kpiValueString": "User ID recorded",
+      "kpiDateOrPeriod": "2022-01-17",
+      "description": "User identifiers are recorded when navigating the web, allowing visited site managers to link activity to SYSTRAN."
+    },
+    {
+      "id": "e70",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Restricted Internet Access",
+      "kpiValueString": "Limited/Prohibited",
+      "kpiDateOrPeriod": "2022-01-17",
+      "description": "Access to certain sites, browser configuration, and file downloads may be restricted or prohibited for security reasons."
+    },
+    {
+      "id": "e71",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Prohibited Content Access",
+      "kpiValueString": "Prohibited",
+      "kpiDateOrPeriod": "2022-01-17",
+      "description": "Prohibition of connecting to degrading, abusive, violent, racist, discriminatory, pornographic, defamatory, or publicly offensive sites."
+    },
+    {
+      "id": "e72",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Intellectual Property Rights Protection",
+      "kpiValueString": "Mandatory",
+      "kpiDateOrPeriod": "2022-01-17",
+      "description": "Prohibition of using SYSTRAN's network to violate third-party intellectual or industrial property rights."
+    },
+    {
+      "id": "e73",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "IT Incident Reporting",
+      "kpiValueString": "Immediate reporting required",
+      "kpiDateOrPeriod": "2022-01-17",
+      "description": "Users must immediately inform the IT service of any technical malfunction or anomaly."
+    },
+    {
+      "id": "e74",
+      "type": "pekg:ProductOrService",
+      "name": "\u00c9quipements",
+      "description": "General term for hardware and software equipment provided by SYSTRAN"
+    },
+    {
+      "id": "e75",
+      "type": "pekg:ProductOrService",
+      "name": "Postes de travail",
+      "description": "Workstations provided by SYSTRAN"
+    },
+    {
+      "id": "e76",
+      "type": "pekg:ProductOrService",
+      "name": "R\u00e9seaux",
+      "description": "Company networks"
+    },
+    {
+      "id": "e77",
+      "type": "pekg:Technology",
+      "name": "Technologies sans fil",
+      "description": "Wireless technologies"
+    },
+    {
+      "id": "e78",
+      "type": "pekg:ProductOrService",
+      "name": "Mat\u00e9riels nomades",
+      "description": "Mobile devices provided by SYSTRAN"
+    },
+    {
+      "id": "e79",
+      "type": "pekg:Technology",
+      "name": "Antivirus",
+      "description": "Antivirus software"
+    },
+    {
+      "id": "e80",
+      "type": "pekg:Technology",
+      "name": "Firewall",
+      "description": "Network firewall"
+    },
+    {
+      "id": "e81",
+      "type": "pekg:Technology",
+      "name": "Routeurs",
+      "description": "Network routers"
+    },
+    {
+      "id": "e82",
+      "type": "pekg:Technology",
+      "name": "Bornes Wifi",
+      "description": "Wifi hotspots/access points"
+    },
+    {
+      "id": "e83",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Mesures de s\u00e9curit\u00e9",
+      "description": "Security measures implemented on IT systems and equipment"
+    },
+    {
+      "id": "e84",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "R\u00e8gles de confidentialit\u00e9",
+      "description": "Confidentiality rules for data access and handling"
+    },
+    {
+      "id": "e85",
+      "type": "pekg:ProductOrService",
+      "name": "Mobile Devices",
+      "category": "Hardware",
+      "description": "Company-provided mobile computing equipment including laptops (PC portables), tablets (tablettes), and smartphones."
+    },
+    {
+      "id": "e86",
+      "type": "pekg:Technology",
+      "name": "Security Protection Devices",
+      "description": "Protection mechanisms equipped on company-provided mobile devices to ensure secure internet connection and access to company resources."
+    },
+    {
+      "id": "e87",
+      "type": "pekg:Technology",
+      "name": "3G Connectivity",
+      "description": "A mobile network technology used for direct internet access on some mobile devices, such as via a 3G card."
+    },
+    {
+      "id": "e88",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Mobile Equipment Usage Policy",
+      "description": "Rules and guidelines for the secure use of company-provided mobile devices, including connection protocols and prohibition of removing protection."
+    },
+    {
+      "id": "e89",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Personal Equipment Usage Policy",
+      "description": "Guidelines discouraging the use of personal devices for professional activities and requiring prior express authorization from an administrator for connection to the company's information system, subjecting them to company security rules."
+    },
+    {
+      "id": "e90",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Access Credential Policy",
+      "description": "Rules for managing user credentials (identifiers and passwords), including initial password change, complexity requirements, and mandatory storage in 1Password."
+    },
+    {
+      "id": "e91",
+      "type": "pekg:ProductOrService",
+      "name": "M\u00e9canisme de sauvegarde des donn\u00e9es informatiques professionnelles",
+      "category": "Data Backup Service",
+      "description": "A mechanism implemented by SYSTRAN for professional IT data stored on its information system."
+    },
+    {
+      "id": "e92",
+      "type": "pekg:ProductOrService",
+      "name": "OneDrive",
+      "category": "Cloud Storage Service"
+    },
+    {
+      "id": "e93",
+      "type": "pekg:Technology",
+      "name": "Syst\u00e8me d'information SYSTRAN",
+      "description": "SYSTRAN's internal information system."
+    },
+    {
+      "id": "e94",
+      "type": "pekg:Technology",
+      "name": "Dispositifs techniques mat\u00e9riels ou logiciels d'authentification",
+      "description": "Hardware or software technical authentication devices, such as tokens and smart cards."
+    },
+    {
+      "id": "e95",
+      "type": "pekg:Technology",
+      "name": "Tokens"
+    },
+    {
+      "id": "e96",
+      "type": "pekg:Technology",
+      "name": "Cartes \u00e0 puce"
+    },
+    {
+      "id": "e97",
+      "type": "pekg:Technology",
+      "name": "Disque dur externe chiffr\u00e9",
+      "description": "Encrypted external hard drive provided by the IT service."
+    },
+    {
+      "id": "e98",
+      "type": "pekg:Technology",
+      "name": "Syst\u00e8mes de traitement",
+      "description": "General processing systems."
+    },
+    {
+      "id": "e99",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Sauvegarde des donn\u00e9es",
+      "description": "Data backup policy/process."
+    },
+    {
+      "id": "e100",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Pr\u00e9servation de la confidentialit\u00e9",
+      "description": "Confidentiality preservation policy/process."
+    },
+    {
+      "id": "e101",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Donn\u00e9es confidentielles",
+      "description": "Confidential company data, including finance and human resources related information."
+    },
+    {
+      "id": "e102",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Finance",
+      "description": "Domain of confidential data within the company."
+    },
+    {
+      "id": "e103",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Ressources humaines",
+      "description": "Domain of confidential data within the company."
+    },
+    {
+      "id": "e104",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Propri\u00e9t\u00e9 intellectuelle",
+      "description": "Domain of confidential data within the company, protected by legislation."
+    },
+    {
+      "id": "e105",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Donn\u00e9es personnelles",
+      "description": "Domain of confidential data within the company, protected by legislation."
+    },
+    {
+      "id": "e106",
+      "type": "pekg:Person",
+      "fullName": "Utilisateur/Salari\u00e9",
+      "biographySummary": "An employee or user of SYSTRAN's IT resources."
+    },
+    {
+      "id": "e107",
+      "type": "pekg:Person",
+      "fullName": "User"
+    },
+    {
+      "id": "e108",
+      "type": "pekg:Person",
+      "fullName": "Collaborator"
+    },
+    {
+      "id": "e109",
+      "type": "pekg:Person",
+      "fullName": "Hierarchical Superior"
+    },
+    {
+      "id": "e110",
+      "type": "pekg:Person",
+      "fullName": "Management"
+    },
+    {
+      "id": "e111",
+      "type": "pekg:ProductOrService",
+      "name": "Information and Communication System",
+      "category": "Internal IT Infrastructure",
+      "description": "System used by the company for information and communication."
+    },
+    {
+      "id": "e112",
+      "type": "pekg:ProductOrService",
+      "name": "IT Support",
+      "category": "Internal Service",
+      "description": "Internal support for IT and security incidents, accessible via email support_it@systrangroup.com and ticket system."
+    },
+    {
+      "id": "e113",
+      "type": "pekg:ProductOrService",
+      "name": "Ticket System",
+      "category": "Internal IT Tool",
+      "description": "System for reporting IT or security incidents."
+    },
+    {
+      "id": "e114",
+      "type": "pekg:Technology",
+      "name": "Automated Data Processing"
+    },
+    {
+      "id": "e115",
+      "type": "pekg:Technology",
+      "name": "User Data",
+      "description": "Includes data, files, and electronic messages of users."
+    },
+    {
+      "id": "e116",
+      "type": "pekg:Technology",
+      "name": "Confidential Data",
+      "description": "Information whose disclosure could cause serious harm to persons or organizations."
+    },
+    {
+      "id": "e117",
+      "type": "pekg:Technology",
+      "name": "Email"
+    },
+    {
+      "id": "e118",
+      "type": "pekg:Technology",
+      "name": "Internet Navigation"
+    },
+    {
+      "id": "e119",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Right to Image of Persons",
+      "description": "Policy area concerning the right to image of individuals."
+    },
+    {
+      "id": "e120",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Protection against Exposure of Minors to Harmful Content",
+      "description": "Policy area concerning the protection of minors from harmful content."
+    },
+    {
+      "id": "e121",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Confidentiality of User Information",
+      "description": "Policy area concerning the confidentiality obligations of IT administrators regarding user information."
+    },
+    {
+      "id": "e122",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Privacy Protection",
+      "description": "Policy area concerning the protection of personal data and privacy."
+    },
+    {
+      "id": "e123",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Confidential Data Protection",
+      "description": "Policy area concerning the protection of sensitive and confidential information."
+    },
+    {
+      "id": "e124",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Security Incident Reporting",
+      "description": "Policy area concerning the process for reporting security incidents."
+    },
+    {
+      "id": "e125",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Malicious IT Use",
+      "description": "Events considered as malicious use of IT tools against the company or its collaborators."
+    },
+    {
+      "id": "e126",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Material Theft",
+      "description": "Type of security incident."
+    },
+    {
+      "id": "e127",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Impersonation Emails (Phishing/Fraud)",
+      "description": "Type of security incident involving emails for fraud or information theft."
+    },
+    {
+      "id": "e128",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Abnormal Workstation Behavior",
+      "description": "Type of security incident after visiting certain websites."
+    },
+    {
+      "id": "e129",
+      "type": "pekg:MarketContext",
+      "segmentName": "IT System Monitoring",
+      "characteristics": "Ensures security, proper functioning of information system, and compliance with IT charter."
+    },
+    {
+      "id": "e130",
+      "type": "pekg:ProductOrService",
+      "name": "Professional Email Messaging",
+      "category": "Communication Service",
+      "description": "Digital messaging service provided by SYSTRAN for professional communication with third parties and internal use, subject to specific policies regarding content, unsolicited messages, and personal use."
+    },
+    {
+      "id": "e131",
+      "type": "pekg:ProductOrService",
+      "name": "Anti-spam Tool",
+      "category": "Security Software",
+      "description": "A tool utilized by SYSTRAN to combat the propagation of unsolicited messages (spam) within its network."
+    },
+    {
+      "id": "e132",
+      "type": "pekg:Technology",
+      "name": "Antiviral Control",
+      "description": "Technology implemented to scan and control digital messages for viruses, applied to professional email messaging."
+    },
+    {
+      "id": "e133",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Attachment Size Limit",
+      "kpiValueString": "20 Mo",
+      "kpiDateOrPeriod": "Current",
+      "description": "The maximum size for email attachments to prevent congestion of the messaging system."
+    },
+    {
+      "id": "e134",
+      "type": "pekg:Company",
+      "name": "Service IT",
+      "description": "The internal IT department of SYSTRAN, responsible for monitoring and supporting the security devices and addressing dysfunctions."
+    },
+    {
+      "id": "e135",
+      "type": "pekg:ProductOrService",
+      "name": "Professional Mobile Phone Service",
+      "category": "Telecommunication Service",
+      "description": "Monthly plan subscribed by SYSTRAN for professional use, including unlimited calls, SMS, MMS, and 25 GB data."
+    },
+    {
+      "id": "e136",
+      "type": "pekg:Technology",
+      "name": "Double SIM",
+      "description": "Mobile phone compartment allowing two SIM cards."
+    },
+    {
+      "id": "e137",
+      "type": "pekg:Technology",
+      "name": "Smartphone",
+      "description": "Mobile device provided to employees for professional activity."
+    },
+    {
+      "id": "e138",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Call Limit",
+      "kpiValueString": "Unlimited",
+      "kpiDateOrPeriod": "Monthly"
+    },
+    {
+      "id": "e139",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "SMS Limit",
+      "kpiValueString": "Unlimited",
+      "kpiDateOrPeriod": "Monthly"
+    },
+    {
+      "id": "e140",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "MMS Limit",
+      "kpiValueString": "Unlimited",
+      "kpiDateOrPeriod": "Monthly"
+    },
+    {
+      "id": "e141",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Data Limit",
+      "kpiValueString": "25 Go",
+      "kpiDateOrPeriod": "Monthly"
+    },
+    {
+      "id": "e142",
+      "type": "pekg:ProductOrService",
+      "name": "Dossier s\u00e9curis\u00e9",
+      "category": "Security Software",
+      "description": "Application used to separate personal and professional data on mobile phones."
+    },
+    {
+      "id": "e143",
+      "type": "pekg:Technology",
+      "name": "PIN code",
+      "description": "A non-trivial PIN code used to protect SIM cards."
+    },
+    {
+      "id": "e144",
+      "type": "pekg:Technology",
+      "name": "Password",
+      "description": "A password or other authentication solution used to secure access to mobile terminals."
+    },
+    {
+      "id": "e145",
+      "type": "pekg:Technology",
+      "name": "Authentication Solution",
+      "description": "A solution for securing access to mobile terminals, alongside PIN codes and passwords."
+    },
+    {
+      "id": "e146",
+      "type": "pekg:Technology",
+      "name": "Monitoring Tools",
+      "description": "Tools used by SYSTRAN to monitor and measure system resources."
+    },
+    {
+      "id": "e147",
+      "type": "pekg:Technology",
+      "name": "VPN",
+      "description": "Virtual Private Network, used for external access to the company's network via the internet."
+    },
+    {
+      "id": "e148",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Connection Time and Duration",
+      "description": "Data point recorded during IT system monitoring."
+    },
+    {
+      "id": "e149",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Source IP Address",
+      "description": "Data point recorded during IT system monitoring."
+    },
+    {
+      "id": "e150",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Destination IP Address/URL",
+      "description": "Data point recorded during IT system monitoring."
+    },
+    {
+      "id": "e151",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Protocols and Applications Used",
+      "description": "Data point recorded during IT system monitoring."
+    },
+    {
+      "id": "e152",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "External User Identifier",
+      "description": "Data point recorded during IT system monitoring for external visitors or VPN access."
+    },
+    {
+      "id": "e153",
+      "type": "pekg:ProductOrService",
+      "name": "syst\u00e8me d'information",
+      "category": "IT System",
+      "description": "Information system of SYSTRAN, subject to security policies and monitoring."
+    },
+    {
+      "id": "e154",
+      "type": "pekg:ProductOrService",
+      "name": "syst\u00e8me de traitement automatis\u00e9",
+      "category": "IT System",
+      "description": "Automated data processing system, subject to legal penalties for fraudulent data manipulation."
+    },
+    {
+      "id": "e155",
+      "type": "pekg:ProductOrService",
+      "name": "intranet",
+      "category": "Internal Platform",
+      "description": "SYSTRAN's internal network platform where the IT Charter is made available to employees."
+    },
+    {
+      "id": "e156",
+      "type": "Government Agency",
+      "name": "Autorit\u00e9s Publiques Comp\u00e9tentes",
+      "description": "Competent public authorities to whom SYSTRAN's data may be communicated upon judicial requisition."
+    },
+    {
+      "id": "e157",
+      "type": "Legal Advisor",
+      "name": "Conseils Juridiques",
+      "roleInContext": "Recipient of data in case of judicial requisition."
+    },
+    {
+      "id": "e158",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "D\u00e9tection de comportements malveillants",
+      "description": "Purpose for recording data, to detect malicious behavior."
+    },
+    {
+      "id": "e159",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Politiques de s\u00e9curit\u00e9 de l'entreprise",
+      "description": "Company security policies, which recorded data helps to enforce."
+    },
+    {
+      "id": "e160",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Dysfonctionnements du syst\u00e8me d'information",
+      "description": "Purpose for recording data, to detect information system malfunctions."
+    },
+    {
+      "id": "e161",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Analyse a posteriori d'incidents de s\u00e9curit\u00e9",
+      "description": "Purpose for recording data, for post-incident security analysis."
+    },
+    {
+      "id": "e162",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Conformit\u00e9 r\u00e9glementaire",
+      "description": "Purpose for recording data, to conform to texts and regulations in force."
+    },
+    {
+      "id": "e163",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Contr\u00f4le du respect de la charte",
+      "description": "Purpose for recording data, to control adherence to the IT Charter."
+    },
+    {
+      "id": "e164",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Fraude Informatique",
+      "description": "Illegal act involving computer systems, subject to specific penalties defined by the Penal Code."
+    },
+    {
+      "id": "e165",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Respect du droit d\u2019auteur",
+      "description": "Compliance with copyright law."
+    },
+    {
+      "id": "e166",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Contrefa\u00e7on",
+      "description": "Act of counterfeiting, subject to civil and criminal penalties defined by the Intellectual Property Code."
+    },
+    {
+      "id": "e167",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Fine Amount",
+      "valueString": "30.000 \u20ac",
+      "scope": "Legal Penalty",
+      "description": "Fine for alteration or suppression of data, accompanied by 2 years prison."
+    },
+    {
+      "id": "e168",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Fine Amount",
+      "valueString": "45.000 \u20ac",
+      "scope": "Legal Penalty",
+      "description": "Fine for fraudulently introducing, suppressing, or modifying data, accompanied by 3 years prison."
+    },
+    {
+      "id": "e169",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Fine Amount",
+      "valueString": "300.000 \u20ac",
+      "scope": "Legal Penalty",
+      "description": "Fine for counterfeiting, accompanied by 3 years prison."
+    },
+    {
+      "id": "e170",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Charte Informatique Effective Date",
+      "eventType": "Policy Implementation",
+      "dateOrYear": "March 1, 2022",
+      "description": "The date from which the SYSTRAN IT Charter became applicable."
+    },
+    {
+      "id": "e171",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Document Version",
+      "kpiValueString": "v11_2022-01-17",
+      "kpiDateOrPeriod": "January 17, 2022",
+      "description": "Version and date of the SYSTRAN IT Charter document."
+    },
+    {
+      "id": "e172",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Internal Policy Document",
+      "description": "SYSTRAN's internal regulations, to which the IT Charter is an annex and which define disciplinary sanctions."
+    },
+    {
+      "id": "e173",
+      "type": "pekg:Headcount",
+      "headcountName": "Employees",
+      "breakdownDescription": "Employees of SYSTRAN who are informed about the IT Charter and digital tool usage."
+    },
+    {
+      "id": "e174",
+      "type": "pekg:Technology",
+      "name": "Techniques de s\u00e9curit\u00e9",
+      "description": "Security techniques implemented within SYSTRAN that users must be informed about."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e9",
+      "target": "e1",
+      "type": "positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e10",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e11",
+      "target": "e12",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e13",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e14",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e15",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e16",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e18",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e20",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e9",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e5",
+      "target": "e27",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e30",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e34",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e35",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e8",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e5",
+      "target": "e36",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e5",
+      "target": "e9",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e39",
+      "target": "e9",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e5",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e9",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e9",
+      "target": "e39",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e40",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e41",
+      "target": "e1",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e42",
+      "target": "e1",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e41",
+      "target": "e43",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e42",
+      "target": "e43",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e44",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e45",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e46",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e47",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e49",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e50",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e51",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e52",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e53",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e54",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e55",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e56",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e57",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e58",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e59",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e60",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e61",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e65",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e66",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e67",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e68",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e69",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e70",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e71",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e72",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e73",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e9",
+      "target": "e5",
+      "type": "isResponsibleFor"
+    },
+    {
+      "source": "e9",
+      "target": "e9",
+      "type": "reliesOn"
+    },
+    {
+      "source": "e9",
+      "target": "e5",
+      "type": "manages"
+    },
+    {
+      "source": "e9",
+      "target": "e76",
+      "type": "deploys"
+    },
+    {
+      "source": "e9",
+      "target": "e59",
+      "type": "connects"
+    },
+    {
+      "source": "e9",
+      "target": "e77",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e9",
+      "target": "e75",
+      "type": "accesses"
+    },
+    {
+      "source": "e1",
+      "target": "e74",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e59",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e61",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e75",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e78",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e79",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e80",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e81",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e82",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e83",
+      "target": "e79",
+      "type": "includes"
+    },
+    {
+      "source": "e83",
+      "target": "e80",
+      "type": "includes"
+    },
+    {
+      "source": "e5",
+      "target": "e83",
+      "type": "hasOperationalKPI"
+    },
+    {
+      "source": "e5",
+      "target": "e84",
+      "type": "hasOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e85",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e85",
+      "target": "e86",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e85",
+      "target": "e87",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e88",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e89",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e90",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e91",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e93",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e94",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e99",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e100",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e97",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e98",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e101",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e101",
+      "target": "e102",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e101",
+      "target": "e103",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e106",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e106",
+      "target": "e92",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e106",
+      "target": "e97",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e106",
+      "target": "e99",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e106",
+      "target": "e100",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e106",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e107",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e1",
+      "target": "e108",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e1",
+      "target": "e109",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e1",
+      "target": "e110",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e1",
+      "target": "e111",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e112",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e113",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e114",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e44",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e115",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e116",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e117",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e118",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e129",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e119",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e120",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e121",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e122",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e123",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e124",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e125",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e126",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e127",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e128",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e107",
+      "target": "e9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e40",
+      "target": "e9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e109",
+      "target": "e9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e110",
+      "target": "e9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e111",
+      "target": "e44",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e111",
+      "target": "e115",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e111",
+      "target": "e116",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e112",
+      "target": "e117",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e112",
+      "target": "e113",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e107",
+      "target": "e125",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e107",
+      "target": "e126",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e107",
+      "target": "e127",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e107",
+      "target": "e128",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e40",
+      "target": "e121",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e4",
+      "target": "e108",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e130",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e131",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e132",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e133",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e134",
+      "target": "e1",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e1",
+      "target": "e135",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e135",
+      "target": "e136",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e135",
+      "target": "e137",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e135",
+      "target": "e138",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e135",
+      "target": "e139",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e135",
+      "target": "e140",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e135",
+      "target": "e141",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e135",
+      "target": "e2",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e142",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e143",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e144",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e145",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e146",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e147",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e148",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e149",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e150",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e151",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e152",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e153",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e154",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e155",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e171",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e172",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e173",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e1",
+      "target": "e174",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e153",
+      "target": "e158",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e153",
+      "target": "e160",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e153",
+      "target": "e161",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e159",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e162",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e163",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e11",
+      "target": "e170",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e11",
+      "target": "e171",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e11",
+      "target": "e163",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e172",
+      "target": "e11",
+      "type": "pekg:hasSubsidiary"
+    },
+    {
+      "source": "e5",
+      "target": "e164",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e154",
+      "target": "e164",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e156",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e1",
+      "target": "e157",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e164",
+      "target": "e167",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e164",
+      "target": "e168",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e166",
+      "target": "e169",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e165",
+      "target": "e166",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e173",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e173",
+      "target": "e174",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e173",
+      "target": "e57",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e155",
+      "target": "e2",
+      "type": "pekg:hasOfficeIn"
+    }
+  ]
+}

@@ -1,0 +1,1222 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN SAS",
+      "description": "Company whose bylaws were updated on 30 November 2022, detailing financial year closing, profit appropriation, dividend payment, and potential transformation.",
+      "alias": [
+        "SOISY TRADUCTION",
+        "SYSTRAN SA"
+      ],
+      "foundedYear": 1985,
+      "industry": "Language Technology",
+      "keyStrengths": [
+        "development, exploitation, promotion and sale of automatic translation systems",
+        "activities regarding dictionaries and terminological databases",
+        "multilanguages applications of natural languages processing",
+        "management, acquisition, commercial activities regarding language industries"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Share Capital",
+      "valueString": "4,072,679 Euros",
+      "scope": "Company"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Location",
+      "locationName": "SOISY S/S MONTMORENCY",
+      "locationType": "Legal Body Location",
+      "officeSpecificInfo": "Location of private deed for incorporation of SOISY TRADUCTION."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Loss of Share Capital & Dissolution Procedure",
+      "eventType": "Corporate Governance Update",
+      "dateOrYear": "30 November 2022",
+      "description": "Update to the bylaws of SYSTRAN SAS, covering aspects of share capital, preferred shares, and payment terms for shares."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Bylaws Certified",
+      "eventType": "Document Certification",
+      "dateOrYear": "December 31, 2022",
+      "description": "Certified by the President"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Position",
+      "titleName": "Social and Economic Committee (staff delegation)",
+      "department": "Executive Management",
+      "description": "Key leadership role at SYSTRAN SAS, responsible for representing, directing, and administering the company. Appointed by the Board of Directors. Term can be limited or unlimited, or a renewable period of three years. Can be removed by the Board of Directors at any time without reasonable ground. Responsibilities include drawing up an annual report, representing the company in dealings with third parties, and granting delegations of powers. Remuneration is determined by the Board of Directors. This position can be held by a natural person or a corporate entity."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:TransactionContext",
+      "contextName": "Other project or decision subject to Board authorization",
+      "status": "Exempt from Board Authorization",
+      "typeSought": "Corporate transaction (e.g., M&A, funding)",
+      "dealRationaleHighlights": [
+        "Transformation into a company having another form in accordance with bylaws and legal provisions."
+      ],
+      "keyInvestmentHighlights": [],
+      "transactionPerimeter": "SYSTRAN SAS",
+      "description": "In any amount, in respect of commitments entered into by entities outside the SYSTRAN group."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Incorporation of SOISY TRADUCTION",
+      "eventType": "Incorporation",
+      "dateOrYear": "1985-12-04",
+      "description": "Company incorporated as SOISY TRADUCTION, a private limited company (soci\u00e9t\u00e9 \u00e0 responsabilit\u00e9 limit\u00e9e), following a private deed."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Transformation to SYSTRAN SA",
+      "eventType": "Corporate Form Change",
+      "dateOrYear": "1988-12-30",
+      "description": "Company adopted the joint-stock company (soci\u00e9t\u00e9 anonyme) form and SYSTRAN SA as corporate name."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Transformation to SYSTRAN SAS",
+      "eventType": "Corporate Form Change",
+      "dateOrYear": "2016-07-12",
+      "description": "Company transformed into a French simplified joint company (soci\u00e9t\u00e9 par actions simplifi\u00e9e) by extraordinary general meeting of shareholders."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Bylaws Update",
+      "eventType": "Legal Document Update",
+      "dateOrYear": "2022-11-30",
+      "description": "Bylaws updated for SYSTRAN SAS."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "AUTOMATIC TRANSLATION systems",
+      "category": "Translation Software",
+      "description": "Systems on computer (software and hardware) for all natural languages pairs."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "dictionaries",
+      "category": "Language Resources",
+      "description": "Activities regarding dictionaries."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:ProductOrService",
+      "name": "TERMINOLOGICAL databases",
+      "category": "Language Resources",
+      "description": "Activities regarding terminological databases."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:ProductOrService",
+      "name": "MULTILANGUAGES applications",
+      "category": "Language Software",
+      "description": "Applications of Natural Languages Processing."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Technology",
+      "name": "software",
+      "description": "Underlying technology for automatic translation systems."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Technology",
+      "name": "hardware",
+      "description": "Underlying technology for automatic translation systems."
+    },
+    {
+      "id": "e18",
+      "type": "pekg:Technology",
+      "name": "NATURAL LANGUAGES PROCESSING",
+      "description": "Core technology for multilanguages applications."
+    },
+    {
+      "id": "e19",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "natural languages pairs",
+      "description": "Target for automatic translation systems."
+    },
+    {
+      "id": "e20",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "LANGUAGE INDUSTRIES",
+      "description": "Industry for management, acquisition, commercial activities related to language."
+    },
+    {
+      "id": "e21",
+      "type": "pekg:MarketContext",
+      "segmentName": "International",
+      "geography": "France",
+      "characteristics": "Company operates directly or indirectly in France."
+    },
+    {
+      "id": "e22",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Share Capital",
+      "valueString": "4,072,679 Euros",
+      "scope": "Company-wide"
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Number of Shares",
+      "valueString": "8,145,358 shares",
+      "scope": "Company-wide"
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Nominal Value per Share",
+      "valueString": "0.50 Euro",
+      "scope": "Per share"
+    },
+    {
+      "id": "e25",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Company Duration",
+      "kpiValueString": "99 years",
+      "description": "as from the date of its registration with the register of trade and companies, except in case of early dissolution or extension."
+    },
+    {
+      "id": "e26",
+      "type": "Collective",
+      "name": "Shareholders of SYSTRAN SAS",
+      "description": "Collective body responsible for decisions regarding company duration and share capital modifications, and preferential subscription rights."
+    },
+    {
+      "id": "e27",
+      "type": "Judicial",
+      "name": "Commercial Court"
+    },
+    {
+      "id": "e28",
+      "type": "Registry",
+      "name": "Register of Trade and Companies"
+    },
+    {
+      "id": "e29",
+      "type": "pekg:ProductOrService",
+      "name": "Cash Shares",
+      "category": "Equity Security",
+      "description": "Shares that must be paid up at subscription for their nominal value and any premium."
+    },
+    {
+      "id": "e30",
+      "type": "pekg:ProductOrService",
+      "name": "Fractional Shares",
+      "category": "Equity",
+      "description": "Shares ('rompus') that may arise during capital increases or decreases, requiring holders to manage their number of securities to exercise rights."
+    },
+    {
+      "id": "e31",
+      "type": "pekg:ProductOrService",
+      "name": "Preferred Shares",
+      "category": "Equity",
+      "description": "Shares that can be created with or without voting rights, and with special rights. They cannot represent more than half of the share capital if without voting rights. They can be bought-back or converted into ordinary shares or other preferred share classes upon decision of extraordinary general meeting of shareholders."
+    },
+    {
+      "id": "e32",
+      "type": "pekg:ProductOrService",
+      "name": "Ordinary Shares",
+      "category": "Equity",
+      "description": "Standard shares into which preferred shares can be converted."
+    },
+    {
+      "id": "e33",
+      "type": "General",
+      "name": "Shareholders",
+      "description": "Holders of shares in SYSTRAN SAS, including those with special benefits or preferred shares, and those liable for payments."
+    },
+    {
+      "id": "e34",
+      "type": "Individual/Group",
+      "name": "Beneficial Owner",
+      "description": "('usufruitier' in French) - party with specific rights over shares, particularly regarding preferential subscription rights."
+    },
+    {
+      "id": "e35",
+      "type": "Individual/Group",
+      "name": "Bare Owner",
+      "description": "('nu-propri\u00e9taire' in French) - party with specific rights over shares, particularly regarding preferential subscription rights."
+    },
+    {
+      "id": "e36",
+      "type": "Individual/Group",
+      "name": "Defaulting Shareholder",
+      "description": "A shareholder who has not paid up their shares by the fixed deadline, subject to legal actions by the company."
+    },
+    {
+      "id": "e37",
+      "type": "pekg:Person",
+      "fullName": "President of the company",
+      "biographySummary": "Individual responsible for calling for payment of share balances and fixing payment terms for SYSTRAN SAS."
+    },
+    {
+      "id": "e38",
+      "type": "pekg:ProductOrService",
+      "name": "shares",
+      "category": "Equity Security",
+      "description": "nominative form, entry in account held by the company, freely transferable, paid up shares"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:ProductOrService",
+      "name": "securities",
+      "category": "Financial Instrument",
+      "description": "securities giving access to capital or right to allotment of debt instruments"
+    },
+    {
+      "id": "e40",
+      "type": "Individual/Group",
+      "name": "owner"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:ProductOrService",
+      "name": "bonds",
+      "category": "Debt Security"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:ProductOrService",
+      "name": "debt instruments",
+      "category": "Debt Security"
+    },
+    {
+      "id": "e43",
+      "type": "Individual/Group",
+      "name": "Sole Shareholder",
+      "description": "The sole shareholder of SYSTRAN SAS, as per bylaws"
+    },
+    {
+      "id": "e44",
+      "type": "pekg:Company",
+      "name": "company which controls SYSTRAN SAS",
+      "description": "a company which controls SYSTRAN SAS"
+    },
+    {
+      "id": "e45",
+      "type": "Individual/Group",
+      "name": "joint owners"
+    },
+    {
+      "id": "e46",
+      "type": "Group",
+      "name": "Shareholders of SYSTRAN SAS",
+      "description": "Bear losses up to contributions; shares give proportional rights to profits, assets, and liquidation dividends; voting rights proportional to capital, one vote per share, with some exclusions (e.g., contributor in kind, beneficiary of special benefit, or right to subscription)."
+    },
+    {
+      "id": "e47",
+      "type": "pekg:Person",
+      "fullName": "President (Individual)",
+      "description": "A natural person who may be appointed as President of SYSTRAN SAS."
+    },
+    {
+      "id": "e48",
+      "type": "pekg:Company",
+      "name": "Corporate President",
+      "description": "A corporate entity that may be appointed as President of SYSTRAN SAS. When appointed, it must mandatorily appoint a natural person as its permanent representative."
+    },
+    {
+      "id": "e49",
+      "type": "pekg:Person",
+      "fullName": "Natural Person Permanent Representative",
+      "description": "A natural person mandatorily appointed by a Corporate President to act as its permanent representative for SYSTRAN SAS.",
+      "biographySummary": "A natural person appointed by a corporate entity serving as a Board member to act as its permanent representative."
+    },
+    {
+      "id": "e50",
+      "type": "Group of Individuals",
+      "name": "Shareholders",
+      "description": "Shareholders of SYSTRAN SAS, responsible for appointing and removing Board members."
+    },
+    {
+      "id": "e51",
+      "type": "pekg:Technology",
+      "name": "videoconferencing"
+    },
+    {
+      "id": "e52",
+      "type": "pekg:Technology",
+      "name": "telecommunication"
+    },
+    {
+      "id": "e53",
+      "type": "pekg:Company",
+      "name": "Corporate Entity Board Member",
+      "description": "A corporate entity that is a member of the Board of Directors of SYSTRAN SAS."
+    },
+    {
+      "id": "e54",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Minimum Board Composition",
+      "kpiValueString": "three (3) or more members",
+      "description": "Minimum number of members required for the Board of Directors."
+    },
+    {
+      "id": "e55",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Board Meeting Quorum",
+      "kpiValueString": "at least half of its members present or represented",
+      "description": "Minimum attendance required for valid Board deliberations."
+    },
+    {
+      "id": "e56",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Board Decision Majority",
+      "kpiValueString": "majority of the members present or represented",
+      "description": "Majority required for Board decisions, with each member having one vote and no casting vote for Chairperson."
+    },
+    {
+      "id": "e57",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Board Member Term",
+      "kpiValueString": "renewable period of three years",
+      "description": "Default term duration for Board members, unless specified otherwise in appointment decision."
+    },
+    {
+      "id": "e58",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Board Meeting Frequency",
+      "kpiValueString": "as often as is necessary",
+      "description": "Frequency at which the Board of Directors meets."
+    },
+    {
+      "id": "e59",
+      "type": "pekg:Company",
+      "name": "SYSTRAN group",
+      "description": "The broader group of companies to which SYSTRAN SAS belongs, as implied by 'entities outside the SYSTRAN group'."
+    },
+    {
+      "id": "e60",
+      "type": "Corporate or Individual",
+      "name": "Shareholder",
+      "percentageOwned": "more than 10%",
+      "description": "Shareholder directly or indirectly holding more than 10% of the capital."
+    },
+    {
+      "id": "e61",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Loan/Security/Financial Commitment Threshold",
+      "valueString": "500,000 Euros",
+      "scope": "per transaction"
+    },
+    {
+      "id": "e62",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Acquisition/Disposal Threshold",
+      "valueString": "500,000 Euros",
+      "scope": "per transaction"
+    },
+    {
+      "id": "e63",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Investment/Expenditure/Commitment Threshold",
+      "valueString": "1,000,000 Euros",
+      "scope": "annual amount"
+    },
+    {
+      "id": "e64",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Employee Gross Annual Remuneration Threshold",
+      "valueString": "150,000 Euros",
+      "scope": "annual remuneration"
+    },
+    {
+      "id": "e65",
+      "type": "Group",
+      "name": "Shareholders",
+      "description": "Collective body of shareholders of SYSTRAN SAS, including scenarios with a single shareholder."
+    },
+    {
+      "id": "e66",
+      "type": "Individual or Corporate",
+      "name": "Sole Shareholder",
+      "description": "A single shareholder of SYSTRAN SAS who takes collective decisions."
+    },
+    {
+      "id": "e67",
+      "type": "Auditor",
+      "name": "Statutory Auditor",
+      "roleInContext": "Carries out audit of the company and is appointed by shareholders."
+    },
+    {
+      "id": "e68",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Accounts",
+      "scope": "Company-wide",
+      "sourceNote": "Ruled upon by shareholders."
+    },
+    {
+      "id": "e69",
+      "type": "Group",
+      "name": "Owners of shares of a determined class",
+      "description": "Shareholders of SYSTRAN SAS holding a specific class of shares, making special decisions."
+    },
+    {
+      "id": "e70",
+      "type": "Group",
+      "name": "Owners of securities giving access to the capital",
+      "description": "Holders of securities convertible to capital in SYSTRAN SAS, deciding on issuance agreements."
+    },
+    {
+      "id": "e71",
+      "type": "Individual/Group",
+      "name": "Plurality of Shareholders",
+      "description": "Multiple shareholders of SYSTRAN SAS, as per bylaws"
+    },
+    {
+      "id": "e72",
+      "type": "pekg:Person",
+      "fullName": "President"
+    },
+    {
+      "id": "e73",
+      "type": "pekg:Person",
+      "fullName": "Managing Director"
+    },
+    {
+      "id": "e74",
+      "type": "pekg:Person",
+      "fullName": "Liquidator"
+    },
+    {
+      "id": "e75",
+      "type": "pekg:Person",
+      "fullName": "Auditor"
+    },
+    {
+      "id": "e76",
+      "type": "pekg:Person",
+      "fullName": "Auditor with special skill"
+    },
+    {
+      "id": "e77",
+      "type": "pekg:Person",
+      "fullName": "President of SYSTRAN SAS",
+      "biographySummary": "Responsible for drawing up inventory, annual accounts, management report, proposing profit appropriation, and potentially distributing deposits on dividends."
+    },
+    {
+      "id": "e78",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Inventory of assets and liabilities",
+      "scope": "Company",
+      "description": "Drawn up annually by the President."
+    },
+    {
+      "id": "e79",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual accounts",
+      "scope": "Company",
+      "description": "Drawn up annually by the President, submitted for shareholder approval."
+    },
+    {
+      "id": "e80",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Management report",
+      "scope": "Company",
+      "description": "Established annually by the President, submitted for shareholder approval."
+    },
+    {
+      "id": "e81",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Consolidated accounts",
+      "scope": "Company",
+      "description": "Presented and submitted to shareholders for approval if drawn up."
+    },
+    {
+      "id": "e82",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Profit or loss of the financial year",
+      "scope": "Company",
+      "description": "Difference between revenues and expenses."
+    },
+    {
+      "id": "e83",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Legal reserve fund",
+      "scope": "Company",
+      "description": "Five percent of profit (less prior losses) deducted until it reaches one-tenth of share capital."
+    },
+    {
+      "id": "e84",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Share capital",
+      "scope": "Company",
+      "description": "Benchmark for legal reserve fund; revaluation variance may be incorporated into it."
+    },
+    {
+      "id": "e85",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Distributable profit",
+      "scope": "Company",
+      "description": "Profit less prior losses and legal reserve, plus retained earnings; available for shareholder distribution."
+    },
+    {
+      "id": "e86",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Retained earnings",
+      "scope": "Company",
+      "description": "Increases distributable profit."
+    },
+    {
+      "id": "e87",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Dividends",
+      "scope": "Company",
+      "description": "Distributed to shareholders from distributable profit or reserves; paid annually within 9 months of financial year closing."
+    },
+    {
+      "id": "e88",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revaluation variance",
+      "scope": "Company",
+      "description": "Cannot be distributed; may be incorporated into share capital."
+    },
+    {
+      "id": "e89",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Deposits on dividends",
+      "scope": "Company",
+      "description": "May be distributed by the President before account approval."
+    },
+    {
+      "id": "e90",
+      "type": "Judicial Body",
+      "name": "Commercial Court"
+    },
+    {
+      "id": "e91",
+      "type": "pekg:Person",
+      "fullName": "Presiding Judge of the Commercial Court"
+    },
+    {
+      "id": "e92",
+      "type": "pekg:Person",
+      "fullName": "Judicial Representative"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e6",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e12",
+      "target": "e16",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e12",
+      "target": "e17",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e15",
+      "target": "e18",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e8",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e8",
+      "target": "e3",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e26",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e4",
+      "target": "e28",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e1",
+      "target": "e36",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e1",
+      "target": "e37",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e37",
+      "target": "e6",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e40",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e40",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e1",
+      "target": "e41",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e42",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e43",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e43",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e1",
+      "target": "e44",
+      "type": "pekg:hasSubsidiary"
+    },
+    {
+      "source": "e1",
+      "target": "e44",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e1",
+      "target": "e45",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e45",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e6",
+      "target": "e3",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e34",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e35",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e1",
+      "target": "e46",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e46",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e1",
+      "target": "e47",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e47",
+      "target": "e6",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e48",
+      "target": "e49",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e49",
+      "target": "e6",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e1",
+      "target": "e50",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e6",
+      "target": "e6",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e53",
+      "target": "e49",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e6",
+      "target": "e53",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e6",
+      "target": "e3",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e6",
+      "target": "e51",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e6",
+      "target": "e52",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e6",
+      "target": "e54",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6",
+      "target": "e55",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6",
+      "target": "e56",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6",
+      "target": "e57",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6",
+      "target": "e58",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e60",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e7",
+      "target": "e61",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e62",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e63",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e7",
+      "target": "e64",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e65",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e66",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e69",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e70",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e1",
+      "target": "e68",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e67",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e65",
+      "target": "e67",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e1",
+      "target": "e71",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e1",
+      "target": "e72",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e72",
+      "target": "e6",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e1",
+      "target": "e73",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e73",
+      "target": "e6",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e73",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e1",
+      "target": "e74",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e74",
+      "target": "e6",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e1",
+      "target": "e75",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e75",
+      "target": "e6",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e1",
+      "target": "e76",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e76",
+      "target": "e6",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e1",
+      "target": "e77",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e77",
+      "target": "e6",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e77",
+      "target": "e78",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e77",
+      "target": "e79",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e77",
+      "target": "e80",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e81",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e82",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e83",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e84",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e85",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e86",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e87",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e88",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e89",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e65",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e4",
+      "target": "e6",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e4",
+      "target": "e65",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e4",
+      "target": "e90",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e91",
+      "target": "e6",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e6",
+      "target": "e90",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e4",
+      "target": "e91",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e4",
+      "target": "e92",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e4",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e90",
+      "target": "e3",
+      "type": "pekg:hasOfficeIn"
+    }
+  ]
+}

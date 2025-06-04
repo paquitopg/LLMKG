@@ -1,0 +1,321 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script>function neighbourhoodHighlight(params) {
+  // console.log("in nieghbourhoodhighlight");
+  allNodes = nodes.get({ returnType: "Object" });
+  // originalNodes = JSON.parse(JSON.stringify(allNodes));
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    highlightActive = true;
+    var i, j;
+    var selectedNode = params.nodes[0];
+    var degrees = 2;
+
+    // mark all nodes as hard to read.
+    for (let nodeId in allNodes) {
+      // nodeColors[nodeId] = allNodes[nodeId].color;
+      allNodes[nodeId].color = "rgba(200,200,200,0.5)";
+      if (allNodes[nodeId].hiddenLabel === undefined) {
+        allNodes[nodeId].hiddenLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+    var connectedNodes = network.getConnectedNodes(selectedNode);
+    var allConnectedNodes = [];
+
+    // get the second degree nodes
+    for (i = 1; i < degrees; i++) {
+      for (j = 0; j < connectedNodes.length; j++) {
+        allConnectedNodes = allConnectedNodes.concat(
+          network.getConnectedNodes(connectedNodes[j])
+        );
+      }
+    }
+
+    // all second degree nodes get a different color and their label back
+    for (i = 0; i < allConnectedNodes.length; i++) {
+      // allNodes[allConnectedNodes[i]].color = "pink";
+      allNodes[allConnectedNodes[i]].color = "rgba(150,150,150,0.75)";
+      if (allNodes[allConnectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[allConnectedNodes[i]].label =
+          allNodes[allConnectedNodes[i]].hiddenLabel;
+        allNodes[allConnectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // all first degree nodes get their own color and their label back
+    for (i = 0; i < connectedNodes.length; i++) {
+      // allNodes[connectedNodes[i]].color = undefined;
+      allNodes[connectedNodes[i]].color = nodeColors[connectedNodes[i]];
+      if (allNodes[connectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[connectedNodes[i]].label =
+          allNodes[connectedNodes[i]].hiddenLabel;
+        allNodes[connectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // the main node gets its own color and its label back.
+    // allNodes[selectedNode].color = undefined;
+    allNodes[selectedNode].color = nodeColors[selectedNode];
+    if (allNodes[selectedNode].hiddenLabel !== undefined) {
+      allNodes[selectedNode].label = allNodes[selectedNode].hiddenLabel;
+      allNodes[selectedNode].hiddenLabel = undefined;
+    }
+  } else if (highlightActive === true) {
+    // console.log("highlightActive was true");
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      // allNodes[nodeId].color = "purple";
+      allNodes[nodeId].color = nodeColors[nodeId];
+      // delete allNodes[nodeId].color;
+      if (allNodes[nodeId].hiddenLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].hiddenLabel;
+        allNodes[nodeId].hiddenLabel = undefined;
+      }
+    }
+    highlightActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    // console.log("Nothing was selected");
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        // allNodes[nodeId].color = {};
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function filterHighlight(params) {
+  allNodes = nodes.get({ returnType: "Object" });
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    filterActive = true;
+    let selectedNodes = params.nodes;
+
+    // hiding all nodes and saving the label
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = true;
+      if (allNodes[nodeId].savedLabel === undefined) {
+        allNodes[nodeId].savedLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+
+    for (let i=0; i < selectedNodes.length; i++) {
+      allNodes[selectedNodes[i]].hidden = false;
+      if (allNodes[selectedNodes[i]].savedLabel !== undefined) {
+        allNodes[selectedNodes[i]].label = allNodes[selectedNodes[i]].savedLabel;
+        allNodes[selectedNodes[i]].savedLabel = undefined;
+      }
+    }
+
+  } else if (filterActive === true) {
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = false;
+      if (allNodes[nodeId].savedLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].savedLabel;
+        allNodes[nodeId].savedLabel = undefined;
+      }
+    }
+    filterActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function selectNode(nodes) {
+  network.selectNodes(nodes);
+  neighbourhoodHighlight({ nodes: nodes });
+  return nodes;
+}
+
+function selectNodes(nodes) {
+  network.selectNodes(nodes);
+  filterHighlight({nodes: nodes});
+  return nodes;
+}
+
+function highlightFilter(filter) {
+  let selectedNodes = []
+  let selectedProp = filter['property']
+  if (filter['item'] === 'node') {
+    let allNodes = nodes.get({ returnType: "Object" });
+    for (let nodeId in allNodes) {
+      if (allNodes[nodeId][selectedProp] && filter['value'].includes((allNodes[nodeId][selectedProp]).toString())) {
+        selectedNodes.push(nodeId)
+      }
+    }
+  }
+  else if (filter['item'] === 'edge'){
+    let allEdges = edges.get({returnType: 'object'});
+    // check if the selected property exists for selected edge and select the nodes connected to the edge
+    for (let edge in allEdges) {
+      if (allEdges[edge][selectedProp] && filter['value'].includes((allEdges[edge][selectedProp]).toString())) {
+        selectedNodes.push(allEdges[edge]['from'])
+        selectedNodes.push(allEdges[edge]['to'])
+      }
+    }
+  }
+  selectNodes(selectedNodes)
+}</script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            
+            
+            
+            
+            
+
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1f77b4", "id": "e1", "label": "SYSTRAN", "shape": "dot", "size": 15, "title": "ID: e1\u003cbr\u003eType: pekg:Company\u003cbr\u003ename: SYSTRAN\u003cbr\u003ealias: [\u0027SYSTRAN SA, soci\u00e9t\u00e9 anonyme\u0027, \u0027SYSTRAN S.A. (Soci\u00e9t\u00e9 Anonyme)\u0027, \u0027SYSTRAN SA Soci\u00e9t\u00e9 anonyme\u0027, \u0027SYSTRAN Soci\u00e9t\u00e9 Anonyme\u0027, \u0027SYSTRAN S.A.\u0027, \u0027SYSTRAN, Soci\u00e9t\u00e9 par actions simplifi\u00e9e \u00e0 associ\u00e9 unique\u0027, \u0027SYSTRAN S.A., soci\u00e9t\u00e9 anonyme\u0027, \u0027SYSTRAN, SAS\u0027]\u003cbr\u003edescription: A company that owns several trademarks, including \u0027ready2go\u0027, \u0027INTERRO\u0027, \u0027ULYSSE\u0027, and \u0027SYSTRAN\u0027. Legal forms mentioned are \u0027SYSTRAN S.A., Soci\u00e9t\u00e9 Anonyme\u0027 and \u0027SYSTRAN, Soci\u00e9t\u00e9 par actions simplifi\u00e9e\u0027."}, {"color": "#d62728", "id": "e2", "label": "Project Systran Dataroom", "shape": "dot", "size": 15, "title": "ID: e2\u003cbr\u003eType: pekg:TransactionContext\u003cbr\u003econtextName: Project Systran Dataroom\u003cbr\u003estatus: Dataroom preparation\u003cbr\u003etypeSought: Potential Transaction"}, {"color": "#cccccc", "id": "e3", "label": "INPI", "shape": "dot", "size": 15, "title": "ID: e3\u003cbr\u003eType: National Institute of Industrial Property\u003cbr\u003ename: INPI"}, {"color": "#9467bd", "id": "e4", "label": "Portail Data", "shape": "dot", "size": 15, "title": "ID: e4\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Portail Data\u003cbr\u003ecategory: Data Portal"}, {"color": "#9467bd", "id": "e5", "label": "ULYSSE", "shape": "dot", "size": 15, "title": "ID: e5\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: ULYSSE\u003cbr\u003ecategory: Trademark\u003cbr\u003edescription: Trademark N\u00ba FR1214969, expired. Covers products/services in categories 00, 09, 16, 42."}, {"color": "#9467bd", "id": "e6", "label": "MULTIDIC", "shape": "dot", "size": 15, "title": "ID: e6\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: MULTIDIC\u003cbr\u003ecategory: Trademark"}, {"color": "#9467bd", "id": "e7", "label": "EXPRESS TRADUCTION", "shape": "dot", "size": 15, "title": "ID: e7\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: EXPRESS TRADUCTION\u003cbr\u003ecategory: Trademark"}, {"color": "#e7969c", "id": "e8", "label": "PURE NEURAL MT Trademark Registration", "shape": "dot", "size": 15, "title": "ID: e8\u003cbr\u003eType: pekg:HistoricalEvent\u003cbr\u003eeventName: PURE NEURAL MT Trademark Registration\u003cbr\u003eeventType: Trademark Registration\u003cbr\u003edateOrYear: 24/11/1982\u003cbr\u003edescription: Trademark FR92434377 status: Marque renouvel\u00e9e"}, {"color": "#e7969c", "id": "e9", "label": "MULTIDIC Trademark Filing", "shape": "dot", "size": 15, "title": "ID: e9\u003cbr\u003eType: pekg:HistoricalEvent\u003cbr\u003eeventName: MULTIDIC Trademark Filing\u003cbr\u003eeventType: Trademark Filing\u003cbr\u003edateOrYear: 27/02/1991"}, {"color": "#e7969c", "id": "e10", "label": "EXPRESS TRADUCTION Trademark Filing", "shape": "dot", "size": 15, "title": "ID: e10\u003cbr\u003eType: pekg:HistoricalEvent\u003cbr\u003eeventName: EXPRESS TRADUCTION Trademark Filing\u003cbr\u003eeventType: Trademark Filing\u003cbr\u003edateOrYear: 07/10/1988"}, {"color": "#ffbb78", "id": "e11", "label": "Trademark Number", "shape": "dot", "size": 15, "title": "ID: e11\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Trademark Number\u003cbr\u003ekpiValueString: FR1219729"}, {"color": "#ffbb78", "id": "e12", "label": "Trademark Status", "shape": "dot", "size": 15, "title": "ID: e12\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Trademark Status\u003cbr\u003ekpiValueString: Marque renouvel\u00e9e"}, {"color": "#ffbb78", "id": "e13", "label": "Trademark Number", "shape": "dot", "size": 15, "title": "ID: e13\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Trademark Number\u003cbr\u003ekpiValueString: FR1646822"}, {"color": "#ffbb78", "id": "e14", "label": "Trademark Status", "shape": "dot", "size": 15, "title": "ID: e14\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Trademark Status\u003cbr\u003ekpiValueString: Marque expir\u00e9e"}, {"color": "#ffbb78", "id": "e15", "label": "Trademark Number", "shape": "dot", "size": 15, "title": "ID: e15\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Trademark Number\u003cbr\u003ekpiValueString: FR1681386"}, {"color": "#ffbb78", "id": "e16", "label": "Trademark Status", "shape": "dot", "size": 15, "title": "ID: e16\u003cbr\u003eType: pekg:OperationalKPI\u003cbr\u003ekpiName: Trademark Status\u003cbr\u003ekpiValueString: Marque expir\u00e9e"}, {"color": "#ce6dbd", "id": "e17", "label": "Nice Class 00", "shape": "dot", "size": 15, "title": "ID: e17\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Nice Class 00"}, {"color": "#ce6dbd", "id": "e18", "label": "Nice Class 09", "shape": "dot", "size": 15, "title": "ID: e18\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Nice Class 09\u003cbr\u003edescription: Scientific, research, navigation, surveying, photographic, cinematographic, audiovisual, optical, weighing, measuring, signalling, detecting, testing, inspecting, life-saving and teaching apparatus and instruments; apparatus and instruments for conducting, switching, transforming, accumulating, regulating or controlling the distribution or use of electricity; apparatus and instruments for recording, transmitting, reproducing or processing sound, images or data; recorded and downloadable media, computer software, blank digital or analogue recording and storage media; mechanisms for coin-operated apparatus; cash registers, calculating devices; computers and computer peripheral devices; diving suits, divers\u0027 masks, ear plugs for divers, nose clips for divers and swimmers, gloves for divers, breathing apparatus for underwater swimming; fire-extinguishing apparatus."}, {"color": "#ce6dbd", "id": "e19", "label": "Nice Class 16", "shape": "dot", "size": 15, "title": "ID: e19\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Nice Class 16\u003cbr\u003edescription: Paper and cardboard; printed matter; bookbinding material; photographs; stationery and office requisites, except furniture; adhesives for stationery or household purposes; drawing materials and materials for artists; paintbrushes; instructional and teaching materials; plastic sheets, films and bags for wrapping and packaging; printers\u0027 type, printing blocks."}, {"color": "#ce6dbd", "id": "e20", "label": "Nice Class 35", "shape": "dot", "size": 15, "title": "ID: e20\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Nice Class 35\u003cbr\u003edescription: Advertising; business management; business administration; office functions."}, {"color": "#ce6dbd", "id": "e21", "label": "Nice Class 38", "shape": "dot", "size": 15, "title": "ID: e21\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Nice Class 38\u003cbr\u003edescription: Telecommunications services."}, {"color": "#ce6dbd", "id": "e22", "label": "Nice Class 41", "shape": "dot", "size": 15, "title": "ID: e22\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Nice Class 41\u003cbr\u003edescription: Education; providing of training; entertainment; sporting and cultural activities."}, {"color": "#ce6dbd", "id": "e23", "label": "Nice Class 42", "shape": "dot", "size": 15, "title": "ID: e23\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Nice Class 42\u003cbr\u003edescription: Scientific and technological services and research and design relating thereto; industrial analysis and research services; design and development of computer hardware and software."}, {"color": "#c7c7c7", "id": "e24", "label": "France", "shape": "dot", "size": 15, "title": "ID: e24\u003cbr\u003eType: pekg:Location\u003cbr\u003elocationName: France\u003cbr\u003elocationType: Country"}, {"color": "#9467bd", "id": "e25", "label": "SYSTRAN TRANSLATOR", "shape": "dot", "size": 15, "title": "ID: e25\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: SYSTRAN TRANSLATOR\u003cbr\u003ecategory: Trademark\u003cbr\u003edescription: Trademark for translation products and services, registered under Nice Classification classes 00, 09, 38, 41, 42."}, {"color": "#9467bd", "id": "e26", "label": "SYSTRANET", "shape": "dot", "size": 15, "title": "ID: e26\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: SYSTRANET\u003cbr\u003ecategory: Trademark\u003cbr\u003edescription: Trademark for products and services, registered under Nice Classification classes 00, 09, 38, 42."}, {"color": "#9467bd", "id": "e27", "label": "SIDATEL", "shape": "dot", "size": 15, "title": "ID: e27\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: SIDATEL\u003cbr\u003ecategory: Trademark\u003cbr\u003edescription: Trademark for products and services, registered under Nice Classification classes 00, 16, 38, 41, 42."}, {"color": "#9467bd", "id": "e28", "label": "SYSTRAN INTERNATIONAL", "shape": "dot", "size": 15, "title": "ID: e28\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: SYSTRAN INTERNATIONAL\u003cbr\u003ecategory: Trademark\u003cbr\u003edescription: Trademark for products and services."}, {"color": "#e7969c", "id": "e29", "label": "SYSTRAN TRANSLATOR Trademark Filing", "shape": "dot", "size": 15, "title": "ID: e29\u003cbr\u003eType: pekg:HistoricalEvent\u003cbr\u003eeventName: SYSTRAN TRANSLATOR Trademark Filing\u003cbr\u003eeventType: Trademark Filing\u003cbr\u003edateOrYear: 29/11/2005\u003cbr\u003edescription: Filing of SYSTRAN TRANSLATOR trademark (N\u00ba FR3394573), status renewed."}, {"color": "#e7969c", "id": "e30", "label": "SYSTRANET Trademark Filing", "shape": "dot", "size": 15, "title": "ID: e30\u003cbr\u003eType: pekg:HistoricalEvent\u003cbr\u003eeventName: SYSTRANET Trademark Filing\u003cbr\u003eeventType: Trademark Filing\u003cbr\u003edateOrYear: 10/01/1997\u003cbr\u003edescription: Filing of SYSTRANET trademark (N\u00ba FR97658673), status expired."}, {"color": "#e7969c", "id": "e31", "label": "SIDATEL Trademark Filing", "shape": "dot", "size": 15, "title": "ID: e31\u003cbr\u003eType: pekg:HistoricalEvent\u003cbr\u003eeventName: SIDATEL Trademark Filing\u003cbr\u003eeventType: Trademark Filing\u003cbr\u003edateOrYear: 24/06/1987\u003cbr\u003edescription: Filing of SIDATEL trademark (N\u00ba FR1415137), status expired."}, {"color": "#e7969c", "id": "e32", "label": "SYSTRAN INTERNATIONAL Trademark Filing", "shape": "dot", "size": 15, "title": "ID: e32\u003cbr\u003eType: pekg:HistoricalEvent\u003cbr\u003eeventName: SYSTRAN INTERNATIONAL Trademark Filing\u003cbr\u003eeventType: Trademark Filing\u003cbr\u003edateOrYear: 16/12/1987\u003cbr\u003edescription: Filing of SYSTRAN INTERNATIONAL trademark."}, {"color": "#9467bd", "id": "e33", "label": "PNMT", "shape": "dot", "size": 15, "title": "ID: e33\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: PNMT\u003cbr\u003ecategory: Trademark\u003cbr\u003edescription: Trademark FR4305970"}, {"color": "#9467bd", "id": "e34", "label": "PURE NEURAL MT", "shape": "dot", "size": 15, "title": "ID: e34\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: PURE NEURAL MT\u003cbr\u003ecategory: Trademark\u003cbr\u003edescription: Trademark for products and services categories 09, 38, 41, 42"}, {"color": "#9467bd", "id": "e35", "label": "Trademark FR1440415", "shape": "dot", "size": 15, "title": "ID: e35\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Trademark FR1440415\u003cbr\u003ecategory: Trademark"}, {"color": "#8c564b", "id": "e36", "label": "Neural Machine Translation", "shape": "dot", "size": 15, "title": "ID: e36\u003cbr\u003eType: pekg:Technology\u003cbr\u003ename: Neural Machine Translation\u003cbr\u003edescription: Underlying technology for PNMT and PURE NEURAL MT products."}, {"color": "#e7969c", "id": "e37", "label": "SYSTRAD Trademark Filing", "shape": "dot", "size": 15, "title": "ID: e37\u003cbr\u003eType: pekg:HistoricalEvent\u003cbr\u003eeventName: SYSTRAD Trademark Filing\u003cbr\u003eeventType: Trademark Filing\u003cbr\u003edateOrYear: 07/12/1990"}, {"color": "#e7969c", "id": "e38", "label": "PURELY NEURAL Trademark Registration", "shape": "dot", "size": 15, "title": "ID: e38\u003cbr\u003eType: pekg:HistoricalEvent\u003cbr\u003eeventName: PURELY NEURAL Trademark Registration\u003cbr\u003eeventType: Trademark Registration\u003cbr\u003edateOrYear: 10/10/2016\u003cbr\u003edescription: PURELY NEURAL trademark status: Marque enregistr\u00e9e"}, {"color": "#e7969c", "id": "e39", "label": "PURE NEURAL MT Trademark Filing", "shape": "dot", "size": 15, "title": "ID: e39\u003cbr\u003eType: pekg:HistoricalEvent\u003cbr\u003eeventName: PURE NEURAL MT Trademark Filing\u003cbr\u003eeventType: Trademark Filing\u003cbr\u003edateOrYear: 20/12/2016"}, {"color": "#ce6dbd", "id": "e40", "label": "Nice Classification 00", "shape": "dot", "size": 15, "title": "ID: e40\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Nice Classification 00\u003cbr\u003edescription: Products and services category 00"}, {"color": "#9467bd", "id": "e41", "label": "ready2go", "shape": "dot", "size": 15, "title": "ID: e41\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: ready2go\u003cbr\u003ecategory: Trademark\u003cbr\u003edescription: Trademark N\u00ba FR4210329, registered. Covers products/services in categories 09, 38, 39, 41, 42, 43."}, {"color": "#9467bd", "id": "e42", "label": "INTERRO", "shape": "dot", "size": 15, "title": "ID: e42\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: INTERRO\u003cbr\u003ecategory: Trademark\u003cbr\u003edescription: Trademark N\u00ba FR1350970, expired. Covers products/services in categories 00, 09, 16, 42."}, {"color": "#e7969c", "id": "e43", "label": "ready2go Trademark Filing", "shape": "dot", "size": 15, "title": "ID: e43\u003cbr\u003eType: pekg:HistoricalEvent\u003cbr\u003eeventName: ready2go Trademark Filing\u003cbr\u003eeventType: Trademark Filing\u003cbr\u003edateOrYear: 16/09/2015\u003cbr\u003edescription: Trademark ready2go (N\u00ba FR4210329) filed by SYSTRAN S.A., Soci\u00e9t\u00e9 Anonyme. Status: Marque enregistr\u00e9e. Products and services: 09, 38, 39, 41, 42, 43. Origin: FR."}, {"color": "#e7969c", "id": "e44", "label": "INTERRO Trademark Filing", "shape": "dot", "size": 15, "title": "ID: e44\u003cbr\u003eType: pekg:HistoricalEvent\u003cbr\u003eeventName: INTERRO Trademark Filing\u003cbr\u003eeventType: Trademark Filing\u003cbr\u003edateOrYear: 16/04/1986\u003cbr\u003edescription: Trademark INTERRO (N\u00ba FR1350970) filed by SYSTRAN S.A. (Soci\u00e9t\u00e9 Anonyme). Status: Marque expir\u00e9e. Products and services: 00, 09, 16, 42. Origin: FR."}, {"color": "#e7969c", "id": "e45", "label": "ULYSSE Trademark Filing", "shape": "dot", "size": 15, "title": "ID: e45\u003cbr\u003eType: pekg:HistoricalEvent\u003cbr\u003eeventName: ULYSSE Trademark Filing\u003cbr\u003eeventType: Trademark Filing\u003cbr\u003edateOrYear: 08/10/1982\u003cbr\u003edescription: Trademark ULYSSE (N\u00ba FR1214969) filed by SYSTRAN S.A., Soci\u00e9t\u00e9 Anonyme. Status: Marque expir\u00e9e. Products and services: 00, 09, 16, 42. Origin: FR."}, {"color": "#e7969c", "id": "e46", "label": "SYSTRAN Trademark Filing", "shape": "dot", "size": 15, "title": "ID: e46\u003cbr\u003eType: pekg:HistoricalEvent\u003cbr\u003eeventName: SYSTRAN Trademark Filing\u003cbr\u003eeventType: Trademark Filing\u003cbr\u003edateOrYear: 18/09/1992\u003cbr\u003edescription: Trademark SYSTRAN filed by SYSTRAN, Soci\u00e9t\u00e9 par actions simplifi\u00e9e."}, {"color": "#9467bd", "id": "e47", "label": "Trademark FR92434377", "shape": "dot", "size": 15, "title": "ID: e47\u003cbr\u003eType: pekg:ProductOrService\u003cbr\u003ename: Trademark FR92434377\u003cbr\u003ecategory: Trademark\u003cbr\u003edescription: Trademark for products and services categories 09, 16, 35, 38, 41, 42"}, {"color": "#e7969c", "id": "e48", "label": "ULYSSE Trademark Filing", "shape": "dot", "size": 15, "title": "ID: e48\u003cbr\u003eType: pekg:HistoricalEvent\u003cbr\u003eeventName: ULYSSE Trademark Filing\u003cbr\u003eeventType: Trademark Filing\u003cbr\u003edateOrYear: 08/02/1991\u003cbr\u003edescription: ULYSSE trademark filing date"}, {"color": "#ce6dbd", "id": "e49", "label": "Nice Classification Categories 09, 16, 35, 38, 41,", "shape": "dot", "size": 15, "title": "ID: e49\u003cbr\u003eType: pekg:UseCaseOrIndustry\u003cbr\u003ename: Nice Classification Categories 09, 16, 35, 38, 41, 42\u003cbr\u003edescription: International classification of goods and services for trademark registration"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "e1", "label": "isSubjectOf", "title": "pekg:isSubjectOf", "to": "e2"}, {"arrows": "to", "from": "e3", "label": "offers", "title": "pekg:offers", "to": "e4"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e5"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e6"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e7"}, {"arrows": "to", "from": "e5", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e8"}, {"arrows": "to", "from": "e6", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e9"}, {"arrows": "to", "from": "e7", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e10"}, {"arrows": "to", "from": "e8", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e1"}, {"arrows": "to", "from": "e9", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e1"}, {"arrows": "to", "from": "e10", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e1"}, {"arrows": "to", "from": "e5", "label": "reportsOperationalKPI", "title": "pekg:reportsOperationalKPI", "to": "e11"}, {"arrows": "to", "from": "e5", "label": "reportsOperationalKPI", "title": "pekg:reportsOperationalKPI", "to": "e12"}, {"arrows": "to", "from": "e6", "label": "reportsOperationalKPI", "title": "pekg:reportsOperationalKPI", "to": "e13"}, {"arrows": "to", "from": "e6", "label": "reportsOperationalKPI", "title": "pekg:reportsOperationalKPI", "to": "e14"}, {"arrows": "to", "from": "e7", "label": "reportsOperationalKPI", "title": "pekg:reportsOperationalKPI", "to": "e15"}, {"arrows": "to", "from": "e7", "label": "reportsOperationalKPI", "title": "pekg:reportsOperationalKPI", "to": "e16"}, {"arrows": "to", "from": "e5", "label": "targets", "title": "pekg:targets", "to": "e17"}, {"arrows": "to", "from": "e5", "label": "targets", "title": "pekg:targets", "to": "e18"}, {"arrows": "to", "from": "e5", "label": "targets", "title": "pekg:targets", "to": "e19"}, {"arrows": "to", "from": "e5", "label": "targets", "title": "pekg:targets", "to": "e23"}, {"arrows": "to", "from": "e6", "label": "targets", "title": "pekg:targets", "to": "e17"}, {"arrows": "to", "from": "e6", "label": "targets", "title": "pekg:targets", "to": "e18"}, {"arrows": "to", "from": "e6", "label": "targets", "title": "pekg:targets", "to": "e19"}, {"arrows": "to", "from": "e6", "label": "targets", "title": "pekg:targets", "to": "e20"}, {"arrows": "to", "from": "e6", "label": "targets", "title": "pekg:targets", "to": "e21"}, {"arrows": "to", "from": "e6", "label": "targets", "title": "pekg:targets", "to": "e22"}, {"arrows": "to", "from": "e6", "label": "targets", "title": "pekg:targets", "to": "e23"}, {"arrows": "to", "from": "e7", "label": "targets", "title": "pekg:targets", "to": "e17"}, {"arrows": "to", "from": "e7", "label": "targets", "title": "pekg:targets", "to": "e18"}, {"arrows": "to", "from": "e7", "label": "targets", "title": "pekg:targets", "to": "e19"}, {"arrows": "to", "from": "e7", "label": "targets", "title": "pekg:targets", "to": "e21"}, {"arrows": "to", "from": "e7", "label": "targets", "title": "pekg:targets", "to": "e23"}, {"arrows": "to", "from": "e1", "label": "operatesIn", "title": "pekg:operatesIn", "to": "e24"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e25"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e26"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e27"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e28"}, {"arrows": "to", "from": "e1", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e29"}, {"arrows": "to", "from": "e29", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e1"}, {"arrows": "to", "from": "e29", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e25"}, {"arrows": "to", "from": "e29", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e24"}, {"arrows": "to", "from": "e1", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e30"}, {"arrows": "to", "from": "e30", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e1"}, {"arrows": "to", "from": "e30", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e26"}, {"arrows": "to", "from": "e30", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e24"}, {"arrows": "to", "from": "e1", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e31"}, {"arrows": "to", "from": "e31", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e1"}, {"arrows": "to", "from": "e31", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e27"}, {"arrows": "to", "from": "e31", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e24"}, {"arrows": "to", "from": "e1", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e32"}, {"arrows": "to", "from": "e32", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e1"}, {"arrows": "to", "from": "e32", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e28"}, {"arrows": "to", "from": "e32", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e24"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e33"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e34"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e35"}, {"arrows": "to", "from": "e1", "label": "hasOfficeIn", "title": "pekg:hasOfficeIn", "to": "e24"}, {"arrows": "to", "from": "e1", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e36"}, {"arrows": "to", "from": "e26", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e37"}, {"arrows": "to", "from": "e37", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e1"}, {"arrows": "to", "from": "e26", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e8"}, {"arrows": "to", "from": "e26", "label": "targets", "title": "pekg:targets", "to": "e40"}, {"arrows": "to", "from": "e33", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e38"}, {"arrows": "to", "from": "e38", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e1"}, {"arrows": "to", "from": "e33", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e8"}, {"arrows": "to", "from": "e33", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e36"}, {"arrows": "to", "from": "e33", "label": "targets", "title": "pekg:targets", "to": "e40"}, {"arrows": "to", "from": "e34", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e39"}, {"arrows": "to", "from": "e39", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e1"}, {"arrows": "to", "from": "e34", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e8"}, {"arrows": "to", "from": "e34", "label": "usesTechnology", "title": "pekg:usesTechnology", "to": "e36"}, {"arrows": "to", "from": "e34", "label": "targets", "title": "pekg:targets", "to": "e40"}, {"arrows": "to", "from": "e35", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e8"}, {"arrows": "to", "from": "e35", "label": "targets", "title": "pekg:targets", "to": "e40"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e41"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e42"}, {"arrows": "to", "from": "e1", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e43"}, {"arrows": "to", "from": "e43", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e1"}, {"arrows": "to", "from": "e43", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e41"}, {"arrows": "to", "from": "e1", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e44"}, {"arrows": "to", "from": "e44", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e1"}, {"arrows": "to", "from": "e44", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e42"}, {"arrows": "to", "from": "e1", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e45"}, {"arrows": "to", "from": "e45", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e1"}, {"arrows": "to", "from": "e45", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e5"}, {"arrows": "to", "from": "e1", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e46"}, {"arrows": "to", "from": "e46", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e1"}, {"arrows": "to", "from": "e46", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e26"}, {"arrows": "to", "from": "e1", "label": "offers", "title": "pekg:offers", "to": "e47"}, {"arrows": "to", "from": "e1", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e8"}, {"arrows": "to", "from": "e8", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e47"}, {"arrows": "to", "from": "e1", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e38"}, {"arrows": "to", "from": "e38", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e34"}, {"arrows": "to", "from": "e1", "label": "experiencedEvent", "title": "pekg:experiencedEvent", "to": "e48"}, {"arrows": "to", "from": "e48", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e5"}, {"arrows": "to", "from": "e8", "label": "eventInvolvesParty", "title": "pekg:eventInvolvesParty", "to": "e5"}, {"arrows": "to", "from": "e47", "label": "targets", "title": "pekg:targets", "to": "e49"}, {"arrows": "to", "from": "e34", "label": "targets", "title": "pekg:targets", "to": "e49"}, {"arrows": "to", "from": "e5", "label": "targets", "title": "pekg:targets", "to": "e49"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shape": "dot", "size": 18, "font": {"size": 14, "face": "Tahoma"}}, "edges": {"arrows": {"to": {"enabled": true, "scaleFactor": 0.7}}, "color": {"inherit": "from"}, "smooth": {"type": "continuous", "roundness": 0.2}, "font": {"size": 10, "align": "middle"}}, "physics": {"enabled": true, "barnesHut": {"gravitationalConstant": -30000, "centralGravity": 0.3, "springLength": 250, "springConstant": 0.04, "damping": 0.09}, "minVelocity": 0.75}, "interaction": {"hover": true, "tooltipDelay": 200, "multiselect": true}, "layout": {"hierarchical": false}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

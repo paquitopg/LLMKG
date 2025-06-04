@@ -1,0 +1,231 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN SAS",
+      "alias": [
+        "SYSTRAN"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Position",
+      "titleName": "La Direction",
+      "department": "Management"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Position",
+      "titleName": "Service IT",
+      "department": "Information Technology"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:ProductOrService",
+      "name": "Syst\u00e8me d'information et de communication",
+      "description": "Overall information and communication system"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "\u00c9quipements",
+      "description": "General term for hardware and software equipment provided by SYSTRAN"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Mat\u00e9riels",
+      "description": "Hardware components provided by SYSTRAN"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "Logiciels",
+      "description": "Software applications provided by SYSTRAN"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:ProductOrService",
+      "name": "Postes de travail",
+      "description": "Workstations provided by SYSTRAN"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:ProductOrService",
+      "name": "R\u00e9seaux",
+      "description": "Company networks"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Technology",
+      "name": "Technologies sans fil",
+      "description": "Wireless technologies"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "Mat\u00e9riels nomades",
+      "description": "Mobile devices provided by SYSTRAN"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Technology",
+      "name": "Antivirus",
+      "description": "Antivirus software"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Technology",
+      "name": "Firewall",
+      "description": "Network firewall"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:Technology",
+      "name": "Routeurs",
+      "description": "Network routers"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Technology",
+      "name": "Bornes Wifi",
+      "description": "Wifi hotspots/access points"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Mesures de s\u00e9curit\u00e9",
+      "description": "Security measures implemented on IT systems and equipment"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "R\u00e8gles de confidentialit\u00e9",
+      "description": "Confidentiality rules for data access and handling"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Systran Dataroom",
+      "typeSought": "Dataroom"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e2",
+      "target": "e1",
+      "type": "positionAt"
+    },
+    {
+      "source": "e3",
+      "target": "e1",
+      "type": "positionAt"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "isResponsibleFor"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "reliesOn"
+    },
+    {
+      "source": "e3",
+      "target": "e4",
+      "type": "manages"
+    },
+    {
+      "source": "e3",
+      "target": "e9",
+      "type": "deploys"
+    },
+    {
+      "source": "e3",
+      "target": "e6",
+      "type": "connects"
+    },
+    {
+      "source": "e3",
+      "target": "e10",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e3",
+      "target": "e8",
+      "type": "accesses"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "offers"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "usesTechnology"
+    },
+    {
+      "source": "e16",
+      "target": "e12",
+      "type": "includes"
+    },
+    {
+      "source": "e16",
+      "target": "e13",
+      "type": "includes"
+    },
+    {
+      "source": "e4",
+      "target": "e16",
+      "type": "hasOperationalKPI"
+    },
+    {
+      "source": "e4",
+      "target": "e17",
+      "type": "hasOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "isSubjectOf"
+    }
+  ]
+}

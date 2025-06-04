@@ -1,0 +1,665 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN SAS",
+      "description": "Target company mentioned in the financial teaser.",
+      "alias": [
+        "SYSTRAN",
+        "the Company"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Person",
+      "fullName": "M. Vincent GODARD",
+      "alias": [
+        "Mr. Vincent GODARD",
+        "M. Vincent GODARD"
+      ],
+      "biographySummary": "President of SYSTRAN SAS, legally domiciled at the company's registered office, and required to travel globally for responsibilities."
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Position",
+      "titleName": "Subordinate Executives",
+      "department": "Company Executives"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Fixed Annual Remuneration",
+      "valueString": "225,000 \u20ac",
+      "isRecurring": true,
+      "scope": "individual"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Variable Remuneration",
+      "valueString": "50,000\u20ac (100% achievement), up to 200%",
+      "isRecurring": true,
+      "scope": "individual"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Discretionary Bonus",
+      "valueString": "15,000 \u20ac",
+      "fiscalPeriod": "2022",
+      "scope": "individual"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Bonus based on KPI",
+      "valueString": "35,000 \u20ac",
+      "fiscalPeriod": "2022",
+      "scope": "individual"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Free Shares Allotment",
+      "valueString": "60,000 shares",
+      "description": "60,000 free shares allotted, with a 2-year vesting period and presence condition. 30,000 shares have no performance condition. 15,000 shares have first-year performance conditions; 15,000 shares have second-year performance conditions.",
+      "scope": "individual"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Chief Scientist Hiring",
+      "description": "KPI for 15,000 free shares (first year)"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Org stabilization",
+      "description": "KPI for 15,000 free shares (first year)"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Internal process setup",
+      "description": "KPI for 15,000 free shares (first year), from product planning with market voice to launch"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Facilitate DD process",
+      "description": "KPI for 15,000 free shares (first year)"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Discussion with potential buyers",
+      "description": "KPI for 15,000 free shares (first year)"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue",
+      "description": "KPI for 15,000 free shares (second year)",
+      "scope": "company"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Operating Profit (OP)",
+      "description": "KPI for 15,000 free shares (second year)",
+      "scope": "company"
+    },
+    {
+      "id": "e16",
+      "type": "Group",
+      "name": "Current Company's Shareholders"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:TransactionContext",
+      "contextName": "Resignation from Mandate",
+      "typeSought": "Termination of Employment/Mandate",
+      "status": "Terms discussed",
+      "dealRationaleHighlights": [
+        "exit of current Company\u2019s shareholders",
+        "discussion with potential buyers",
+        "Subject to one month's notice (remunerated monthly)",
+        "Severance fee applies if without material and proven fault",
+        "Severance fee is two year's total gross remuneration if within first 24 months",
+        "Severance fee is 6 months of last full year annual compensation after one year",
+        "Notice period is 6 months",
+        "Period shall be fully remunerated if the President wishes to do it completely"
+      ]
+    },
+    {
+      "id": "e18",
+      "type": "Individual/Group",
+      "name": "The Shareholder",
+      "description": "Shareholder of SYSTRAN SAS, making decisions regarding executive benefits."
+    },
+    {
+      "id": "e19",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Benefit in Kind (Vehicle)",
+      "valueString": "at most \u20ac10k per year",
+      "fiscalPeriod": "per year",
+      "isRecurring": true,
+      "scope": "individual"
+    },
+    {
+      "id": "e20",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Company Phone Benefit",
+      "kpiValueString": "Provided",
+      "description": "Company phone paid by the company for private purposes."
+    },
+    {
+      "id": "e21",
+      "type": "pekg:ProductOrService",
+      "name": "Social Security General regime",
+      "category": "Employee Benefit Scheme",
+      "description": "General Social Security regime for remuneration, except unemployment guarantee."
+    },
+    {
+      "id": "e22",
+      "type": "pekg:ProductOrService",
+      "name": "Complementary and Supplementary Pension Funds",
+      "category": "Employee Benefit Scheme",
+      "description": "Pension funds (tranches A, B and C)."
+    },
+    {
+      "id": "e23",
+      "type": "pekg:ProductOrService",
+      "name": "Health and Welfare schemes",
+      "category": "Employee Benefit Scheme",
+      "description": "Group contracts for company executives."
+    },
+    {
+      "id": "e24",
+      "type": "pekg:ProductOrService",
+      "name": "Loss of Employment Insurance",
+      "category": "Insurance Product",
+      "description": "Insurance for company executives, with one-year waiting period, one-year coverage with 70% salary after one year of mandate, two years coverage with 70% salary after two years of mandate."
+    },
+    {
+      "id": "e25",
+      "type": "pekg:ProductOrService",
+      "name": "GSC FORMULE 70/24",
+      "category": "Insurance Product Variant",
+      "description": "Specific unemployment insurance product variant."
+    },
+    {
+      "id": "e26",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Salary Coverage (Unemployment)",
+      "valueString": "70% salary",
+      "fiscalPeriod": "after one year of mandate / after two years of mandate",
+      "isRecurring": true,
+      "scope": "individual"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:ProductOrService",
+      "name": "3rd Party legal liability for CEO",
+      "category": "Insurance Product",
+      "description": "Insurance for CEO liability."
+    },
+    {
+      "id": "e28",
+      "type": "pekg:Company",
+      "name": "CHUBB",
+      "industry": "Insurance"
+    },
+    {
+      "id": "e29",
+      "type": "Individual",
+      "name": "Vincent GODART",
+      "description": "Will acquire 15,000 free shares upon expiry of vesting period."
+    },
+    {
+      "id": "e30",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Free Shares",
+      "valueString": "15,000 shares",
+      "scope": "individual",
+      "description": "Free shares to be acquired upon expiry of vesting period."
+    },
+    {
+      "id": "e31",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Severance Fee (first 24 months)",
+      "valueString": "two year's total gross remuneration",
+      "fiscalPeriod": "first 24 months of its exercise (730 days)",
+      "scope": "individual",
+      "sourceNote": "Payment responsibility of SYSTRAN SAS, including associated payments to social security bodies and pension funds."
+    },
+    {
+      "id": "e32",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Severance Fee (after one year)",
+      "valueString": "equivalent to 6 months of last full year annual compensation (base salary + bonus)",
+      "fiscalPeriod": "after one year of exercising the mandate",
+      "scope": "individual",
+      "sourceNote": "Except in the event of gross negligence or fraud."
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Business Travel Expenses",
+      "valueString": "all business-class travel expenses for international flights, catering and hotel expenses",
+      "scope": "individual",
+      "sourceNote": "SYSTRAN SAS is authorised to cover these expenses for M. Vincent GODARD."
+    },
+    {
+      "id": "e34",
+      "type": "pekg:Location",
+      "locationName": "SYSTRAN SAS's registered office",
+      "locationType": "Registered Office"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:Company",
+      "name": "SYSTRAN group"
+    },
+    {
+      "id": "e36",
+      "type": "Group",
+      "name": "Shareholders"
+    },
+    {
+      "id": "e37",
+      "type": "Court",
+      "name": "Paris Commercial Court"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "BOD Meeting",
+      "eventType": "Board Meeting",
+      "dateOrYear": "2022, May 16th",
+      "description": "Mandate agreement approved."
+    },
+    {
+      "id": "e39",
+      "type": "pekg:Company",
+      "name": "competing company",
+      "description": "A company whose main activity is the same as SYSTRAN SAS."
+    },
+    {
+      "id": "e40",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "SYSTRAN SAS's main activity",
+      "description": "The primary business area of SYSTRAN SAS, defining the scope of non-compete."
+    },
+    {
+      "id": "e41",
+      "type": "pekg:Person",
+      "fullName": "Jean Senellart"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Agreement Execution",
+      "eventType": "Agreement",
+      "dateOrYear": "May 16th, 2022"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e3",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e2",
+      "target": "e5",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e2",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e2",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e2",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e16",
+      "target": "e17",
+      "type": "pekg:seeksTransaction"
+    },
+    {
+      "source": "e17",
+      "target": "e12",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e17",
+      "target": "e13",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e18",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e2",
+      "target": "e19",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e2",
+      "target": "e20",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e21",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e2",
+      "target": "e21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e2",
+      "target": "e22",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e23",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e2",
+      "target": "e23",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e2",
+      "target": "e24",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e24",
+      "target": "e25",
+      "type": "pekg:hasProductVariant"
+    },
+    {
+      "source": "e24",
+      "target": "e26",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e28",
+      "target": "e27",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e3",
+      "target": "e23",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e29",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e29",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e29",
+      "target": "e30",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e2",
+      "target": "e17",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e32",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e33",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e2",
+      "target": "e34",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e2",
+      "target": "e34",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e1",
+      "target": "e35",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e35",
+      "target": "e1",
+      "type": "pekg:hasSubsidiary"
+    },
+    {
+      "source": "e1",
+      "target": "e36",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e36",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e1",
+      "target": "e34",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e37",
+      "target": "e34",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e38",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e38",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e38",
+      "target": "e36",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e40",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e39",
+      "target": "e40",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e41",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e41",
+      "target": "e3",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e42",
+      "target": "e41",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e42",
+      "target": "e2",
+      "type": "pekg:eventInvolvesParty"
+    }
+  ]
+}

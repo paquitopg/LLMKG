@@ -1,0 +1,232 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN SAS",
+      "description": "Company whose bylaws were updated on 30 November 2022, detailing financial year closing, profit appropriation, dividend payment, and potential transformation."
+    },
+    {
+      "id": "e2",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Bylaws Update",
+      "eventType": "Corporate Governance Event",
+      "dateOrYear": "30 November 2022",
+      "description": "Bylaws of SYSTRAN SAS were updated."
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Person",
+      "fullName": "President of SYSTRAN SAS",
+      "biographySummary": "Responsible for drawing up inventory, annual accounts, management report, proposing profit appropriation, and potentially distributing deposits on dividends."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Position",
+      "titleName": "President",
+      "department": "Management"
+    },
+    {
+      "id": "e5",
+      "type": "Group",
+      "name": "Shareholders of SYSTRAN SAS",
+      "description": "Have right to information, approve accounts, decide on profit appropriation (carry forward, allocate to reserves, distribute as dividends), and determine dividend payment details."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Inventory of assets and liabilities",
+      "scope": "Company",
+      "description": "Drawn up annually by the President."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual accounts",
+      "scope": "Company",
+      "description": "Drawn up annually by the President, submitted for shareholder approval."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Management report",
+      "scope": "Company",
+      "description": "Established annually by the President, submitted for shareholder approval."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Consolidated accounts",
+      "scope": "Company",
+      "description": "Presented and submitted to shareholders for approval if drawn up."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Profit or loss of the financial year",
+      "scope": "Company",
+      "description": "Difference between revenues and expenses."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Legal reserve fund",
+      "scope": "Company",
+      "description": "Five percent of profit (less prior losses) deducted until it reaches one-tenth of share capital."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Share capital",
+      "scope": "Company",
+      "description": "Benchmark for legal reserve fund; revaluation variance may be incorporated into it."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Distributable profit",
+      "scope": "Company",
+      "description": "Profit less prior losses and legal reserve, plus retained earnings; available for shareholder distribution."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Retained earnings",
+      "scope": "Company",
+      "description": "Increases distributable profit."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Dividends",
+      "scope": "Company",
+      "description": "Distributed to shareholders from distributable profit or reserves; paid annually within 9 months of financial year closing."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revaluation variance",
+      "scope": "Company",
+      "description": "Cannot be distributed; may be incorporated into share capital."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Deposits on dividends",
+      "scope": "Company",
+      "description": "May be distributed by the President before account approval."
+    },
+    {
+      "id": "e18",
+      "type": "Judicial Body",
+      "name": "Commercial Court"
+    },
+    {
+      "id": "e19",
+      "type": "pekg:TransactionContext",
+      "contextName": "Company Transformation",
+      "typeSought": "Change of Legal Form",
+      "status": "Potential",
+      "dealRationaleHighlights": [
+        "Transformation into a company having another form in accordance with bylaws and legal provisions."
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e3",
+      "target": "e4",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e4",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e5",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e3",
+      "target": "e6",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e3",
+      "target": "e7",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e3",
+      "target": "e8",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "pekg:isSubjectOf"
+    }
+  ]
+}
