@@ -1,0 +1,83 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN SAS",
+      "description": "Simplified joint stock company (Soci\u00e9t\u00e9 par actions simplifi\u00e9e)"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Share Capital",
+      "valueString": "4,072,679 Euros",
+      "scope": "Company"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Location",
+      "locationName": "Paris",
+      "locationType": "City",
+      "officeSpecificInfo": "5, rue Feydeau - 75002 Paris \u2013 France"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Bylaws updated",
+      "eventType": "Legal Document Update",
+      "dateOrYear": "30 November 2022",
+      "description": "Bylaws updated on 30 November 2022"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Bylaws Certified",
+      "eventType": "Document Certification",
+      "dateOrYear": "December 31, 2022",
+      "description": "Certified by the President"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Position",
+      "titleName": "President"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Systran Dataroom",
+      "status": "Active"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e6",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:isSubjectOf"
+    }
+  ]
+}

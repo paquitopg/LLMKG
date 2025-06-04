@@ -1,0 +1,325 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN",
+      "alias": [
+        "SYSTRAN SA, soci\u00e9t\u00e9 anonyme",
+        "SYSTRAN S.A. (Soci\u00e9t\u00e9 Anonyme)",
+        "SYSTRAN SA Soci\u00e9t\u00e9 anonyme"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Systran Dataroom",
+      "status": "Dataroom preparation"
+    },
+    {
+      "id": "e3",
+      "type": "National Institute of Industrial Property",
+      "name": "INPI"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:ProductOrService",
+      "name": "Portail Data",
+      "category": "Data Portal"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "ULYSSE",
+      "category": "Trademark"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "MULTIDIC",
+      "category": "Trademark"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "EXPRESS TRADUCTION",
+      "category": "Trademark"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "ULYSSE Trademark Filing",
+      "eventType": "Trademark Filing",
+      "dateOrYear": "24/11/1982"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "MULTIDIC Trademark Filing",
+      "eventType": "Trademark Filing",
+      "dateOrYear": "27/02/1991"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "EXPRESS TRADUCTION Trademark Filing",
+      "eventType": "Trademark Filing",
+      "dateOrYear": "07/10/1988"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Trademark Number",
+      "kpiValueString": "FR1219729"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Trademark Status",
+      "kpiValueString": "Marque renouvel\u00e9e"
+    },
+    {
+      "id": "e13",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Trademark Number",
+      "kpiValueString": "FR1646822"
+    },
+    {
+      "id": "e14",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Trademark Status",
+      "kpiValueString": "Marque expir\u00e9e"
+    },
+    {
+      "id": "e15",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Trademark Number",
+      "kpiValueString": "FR1681386"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Trademark Status",
+      "kpiValueString": "Marque expir\u00e9e"
+    },
+    {
+      "id": "e17",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Nice Class 00"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Nice Class 09",
+      "description": "Scientific, research, navigation, surveying, photographic, cinematographic, audiovisual, optical, weighing, measuring, signalling, detecting, testing, inspecting, life-saving and teaching apparatus and instruments; apparatus and instruments for conducting, switching, transforming, accumulating, regulating or controlling the distribution or use of electricity; apparatus and instruments for recording, transmitting, reproducing or processing sound, images or data; recorded and downloadable media, computer software, blank digital or analogue recording and storage media; mechanisms for coin-operated apparatus; cash registers, calculating devices; computers and computer peripheral devices; diving suits, divers' masks, ear plugs for divers, nose clips for divers and swimmers, gloves for divers, breathing apparatus for underwater swimming; fire-extinguishing apparatus."
+    },
+    {
+      "id": "e19",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Nice Class 16",
+      "description": "Paper and cardboard; printed matter; bookbinding material; photographs; stationery and office requisites, except furniture; adhesives for stationery or household purposes; drawing materials and materials for artists; paintbrushes; instructional and teaching materials; plastic sheets, films and bags for wrapping and packaging; printers' type, printing blocks."
+    },
+    {
+      "id": "e20",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Nice Class 35",
+      "description": "Advertising; business management; business administration; office functions."
+    },
+    {
+      "id": "e21",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Nice Class 38",
+      "description": "Telecommunications services."
+    },
+    {
+      "id": "e22",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Nice Class 41",
+      "description": "Education; providing of training; entertainment; sporting and cultural activities."
+    },
+    {
+      "id": "e23",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Nice Class 42",
+      "description": "Scientific and technological services and research and design relating thereto; industrial analysis and research services; design and development of computer hardware and software."
+    },
+    {
+      "id": "e24",
+      "type": "pekg:Location",
+      "locationName": "France",
+      "locationType": "Country"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e3",
+      "target": "e4",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e5",
+      "target": "e8",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e6",
+      "target": "e9",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e7",
+      "target": "e10",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e8",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e9",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e10",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e5",
+      "target": "e11",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e5",
+      "target": "e12",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6",
+      "target": "e13",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6",
+      "target": "e14",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e7",
+      "target": "e15",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e7",
+      "target": "e16",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e5",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e18",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e5",
+      "target": "e23",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e18",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e20",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e21",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e22",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6",
+      "target": "e23",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e7",
+      "target": "e17",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e7",
+      "target": "e18",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e7",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e7",
+      "target": "e21",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e7",
+      "target": "e23",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e24",
+      "type": "pekg:operatesIn"
+    }
+  ]
+}

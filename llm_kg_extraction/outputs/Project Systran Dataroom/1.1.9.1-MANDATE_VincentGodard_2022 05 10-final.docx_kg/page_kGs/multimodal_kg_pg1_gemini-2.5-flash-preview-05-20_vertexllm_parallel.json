@@ -1,0 +1,146 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN SAS",
+      "alias": [
+        "The Company"
+      ],
+      "description": "registered in the Paris Trade and Companies Register under number 334 343 993"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Location",
+      "locationName": "Paris",
+      "locationType": "City"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Location",
+      "locationName": "France",
+      "locationType": "Country"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Person",
+      "fullName": "Vincent GODARD",
+      "biographySummary": "French nationality, born on 4 September 1964 in Mantes la Jolie (France), residing at 48 Bis, rue de l\u2019Est, 92100 Boulogne Billancourt, France."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Location",
+      "locationName": "Boulogne Billancourt",
+      "locationType": "City"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:Position",
+      "titleName": "President"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Location",
+      "locationName": "Mantes la Jolie",
+      "locationType": "City"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:TransactionContext",
+      "contextName": "Mandate Agreement",
+      "typeSought": "Personnel Appointment",
+      "status": "Agreed"
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Person",
+      "fullName": "Jean SENELLART"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Appointment of Mr. Vincent GODARD as President",
+      "eventType": "Personnel Change",
+      "dateOrYear": "May 12th, 2022"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "End of mandate of Mr. Jean SENELLART",
+      "eventType": "Personnel Change",
+      "dateOrYear": "May 12th, 2022"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e4",
+      "target": "e6",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e6",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e10",
+      "target": "e4",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e10",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e11",
+      "target": "e9",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e11",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e8",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e8",
+      "target": "e4",
+      "type": "pekg:eventInvolvesParty"
+    }
+  ]
+}

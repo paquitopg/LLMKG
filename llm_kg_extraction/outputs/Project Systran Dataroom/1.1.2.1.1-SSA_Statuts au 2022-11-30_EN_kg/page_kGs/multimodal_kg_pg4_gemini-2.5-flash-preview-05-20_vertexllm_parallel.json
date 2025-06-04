@@ -1,0 +1,144 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN SAS",
+      "description": "A company whose bylaws were updated on 30 November 2022, detailing provisions for share capital, preferred shares, and share payment."
+    },
+    {
+      "id": "e2",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Bylaws Update",
+      "eventType": "Corporate Governance Update",
+      "dateOrYear": "30 November 2022",
+      "description": "Update to the bylaws of SYSTRAN SAS, covering aspects of share capital, preferred shares, and payment terms for shares."
+    },
+    {
+      "id": "e3",
+      "type": "pekg:ProductOrService",
+      "name": "Cash Shares",
+      "category": "Equity",
+      "description": "Shares that must be paid up at subscription for their nominal value and any premium."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:ProductOrService",
+      "name": "Fractional Shares",
+      "category": "Equity",
+      "description": "Shares ('rompus') that may arise during capital increases or decreases, requiring holders to manage their number of securities to exercise rights."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:ProductOrService",
+      "name": "Preferred Shares",
+      "category": "Equity",
+      "description": "Shares that can be created with or without voting rights, and with special rights. They cannot represent more than half of the share capital if without voting rights. They can be bought-back or converted into ordinary shares or other preferred share classes upon decision of extraordinary general meeting of shareholders."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "Ordinary Shares",
+      "category": "Equity",
+      "description": "Standard shares into which preferred shares can be converted."
+    },
+    {
+      "id": "e7",
+      "type": "General",
+      "name": "Shareholders",
+      "description": "Holders of shares in SYSTRAN SAS, including those with special benefits or preferred shares, and those liable for payments."
+    },
+    {
+      "id": "e8",
+      "type": "Individual/Group",
+      "name": "Beneficial Owner",
+      "description": "('usufruitier' in French) - party with specific rights over shares, particularly regarding preferential subscription rights."
+    },
+    {
+      "id": "e9",
+      "type": "Individual/Group",
+      "name": "Bare Owner",
+      "description": "('nu-propri\u00e9taire' in French) - party with specific rights over shares, particularly regarding preferential subscription rights."
+    },
+    {
+      "id": "e10",
+      "type": "Individual/Group",
+      "name": "Defaulting Shareholder",
+      "description": "A shareholder who has not paid up their shares by the fixed deadline, subject to legal actions by the company."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Person",
+      "fullName": "President of the company",
+      "biographySummary": "Individual responsible for calling for payment of share balances and fixing payment terms for SYSTRAN SAS."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Position",
+      "titleName": "President",
+      "department": "Company Leadership"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e11",
+      "target": "e12",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e12",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN SAS",
+      "alias": [
+        "SYSTRAN"
+      ],
+      "description": "A company with an IT charter, operating in the language sector (implied by 'beyond language' logo)."
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Systran Dataroom",
+      "status": "Ongoing",
+      "typeSought": "Sale"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Position",
+      "titleName": "Administrateur IT",
+      "department": "IT"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Position",
+      "titleName": "Sup\u00e9rieur hi\u00e9rarchique"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Position",
+      "titleName": "Direction",
+      "department": "Management"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:ProductOrService",
+      "name": "M\u00e9canisme de sauvegarde des donn\u00e9es informatiques professionnelles",
+      "category": "Data Backup Service",
+      "description": "A mechanism implemented by SYSTRAN for professional IT data stored on its information system."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:ProductOrService",
+      "name": "OneDrive",
+      "category": "Cloud Storage Service"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Technology",
+      "name": "Syst\u00e8me d'information SYSTRAN",
+      "description": "SYSTRAN's internal information system."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Technology",
+      "name": "Dispositifs techniques mat\u00e9riels ou logiciels d'authentification",
+      "description": "Hardware or software technical authentication devices, such as tokens and smart cards."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Technology",
+      "name": "Tokens"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Technology",
+      "name": "Cartes \u00e0 puce"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Technology",
+      "name": "Disque dur externe chiffr\u00e9",
+      "description": "Encrypted external hard drive provided by the IT service."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:Technology",
+      "name": "Syst\u00e8mes de traitement",
+      "description": "General processing systems."
+    },
+    {
+      "id": "e14",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Sauvegarde des donn\u00e9es",
+      "description": "Data backup policy/process."
+    },
+    {
+      "id": "e15",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Pr\u00e9servation de la confidentialit\u00e9",
+      "description": "Confidentiality preservation policy/process."
+    },
+    {
+      "id": "e16",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Donn\u00e9es confidentielles",
+      "description": "Confidential company data, including finance and human resources related information."
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Location",
+      "locationName": "Locaux de SYSTRAN",
+      "locationType": "Office/Premises"
+    },
+    {
+      "id": "e18",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Finance",
+      "description": "Domain of confidential data within the company."
+    },
+    {
+      "id": "e19",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Ressources humaines",
+      "description": "Domain of confidential data within the company."
+    },
+    {
+      "id": "e20",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Propri\u00e9t\u00e9 intellectuelle",
+      "description": "Domain of confidential data within the company, protected by legislation."
+    },
+    {
+      "id": "e21",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Donn\u00e9es personnelles",
+      "description": "Domain of confidential data within the company, protected by legislation."
+    },
+    {
+      "id": "e22",
+      "type": "pekg:Person",
+      "fullName": "Utilisateur/Salari\u00e9",
+      "biographySummary": "An employee or user of SYSTRAN's IT resources."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e3",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e4",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e5",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e17",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e15",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e16",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e16",
+      "target": "e18",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e16",
+      "target": "e19",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e1",
+      "target": "e22",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e22",
+      "target": "e7",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e22",
+      "target": "e12",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e22",
+      "target": "e14",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e22",
+      "target": "e15",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e22",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    }
+  ]
+}

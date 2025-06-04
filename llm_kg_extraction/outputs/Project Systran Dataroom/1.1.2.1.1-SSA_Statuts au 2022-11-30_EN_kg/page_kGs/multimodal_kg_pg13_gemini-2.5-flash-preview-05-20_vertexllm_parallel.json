@@ -1,0 +1,163 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN SAS"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Bylaws Update",
+      "eventType": "Corporate Governance Event",
+      "dateOrYear": "30 November 2022"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Loss of Share Capital & Dissolution Procedure",
+      "eventType": "Corporate Event Procedure",
+      "description": "Procedure for addressing losses leading to deduction of share capital and potential early dissolution of the company."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Liquidation Procedure",
+      "eventType": "Corporate Event Procedure",
+      "description": "Procedure for realizing company assets and paying liabilities after dissolution."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Position",
+      "titleName": "President"
+    },
+    {
+      "id": "e6",
+      "type": "Group",
+      "name": "Shareholders",
+      "description": "Collective body of shareholders of SYSTRAN SAS, including scenarios with a single shareholder."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Position",
+      "titleName": "Liquidator"
+    },
+    {
+      "id": "e8",
+      "type": "pekg:Position",
+      "titleName": "Auditor"
+    },
+    {
+      "id": "e9",
+      "type": "Judicial Body",
+      "name": "Commercial Court"
+    },
+    {
+      "id": "e10",
+      "type": "pekg:Person",
+      "fullName": "Presiding Judge of the Commercial Court"
+    },
+    {
+      "id": "e11",
+      "type": "pekg:Person",
+      "fullName": "Judicial Representative"
+    },
+    {
+      "id": "e12",
+      "type": "pekg:Position",
+      "titleName": "Presiding Judge"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e5",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e6",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e7",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e8",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e3",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e3",
+      "target": "e6",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e4",
+      "target": "e6",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e4",
+      "target": "e7",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e4",
+      "target": "e8",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e4",
+      "target": "e9",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e10",
+      "target": "e12",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e12",
+      "target": "e9",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e4",
+      "target": "e10",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e4",
+      "target": "e11",
+      "type": "pekg:eventInvolvesParty"
+    }
+  ]
+}

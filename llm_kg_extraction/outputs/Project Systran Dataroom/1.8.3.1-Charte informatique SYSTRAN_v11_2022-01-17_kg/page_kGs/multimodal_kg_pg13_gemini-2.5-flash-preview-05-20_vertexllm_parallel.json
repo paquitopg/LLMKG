@@ -1,0 +1,113 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN SAS",
+      "alias": [
+        "SYSTRAN"
+      ],
+      "description": "A company that has an IT Charter governing the use of electronic messaging and IT security policies for its personnel."
+    },
+    {
+      "id": "e2",
+      "type": "pekg:ProductOrService",
+      "name": "Professional Email Messaging",
+      "category": "Communication Service",
+      "description": "Digital messaging service provided by SYSTRAN for professional communication with third parties and internal use, subject to specific policies regarding content, unsolicited messages, and personal use."
+    },
+    {
+      "id": "e3",
+      "type": "pekg:ProductOrService",
+      "name": "Anti-spam Tool",
+      "category": "Security Software",
+      "description": "A tool utilized by SYSTRAN to combat the propagation of unsolicited messages (spam) within its network."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Technology",
+      "name": "Antiviral Control",
+      "description": "Technology implemented to scan and control digital messages for viruses, applied to professional email messaging."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Technology",
+      "name": "Anti-spam Control",
+      "description": "Technology implemented to scan and control digital messages for spam, applied to professional email messaging."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Attachment Size Limit",
+      "kpiValueString": "20 Mo",
+      "kpiDateOrPeriod": "Current",
+      "description": "The maximum size for email attachments to prevent congestion of the messaging system."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Charte Informatique v11 Issuance/Update",
+      "eventType": "Policy Update",
+      "dateOrYear": "2022-01-17",
+      "description": "The issuance or update of SYSTRAN's IT Charter, version 11, outlining IT usage policies."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Systran Dataroom",
+      "status": "Ongoing",
+      "typeSought": "Sale",
+      "dealRationaleHighlights": [],
+      "keyInvestmentHighlights": [],
+      "transactionPerimeter": ""
+    },
+    {
+      "id": "e9",
+      "type": "pekg:Company",
+      "name": "Service IT",
+      "description": "The internal IT department of SYSTRAN, responsible for monitoring and supporting the security devices and addressing dysfunctions."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e9",
+      "target": "e1",
+      "type": "pekg:isSubsidiaryOf"
+    }
+  ]
+}

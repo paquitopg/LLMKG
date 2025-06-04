@@ -1,0 +1,157 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN SAS",
+      "alias": [
+        "SYSTRAN"
+      ],
+      "description": "A company operating 'beyond language', as indicated by its tagline."
+    },
+    {
+      "id": "e2",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Systran Dataroom",
+      "typeSought": "Dataroom",
+      "status": "Ongoing",
+      "keyInvestmentHighlights": []
+    },
+    {
+      "id": "e3",
+      "type": "pekg:ProductOrService",
+      "name": "Charte Informatique",
+      "category": "Internal Policy Document",
+      "description": "An IT Charter document outlining company policies regarding information technology."
+    },
+    {
+      "id": "e4",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "IT Charter Version 11 Release",
+      "eventType": "Document Release",
+      "dateOrYear": "2022-01-17",
+      "description": "Release of version 11 of the SYSTRAN IT Charter."
+    },
+    {
+      "id": "e5",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Personal IT Usage",
+      "description": "Guidelines for personal use of IT resources within the company."
+    },
+    {
+      "id": "e6",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "IT Security",
+      "description": "Management and implementation of IT security measures and policies."
+    },
+    {
+      "id": "e7",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Professional Mobile Phone Usage",
+      "description": "Guidelines and policies for the use of professional mobile phones by employees."
+    },
+    {
+      "id": "e8",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "IT System Monitoring",
+      "description": "Policies regarding the monitoring of the IT system, including its purpose and monitored elements."
+    },
+    {
+      "id": "e9",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Sanctions",
+      "description": "Policies regarding the application of sanctions for IT policy violations."
+    },
+    {
+      "id": "e10",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "IT Fraud Prevention",
+      "description": "Measures and legal reminders concerning IT fraud."
+    },
+    {
+      "id": "e11",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Copyright Compliance",
+      "description": "Adherence to copyright law, including legal reminders."
+    },
+    {
+      "id": "e12",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Employee Information",
+      "description": "Procedures for informing employees about IT policies and related matters."
+    },
+    {
+      "id": "e13",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Charter Entry into Force",
+      "description": "Date and conditions for the IT Charter's effectiveness."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e4",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e3",
+      "target": "e5",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e6",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e7",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e8",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e9",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e10",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e11",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e12",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e3",
+      "target": "e13",
+      "type": "pekg:targets"
+    }
+  ]
+}

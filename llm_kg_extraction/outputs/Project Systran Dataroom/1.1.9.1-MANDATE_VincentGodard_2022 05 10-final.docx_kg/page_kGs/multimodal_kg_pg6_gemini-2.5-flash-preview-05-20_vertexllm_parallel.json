@@ -1,0 +1,85 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN SAS"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:Person",
+      "fullName": "Jean Senellart"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Position",
+      "titleName": "CEO"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:Position",
+      "titleName": "Board of Directors"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Person",
+      "fullName": "Vincent Godard"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Agreement Execution",
+      "eventType": "Agreement",
+      "dateOrYear": "May 16th, 2022"
+    },
+    {
+      "id": "e7",
+      "type": "pekg:TransactionContext",
+      "contextName": "Project Systran Dataroom",
+      "typeSought": "Dataroom",
+      "status": "Executed"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e3",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e4",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e6",
+      "target": "e2",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e6",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e6",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "pekg:isSubjectOf"
+    }
+  ]
+}
