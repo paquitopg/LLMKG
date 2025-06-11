@@ -1,324 +1,341 @@
-from typing import List, Dict, Tuple, Set, Any, Optional
+# Enhanced similarity functions for your PEKG ontology
+# These replace the functions in common_kg_utils.py
+
+from typing import Dict, Any, List, Optional, Tuple, Set
 import re
 from difflib import SequenceMatcher
 
 def similarity_score(str1: str, str2: str) -> float:
-    """
-    Calculate string similarity using SequenceMatcher.
-    
-    Args:
-        str1 (str): First string
-        str2 (str): Second string
-        
-    Returns:
-        float: Similarity score between 0 and 1
-    """
+    """Calculate string similarity using SequenceMatcher."""
     if not str1 or not str2:
         return 0.0
     
-    str1 = str(str1).lower() # Ensure string conversion
-    str2 = str(str2).lower() # Ensure string conversion
+    str1 = str(str1).lower()
+    str2 = str(str2).lower()
     
-    return SequenceMatcher(None, str1, str2).ratio()
+    sim = SequenceMatcher(None, str1, str2).ratio()
+    return sim if isinstance(sim, float) else 0.0
 
 def normalize_text(text: str) -> str:
-    """
-    Normalize text for better matching by removing punctuation,
-    extra spaces, and converting to lowercase.
-    
-    Args:
-        text (str): Text to normalize
-        
-    Returns:
-        str: Normalized text
-    """
+    """Normalize text for better matching."""
     if not text:
         return ""
-    text = str(text) # Ensure it's a string
-    text = text.lower()
-    text = re.sub(r'[^\w\s.-]', ' ', text) # Keep alphanumeric, whitespace, dots, hyphens
+    text = str(text).lower()
+    text = re.sub(r'[^\w\s.-]', ' ', text)
     text = re.sub(r'\s+', ' ', text)
     return text.strip()
 
-def extract_numerical_values(entity: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Extract all numerical values from an entity based on a predefined list of common numerical fields.
+def get_entity_primary_name(entity: Dict[str, Any]) -> str:
+    """Extract the primary name field based on PEKG ontology entity types."""
+    entity_type = entity.get('type', '').lower().split(':')[-1]
     
-    Args:
-        entity (Dict): Entity to extract values from
-        
-    Returns:
-        Dict[str, Any]: Dictionary of numerical values
-    """
-    numerical_values = {}
-    # Predefined list of common numerical fields from pekg_ontology_streamlined_v1_2 and other observations
-    numerical_fields = [
-        'metricValue', 'percentageValue', 'headcountValue', 
-        'roundAmount', 'valuation', 'revenueAmount', 'amount', 
-        'parsedValue', 'parsedPercentage' 
-    ]
-    
-    for field in numerical_fields:
-        if field in entity and entity[field] is not None:
-            try:
-                val_str = str(entity[field]).replace(',', '') # Handle commas in numbers
-                val = float(val_str)
-                numerical_values[field] = val
-            except (ValueError, TypeError):
-                # Optionally log a warning if parsing fails for a field expected to be numerical
-                # print(f"Warning: Could not parse numerical value for field '{field}' with value '{entity[field]}'")
-                pass 
-    return numerical_values
-
-def get_entity_temporal_info(entity: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Extract temporal information (years, dates, periods) from an entity.
-    Prioritizes specific temporal fields from the ontology, then tries to parse from name fields.
-    
-    Args:
-        entity (Dict): Entity to extract temporal info from
-        
-    Returns:
-        Dict[str, Any]: Dictionary of temporal information, with 'extractedPeriod' as the primary consolidated field.
-    """
-    temporal_info = {}
-    
-    # Specific ontology fields for temporal data based on pekg_ontology_streamlined_v1_2
-    ontology_time_fields = {
-        "financialmetric": "fiscalPeriod",
-        "operationalkpi": "kpiDateOrPeriod",
-        "headcount": "dateOrYear", 
-        "historicalevent": "dateOrYear",
-        "company": "foundedYear" 
+    # Map entity types to their primary name fields based on your ontology
+    name_field_mapping = {
+        "company": "name",
+        "person": "fullName", 
+        "advisor": "name",
+        "shareholder": "name",
+        "productorservice": "name",
+        "technology": "name",
+        "financialmetric": "metricName",
+        "operationalkpi": "kpiName", 
+        "headcount": "headcountName",
+        "transactioncontext": "contextName",
+        "historicalevent": "eventName",
+        "location": "locationName",
+        "marketcontext": "segmentName",
+        "usecaseorindustry": "name",
+        "position": "titleName",
+        "governmentbody": "name"
     }
-    entity_type_unprefixed = entity.get('type', '').lower().split(':')[-1]
-    specific_period_field = ontology_time_fields.get(entity_type_unprefixed)
-
-    if specific_period_field and specific_period_field in entity and entity[specific_period_field] is not None:
-        temporal_info['extractedPeriod'] = str(entity[specific_period_field])
     
-    # Fallback: Try to extract year/period from name if no specific field was found or populated
-    if 'extractedPeriod' not in temporal_info:
-        name_to_search = entity.get('name', entity.get('metricName', entity.get('kpiName', ''))) #
-        if name_to_search and isinstance(name_to_search, str):
-            # Regex patterns to capture various year and period formats
-            year_patterns = [
-                r'\b(FY|CY|CAL\s*|H[1-2]|Q[1-4])?\s*(20\d{2}|19\d{2})\s*([A-Za-zEBPFL]*)?\b', 
-                r'\b(20\d{2}|19\d{2})\s*-\s*(20\d{2}|19\d{2})\b([A-Za-z]*)', 
-            ]
-            for pattern in year_patterns:
-                match = re.search(pattern, name_to_search, re.IGNORECASE)
-                if match:
-                    temporal_info['extractedPeriod'] = match.group(0).strip() # Take full match as period
-                    break
-    return temporal_info
+    primary_field = name_field_mapping.get(entity_type, "name")
+    return str(entity.get(primary_field, entity.get("name", "")))
 
-
-def are_entities_similar(entity1: Dict[str, Any], entity2: Dict[str, Any], 
-                        threshold: float = 0.8, 
-                        check_numerical_values_for_similarity: bool = False,
-                        check_temporal_for_similarity: bool = True) -> bool:
+def find_matching_entity_pekg(entity: Dict[str, Any], entities: list, 
+                             threshold: float = 0.75) -> Dict[str, Any]:
     """
-    Determine if two entities are similar enough to be considered the same based on their intrinsic attributes.
-    For FinancialMetric, requires high name similarity AND other attributes to be identical or very close.
-    This function DOES NOT consider relational context directly, but can be guided by check_xxx flags.
+    Find a matching entity using PEKG-specific similarity logic.
+    This is the main public function for entity matching.
     """
+    for candidate_entity in entities:
+        if _are_entities_similar_pekg(entity, candidate_entity, threshold):
+            return candidate_entity
+    return None
 
-    type1_full = entity1.get('type', '').lower() if entity1.get('type') is not None else ""
-    type2_full = entity2.get('type', '').lower() if entity2.get('type') is not None else ""
-
-    if type1_full != type2_full and (type1_full == "" or type2_full == ""): # If one is None/empty and other isn't
-        if type1_full != "" or type2_full != "": # Ensure not both are empty strings
-             return False 
-    elif type1_full != type2_full: # Both have types but they are different
+def _are_entities_similar_pekg(entity1: Dict[str, Any], entity2: Dict[str, Any], 
+                              threshold: float = 0.8) -> bool:
+    """
+    Private helper function for PEKG ontology entity similarity.
+    This is used internally by find_matching_entity_pekg().
+    """
+    # Type must match
+    type1_full = entity1.get('type', '').lower()
+    type2_full = entity2.get('type', '').lower()
+    
+    if type1_full != type2_full:
         return False
+    
+    entity_type = type1_full.split(':')[-1] if ':' in type1_full else type1_full
+    
+    # Use entity-type specific similarity functions
+    if entity_type == "financialmetric":
+        return _are_financial_metrics_similar(entity1, entity2)
+    elif entity_type == "transactioncontext":
+        return _are_transaction_contexts_similar(entity1, entity2)
+    elif entity_type == "company":
+        return _are_companies_similar(entity1, entity2, threshold)
+    elif entity_type == "operationalkpi":
+        return _are_operational_kpis_similar(entity1, entity2)
+    elif entity_type == "headcount":
+        return _are_headcount_similar(entity1, entity2)
+    elif entity_type == "historicalevent":
+        return _are_historical_events_similar(entity1, entity2)
+    elif entity_type == "advisor":
+        return _are_advisors_similar(entity1, entity2)
+    elif entity_type == "shareholder":
+        return _are_shareholders_similar(entity1, entity2)
+    elif entity_type == "person":
+        return _are_persons_similar(entity1, entity2)
+    else:
+        # For other types, use general name-based similarity
+        return _are_general_entities_similar(entity1, entity2, threshold)
 
-    type1_unprefixed = type1_full.split(':')[-1]
-    type2_unprefixed = type2_full.split(':')[-1]
-
-    if type1_unprefixed != type2_unprefixed:
+def _are_financial_metrics_similar(entity1: Dict[str, Any], entity2: Dict[str, Any]) -> bool:
+    """Special similarity check for FinancialMetric entities."""
+    name1 = normalize_text(entity1.get("metricName", ""))
+    name2 = normalize_text(entity2.get("metricName", ""))
+    
+    if not name1 or not name2:
         return False
     
-    entity_type_unprefixed = type1_unprefixed
-
-    # Determine primary name field based on common patterns in the original code
-    name1_str = entity1.get('metricName', entity1.get('name', entity1.get('kpiName', entity1.get('productName', entity1.get('fullName', ''))))) #
-    name2_str = entity2.get('metricName', entity2.get('name', entity2.get('kpiName', entity2.get('productName', entity2.get('fullName', ''))))) #
-    
-    name1 = normalize_text(name1_str) #
-    name2 = normalize_text(name2_str) #
-    
-    if not name1 and not name2: # If both names are empty
-        # For financial metrics, a name is crucial
-        if entity_type_unprefixed == "financialmetric": return False #
-        # For other types, if names are empty, rely on additional attribute checks
-        if check_temporal_for_similarity or check_numerical_values_for_similarity:
-             return check_additional_attributes(entity1, entity2, 
-                                                check_numerical=check_numerical_values_for_similarity, 
-                                                check_temporal=check_temporal_for_similarity,
-                                                strict_numerical_value_check=check_numerical_values_for_similarity) #
-        return True # No names and no additional checks means they are considered similar (e.g. two anonymous entities of same type)
-    
-    if not name1 or not name2: # If one name is empty and the other is not
+    name_similarity = similarity_score(name1, name2)
+    if name_similarity < 0.95:
         return False
-
-    name_similarity = similarity_score(name1, name2) #
     
-    # Stricter rules for FinancialMetric entities
-    if entity_type_unprefixed == "financialmetric": #
-        if name_similarity < 0.95: # High threshold for name similarity
+    # DateOrPeriod must match exactly if both present
+    period1 = entity1.get("DateOrPeriod")
+    period2 = entity2.get("DateOrPeriod") 
+    if period1 and period2:
+        if normalize_text(str(period1)) != normalize_text(str(period2)):
             return False
-
-        # All other attributes must be identical or numerically very close
-        keys1 = set(k for k in entity1.keys() if k not in ['id', 'type']) #
-        keys2 = set(k for k in entity2.keys() if k not in ['id', 'type']) #
-
-        if keys1 != keys2: # Must have the same set of attributes
+    
+    # Scope must match if both present
+    scope1 = entity1.get("scope")
+    scope2 = entity2.get("scope")
+    if scope1 and scope2:
+        if normalize_text(str(scope1)) != normalize_text(str(scope2)):
             return False
+    
+    return True
 
-        for key in keys1:
-            val1 = entity1.get(key)
-            val2 = entity2.get(key)
+def _are_transaction_contexts_similar(entity1: Dict[str, Any], entity2: Dict[str, Any]) -> bool:
+    """Special similarity check for TransactionContext entities - very strict."""
+    name1 = normalize_text(entity1.get("contextName", ""))
+    name2 = normalize_text(entity2.get("contextName", ""))
+    
+    if not name1 or not name2:
+        return False
+    
+    # Very high threshold for transaction contexts
+    name_similarity = similarity_score(name1, name2)
+    if name_similarity < 0.98:
+        return False
+    
+    # Transaction type must match exactly
+    type1 = entity1.get("typeSought", "")
+    type2 = entity2.get("typeSought", "")
+    if type1 and type2 and type1 != type2:
+        return False
+    
+    # Status should match
+    status1 = entity1.get("status", "")
+    status2 = entity2.get("status", "")
+    if status1 and status2:
+        if normalize_text(str(status1)) != normalize_text(str(status2)):
+            return False
+    
+    return True
 
-            if val1 is None and val2 is None: continue #
-            if (val1 is None and val2 is not None) or \
-               (val1 is not None and val2 is None): #
-                return False
-
-            if isinstance(val1, (int, float)) and isinstance(val2, (int, float)):
-                if abs(val1 - val2) > 1e-9: return False # Strict numerical equality
-            elif isinstance(val1, str) and isinstance(val2, str):
-                if normalize_text(val1) != normalize_text(val2): return False #
-            elif isinstance(val1, bool) and isinstance(val2, bool):
-                if val1 != val2: return False #
-            elif isinstance(val1, list) and isinstance(val2, list): # Simple list comparison
-                if val1 != val2: return False #
-            elif type(val1) != type(val2): return False #
-            elif val1 != val2: return False # General comparison for other types
-        return True # If all checks pass for FinancialMetric
-
-    # Rules for other metric-like types
-    metric_like_types = {"operationalkpi", "headcount"} #
-    if entity_type_unprefixed in metric_like_types or 'metric' in entity_type_unprefixed: # Broader catch for "metric"
-        metric_name_threshold = 0.90  # Slightly lower threshold than FinancialMetric
-        if name_similarity >= metric_name_threshold: #
-            # Check temporal consistency
-            time_info1 = get_entity_temporal_info(entity1) #
-            time_info2 = get_entity_temporal_info(entity2) #
-            period1 = time_info1.get('extractedPeriod') #
-            period2 = time_info2.get('extractedPeriod') #
-            
-            if period1 and period2 and normalize_text(str(period1)) != normalize_text(str(period2)): #
-                return False
-            
-            # If specified, check numerical values strictly for these types
-            if check_numerical_values_for_similarity:
-                 return check_additional_attributes(entity1, entity2, 
-                                                   check_numerical=True, 
-                                                   check_temporal=False, # Already checked period consistency
-                                                   strict_numerical_value_check=True) #
-            return True 
-        else:
-            return False # Name similarity too low for metric-like type
-
-    # General case for other entity types
-    if name_similarity >= threshold: #
-        if check_temporal_for_similarity or check_numerical_values_for_similarity:
-            return check_additional_attributes(entity1, entity2, 
-                                               check_numerical=check_numerical_values_for_similarity, 
-                                               check_temporal=check_temporal_for_similarity,
-                                               strict_numerical_value_check=check_numerical_values_for_similarity) #
-        return True # Name similarity is sufficient
-            
+def _are_companies_similar(entity1: Dict[str, Any], entity2: Dict[str, Any], threshold: float) -> bool:
+    """Enhanced similarity check for Company entities considering aliases."""
+    name1 = normalize_text(entity1.get("name", ""))
+    name2 = normalize_text(entity2.get("name", ""))
+    
+    # Check primary name similarity
+    if name1 and name2:
+        if similarity_score(name1, name2) >= threshold:
+            return True
+    
+    # Check aliases 
+    aliases1 = entity1.get("alias", [])
+    aliases2 = entity2.get("alias", [])
+    
+    # Ensure aliases are lists
+    if not isinstance(aliases1, list):
+        aliases1 = [aliases1] if aliases1 else []
+    if not isinstance(aliases2, list):
+        aliases2 = [aliases2] if aliases2 else []
+    
+    # Check if any alias matches main name or other aliases
+    all_names1 = [name1] + [normalize_text(str(alias)) for alias in aliases1 if alias]
+    all_names2 = [name2] + [normalize_text(str(alias)) for alias in aliases2 if alias]
+    
+    for n1 in all_names1:
+        for n2 in all_names2:
+            if n1 and n2 and similarity_score(n1, n2) >= threshold:
+                return True
+    
     return False
 
-def check_additional_attributes(entity1: Dict[str, Any], entity2: Dict[str, Any], 
-                               check_numerical: bool,
-                               check_temporal: bool,
-                               strict_numerical_value_check: bool) -> bool:
-    """
-    Helper to check non-name attributes (numerical, temporal) for consistency.
-    """
-    if check_temporal: #
-        time_info1 = get_entity_temporal_info(entity1) #
-        time_info2 = get_entity_temporal_info(entity2) #
-        period1 = time_info1.get('extractedPeriod') #
-        period2 = time_info2.get('extractedPeriod') #
-        # If both have periods, they must match
-        if period1 and period2 and normalize_text(str(period1)) != normalize_text(str(period2)): #
-            return False 
+def _are_operational_kpis_similar(entity1: Dict[str, Any], entity2: Dict[str, Any]) -> bool:
+    """Similarity check for OperationalKPI entities."""
+    name1 = normalize_text(entity1.get("kpiName", ""))
+    name2 = normalize_text(entity2.get("kpiName", ""))
     
-    if check_numerical: #
-        num_values1 = extract_numerical_values(entity1) #
-        num_values2 = extract_numerical_values(entity2) #
-        
-        if strict_numerical_value_check: #
-            all_num_keys = set(num_values1.keys()) | set(num_values2.keys()) #
-            if not all_num_keys and (num_values1 or num_values2): # If one has numbers and the other doesn't, not strictly same
-                return False
-
-            for key in all_num_keys:
-                val1 = num_values1.get(key)
-                val2 = num_values2.get(key)
-
-                if val1 is None and val2 is None: continue #
-                # If one has a value and the other doesn't for the same key, they are different
-                if (val1 is None and val2 is not None) or \
-                   (val1 is not None and val2 is None): #
-                    return False 
-
-                if isinstance(val1, (int, float)) and isinstance(val2, (int, float)):
-                    if abs(val1 - val2) > 1e-9: return False # Strict numerical equality
-            # If all numerical values present in one are identical in the other (and vice-versa)
-            return True #
-
-        else: # Less strict numerical check (e.g., for non-FinancialMetric types)
-            common_num_fields = set(num_values1.keys()) & set(num_values2.keys()) #
-            # If both have numerical values but no common fields, they are considered different
-            if not common_num_fields and (num_values1 and num_values2): #
-                 return False 
-
-            for field in common_num_fields:
-                val1 = num_values1[field]
-                val2 = num_values2[field]
-                if isinstance(val1, (int, float)) and isinstance(val2, (int, float)):
-                    # Percentage tolerance
-                    if 'percentage' in field.lower() or entity1.get('metricUnit') == '%' or entity2.get('metricUnit') == '%': #
-                        if abs(val1 - val2) > 1.0: return False  # e.g., 1% difference
-                    # Value/amount tolerance (relative difference)
-                    elif ('value' in field.lower() or 'amount' in field.lower()): #
-                        if max(abs(val1), abs(val2)) > 1e-9: # Avoid division by zero
-                           if abs(val1 - val2) / max(abs(val1), abs(val2)) > 0.05: return False # 5% relative diff
-                        elif abs(val1 - val2) > 1e-9 : return False # For small numbers, use absolute diff
-                    elif abs(val1 - val2) > 1e-9: return False # Default strict for other numericals
-                elif str(val1) != str(val2): return False # If not numerical, compare as string
-        
-    return True # If all checks pass
-
-def find_matching_entity(entity: Dict[str, Any], entities: List[Dict[str, Any]], 
-                        threshold: float = 0.75) -> Optional[Dict[str, Any]]:
-    """
-    Find a matching entity in a list of entities based on intrinsic similarity.
-    The strictness of numerical checks depends on the entity type.
-    """
-    entity_type_value = entity.get('type') # Get the value, could be None
-    entity_type_full = str(entity_type_value).lower() if entity_type_value is not None else "" # Handle None explicitly
-    entity_type_unprefixed = entity_type_full.split(':')[-1]
+    if not name1 or not name2:
+        return False
     
-    # Types for which numerical values should be checked strictly during similarity assessment
-    metric_types_for_strict_num_check = {"financialmetric", "operationalkpi", "headcount"} #
-    check_numericals_strictly_for_type = entity_type_unprefixed in metric_types_for_strict_num_check or \
-                                         'metric' in entity_type_unprefixed #
+    name_similarity = similarity_score(name1, name2)
+    if name_similarity < 0.90:
+        return False
+    
+    # Period must match if both present
+    period1 = entity1.get("kpiDateOrPeriod")
+    period2 = entity2.get("kpiDateOrPeriod")
+    if period1 and period2:
+        if normalize_text(str(period1)) != normalize_text(str(period2)):
+            return False
+    
+    return True
 
-    for candidate_entity in entities:
-        # Pass the type-dependent strictness for numerical check to are_entities_similar
-        if are_entities_similar(entity, candidate_entity, 
-                                threshold=threshold, 
-                                check_numerical_values_for_similarity=check_numericals_strictly_for_type,
-                                check_temporal_for_similarity=True): # Always check temporal for similarity matching
-            return candidate_entity #
-            
-    return None
+def _are_headcount_similar(entity1: Dict[str, Any], entity2: Dict[str, Any]) -> bool:
+    """Similarity check for Headcount entities."""
+    name1 = normalize_text(entity1.get("headcountName", ""))
+    name2 = normalize_text(entity2.get("headcountName", ""))
+    
+    if not name1 or not name2:
+        return False
+    
+    name_similarity = similarity_score(name1, name2)
+    if name_similarity < 0.90:
+        return False
+    
+    # Date must match if both present
+    date1 = entity1.get("dateOrYear")
+    date2 = entity2.get("dateOrYear")
+    if date1 and date2:
+        if normalize_text(str(date1)) != normalize_text(str(date2)):
+            return False
+    
+    return True
+
+def _are_historical_events_similar(entity1: Dict[str, Any], entity2: Dict[str, Any]) -> bool:
+    """Similarity check for HistoricalEvent entities."""
+    name1 = normalize_text(entity1.get("eventName", ""))
+    name2 = normalize_text(entity2.get("eventName", ""))
+    
+    if not name1 or not name2:
+        return False
+    
+    name_similarity = similarity_score(name1, name2)
+    if name_similarity < 0.85:
+        return False
+    
+    # Event type should match
+    type1 = entity1.get("eventType", "")
+    type2 = entity2.get("eventType", "")
+    if type1 and type2 and type1 != type2:
+        return False
+    
+    # Date should match if both present
+    date1 = entity1.get("dateOrYear")
+    date2 = entity2.get("dateOrYear")
+    if date1 and date2:
+        if normalize_text(str(date1)) != normalize_text(str(date2)):
+            return False
+    
+    return True
+
+def _are_advisors_similar(entity1: Dict[str, Any], entity2: Dict[str, Any]) -> bool:
+    """Similarity check for Advisor entities."""
+    name1 = normalize_text(entity1.get("name", ""))
+    name2 = normalize_text(entity2.get("name", ""))
+    
+    if not name1 or not name2:
+        return False
+    
+    name_similarity = similarity_score(name1, name2)
+    if name_similarity < 0.80:
+        return False
+    
+    # Type should be similar
+    type1 = entity1.get("type", "")
+    type2 = entity2.get("type", "")
+    if type1 and type2:
+        type_similarity = similarity_score(normalize_text(type1), normalize_text(type2))
+        if type_similarity < 0.70:
+            return False
+    
+    return True
+
+def _are_shareholders_similar(entity1: Dict[str, Any], entity2: Dict[str, Any]) -> bool:
+    """Similarity check for Shareholder entities."""
+    name1 = normalize_text(entity1.get("name", ""))
+    name2 = normalize_text(entity2.get("name", ""))
+    
+    if not name1 or not name2:
+        return False
+    
+    name_similarity = similarity_score(name1, name2)
+    if name_similarity < 0.85:
+        return False
+    
+    # Type should match (PE, VC, Management, etc.)
+    type1 = entity1.get("type", "")
+    type2 = entity2.get("type", "")
+    if type1 and type2 and type1 != type2:
+        return False
+    
+    return True
+
+def _are_persons_similar(entity1: Dict[str, Any], entity2: Dict[str, Any]) -> bool:
+    """Similarity check for Person entities."""
+    name1 = normalize_text(entity1.get("fullName", ""))
+    name2 = normalize_text(entity2.get("fullName", ""))
+    
+    if not name1 or not name2:
+        return False
+    
+    name_similarity = similarity_score(name1, name2)
+    if name_similarity >= 0.75:
+        return True
+    
+    # Check if one might be a shorter version of the other
+    name1_parts = name1.split()
+    name2_parts = name2.split()
+    
+    if len(name1_parts) >= 2 and len(name2_parts) >= 2:
+        # Check if first and last names match
+        if (name1_parts[0] == name2_parts[0] and 
+            name1_parts[-1] == name2_parts[-1]):
+            return True
+    
+    return False
+
+def _are_general_entities_similar(entity1: Dict[str, Any], entity2: Dict[str, Any], threshold: float) -> bool:
+    """General similarity check for entity types not specifically handled."""
+    primary_name1 = get_entity_primary_name(entity1)
+    primary_name2 = get_entity_primary_name(entity2)
+    
+    if not primary_name1 or not primary_name2:
+        return False
+    
+    name_similarity = similarity_score(normalize_text(primary_name1), 
+                                     normalize_text(primary_name2))
+    return name_similarity >= threshold
+
+# All helper functions for entity-specific similarity checks
 
 def merge_entity_attributes(entity1: Dict[str, Any], entity2: Dict[str, Any]) -> Dict[str, Any]:
     """

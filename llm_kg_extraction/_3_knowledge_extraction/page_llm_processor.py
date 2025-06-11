@@ -19,7 +19,8 @@ class PageLLMProcessor:
 
     def __init__(self,
                  llm_client: BaseLLMWrapper,
-                 ontology: PEKGOntology): 
+                 ontology: PEKGOntology, 
+                 extraction_mode: str): 
         """
         Initializes the PageLLMProcessor.
 
@@ -30,6 +31,7 @@ class PageLLMProcessor:
         self.llm_client = llm_client
         self.ontology = ontology
         self.temperature = 0.1
+        self.extraction_mode = extraction_mode
 
     def _build_text_extraction_prompt(self,
                                       page_text: str,
@@ -55,30 +57,28 @@ class PageLLMProcessor:
         primary_task_focus = "extract entities and relationships *ONLY* from the \"Current Page Text to Analyze\" provided below."
 
         if doc_type == "financial_teaser":
-            target_company_name = document_context_info.get("target_company", {}).get("name", "Unknown Target Company")
-            advisory_firms = document_context_info.get("advisory_firms", [])
-            advisory_firms_names = [firm.get("name", "Unknown Firm") for firm in advisory_firms if isinstance(firm, dict)]
-            project_codename_val = document_context_info.get("project_codename", "Unknown Project")
-
+    
             context_specific_intro = f"""
-            This document is a '{doc_type}' concerning:
-            - Target Company: {target_company_name} (the main company being analyzed/offered)
-            - Project Codename: {project_codename_val} (this is often a codename, not the actual company name unless otherwise stated)
-            - Advisory Firms: {', '.join(advisory_firms_names) if advisory_firms_names else "None listed"} (these firms may have prepared the document but are not the primary subject of extraction unless their activities are detailed)
+            This document is a '{doc_type}' concerning a main company, which sould not be confused with the advisory firms or project codename.
+            The document can be summarized as follows:
+            - Document Summary: {document_context_info.get("document_summary", "No summary provided")}
+            - The main entity of focus for this document is understood to be '{document_context_info.get("primary_entity_name", "")}'.
 
             When extracting entities, MAKE SURE to clearly distinguish between:
-            1. The TARGET COMPANY ({target_company_name})
-            2. The ADVISORY FIRMS ({', '.join(advisory_firms_names) if advisory_firms_names else "None listed"})
-            3. The PROJECT CODENAME ({project_codename_val})
+            1. The TARGET COMPANY 
+            2. The ADVISORY FIRMS
+            3. The PROJECT CODENAME
             """
+
         else:
-            # Generic intro for other document types
-            # This should be expanded based on the specific context identifiers for other types
-            main_entity_name = document_context_info.get("primary_entity_name", self.llm_client.model_name) # Fallback
+            main_entity_name = document_context_info.get("primary_entity_name") # Fallback
             context_specific_intro = f"""
             This document is identified as a '{doc_type}'.
             The primary entity of focus for this document is understood to be '{main_entity_name}'.
-            Please analyze the content in relation to this primary entity and other relevant entities mentioned.
+            The document can be summarized as follows:
+            - Document Summary: {document_context_info.get("document_summary", "No summary provided")}
+
+            Please analyze the content in relation to this primary entity and in light of the overall document context.
             """
             primary_task_focus = f"Your PRIMARY TASK is to extract entities and relationships relevant to a '{doc_type}' *ONLY* from the \"Current Page Text to Analyze\"."
 
@@ -134,7 +134,7 @@ class PageLLMProcessor:
 
     def _build_multimodal_extraction_prompt(self,
                                            page_text: str,
-                                           page_num_display: str,
+                                           page_number: str,
                                            document_context_info: Dict[str, Any],
                                            previous_graph_context: Optional[Dict[str, Any]] = None,
                                            construction_mode: str = "iterative"
@@ -145,35 +145,42 @@ class PageLLMProcessor:
         ontology_desc = self.ontology.format_for_prompt()
         
         previous_graph_json_for_prompt = "{}"
+    
         if construction_mode == "iterative" and previous_graph_context and previous_graph_context.get("entities"):
             previous_graph_json_for_prompt = json.dumps(previous_graph_context)
 
+        # Adapt prompt based on document_context_info
+        # This example focuses on financial_teaser context.
+        # For other doc types, this section would need to be more dynamic.
         doc_type = document_context_info.get("identified_document_type", "document")
         context_specific_intro = ""
-        primary_task_focus = "Extract a comprehensive knowledge graph (entities and relationships) from BOTH the \"Current Page Text\" AND any visual elements (tables, charts, diagrams) in the accompanying image."
+        primary_task_focus = "extract entities and relationships *ONLY* from the \"Current Page Text to Analyze\" provided below."
 
         if doc_type == "financial_teaser":
-            target_company_name = document_context_info.get("target_company", {}).get("name", "Unknown Target Company")
-            advisory_firms = document_context_info.get("advisory_firms", [])
-            advisory_firms_names = [firm.get("name", "Unknown Firm") for firm in advisory_firms if isinstance(firm, dict)]
-            project_codename_val = document_context_info.get("project_codename", "Unknown Project")
-
+    
             context_specific_intro = f"""
-            This document is a '{doc_type}' (page {page_num_display}) concerning:
-            - Target Company: {target_company_name}
-            - Project Codename: {project_codename_val}
-            - Advisory Firms: {', '.join(advisory_firms_names) if advisory_firms_names else "None listed"}
+            This document is a '{doc_type}' concerning a main company, which sould not be confused with the advisory firms or project codename.
+            The document can be summarized as follows:
+            - Document Summary: {document_context_info.get("document_summary", "No summary provided")}
+            - The main entity of focus for this document is understood to be '{document_context_info.get("primary_entity_name", "")}'.
 
-            When extracting entities from this page (text and image), clearly distinguish between the Target Company, Advisory Firms, and the Project Codename.
+            When extracting entities, MAKE SURE to clearly distinguish between:
+            1. The TARGET COMPANY 
+            2. The ADVISORY FIRMS
+            3. The PROJECT CODENAME
             """
+
         else:
-            main_entity_name = document_context_info.get("primary_entity_name", "the main subject")
+            main_entity_name = document_context_info.get("primary_entity_name") # Fallback
             context_specific_intro = f"""
-            This document is identified as a '{doc_type}' (page {page_num_display}).
+            This document is identified as a '{doc_type}'.
             The primary entity of focus for this document is understood to be '{main_entity_name}'.
-            Analyze the page content (text and image) in relation to this primary entity and other relevant entities.
+            The document can be summarized as follows:
+            - Document Summary: {document_context_info.get("document_summary", "No summary provided")}
+
+            Please analyze the content in relation to this primary entity and in light of the overall document context.
             """
-            primary_task_focus = f"Your PRIMARY TASK is to extract entities and relationships relevant to a '{doc_type}' *ONLY* from the content of THIS CURRENT PAGE (both its text and visual elements)."
+            primary_task_focus = f"Your PRIMARY TASK is to extract entities and relationships relevant to a '{doc_type}' *ONLY* from the \"Current Page Text to Analyze\"."
 
         prompt = f"""
         You are an expert financial information extraction system.
@@ -200,7 +207,7 @@ class PageLLMProcessor:
         Current Page Text to Analyze (use in conjunction with the image):
         \"\"\"{page_text}\"\"\"
 
-        Task for CURRENT PAGE {page_num_display} (Image and Text):
+        Task for CURRENT PAGE {page_number} (Image and Text):
         1.  From the "Current Page Text" and Image *only*, identify all entities matching the ontology.
         2.  For these entities, extract all relevant attributes. Attributes should be direct properties of the entity object (e.g., "name": "X"), NOT nested under a "properties" key.
         3.  Identify and create relationships between entities, based *only* on information in the "Current Page Text" and Image.
@@ -228,84 +235,87 @@ class PageLLMProcessor:
     def process_page(self,
                      page_data: Dict[str, Any],
                      document_context_info: Dict[str, Any],
-                     extraction_mode: str, # "text" or "multimodal"
-                     construction_mode: str = "iterative", # Used for prompt generation logic
-                     previous_graph_context: Optional[Dict[str, Any]] = None,
-                     page_num_for_logging: str = "N/A"
+                     construction_mode: str = "iterative",
+                     previous_graph_context: Optional[Dict[str, Any]] = None
                     ) -> Dict[str, List[Any]]:
         """
-        Processes a single page to extract a knowledge graph.
+        Method to process a single page to extract a knowledge graph.
+        Handles both text and multimodal extraction based on self.extraction_mode.
 
         Args:
-            page_data (Dict[str, Any]): Dict containing 'text' and optionally 'image_base64'.
+            page_data (Dict[str, Any]): Dict containing 'page_number', 'text' and optionally 'image_base64'.
             document_context_info (Dict[str, Any]): Contextual info about the document.
-            extraction_mode (str): "text" or "multimodal".
             construction_mode (str): How the overall KG is being built ("iterative", "parallel", "onego").
             previous_graph_context (Optional[Dict[str, Any]]): KG from previous pages.
-            page_num_for_logging (str): Page number string for logging.
 
         Returns:
             Dict[str, List[Any]]: The extracted knowledge graph for the page (entities and relationships).
                                   Returns {"entities": [], "relationships": []} on error or no content.
         """
+        page_number = page_data.get("page_number", "N/A")
         page_text = page_data.get("text", "")
         page_image_base64 = page_data.get("image_base64")
         llm_response_content: Optional[str] = None
         
-        try:
-            if extraction_mode == "multimodal":
-                if not page_image_base64:
-                    print(f"Warning: image_base64 not found for page {page_num_for_logging} in multimodal mode. Falling back to text-only if text exists.")
-                    if not page_text.strip():
-                        return {"entities": [], "relationships": []}
-                    # Fall through to text-only logic below if image is missing but text exists
-
-                if page_image_base64: # Proceed with multimodal if image is available
-                    prompt_str = self._build_multimodal_extraction_prompt(
-                        page_text=page_text,
-                        page_num_display=page_num_for_logging,
-                        document_context_info=document_context_info,
-                        previous_graph_context=previous_graph_context,
-                        construction_mode=construction_mode
-                    )
-                    
-                    # Prepare input for LLM client's chat_completion or generate_content
-                    # The wrappers handle specific formatting for Azure/Vertex
-                    if isinstance(self.llm_client, AzureLLM):
-                        user_content_parts = [
-                            {"type": "text", "text": prompt_str},
-                            {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{page_image_base64}"}}
-                        ]
-                        messages = [
-                            {"role": "system", "content": "You are a financial KG extraction assistant for multimodal inputs, outputting JSON."}, # System prompt can be refined
-                            {"role": "user", "content": user_content_parts}
-                        ]
-                        llm_response_content = self.llm_client.chat_completion(
-                            messages=messages,
-                            temperature=self.temperature
-                        )
-
-                    elif isinstance(self.llm_client, VertexLLM):
-                        image_bytes = base64.b64decode(page_image_base64)
-                        vertex_parts = [
-                            {'text': prompt_str}, # Or Part.from_text(prompt_str)
-                            {'inline_data': {'mime_type': 'image/png', 'data': image_bytes}}
-                        ]
-                        llm_response_content = self.llm_client.generate_content(
-                            prompt=vertex_parts, # Wrapper will structure as [{'parts': vertex_parts}]
-                            temperature=self.temperature,
-                            response_mime_type="application/json"
-                        )
-                    else:
-                        print(f"Multimodal extraction not configured for LLM type: {self.llm_client.__class__.__name__}. Skipping page {page_num_for_logging}.")
-                        return {"entities": [], "relationships": []}
-            
-            # Text-only mode or fallback from multimodal if image was missing
-            if extraction_mode == "text" or (extraction_mode == "multimodal" and not page_image_base64 and page_text.strip()):
+        # Validate input based on extraction mode
+        if self.extraction_mode == "text":
+            if not page_text.strip():
+                print(f"Skipping page {page_number} for text analysis as it has no text content.")
+                return {"entities": [], "relationships": []}
+        elif self.extraction_mode == "multimodal":
+            if not page_image_base64:
+                print(f"Warning: image_base64 not found for page {page_number} in multimodal mode.")
                 if not page_text.strip():
-                    print(f"Skipping page {page_num_for_logging} for text analysis as it has no text content.")
+                    print(f"No text content either. Skipping page {page_number}.")
                     return {"entities": [], "relationships": []}
+                print(f"Falling back to text-only processing for page {page_number}.")
+                # Will process as text-only below
+        
+        try:
+            # Determine processing approach
+            use_multimodal = (self.extraction_mode == "multimodal" and page_image_base64)
+            
+            if use_multimodal:
+                prompt_str = self._build_multimodal_extraction_prompt(
+                    page_text=page_text,
+                    page_number=page_number,
+                    document_context_info=document_context_info,
+                    previous_graph_context=previous_graph_context,
+                    construction_mode=construction_mode
+                )
+                
+                # Prepare multimodal input for LLM client
+                if isinstance(self.llm_client, AzureLLM):
+                    user_content_parts = [
+                        {"type": "text", "text": prompt_str},
+                        {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{page_image_base64}"}}
+                    ]
+                    messages = [
+                        {"role": "system", "content": "You are a financial KG extraction assistant for multimodal inputs, outputting JSON."},
+                        {"role": "user", "content": user_content_parts}
+                    ]
+                    llm_response_content = self.llm_client.chat_completion(
+                        messages=messages,
+                        temperature=self.temperature
+                    )
 
+                elif isinstance(self.llm_client, VertexLLM):
+                    image_bytes = base64.b64decode(page_image_base64)
+                    vertex_parts = [
+                        {'text': prompt_str},
+                        {'inline_data': {'mime_type': 'image/png', 'data': image_bytes}}
+                    ]
+                    llm_response_content = self.llm_client.generate_content(
+                        prompt=vertex_parts,
+                        temperature=self.temperature,
+                        response_mime_type="application/json"
+                    )
+                else:
+                    print(f"Multimodal extraction not configured for LLM type: {self.llm_client.__class__.__name__}. Falling back to text-only.")
+                    use_multimodal = False
+            
+            # Text-only processing (either by design or fallback)
+            if not use_multimodal:
                 prompt_str = self._build_text_extraction_prompt(
                     page_text=page_text,
                     document_context_info=document_context_info,
@@ -335,10 +345,9 @@ class PageLLMProcessor:
                     ]
                     llm_response_content = self.llm_client.chat_completion(messages=messages, temperature=self.temperature)
 
-
             # Parse response
             if not llm_response_content:
-                print(f"Warning: Empty content received from LLM for page {page_num_for_logging}. Returning empty graph.")
+                print(f"Warning: Empty content received from LLM for page {page_number}. Returning empty graph.")
                 return {"entities": [], "relationships": []}
 
             # Clean potential markdown ```json
@@ -347,28 +356,30 @@ class PageLLMProcessor:
                 clean_content = clean_content.lstrip("```json").rstrip("```").strip()
             elif clean_content.startswith("```"):
                  clean_content = clean_content.lstrip("```").rstrip("```").strip()
-                 if clean_content.startswith("json"): # remove leading 'json'
+                 if clean_content.startswith("json"):
                     clean_content = clean_content.lstrip("json").strip()
             
             if not clean_content:
-                print(f"Warning: Content became empty after stripping markdown for page {page_num_for_logging}. Raw: '{llm_response_content[:100]}...'")
+                print(f"Warning: Content became empty after stripping markdown for page {page_number}. Raw: '{llm_response_content[:100]}...'")
                 return {"entities": [], "relationships": []}
 
-            return json.loads(clean_content)
+            result = json.loads(clean_content)
+            
+            # Add page_number to result for tracking
+            result["page_number"] = page_number
+            return result
 
         except json.JSONDecodeError as e:
-            print(f"Error parsing JSON response from LLM ({self.llm_client.__class__.__name__}) for page {page_num_for_logging}: {e}")
+            print(f"Error parsing JSON response from LLM ({self.llm_client.__class__.__name__}) for page {page_number}: {e}")
             print(f"Model: {self.llm_client.model_name}")
             raw_content_snippet = llm_response_content[:500] if llm_response_content else "N/A"
             print(f"Raw LLM Content that failed parsing (first 500 chars):\n---\n{raw_content_snippet}\n---")
             return {"entities": [], "relationships": []}
         except Exception as e:
-            # Specific error for Vertex if response.text is accessed on blocked content was in original KG_Builder
-            # The VertexLLM wrapper now tries to handle this. If it still propagates:
             if "response.text" in str(e) and "valid Part" in str(e) and isinstance(self.llm_client, VertexLLM):
-                 print(f"ValueError accessing response.text for page {page_num_for_logging} (Vertex), likely due to blocked content or no parts. Error: {e}")
+                 print(f"ValueError accessing response.text for page {page_number} (Vertex), likely due to blocked content or no parts. Error: {e}")
                  return {"entities": [], "relationships": []}
-            print(f"Error during LLM page processing ({self.llm_client.__class__.__name__}, page {page_num_for_logging}): {type(e).__name__} - {e}")
+            print(f"Error during LLM page processing ({self.llm_client.__class__.__name__}, page {page_number}): {type(e).__name__} - {e}")
             print(f"Model: {self.llm_client.model_name}")
             raw_content_snippet = llm_response_content[:500] if llm_response_content else "N/A"
             print(f"Raw LLM Content (if available, first 500 chars):\n---\n{raw_content_snippet}\n---")

@@ -58,7 +58,6 @@ def get_llm_client_for_project(llm_provider: str, model_name: str,
 
 
 def get_context_identifier_for_project(doc_type_hint: str, llm_client: BaseLLMWrapper, project_name_for_context: str) -> BaseContextIdentifier:
-    # ... (implementation as before) ...
     if doc_type_hint == "financial_teaser":
         return FinancialTeaserContextIdentifier(llm_client=llm_client, project_name=project_name_for_context)
     else:

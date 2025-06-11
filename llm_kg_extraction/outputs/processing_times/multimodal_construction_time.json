@@ -6,5 +6,6 @@
     "vertexai_multimodal_Project INUK_Project_INUK_Teaser_gemini-2.5-pro-preview-05-06_parallel_workers16": 625.33,
     "vertexai_multimodal_Project INUK_Project_INUK_Teaser_gemini-2.5-flash-preview-05-20_parallel_workers16": 381.65,
     "vertexai_multimodal_Project System_Project_System_Teaser_gemini-2.5-flash-preview-05-20_parallel_workers16": 134.71,
-    "vertexai_multimodal_Project System_big_Project_System_Teaser_gemini-2.5-flash-preview-05-20_parallel_workers16": 472.5
+    "vertexai_multimodal_Project System_big_Project_System_Teaser_gemini-2.5-flash-preview-05-20_parallel_workers16": 472.5,
+    "vertexai_multimodal_Project System_big_Project_System_Teaser_gemini-2.5-pro-preview-05-06_parallel_workers20": 768.44
 }
