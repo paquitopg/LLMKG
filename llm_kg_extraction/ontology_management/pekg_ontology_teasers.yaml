@@ -68,7 +68,7 @@ entities:
       attributes:
         - metricName: string # Descriptive name (e.g., "FY21A Revenue", "Adj. EBITDA Margin FY24BP", "ARR"). Should be specific.
         - valueString: string # The value as a string to capture formatting (e.g., "€16.0m", "29%", "$7.7m ARR"). Parse components in post-processing.
-        - fiscalPeriod: string # The period this metric refers to (e.g., "FY21A", "2022F", "LTM Q3 2023", "2022-2025 CAGR").
+        - DateOrPeriod: string # The date or period this metric refers to (e.g., "FY21A", "02-06-2023", "LTM Q3 2023", "2022-2025").
         - isRecurring: boolean # True if explicitly stated as recurring (e.g., ARR, MRR, recurring maintenance).
         - isAdjustedOrProforma: boolean # True if terms like "Adjusted", "Normative", "Proforma" are used.
         - scope: string # e.g., Group, Product X, France (if the metric is not for the whole company by default).
@@ -147,6 +147,10 @@ relations:
   - pekg:usesTechnology (pekg:Company|pekg:ProductOrService -> pekg:Technology)
   - pekg:hasClientCompany (pekg:Company -> pekg:Company) # If a client is also a company in the KG.
   - pekg:hasClientGovernment (pekg:Company -> pekg:GovernmentBody) # If a client is a government body.
+  - pekg:hasClientPerson (pekg:Company -> pekg:Person) # If a client is an individual.
+  - pekg:hasCompetitor (pekg:Company -> pekg:Company) # Competitors of the company.
+  - pekg:hasCompetitorProduct (pekg:ProductOrService -> pekg:ProductOrService) # Competitor products/services.
+  - pekg:hasIntellectualProperty (pekg:Company -> pekg:ProductOrService) # Intellectual property can be a product or service.
 
   # --- Financials & Performance ---
   - pekg:reportsFinancialMetric (pekg:Company|pekg:ProductOrService|pekg:RevenueStream -> pekg:FinancialMetric) # Added RevenueStream

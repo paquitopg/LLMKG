@@ -1,13 +1,11 @@
 from typing import List, Dict, Any, Set, Tuple, Optional, Union
 
 from .common_kg_utils import (
-    find_matching_entity, # Still used for finding matches based on single-value attributes from input KGs
+    find_matching_entity_pekg, # Still used for finding matches based on single-value attributes from input KGs
     normalize_entity_ids,
+    get_entity_primary_name,
     clean_knowledge_graph,
-    # merge_entity_attributes is NOT directly used for attribute values anymore;
-    # we'll implement a new provenance-aware merging logic.
-    # However, it might be used for non-provenance-tracked fields like 'type'.
-    merge_entity_attributes as base_merge_entity_attributes 
+    merge_entity_attributes
 )
 
 class InterDocumentMerger:
@@ -18,7 +16,8 @@ class InterDocumentMerger:
     """
 
     def __init__(self,
-                 similarity_threshold: float = 0.75,
+                 ontology,
+                 similarity_threshold: float = 0.5,
                  default_source_id: str = "aggregated"):
         """
         Initializes the InterDocumentMerger.
@@ -29,6 +28,7 @@ class InterDocumentMerger:
                                      is converted to the provenance format.
         """
         self.similarity_threshold = similarity_threshold
+        self.ontology = ontology  # Store the ontology for potential future use
         self.default_source_id = default_source_id
 
     def _add_provenance_value(self,
@@ -121,7 +121,7 @@ class InterDocumentMerger:
             
             doc_entity_id = entity_doc['id']
             
-            matching_entity_in_project = find_matching_entity(
+            matching_entity_in_project = find_matching_entity_pekg(
                 entity_doc, # find_matching_entity expects single-value attributes for comparison
                 list(merged_entities_map.values()),
                 threshold=self.similarity_threshold
@@ -141,7 +141,7 @@ class InterDocumentMerger:
                 # Update type using base merge (prefer non-empty)
                 # This assumes 'type' should remain a single value.
                 # Base merge might prefer longer or non-empty string for 'type'.
-                merged_type_dict = base_merge_entity_attributes(
+                merged_type_dict = merge_entity_attributes(
                     {'type': merged_entities_map[project_id].get('type')}, 
                     {'type': entity_doc.get('type')}
                 )
