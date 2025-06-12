@@ -1,0 +1,238 @@
+{
+  "entities": [
+    {
+      "id": "e6_pg3",
+      "type": "pekg:Company",
+      "name": "Systran",
+      "alias": [
+        "The Group"
+      ],
+      "description": "A pioneer and global leader in on-premise and cloud-based translation software, continuously evolving with breakthrough innovations and secured solutions, recently introducing Neural Machine Translation to corporate users via 3 offers. Has successfully built a wide, diversified, loyal and growing customer base across highly sensitive sectors. Evolved from a specialty translation provider to a pioneering digital translation player, and now a leading Neural Machine translation player.",
+      "foundedYear": 1968,
+      "keyStrengths": [
+        "Acclaimed tech stack",
+        "Unique portfolio of sensitive clients",
+        "Pioneer and global leader in on-premise and cloud-based translation software",
+        "Breakthrough innovations and secured solutions",
+        "Secured solutions",
+        "Wide, diversified, loyal and growing customer base",
+        "Solid track record of sustainable growth",
+        "Longstanding track record of innovation",
+        "A long history as translation forerunner to support demanding customers in a quickly mutating translation environment",
+        "Global Footprint",
+        "proximity and responsiveness with its customers across 8 countries"
+      ],
+      "growthStrategySummary": "Ambitious growth strategy including accelerating cloud offering, increasing sales efforts to foster penetration of the B2C / SME segment, fostering R&D of transcript and context awareness translation, and entering the voice-translation market."
+    },
+    {
+      "id": "e_systran_sas_pg12",
+      "type": "pekg:Company",
+      "name": "Systran SAS",
+      "description": "Group operational holding, regrouping all the activity for the French market"
+    },
+    {
+      "id": "e_systran_usa_holding_pg12",
+      "type": "pekg:Company",
+      "name": "Systran USA",
+      "description": "non-operating holding company for all foreign subsidiaries"
+    },
+    {
+      "id": "e_ssi",
+      "type": "pekg:Company",
+      "name": "Systran Software Inc",
+      "alias": [
+        "SSI"
+      ]
+    },
+    {
+      "id": "e_sjgk",
+      "type": "pekg:Company",
+      "name": "Systran Japan",
+      "alias": [
+        "SJGK"
+      ]
+    },
+    {
+      "id": "e_scl",
+      "type": "pekg:Company",
+      "name": "Systran Co. Ltd",
+      "alias": [
+        "SCL"
+      ]
+    },
+    {
+      "id": "e_softbank_ventures_asia",
+      "type": "pekg:Shareholder",
+      "name": "Softbank Ventures Asia",
+      "percentageOwned": 15.4
+    },
+    {
+      "id": "e_stic",
+      "type": "pekg:Shareholder",
+      "name": "STIC",
+      "percentageOwned": 50.4
+    },
+    {
+      "id": "e_korea_investment_partners_pg12",
+      "type": "Corporate",
+      "name": "Korea Investment Partners",
+      "percentageOwned": 20.0
+    },
+    {
+      "id": "e_llsollu_pg12",
+      "type": "Corporate",
+      "name": "Llsollu",
+      "percentageOwned": 6.4
+    },
+    {
+      "id": "e_korea_investment_securities_pg12",
+      "type": "Corporate",
+      "name": "Korea Investment & Securities",
+      "percentageOwned": 3.1
+    },
+    {
+      "id": "e_management_pg12",
+      "type": "Group of Individuals",
+      "name": "Management",
+      "percentageOwned": 4.7,
+      "description": "Fully diluted / post distribution of planned free shares"
+    },
+    {
+      "id": "e2_pg1",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Financial Advisor for the disposal of the Group"
+    },
+    {
+      "id": "e1_pg1_transactioncontext_1",
+      "type": "pekg:TransactionContext",
+      "contextName": "Information Memorandum",
+      "status": "Strictly confidential",
+      "typeSought": "Disposal",
+      "transactionPerimeter": "Systran SAS, Systran USA, SSI, SJGK, SCL"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e6_pg3",
+      "target": "e1_pg1_transactioncontext_1",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1_pg1_transactioncontext_1",
+      "target": "e2_pg1",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e_systran_sas_pg12",
+      "target": "e2_pg1",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e_stic",
+      "target": "e_systran_sas_pg12",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e_softbank_ventures_asia",
+      "target": "e_systran_sas_pg12",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e_korea_investment_partners_pg12",
+      "target": "e_systran_sas_pg12",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e_llsollu_pg12",
+      "target": "e_systran_sas_pg12",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e_korea_investment_securities_pg12",
+      "target": "e_systran_sas_pg12",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e_management_pg12",
+      "target": "e_systran_sas_pg12",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e_systran_sas_pg12",
+      "target": "e_systran_usa_holding_pg12",
+      "type": "pekg:hasSubsidiary"
+    },
+    {
+      "source": "e_systran_usa_holding_pg12",
+      "target": "e_systran_sas_pg12",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e_systran_usa_holding_pg12",
+      "target": "e_ssi",
+      "type": "pekg:hasSubsidiary"
+    },
+    {
+      "source": "e_ssi",
+      "target": "e_systran_usa_holding_pg12",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e_ssi",
+      "target": "e_sjgk",
+      "type": "pekg:hasSubsidiary"
+    },
+    {
+      "source": "e_sjgk",
+      "target": "e_ssi",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e_ssi",
+      "target": "e_scl",
+      "type": "pekg:hasSubsidiary"
+    },
+    {
+      "source": "e_scl",
+      "target": "e_ssi",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e_systran_sas_pg12",
+      "target": "e17_pg3",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e_ssi",
+      "target": "e_san_diego",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e_systran_sas_pg12",
+      "target": "e1_pg1_transactioncontext_1",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e_systran_usa_holding_pg12",
+      "target": "e1_pg1_transactioncontext_1",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e_ssi",
+      "target": "e1_pg1_transactioncontext_1",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e_sjgk",
+      "target": "e1_pg1_transactioncontext_1",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e_scl",
+      "target": "e1_pg1_transactioncontext_1",
+      "type": "pekg:isSubjectOf"
+    }
+  ],
+  "page_number": 12
+}

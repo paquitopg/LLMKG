@@ -1,0 +1,1106 @@
+{
+  "entities": [
+    {
+      "id": "e_adj_sale_fy20a_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Sale",
+      "valueString": "\u20ac15.3mn",
+      "DateOrPeriod": "FY20A",
+      "isAdjustedOrProforma": true,
+      "scope": "Total Revenue"
+    },
+    {
+      "id": "e_adj_sale_fy21a_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Sale",
+      "valueString": "\u20ac16.0mn",
+      "DateOrPeriod": "FY21A",
+      "isAdjustedOrProforma": true,
+      "scope": "Total Revenue"
+    },
+    {
+      "id": "e_adj_sale_fy22b_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Sale",
+      "valueString": "\u20ac19.5mn",
+      "DateOrPeriod": "FY22B",
+      "isAdjustedOrProforma": true,
+      "scope": "Total Revenue"
+    },
+    {
+      "id": "e_rev_maint_perc_fy19a_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance Revenue Percentage",
+      "valueString": "26%",
+      "DateOrPeriod": "FY19A",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_maint_perc_fy20a_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance Revenue Percentage",
+      "valueString": "27%",
+      "DateOrPeriod": "FY20A",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_maint_perc_fy21a_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance Revenue Percentage",
+      "valueString": "28%",
+      "DateOrPeriod": "FY21A",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_maint_perc_fy22b_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance Revenue Percentage",
+      "valueString": "27%",
+      "DateOrPeriod": "FY22B",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_annual_lic_perc_fy19a_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses Revenue Percentage",
+      "valueString": "21%",
+      "DateOrPeriod": "FY19A",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_annual_lic_perc_fy20a_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses Revenue Percentage",
+      "valueString": "21%",
+      "DateOrPeriod": "FY20A",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_annual_lic_perc_fy21a_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses Revenue Percentage",
+      "valueString": "22%",
+      "DateOrPeriod": "FY21A",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_annual_lic_perc_fy22b_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses Revenue Percentage",
+      "valueString": "22%",
+      "DateOrPeriod": "FY22B",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_cloud_perc_fy19a_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud Revenue Percentage",
+      "valueString": "1%",
+      "DateOrPeriod": "FY19A",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_cloud_perc_fy20a_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud Revenue Percentage",
+      "valueString": "1%",
+      "DateOrPeriod": "FY20A",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_cloud_perc_fy21a_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud Revenue Percentage",
+      "valueString": "1%",
+      "DateOrPeriod": "FY21A",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_cloud_perc_fy22b_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud Revenue Percentage",
+      "valueString": "3%",
+      "DateOrPeriod": "FY22B",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_perpetual_lic_perc_fy19a_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perpetual Licenses Revenue Percentage",
+      "valueString": "35%",
+      "DateOrPeriod": "FY19A",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_perpetual_lic_perc_fy20a_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perpetual Licenses Revenue Percentage",
+      "valueString": "28%",
+      "DateOrPeriod": "FY20A",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_perpetual_lic_perc_fy21a_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perpetual Licenses Revenue Percentage",
+      "valueString": "32%",
+      "DateOrPeriod": "FY21A",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_perpetual_lic_perc_fy22b_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perpetual Licenses Revenue Percentage",
+      "valueString": "31%",
+      "DateOrPeriod": "FY22B",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_others_perc_fy19a_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Others Revenue Percentage",
+      "valueString": "17%",
+      "DateOrPeriod": "FY19A",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_others_perc_fy20a_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Others Revenue Percentage",
+      "valueString": "22%",
+      "DateOrPeriod": "FY20A",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_others_perc_fy21a_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Others Revenue Percentage",
+      "valueString": "17%",
+      "DateOrPeriod": "FY21A",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_others_perc_fy22b_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Others Revenue Percentage",
+      "valueString": "16%",
+      "DateOrPeriod": "FY22B",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_recurring_rev_perc_fy19a_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenues Percentage of Total Revenue",
+      "valueString": "47%",
+      "DateOrPeriod": "FY19A",
+      "scope": "Total Revenue"
+    },
+    {
+      "id": "e_recurring_rev_perc_fy20a_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenues Percentage of Total Revenue",
+      "valueString": "48%",
+      "DateOrPeriod": "FY20A",
+      "scope": "Total Revenue"
+    },
+    {
+      "id": "e_recurring_rev_perc_fy21a_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenues Percentage of Total Revenue",
+      "valueString": "50%",
+      "DateOrPeriod": "FY21A",
+      "scope": "Total Revenue"
+    },
+    {
+      "id": "e_recurring_rev_perc_fy22b_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenues Percentage of Total Revenue",
+      "valueString": "49%",
+      "DateOrPeriod": "FY22B",
+      "scope": "Total Revenue"
+    },
+    {
+      "id": "e_recurring_rev_text_perc_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Revenues Percentage of Total Revenue",
+      "valueString": "c.50%",
+      "DateOrPeriod": "Each year",
+      "scope": "Total Revenue"
+    },
+    {
+      "id": "e_perpetual_lic_recurring_maint_perc_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Recurring Maintenance from Perpetual Licenses Percentage",
+      "valueString": "c.18-22%",
+      "scope": "of license fee"
+    },
+    {
+      "id": "e_rev_cagr_fy19a_22b_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenues CAGR",
+      "valueString": "+12.2%",
+      "DateOrPeriod": "FY19A-22B",
+      "scope": "Total Revenue"
+    },
+    {
+      "id": "e_cloud_cagr_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud Revenue CAGR",
+      "valueString": "+71%",
+      "DateOrPeriod": "FY19A-22B",
+      "scope": "Cloud Revenue"
+    },
+    {
+      "id": "e_annual_license_cagr_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual License Revenue CAGR",
+      "valueString": "+15%",
+      "DateOrPeriod": "FY19A-22B",
+      "scope": "Annual License Revenue"
+    },
+    {
+      "id": "e_maintenance_renewal_cagr_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance Renewal Revenue CAGR",
+      "valueString": "+10%",
+      "DateOrPeriod": "FY19A-22B",
+      "scope": "Maintenance Renewal Revenue"
+    },
+    {
+      "id": "e_perpetual_cagr_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perpetual Revenue CAGR",
+      "valueString": "+12%",
+      "DateOrPeriod": "FY19A-22B",
+      "scope": "Perpetual Revenue"
+    },
+    {
+      "id": "e_other_cagr_pg46",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Other Revenue CAGR",
+      "valueString": "+11%",
+      "DateOrPeriod": "FY19A-22B",
+      "scope": "Other Revenue"
+    },
+    {
+      "id": "e_recurring_revenues_category_pg46",
+      "type": "pekg:ProductOrService",
+      "name": "Recurring revenues",
+      "category": "Revenue Stream",
+      "description": "Comprising both annual licenses and recurring maintenance included in perpetual licenses"
+    },
+    {
+      "id": "e_one_time_revenue_category_pg46",
+      "type": "pekg:ProductOrService",
+      "name": "One-time revenue",
+      "category": "Revenue Stream",
+      "description": "Includes services & other spot sales"
+    },
+    {
+      "id": "e_adidas_pg46",
+      "type": "pekg:Company",
+      "name": "Adidas"
+    },
+    {
+      "id": "e_stellantis_pg46",
+      "type": "pekg:Company",
+      "name": "Stellantis"
+    },
+    {
+      "id": "e_toyota_pg46",
+      "type": "pekg:Company",
+      "name": "Toyota"
+    },
+    {
+      "id": "e_lexcelera_pg46",
+      "type": "pekg:Company",
+      "name": "Lexcelera"
+    },
+    {
+      "id": "e_hcl_pg46",
+      "type": "pekg:Company",
+      "name": "HCL"
+    },
+    {
+      "id": "e_heidelberg_pg46",
+      "type": "pekg:Company",
+      "name": "Heidelberg"
+    },
+    {
+      "id": "e_tata_consultancy_services_pg46",
+      "type": "pekg:Company",
+      "name": "Tata Consultancy Services"
+    },
+    {
+      "id": "e_the_global_fund_pg46",
+      "type": "pekg:Company",
+      "name": "The Global Fund"
+    },
+    {
+      "id": "e_tenneco_pg46",
+      "type": "pekg:Company",
+      "name": "Tenneco"
+    },
+    {
+      "id": "e_admantx_pg46",
+      "type": "pekg:Company",
+      "name": "ADmantX"
+    },
+    {
+      "id": "e_airbus_pg46",
+      "type": "pekg:Company",
+      "name": "Airbus"
+    },
+    {
+      "id": "e_dy4_gate_pg46",
+      "type": "pekg:Company",
+      "name": "DY4 Gate"
+    },
+    {
+      "id": "e_ford_pg46",
+      "type": "pekg:Company",
+      "name": "Ford"
+    },
+    {
+      "id": "e_ikea_pg46",
+      "type": "pekg:Company",
+      "name": "IKEA"
+    },
+    {
+      "id": "e_alvarez_marsal_pg46",
+      "type": "pekg:Company",
+      "name": "Alvarez & Marsal"
+    },
+    {
+      "id": "e_ravenpack_pg46",
+      "type": "pekg:Company",
+      "name": "RavenPack"
+    },
+    {
+      "id": "e_rosetta_technology_pg46",
+      "type": "pekg:Company",
+      "name": "ROZETTA Technology"
+    },
+    {
+      "id": "e_french_ministry_of_defense_pg46",
+      "type": "Government",
+      "name": "French Ministry of Defense"
+    },
+    {
+      "id": "e_abu_dhabi_police_pg46",
+      "type": "Government",
+      "name": "Abu Dhabi Police"
+    },
+    {
+      "id": "e_fra_pg46",
+      "type": "Government Agency",
+      "name": "European Union Agency for Fundamental Rights",
+      "alias": [
+        "FRA"
+      ]
+    },
+    {
+      "id": "e_korean_intellectual_property_office_pg46",
+      "type": "Government Agency",
+      "name": "Korean Intellectual Property Office"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e6_pg3",
+      "target": "e_adj_sale_fy19a",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_adj_sale_fy20a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_adj_sale_fy21a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_adj_sale_fy22b_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_maint_perc_fy19a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_maint_perc_fy20a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_maint_perc_fy21a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_maint_perc_fy22b_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_annual_lic_perc_fy19a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_annual_lic_perc_fy20a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_annual_lic_perc_fy21a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_annual_lic_perc_fy22b_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_cloud_perc_fy19a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_cloud_perc_fy20a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_cloud_perc_fy21a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_cloud_perc_fy22b_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_perpetual_lic_perc_fy19a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_perpetual_lic_perc_fy20a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_perpetual_lic_perc_fy21a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_perpetual_lic_perc_fy22b_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_others_perc_fy19a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_others_perc_fy20a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_others_perc_fy21a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_others_perc_fy22b_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_recurring_rev_perc_fy19a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_recurring_rev_perc_fy20a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_recurring_rev_perc_fy21a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_recurring_rev_perc_fy22b_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_recurring_rev_text_perc_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_perpetual_lic_recurring_maint_perc_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_cagr_fy19a_22b_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_cloud_cagr_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_annual_license_cagr_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_maintenance_renewal_cagr_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_perpetual_cagr_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_other_cagr_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_adidas_pg46",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_stellantis_pg46",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_blizzard",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_toyota_pg46",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_lexcelera_pg46",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_hcl_pg46",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_heidelberg_pg46",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_tata_consultancy_services_pg46",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_the_global_fund_pg46",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_tenneco_pg46",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_astrazeneca",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_admantx_pg46",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_airbus_pg46",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_continental",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_dy4_gate_pg46",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_ford_pg46",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_ikea_pg46",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_alvarez_marsal_pg46",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_ravenpack_pg46",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rosetta_technology_pg46",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_abu_dhabi_police_pg46",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_french_ministry_of_defense_pg46",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_fra_pg46",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_us_def",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_korean_intellectual_property_office_pg46",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_adj_sale_fy19a",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_adj_sale_fy20a_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_adj_sale_fy21a_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_adj_sale_fy22b_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_rev_maint_perc_fy19a_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_rev_maint_perc_fy20a_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_rev_maint_perc_fy21a_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_rev_maint_perc_fy22b_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_rev_annual_lic_perc_fy19a_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_rev_annual_lic_perc_fy20a_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_rev_annual_lic_perc_fy21a_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_rev_annual_lic_perc_fy22b_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_rev_cloud_perc_fy19a_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_rev_cloud_perc_fy20a_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_rev_cloud_perc_fy21a_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_rev_cloud_perc_fy22b_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_rev_perpetual_lic_perc_fy19a_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_rev_perpetual_lic_perc_fy20a_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_rev_perpetual_lic_perc_fy21a_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_rev_perpetual_lic_perc_fy22b_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_rev_others_perc_fy19a_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_rev_others_perc_fy20a_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_rev_others_perc_fy21a_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_rev_others_perc_fy22b_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_recurring_rev_perc_fy19a_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_recurring_rev_perc_fy20a_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_recurring_rev_perc_fy21a_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_recurring_rev_perc_fy22b_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_recurring_rev_text_perc_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_perpetual_lic_recurring_maint_perc_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_rev_cagr_fy19a_22b_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_cloud_cagr_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_annual_license_cagr_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_maintenance_renewal_cagr_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_perpetual_cagr_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_eleven_vdd_report_source_pg13",
+      "target": "e_other_cagr_pg46",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_recurring_revenues_category_pg46",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_one_time_revenue_category_pg46",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e_recurring_revenues_category_pg46",
+      "target": "e_annual_licenses_rev_stream",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e_recurring_revenues_category_pg46",
+      "target": "e_maintenance_rev_stream",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e_one_time_revenue_category_pg46",
+      "target": "e_perpetual_licenses_rev_stream",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e_one_time_revenue_category_pg46",
+      "target": "e_others_rev_stream",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e_recurring_revenues_category_pg46",
+      "target": "e_perpetual_lic_recurring_maint_perc_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_maintenance_rev_stream",
+      "target": "e_rev_maint_perc_fy19a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_maintenance_rev_stream",
+      "target": "e_rev_maint_perc_fy20a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_maintenance_rev_stream",
+      "target": "e_rev_maint_perc_fy21a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_maintenance_rev_stream",
+      "target": "e_rev_maint_perc_fy22b_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_annual_licenses_rev_stream",
+      "target": "e_rev_annual_lic_perc_fy19a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_annual_licenses_rev_stream",
+      "target": "e_rev_annual_lic_perc_fy20a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_annual_licenses_rev_stream",
+      "target": "e_rev_annual_lic_perc_fy21a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_annual_licenses_rev_stream",
+      "target": "e_rev_annual_lic_perc_fy22b_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_cloud_rev_stream",
+      "target": "e_rev_cloud_perc_fy19a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_cloud_rev_stream",
+      "target": "e_rev_cloud_perc_fy20a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_cloud_rev_stream",
+      "target": "e_rev_cloud_perc_fy21a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_cloud_rev_stream",
+      "target": "e_rev_cloud_perc_fy22b_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_perpetual_licenses_rev_stream",
+      "target": "e_rev_perpetual_lic_perc_fy19a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_perpetual_licenses_rev_stream",
+      "target": "e_rev_perpetual_lic_perc_fy20a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_perpetual_licenses_rev_stream",
+      "target": "e_rev_perpetual_lic_perc_fy21a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_perpetual_licenses_rev_stream",
+      "target": "e_rev_perpetual_lic_perc_fy22b_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_others_rev_stream",
+      "target": "e_rev_others_perc_fy19a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_others_rev_stream",
+      "target": "e_rev_others_perc_fy20a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_others_rev_stream",
+      "target": "e_rev_others_perc_fy21a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_others_rev_stream",
+      "target": "e_rev_others_perc_fy22b_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_adj_sale_fy19a",
+      "target": "e_recurring_rev_perc_fy19a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_adj_sale_fy20a_pg46",
+      "target": "e_recurring_rev_perc_fy20a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_adj_sale_fy21a_pg46",
+      "target": "e_recurring_rev_perc_fy21a_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_adj_sale_fy22b_pg46",
+      "target": "e_recurring_rev_perc_fy22b_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_adj_sale_fy19a",
+      "target": "e_rev_cagr_fy19a_22b_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_adj_sale_fy20a_pg46",
+      "target": "e_rev_cagr_fy19a_22b_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_adj_sale_fy21a_pg46",
+      "target": "e_rev_cagr_fy19a_22b_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_adj_sale_fy22b_pg46",
+      "target": "e_rev_cagr_fy19a_22b_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_cloud_rev_stream",
+      "target": "e_cloud_cagr_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_annual_licenses_rev_stream",
+      "target": "e_annual_license_cagr_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_maintenance_rev_stream",
+      "target": "e_maintenance_renewal_cagr_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_perpetual_licenses_rev_stream",
+      "target": "e_perpetual_cagr_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_others_rev_stream",
+      "target": "e_other_cagr_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_recurring_revenues_category_pg46",
+      "target": "e_recurring_rev_text_perc_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_recurring_revenues_category_pg46",
+      "target": "e_perpetual_lic_recurring_maint_perc_pg46",
+      "type": "pekg:reportsFinancialMetric"
+    }
+  ],
+  "page_number": 19
+}

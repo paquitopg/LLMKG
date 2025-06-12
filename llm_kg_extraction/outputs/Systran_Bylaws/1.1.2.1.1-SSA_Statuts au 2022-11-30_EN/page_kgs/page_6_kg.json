@@ -1,0 +1,275 @@
+{
+  "entities": [
+    {
+      "id": "e66",
+      "type": "pekg:Person",
+      "fullName": "contributor in kind"
+    },
+    {
+      "id": "e67",
+      "type": "pekg:Person",
+      "fullName": "beneficiary of a special benefit"
+    },
+    {
+      "id": "e68",
+      "type": "pekg:Company",
+      "name": "corporate entity",
+      "description": "An entity appointed as President"
+    },
+    {
+      "id": "e69",
+      "type": "pekg:Person",
+      "fullName": "natural person",
+      "biographySummary": "Permanent representative appointed by a corporate entity President"
+    },
+    {
+      "id": "e70",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Compensation",
+      "scope": "individual"
+    },
+    {
+      "id": "e71",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Company's Purpose",
+      "description": "The defined scope of the company's operations"
+    },
+    {
+      "id": "e72",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "General Meetings",
+      "eventType": "Corporate Meeting"
+    },
+    {
+      "id": "e73",
+      "type": "pekg:ProductOrService",
+      "name": "Annual Report",
+      "category": "Legal Document"
+    },
+    {
+      "id": "e74",
+      "type": "pekg:Company",
+      "name": "Third Parties",
+      "description": "External entities the company deals with"
+    },
+    {
+      "id": "e75",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Remuneration",
+      "scope": "individual"
+    },
+    {
+      "id": "e76",
+      "type": "pekg:Person",
+      "fullName": "Collaborators",
+      "biographySummary": "Individuals to whom the President may grant delegations of powers"
+    },
+    {
+      "id": "e77",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Profits",
+      "scope": "company"
+    },
+    {
+      "id": "e78",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Assets",
+      "scope": "company"
+    },
+    {
+      "id": "e79",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Liquidation Dividends",
+      "scope": "company"
+    },
+    {
+      "id": "e80",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Taxes",
+      "scope": "company"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e39",
+      "target": "e77",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e39",
+      "target": "e78",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e39",
+      "target": "e79",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e39",
+      "target": "e2",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e80",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e39",
+      "target": "e34",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e39",
+      "target": "e42",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e42",
+      "target": "e2",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e20",
+      "target": "e39",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e20",
+      "target": "e42",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e20",
+      "target": "e66",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e20",
+      "target": "e67",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e20",
+      "target": "e40",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e32",
+      "target": "e40",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e66",
+      "target": "e42",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e67",
+      "target": "e42",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e40",
+      "target": "e42",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e20",
+      "target": "e41",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e5",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e16",
+      "target": "e5",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e68",
+      "target": "e5",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e68",
+      "target": "e69",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e16",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e5",
+      "target": "e70",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e5",
+      "target": "e71",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e5",
+      "target": "e16",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e5",
+      "target": "e72",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e5",
+      "target": "e73",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e73",
+      "target": "e20",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e5",
+      "target": "e74",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e1",
+      "target": "e74",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e16",
+      "target": "e75",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e75",
+      "target": "e5",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e5",
+      "target": "e76",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e5",
+      "target": "e74",
+      "type": "pekg:hasClientCompany"
+    }
+  ],
+  "page_number": 6
+}

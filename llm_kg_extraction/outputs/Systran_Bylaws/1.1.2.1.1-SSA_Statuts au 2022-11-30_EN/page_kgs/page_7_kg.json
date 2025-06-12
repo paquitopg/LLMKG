@@ -1,0 +1,333 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN SAS"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Bylaws updated",
+      "eventType": "Legal Document Update",
+      "dateOrYear": "30 November 2022"
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Position",
+      "titleName": "Board of Directors"
+    },
+    {
+      "id": "e20",
+      "type": "Group",
+      "name": "Shareholders"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Position",
+      "titleName": "President"
+    },
+    {
+      "id": "e68",
+      "type": "pekg:Company",
+      "name": "corporate entity"
+    },
+    {
+      "id": "e69",
+      "type": "pekg:Person",
+      "fullName": "natural person"
+    },
+    {
+      "id": "e70",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Compensation",
+      "scope": "individual"
+    },
+    {
+      "id": "e73",
+      "type": "pekg:ProductOrService",
+      "name": "Annual Report",
+      "category": "Legal Document"
+    },
+    {
+      "id": "e75",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Remuneration",
+      "scope": "individual"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Location",
+      "locationName": "company's head office",
+      "locationType": "Office",
+      "officeSpecificInfo": "at the company's head office or at any other place specified in the convening notice, in France or abroad"
+    },
+    {
+      "id": "e81",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "ordinary collective decision of the shareholders",
+      "eventType": "Corporate Meeting"
+    },
+    {
+      "id": "e82",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "co-optation",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e83",
+      "type": "pekg:Position",
+      "titleName": "permanent representative"
+    },
+    {
+      "id": "e84",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "removal of Board members",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e85",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "resignation of Board members",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e86",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "vacancy of Board members",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e87",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "appointments to Board",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e88",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Board Meetings",
+      "eventType": "Corporate Meeting"
+    },
+    {
+      "id": "e89",
+      "type": "pekg:ProductOrService",
+      "name": "convening notice",
+      "category": "Legal Document"
+    },
+    {
+      "id": "e90",
+      "type": "pekg:ProductOrService",
+      "name": "agenda",
+      "category": "Legal Document"
+    },
+    {
+      "id": "e91",
+      "type": "pekg:Technology",
+      "name": "videoconferencing"
+    },
+    {
+      "id": "e92",
+      "type": "pekg:Technology",
+      "name": "telecommunication"
+    },
+    {
+      "id": "e93",
+      "type": "pekg:Position",
+      "titleName": "Chairperson"
+    },
+    {
+      "id": "e94",
+      "type": "pekg:ProductOrService",
+      "name": "Board decisions",
+      "category": "Legal Document"
+    },
+    {
+      "id": "e95",
+      "type": "pekg:ProductOrService",
+      "name": "minutes of Board meetings",
+      "category": "Legal Document"
+    },
+    {
+      "id": "e96",
+      "type": "pekg:FinancialMetric",
+      "metricName": "reimbursable costs",
+      "scope": "individual"
+    },
+    {
+      "id": "e97",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Board of Directors Composition",
+      "kpiValueString": "three (3) or more members",
+      "description": "minimum number of members for the Board of Directors"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e16",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e16",
+      "target": "e81",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e20",
+      "target": "e81",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e16",
+      "target": "e82",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e5",
+      "target": "e16",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e68",
+      "target": "e69",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e69",
+      "target": "e83",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e83",
+      "target": "e16",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e16",
+      "target": "e84",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e20",
+      "target": "e84",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e84",
+      "target": "e70",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e16",
+      "target": "e85",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e16",
+      "target": "e86",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e16",
+      "target": "e87",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e87",
+      "target": "e73",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e5",
+      "target": "e87",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e20",
+      "target": "e87",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e16",
+      "target": "e88",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e5",
+      "target": "e88",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e88",
+      "target": "e89",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e89",
+      "target": "e90",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e88",
+      "target": "e3",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e88",
+      "target": "e91",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e88",
+      "target": "e92",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e93",
+      "target": "e16",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e5",
+      "target": "e93",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e16",
+      "target": "e94",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e16",
+      "target": "e95",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e5",
+      "target": "e95",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e93",
+      "target": "e95",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e16",
+      "target": "e75",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e16",
+      "target": "e96",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e16",
+      "target": "e97",
+      "type": "pekg:reportsOperationalKPI"
+    }
+  ],
+  "page_number": 7
+}

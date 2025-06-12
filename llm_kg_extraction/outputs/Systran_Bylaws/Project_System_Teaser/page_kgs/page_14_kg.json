@@ -1,0 +1,524 @@
+{
+  "entities": [
+    {
+      "id": "e_mt_market",
+      "type": "pekg:MarketContext",
+      "segmentName": "Machine Translation market",
+      "growthInfo": "+16-20% market growth anticipated",
+      "keyDrivers": [
+        "Advancement of MT models",
+        "Increased sale of MT solutions by LSP and large tech companies"
+      ]
+    },
+    {
+      "id": "e_worldwide_lang_market_pg13",
+      "type": "pekg:MarketContext",
+      "segmentName": "Global Language service and technologies market",
+      "growthInfo": "forecast (2018-2024F)",
+      "keyDrivers": [
+        "expansion of global trade",
+        "increasing international content demand",
+        "internationalization of supply chains",
+        "recovery from the pandemic",
+        "accelerated market penetration in Asia",
+        "diversity of sectors served",
+        "structural shift to remote workplace"
+      ]
+    },
+    {
+      "id": "e_lang_services_tech_excl_mt",
+      "type": "pekg:MarketContext",
+      "segmentName": "Language services & technologies, exc. MT",
+      "growthInfo": "+5% CAGR '18-'21, +6% CAGR '21-'24F",
+      "characteristics": "Historically market growth was mainly driven by expansion of global trade, increasing international content demand and internationalization of supply chains. The pandemic market experienced a 2% contraction in 2020 due to sectors heavily afflicted by the pandemic but was offset by diversity of sectors served & structural shift to remote workplace. Future market growth driven by recovery from the pandemic, and accelerated market penetration in Asia."
+    },
+    {
+      "id": "e_mt_market_growth_anticipated_pg14",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Market Growth Anticipated",
+      "valueString": "+16-20%",
+      "DateOrPeriod": "Future",
+      "scope": "MT market",
+      "sourceNote": "Figures were originally in USD; the 06.04.2021 USD EUR exchange rate has been used, at 1 USD = 0.9176 EUR"
+    },
+    {
+      "id": "e_lang_services_tech_excl_mt_cagr_18_21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CAGR",
+      "valueString": "+5%",
+      "DateOrPeriod": "2018-2021",
+      "scope": "Language services & technologies, exc. MT",
+      "sourceNote": "Figures were originally in USD; the 06.04.2021 USD EUR exchange rate has been used, at 1 USD = 0.9176 EUR"
+    },
+    {
+      "id": "e_lang_services_tech_excl_mt_cagr_21_24f",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CAGR",
+      "valueString": "+6%",
+      "DateOrPeriod": "2021-2024F",
+      "scope": "Language services & technologies, exc. MT",
+      "sourceNote": "Figures were originally in USD; the 06.04.2021 USD EUR exchange rate has been used, at 1 USD = 0.9176 EUR"
+    },
+    {
+      "id": "e_mt_cagr_18_21",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CAGR",
+      "valueString": "+26%",
+      "DateOrPeriod": "2018-2021",
+      "scope": "Machine Translation",
+      "sourceNote": "Figures were originally in USD; the 06.04.2021 USD EUR exchange rate has been used, at 1 USD = 0.9176 EUR"
+    },
+    {
+      "id": "e_mt_cagr_21_24f",
+      "type": "pekg:FinancialMetric",
+      "metricName": "CAGR",
+      "valueString": "+16-20%",
+      "DateOrPeriod": "2021-2024F",
+      "scope": "Machine Translation",
+      "sourceNote": "Figures were originally in USD; the 06.04.2021 USD EUR exchange rate has been used, at 1 USD = 0.9176 EUR"
+    },
+    {
+      "id": "e_mt_market_value_2018a",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Machine Translation Market Value",
+      "valueString": "\u20ac0.4bn",
+      "DateOrPeriod": "2018A",
+      "sourceNote": "Figures were originally in USD; the 06.04.2021 USD EUR exchange rate has been used, at 1 USD = 0.9176 EUR"
+    },
+    {
+      "id": "e_mt_market_value_2019a",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Machine Translation Market Value",
+      "valueString": "\u20ac0.4bn",
+      "DateOrPeriod": "2019A",
+      "sourceNote": "Figures were originally in USD; the 06.04.2021 USD EUR exchange rate has been used, at 1 USD = 0.9176 EUR"
+    },
+    {
+      "id": "e_mt_market_value_2020a",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Machine Translation Market Value",
+      "valueString": "\u20ac0.6bn",
+      "DateOrPeriod": "2020A",
+      "sourceNote": "Figures were originally in USD; the 06.04.2021 USD EUR exchange rate has been used, at 1 USD = 0.9176 EUR"
+    },
+    {
+      "id": "e_mt_market_value_2021a",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Machine Translation Market Value",
+      "valueString": "\u20ac0.8bn",
+      "DateOrPeriod": "2021A",
+      "sourceNote": "Figures were originally in USD; the 06.04.2021 USD EUR exchange rate has been used, at 1 USD = 0.9176 EUR"
+    },
+    {
+      "id": "e_lst_excl_mt_market_value_2018a",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Language Services & Technologies (Excl. MT) Market Value",
+      "valueString": "\u20ac20.9bn",
+      "DateOrPeriod": "2018A",
+      "sourceNote": "Figures were originally in USD; the 06.04.2021 USD EUR exchange rate has been used, at 1 USD = 0.9176 EUR"
+    },
+    {
+      "id": "e_lst_excl_mt_market_value_2019a",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Language Services & Technologies (Excl. MT) Market Value",
+      "valueString": "\u20ac21.8bn",
+      "DateOrPeriod": "2019A",
+      "sourceNote": "Figures were originally in USD; the 06.04.2021 USD EUR exchange rate has been used, at 1 USD = 0.9176 EUR"
+    },
+    {
+      "id": "e_lst_excl_mt_market_value_2020a",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Language Services & Technologies (Excl. MT) Market Value",
+      "valueString": "\u20ac21.3bn",
+      "DateOrPeriod": "2020A",
+      "sourceNote": "Figures were originally in USD; the 06.04.2021 USD EUR exchange rate has been used, at 1 USD = 0.9176 EUR"
+    },
+    {
+      "id": "e_lst_excl_mt_market_value_2021a",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Language Services & Technologies (Excl. MT) Market Value",
+      "valueString": "\u20ac23.7bn",
+      "DateOrPeriod": "2021A",
+      "sourceNote": "Figures were originally in USD; the 06.04.2021 USD EUR exchange rate has been used, at 1 USD = 0.9176 EUR"
+    },
+    {
+      "id": "e_total_market_value_2018a",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Language Services & Technologies Market Value",
+      "valueString": "\u20ac21.3bn",
+      "DateOrPeriod": "2018A",
+      "sourceNote": "Figures were originally in USD; the 06.04.2021 USD EUR exchange rate has been used, at 1 USD = 0.9176 EUR"
+    },
+    {
+      "id": "e_total_market_value_2019a",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Language Services & Technologies Market Value",
+      "valueString": "\u20ac22.2bn",
+      "DateOrPeriod": "2019A",
+      "sourceNote": "Figures were originally in USD; the 06.04.2021 USD EUR exchange rate has been used, at 1 USD = 0.9176 EUR"
+    },
+    {
+      "id": "e_total_market_value_2020a",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Language Services & Technologies Market Value",
+      "valueString": "\u20ac21.8bn",
+      "DateOrPeriod": "2020A",
+      "sourceNote": "Figures were originally in USD; the 06.04.2021 USD EUR exchange rate has been used, at 1 USD = 0.9176 EUR"
+    },
+    {
+      "id": "e_total_market_value_2021a",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Language Services & Technologies Market Value",
+      "valueString": "\u20ac24.4bn",
+      "DateOrPeriod": "2021A",
+      "sourceNote": "Figures were originally in USD; the 06.04.2021 USD EUR exchange rate has been used, at 1 USD = 0.9176 EUR"
+    },
+    {
+      "id": "e_total_market_value_2022f",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Language Services & Technologies Market Value",
+      "valueString": "\u20ac25.9bn",
+      "DateOrPeriod": "2022F",
+      "sourceNote": "Figures were originally in USD; the 06.04.2021 USD EUR exchange rate has been used, at 1 USD = 0.9176 EUR"
+    },
+    {
+      "id": "e_total_market_value_2023f",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Language Services & Technologies Market Value",
+      "valueString": "\u20ac27.4bn",
+      "DateOrPeriod": "2023F",
+      "sourceNote": "Figures were originally in USD; the 06.04.2021 USD EUR exchange rate has been used, at 1 USD = 0.9176 EUR"
+    },
+    {
+      "id": "e_total_market_value_2024f",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Total Language Services & Technologies Market Value",
+      "valueString": "\u20ac29.1bn",
+      "DateOrPeriod": "2024F",
+      "sourceNote": "Figures were originally in USD; the 06.04.2021 USD EUR exchange rate has been used, at 1 USD = 0.9176 EUR"
+    },
+    {
+      "id": "e_mt_models",
+      "type": "pekg:Technology",
+      "name": "MT models",
+      "description": "Machine Translation models"
+    },
+    {
+      "id": "e_lsp",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "LSP",
+      "description": "Language Service Providers"
+    },
+    {
+      "id": "e_large_tech_companies",
+      "type": "pekg:Company",
+      "name": "large tech companies"
+    },
+    {
+      "id": "e_slator_source",
+      "type": "pekg:Company",
+      "name": "Slator"
+    },
+    {
+      "id": "e_csa_source",
+      "type": "pekg:Company",
+      "name": "CSA"
+    },
+    {
+      "id": "e_eleven_vdd_report_source_pg13",
+      "type": "pekg:Company",
+      "name": "Eleven VDD report"
+    },
+    {
+      "id": "e_event_pandemic_contraction_2020",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Pandemic Market Contraction",
+      "eventType": "Market Event",
+      "dateOrYear": "2020",
+      "description": "market experienced a 2% contraction in 2020 due to sectors heavily afflicted by the pandemic but was offset by diversity of sectors served & structural shift to remote workplace."
+    },
+    {
+      "id": "e_global_trade_expansion",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "expansion of global trade"
+    },
+    {
+      "id": "e_international_content_demand",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "increasing international content demand"
+    },
+    {
+      "id": "e_internationalization_supply_chains",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "internationalization of supply chains"
+    },
+    {
+      "id": "e_recovery_from_pandemic",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "recovery from the pandemic"
+    },
+    {
+      "id": "e_accelerated_market_penetration_asia",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "accelerated market penetration in Asia"
+    },
+    {
+      "id": "e_asia_pg6",
+      "type": "pekg:Location",
+      "locationName": "Asia"
+    },
+    {
+      "id": "e_remote_workplace_shift",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "structural shift to remote workplace"
+    },
+    {
+      "id": "e_diversity_of_sectors_served",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "diversity of sectors served"
+    },
+    {
+      "id": "e_samsung_financial_networks",
+      "type": "pekg:Company",
+      "name": "Samsung Financial Networks"
+    },
+    {
+      "id": "e3_pg1",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e2_pg1",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co"
+    },
+    {
+      "id": "e5_pg3",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e_mt_market",
+      "target": "e_mt_market_growth_anticipated_pg14",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_mt_market",
+      "target": "e_mt_cagr_18_21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_mt_market",
+      "target": "e_mt_cagr_21_24f",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_mt_market",
+      "target": "e_mt_market_value_2018a",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_mt_market",
+      "target": "e_mt_market_value_2019a",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_mt_market",
+      "target": "e_mt_market_value_2020a",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_mt_market",
+      "target": "e_mt_market_value_2021a",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_worldwide_lang_market_pg13",
+      "target": "e_total_market_value_2018a",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_worldwide_lang_market_pg13",
+      "target": "e_total_market_value_2019a",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_worldwide_lang_market_pg13",
+      "target": "e_total_market_value_2020a",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_worldwide_lang_market_pg13",
+      "target": "e_total_market_value_2021a",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_worldwide_lang_market_pg13",
+      "target": "e_total_market_value_2022f",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_worldwide_lang_market_pg13",
+      "target": "e_total_market_value_2023f",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_worldwide_lang_market_pg13",
+      "target": "e_total_market_value_2024f",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_lang_services_tech_excl_mt",
+      "target": "e_lang_services_tech_excl_mt_cagr_18_21",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_lang_services_tech_excl_mt",
+      "target": "e_lang_services_tech_excl_mt_cagr_21_24f",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_lang_services_tech_excl_mt",
+      "target": "e_lst_excl_mt_market_value_2018a",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_lang_services_tech_excl_mt",
+      "target": "e_lst_excl_mt_market_value_2019a",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_lang_services_tech_excl_mt",
+      "target": "e_lst_excl_mt_market_value_2020a",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_lang_services_tech_excl_mt",
+      "target": "e_lst_excl_mt_market_value_2021a",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_mt_market",
+      "target": "e_mt_models",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e_mt_market",
+      "target": "e_lsp",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e_mt_market",
+      "target": "e_large_tech_companies",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e_mt_market",
+      "target": "e_slator_source",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_mt_market",
+      "target": "e_csa_source",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_mt_market",
+      "target": "e_eleven_vdd_report_source_pg13",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_worldwide_lang_market_pg13",
+      "target": "e_slator_source",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_worldwide_lang_market_pg13",
+      "target": "e_csa_source",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_worldwide_lang_market_pg13",
+      "target": "e_eleven_vdd_report_source_pg13",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_lang_services_tech_excl_mt",
+      "target": "e_slator_source",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_lang_services_tech_excl_mt",
+      "target": "e_csa_source",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_lang_services_tech_excl_mt",
+      "target": "e_eleven_vdd_report_source_pg13",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_worldwide_lang_market_pg13",
+      "target": "e_event_pandemic_contraction_2020",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_pandemic_contraction_2020",
+      "target": "e_worldwide_lang_market_pg13",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_worldwide_lang_market_pg13",
+      "target": "e_global_trade_expansion",
+      "type": "pekg:keyDrivers"
+    },
+    {
+      "source": "e_worldwide_lang_market_pg13",
+      "target": "e_international_content_demand",
+      "type": "pekg:keyDrivers"
+    },
+    {
+      "source": "e_worldwide_lang_market_pg13",
+      "target": "e_internationalization_supply_chains",
+      "type": "pekg:keyDrivers"
+    },
+    {
+      "source": "e_worldwide_lang_market_pg13",
+      "target": "e_recovery_from_pandemic",
+      "type": "pekg:keyDrivers"
+    },
+    {
+      "source": "e_worldwide_lang_market_pg13",
+      "target": "e_accelerated_market_penetration_asia",
+      "type": "pekg:keyDrivers"
+    },
+    {
+      "source": "e_accelerated_market_penetration_asia",
+      "target": "e_asia_pg6",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e_worldwide_lang_market_pg13",
+      "target": "e_diversity_of_sectors_served",
+      "type": "pekg:keyDrivers"
+    },
+    {
+      "source": "e_worldwide_lang_market_pg13",
+      "target": "e_remote_workplace_shift",
+      "type": "pekg:keyDrivers"
+    },
+    {
+      "source": "e3_pg1",
+      "target": "e2_pg1",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e3_pg1",
+      "target": "e5_pg3",
+      "type": "pekg:advisedBy"
+    }
+  ],
+  "page_number": 14
+}

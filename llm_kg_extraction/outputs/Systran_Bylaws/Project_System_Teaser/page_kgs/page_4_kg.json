@@ -1,0 +1,463 @@
+{
+  "entities": [
+    {
+      "id": "e6_pg3",
+      "type": "pekg:Company",
+      "name": "The Group",
+      "description": "A pioneer and global leader in on-premise and cloud-based translation software, continuously evolving with breakthrough innovations and secured solutions, recently introducing Neural Machine Translation to corporate users via 3 offers. Has successfully built a wide, diversified, loyal and growing customer base across highly sensitive sectors. Evolved from a specialty translation provider to a pioneering digital translation player, and now a leading Neural Machine translation player.",
+      "alias": [
+        "The Group"
+      ],
+      "foundedYear": 1968,
+      "keyStrengths": [
+        "Acclaimed tech stack",
+        "Unique portfolio of sensitive clients",
+        "Pioneer and global leader in on-premise and cloud-based translation software",
+        "Breakthrough innovations and secured solutions",
+        "Secured solutions",
+        "Wide, diversified, loyal and growing customer base",
+        "Solid track record of sustainable growth",
+        "Longstanding track record of innovation",
+        "A long history as translation forerunner to support demanding customers in a quickly mutating translation environment"
+      ],
+      "growthStrategySummary": "Ambitious growth strategy with projected +29% Revenue CAGR over FY22BP-FY26BP period."
+    },
+    {
+      "id": "e_san_diego",
+      "type": "pekg:Location",
+      "locationName": "San Diego",
+      "locationType": "City"
+    },
+    {
+      "id": "e_spns",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Pure Neural\u00ae Server",
+      "alias": [
+        "SPNS"
+      ],
+      "category": "Software",
+      "description": "Neural Machine Translation software offer for corporate users. New generation with a new user interface and an optimized architecture to enhance neural translations\u2019 performance."
+    },
+    {
+      "id": "e_nmt",
+      "type": "pekg:Technology",
+      "name": "Neural Machine Translation",
+      "description": "Breakthrough innovation introduced by Systran to corporate users."
+    },
+    {
+      "id": "e_peter_toma",
+      "type": "pekg:Person",
+      "fullName": "Peter Toma"
+    },
+    {
+      "id": "e_french_gatcho_group",
+      "type": "pekg:Company",
+      "name": "French Gatcho Group"
+    },
+    {
+      "id": "e_euronext",
+      "type": "pekg:Company",
+      "name": "Euronext"
+    },
+    {
+      "id": "e_csli",
+      "type": "pekg:Company",
+      "name": "CSLi"
+    },
+    {
+      "id": "e_world_comp_ling_assoc",
+      "type": "pekg:Company",
+      "name": "World Computational Linguistics Association"
+    },
+    {
+      "id": "e_stic",
+      "type": "Corporate",
+      "name": "STIC"
+    },
+    {
+      "id": "e_softbank_ventures_asia",
+      "type": "Corporate",
+      "name": "Softbank Ventures Asia"
+    },
+    {
+      "id": "e_kip",
+      "type": "Corporate",
+      "name": "KIP"
+    },
+    {
+      "id": "e_v_godard",
+      "type": "pekg:Person",
+      "fullName": "V. Godard"
+    },
+    {
+      "id": "e_ceo_vg",
+      "type": "pekg:Position",
+      "titleName": "CEO"
+    },
+    {
+      "id": "e_machine_translation",
+      "type": "pekg:Technology",
+      "name": "Machine Translation"
+    },
+    {
+      "id": "e_us_intelligence_community",
+      "type": "Government",
+      "name": "US Intelligence Community"
+    },
+    {
+      "id": "e_babelfish",
+      "type": "pekg:ProductOrService",
+      "name": "Babelfish",
+      "category": "Online Translation Tool",
+      "description": "1st online translation tool"
+    },
+    {
+      "id": "e_hybrid_translation_engine",
+      "type": "pekg:Technology",
+      "name": "hybrid translation engine",
+      "description": "Combines linguistic rules with statistical processing"
+    },
+    {
+      "id": "e_s_translator",
+      "type": "pekg:ProductOrService",
+      "name": "S-Translator application",
+      "category": "Translation Solution"
+    },
+    {
+      "id": "e_samsung_electronics",
+      "type": "pekg:Company",
+      "name": "Samsung",
+      "description": "Provider of Galaxy S series and Note smartphones"
+    },
+    {
+      "id": "e_samsung_galaxy_s_series",
+      "type": "pekg:ProductOrService",
+      "name": "Samsung Galaxy S series",
+      "category": "Smartphone"
+    },
+    {
+      "id": "e_note_smartphones",
+      "type": "pekg:ProductOrService",
+      "name": "Note smartphones",
+      "category": "Smartphone"
+    },
+    {
+      "id": "e_pnmt",
+      "type": "pekg:Technology",
+      "name": "PNMT\u00ae",
+      "description": "1st Neural translation engine"
+    },
+    {
+      "id": "e_event_founding_1968",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Creation of the Group",
+      "eventType": "Founding",
+      "dateOrYear": "1968",
+      "description": "The Group was created in San Diego by Peter Toma."
+    },
+    {
+      "id": "e_event_acquisition_gatcho_1975",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Acquisition by French Gatcho Group",
+      "eventType": "Acquisition",
+      "dateOrYear": "1975"
+    },
+    {
+      "id": "e_event_first_mt_1975",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "World\u2019s First Machine Translation for the US Intelligence Community",
+      "eventType": "Product Launch",
+      "dateOrYear": "1975"
+    },
+    {
+      "id": "e_event_babelfish_1997",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Contribution to the creation of the legendary Babelfish",
+      "eventType": "Product Development",
+      "dateOrYear": "1997"
+    },
+    {
+      "id": "e_event_euronext_listing_1997",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Listed on Euronext",
+      "eventType": "Stock Listing",
+      "dateOrYear": "1997"
+    },
+    {
+      "id": "e_event_csli_acquisition_2008",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Acquisition by CSLi",
+      "eventType": "Acquisition",
+      "dateOrYear": "2008"
+    },
+    {
+      "id": "e_event_euronext_delisting_2009",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Euronext delisting",
+      "eventType": "Stock Delisting",
+      "dateOrYear": "2009"
+    },
+    {
+      "id": "e_event_hybrid_engine_2009",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Creation of the 1st hybrid translation engine",
+      "eventType": "Product Development",
+      "dateOrYear": "2009"
+    },
+    {
+      "id": "e_event_s_translator_2013",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Appointment as official provider of translation solutions for S-Translator application",
+      "eventType": "Partnership/Appointment",
+      "dateOrYear": "2013"
+    },
+    {
+      "id": "e_event_award_2014",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Award from World Computational Linguistics Association",
+      "eventType": "Award",
+      "dateOrYear": "2014"
+    },
+    {
+      "id": "e_event_pnmt_launch_2016",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Launch of the 1st Neural translation engine named PNMT\u00ae",
+      "eventType": "Product Launch",
+      "dateOrYear": "2016"
+    },
+    {
+      "id": "e_event_spns_new_gen_2017",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "New generation of the server solution: Systran Pure Neural\u00ae Server",
+      "eventType": "Product Update",
+      "dateOrYear": "2017"
+    },
+    {
+      "id": "e_event_funds_acquisition_2018",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Acquisition by Funds",
+      "eventType": "Acquisition",
+      "dateOrYear": "2018"
+    },
+    {
+      "id": "e_event_ceo_appointment_2022",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "V. Godard becomes CEO",
+      "eventType": "Leadership Change",
+      "dateOrYear": "2022"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e6_pg3",
+      "target": "e_event_founding_1968",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_founding_1968",
+      "target": "e_peter_toma",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_event_founding_1968",
+      "target": "e_san_diego",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_event_acquisition_gatcho_1975",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_acquisition_gatcho_1975",
+      "target": "e_french_gatcho_group",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_event_first_mt_1975",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_first_mt_1975",
+      "target": "e_us_intelligence_community",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_event_first_mt_1975",
+      "target": "e_machine_translation",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_event_babelfish_1997",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_babelfish_1997",
+      "target": "e_babelfish",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_event_euronext_listing_1997",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_euronext_listing_1997",
+      "target": "e_euronext",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_event_csli_acquisition_2008",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_csli_acquisition_2008",
+      "target": "e_csli",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_event_euronext_delisting_2009",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_euronext_delisting_2009",
+      "target": "e_euronext",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_event_hybrid_engine_2009",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_hybrid_engine_2009",
+      "target": "e_hybrid_translation_engine",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_event_s_translator_2013",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_s_translator_2013",
+      "target": "e_s_translator",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_event_s_translator_2013",
+      "target": "e_samsung_electronics",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_samsung_electronics",
+      "target": "e_s_translator",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e_s_translator",
+      "target": "e_samsung_galaxy_s_series",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e_s_translator",
+      "target": "e_note_smartphones",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_event_award_2014",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_award_2014",
+      "target": "e_world_comp_ling_assoc",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_event_pnmt_launch_2016",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_pnmt_launch_2016",
+      "target": "e_pnmt",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_event_spns_new_gen_2017",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_spns_new_gen_2017",
+      "target": "e_spns",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_spns",
+      "target": "e_nmt",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_event_funds_acquisition_2018",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_funds_acquisition_2018",
+      "target": "e_stic",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_event_funds_acquisition_2018",
+      "target": "e_softbank_ventures_asia",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_event_funds_acquisition_2018",
+      "target": "e_kip",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_stic",
+      "target": "e6_pg3",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e_softbank_ventures_asia",
+      "target": "e6_pg3",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e_kip",
+      "target": "e6_pg3",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_event_ceo_appointment_2022",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_ceo_appointment_2022",
+      "target": "e_v_godard",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_v_godard",
+      "target": "e_ceo_vg",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e_ceo_vg",
+      "target": "e6_pg3",
+      "type": "pekg:positionAt"
+    }
+  ],
+  "page_number": 4
+}

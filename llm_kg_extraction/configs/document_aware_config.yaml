@@ -1,0 +1,22 @@
+document_processing:
+  mode: "document_aware"
+  # mode : "page_based"
+  
+semantic_chunking:
+  max_chunk_size: 4000
+  overlap_size: 200
+  respect_section_boundaries: true
+  detect_topic_shifts: true
+  
+context_management:
+  memory_size: 5
+  entity_salience_threshold: 0.7
+  
+hierarchical_processing:
+  enable_sentence_level: true
+  enable_paragraph_level: true
+  enable_section_level: true
+  
+two_pass_processing:
+  enable_first_pass_understanding: true
+  structure_analysis_depth: 3

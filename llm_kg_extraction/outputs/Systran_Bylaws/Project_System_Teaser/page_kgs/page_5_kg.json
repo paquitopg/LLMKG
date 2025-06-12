@@ -1,0 +1,562 @@
+{
+  "entities": [
+    {
+      "id": "e6_pg3",
+      "type": "pekg:Company",
+      "name": "Systran",
+      "alias": [
+        "The Group"
+      ],
+      "growthStrategySummary": "Ambitious growth strategy including accelerating cloud offering, increasing sales efforts to foster penetration of the B2C / SME segment, fostering R&D of transcript and context awareness translation, and entering the voice-translation market."
+    },
+    {
+      "id": "e3_pg1",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e2_pg1",
+      "type": "pekg:Advisor",
+      "name": "Rothschild & Co"
+    },
+    {
+      "id": "e5_pg3",
+      "type": "pekg:Advisor",
+      "name": "Samsung Securities"
+    },
+    {
+      "id": "e_mt_market",
+      "type": "pekg:MarketContext",
+      "segmentName": "machine translation market",
+      "sizeInfo": "\u20ac760m",
+      "growthInfo": "+26% p.a."
+    },
+    {
+      "id": "e_electronics",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "electronics"
+    },
+    {
+      "id": "e_defense_security",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "defense & security"
+    },
+    {
+      "id": "e_tech_software",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "IT"
+    },
+    {
+      "id": "e_financial_inst",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "financial services"
+    },
+    {
+      "id": "e_gaming",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "gaming"
+    },
+    {
+      "id": "e_elearning",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "e-learning"
+    },
+    {
+      "id": "e_content",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "content"
+    },
+    {
+      "id": "e_media",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "media"
+    },
+    {
+      "id": "e_big_data",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "big data"
+    },
+    {
+      "id": "e_public_sector",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "public sector"
+    },
+    {
+      "id": "e_special_engines",
+      "type": "pekg:ProductOrService",
+      "name": "special engines",
+      "description": "Special engines using customer data"
+    },
+    {
+      "id": "e_apis",
+      "type": "pekg:ProductOrService",
+      "name": "APIs"
+    },
+    {
+      "id": "e_plugins",
+      "type": "pekg:ProductOrService",
+      "name": "plugins"
+    },
+    {
+      "id": "e_connectors",
+      "type": "pekg:ProductOrService",
+      "name": "connectors"
+    },
+    {
+      "id": "e_data_security",
+      "type": "pekg:Technology",
+      "name": "data security",
+      "description": "Verified data security"
+    },
+    {
+      "id": "e_open_source_local_solution",
+      "type": "pekg:ProductOrService",
+      "name": "open-source local solution",
+      "description": "Sole open-source local solution provider to offer comprehensive translation capabilities"
+    },
+    {
+      "id": "e_onpremise_sw",
+      "type": "pekg:ProductOrService",
+      "name": "on-premise translation software",
+      "category": "Software"
+    },
+    {
+      "id": "e_cloud_sw",
+      "type": "pekg:ProductOrService",
+      "name": "cloud-based translation software",
+      "category": "Software"
+    },
+    {
+      "id": "e_context_awareness",
+      "type": "pekg:Technology",
+      "name": "context awareness"
+    },
+    {
+      "id": "e_transcript_technology",
+      "type": "pekg:Technology",
+      "name": "transcript technology"
+    },
+    {
+      "id": "e_advanced_mt_tech",
+      "type": "pekg:Technology",
+      "name": "advanced machine translation technologies"
+    },
+    {
+      "id": "e_nmt",
+      "type": "pekg:Technology",
+      "name": "Neural Machine Translation",
+      "description": "Neural technologies in machine translation"
+    },
+    {
+      "id": "e_event_advanced_mt_70s",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "First implementation of advanced machine translation technologies",
+      "eventType": "Technological Milestone",
+      "dateOrYear": "1970s",
+      "description": "1st player to implement advanced machine translation technologies in the \u201870s"
+    },
+    {
+      "id": "e_event_neural_mt_first",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "First implementation of neural technologies in machine translation",
+      "eventType": "Technological Milestone",
+      "description": "1st player to implement neural technologies in machine translation"
+    },
+    {
+      "id": "e_us",
+      "type": "pekg:Location",
+      "locationName": "US",
+      "locationType": "Country"
+    },
+    {
+      "id": "e_france",
+      "type": "pekg:Location",
+      "locationName": "France",
+      "locationType": "Country"
+    },
+    {
+      "id": "e_korea",
+      "type": "pekg:Location",
+      "locationName": "Korea",
+      "locationType": "Country"
+    },
+    {
+      "id": "e_customer_support",
+      "type": "pekg:ProductOrService",
+      "name": "customer-centric support solutions",
+      "description": "24/7 customer-centric support solutions"
+    },
+    {
+      "id": "e_advisory_services",
+      "type": "pekg:ProductOrService",
+      "name": "dedicated advisory services"
+    },
+    {
+      "id": "e_engine_upgrades",
+      "type": "pekg:ProductOrService",
+      "name": "translation engine upgrades",
+      "description": "Regular translation engine upgrades"
+    },
+    {
+      "id": "e_customer_count",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Number of long-term customers",
+      "kpiValueString": "262"
+    },
+    {
+      "id": "e_palantir",
+      "type": "pekg:Company",
+      "name": "Palantir"
+    },
+    {
+      "id": "e_donnelley",
+      "type": "pekg:Company",
+      "name": "Donnelley"
+    },
+    {
+      "id": "e_business_intelligence",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Business Intelligence"
+    },
+    {
+      "id": "e_analytical_solutions",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "analytical solutions"
+    },
+    {
+      "id": "e_translatepro",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Translate Pro",
+      "category": "Software"
+    },
+    {
+      "id": "e_verifying_solutions",
+      "type": "pekg:ProductOrService",
+      "name": "verifying solutions"
+    },
+    {
+      "id": "e_b2c_sme",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "B2C / SME segment"
+    },
+    {
+      "id": "e_ott",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "OTT"
+    },
+    {
+      "id": "e_media_companies",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "media companies"
+    },
+    {
+      "id": "e_voice_translation_market",
+      "type": "pekg:ProductOrService",
+      "name": "voice-translation market"
+    },
+    {
+      "id": "e_french_government",
+      "type": "pekg:GovernmentBody",
+      "name": "French government"
+    },
+    {
+      "id": "e_project_french_gov",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "3-year R&D project supported by the French government",
+      "eventType": "Project Funding/Support",
+      "description": "3-year project supported by the French government, to be launched after creation of domestic mass TV channel consortium"
+    },
+    {
+      "id": "e_investment_highlights",
+      "type": "pekg:TransactionContext",
+      "contextName": "Key investment highlights",
+      "keyInvestmentHighlights": [
+        "A unique opportunity to invest in a cutting edge neural machine translation software for sensitive clients",
+        "An expanding \u20ac760m machine translation market (+26% p.a.)",
+        "Unmatched offering of verified machine translation software",
+        "Pioneering use of new technologies",
+        "Systematic and validated support 1st-class services",
+        "Unique customer portfolio across highly sensitive sectors",
+        "An ambitious strategy to fuel further growth and explore new business segments"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e6_pg3",
+      "target": "e_investment_highlights",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e_investment_highlights",
+      "target": "e3_pg1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_investment_highlights",
+      "target": "e2_pg1",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e_investment_highlights",
+      "target": "e5_pg3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_mt_market",
+      "type": "pekg:operatesIn"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_electronics",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_defense_security",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_tech_software",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_financial_inst",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_gaming",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_elearning",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_content",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_media",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_big_data",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_public_sector",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_special_engines",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_apis",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_plugins",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_connectors",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_data_security",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_open_source_local_solution",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_onpremise_sw",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_cloud_sw",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_context_awareness",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_transcript_technology",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_advanced_mt_tech",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_nmt",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_event_advanced_mt_70s",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_advanced_mt_70s",
+      "target": "e6_pg3",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_event_advanced_mt_70s",
+      "target": "e_advanced_mt_tech",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_event_neural_mt_first",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_neural_mt_first",
+      "target": "e6_pg3",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_event_neural_mt_first",
+      "target": "e_nmt",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_us",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_france",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_korea",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_customer_support",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_advisory_services",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_engine_upgrades",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_customer_count",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_palantir",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_donnelley",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_business_intelligence",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_analytical_solutions",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_translatepro",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_verifying_solutions",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_b2c_sme",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_ott",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_media_companies",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_voice_translation_market",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_project_french_gov",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_project_french_gov",
+      "target": "e_french_government",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_project_french_gov",
+      "target": "e6_pg3",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_project_french_gov",
+      "target": "e_transcript_technology",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_project_french_gov",
+      "target": "e_context_awareness",
+      "type": "pekg:eventInvolvesParty"
+    }
+  ],
+  "page_number": 5
+}

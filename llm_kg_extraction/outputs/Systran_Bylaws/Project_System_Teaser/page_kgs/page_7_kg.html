@@ -1,0 +1,321 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script>function neighbourhoodHighlight(params) {
+  // console.log("in nieghbourhoodhighlight");
+  allNodes = nodes.get({ returnType: "Object" });
+  // originalNodes = JSON.parse(JSON.stringify(allNodes));
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    highlightActive = true;
+    var i, j;
+    var selectedNode = params.nodes[0];
+    var degrees = 2;
+
+    // mark all nodes as hard to read.
+    for (let nodeId in allNodes) {
+      // nodeColors[nodeId] = allNodes[nodeId].color;
+      allNodes[nodeId].color = "rgba(200,200,200,0.5)";
+      if (allNodes[nodeId].hiddenLabel === undefined) {
+        allNodes[nodeId].hiddenLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+    var connectedNodes = network.getConnectedNodes(selectedNode);
+    var allConnectedNodes = [];
+
+    // get the second degree nodes
+    for (i = 1; i < degrees; i++) {
+      for (j = 0; j < connectedNodes.length; j++) {
+        allConnectedNodes = allConnectedNodes.concat(
+          network.getConnectedNodes(connectedNodes[j])
+        );
+      }
+    }
+
+    // all second degree nodes get a different color and their label back
+    for (i = 0; i < allConnectedNodes.length; i++) {
+      // allNodes[allConnectedNodes[i]].color = "pink";
+      allNodes[allConnectedNodes[i]].color = "rgba(150,150,150,0.75)";
+      if (allNodes[allConnectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[allConnectedNodes[i]].label =
+          allNodes[allConnectedNodes[i]].hiddenLabel;
+        allNodes[allConnectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // all first degree nodes get their own color and their label back
+    for (i = 0; i < connectedNodes.length; i++) {
+      // allNodes[connectedNodes[i]].color = undefined;
+      allNodes[connectedNodes[i]].color = nodeColors[connectedNodes[i]];
+      if (allNodes[connectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[connectedNodes[i]].label =
+          allNodes[connectedNodes[i]].hiddenLabel;
+        allNodes[connectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // the main node gets its own color and its label back.
+    // allNodes[selectedNode].color = undefined;
+    allNodes[selectedNode].color = nodeColors[selectedNode];
+    if (allNodes[selectedNode].hiddenLabel !== undefined) {
+      allNodes[selectedNode].label = allNodes[selectedNode].hiddenLabel;
+      allNodes[selectedNode].hiddenLabel = undefined;
+    }
+  } else if (highlightActive === true) {
+    // console.log("highlightActive was true");
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      // allNodes[nodeId].color = "purple";
+      allNodes[nodeId].color = nodeColors[nodeId];
+      // delete allNodes[nodeId].color;
+      if (allNodes[nodeId].hiddenLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].hiddenLabel;
+        allNodes[nodeId].hiddenLabel = undefined;
+      }
+    }
+    highlightActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    // console.log("Nothing was selected");
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        // allNodes[nodeId].color = {};
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function filterHighlight(params) {
+  allNodes = nodes.get({ returnType: "Object" });
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    filterActive = true;
+    let selectedNodes = params.nodes;
+
+    // hiding all nodes and saving the label
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = true;
+      if (allNodes[nodeId].savedLabel === undefined) {
+        allNodes[nodeId].savedLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+
+    for (let i=0; i < selectedNodes.length; i++) {
+      allNodes[selectedNodes[i]].hidden = false;
+      if (allNodes[selectedNodes[i]].savedLabel !== undefined) {
+        allNodes[selectedNodes[i]].label = allNodes[selectedNodes[i]].savedLabel;
+        allNodes[selectedNodes[i]].savedLabel = undefined;
+      }
+    }
+
+  } else if (filterActive === true) {
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = false;
+      if (allNodes[nodeId].savedLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].savedLabel;
+        allNodes[nodeId].savedLabel = undefined;
+      }
+    }
+    filterActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function selectNode(nodes) {
+  network.selectNodes(nodes);
+  neighbourhoodHighlight({ nodes: nodes });
+  return nodes;
+}
+
+function selectNodes(nodes) {
+  network.selectNodes(nodes);
+  filterHighlight({nodes: nodes});
+  return nodes;
+}
+
+function highlightFilter(filter) {
+  let selectedNodes = []
+  let selectedProp = filter['property']
+  if (filter['item'] === 'node') {
+    let allNodes = nodes.get({ returnType: "Object" });
+    for (let nodeId in allNodes) {
+      if (allNodes[nodeId][selectedProp] && filter['value'].includes((allNodes[nodeId][selectedProp]).toString())) {
+        selectedNodes.push(nodeId)
+      }
+    }
+  }
+  else if (filter['item'] === 'edge'){
+    let allEdges = edges.get({returnType: 'object'});
+    // check if the selected property exists for selected edge and select the nodes connected to the edge
+    for (let edge in allEdges) {
+      if (allEdges[edge][selectedProp] && filter['value'].includes((allEdges[edge][selectedProp]).toString())) {
+        selectedNodes.push(allEdges[edge]['from'])
+        selectedNodes.push(allEdges[edge]['to'])
+      }
+    }
+  }
+  selectNodes(selectedNodes)
+}</script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            
+            
+            
+            
+            
+
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1f77b4", "id": "e6_pg3", "label": "Systran", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e6_pg3\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Systran"}, {"color": "#1f77b4", "id": "e3_pg1", "label": "ChapsVision", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e3_pg1\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e ChapsVision"}, {"color": "#cccccc", "id": "e2_pg1", "label": "Rothschild \u0026 Co", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e2_pg1\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e Financial Advisor\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Rothschild \u0026 Co"}, {"color": "#cccccc", "id": "e5_pg3", "label": "Samsung Securities", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e5_pg3\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e Financial Advisor\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Samsung Securities"}, {"color": "#9467bd", "id": "e_spns", "label": "Systran Pure Neural\u00ae Server", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_spns\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Systran Pure Neural\u00ae Server"}, {"color": "#9467bd", "id": "e_translatepro", "label": "Systran Translate Pro", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_translatepro\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Systran Translate Pro\u003cbr\u003e\u003cb\u003edescription:\u003c/b\u003e Cloud-based solution for advanced professional translation."}, {"color": "#9467bd", "id": "e_modelstudio", "label": "Systran Model Studio", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_modelstudio\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Systran Model Studio"}, {"color": "#9467bd", "id": "e_annual_licenses_rev_stream", "label": "Annual licenses", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_annual_licenses_rev_stream\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Annual licenses"}, {"color": "#9467bd", "id": "e_perpetual_licenses_rev_stream", "label": "Perpetual licenses", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_perpetual_licenses_rev_stream\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Perpetual licenses"}, {"color": "#9467bd", "id": "e_cloud_sw", "label": "cloud-based translation software", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_cloud_sw\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e cloud-based translation software"}, {"color": "#9467bd", "id": "e_onpremise_sw", "label": "on-premise translation software", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_onpremise_sw\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e on-premise translation software"}, {"color": "#8c564b", "id": "e_nmt", "label": "Neural Machine Translation", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_nmt\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Technology\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Neural Machine Translation\u003cbr\u003e\u003cb\u003edescription:\u003c/b\u003e Breakthrough innovation introduced by Systran to corporate users."}, {"color": "#ce6dbd", "id": "e_public_sector", "label": "public sector", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_public_sector\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:UseCaseOrIndustry\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e public sector"}, {"color": "#ce6dbd", "id": "e_b2c_sme", "label": "B2C / SME segment", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_b2c_sme\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:UseCaseOrIndustry\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e B2C / SME segment"}, {"color": "#9467bd", "id": "e1_pg7", "label": "Systran Translate", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e1_pg7\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Systran Translate\u003cbr\u003e\u003cb\u003edescription:\u003c/b\u003e Free web-based translation tool."}, {"color": "#9467bd", "id": "e2_pg7", "label": "Systran Translate Enterprise", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e2_pg7\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Systran Translate Enterprise\u003cbr\u003e\u003cb\u003edescription:\u003c/b\u003e Cloud-based solution for SME."}, {"color": "#9467bd", "id": "e3_pg7", "label": "Funded research projects", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e3_pg7\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Funded research projects\u003cbr\u003e\u003cb\u003edescription:\u003c/b\u003e Service offering, mostly for public entities, priced case by case."}, {"color": "#ff7f0e", "id": "e4_pg7", "label": "Revenue Contribution (FY21A)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e4_pg7\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Revenue Contribution\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e c.90%"}, {"color": "#ff7f0e", "id": "e5_pg7", "label": "Revenue Contribution (FY21A)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e5_pg7\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Revenue Contribution\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e c.5%"}, {"color": "#ff7f0e", "id": "e6_pg7", "label": "Revenue Contribution (FY21A)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e6_pg7\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Revenue Contribution\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e c.5%"}, {"color": "#ff7f0e", "id": "e7_pg7", "label": "Revenue Contribution (FY21A)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e7_pg7\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Revenue Contribution\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e c.5%"}, {"color": "#ffbb78", "id": "e8_pg7", "label": "Number of supported languages", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e8_pg7\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:OperationalKPI\u003cbr\u003e\u003cb\u003ekpiName:\u003c/b\u003e Number of supported languages"}, {"color": "#ffbb78", "id": "e9_pg7", "label": "Number of supported language pairs", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e9_pg7\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:OperationalKPI\u003cbr\u003e\u003cb\u003ekpiName:\u003c/b\u003e Number of supported language pairs"}, {"color": "#ffbb78", "id": "e10_pg7", "label": "Number of advanced MT domain models", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e10_pg7\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:OperationalKPI\u003cbr\u003e\u003cb\u003ekpiName:\u003c/b\u003e Number of advanced MT domain models"}, {"color": "#8c564b", "id": "e11_pg7", "label": "advanced MT domain models", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e11_pg7\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Technology\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e advanced MT domain models\u003cbr\u003e\u003cb\u003edescription:\u003c/b\u003e Specialized machine translation models for specific domains."}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "e6_pg3", "label": "offers", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:offers\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e6_pg3\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e_spns", "to": "e_spns"}, {"arrows": "to", "from": "e6_pg3", "label": "offers", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:offers\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e6_pg3\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e_translatepro", "to": "e_translatepro"}, {"arrows": "to", "from": "e6_pg3", "label": "offers", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:offers\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e6_pg3\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e_modelstudio", "to": "e_modelstudio"}, {"arrows": "to", "from": "e6_pg3", "label": "offers", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:offers\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e6_pg3\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e1_pg7", "to": "e1_pg7"}, {"arrows": "to", "from": "e6_pg3", "label": "offers", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:offers\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e6_pg3\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e2_pg7", "to": "e2_pg7"}, {"arrows": "to", "from": "e6_pg3", "label": "offers", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:offers\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e6_pg3\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e3_pg7", "to": "e3_pg7"}, {"arrows": "to", "from": "e_spns", "label": "reportsFinancialMetric", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:reportsFinancialMetric\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e_spns\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e4_pg7", "to": "e4_pg7"}, {"arrows": "to", "from": "e_translatepro", "label": "reportsFinancialMetric", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:reportsFinancialMetric\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e_translatepro\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e5_pg7", "to": "e5_pg7"}, {"arrows": "to", "from": "e2_pg7", "label": "reportsFinancialMetric", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:reportsFinancialMetric\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e2_pg7\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e6_pg7", "to": "e6_pg7"}, {"arrows": "to", "from": "e3_pg7", "label": "reportsFinancialMetric", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:reportsFinancialMetric\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e3_pg7\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e7_pg7", "to": "e7_pg7"}, {"arrows": "to", "from": "e_spns", "label": "hasRevenueStream", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:hasRevenueStream\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e_spns\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e_annual_licenses_rev_stream", "to": "e_annual_licenses_rev_stream"}, {"arrows": "to", "from": "e_spns", "label": "hasRevenueStream", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:hasRevenueStream\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e_spns\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e_perpetual_licenses_rev_stream", "to": "e_perpetual_licenses_rev_stream"}, {"arrows": "to", "from": "e2_pg7", "label": "hasRevenueStream", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:hasRevenueStream\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e2_pg7\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e_annual_licenses_rev_stream", "to": "e_annual_licenses_rev_stream"}, {"arrows": "to", "from": "e_modelstudio", "label": "usesTechnology", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:usesTechnology\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e_modelstudio\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e_cloud_sw", "to": "e_cloud_sw"}, {"arrows": "to", "from": "e_modelstudio", "label": "usesTechnology", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:usesTechnology\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e_modelstudio\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e_onpremise_sw", "to": "e_onpremise_sw"}, {"arrows": "to", "from": "e_modelstudio", "label": "usesTechnology", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:usesTechnology\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e_modelstudio\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e11_pg7", "to": "e11_pg7"}, {"arrows": "to", "from": "e_spns", "label": "usesTechnology", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:usesTechnology\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e_spns\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e_nmt", "to": "e_nmt"}, {"arrows": "to", "from": "e2_pg7", "label": "targets", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:targets\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e2_pg7\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e_b2c_sme", "to": "e_b2c_sme"}, {"arrows": "to", "from": "e3_pg7", "label": "targets", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:targets\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e3_pg7\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e_public_sector", "to": "e_public_sector"}, {"arrows": "to", "from": "e6_pg3", "label": "reportsOperationalKPI", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:reportsOperationalKPI\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e6_pg3\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e8_pg7", "to": "e8_pg7"}, {"arrows": "to", "from": "e6_pg3", "label": "reportsOperationalKPI", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:reportsOperationalKPI\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e6_pg3\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e9_pg7", "to": "e9_pg7"}, {"arrows": "to", "from": "e6_pg3", "label": "reportsOperationalKPI", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:reportsOperationalKPI\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e6_pg3\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e10_pg7", "to": "e10_pg7"}, {"arrows": "to", "from": "e6_pg3", "label": "usesTechnology", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:usesTechnology\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e6_pg3\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e11_pg7", "to": "e11_pg7"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shape": "dot", "font": {"size": 14, "face": "Tahoma"}, "borderWidth": 2, "shadow": true}, "edges": {"arrows": {"to": {"enabled": true, "scaleFactor": 0.7}}, "color": {"inherit": "from"}, "smooth": {"type": "continuous", "roundness": 0.2}, "font": {"size": 10, "align": "middle"}, "shadow": true}, "physics": {"enabled": true, "barnesHut": {"gravitationalConstant": -30000, "centralGravity": 0.3, "springLength": 250, "springConstant": 0.04, "damping": 0.09}, "minVelocity": 0.75}, "interaction": {"hover": true, "tooltipDelay": 200, "multiselect": true, "navigationButtons": true, "keyboard": true}, "layout": {"hierarchical": false}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

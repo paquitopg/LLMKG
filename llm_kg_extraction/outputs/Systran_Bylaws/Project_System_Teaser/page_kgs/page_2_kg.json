@@ -1,0 +1,225 @@
+{
+  "entities": [
+    {
+      "id": "e1_pg1",
+      "type": "pekg:TransactionContext",
+      "contextName": "Information Memorandum",
+      "status": "Strictly confidential"
+    },
+    {
+      "id": "e2_pg1",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Financial Advisor for the Transaction"
+    },
+    {
+      "id": "e3_pg1",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e5_pg3",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Financial Advisor for the Transaction"
+    },
+    {
+      "id": "e6_pg3",
+      "type": "pekg:Company",
+      "name": "The Group",
+      "description": "Target company of the transaction"
+    },
+    {
+      "id": "e7_pg3",
+      "type": "pekg:Person",
+      "fullName": "Pierre Brenckl\u00e9"
+    },
+    {
+      "id": "e8_pg3",
+      "type": "pekg:Person",
+      "fullName": "Romain Ritoux"
+    },
+    {
+      "id": "e9_pg3",
+      "type": "pekg:Person",
+      "fullName": "Fabien Lenoir"
+    },
+    {
+      "id": "e10_pg3",
+      "type": "pekg:Person",
+      "fullName": "Minah Kim"
+    },
+    {
+      "id": "e11_pg3",
+      "type": "pekg:Person",
+      "fullName": "Yoojin Lee"
+    },
+    {
+      "id": "e12_pg3",
+      "type": "pekg:Person",
+      "fullName": "Seungil Back"
+    },
+    {
+      "id": "e13_pg3",
+      "type": "pekg:Position",
+      "titleName": "Associate"
+    },
+    {
+      "id": "e14_pg3",
+      "type": "pekg:Position",
+      "titleName": "Analyst"
+    },
+    {
+      "id": "e15_pg3",
+      "type": "pekg:Position",
+      "titleName": "Managing Director"
+    },
+    {
+      "id": "e16_pg3",
+      "type": "pekg:Position",
+      "titleName": "Director"
+    },
+    {
+      "id": "e17_pg3",
+      "type": "pekg:Location",
+      "locationName": "Paris",
+      "locationType": "City",
+      "officeSpecificInfo": "23 bis, avenue de Messine, 75008 Paris, France"
+    },
+    {
+      "id": "e18_pg3",
+      "type": "pekg:Location",
+      "locationName": "Seoul",
+      "locationType": "City",
+      "officeSpecificInfo": "11 Seocho-daero 74-gil, Seocho-gu, 06620 Seoul, South Korea"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1_pg1",
+      "target": "e2_pg1",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1_pg1",
+      "target": "e5_pg3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e2_pg1",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e5_pg3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e2_pg1",
+      "target": "e17_pg3",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e5_pg3",
+      "target": "e18_pg3",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e2_pg1",
+      "target": "e7_pg3",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e2_pg1",
+      "target": "e8_pg3",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e2_pg1",
+      "target": "e9_pg3",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e5_pg3",
+      "target": "e10_pg3",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e5_pg3",
+      "target": "e11_pg3",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e5_pg3",
+      "target": "e12_pg3",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e7_pg3",
+      "target": "e13_pg3",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e13_pg3",
+      "target": "e2_pg1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e8_pg3",
+      "target": "e14_pg3",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e14_pg3",
+      "target": "e2_pg1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e9_pg3",
+      "target": "e15_pg3",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e15_pg3",
+      "target": "e2_pg1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e10_pg3",
+      "target": "e13_pg3",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e13_pg3",
+      "target": "e5_pg3",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e11_pg3",
+      "target": "e14_pg3",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e14_pg3",
+      "target": "e5_pg3",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e12_pg3",
+      "target": "e16_pg3",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e16_pg3",
+      "target": "e5_pg3",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1_pg1",
+      "target": "e3_pg1",
+      "type": "pekg:eventInvolvesParty"
+    }
+  ],
+  "page_number": 2
+}

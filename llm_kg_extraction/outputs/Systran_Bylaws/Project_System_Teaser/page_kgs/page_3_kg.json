@@ -1,0 +1,1127 @@
+{
+  "entities": [
+    {
+      "id": "e6_pg3",
+      "type": "pekg:Company",
+      "name": "Systran",
+      "alias": [
+        "The Group"
+      ],
+      "description": "A pioneer and global leader in on-premise and cloud-based translation software, continuously evolving with breakthrough innovations and secured solutions, recently introducing Neural Machine Translation to corporate users via 3 offers. Has successfully built a wide, diversified, loyal and growing customer base across highly sensitive sectors.",
+      "foundedYear": 1968,
+      "keyStrengths": [
+        "Acclaimed tech stack",
+        "Unique portfolio of sensitive clients",
+        "Pioneer and global leader in on-premise and cloud-based translation software",
+        "Breakthrough innovations and secured solutions",
+        "Secured solutions",
+        "Wide, diversified, loyal and growing customer base",
+        "Solid track record of sustainable growth"
+      ],
+      "growthStrategySummary": "Ambitious growth strategy with projected +29% Revenue CAGR over FY22BP-FY26BP period."
+    },
+    {
+      "id": "e3_pg1",
+      "type": "pekg:Company",
+      "name": "ChapsVision"
+    },
+    {
+      "id": "e2_pg1",
+      "type": "Financial Advisor",
+      "name": "Rothschild & Co"
+    },
+    {
+      "id": "e5_pg3",
+      "type": "Financial Advisor",
+      "name": "Samsung Securities"
+    },
+    {
+      "id": "e_kpmg",
+      "type": "pekg:Company",
+      "name": "KPMG"
+    },
+    {
+      "id": "e_amex",
+      "type": "pekg:Company",
+      "name": "American Express"
+    },
+    {
+      "id": "e_citi",
+      "type": "pekg:Company",
+      "name": "Citi"
+    },
+    {
+      "id": "e_hsbc",
+      "type": "pekg:Company",
+      "name": "HSBC"
+    },
+    {
+      "id": "e_socgen",
+      "type": "pekg:Company",
+      "name": "Societe Generale"
+    },
+    {
+      "id": "e_autodesk",
+      "type": "pekg:Company",
+      "name": "Autodesk"
+    },
+    {
+      "id": "e_adobe",
+      "type": "pekg:Company",
+      "name": "Adobe"
+    },
+    {
+      "id": "e_ovh",
+      "type": "pekg:Company",
+      "name": "OVH.com"
+    },
+    {
+      "id": "e_microfocus",
+      "type": "pekg:Company",
+      "name": "Micro Focus"
+    },
+    {
+      "id": "e_continental",
+      "type": "pekg:Company",
+      "name": "Continental"
+    },
+    {
+      "id": "e_nestle",
+      "type": "pekg:Company",
+      "name": "Nestle"
+    },
+    {
+      "id": "e_psa",
+      "type": "pekg:Company",
+      "name": "PSA Groupe"
+    },
+    {
+      "id": "e_schneider",
+      "type": "pekg:Company",
+      "name": "Schneider Electric"
+    },
+    {
+      "id": "e_astrazeneca",
+      "type": "pekg:Company",
+      "name": "AstraZeneca"
+    },
+    {
+      "id": "e_novartis",
+      "type": "pekg:Company",
+      "name": "Novartis"
+    },
+    {
+      "id": "e_roche",
+      "type": "pekg:Company",
+      "name": "Roche"
+    },
+    {
+      "id": "e_blizzard",
+      "type": "pekg:Company",
+      "name": "Blizzard"
+    },
+    {
+      "id": "e_medallia",
+      "type": "pekg:Company",
+      "name": "Medallia"
+    },
+    {
+      "id": "e_gjensidige",
+      "type": "pekg:Company",
+      "name": "Gjensidige"
+    },
+    {
+      "id": "e_fr_min_int",
+      "type": "Government",
+      "name": "French Ministry of Interior"
+    },
+    {
+      "id": "e_au_def",
+      "type": "Government",
+      "name": "Australian Government Department of Defence"
+    },
+    {
+      "id": "e_interpol",
+      "type": "International Organization",
+      "name": "INTERPOL"
+    },
+    {
+      "id": "e_us_def",
+      "type": "Government",
+      "name": "US Department of Defense"
+    },
+    {
+      "id": "e_spns",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Pure Neural\u00ae Software",
+      "alias": [
+        "SPNS"
+      ],
+      "category": "Software",
+      "description": "Neural Machine Translation software offer for corporate users."
+    },
+    {
+      "id": "e_translatepro",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Translate Pro",
+      "category": "Software",
+      "description": "Translation software offer for corporate users."
+    },
+    {
+      "id": "e_modelstudio",
+      "type": "pekg:ProductOrService",
+      "name": "Systran Model Studio",
+      "category": "Software",
+      "description": "Translation software offer for corporate users."
+    },
+    {
+      "id": "e_onpremise_sw",
+      "type": "pekg:ProductOrService",
+      "name": "on-premise translation software",
+      "category": "Software"
+    },
+    {
+      "id": "e_cloud_sw",
+      "type": "pekg:ProductOrService",
+      "name": "cloud-based translation software",
+      "category": "Software"
+    },
+    {
+      "id": "e_desktop_sol",
+      "type": "pekg:ProductOrService",
+      "name": "desktop solutions",
+      "category": "Software"
+    },
+    {
+      "id": "e_other_sol",
+      "type": "pekg:ProductOrService",
+      "name": "other solutions",
+      "category": "Software"
+    },
+    {
+      "id": "e_ssa",
+      "type": "pekg:ProductOrService",
+      "name": "SSA",
+      "description": "Used for ARR calculation."
+    },
+    {
+      "id": "e_ssi",
+      "type": "pekg:ProductOrService",
+      "name": "SSI",
+      "description": "Used for ARR calculation."
+    },
+    {
+      "id": "e_maintenance_rev_stream",
+      "type": "pekg:ProductOrService",
+      "name": "Maintenance",
+      "category": "Revenue Stream",
+      "description": "Includes one-shot maintenance."
+    },
+    {
+      "id": "e_annual_licenses_rev_stream",
+      "type": "pekg:ProductOrService",
+      "name": "Annual licenses",
+      "category": "Revenue Stream"
+    },
+    {
+      "id": "e_perpetual_licenses_rev_stream",
+      "type": "pekg:ProductOrService",
+      "name": "Perpetual licenses",
+      "category": "Revenue Stream"
+    },
+    {
+      "id": "e_cloud_rev_stream",
+      "type": "pekg:ProductOrService",
+      "name": "Cloud",
+      "category": "Revenue Stream"
+    },
+    {
+      "id": "e_service_rev_stream",
+      "type": "pekg:ProductOrService",
+      "name": "Service",
+      "category": "Revenue Stream",
+      "description": "Includes service revenue from SCL & SJGK."
+    },
+    {
+      "id": "e_others_rev_stream",
+      "type": "pekg:ProductOrService",
+      "name": "Others",
+      "category": "Revenue Stream"
+    },
+    {
+      "id": "e_nmt",
+      "type": "pekg:Technology",
+      "name": "Neural Machine Translation",
+      "description": "Breakthrough innovation introduced by Systran to corporate users."
+    },
+    {
+      "id": "e_defense_security",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "defense & security"
+    },
+    {
+      "id": "e_tech_software",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "technology & software"
+    },
+    {
+      "id": "e_industry_services",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "industry & services"
+    },
+    {
+      "id": "e_ecommerce",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "e-commerce"
+    },
+    {
+      "id": "e_lsp",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "language service providers"
+    },
+    {
+      "id": "e_public_sector",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "public sector"
+    },
+    {
+      "id": "e_financial_inst",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Financial institutions"
+    },
+    {
+      "id": "e_manufacturing",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Manufacturing"
+    },
+    {
+      "id": "e_healthcare",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Healthcare"
+    },
+    {
+      "id": "e_it_services",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "IT services"
+    },
+    {
+      "id": "e_rev_fy21a",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenues",
+      "valueString": "\u20ac16.0m",
+      "DateOrPeriod": "FY21A",
+      "scope": "Gross reported revenue"
+    },
+    {
+      "id": "e_arr_fy21a",
+      "type": "pekg:FinancialMetric",
+      "metricName": "ARR",
+      "valueString": "\u20ac7.7m",
+      "DateOrPeriod": "FY21A",
+      "scope": "Recurring revenue"
+    },
+    {
+      "id": "e_adj_sale_fy19a",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Sale",
+      "valueString": "\u20ac13.8m",
+      "DateOrPeriod": "FY19A",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e_adj_sale_fy20a",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Sale",
+      "valueString": "\u20ac14.8m",
+      "DateOrPeriod": "FY20A",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e_adj_sale_fy21a",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Sale",
+      "valueString": "\u20ac15.9m",
+      "DateOrPeriod": "FY21A",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e_adj_sale_fy22b",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Sale",
+      "valueString": "\u20ac19.0m",
+      "DateOrPeriod": "FY22B",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e_adj_sale_fy23bp",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Sale",
+      "valueString": "\u20ac22.7m",
+      "DateOrPeriod": "FY23BP",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e_adj_sale_fy24bp",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Sale",
+      "valueString": "\u20ac31.2m",
+      "DateOrPeriod": "FY24BP",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e_adj_sale_fy25bp",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Sale",
+      "valueString": "\u20ac41.6m",
+      "DateOrPeriod": "FY25BP",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e_adj_sale_fy26bp",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted Sale",
+      "valueString": "\u20ac53.2m",
+      "DateOrPeriod": "FY26BP",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e_adj_ebitda_fy19a",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA (excl. IFRS16 leases)",
+      "valueString": "\u20ac1.8m",
+      "DateOrPeriod": "FY19A",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e_adj_ebitda_fy20a",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA (excl. IFRS16 leases)",
+      "valueString": "\u20ac2.1m",
+      "DateOrPeriod": "FY20A",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e_adj_ebitda_fy21a",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA (excl. IFRS16 leases)",
+      "valueString": "\u20ac2.0m",
+      "DateOrPeriod": "FY21A",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e_adj_ebitda_fy22b",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA (excl. IFRS16 leases)",
+      "valueString": "\u20ac2.2m",
+      "DateOrPeriod": "FY22B",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e_adj_ebitda_fy23bp",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA (excl. IFRS16 leases)",
+      "valueString": "\u20ac2.4m",
+      "DateOrPeriod": "FY23BP",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e_adj_ebitda_fy24bp",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA (excl. IFRS16 leases)",
+      "valueString": "\u20ac4.8m",
+      "DateOrPeriod": "FY24BP",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e_adj_ebitda_fy25bp",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA (excl. IFRS16 leases)",
+      "valueString": "\u20ac10.8m",
+      "DateOrPeriod": "FY25BP",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e_adj_ebitda_fy26bp",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Adjusted EBITDA (excl. IFRS16 leases)",
+      "valueString": "\u20ac16.9m",
+      "DateOrPeriod": "FY26BP",
+      "isAdjustedOrProforma": true
+    },
+    {
+      "id": "e_cagr_fy19a_fy22b",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue CAGR",
+      "valueString": "+11%",
+      "DateOrPeriod": "FY19A-FY22B",
+      "scope": "Revenue"
+    },
+    {
+      "id": "e_cagr_fy22bp_fy26bp",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue CAGR",
+      "valueString": "+29%",
+      "DateOrPeriod": "FY22BP-FY26BP",
+      "scope": "Revenue"
+    },
+    {
+      "id": "e_gov_rev_perc",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Revenue from government organizations",
+      "valueString": "26%",
+      "DateOrPeriod": "FY21A",
+      "scope": "Revenue breakdown"
+    },
+    {
+      "id": "e_rev_maint_perc",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance Revenue Percentage",
+      "valueString": "54%",
+      "DateOrPeriod": "FY21A",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_annual_lic_perc",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses Revenue Percentage",
+      "valueString": "22%",
+      "DateOrPeriod": "FY21A",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_perpetual_lic_perc",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Perpetual Licenses Revenue Percentage",
+      "valueString": "32%",
+      "DateOrPeriod": "FY21A",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_cloud_perc",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Cloud Revenue Percentage",
+      "valueString": "1%",
+      "DateOrPeriod": "FY21A",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_service_perc",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Service Revenue Percentage",
+      "valueString": "8%",
+      "DateOrPeriod": "FY21A",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_rev_others_perc",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Others Revenue Percentage",
+      "valueString": "9%",
+      "DateOrPeriod": "FY21A",
+      "scope": "Revenue breakdown by business"
+    },
+    {
+      "id": "e_arr_annual_lic_perc",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Licenses ARR Percentage",
+      "valueString": "46%",
+      "DateOrPeriod": "FY21A",
+      "scope": "ARR breakdown"
+    },
+    {
+      "id": "e_arr_maint_perc",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Maintenance ARR Percentage",
+      "valueString": "54%",
+      "DateOrPeriod": "FY21A",
+      "scope": "ARR breakdown"
+    },
+    {
+      "id": "e_offices_count",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Number of offices",
+      "kpiValueString": "4",
+      "description": "Across 3 continents"
+    },
+    {
+      "id": "e_headcount_systran",
+      "type": "pekg:Headcount",
+      "headcountName": "Total employees",
+      "totalEmployees": 108
+    },
+    {
+      "id": "e17_pg3",
+      "type": "pekg:Location",
+      "locationName": "Paris",
+      "locationType": "City"
+    },
+    {
+      "id": "e_san_diego",
+      "type": "pekg:Location",
+      "locationName": "San Diego",
+      "locationType": "City"
+    },
+    {
+      "id": "e_tokyo",
+      "type": "pekg:Location",
+      "locationName": "Tokyo",
+      "locationType": "City"
+    },
+    {
+      "id": "e_daejeon",
+      "type": "pekg:Location",
+      "locationName": "Daejeon",
+      "locationType": "City"
+    },
+    {
+      "id": "e_founded_1968",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Company Founding",
+      "eventType": "Founding",
+      "dateOrYear": "1968"
+    },
+    {
+      "id": "e1_pg1_transactioncontext_1",
+      "type": "pekg:TransactionContext",
+      "contextName": "Information Memorandum"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e6_pg3",
+      "target": "e_founded_1968",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e17_pg3",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_san_diego",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_tokyo",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_daejeon",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_headcount_systran",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_offices_count",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_onpremise_sw",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_cloud_sw",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_spns",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_translatepro",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_modelstudio",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_nmt",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_defense_security",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_tech_software",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_industry_services",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_ecommerce",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_lsp",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_public_sector",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_financial_inst",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_manufacturing",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_healthcare",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_it_services",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_amex",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_citi",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_hsbc",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_socgen",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_autodesk",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_adobe",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_ovh",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_microfocus",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_continental",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_nestle",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_psa",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_schneider",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_astrazeneca",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_novartis",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_roche",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_blizzard",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_medallia",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_gjensidige",
+      "type": "pekg:hasClientCompany"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_fr_min_int",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_au_def",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_interpol",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_us_def",
+      "type": "pekg:hasClientGovernment"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_rev_fy21a",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_arr_fy21a",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_adj_sale_fy19a",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_adj_sale_fy20a",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_adj_sale_fy21a",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_adj_sale_fy22b",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_adj_sale_fy23bp",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_adj_sale_fy24bp",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_adj_sale_fy25bp",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_adj_sale_fy26bp",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_adj_ebitda_fy19a",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_adj_ebitda_fy20a",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_adj_ebitda_fy21a",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_adj_ebitda_fy22b",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_adj_ebitda_fy23bp",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_adj_ebitda_fy24bp",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_adj_ebitda_fy25bp",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_adj_ebitda_fy26bp",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_cagr_fy19a_fy22b",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_cagr_fy22bp_fy26bp",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_gov_rev_perc",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_rev_fy21a",
+      "target": "e_maintenance_rev_stream",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e_rev_fy21a",
+      "target": "e_annual_licenses_rev_stream",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e_rev_fy21a",
+      "target": "e_perpetual_licenses_rev_stream",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e_rev_fy21a",
+      "target": "e_cloud_rev_stream",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e_rev_fy21a",
+      "target": "e_service_rev_stream",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e_rev_fy21a",
+      "target": "e_others_rev_stream",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e_arr_fy21a",
+      "target": "e_annual_licenses_rev_stream",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e_arr_fy21a",
+      "target": "e_maintenance_rev_stream",
+      "type": "pekg:hasRevenueStream"
+    },
+    {
+      "source": "e_maintenance_rev_stream",
+      "target": "e_rev_maint_perc",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_maintenance_rev_stream",
+      "target": "e_arr_maint_perc",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_annual_licenses_rev_stream",
+      "target": "e_rev_annual_lic_perc",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_annual_licenses_rev_stream",
+      "target": "e_arr_annual_lic_perc",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_perpetual_licenses_rev_stream",
+      "target": "e_rev_perpetual_lic_perc",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_cloud_rev_stream",
+      "target": "e_rev_cloud_perc",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_service_rev_stream",
+      "target": "e_rev_service_perc",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_others_rev_stream",
+      "target": "e_rev_others_perc",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e_kpmg",
+      "target": "e_rev_fy21a",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_kpmg",
+      "target": "e_arr_fy21a",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_kpmg",
+      "target": "e_adj_sale_fy19a",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_kpmg",
+      "target": "e_adj_sale_fy20a",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_kpmg",
+      "target": "e_adj_sale_fy21a",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_kpmg",
+      "target": "e_adj_sale_fy22b",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_kpmg",
+      "target": "e_adj_sale_fy23bp",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_kpmg",
+      "target": "e_adj_sale_fy24bp",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_kpmg",
+      "target": "e_adj_sale_fy25bp",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_kpmg",
+      "target": "e_adj_sale_fy26bp",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_kpmg",
+      "target": "e_adj_ebitda_fy19a",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_kpmg",
+      "target": "e_adj_ebitda_fy20a",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_kpmg",
+      "target": "e_adj_ebitda_fy21a",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_kpmg",
+      "target": "e_adj_ebitda_fy22b",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_kpmg",
+      "target": "e_adj_ebitda_fy23bp",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_kpmg",
+      "target": "e_adj_ebitda_fy24bp",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_kpmg",
+      "target": "e_adj_ebitda_fy25bp",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_kpmg",
+      "target": "e_adj_ebitda_fy26bp",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_kpmg",
+      "target": "e_cagr_fy19a_fy22b",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_kpmg",
+      "target": "e_cagr_fy22bp_fy26bp",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e_kpmg",
+      "target": "e_gov_rev_perc",
+      "type": "pekg:sourceOfData"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e1_pg1_transactioncontext_1",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1_pg1_transactioncontext_1",
+      "target": "e2_pg1",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e1_pg1_transactioncontext_1",
+      "target": "e5_pg3",
+      "type": "pekg:advisedBy"
+    },
+    {
+      "source": "e3_pg1",
+      "target": "e1_pg1_transactioncontext_1",
+      "type": "pekg:eventInvolvesParty"
+    }
+  ],
+  "page_number": 3
+}

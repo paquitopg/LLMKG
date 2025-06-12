@@ -1,0 +1,73 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN SAS",
+      "description": "Simplified joint stock company (Soci\u00e9t\u00e9 par actions simplifi\u00e9e)",
+      "awardsAndCertifications": [
+        "RCS Paris 334 343 993"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Share Capital",
+      "valueString": "4,072,679 Euros"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Location",
+      "locationName": "Paris",
+      "locationType": "City",
+      "officeSpecificInfo": "5, rue Feydeau - 75002 Paris \u2013 France"
+    },
+    {
+      "id": "e4",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Bylaws updated",
+      "eventType": "Legal Document Update",
+      "dateOrYear": "30 November 2022"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Position",
+      "titleName": "President"
+    },
+    {
+      "id": "e6",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Bylaws Certified",
+      "eventType": "Legal Document Certification",
+      "dateOrYear": "December 31, 2022"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e5",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:experiencedEvent"
+    }
+  ],
+  "page_number": 1
+}

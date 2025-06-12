@@ -1,0 +1,321 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script>function neighbourhoodHighlight(params) {
+  // console.log("in nieghbourhoodhighlight");
+  allNodes = nodes.get({ returnType: "Object" });
+  // originalNodes = JSON.parse(JSON.stringify(allNodes));
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    highlightActive = true;
+    var i, j;
+    var selectedNode = params.nodes[0];
+    var degrees = 2;
+
+    // mark all nodes as hard to read.
+    for (let nodeId in allNodes) {
+      // nodeColors[nodeId] = allNodes[nodeId].color;
+      allNodes[nodeId].color = "rgba(200,200,200,0.5)";
+      if (allNodes[nodeId].hiddenLabel === undefined) {
+        allNodes[nodeId].hiddenLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+    var connectedNodes = network.getConnectedNodes(selectedNode);
+    var allConnectedNodes = [];
+
+    // get the second degree nodes
+    for (i = 1; i < degrees; i++) {
+      for (j = 0; j < connectedNodes.length; j++) {
+        allConnectedNodes = allConnectedNodes.concat(
+          network.getConnectedNodes(connectedNodes[j])
+        );
+      }
+    }
+
+    // all second degree nodes get a different color and their label back
+    for (i = 0; i < allConnectedNodes.length; i++) {
+      // allNodes[allConnectedNodes[i]].color = "pink";
+      allNodes[allConnectedNodes[i]].color = "rgba(150,150,150,0.75)";
+      if (allNodes[allConnectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[allConnectedNodes[i]].label =
+          allNodes[allConnectedNodes[i]].hiddenLabel;
+        allNodes[allConnectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // all first degree nodes get their own color and their label back
+    for (i = 0; i < connectedNodes.length; i++) {
+      // allNodes[connectedNodes[i]].color = undefined;
+      allNodes[connectedNodes[i]].color = nodeColors[connectedNodes[i]];
+      if (allNodes[connectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[connectedNodes[i]].label =
+          allNodes[connectedNodes[i]].hiddenLabel;
+        allNodes[connectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // the main node gets its own color and its label back.
+    // allNodes[selectedNode].color = undefined;
+    allNodes[selectedNode].color = nodeColors[selectedNode];
+    if (allNodes[selectedNode].hiddenLabel !== undefined) {
+      allNodes[selectedNode].label = allNodes[selectedNode].hiddenLabel;
+      allNodes[selectedNode].hiddenLabel = undefined;
+    }
+  } else if (highlightActive === true) {
+    // console.log("highlightActive was true");
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      // allNodes[nodeId].color = "purple";
+      allNodes[nodeId].color = nodeColors[nodeId];
+      // delete allNodes[nodeId].color;
+      if (allNodes[nodeId].hiddenLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].hiddenLabel;
+        allNodes[nodeId].hiddenLabel = undefined;
+      }
+    }
+    highlightActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    // console.log("Nothing was selected");
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        // allNodes[nodeId].color = {};
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function filterHighlight(params) {
+  allNodes = nodes.get({ returnType: "Object" });
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    filterActive = true;
+    let selectedNodes = params.nodes;
+
+    // hiding all nodes and saving the label
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = true;
+      if (allNodes[nodeId].savedLabel === undefined) {
+        allNodes[nodeId].savedLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+
+    for (let i=0; i < selectedNodes.length; i++) {
+      allNodes[selectedNodes[i]].hidden = false;
+      if (allNodes[selectedNodes[i]].savedLabel !== undefined) {
+        allNodes[selectedNodes[i]].label = allNodes[selectedNodes[i]].savedLabel;
+        allNodes[selectedNodes[i]].savedLabel = undefined;
+      }
+    }
+
+  } else if (filterActive === true) {
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = false;
+      if (allNodes[nodeId].savedLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].savedLabel;
+        allNodes[nodeId].savedLabel = undefined;
+      }
+    }
+    filterActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function selectNode(nodes) {
+  network.selectNodes(nodes);
+  neighbourhoodHighlight({ nodes: nodes });
+  return nodes;
+}
+
+function selectNodes(nodes) {
+  network.selectNodes(nodes);
+  filterHighlight({nodes: nodes});
+  return nodes;
+}
+
+function highlightFilter(filter) {
+  let selectedNodes = []
+  let selectedProp = filter['property']
+  if (filter['item'] === 'node') {
+    let allNodes = nodes.get({ returnType: "Object" });
+    for (let nodeId in allNodes) {
+      if (allNodes[nodeId][selectedProp] && filter['value'].includes((allNodes[nodeId][selectedProp]).toString())) {
+        selectedNodes.push(nodeId)
+      }
+    }
+  }
+  else if (filter['item'] === 'edge'){
+    let allEdges = edges.get({returnType: 'object'});
+    // check if the selected property exists for selected edge and select the nodes connected to the edge
+    for (let edge in allEdges) {
+      if (allEdges[edge][selectedProp] && filter['value'].includes((allEdges[edge][selectedProp]).toString())) {
+        selectedNodes.push(allEdges[edge]['from'])
+        selectedNodes.push(allEdges[edge]['to'])
+      }
+    }
+  }
+  selectNodes(selectedNodes)
+}</script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            
+            
+            
+            
+            
+
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#cccccc", "id": "e98", "label": "Social and Economic Committee (staff delegation)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e98\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Group\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Social and Economic Committee (staff delegation)"}, {"color": "#2ca02c", "id": "e99", "label": "members of the Social and Economic Committee (staf", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e99\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Person\u003cbr\u003e\u003cb\u003efullName:\u003c/b\u003e members of the Social and Economic Committee (staff delegation)"}, {"color": "#10ac1a", "id": "e100", "label": "French Labor Code", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e100\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:GovernmentBody\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e French Labor Code"}, {"color": "#9467bd", "id": "e101", "label": "Annual social accounts", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e101\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Annual social accounts\u003cbr\u003e\u003cb\u003edescription:\u003c/b\u003e individual and consolidated, where applicable"}, {"color": "#9467bd", "id": "e102", "label": "Annual budgets", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e102\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Annual budgets"}, {"color": "#9467bd", "id": "e103", "label": "business plans", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e103\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e business plans"}, {"color": "#9467bd", "id": "e104", "label": "loan", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e104\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e loan"}, {"color": "#9467bd", "id": "e105", "label": "security", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e105\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e security"}, {"color": "#9467bd", "id": "e106", "label": "financial commitment", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e106\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e financial commitment"}, {"color": "#ff7f0e", "id": "e107", "label": "Loan/Security/Financial Commitment Threshold", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e107\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Loan/Security/Financial Commitment Threshold\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 500,000 Euros"}, {"color": "#9467bd", "id": "e108", "label": "guarantees", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e108\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e guarantees"}, {"color": "#9467bd", "id": "e109", "label": "endorsements", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e109\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e endorsements"}, {"color": "#9467bd", "id": "e110", "label": "suretyships", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e110\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e suretyships"}, {"color": "#1f77b4", "id": "e111", "label": "entities outside the SYSTRAN group", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e111\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e entities outside the SYSTRAN group"}, {"color": "#9467bd", "id": "e112", "label": "capital securities", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e112\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e capital securities\u003cbr\u003e\u003cb\u003edescription:\u003c/b\u003e immediate or deferred"}, {"color": "#9467bd", "id": "e113", "label": "stock option plans", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e113\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e stock option plans"}, {"color": "#9467bd", "id": "e114", "label": "undertaking", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e114\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e undertaking"}, {"color": "#ff7f0e", "id": "e115", "label": "Acquisition/Disposal Threshold", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e115\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Acquisition/Disposal Threshold\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 500,000 Euros"}, {"color": "#9467bd", "id": "e116", "label": "investment", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e116\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e investment"}, {"color": "#9467bd", "id": "e117", "label": "expenditure", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e117\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e expenditure"}, {"color": "#9467bd", "id": "e118", "label": "commitment", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e118\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e commitment"}, {"color": "#ff7f0e", "id": "e119", "label": "Annual Operation Threshold", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e119\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Annual Operation Threshold\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 1,000,000 Euros"}, {"color": "#2ca02c", "id": "e120", "label": "employee", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e120\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Person\u003cbr\u003e\u003cb\u003efullName:\u003c/b\u003e employee"}, {"color": "#ff7f0e", "id": "e121", "label": "Employee Remuneration Threshold", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e121\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Employee Remuneration Threshold\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 150,000 Euros"}, {"color": "#e7969c", "id": "e122", "label": "Hiring", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e122\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e123", "label": "Dismissal", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e123\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#9467bd", "id": "e124", "label": "transaction or undertaking outside the normal cour", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e124\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e transaction or undertaking outside the normal course of business"}, {"color": "#e7969c", "id": "e125", "label": "Merger", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e125\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e126", "label": "Spin off", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e126\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e127", "label": "Contribution", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e127\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e128", "label": "Partial contribution of assets", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e128\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e129", "label": "Decision on President\u0027s remuneration", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e129\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#9467bd", "id": "e130", "label": "related party transactions", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e130\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e related party transactions"}, {"color": "#10ac1a", "id": "e131", "label": "Commercial Code", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e131\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:GovernmentBody\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Commercial Code"}, {"color": "#9467bd", "id": "e132", "label": "agreement relating to currents transaction conclud", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e132\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e agreement relating to currents transaction concluded under normal conditions"}, {"color": "#2ca02c", "id": "e133", "label": "managers", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e133\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Person\u003cbr\u003e\u003cb\u003efullName:\u003c/b\u003e managers"}, {"color": "#cccccc", "id": "e134", "label": "shareholder holding more than 10% of capital", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e134\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e Corporate or Individual\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e shareholder holding more than 10% of capital"}, {"color": "#cccccc", "id": "e135", "label": "statutory auditors", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e135\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e Auditor\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e statutory auditors"}, {"color": "#9467bd", "id": "e136", "label": "Any other project or decision", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e136\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Any other project or decision"}, {"color": "#e7969c", "id": "e138", "label": "Authorization of Annual Social Accounts", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e138\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e139", "label": "Authorization of Annual Budgets and Business Plans", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e139\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e140", "label": "Authorization of New Loan, Security or Financial C", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e140\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e141", "label": "Authorization of Guarantees, Endorsements or Suret", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e141\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e142", "label": "Authorization of Issuance of Capital Securities", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e142\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e143", "label": "Authorization of Acquisition or Disposal of Undert", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e143\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e144", "label": "Authorization of Investment, Expenditure or Commit", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e144\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e145", "label": "Authorization of Hiring or Dismissal", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e145\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e146", "label": "Authorization of Transaction Outside Normal Course", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e146\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e147", "label": "Authorization of Merger, Spin off, Contribution", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e147\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e148", "label": "Authorization of President\u0027s Remuneration Decision", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e148\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e149", "label": "Authorization of Related Party Transactions", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e149\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e150", "label": "Authorization of Other Projects/Decisions", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e150\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "e99", "label": "holdsPosition", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:holdsPosition\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e99\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e98", "to": "e98"}, {"arrows": "to", "from": "e98", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e98\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e100", "to": "e100"}, {"arrows": "to", "from": "e138", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e138\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e101", "to": "e101"}, {"arrows": "to", "from": "e139", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e139\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e102", "to": "e102"}, {"arrows": "to", "from": "e139", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e139\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e103", "to": "e103"}, {"arrows": "to", "from": "e140", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e140\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e104", "to": "e104"}, {"arrows": "to", "from": "e140", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e140\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e105", "to": "e105"}, {"arrows": "to", "from": "e140", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e140\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e106", "to": "e106"}, {"arrows": "to", "from": "e140", "label": "reportsFinancialMetric", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:reportsFinancialMetric\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e140\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e107", "to": "e107"}, {"arrows": "to", "from": "e141", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e141\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e108", "to": "e108"}, {"arrows": "to", "from": "e141", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e141\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e109", "to": "e109"}, {"arrows": "to", "from": "e141", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e141\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e110", "to": "e110"}, {"arrows": "to", "from": "e141", "label": "eventInvolvesParty", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:eventInvolvesParty\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e141\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e111", "to": "e111"}, {"arrows": "to", "from": "e142", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e142\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e112", "to": "e112"}, {"arrows": "to", "from": "e142", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e142\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e113", "to": "e113"}, {"arrows": "to", "from": "e143", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e143\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e114", "to": "e114"}, {"arrows": "to", "from": "e143", "label": "reportsFinancialMetric", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:reportsFinancialMetric\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e143\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e115", "to": "e115"}, {"arrows": "to", "from": "e144", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e144\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e116", "to": "e116"}, {"arrows": "to", "from": "e144", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e144\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e117", "to": "e117"}, {"arrows": "to", "from": "e144", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e144\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e118", "to": "e118"}, {"arrows": "to", "from": "e144", "label": "reportsFinancialMetric", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:reportsFinancialMetric\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e144\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e119", "to": "e119"}, {"arrows": "to", "from": "e145", "label": "eventInvolvesParty", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:eventInvolvesParty\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e145\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e120", "to": "e120"}, {"arrows": "to", "from": "e145", "label": "reportsFinancialMetric", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:reportsFinancialMetric\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e145\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e121", "to": "e121"}, {"arrows": "to", "from": "e145", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e145\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e122", "to": "e122"}, {"arrows": "to", "from": "e145", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e145\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e123", "to": "e123"}, {"arrows": "to", "from": "e146", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e146\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e124", "to": "e124"}, {"arrows": "to", "from": "e147", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e147\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e125", "to": "e125"}, {"arrows": "to", "from": "e147", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e147\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e126", "to": "e126"}, {"arrows": "to", "from": "e147", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e147\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e127", "to": "e127"}, {"arrows": "to", "from": "e147", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e147\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e128", "to": "e128"}, {"arrows": "to", "from": "e149", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e149\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e130", "to": "e130"}, {"arrows": "to", "from": "e130", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e130\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e131", "to": "e131"}, {"arrows": "to", "from": "e132", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e132\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e131", "to": "e131"}, {"arrows": "to", "from": "e130", "label": "eventInvolvesParty", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:eventInvolvesParty\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e130\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e134", "to": "e134"}, {"arrows": "to", "from": "e130", "label": "eventInvolvesParty", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:eventInvolvesParty\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e130\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e133", "to": "e133"}, {"arrows": "to", "from": "e150", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e150\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e136", "to": "e136"}, {"arrows": "to", "from": "e135", "label": "eventInvolvesParty", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:eventInvolvesParty\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e135\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e130", "to": "e130"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shape": "dot", "font": {"size": 14, "face": "Tahoma"}, "borderWidth": 2, "shadow": true}, "edges": {"arrows": {"to": {"enabled": true, "scaleFactor": 0.7}}, "color": {"inherit": "from"}, "smooth": {"type": "continuous", "roundness": 0.2}, "font": {"size": 10, "align": "middle"}, "shadow": true}, "physics": {"enabled": true, "barnesHut": {"gravitationalConstant": -30000, "centralGravity": 0.3, "springLength": 250, "springConstant": 0.04, "damping": 0.09}, "minVelocity": 0.75}, "interaction": {"hover": true, "tooltipDelay": 200, "multiselect": true, "navigationButtons": true, "keyboard": true}, "layout": {"hierarchical": false}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

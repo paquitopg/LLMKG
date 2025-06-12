@@ -1,0 +1,632 @@
+{
+  "entities": [
+    {
+      "id": "e98",
+      "type": "pekg:Group",
+      "name": "Social and Economic Committee (staff delegation)"
+    },
+    {
+      "id": "e99",
+      "type": "pekg:Person",
+      "fullName": "members of the Social and Economic Committee (staff delegation)"
+    },
+    {
+      "id": "e100",
+      "type": "pekg:GovernmentBody",
+      "name": "French Labor Code"
+    },
+    {
+      "id": "e101",
+      "type": "pekg:ProductOrService",
+      "name": "Annual social accounts",
+      "category": "Legal Document",
+      "description": "individual and consolidated, where applicable"
+    },
+    {
+      "id": "e102",
+      "type": "pekg:ProductOrService",
+      "name": "Annual budgets",
+      "category": "Financial Document"
+    },
+    {
+      "id": "e103",
+      "type": "pekg:ProductOrService",
+      "name": "business plans",
+      "category": "Financial Document"
+    },
+    {
+      "id": "e104",
+      "type": "pekg:ProductOrService",
+      "name": "loan",
+      "category": "Financial Instrument"
+    },
+    {
+      "id": "e105",
+      "type": "pekg:ProductOrService",
+      "name": "security",
+      "category": "Financial Instrument"
+    },
+    {
+      "id": "e106",
+      "type": "pekg:ProductOrService",
+      "name": "financial commitment",
+      "category": "Financial Instrument"
+    },
+    {
+      "id": "e107",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Loan/Security/Financial Commitment Threshold",
+      "valueString": "500,000 Euros",
+      "scope": "transaction"
+    },
+    {
+      "id": "e108",
+      "type": "pekg:ProductOrService",
+      "name": "guarantees",
+      "category": "Financial Instrument"
+    },
+    {
+      "id": "e109",
+      "type": "pekg:ProductOrService",
+      "name": "endorsements",
+      "category": "Financial Instrument"
+    },
+    {
+      "id": "e110",
+      "type": "pekg:ProductOrService",
+      "name": "suretyships",
+      "category": "Financial Instrument"
+    },
+    {
+      "id": "e111",
+      "type": "pekg:Company",
+      "name": "entities outside the SYSTRAN group"
+    },
+    {
+      "id": "e112",
+      "type": "pekg:ProductOrService",
+      "name": "capital securities",
+      "category": "Financial Instrument",
+      "description": "immediate or deferred"
+    },
+    {
+      "id": "e113",
+      "type": "pekg:ProductOrService",
+      "name": "stock option plans",
+      "category": "Financial Instrument"
+    },
+    {
+      "id": "e114",
+      "type": "pekg:ProductOrService",
+      "name": "undertaking",
+      "category": "Business Operation"
+    },
+    {
+      "id": "e115",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Acquisition/Disposal Threshold",
+      "valueString": "500,000 Euros",
+      "scope": "transaction"
+    },
+    {
+      "id": "e116",
+      "type": "pekg:ProductOrService",
+      "name": "investment",
+      "category": "Financial Activity"
+    },
+    {
+      "id": "e117",
+      "type": "pekg:ProductOrService",
+      "name": "expenditure",
+      "category": "Financial Activity"
+    },
+    {
+      "id": "e118",
+      "type": "pekg:ProductOrService",
+      "name": "commitment",
+      "category": "Financial Activity"
+    },
+    {
+      "id": "e119",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Operation Threshold",
+      "valueString": "1,000,000 Euros",
+      "scope": "transaction"
+    },
+    {
+      "id": "e120",
+      "type": "pekg:Person",
+      "fullName": "employee"
+    },
+    {
+      "id": "e121",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Employee Remuneration Threshold",
+      "valueString": "150,000 Euros",
+      "scope": "individual"
+    },
+    {
+      "id": "e122",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Hiring",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e123",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Dismissal",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e124",
+      "type": "pekg:ProductOrService",
+      "name": "transaction or undertaking outside the normal course of business",
+      "category": "Business Operation"
+    },
+    {
+      "id": "e125",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Merger",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e126",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Spin off",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e127",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Contribution",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e128",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Partial contribution of assets",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e129",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Decision on President's remuneration",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e130",
+      "type": "pekg:ProductOrService",
+      "name": "related party transactions",
+      "category": "Legal Provision"
+    },
+    {
+      "id": "e131",
+      "type": "pekg:GovernmentBody",
+      "name": "Commercial Code"
+    },
+    {
+      "id": "e132",
+      "type": "pekg:ProductOrService",
+      "name": "agreement relating to currents transaction concluded under normal conditions",
+      "category": "Legal Provision"
+    },
+    {
+      "id": "e133",
+      "type": "pekg:Person",
+      "fullName": "managers"
+    },
+    {
+      "id": "e134",
+      "type": "Corporate or Individual",
+      "name": "shareholder holding more than 10% of capital",
+      "percentageOwned": 0.1
+    },
+    {
+      "id": "e135",
+      "type": "Auditor",
+      "name": "statutory auditors"
+    },
+    {
+      "id": "e136",
+      "type": "pekg:ProductOrService",
+      "name": "Any other project or decision",
+      "category": "Business Operation"
+    },
+    {
+      "id": "e138",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Annual Social Accounts",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e139",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Annual Budgets and Business Plans",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e140",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of New Loan, Security or Financial Commitment",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e141",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Guarantees, Endorsements or Suretyships",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e142",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Issuance of Capital Securities",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e143",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Acquisition or Disposal of Undertaking/Shares",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e144",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Investment, Expenditure or Commitment",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e145",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Hiring or Dismissal",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e146",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Transaction Outside Normal Course of Business",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e147",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Merger, Spin off, Contribution",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e148",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of President's Remuneration Decision",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e149",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Related Party Transactions",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e150",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Other Projects/Decisions",
+      "eventType": "Corporate Action"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e99",
+      "target": "e98",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e99",
+      "target": "e88",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e98",
+      "target": "e100",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e16",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e16",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e16",
+      "target": "e138",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e138",
+      "target": "e101",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e16",
+      "target": "e139",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e139",
+      "target": "e102",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e139",
+      "target": "e103",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e16",
+      "target": "e140",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e140",
+      "target": "e104",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e140",
+      "target": "e105",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e140",
+      "target": "e106",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e140",
+      "target": "e107",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e16",
+      "target": "e141",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e141",
+      "target": "e108",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e141",
+      "target": "e109",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e141",
+      "target": "e110",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e141",
+      "target": "e111",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e16",
+      "target": "e142",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e142",
+      "target": "e112",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e142",
+      "target": "e113",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e16",
+      "target": "e143",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e143",
+      "target": "e114",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e143",
+      "target": "e39",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e143",
+      "target": "e115",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e16",
+      "target": "e144",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e144",
+      "target": "e116",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e144",
+      "target": "e117",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e144",
+      "target": "e118",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e144",
+      "target": "e119",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e16",
+      "target": "e145",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e145",
+      "target": "e120",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e145",
+      "target": "e121",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e145",
+      "target": "e122",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e145",
+      "target": "e123",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e16",
+      "target": "e146",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e146",
+      "target": "e124",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e16",
+      "target": "e147",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e147",
+      "target": "e125",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e147",
+      "target": "e126",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e147",
+      "target": "e127",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e147",
+      "target": "e128",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e147",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e16",
+      "target": "e148",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e148",
+      "target": "e75",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e148",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e16",
+      "target": "e149",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e149",
+      "target": "e130",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e130",
+      "target": "e131",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e132",
+      "target": "e131",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e130",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e130",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e130",
+      "target": "e16",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e130",
+      "target": "e134",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e130",
+      "target": "e133",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e16",
+      "target": "e150",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e150",
+      "target": "e136",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e16",
+      "target": "e130",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e135",
+      "target": "e130",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e16",
+      "target": "e20",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e135",
+      "target": "e20",
+      "type": "pekg:eventInvolvesParty"
+    }
+  ],
+  "page_number": 8
+}

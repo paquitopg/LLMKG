@@ -1,0 +1,3546 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN SAS",
+      "description": "French simplified joint company (soci\u00e9t\u00e9 par actions simplifi\u00e9e)",
+      "awardsAndCertifications": [
+        "RCS Paris 334 343 993"
+      ],
+      "_source_page": 1
+    },
+    {
+      "id": "e2",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Share Capital",
+      "valueString": "4,072,679 Euros",
+      "_source_page": 1,
+      "scope": "company"
+    },
+    {
+      "id": "e3",
+      "type": "pekg:Location",
+      "locationName": "Paris",
+      "locationType": "City",
+      "officeSpecificInfo": "5, rue Feydeau - 75002 Paris \u2013 France",
+      "_source_page": 1
+    },
+    {
+      "id": "e4",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Bylaws updated",
+      "eventType": "Legal Document Update",
+      "dateOrYear": "30 November 2022",
+      "_source_page": 1
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Position",
+      "titleName": "President",
+      "_source_page": 1
+    },
+    {
+      "id": "e6",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Bylaws Certified",
+      "eventType": "Legal Document Certification",
+      "dateOrYear": "December 31, 2022",
+      "_source_page": 1
+    },
+    {
+      "id": "e7",
+      "type": "pekg:Company",
+      "name": "SOISY TRADUCTION",
+      "description": "private limited company (soci\u00e9t\u00e9 \u00e0 responsabilit\u00e9 limit\u00e9e)",
+      "_source_page": 2
+    },
+    {
+      "id": "e8",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Transformation to SYSTRAN SA",
+      "eventType": "Company Transformation",
+      "dateOrYear": "30 December 1988",
+      "_source_page": 2
+    },
+    {
+      "id": "e9",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Transformation to SYSTRAN SAS",
+      "eventType": "Company Transformation",
+      "dateOrYear": "12 July 2016",
+      "_source_page": 2
+    },
+    {
+      "id": "e10",
+      "type": "pekg:ProductOrService",
+      "name": "AUTOMATIC TRANSLATION systems",
+      "description": "on computer (software and hardware), of all natural languages pairs",
+      "_source_page": 2
+    },
+    {
+      "id": "e11",
+      "type": "pekg:ProductOrService",
+      "name": "dictionaries",
+      "_source_page": 2
+    },
+    {
+      "id": "e12",
+      "type": "pekg:ProductOrService",
+      "name": "TERMINOLOGICAL databases",
+      "_source_page": 2
+    },
+    {
+      "id": "e13",
+      "type": "pekg:ProductOrService",
+      "name": "MULTILANGUAGES applications of NATURAL LANGUAGES PROCESSING",
+      "_source_page": 2
+    },
+    {
+      "id": "e14",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "LANGUAGE INDUSTRIES",
+      "_source_page": 2
+    },
+    {
+      "id": "e15",
+      "type": "pekg:Position",
+      "titleName": "Board of Directors",
+      "_source_page": 2
+    },
+    {
+      "id": "e16",
+      "type": "pekg:Location",
+      "locationName": "SOISY S/S MONTMORENCY",
+      "locationType": "City",
+      "_source_page": 2
+    },
+    {
+      "id": "e17",
+      "type": "pekg:Location",
+      "locationName": "ERMONT-OUEST",
+      "locationType": "City",
+      "_source_page": 2
+    },
+    {
+      "id": "e18",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Company Duration",
+      "eventType": "Legal Term",
+      "description": "NINETY-NINE (99) years, as from the date of its registration with the register of trade and companies, except in case of early dissolution or extension.",
+      "_source_page": 3
+    },
+    {
+      "id": "e19",
+      "type": "Group",
+      "name": "Shareholders",
+      "_source_page": 3
+    },
+    {
+      "id": "e20",
+      "type": "Court",
+      "name": "Commercial Court",
+      "_source_page": 3
+    },
+    {
+      "id": "e21",
+      "type": "pekg:Person",
+      "fullName": "Presiding Judge",
+      "biographySummary": "of the Commercial Court",
+      "_source_page": 3
+    },
+    {
+      "id": "e22",
+      "type": "pekg:Person",
+      "fullName": "Judicial Representative",
+      "_source_page": 3
+    },
+    {
+      "id": "e23",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Number of Shares",
+      "valueString": "8,145,358 shares",
+      "scope": "company",
+      "description": "fully paid up, of the same category",
+      "_source_page": 3
+    },
+    {
+      "id": "e24",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Nominal Value per Share",
+      "valueString": "0.50 Euro",
+      "scope": "per share",
+      "_source_page": 3
+    },
+    {
+      "id": "e25",
+      "type": "pekg:ProductOrService",
+      "name": "Ordinary Shares",
+      "category": "Equity",
+      "_source_page": 3
+    },
+    {
+      "id": "e26",
+      "type": "pekg:ProductOrService",
+      "name": "Preferred Shares",
+      "category": "Equity",
+      "_source_page": 3,
+      "description": "with or without voting rights, with special rights of any kind, temporarily or permanently"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:ProductOrService",
+      "name": "Securities giving access to share capital",
+      "category": "Financial Instrument",
+      "_source_page": 3
+    },
+    {
+      "id": "e28",
+      "type": "pekg:ProductOrService",
+      "name": "Bonds",
+      "category": "Financial Instrument",
+      "alias": [
+        "titres de cr\u00e9ances"
+      ],
+      "_source_page": 3
+    },
+    {
+      "id": "e29",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Extraordinary General Meeting of Shareholders",
+      "eventType": "Corporate Meeting",
+      "_source_page": 3
+    },
+    {
+      "id": "e30",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Share Capital Modification",
+      "eventType": "Corporate Action",
+      "description": "Increases or decreases of the share capital may only be carried out upon collective decision of the shareholders, deciding on the President\u2019s management report.",
+      "_source_page": 3
+    },
+    {
+      "id": "e31",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Share Capital Increase",
+      "eventType": "Corporate Action",
+      "description": "Increases of the share capital may be carried out either by issuance of ordinary shares or preferred shares, or by raising the nominal value of the existing shares. The increase may also be carried out by the exercise of the rights related to securities giving access to the share capital, in the conditions provided for by the law.",
+      "_source_page": 3
+    },
+    {
+      "id": "e32",
+      "type": "pekg:ProductOrService",
+      "name": "cash shares",
+      "description": "new cash shares",
+      "_source_page": 4
+    },
+    {
+      "id": "e33",
+      "type": "pekg:FinancialMetric",
+      "metricName": "nominal (or par value)",
+      "scope": "per share",
+      "_source_page": 4
+    },
+    {
+      "id": "e34",
+      "type": "pekg:FinancialMetric",
+      "metricName": "premium",
+      "scope": "per share",
+      "_source_page": 4
+    },
+    {
+      "id": "e35",
+      "type": "pekg:ProductOrService",
+      "name": "fractional shares",
+      "description": "rompus",
+      "_source_page": 4
+    },
+    {
+      "id": "e36",
+      "type": "pekg:ProductOrService",
+      "name": "Securities",
+      "category": "Financial Instrument",
+      "description": "general securities",
+      "_source_page": 4
+    },
+    {
+      "id": "e37",
+      "type": "pekg:Person",
+      "fullName": "beneficial owner",
+      "biographySummary": "usufruitier in French",
+      "_source_page": 4
+    },
+    {
+      "id": "e38",
+      "type": "pekg:Person",
+      "fullName": "bare owner",
+      "biographySummary": "nu-propri\u00e9taire in French",
+      "_source_page": 4
+    },
+    {
+      "id": "e39",
+      "type": "pekg:ProductOrService",
+      "name": "shares",
+      "category": "Equity",
+      "description": "general shares",
+      "_source_page": 4
+    },
+    {
+      "id": "e40",
+      "type": "pekg:ProductOrService",
+      "name": "preferential right to subscription",
+      "category": "Legal Right",
+      "_source_page": 4
+    },
+    {
+      "id": "e41",
+      "type": "pekg:ProductOrService",
+      "name": "special benefit",
+      "description": "not provided for in bylaws",
+      "_source_page": 4
+    },
+    {
+      "id": "e42",
+      "type": "pekg:ProductOrService",
+      "name": "voting rights",
+      "category": "Legal Right",
+      "_source_page": 4
+    },
+    {
+      "id": "e43",
+      "type": "Group",
+      "name": "purchasers",
+      "_source_page": 4
+    },
+    {
+      "id": "e44",
+      "type": "Group",
+      "name": "subscribers",
+      "_source_page": 4
+    },
+    {
+      "id": "e45",
+      "type": "Individual",
+      "name": "subscriber or shareholder selling its shares",
+      "_source_page": 4
+    },
+    {
+      "id": "e46",
+      "type": "Individual",
+      "name": "defaulting shareholder",
+      "_source_page": 4
+    },
+    {
+      "id": "e47",
+      "type": "pekg:FinancialMetric",
+      "metricName": "legal rate",
+      "scope": "general",
+      "_source_page": 4
+    },
+    {
+      "id": "e48",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "buy-back",
+      "eventType": "Corporate Action",
+      "_source_page": 4
+    },
+    {
+      "id": "e49",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "conversion",
+      "eventType": "Corporate Action",
+      "_source_page": 4
+    },
+    {
+      "id": "e50",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "depreciation of the share capital",
+      "eventType": "Corporate Action",
+      "_source_page": 4
+    },
+    {
+      "id": "e51",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Paying Up of Shares",
+      "eventType": "Corporate Action",
+      "_source_page": 4
+    },
+    {
+      "id": "e52",
+      "type": "pekg:ProductOrService",
+      "name": "securities giving right to the allotment of debt instruments",
+      "category": "Financial Instrument",
+      "_source_page": 5
+    },
+    {
+      "id": "e53",
+      "type": "pekg:Company",
+      "name": "company which controls it",
+      "description": "a company which controls SYSTRAN SAS",
+      "_source_page": 5
+    },
+    {
+      "id": "e54",
+      "type": "pekg:Person",
+      "fullName": "co-owner",
+      "_source_page": 5
+    },
+    {
+      "id": "e55",
+      "type": "Group",
+      "name": "Joint owners of shares",
+      "_source_page": 5
+    },
+    {
+      "id": "e56",
+      "type": "pekg:ProductOrService",
+      "name": "bylaws",
+      "category": "Legal Document",
+      "_source_page": 5
+    },
+    {
+      "id": "e57",
+      "type": "pekg:ProductOrService",
+      "name": "resolutions",
+      "category": "Legal Document",
+      "_source_page": 5
+    },
+    {
+      "id": "e58",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Form of Shares",
+      "eventType": "Legal Provision",
+      "description": "Shares and any other securities issued by the company shall be in nominative form and entered in an account.",
+      "_source_page": 5
+    },
+    {
+      "id": "e59",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Transfer of Shares",
+      "eventType": "Legal Provision",
+      "description": "Shares are freely transferable by account transfer in the company's books, applicable only to paid-up shares.",
+      "_source_page": 5
+    },
+    {
+      "id": "e60",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Issuance of Securities Other Than Shares",
+      "eventType": "Corporate Action",
+      "description": "Issuance of bonds decided or authorized by Board of Directors upon President's proposal. Issuance of securities giving access to capital or debt instruments authorized by extraordinary shareholder decision.",
+      "_source_page": 5
+    },
+    {
+      "id": "e61",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Indivisibility of Shares",
+      "eventType": "Legal Provision",
+      "description": "Shares are indivisible vis-\u00e0-vis the company; joint owners represented by one proxy, or appointed by Presiding Judge of Commercial Court.",
+      "_source_page": 5
+    },
+    {
+      "id": "e62",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Rights and Obligations Attached to Shares",
+      "eventType": "Legal Provision",
+      "description": "Possession of a share entails acceptance of bylaws and duly adopted shareholder resolutions.",
+      "_source_page": 5
+    },
+    {
+      "id": "e63",
+      "type": "pekg:Person",
+      "fullName": "contributor in kind",
+      "_source_page": 6
+    },
+    {
+      "id": "e64",
+      "type": "pekg:Person",
+      "fullName": "beneficiary of a special benefit",
+      "_source_page": 6
+    },
+    {
+      "id": "e65",
+      "type": "pekg:Company",
+      "name": "corporate entity",
+      "description": "An entity appointed as President",
+      "_source_page": 6
+    },
+    {
+      "id": "e66",
+      "type": "pekg:Person",
+      "fullName": "natural person",
+      "biographySummary": "Permanent representative appointed by a corporate entity President",
+      "_source_page": 6
+    },
+    {
+      "id": "e67",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Compensation",
+      "scope": "individual",
+      "_source_page": 6
+    },
+    {
+      "id": "e68",
+      "type": "pekg:UseCaseOrIndustry",
+      "name": "Company's Purpose",
+      "description": "The defined scope of the company's operations",
+      "_source_page": 6
+    },
+    {
+      "id": "e69",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "General Meetings",
+      "eventType": "Corporate Meeting",
+      "_source_page": 6
+    },
+    {
+      "id": "e70",
+      "type": "pekg:ProductOrService",
+      "name": "Annual Report",
+      "category": "Legal Document",
+      "_source_page": 6
+    },
+    {
+      "id": "e71",
+      "type": "pekg:Company",
+      "name": "Third Parties",
+      "description": "External entities the company deals with",
+      "_source_page": 6
+    },
+    {
+      "id": "e72",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Remuneration",
+      "scope": "individual",
+      "_source_page": 6
+    },
+    {
+      "id": "e73",
+      "type": "pekg:Person",
+      "fullName": "Collaborators",
+      "biographySummary": "Individuals to whom the President may grant delegations of powers",
+      "_source_page": 6
+    },
+    {
+      "id": "e74",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Profits",
+      "scope": "company",
+      "_source_page": 6
+    },
+    {
+      "id": "e75",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Assets",
+      "scope": "company",
+      "_source_page": 6
+    },
+    {
+      "id": "e76",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Liquidation Dividends",
+      "scope": "company",
+      "_source_page": 6
+    },
+    {
+      "id": "e77",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Taxes",
+      "scope": "company",
+      "_source_page": 6
+    },
+    {
+      "id": "e78",
+      "type": "pekg:Location",
+      "locationName": "company's head office",
+      "locationType": "Office",
+      "officeSpecificInfo": "at the company's head office or at any other place specified in the convening notice, in France or abroad",
+      "_source_page": 7
+    },
+    {
+      "id": "e79",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "ordinary collective decision of the shareholders",
+      "eventType": "Corporate Meeting",
+      "_source_page": 7
+    },
+    {
+      "id": "e80",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "co-optation",
+      "eventType": "Corporate Action",
+      "_source_page": 7
+    },
+    {
+      "id": "e81",
+      "type": "pekg:Position",
+      "titleName": "permanent representative",
+      "_source_page": 7
+    },
+    {
+      "id": "e82",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "removal of Board members",
+      "eventType": "Corporate Action",
+      "_source_page": 7
+    },
+    {
+      "id": "e83",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "resignation of Board members",
+      "eventType": "Corporate Action",
+      "_source_page": 7
+    },
+    {
+      "id": "e84",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "vacancy of Board members",
+      "eventType": "Corporate Action",
+      "_source_page": 7
+    },
+    {
+      "id": "e85",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "appointments to Board",
+      "eventType": "Corporate Action",
+      "_source_page": 7
+    },
+    {
+      "id": "e86",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Board Meetings",
+      "eventType": "Corporate Meeting",
+      "_source_page": 7
+    },
+    {
+      "id": "e87",
+      "type": "pekg:ProductOrService",
+      "name": "convening notice",
+      "category": "Legal Document",
+      "_source_page": 7
+    },
+    {
+      "id": "e88",
+      "type": "pekg:ProductOrService",
+      "name": "agenda",
+      "category": "Legal Document",
+      "_source_page": 7
+    },
+    {
+      "id": "e89",
+      "type": "pekg:Technology",
+      "name": "videoconferencing",
+      "_source_page": 7
+    },
+    {
+      "id": "e90",
+      "type": "pekg:Technology",
+      "name": "electronic communication",
+      "_source_page": 7
+    },
+    {
+      "id": "e91",
+      "type": "pekg:Position",
+      "titleName": "Chairperson",
+      "_source_page": 7
+    },
+    {
+      "id": "e92",
+      "type": "pekg:ProductOrService",
+      "name": "Board decisions",
+      "category": "Legal Document",
+      "_source_page": 7
+    },
+    {
+      "id": "e93",
+      "type": "pekg:ProductOrService",
+      "name": "minutes of Board meetings",
+      "category": "Legal Document",
+      "_source_page": 7,
+      "description": "Records resolutions of shareholder meetings, indicating date, place, President's identity, convening method, agenda, submitted documents/reports, debates, draft resolutions, and vote results."
+    },
+    {
+      "id": "e94",
+      "type": "pekg:FinancialMetric",
+      "metricName": "reimbursable costs",
+      "scope": "individual",
+      "_source_page": 7
+    },
+    {
+      "id": "e95",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Board of Directors Composition",
+      "kpiValueString": "three (3) or more members",
+      "description": "minimum number of members for the Board of Directors",
+      "_source_page": 7
+    },
+    {
+      "id": "e96",
+      "type": "pekg:Group",
+      "name": "Social and Economic Committee (staff delegation)",
+      "_source_page": 8
+    },
+    {
+      "id": "e97",
+      "type": "pekg:Person",
+      "fullName": "members of the Social and Economic Committee (staff delegation)",
+      "_source_page": 8
+    },
+    {
+      "id": "e98",
+      "type": "pekg:GovernmentBody",
+      "name": "French Labor Code",
+      "_source_page": 8
+    },
+    {
+      "id": "e99",
+      "type": "pekg:ProductOrService",
+      "name": "Annual social accounts",
+      "category": "Legal Document",
+      "description": "individual and consolidated, where applicable",
+      "_source_page": 8
+    },
+    {
+      "id": "e100",
+      "type": "pekg:ProductOrService",
+      "name": "Annual budgets",
+      "category": "Financial Document",
+      "_source_page": 8
+    },
+    {
+      "id": "e101",
+      "type": "pekg:ProductOrService",
+      "name": "business plans",
+      "category": "Financial Document",
+      "_source_page": 8
+    },
+    {
+      "id": "e102",
+      "type": "pekg:ProductOrService",
+      "name": "loan",
+      "category": "Financial Instrument",
+      "_source_page": 8
+    },
+    {
+      "id": "e103",
+      "type": "pekg:ProductOrService",
+      "name": "security",
+      "category": "Financial Instrument",
+      "_source_page": 8
+    },
+    {
+      "id": "e104",
+      "type": "pekg:ProductOrService",
+      "name": "financial commitment",
+      "category": "Financial Instrument",
+      "_source_page": 8
+    },
+    {
+      "id": "e105",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Loan/Security/Financial Commitment Threshold",
+      "valueString": "500,000 Euros",
+      "scope": "transaction",
+      "_source_page": 8
+    },
+    {
+      "id": "e106",
+      "type": "pekg:ProductOrService",
+      "name": "guarantees",
+      "category": "Financial Instrument",
+      "_source_page": 8
+    },
+    {
+      "id": "e107",
+      "type": "pekg:ProductOrService",
+      "name": "endorsements",
+      "category": "Financial Instrument",
+      "_source_page": 8
+    },
+    {
+      "id": "e108",
+      "type": "pekg:ProductOrService",
+      "name": "suretyships",
+      "category": "Financial Instrument",
+      "_source_page": 8
+    },
+    {
+      "id": "e109",
+      "type": "pekg:Company",
+      "name": "entities outside the SYSTRAN group",
+      "_source_page": 8
+    },
+    {
+      "id": "e110",
+      "type": "pekg:ProductOrService",
+      "name": "capital securities",
+      "category": "Financial Instrument",
+      "description": "immediate or deferred",
+      "_source_page": 8
+    },
+    {
+      "id": "e111",
+      "type": "pekg:ProductOrService",
+      "name": "stock option plans",
+      "category": "Financial Instrument",
+      "_source_page": 8
+    },
+    {
+      "id": "e112",
+      "type": "pekg:ProductOrService",
+      "name": "undertaking",
+      "category": "Business Operation",
+      "_source_page": 8
+    },
+    {
+      "id": "e113",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Acquisition/Disposal Threshold",
+      "valueString": "500,000 Euros",
+      "scope": "transaction",
+      "_source_page": 8
+    },
+    {
+      "id": "e114",
+      "type": "pekg:ProductOrService",
+      "name": "investment",
+      "category": "Financial Activity",
+      "_source_page": 8
+    },
+    {
+      "id": "e115",
+      "type": "pekg:ProductOrService",
+      "name": "expenditure",
+      "category": "Financial Activity",
+      "_source_page": 8
+    },
+    {
+      "id": "e116",
+      "type": "pekg:ProductOrService",
+      "name": "commitment",
+      "category": "Financial Activity",
+      "_source_page": 8
+    },
+    {
+      "id": "e117",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Annual Operation Threshold",
+      "valueString": "1,000,000 Euros",
+      "scope": "transaction",
+      "_source_page": 8
+    },
+    {
+      "id": "e118",
+      "type": "pekg:Person",
+      "fullName": "employee",
+      "_source_page": 8
+    },
+    {
+      "id": "e119",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Employee Remuneration Threshold",
+      "valueString": "150,000 Euros",
+      "scope": "individual",
+      "_source_page": 8
+    },
+    {
+      "id": "e120",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Hiring",
+      "eventType": "Corporate Action",
+      "_source_page": 8
+    },
+    {
+      "id": "e121",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Dismissal",
+      "eventType": "Corporate Action",
+      "_source_page": 8
+    },
+    {
+      "id": "e122",
+      "type": "pekg:ProductOrService",
+      "name": "transaction or undertaking outside the normal course of business",
+      "category": "Business Operation",
+      "_source_page": 8
+    },
+    {
+      "id": "e123",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Merger",
+      "eventType": "Corporate Action",
+      "_source_page": 8
+    },
+    {
+      "id": "e124",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Spin off",
+      "eventType": "Corporate Action",
+      "_source_page": 8
+    },
+    {
+      "id": "e125",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Contribution",
+      "eventType": "Corporate Action",
+      "_source_page": 8
+    },
+    {
+      "id": "e126",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Partial contribution of assets",
+      "eventType": "Corporate Action",
+      "_source_page": 8
+    },
+    {
+      "id": "e127",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Decision on President's remuneration",
+      "eventType": "Corporate Action",
+      "_source_page": 8
+    },
+    {
+      "id": "e128",
+      "type": "pekg:ProductOrService",
+      "name": "related party transactions",
+      "category": "Legal Provision",
+      "_source_page": 8
+    },
+    {
+      "id": "e129",
+      "type": "pekg:GovernmentBody",
+      "name": "Commercial Code",
+      "_source_page": 8
+    },
+    {
+      "id": "e130",
+      "type": "pekg:ProductOrService",
+      "name": "agreement relating to currents transaction concluded under normal conditions",
+      "category": "Legal Provision",
+      "_source_page": 8
+    },
+    {
+      "id": "e131",
+      "type": "pekg:Person",
+      "fullName": "managers",
+      "_source_page": 8
+    },
+    {
+      "id": "e132",
+      "type": "Corporate or Individual",
+      "name": "shareholder holding more than 10% of capital",
+      "percentageOwned": 0.1,
+      "_source_page": 8
+    },
+    {
+      "id": "e133",
+      "type": "Auditor",
+      "name": "statutory auditors",
+      "_source_page": 8
+    },
+    {
+      "id": "e134",
+      "type": "pekg:ProductOrService",
+      "name": "Any other project or decision",
+      "category": "Business Operation",
+      "_source_page": 8
+    },
+    {
+      "id": "e135",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Annual Social Accounts",
+      "eventType": "Corporate Action",
+      "_source_page": 8
+    },
+    {
+      "id": "e136",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Annual Budgets and Business Plans",
+      "eventType": "Corporate Action",
+      "_source_page": 8
+    },
+    {
+      "id": "e137",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of New Loan, Security or Financial Commitment",
+      "eventType": "Corporate Action",
+      "_source_page": 8
+    },
+    {
+      "id": "e138",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Guarantees, Endorsements or Suretyships",
+      "eventType": "Corporate Action",
+      "_source_page": 8
+    },
+    {
+      "id": "e139",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Issuance of Capital Securities",
+      "eventType": "Corporate Action",
+      "_source_page": 8
+    },
+    {
+      "id": "e140",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Acquisition or Disposal of Undertaking/Shares",
+      "eventType": "Corporate Action",
+      "_source_page": 8
+    },
+    {
+      "id": "e141",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Investment, Expenditure or Commitment",
+      "eventType": "Corporate Action",
+      "_source_page": 8
+    },
+    {
+      "id": "e142",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Hiring or Dismissal",
+      "eventType": "Corporate Action",
+      "_source_page": 8
+    },
+    {
+      "id": "e143",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Transaction Outside Normal Course of Business",
+      "eventType": "Corporate Action",
+      "_source_page": 8
+    },
+    {
+      "id": "e144",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Merger, Spin off, Contribution",
+      "eventType": "Corporate Action",
+      "_source_page": 8
+    },
+    {
+      "id": "e145",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of President's Remuneration Decision",
+      "eventType": "Corporate Action",
+      "_source_page": 8
+    },
+    {
+      "id": "e146",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Related Party Transactions",
+      "eventType": "Corporate Action",
+      "_source_page": 8
+    },
+    {
+      "id": "e147",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Authorization of Other Projects/Decisions",
+      "eventType": "Corporate Action",
+      "_source_page": 8
+    },
+    {
+      "id": "e148",
+      "type": "pekg:ProductOrService",
+      "name": "overdraft facilities",
+      "description": "on a current account or otherwise",
+      "_source_page": 9
+    },
+    {
+      "id": "e149",
+      "type": "pekg:ProductOrService",
+      "name": "pledge of security",
+      "_source_page": 9
+    },
+    {
+      "id": "e150",
+      "type": "pekg:Person",
+      "fullName": "interested party",
+      "biographySummary": "relevant interested party",
+      "_source_page": 9
+    },
+    {
+      "id": "e151",
+      "type": "pekg:Person",
+      "fullName": "spouse",
+      "_source_page": 9
+    },
+    {
+      "id": "e152",
+      "type": "pekg:Person",
+      "fullName": "relatives",
+      "biographySummary": "in the ascending and descending line",
+      "_source_page": 9
+    },
+    {
+      "id": "e153",
+      "type": "pekg:Person",
+      "fullName": "intermediary",
+      "_source_page": 9
+    },
+    {
+      "id": "e154",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Audit",
+      "eventType": "Corporate Action",
+      "_source_page": 9
+    },
+    {
+      "id": "e155",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "General Meetings of Shareholders",
+      "eventType": "Corporate Meeting",
+      "_source_page": 9
+    },
+    {
+      "id": "e156",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Collective Decisions",
+      "eventType": "Corporate Meeting",
+      "description": "ordinary, extraordinary or special",
+      "_source_page": 9
+    },
+    {
+      "id": "e157",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Appointment by Ordinary Collective Decision",
+      "eventType": "Corporate Action",
+      "_source_page": 9
+    },
+    {
+      "id": "e158",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Extraordinary Decisions",
+      "eventType": "Corporate Meeting",
+      "description": "related to any purpose that may entail directly or indirectly a modification of the bylaws",
+      "_source_page": 9
+    },
+    {
+      "id": "e159",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Special Decisions",
+      "eventType": "Corporate Meeting",
+      "description": "made by the owners of shares of a determined class to decide on any modification of the rights attributed to the shares of this class",
+      "_source_page": 9
+    },
+    {
+      "id": "e160",
+      "type": "Group",
+      "name": "owners of shares of a determined class",
+      "_source_page": 9
+    },
+    {
+      "id": "e161",
+      "type": "pekg:ProductOrService",
+      "name": "issuance agreement",
+      "_source_page": 9
+    },
+    {
+      "id": "e162",
+      "type": "pekg:Shareholder",
+      "name": "Sole Shareholder",
+      "_source_page": 9
+    },
+    {
+      "id": "e163",
+      "type": "pekg:ProductOrService",
+      "name": "draft resolutions",
+      "category": "Legal Document",
+      "_source_page": 9
+    },
+    {
+      "id": "e164",
+      "type": "pekg:ProductOrService",
+      "name": "documents",
+      "category": "Legal Document",
+      "description": "necessary for its information",
+      "_source_page": 9
+    },
+    {
+      "id": "e165",
+      "type": "pekg:FinancialMetric",
+      "metricName": "annual accounts",
+      "scope": "company",
+      "_source_page": 9
+    },
+    {
+      "id": "e166",
+      "type": "pekg:ProductOrService",
+      "name": "Unapproved agreements",
+      "category": "Legal Document",
+      "_source_page": 9
+    },
+    {
+      "id": "e167",
+      "type": "pekg:FinancialMetric",
+      "metricName": "adverse consequences",
+      "scope": "company",
+      "_source_page": 9
+    },
+    {
+      "id": "e168",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Appointment of Auditors",
+      "eventType": "Corporate Action",
+      "_source_page": 9
+    },
+    {
+      "id": "e169",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Granting of Authorizations",
+      "eventType": "Corporate Action",
+      "_source_page": 9
+    },
+    {
+      "id": "e170",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Modification of Issuance Agreement",
+      "eventType": "Corporate Action",
+      "_source_page": 9
+    },
+    {
+      "id": "e171",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Subscription",
+      "eventType": "Corporate Action",
+      "_source_page": 9
+    },
+    {
+      "id": "e172",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Allotment of Shares",
+      "eventType": "Corporate Action",
+      "_source_page": 9
+    },
+    {
+      "id": "e173",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Holding of Meetings",
+      "eventType": "Corporate Meeting",
+      "_source_page": 9
+    },
+    {
+      "id": "e174",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Convening",
+      "eventType": "Corporate Meeting",
+      "_source_page": 9,
+      "description": "convened fifteen (15) days at least before the meeting, either by ordinary letter or by registered letter, or by fax or an electronic mean of telecommunication."
+    },
+    {
+      "id": "e175",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Vote",
+      "eventType": "Corporate Action",
+      "_source_page": 9,
+      "description": "Only questions on the agenda shall be submitted to a vote unless the shareholders are all present and decide by mutual agreement to deliberate on other questions."
+    },
+    {
+      "id": "e176",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Majority",
+      "eventType": "Legal Provision",
+      "_source_page": 9
+    },
+    {
+      "id": "e177",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "President's failure to act",
+      "eventType": "Corporate Action",
+      "_source_page": 9
+    },
+    {
+      "id": "e178",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Article 21.2.5",
+      "eventType": "Legal Provision",
+      "_source_page": 10
+    },
+    {
+      "id": "e179",
+      "type": "pekg:ProductOrService",
+      "name": "ordinary letter",
+      "category": "Communication Method",
+      "_source_page": 10
+    },
+    {
+      "id": "e180",
+      "type": "pekg:ProductOrService",
+      "name": "registered letter",
+      "category": "Communication Method",
+      "_source_page": 10
+    },
+    {
+      "id": "e181",
+      "type": "pekg:Technology",
+      "name": "fax",
+      "_source_page": 10
+    },
+    {
+      "id": "e182",
+      "type": "pekg:ProductOrService",
+      "name": "attendance sheet",
+      "category": "Legal Document",
+      "_source_page": 10
+    },
+    {
+      "id": "e183",
+      "type": "pekg:Person",
+      "fullName": "representatives",
+      "_source_page": 10
+    },
+    {
+      "id": "e184",
+      "type": "pekg:Person",
+      "fullName": "attorneys",
+      "_source_page": 10
+    },
+    {
+      "id": "e185",
+      "type": "pekg:Person",
+      "fullName": "proxy",
+      "_source_page": 10
+    },
+    {
+      "id": "e186",
+      "type": "pekg:ProductOrService",
+      "name": "special register",
+      "category": "Legal Document",
+      "_source_page": 10
+    },
+    {
+      "id": "e187",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Written Consultation",
+      "eventType": "Corporate Meeting",
+      "_source_page": 10
+    },
+    {
+      "id": "e188",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Abstention Rule",
+      "eventType": "Legal Provision",
+      "description": "Shareholder not replying within deadline for written consultation is considered abstained.",
+      "_source_page": 10
+    },
+    {
+      "id": "e189",
+      "type": "pekg:ProductOrService",
+      "name": "right to participate in collective decisions",
+      "category": "Legal Right",
+      "description": "Shareholder's right to participate if shares are registered in their name.",
+      "_source_page": 10
+    },
+    {
+      "id": "e190",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Shareholder Representation",
+      "eventType": "Legal Provision",
+      "description": "Shareholders may be represented by another shareholder or by a duly mandated third party (proxy).",
+      "_source_page": 10
+    },
+    {
+      "id": "e191",
+      "type": "pekg:ProductOrService",
+      "name": "act",
+      "category": "Legal Document",
+      "description": "consent of all shareholders expressed in an act",
+      "_source_page": 10
+    },
+    {
+      "id": "e192",
+      "type": "pekg:Position",
+      "titleName": "Managing Director",
+      "_source_page": 11
+    },
+    {
+      "id": "e193",
+      "type": "pekg:Person",
+      "fullName": "liquidator",
+      "_source_page": 11
+    },
+    {
+      "id": "e194",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Quorum",
+      "eventType": "Legal Provision",
+      "_source_page": 11
+    },
+    {
+      "id": "e195",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "unanimous vote",
+      "eventType": "Legal Provision",
+      "_source_page": 11
+    },
+    {
+      "id": "e196",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "statutory clause",
+      "eventType": "Legal Provision",
+      "_source_page": 11
+    },
+    {
+      "id": "e197",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "transfer/lock-up of shares",
+      "eventType": "Legal Provision",
+      "_source_page": 11
+    },
+    {
+      "id": "e198",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "compulsory assignment or suspension of non-pecuniary rights",
+      "eventType": "Legal Provision",
+      "_source_page": 11
+    },
+    {
+      "id": "e199",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "change of control of a shareholder",
+      "eventType": "Legal Provision",
+      "_source_page": 11
+    },
+    {
+      "id": "e200",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "increase in the commitments of the shareholders",
+      "eventType": "Legal Provision",
+      "_source_page": 11
+    },
+    {
+      "id": "e201",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "change of nationality of the company",
+      "eventType": "Legal Provision",
+      "_source_page": 11
+    },
+    {
+      "id": "e202",
+      "type": "Group",
+      "name": "participating members",
+      "description": "present or represented at the meeting or having responded to the written consultation",
+      "_source_page": 11
+    },
+    {
+      "id": "e203",
+      "type": "pekg:ProductOrService",
+      "name": "voting shares",
+      "category": "Equity",
+      "_source_page": 11
+    },
+    {
+      "id": "e204",
+      "type": "pekg:ProductOrService",
+      "name": "right to information",
+      "category": "Legal Right",
+      "_source_page": 11
+    },
+    {
+      "id": "e205",
+      "type": "pekg:ProductOrService",
+      "name": "consolidated annual accounts",
+      "category": "Legal Document",
+      "_source_page": 11
+    },
+    {
+      "id": "e206",
+      "type": "pekg:ProductOrService",
+      "name": "inventories",
+      "category": "Legal Document",
+      "_source_page": 11
+    },
+    {
+      "id": "e207",
+      "type": "pekg:ProductOrService",
+      "name": "reports submitted to shareholders",
+      "category": "Legal Document",
+      "_source_page": 11
+    },
+    {
+      "id": "e208",
+      "type": "pekg:ProductOrService",
+      "name": "minutes of collective decisions",
+      "category": "Legal Document",
+      "_source_page": 11
+    },
+    {
+      "id": "e209",
+      "type": "pekg:ProductOrService",
+      "name": "auditors\u2019 reports",
+      "category": "Legal Document",
+      "_source_page": 11
+    },
+    {
+      "id": "e210",
+      "type": "pekg:ProductOrService",
+      "name": "management report",
+      "category": "Legal Document",
+      "_source_page": 11
+    },
+    {
+      "id": "e211",
+      "type": "Auditor",
+      "name": "auditor with special skill",
+      "_source_page": 11
+    },
+    {
+      "id": "e212",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Financial Year",
+      "eventType": "Legal Provision",
+      "description": "starts on 1st January and ends on 31st December of each year",
+      "_source_page": 11
+    },
+    {
+      "id": "e213",
+      "type": "pekg:ProductOrService",
+      "name": "report related to these drafts",
+      "category": "Legal Document",
+      "_source_page": 11
+    },
+    {
+      "id": "e214",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "approval of accounts",
+      "eventType": "Corporate Action",
+      "_source_page": 11
+    },
+    {
+      "id": "e215",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "law in force",
+      "eventType": "Legal Provision",
+      "_source_page": 11
+    },
+    {
+      "id": "e216",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Financial Years",
+      "valueString": "last three financial years",
+      "scope": "company",
+      "_source_page": 11
+    },
+    {
+      "id": "e217",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Certification of Minutes",
+      "eventType": "Legal Document Certification",
+      "_source_page": 11
+    },
+    {
+      "id": "e218",
+      "type": "pekg:FinancialMetric",
+      "metricName": "inventory of the various assets and liabilities",
+      "scope": "company",
+      "_source_page": 12
+    },
+    {
+      "id": "e219",
+      "type": "pekg:ProductOrService",
+      "name": "accounting documents",
+      "category": "Legal Document",
+      "_source_page": 12
+    },
+    {
+      "id": "e220",
+      "type": "pekg:FinancialMetric",
+      "metricName": "profit",
+      "scope": "company",
+      "_source_page": 12
+    },
+    {
+      "id": "e221",
+      "type": "pekg:FinancialMetric",
+      "metricName": "loss",
+      "scope": "company",
+      "_source_page": 12
+    },
+    {
+      "id": "e222",
+      "type": "pekg:FinancialMetric",
+      "metricName": "legal reserve fund",
+      "scope": "company",
+      "_source_page": 12
+    },
+    {
+      "id": "e223",
+      "type": "pekg:FinancialMetric",
+      "metricName": "distributable profit",
+      "scope": "company",
+      "_source_page": 12
+    },
+    {
+      "id": "e224",
+      "type": "pekg:FinancialMetric",
+      "metricName": "retained earnings",
+      "scope": "company",
+      "_source_page": 12
+    },
+    {
+      "id": "e225",
+      "type": "pekg:FinancialMetric",
+      "metricName": "general or special reserve funds",
+      "scope": "company",
+      "_source_page": 12
+    },
+    {
+      "id": "e226",
+      "type": "pekg:FinancialMetric",
+      "metricName": "dividends",
+      "scope": "company",
+      "_source_page": 12
+    },
+    {
+      "id": "e227",
+      "type": "pekg:FinancialMetric",
+      "metricName": "reserves",
+      "scope": "company",
+      "_source_page": 12
+    },
+    {
+      "id": "e228",
+      "type": "pekg:FinancialMetric",
+      "metricName": "revaluation variance",
+      "scope": "company",
+      "_source_page": 12
+    },
+    {
+      "id": "e229",
+      "type": "pekg:FinancialMetric",
+      "metricName": "deposits on dividends",
+      "scope": "company",
+      "_source_page": 12
+    },
+    {
+      "id": "e230",
+      "type": "pekg:Company",
+      "name": "company having another form",
+      "description": "a company with a different legal form",
+      "_source_page": 12
+    },
+    {
+      "id": "e231",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Drawing up of Accounts and Reports",
+      "eventType": "Corporate Action",
+      "description": "President draws up inventory, annual accounts, and management report at financial year closing.",
+      "_source_page": 12
+    },
+    {
+      "id": "e232",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Documents Disposal to Auditors",
+      "eventType": "Legal Provision",
+      "description": "Accounting documents and management report available to auditors one month before shareholders' right to information.",
+      "_source_page": 12
+    },
+    {
+      "id": "e233",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Submission for Shareholder Approval",
+      "eventType": "Corporate Action",
+      "description": "Accounting documents and reports presented and submitted to shareholders' approval within six months of financial year closing.",
+      "_source_page": 12
+    },
+    {
+      "id": "e234",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Financial Year Closing",
+      "eventType": "Corporate Action",
+      "_source_page": 12
+    },
+    {
+      "id": "e235",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Appropriation and Sharing of Profits",
+      "eventType": "Corporate Action",
+      "_source_page": 12
+    },
+    {
+      "id": "e236",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Deduction for Legal Reserve Fund",
+      "eventType": "Corporate Action",
+      "description": "Five percent deducted from profit (less prior losses) for legal reserve fund.",
+      "_source_page": 12
+    },
+    {
+      "id": "e237",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Legal Reserve Fund Allocation Cessation",
+      "eventType": "Legal Provision",
+      "description": "Allocation to legal reserve fund stops when fund reaches one-tenth of share capital.",
+      "_source_page": 12
+    },
+    {
+      "id": "e238",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Legal Reserve Fund Decrease",
+      "eventType": "Legal Provision",
+      "description": "Allocation to legal reserve fund applies again if reserve decreases below one-tenth of share capital.",
+      "_source_page": 12
+    },
+    {
+      "id": "e239",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Constitution of Distributable Profit",
+      "eventType": "Corporate Action",
+      "description": "Distributable profit is financial year profit less prior losses and legal reserve deduction, increased by retained earnings.",
+      "_source_page": 12
+    },
+    {
+      "id": "e240",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Carry Forward Profit Decision",
+      "eventType": "Corporate Action",
+      "description": "Shareholders may decide to carry forward profit.",
+      "_source_page": 12
+    },
+    {
+      "id": "e241",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Allocate Profit to Reserve Funds Decision",
+      "eventType": "Corporate Action",
+      "description": "Shareholders may decide to allocate profit to general or special reserve funds.",
+      "_source_page": 12
+    },
+    {
+      "id": "e242",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Distribute Profit as Dividends Decision",
+      "eventType": "Corporate Action",
+      "description": "Shareholders may decide to distribute profit as dividends.",
+      "_source_page": 12
+    },
+    {
+      "id": "e243",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Distribution of Sums from Reserves Decision",
+      "eventType": "Corporate Action",
+      "description": "Shareholders may decide to distribute sums deducted from reserves, with express mention of reserve accounts.",
+      "_source_page": 12
+    },
+    {
+      "id": "e244",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Dividend Deduction Priority",
+      "eventType": "Legal Provision",
+      "description": "Dividend shall be deducted by priority from the distributable profit of the financial year.",
+      "_source_page": 12
+    },
+    {
+      "id": "e245",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Revaluation Variance Non-Distribution",
+      "eventType": "Legal Provision",
+      "description": "Revaluation variance shall not be distributed.",
+      "_source_page": 12
+    },
+    {
+      "id": "e246",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Revaluation Variance Incorporation to Share Capital",
+      "eventType": "Corporate Action",
+      "description": "Revaluation variance may be incorporated partially or totally to the share capital.",
+      "_source_page": 12
+    },
+    {
+      "id": "e247",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Distribution of Deposits on Dividends",
+      "eventType": "Corporate Action",
+      "description": "President may distribute deposits on dividends before account approval, as per law.",
+      "_source_page": 12
+    },
+    {
+      "id": "e248",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Payment of the Dividend",
+      "eventType": "Corporate Action",
+      "_source_page": 12
+    },
+    {
+      "id": "e249",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Annual Dividend Payment",
+      "eventType": "Corporate Action",
+      "description": "Dividend paid annually at time/place determined by shareholders or President, within 9 months of financial year closing.",
+      "_source_page": 12
+    },
+    {
+      "id": "e250",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Extension of Dividend Payment Time Limit",
+      "eventType": "Legal Provision",
+      "description": "Time limit for dividend payment may be extended by order of Presiding Judge of Commercial Court.",
+      "_source_page": 12
+    },
+    {
+      "id": "e251",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Transformation",
+      "eventType": "Corporate Action",
+      "_source_page": 12
+    },
+    {
+      "id": "e252",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Extension",
+      "eventType": "Corporate Action",
+      "_source_page": 12
+    },
+    {
+      "id": "e253",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Company Transformation to Another Form",
+      "eventType": "Corporate Action",
+      "description": "Company may be transformed into another legal form as per bylaws and legal provisions.",
+      "_source_page": 12
+    },
+    {
+      "id": "e254",
+      "type": "pekg:Person",
+      "fullName": "President",
+      "_source_page": 13
+    },
+    {
+      "id": "e255",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Decision on Company Extension",
+      "eventType": "Corporate Action",
+      "description": "President provokes a collective decision of shareholders to decide on the extension or not of the company, at least one year before its expiration.",
+      "_source_page": 13
+    },
+    {
+      "id": "e256",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Early Dissolution of Company",
+      "eventType": "Corporate Action",
+      "_source_page": 13
+    },
+    {
+      "id": "e257",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Publication of Shareholder Decision",
+      "eventType": "Legal Provision",
+      "description": "Decision of shareholders regarding early dissolution shall be published.",
+      "_source_page": 13
+    },
+    {
+      "id": "e258",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Company Dissolution",
+      "eventType": "Corporate Action",
+      "_source_page": 13
+    },
+    {
+      "id": "e259",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Company Liquidation",
+      "eventType": "Corporate Action",
+      "_source_page": 13
+    },
+    {
+      "id": "e260",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Publication Formalities Completion",
+      "eventType": "Legal Provision",
+      "description": "Completion of publication formalities for dissolution.",
+      "_source_page": 13
+    },
+    {
+      "id": "e261",
+      "type": "pekg:ProductOrService",
+      "name": "supporting documents",
+      "category": "Legal Document",
+      "_source_page": 13
+    },
+    {
+      "id": "e262",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Liabilities",
+      "scope": "company",
+      "_source_page": 13
+    },
+    {
+      "id": "e263",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Closing of Liquidation",
+      "eventType": "Corporate Action",
+      "_source_page": 13
+    },
+    {
+      "id": "e264",
+      "type": "pekg:ProductOrService",
+      "name": "liquidation final account",
+      "category": "Legal Document",
+      "_source_page": 13
+    },
+    {
+      "id": "e265",
+      "type": "pekg:ProductOrService",
+      "name": "discharge (\u201cquitus\u201d)",
+      "category": "Legal Document",
+      "_source_page": 13
+    },
+    {
+      "id": "e266",
+      "type": "pekg:ProductOrService",
+      "name": "summary proceeding",
+      "category": "Legal Procedure",
+      "_source_page": 13
+    },
+    {
+      "id": "e267",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Closing Meeting",
+      "eventType": "Corporate Meeting",
+      "_source_page": 13
+    },
+    {
+      "id": "e268",
+      "type": "pekg:ProductOrService",
+      "name": "article 14",
+      "category": "Legal Document Section",
+      "_source_page": 13
+    },
+    {
+      "id": "e269",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Disputes",
+      "description": "All disputes that may arise during the life of the company or its liquidation, either between the shareholders, or between the company and the shareholders themselves, relating to the interpretation or the performance of these bylaws, or more generally relating to company matters",
+      "_source_page": 14
+    },
+    {
+      "id": "e270",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Publication Formalities",
+      "description": "The publication formalities shall be realized upon diligence of the President of the company.",
+      "_source_page": 14
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e5",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e15",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e7",
+      "target": "e8",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "pekg:targets"
+    },
+    {
+      "source": "e7",
+      "target": "e16",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e7",
+      "target": "e17",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e1",
+      "target": "e18",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e19",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e18",
+      "target": "e19",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e5",
+      "target": "e29",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e29",
+      "target": "e19",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e19",
+      "target": "e21",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e21",
+      "target": "e22",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e21",
+      "target": "e20",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e2",
+      "target": "e23",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e23",
+      "target": "e24",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e25",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e26",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e28",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e30",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e30",
+      "target": "e19",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e30",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e30",
+      "target": "e15",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e2",
+      "target": "e30",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e31",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e31",
+      "target": "e25",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e31",
+      "target": "e26",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e31",
+      "target": "e27",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e2",
+      "target": "e31",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e32",
+      "target": "e33",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e32",
+      "target": "e34",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e30",
+      "target": "e35",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e36",
+      "target": "e40",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e37",
+      "target": "e39",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e38",
+      "target": "e39",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e39",
+      "target": "e40",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e26",
+      "target": "e42",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e26",
+      "target": "e2",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e26",
+      "target": "e48",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e26",
+      "target": "e49",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e49",
+      "target": "e25",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e49",
+      "target": "e26",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e48",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e48",
+      "target": "e26",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e50",
+      "target": "e19",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e30",
+      "target": "e26",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e50",
+      "target": "e26",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e29",
+      "target": "e26",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e29",
+      "target": "e48",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e29",
+      "target": "e49",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e51",
+      "target": "e39",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e51",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e43",
+      "target": "e51",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e44",
+      "target": "e51",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e45",
+      "target": "e51",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e46",
+      "target": "e51",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e51",
+      "target": "e47",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e46",
+      "type": "pekg:hasClientPerson"
+    },
+    {
+      "source": "e60",
+      "target": "e27",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e60",
+      "target": "e52",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e60",
+      "target": "e53",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e55",
+      "target": "e61",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e54",
+      "target": "e61",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e65",
+      "target": "e66",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e15",
+      "target": "e79",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e19",
+      "target": "e79",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e15",
+      "target": "e80",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e5",
+      "target": "e15",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e66",
+      "target": "e81",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e81",
+      "target": "e15",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e15",
+      "target": "e82",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e19",
+      "target": "e82",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e82",
+      "target": "e67",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e15",
+      "target": "e83",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e15",
+      "target": "e84",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e15",
+      "target": "e85",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e85",
+      "target": "e70",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e5",
+      "target": "e85",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e19",
+      "target": "e85",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e15",
+      "target": "e86",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e5",
+      "target": "e86",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e86",
+      "target": "e87",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e87",
+      "target": "e88",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e86",
+      "target": "e78",
+      "type": "pekg:hasOfficeIn"
+    },
+    {
+      "source": "e86",
+      "target": "e89",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e86",
+      "target": "e90",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e91",
+      "target": "e15",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e5",
+      "target": "e91",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e15",
+      "target": "e92",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e15",
+      "target": "e93",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e5",
+      "target": "e93",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e91",
+      "target": "e93",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e15",
+      "target": "e72",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e15",
+      "target": "e94",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e15",
+      "target": "e95",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e97",
+      "target": "e96",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e96",
+      "target": "e98",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e135",
+      "target": "e99",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e136",
+      "target": "e100",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e136",
+      "target": "e101",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e137",
+      "target": "e102",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e137",
+      "target": "e103",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e137",
+      "target": "e104",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e137",
+      "target": "e105",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e138",
+      "target": "e106",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e138",
+      "target": "e107",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e138",
+      "target": "e108",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e138",
+      "target": "e109",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e139",
+      "target": "e110",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e139",
+      "target": "e111",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e140",
+      "target": "e112",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e140",
+      "target": "e113",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e141",
+      "target": "e114",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e141",
+      "target": "e115",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e141",
+      "target": "e116",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e141",
+      "target": "e117",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e142",
+      "target": "e118",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e142",
+      "target": "e119",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e142",
+      "target": "e120",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e142",
+      "target": "e121",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e143",
+      "target": "e122",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e144",
+      "target": "e123",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e144",
+      "target": "e124",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e144",
+      "target": "e125",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e144",
+      "target": "e126",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e146",
+      "target": "e128",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e128",
+      "target": "e129",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e130",
+      "target": "e129",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e128",
+      "target": "e132",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e128",
+      "target": "e131",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e147",
+      "target": "e134",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e133",
+      "target": "e128",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e19",
+      "target": "e165",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e166",
+      "target": "e150",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e167",
+      "target": "e150",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e5",
+      "target": "e102",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e5",
+      "target": "e148",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e5",
+      "target": "e106",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e5",
+      "target": "e149",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e15",
+      "target": "e102",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e15",
+      "target": "e148",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e15",
+      "target": "e106",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e15",
+      "target": "e149",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e81",
+      "target": "e102",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e81",
+      "target": "e148",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e81",
+      "target": "e106",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e81",
+      "target": "e149",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e131",
+      "target": "e102",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e131",
+      "target": "e148",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e131",
+      "target": "e106",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e131",
+      "target": "e149",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e151",
+      "target": "e102",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e151",
+      "target": "e148",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e151",
+      "target": "e106",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e151",
+      "target": "e149",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e152",
+      "target": "e102",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e152",
+      "target": "e148",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e152",
+      "target": "e106",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e152",
+      "target": "e149",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e153",
+      "target": "e102",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e153",
+      "target": "e148",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e153",
+      "target": "e106",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e153",
+      "target": "e149",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e102",
+      "target": "e129",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e148",
+      "target": "e129",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e106",
+      "target": "e129",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e149",
+      "target": "e129",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e131",
+      "target": "e129",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e154",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e154",
+      "target": "e133",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e133",
+      "target": "e168",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e168",
+      "target": "e157",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e133",
+      "target": "e155",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e155",
+      "target": "e19",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e133",
+      "target": "e156",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e5",
+      "target": "e156",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e156",
+      "target": "e56",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e158",
+      "target": "e56",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e158",
+      "target": "e123",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e158",
+      "target": "e126",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e126",
+      "target": "e124",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e159",
+      "target": "e160",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e159",
+      "target": "e39",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e158",
+      "target": "e156",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e27",
+      "target": "e169",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e169",
+      "target": "e161",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e169",
+      "target": "e170",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e27",
+      "target": "e171",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e27",
+      "target": "e172",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e162",
+      "type": "pekg:hasShareholder"
+    },
+    {
+      "source": "e162",
+      "target": "e156",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e156",
+      "target": "e162",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e156",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e5",
+      "target": "e163",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e5",
+      "target": "e164",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e162",
+      "target": "e177",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e173",
+      "target": "e174",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e173",
+      "target": "e175",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e173",
+      "target": "e176",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e166",
+      "target": "e1",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e167",
+      "target": "e1",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e174",
+      "target": "e179",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e174",
+      "target": "e180",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e174",
+      "target": "e181",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e182",
+      "target": "e183",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e182",
+      "target": "e184",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e93",
+      "target": "e182",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e187",
+      "target": "e175",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e175",
+      "target": "e90",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e93",
+      "target": "e186",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e187",
+      "target": "e188",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e190",
+      "target": "e185",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e93",
+      "target": "e187",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e217",
+      "target": "e208",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e217",
+      "target": "e192",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e217",
+      "target": "e193",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e194",
+      "target": "e156",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e176",
+      "target": "e156",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e195",
+      "target": "e196",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e196",
+      "target": "e197",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e196",
+      "target": "e198",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e196",
+      "target": "e199",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e195",
+      "target": "e200",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e195",
+      "target": "e201",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e158",
+      "target": "e202",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e202",
+      "target": "e203",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e158",
+      "target": "e194",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e158",
+      "target": "e176",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e204",
+      "target": "e205",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e204",
+      "target": "e206",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e204",
+      "target": "e207",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e204",
+      "target": "e208",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e214",
+      "target": "e205",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e214",
+      "target": "e209",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e214",
+      "target": "e210",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e214",
+      "target": "e215",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e231",
+      "target": "e218",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e231",
+      "target": "e234",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e219",
+      "target": "e232",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e219",
+      "target": "e233",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e235",
+      "target": "e220",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e235",
+      "target": "e221",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e220",
+      "target": "e236",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e221",
+      "target": "e236",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e236",
+      "target": "e222",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e222",
+      "target": "e237",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e222",
+      "target": "e238",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e223",
+      "target": "e239",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e239",
+      "target": "e220",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e239",
+      "target": "e221",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e239",
+      "target": "e224",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e220",
+      "target": "e240",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e220",
+      "target": "e241",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e220",
+      "target": "e242",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e241",
+      "target": "e225",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e242",
+      "target": "e226",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e243",
+      "target": "e227",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e226",
+      "target": "e244",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e244",
+      "target": "e223",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e228",
+      "target": "e245",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e228",
+      "target": "e246",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e247",
+      "target": "e229",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e248",
+      "target": "e226",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e226",
+      "target": "e249",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e249",
+      "target": "e234",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e249",
+      "target": "e250",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e253",
+      "target": "e230",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e254",
+      "target": "e255",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e255",
+      "target": "e19",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e255",
+      "target": "e79",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e255",
+      "target": "e252",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e221",
+      "target": "e219",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e2",
+      "target": "e221",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e254",
+      "target": "e256",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e256",
+      "target": "e19",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e256",
+      "target": "e29",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e257",
+      "target": "e19",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e258",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e1",
+      "target": "e259",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e258",
+      "target": "e215",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e258",
+      "target": "e131",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e258",
+      "target": "e71",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e258",
+      "target": "e260",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e258",
+      "target": "e133",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e19",
+      "target": "e79",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e79",
+      "target": "e193",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e193",
+      "target": "e67",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e193",
+      "target": "e79",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e193",
+      "target": "e259",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e254",
+      "target": "e165",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e254",
+      "target": "e261",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e254",
+      "target": "e193",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e193",
+      "target": "e214",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e214",
+      "target": "e79",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e214",
+      "target": "e19",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e193",
+      "target": "e75",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e193",
+      "target": "e262",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e193",
+      "target": "e79",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e193",
+      "target": "e29",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e193",
+      "target": "e19",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e19",
+      "target": "e164",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e263",
+      "target": "e19",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e79",
+      "target": "e264",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e79",
+      "target": "e265",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e19",
+      "target": "e263",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e21",
+      "target": "e266",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e21",
+      "target": "e19",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e22",
+      "target": "e174",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e267",
+      "target": "e264",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e267",
+      "target": "e20",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e20",
+      "target": "e193",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e20",
+      "target": "e150",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e75",
+      "target": "e33",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e75",
+      "target": "e39",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e39",
+      "target": "e268",
+      "type": "pekg:isSubjectOf"
+    }
+  ]
+}

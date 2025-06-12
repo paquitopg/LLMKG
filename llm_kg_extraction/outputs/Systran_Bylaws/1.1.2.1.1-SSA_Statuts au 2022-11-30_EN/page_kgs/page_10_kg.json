@@ -1,0 +1,367 @@
+{
+  "entities": [
+    {
+      "id": "e197",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Article 21.2.5",
+      "eventType": "Legal Provision"
+    },
+    {
+      "id": "e199",
+      "type": "pekg:ProductOrService",
+      "name": "ordinary letter",
+      "category": "Communication Method"
+    },
+    {
+      "id": "e200",
+      "type": "pekg:ProductOrService",
+      "name": "registered letter",
+      "category": "Communication Method"
+    },
+    {
+      "id": "e201",
+      "type": "pekg:Technology",
+      "name": "fax"
+    },
+    {
+      "id": "e202",
+      "type": "pekg:ProductOrService",
+      "name": "attendance sheet",
+      "category": "Legal Document"
+    },
+    {
+      "id": "e203",
+      "type": "pekg:Person",
+      "fullName": "representatives"
+    },
+    {
+      "id": "e204",
+      "type": "pekg:Person",
+      "fullName": "attorneys"
+    },
+    {
+      "id": "e205",
+      "type": "pekg:Technology",
+      "name": "electronic communication"
+    },
+    {
+      "id": "e206",
+      "type": "pekg:Person",
+      "fullName": "proxy"
+    },
+    {
+      "id": "e207",
+      "type": "pekg:ProductOrService",
+      "name": "special register",
+      "category": "Legal Document"
+    },
+    {
+      "id": "e208",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Written Consultation",
+      "eventType": "Corporate Meeting"
+    },
+    {
+      "id": "e209",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Abstention Rule",
+      "eventType": "Legal Provision",
+      "description": "Shareholder not replying within deadline for written consultation is considered abstained."
+    },
+    {
+      "id": "e210",
+      "type": "pekg:ProductOrService",
+      "name": "right to participate in collective decisions",
+      "category": "Legal Right",
+      "description": "Shareholder's right to participate if shares are registered in their name."
+    },
+    {
+      "id": "e211",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Shareholder Representation",
+      "eventType": "Legal Provision",
+      "description": "Shareholders may be represented by another shareholder or by a duly mandated third party (proxy)."
+    },
+    {
+      "id": "e178",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Convening",
+      "eventType": "Corporate Meeting",
+      "description": "convened fifteen (15) days at least before the meeting, either by ordinary letter or by registered letter, or by fax or an electronic mean of telecommunication."
+    },
+    {
+      "id": "e179",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Vote",
+      "eventType": "Corporate Action",
+      "description": "Only questions on the agenda shall be submitted to a vote unless the shareholders are all present and decide by mutual agreement to deliberate on other questions."
+    },
+    {
+      "id": "e95",
+      "type": "pekg:ProductOrService",
+      "name": "minutes of Board meetings",
+      "category": "Legal Document",
+      "description": "Records resolutions of shareholder meetings, indicating date, place, President's identity, convening method, agenda, submitted documents/reports, debates, draft resolutions, and vote results."
+    },
+    {
+      "id": "e185",
+      "type": "pekg:ProductOrService",
+      "name": "act",
+      "category": "Legal Document",
+      "description": "consent of all shareholders expressed in an act"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e166",
+      "target": "e159",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e159",
+      "target": "e197",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e159",
+      "target": "e20",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e159",
+      "target": "e72",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e159",
+      "target": "e208",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e159",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e159",
+      "target": "e16",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e90",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e167",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e168",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e72",
+      "target": "e178",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e178",
+      "target": "e199",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e178",
+      "target": "e200",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e178",
+      "target": "e201",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e178",
+      "target": "e92",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e72",
+      "target": "e20",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e72",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e72",
+      "target": "e90",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e72",
+      "target": "e179",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e72",
+      "target": "e202",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e202",
+      "target": "e20",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e202",
+      "target": "e203",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e202",
+      "target": "e204",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e202",
+      "target": "e39",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e95",
+      "target": "e202",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e72",
+      "target": "e91",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e72",
+      "target": "e92",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e72",
+      "target": "e89",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e208",
+      "target": "e20",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e208",
+      "target": "e167",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e208",
+      "target": "e179",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e179",
+      "target": "e205",
+      "type": "pekg:usesTechnology"
+    },
+    {
+      "source": "e20",
+      "target": "e39",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e20",
+      "target": "e206",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e60",
+      "target": "e95",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e95",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e95",
+      "target": "e207",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e72",
+      "target": "e93",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e5",
+      "target": "e93",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e179",
+      "target": "e180",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e208",
+      "target": "e209",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e166",
+      "target": "e168",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e166",
+      "target": "e197",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e159",
+      "target": "e185",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e20",
+      "target": "e210",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e210",
+      "target": "e159",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e210",
+      "target": "e39",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e20",
+      "target": "e211",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e211",
+      "target": "e206",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e95",
+      "target": "e208",
+      "type": "pekg:isSubjectOf"
+    }
+  ],
+  "page_number": 10
+}

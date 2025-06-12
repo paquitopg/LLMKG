@@ -15,7 +15,7 @@ from _4_knowledge_graph_operations.page_level_merger import PageLevelMerger
 from _4_knowledge_graph_operations.common_kg_utils import normalize_entity_ids, clean_knowledge_graph
 
 from visualization_tools.KG_visualizer import KnowledgeGraphVisualizer # Assuming this path
-from merger_diagnostic_tool import diagnose_merger_issues
+from REPOS.llm_kg_extraction.llm_kg_extraction.merger_diagnostic_tool import diagnose_merger_issues
 
 class KGConstructorSingleDoc:
     """
