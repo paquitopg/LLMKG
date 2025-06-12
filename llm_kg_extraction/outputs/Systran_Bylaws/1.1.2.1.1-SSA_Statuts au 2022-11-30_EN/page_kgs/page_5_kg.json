@@ -1,0 +1,263 @@
+{
+  "entities": [
+    {
+      "id": "e53",
+      "type": "pekg:ProductOrService",
+      "name": "securities giving access to its capital",
+      "category": "Financial Instrument"
+    },
+    {
+      "id": "e54",
+      "type": "pekg:ProductOrService",
+      "name": "securities giving right to the allotment of debt instruments",
+      "category": "Financial Instrument"
+    },
+    {
+      "id": "e55",
+      "type": "pekg:Company",
+      "name": "company controlled by it",
+      "description": "a company controlled by SYSTRAN SAS"
+    },
+    {
+      "id": "e56",
+      "type": "pekg:Company",
+      "name": "company which controls it",
+      "description": "a company which controls SYSTRAN SAS"
+    },
+    {
+      "id": "e57",
+      "type": "pekg:Person",
+      "fullName": "co-owner"
+    },
+    {
+      "id": "e58",
+      "type": "Group",
+      "name": "Joint owners of shares"
+    },
+    {
+      "id": "e59",
+      "type": "pekg:ProductOrService",
+      "name": "bylaws",
+      "category": "Legal Document"
+    },
+    {
+      "id": "e60",
+      "type": "pekg:ProductOrService",
+      "name": "resolutions",
+      "category": "Legal Document"
+    },
+    {
+      "id": "e61",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Form of Shares",
+      "eventType": "Legal Provision",
+      "description": "Shares and any other securities issued by the company shall be in nominative form and entered in an account."
+    },
+    {
+      "id": "e62",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Transfer of Shares",
+      "eventType": "Legal Provision",
+      "description": "Shares are freely transferable by account transfer in the company's books, applicable only to paid-up shares."
+    },
+    {
+      "id": "e63",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Issuance of Securities Other Than Shares",
+      "eventType": "Corporate Action",
+      "description": "Issuance of bonds decided or authorized by Board of Directors upon President's proposal. Issuance of securities giving access to capital or debt instruments authorized by extraordinary shareholder decision."
+    },
+    {
+      "id": "e64",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Indivisibility of Shares",
+      "eventType": "Legal Provision",
+      "description": "Shares are indivisible vis-\u00e0-vis the company; joint owners represented by one proxy, or appointed by Presiding Judge of Commercial Court."
+    },
+    {
+      "id": "e65",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Rights and Obligations Attached to Shares",
+      "eventType": "Legal Provision",
+      "description": "Possession of a share entails acceptance of bylaws and duly adopted shareholder resolutions."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e1",
+      "target": "e39",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e52",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e61",
+      "target": "e39",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e61",
+      "target": "e52",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e62",
+      "target": "e39",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e63",
+      "target": "e29",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e16",
+      "target": "e63",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e5",
+      "target": "e63",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e53",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e1",
+      "target": "e54",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e63",
+      "target": "e53",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e63",
+      "target": "e54",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e20",
+      "target": "e63",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e1",
+      "target": "e55",
+      "type": "pekg:hasSubsidiary"
+    },
+    {
+      "source": "e56",
+      "target": "e1",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e63",
+      "target": "e55",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e63",
+      "target": "e56",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e20",
+      "target": "e40",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e40",
+      "target": "e53",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e40",
+      "target": "e33",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e64",
+      "target": "e39",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e58",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e58",
+      "target": "e64",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e22",
+      "target": "e21",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e22",
+      "target": "e64",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e57",
+      "target": "e64",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e39",
+      "target": "e42",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e37",
+      "target": "e42",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e38",
+      "target": "e42",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e37",
+      "target": "e39",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e38",
+      "target": "e39",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e65",
+      "target": "e39",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e39",
+      "target": "e59",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e39",
+      "target": "e60",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e20",
+      "target": "e60",
+      "type": "pekg:eventInvolvesParty"
+    }
+  ],
+  "page_number": 5
+}

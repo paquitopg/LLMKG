@@ -36,7 +36,7 @@ from core_components.document_scanner import discover_pdf_files
 
 # Optional diagnostic tool
 try:
-    from merger_diagnostic_tool import diagnose_merger_issues
+    from REPOS.llm_kg_extraction.llm_kg_extraction.merger_diagnostic_tool import diagnose_merger_issues
     DIAGNOSTIC_AVAILABLE = True
 except ImportError:
     print("Note: Diagnostic tool not available. Install if you want merger analysis.")

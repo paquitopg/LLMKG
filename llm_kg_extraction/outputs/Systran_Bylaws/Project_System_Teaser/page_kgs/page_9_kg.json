@@ -1,0 +1,639 @@
+{
+  "entities": [
+    {
+      "id": "e6_pg3",
+      "type": "pekg:Company",
+      "name": "Systran"
+    },
+    {
+      "id": "e_v_godard",
+      "type": "pekg:Person",
+      "fullName": "Vincent Godard",
+      "educationHighlights": [
+        "ECAM LaSalle"
+      ]
+    },
+    {
+      "id": "e_ceo_vg",
+      "type": "pekg:Position",
+      "titleName": "Chairman - CEO",
+      "startDate": "2022"
+    },
+    {
+      "id": "e_infor_pg9",
+      "type": "pekg:Company",
+      "name": "Infor"
+    },
+    {
+      "id": "e_senior_sales_manager_pg9",
+      "type": "pekg:Position",
+      "titleName": "Senior sales manager"
+    },
+    {
+      "id": "e_woonoz_pg9",
+      "type": "pekg:Company",
+      "name": "Woonoz"
+    },
+    {
+      "id": "e_vp_sales_woonoz_pg9",
+      "type": "pekg:Position",
+      "titleName": "Vice president sales"
+    },
+    {
+      "id": "e_vp_operations_emea_apac_systran_pg9",
+      "type": "pekg:Position",
+      "titleName": "Vice president operations \u2013 EMEA / APAC"
+    },
+    {
+      "id": "e_sam_yoosuk_kim_pg9",
+      "type": "pekg:Person",
+      "fullName": "Sam Yoosuk Kim",
+      "educationHighlights": [
+        "Carnegie Mellon University"
+      ]
+    },
+    {
+      "id": "e_cso_sam_kim_pg9",
+      "type": "pekg:Position",
+      "titleName": "Chief Strategy Officer",
+      "startDate": "2020"
+    },
+    {
+      "id": "e_melon_partners_pg9",
+      "type": "pekg:Company",
+      "name": "Melon Partners"
+    },
+    {
+      "id": "e_senior_managing_director_melon_pg9",
+      "type": "pekg:Position",
+      "titleName": "Senior managing director"
+    },
+    {
+      "id": "e_group_strategy_vp_systran_pg9",
+      "type": "pekg:Position",
+      "titleName": "Group strategy vice president"
+    },
+    {
+      "id": "e_john_paul_barraza_pg9",
+      "type": "pekg:Person",
+      "fullName": "John Paul Barraza",
+      "educationHighlights": [
+        "UCLA",
+        "San Diego State University"
+      ]
+    },
+    {
+      "id": "e_systran_usa_pg9",
+      "type": "pekg:Company",
+      "name": "Systran USA"
+    },
+    {
+      "id": "e_cio_ceo_systran_usa_pg9",
+      "type": "pekg:Position",
+      "titleName": "CIO and CEO of Systran USA",
+      "startDate": "2004"
+    },
+    {
+      "id": "e_vp_operations_jpb_pg9",
+      "type": "pekg:Position",
+      "titleName": "Vice president of operations"
+    },
+    {
+      "id": "e_director_services_jpb_pg9",
+      "type": "pekg:Position",
+      "titleName": "Director of services"
+    },
+    {
+      "id": "e_technical_services_manager_jpb_pg9",
+      "type": "pekg:Position",
+      "titleName": "Technical services manager"
+    },
+    {
+      "id": "e_it_administrator_jpb_pg9",
+      "type": "pekg:Position",
+      "titleName": "IT administrator"
+    },
+    {
+      "id": "e_yannick_douzant_pg9",
+      "type": "pekg:Person",
+      "fullName": "Yannick Douzant",
+      "educationHighlights": [
+        "IMT Atlantique",
+        "IAE Paris Sorbonne"
+      ]
+    },
+    {
+      "id": "e_cto_head_product_yd_pg9",
+      "type": "pekg:Position",
+      "titleName": "CTO & Head of product",
+      "startDate": "2010"
+    },
+    {
+      "id": "e_prod_mgmt_qa_dir_yd_pg9",
+      "type": "pekg:Position",
+      "titleName": "Product management and QA director"
+    },
+    {
+      "id": "e_principal_prod_manager_yd_pg9",
+      "type": "pekg:Position",
+      "titleName": "Principal product manager"
+    },
+    {
+      "id": "e_trace_one_pg9",
+      "type": "pekg:Company",
+      "name": "Trace One"
+    },
+    {
+      "id": "e_head_prod_mgmt_to_pg9",
+      "type": "pekg:Position",
+      "titleName": "Head of product management"
+    },
+    {
+      "id": "e_gaelle_bou_pg9",
+      "type": "pekg:Person",
+      "fullName": "Ga\u00eblle Bou",
+      "educationHighlights": [
+        "Chamb\u00e9ry School of business"
+      ]
+    },
+    {
+      "id": "e_csmo_gb_pg9",
+      "type": "pekg:Position",
+      "titleName": "Chief Sales and Marketing Officer",
+      "startDate": "2016"
+    },
+    {
+      "id": "e_nibelis_pg9",
+      "type": "pekg:Company",
+      "name": "Nibelis"
+    },
+    {
+      "id": "e_marketing_director_nibelis_pg9",
+      "type": "pekg:Position",
+      "titleName": "Marketing director"
+    },
+    {
+      "id": "e_linedata_pg9",
+      "type": "pekg:Company",
+      "name": "Linedata"
+    },
+    {
+      "id": "e_marketing_manager_linedata_pg9",
+      "type": "pekg:Position",
+      "titleName": "Marketing manager"
+    },
+    {
+      "id": "e_event_vg_infor_pg9",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Employment at Infor",
+      "eventType": "Employment",
+      "dateOrYear": "2020 - 2021",
+      "description": "Senior sales manager"
+    },
+    {
+      "id": "e_event_vg_woonoz_pg9",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Employment at Woonoz",
+      "eventType": "Employment",
+      "dateOrYear": "2017 - 2020",
+      "description": "Vice president sales"
+    },
+    {
+      "id": "e_event_vg_systran_past_pg9",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Employment at Systran",
+      "eventType": "Employment",
+      "dateOrYear": "2009 - 2013",
+      "description": "Vice president operations \u2013 EMEA / APAC"
+    },
+    {
+      "id": "e_event_syk_melon_pg9",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Employment at Melon Partners",
+      "eventType": "Employment",
+      "dateOrYear": "2018 - 2020",
+      "description": "Senior managing director"
+    },
+    {
+      "id": "e_event_syk_systran_past_pg9",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Employment at Systran",
+      "eventType": "Employment",
+      "dateOrYear": "2014 - 2017",
+      "description": "Group strategy vice president"
+    },
+    {
+      "id": "e_event_jpb_systran_past_pg9",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Employment at Systran",
+      "eventType": "Employment",
+      "dateOrYear": "2004 - 2019",
+      "description": "Held roles including Vice president of operations, Director of services, Technical services manager, IT administrator"
+    },
+    {
+      "id": "e_event_yd_systran_past_pg9",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Employment at Systran",
+      "eventType": "Employment",
+      "dateOrYear": "2010 - 2018",
+      "description": "Held roles including Product management and QA director, Principal product manager"
+    },
+    {
+      "id": "e_event_yd_trace_one_pg9",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Employment at Trace One",
+      "eventType": "Employment",
+      "dateOrYear": "2006 - 2010",
+      "description": "Head of product management"
+    },
+    {
+      "id": "e_event_gb_nibelis_pg9",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Employment at Nibelis",
+      "eventType": "Employment",
+      "dateOrYear": "2015 - 2016",
+      "description": "Marketing director"
+    },
+    {
+      "id": "e_event_gb_linedata_pg9",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Employment at Linedata",
+      "eventType": "Employment",
+      "dateOrYear": "2010 - 2014",
+      "description": "Marketing manager"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e6_pg3",
+      "target": "e_v_godard",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e_v_godard",
+      "target": "e_ceo_vg",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e_ceo_vg",
+      "target": "e6_pg3",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_sam_yoosuk_kim_pg9",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e_sam_yoosuk_kim_pg9",
+      "target": "e_cso_sam_kim_pg9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e_cso_sam_kim_pg9",
+      "target": "e6_pg3",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_john_paul_barraza_pg9",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e_john_paul_barraza_pg9",
+      "target": "e_cio_ceo_systran_usa_pg9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e_cio_ceo_systran_usa_pg9",
+      "target": "e_systran_usa_pg9",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_yannick_douzant_pg9",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e_yannick_douzant_pg9",
+      "target": "e_cto_head_product_yd_pg9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e_cto_head_product_yd_pg9",
+      "target": "e6_pg3",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_gaelle_bou_pg9",
+      "type": "pekg:employs"
+    },
+    {
+      "source": "e_gaelle_bou_pg9",
+      "target": "e_csmo_gb_pg9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e_csmo_gb_pg9",
+      "target": "e6_pg3",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e_systran_usa_pg9",
+      "target": "e6_pg3",
+      "type": "pekg:isSubsidiaryOf"
+    },
+    {
+      "source": "e_v_godard",
+      "target": "e_event_vg_infor_pg9",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_vg_infor_pg9",
+      "target": "e_infor_pg9",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_event_vg_infor_pg9",
+      "target": "e_v_godard",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_v_godard",
+      "target": "e_event_vg_woonoz_pg9",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_vg_woonoz_pg9",
+      "target": "e_woonoz_pg9",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_event_vg_woonoz_pg9",
+      "target": "e_v_godard",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_v_godard",
+      "target": "e_event_vg_systran_past_pg9",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_vg_systran_past_pg9",
+      "target": "e6_pg3",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_event_vg_systran_past_pg9",
+      "target": "e_v_godard",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_sam_yoosuk_kim_pg9",
+      "target": "e_event_syk_melon_pg9",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_syk_melon_pg9",
+      "target": "e_melon_partners_pg9",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_event_syk_melon_pg9",
+      "target": "e_sam_yoosuk_kim_pg9",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_sam_yoosuk_kim_pg9",
+      "target": "e_event_syk_systran_past_pg9",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_syk_systran_past_pg9",
+      "target": "e6_pg3",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_event_syk_systran_past_pg9",
+      "target": "e_sam_yoosuk_kim_pg9",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_john_paul_barraza_pg9",
+      "target": "e_event_jpb_systran_past_pg9",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_jpb_systran_past_pg9",
+      "target": "e6_pg3",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_event_jpb_systran_past_pg9",
+      "target": "e_john_paul_barraza_pg9",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_yannick_douzant_pg9",
+      "target": "e_event_yd_systran_past_pg9",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_yd_systran_past_pg9",
+      "target": "e6_pg3",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_event_yd_systran_past_pg9",
+      "target": "e_yannick_douzant_pg9",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_yannick_douzant_pg9",
+      "target": "e_event_yd_trace_one_pg9",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_yd_trace_one_pg9",
+      "target": "e_trace_one_pg9",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_event_yd_trace_one_pg9",
+      "target": "e_yannick_douzant_pg9",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_gaelle_bou_pg9",
+      "target": "e_event_gb_nibelis_pg9",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_gb_nibelis_pg9",
+      "target": "e_nibelis_pg9",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_event_gb_nibelis_pg9",
+      "target": "e_gaelle_bou_pg9",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_gaelle_bou_pg9",
+      "target": "e_event_gb_linedata_pg9",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e_event_gb_linedata_pg9",
+      "target": "e_linedata_pg9",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_event_gb_linedata_pg9",
+      "target": "e_gaelle_bou_pg9",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e_v_godard",
+      "target": "e_senior_sales_manager_pg9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e_senior_sales_manager_pg9",
+      "target": "e_infor_pg9",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e_v_godard",
+      "target": "e_vp_sales_woonoz_pg9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e_vp_sales_woonoz_pg9",
+      "target": "e_woonoz_pg9",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e_v_godard",
+      "target": "e_vp_operations_emea_apac_systran_pg9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e_vp_operations_emea_apac_systran_pg9",
+      "target": "e6_pg3",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e_sam_yoosuk_kim_pg9",
+      "target": "e_senior_managing_director_melon_pg9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e_senior_managing_director_melon_pg9",
+      "target": "e_melon_partners_pg9",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e_sam_yoosuk_kim_pg9",
+      "target": "e_group_strategy_vp_systran_pg9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e_group_strategy_vp_systran_pg9",
+      "target": "e6_pg3",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e_john_paul_barraza_pg9",
+      "target": "e_vp_operations_jpb_pg9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e_vp_operations_jpb_pg9",
+      "target": "e6_pg3",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e_john_paul_barraza_pg9",
+      "target": "e_director_services_jpb_pg9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e_director_services_jpb_pg9",
+      "target": "e6_pg3",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e_john_paul_barraza_pg9",
+      "target": "e_technical_services_manager_jpb_pg9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e_technical_services_manager_jpb_pg9",
+      "target": "e6_pg3",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e_john_paul_barraza_pg9",
+      "target": "e_it_administrator_jpb_pg9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e_it_administrator_jpb_pg9",
+      "target": "e6_pg3",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e_yannick_douzant_pg9",
+      "target": "e_prod_mgmt_qa_dir_yd_pg9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e_prod_mgmt_qa_dir_yd_pg9",
+      "target": "e6_pg3",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e_yannick_douzant_pg9",
+      "target": "e_principal_prod_manager_yd_pg9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e_principal_prod_manager_yd_pg9",
+      "target": "e6_pg3",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e_yannick_douzant_pg9",
+      "target": "e_head_prod_mgmt_to_pg9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e_head_prod_mgmt_to_pg9",
+      "target": "e_trace_one_pg9",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e_gaelle_bou_pg9",
+      "target": "e_marketing_director_nibelis_pg9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e_marketing_director_nibelis_pg9",
+      "target": "e_nibelis_pg9",
+      "type": "pekg:positionAt"
+    },
+    {
+      "source": "e_gaelle_bou_pg9",
+      "target": "e_marketing_manager_linedata_pg9",
+      "type": "pekg:holdsPosition"
+    },
+    {
+      "source": "e_marketing_manager_linedata_pg9",
+      "target": "e_linedata_pg9",
+      "type": "pekg:positionAt"
+    }
+  ],
+  "page_number": 9
+}

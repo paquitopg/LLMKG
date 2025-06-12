@@ -1,0 +1,460 @@
+{
+  "entities": [
+    {
+      "id": "e212",
+      "type": "pekg:Position",
+      "titleName": "Managing Director"
+    },
+    {
+      "id": "e213",
+      "type": "pekg:Person",
+      "fullName": "liquidator"
+    },
+    {
+      "id": "e214",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "collective decisions",
+      "eventType": "Corporate Meeting"
+    },
+    {
+      "id": "e215",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Quorum",
+      "eventType": "Legal Provision"
+    },
+    {
+      "id": "e216",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Majority",
+      "eventType": "Legal Provision"
+    },
+    {
+      "id": "e217",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "unanimous vote",
+      "eventType": "Legal Provision"
+    },
+    {
+      "id": "e218",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "statutory clause",
+      "eventType": "Legal Provision"
+    },
+    {
+      "id": "e219",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "transfer/lock-up of shares",
+      "eventType": "Legal Provision"
+    },
+    {
+      "id": "e220",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "compulsory assignment or suspension of non-pecuniary rights",
+      "eventType": "Legal Provision"
+    },
+    {
+      "id": "e221",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "change of control of a shareholder",
+      "eventType": "Legal Provision"
+    },
+    {
+      "id": "e222",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "increase in the commitments of the shareholders",
+      "eventType": "Legal Provision"
+    },
+    {
+      "id": "e223",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "change of nationality of the company",
+      "eventType": "Legal Provision"
+    },
+    {
+      "id": "e224",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Ordinary decisions",
+      "eventType": "Corporate Meeting"
+    },
+    {
+      "id": "e225",
+      "type": "Group",
+      "name": "participating members",
+      "description": "present or represented at the meeting or having responded to the written consultation"
+    },
+    {
+      "id": "e226",
+      "type": "pekg:ProductOrService",
+      "name": "voting shares",
+      "category": "Equity"
+    },
+    {
+      "id": "e227",
+      "type": "pekg:ProductOrService",
+      "name": "right to information",
+      "category": "Legal Right"
+    },
+    {
+      "id": "e228",
+      "type": "pekg:ProductOrService",
+      "name": "consolidated annual accounts",
+      "category": "Legal Document"
+    },
+    {
+      "id": "e229",
+      "type": "pekg:ProductOrService",
+      "name": "inventories",
+      "category": "Legal Document"
+    },
+    {
+      "id": "e230",
+      "type": "pekg:ProductOrService",
+      "name": "reports submitted to shareholders",
+      "category": "Legal Document"
+    },
+    {
+      "id": "e231",
+      "type": "pekg:ProductOrService",
+      "name": "minutes of collective decisions",
+      "category": "Legal Document"
+    },
+    {
+      "id": "e232",
+      "type": "pekg:ProductOrService",
+      "name": "auditors\u2019 reports",
+      "category": "Legal Document"
+    },
+    {
+      "id": "e233",
+      "type": "pekg:ProductOrService",
+      "name": "management report",
+      "category": "Legal Document"
+    },
+    {
+      "id": "e234",
+      "type": "Auditor",
+      "name": "auditor with special skill"
+    },
+    {
+      "id": "e235",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Financial Year",
+      "eventType": "Legal Provision",
+      "description": "starts on 1st January and ends on 31st December of each year"
+    },
+    {
+      "id": "e236",
+      "type": "pekg:ProductOrService",
+      "name": "report related to these drafts",
+      "category": "Legal Document"
+    },
+    {
+      "id": "e237",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "approval of accounts",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e238",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "law in force",
+      "eventType": "Legal Provision"
+    },
+    {
+      "id": "e239",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Financial Years",
+      "valueString": "last three financial years",
+      "scope": "company"
+    },
+    {
+      "id": "e240",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Certification of Minutes",
+      "eventType": "Legal Document Certification"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e214",
+      "target": "e185",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e185",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e185",
+      "target": "e207",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e240",
+      "target": "e231",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e240",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e240",
+      "target": "e212",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e212",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e240",
+      "target": "e213",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e215",
+      "target": "e214",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e216",
+      "target": "e214",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e217",
+      "target": "e20",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e217",
+      "target": "e218",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e218",
+      "target": "e131",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e218",
+      "target": "e219",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e218",
+      "target": "e220",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e218",
+      "target": "e221",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e217",
+      "target": "e222",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e217",
+      "target": "e223",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e224",
+      "target": "e225",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e225",
+      "target": "e226",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e224",
+      "target": "e208",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e224",
+      "target": "e215",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e161",
+      "target": "e225",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e161",
+      "target": "e226",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e161",
+      "target": "e208",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e161",
+      "target": "e215",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e162",
+      "target": "e225",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e162",
+      "target": "e208",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e161",
+      "target": "e216",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e162",
+      "target": "e216",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e224",
+      "target": "e216",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e166",
+      "target": "e1",
+      "type": "pekg:shareholderOf"
+    },
+    {
+      "source": "e166",
+      "target": "e214",
+      "type": "pekg:experiencedEvent"
+    },
+    {
+      "source": "e166",
+      "target": "e59",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e166",
+      "target": "e238",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e20",
+      "target": "e227",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e227",
+      "target": "e3",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e227",
+      "target": "e169",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e227",
+      "target": "e228",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e227",
+      "target": "e229",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e227",
+      "target": "e230",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e227",
+      "target": "e231",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e1",
+      "target": "e239",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e237",
+      "target": "e169",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e237",
+      "target": "e228",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e237",
+      "target": "e232",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e237",
+      "target": "e233",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e237",
+      "target": "e238",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e237",
+      "target": "e167",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e237",
+      "target": "e20",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e5",
+      "target": "e167",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e5",
+      "target": "e236",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e5",
+      "target": "e135",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e5",
+      "target": "e234",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e20",
+      "target": "e5",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e235",
+      "target": "e1",
+      "type": "pekg:positionAt"
+    }
+  ],
+  "page_number": 11
+}

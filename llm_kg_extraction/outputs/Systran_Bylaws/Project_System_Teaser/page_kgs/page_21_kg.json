@@ -1,0 +1,496 @@
+{
+  "entities": [
+    {
+      "id": "e6_pg3",
+      "type": "pekg:Company",
+      "name": "Systran",
+      "keyStrengths": [
+        "Acclaimed tech stack",
+        "Unique portfolio of sensitive clients",
+        "Pioneer and global leader in on-premise and cloud-based translation software",
+        "Breakthrough innovations and secured solutions",
+        "Secured solutions",
+        "Wide, diversified, loyal and growing customer base",
+        "Solid track record of sustainable growth",
+        "Longstanding track record of innovation",
+        "A long history as translation forerunner to support demanding customers in a quickly mutating translation environment",
+        "Global Footprint",
+        "proximity and responsiveness with its customers across 8 countries",
+        "Several innovations implemented to address new client typologies and needs for cloud based products",
+        "very high educational level of workforce which enables it to address technical functions to further develop the business"
+      ]
+    },
+    {
+      "id": "e2_pg1",
+      "type": "pekg:Advisor",
+      "name": "Rothschild & Co",
+      "roleInContext": "Financial Advisor for the disposal of the Group"
+    },
+    {
+      "id": "e5_pg3",
+      "type": "pekg:Advisor",
+      "name": "Samsung Securities",
+      "roleInContext": "Financial Advisor for the Transaction"
+    },
+    {
+      "id": "e3_pg1",
+      "type": "pekg:Company",
+      "name": "ChapsVision",
+      "description": "Entity associated with the confidentiality of the Information Memorandum, potentially the issuer or a related party."
+    },
+    {
+      "id": "e17_pg3",
+      "type": "pekg:Location",
+      "locationName": "Paris",
+      "locationType": "Global headquarter",
+      "officeSpecificInfo": "23 bis, avenue de Messine, 75008 Paris, France",
+      "description": "headquarter, sales office for Europe/Middle East and other region, R&D center of the group, European language-oriented R&D"
+    },
+    {
+      "id": "e_san_diego",
+      "type": "pekg:Location",
+      "locationName": "San Diego",
+      "locationType": "Regional operating office",
+      "officeSpecificInfo": "SSI",
+      "description": "sales office for America and English oriented language R&D"
+    },
+    {
+      "id": "e_tokyo",
+      "type": "pekg:Location",
+      "locationName": "Tokyo",
+      "locationType": "Commercial outreach",
+      "officeSpecificInfo": "SJGK",
+      "description": "sales office for Japan, Asia oriented language R&D"
+    },
+    {
+      "id": "e_daejeon",
+      "type": "pekg:Location",
+      "locationName": "Daejeon",
+      "locationType": "Commercial outreach",
+      "officeSpecificInfo": "SCL",
+      "description": "sales office for S.Korea, Asia oriented language R&D"
+    },
+    {
+      "id": "e_headcount_total_2019_pg21",
+      "type": "pekg:Headcount",
+      "headcountName": "Total Employees",
+      "totalEmployees": 84,
+      "dateOrYear": "2019"
+    },
+    {
+      "id": "e_headcount_total_2020_pg21",
+      "type": "pekg:Headcount",
+      "headcountName": "Total Employees",
+      "totalEmployees": 95,
+      "dateOrYear": "2020"
+    },
+    {
+      "id": "e_headcount_total_2021_pg21",
+      "type": "pekg:Headcount",
+      "headcountName": "Total Employees",
+      "totalEmployees": 110,
+      "dateOrYear": "2021"
+    },
+    {
+      "id": "e_headcount_total_2022_pg21",
+      "type": "pekg:Headcount",
+      "headcountName": "Total Employees",
+      "totalEmployees": 108,
+      "dateOrYear": "2022"
+    },
+    {
+      "id": "e_kpi_edu_master_pg21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Employee breakdown by education: Master",
+      "kpiValueString": "61%",
+      "kpiDateOrPeriod": "30/11/2022"
+    },
+    {
+      "id": "e_kpi_edu_bachelor_pg21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Employee breakdown by education: Bachelor",
+      "kpiValueString": "27%",
+      "kpiDateOrPeriod": "30/11/2022"
+    },
+    {
+      "id": "e_kpi_edu_phd_pg21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Employee breakdown by education: Ph.D.",
+      "kpiValueString": "5%",
+      "kpiDateOrPeriod": "30/11/2022"
+    },
+    {
+      "id": "e_kpi_edu_two_year_pg21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Employee breakdown by education: two-year degree",
+      "kpiValueString": "6%",
+      "kpiDateOrPeriod": "30/11/2022"
+    },
+    {
+      "id": "e_kpi_edu_alevel_pg21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Employee breakdown by education: A-level",
+      "kpiValueString": "1%",
+      "kpiDateOrPeriod": "30/11/2022"
+    },
+    {
+      "id": "e_kpi_dept_management_pg21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Employee breakdown by department: Management",
+      "kpiValueString": "5%",
+      "kpiDateOrPeriod": "31/12/2022"
+    },
+    {
+      "id": "e_kpi_dept_software_eng_pg21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Employee breakdown by department: Software Engineers",
+      "kpiValueString": "36%",
+      "kpiDateOrPeriod": "31/12/2022"
+    },
+    {
+      "id": "e_kpi_dept_comp_ling_pg21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Employee breakdown by department: Computational linguists/language engineers",
+      "kpiValueString": "18%",
+      "kpiDateOrPeriod": "31/12/2022"
+    },
+    {
+      "id": "e_kpi_dept_comm_mkt_pg21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Employee breakdown by department: Commercial & Marketing",
+      "kpiValueString": "31%",
+      "kpiDateOrPeriod": "31/12/2022"
+    },
+    {
+      "id": "e_kpi_dept_admin_pg21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Employee breakdown by department: Administrative",
+      "kpiValueString": "11%",
+      "kpiDateOrPeriod": "31/12/2022"
+    },
+    {
+      "id": "e_kpi_seniority_0_2_pg21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Employee breakdown by seniority: 0-2 years",
+      "kpiValueString": "43%",
+      "kpiDateOrPeriod": "31/12/2022"
+    },
+    {
+      "id": "e_kpi_seniority_2_5_pg21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Employee breakdown by seniority: 2-5 years",
+      "kpiValueString": "25%",
+      "kpiDateOrPeriod": "31/12/2022"
+    },
+    {
+      "id": "e_kpi_seniority_5_10_pg21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Employee breakdown by seniority: 5-10 years",
+      "kpiValueString": "17%",
+      "kpiDateOrPeriod": "31/12/2022"
+    },
+    {
+      "id": "e_kpi_seniority_10_plus_pg21",
+      "type": "pekg:OperationalKPI",
+      "kpiName": "Employee breakdown by seniority: 10+ years",
+      "kpiValueString": "16%",
+      "kpiDateOrPeriod": "31/12/2022"
+    },
+    {
+      "id": "e_headcount_paris_2019_pg21",
+      "type": "pekg:Headcount",
+      "headcountName": "Employees in Paris",
+      "totalEmployees": 61,
+      "dateOrYear": "2019"
+    },
+    {
+      "id": "e_headcount_paris_2020_pg21",
+      "type": "pekg:Headcount",
+      "headcountName": "Employees in Paris",
+      "totalEmployees": 61,
+      "dateOrYear": "2020"
+    },
+    {
+      "id": "e_headcount_paris_2021_pg21",
+      "type": "pekg:Headcount",
+      "headcountName": "Employees in Paris",
+      "totalEmployees": 72,
+      "dateOrYear": "2021"
+    },
+    {
+      "id": "e_headcount_paris_2022_pg21",
+      "type": "pekg:Headcount",
+      "headcountName": "Employees in Paris",
+      "totalEmployees": 72,
+      "dateOrYear": "2022"
+    },
+    {
+      "id": "e_headcount_san_diego_2019_pg21",
+      "type": "pekg:Headcount",
+      "headcountName": "Employees in San Diego",
+      "totalEmployees": 23,
+      "dateOrYear": "2019"
+    },
+    {
+      "id": "e_headcount_san_diego_2020_pg21",
+      "type": "pekg:Headcount",
+      "headcountName": "Employees in San Diego",
+      "totalEmployees": 25,
+      "dateOrYear": "2020"
+    },
+    {
+      "id": "e_headcount_san_diego_2021_pg21",
+      "type": "pekg:Headcount",
+      "headcountName": "Employees in San Diego",
+      "totalEmployees": 25,
+      "dateOrYear": "2021"
+    },
+    {
+      "id": "e_headcount_san_diego_2022_pg21",
+      "type": "pekg:Headcount",
+      "headcountName": "Employees in San Diego",
+      "totalEmployees": 22,
+      "dateOrYear": "2022"
+    },
+    {
+      "id": "e_headcount_tokyo_2019_pg21",
+      "type": "pekg:Headcount",
+      "headcountName": "Employees in Tokyo",
+      "totalEmployees": 0,
+      "dateOrYear": "2019"
+    },
+    {
+      "id": "e_headcount_tokyo_2020_pg21",
+      "type": "pekg:Headcount",
+      "headcountName": "Employees in Tokyo",
+      "totalEmployees": 2,
+      "dateOrYear": "2020"
+    },
+    {
+      "id": "e_headcount_tokyo_2021_pg21",
+      "type": "pekg:Headcount",
+      "headcountName": "Employees in Tokyo",
+      "totalEmployees": 9,
+      "dateOrYear": "2021"
+    },
+    {
+      "id": "e_headcount_tokyo_2022_pg21",
+      "type": "pekg:Headcount",
+      "headcountName": "Employees in Tokyo",
+      "totalEmployees": 11,
+      "dateOrYear": "2022"
+    },
+    {
+      "id": "e_headcount_daejeon_2019_pg21",
+      "type": "pekg:Headcount",
+      "headcountName": "Employees in Daejeon",
+      "totalEmployees": 0,
+      "dateOrYear": "2019"
+    },
+    {
+      "id": "e_headcount_daejeon_2020_pg21",
+      "type": "pekg:Headcount",
+      "headcountName": "Employees in Daejeon",
+      "totalEmployees": 7,
+      "dateOrYear": "2020"
+    },
+    {
+      "id": "e_headcount_daejeon_2021_pg21",
+      "type": "pekg:Headcount",
+      "headcountName": "Employees in Daejeon",
+      "totalEmployees": 2,
+      "dateOrYear": "2021"
+    },
+    {
+      "id": "e_headcount_daejeon_2022_pg21",
+      "type": "pekg:Headcount",
+      "headcountName": "Employees in Daejeon",
+      "totalEmployees": 2,
+      "dateOrYear": "2022"
+    },
+    {
+      "id": "e_source_company_info_pg21",
+      "type": "pekg:Company",
+      "name": "Company Information",
+      "description": "Source of data for employee breakdown and historical evolution"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e6_pg3",
+      "target": "e_headcount_total_2019_pg21",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_headcount_total_2020_pg21",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_headcount_total_2021_pg21",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_headcount_total_2022_pg21",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_kpi_edu_master_pg21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_kpi_edu_bachelor_pg21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_kpi_edu_phd_pg21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_kpi_edu_two_year_pg21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_kpi_edu_alevel_pg21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_kpi_dept_management_pg21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_kpi_dept_software_eng_pg21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_kpi_dept_comp_ling_pg21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_kpi_dept_comm_mkt_pg21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_kpi_dept_admin_pg21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_kpi_seniority_0_2_pg21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_kpi_seniority_2_5_pg21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_kpi_seniority_5_10_pg21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e6_pg3",
+      "target": "e_kpi_seniority_10_plus_pg21",
+      "type": "pekg:reportsOperationalKPI"
+    },
+    {
+      "source": "e17_pg3",
+      "target": "e_headcount_paris_2019_pg21",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e17_pg3",
+      "target": "e_headcount_paris_2020_pg21",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e17_pg3",
+      "target": "e_headcount_paris_2021_pg21",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e17_pg3",
+      "target": "e_headcount_paris_2022_pg21",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e_san_diego",
+      "target": "e_headcount_san_diego_2019_pg21",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e_san_diego",
+      "target": "e_headcount_san_diego_2020_pg21",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e_san_diego",
+      "target": "e_headcount_san_diego_2021_pg21",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e_san_diego",
+      "target": "e_headcount_san_diego_2022_pg21",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e_tokyo",
+      "target": "e_headcount_tokyo_2019_pg21",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e_tokyo",
+      "target": "e_headcount_tokyo_2020_pg21",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e_tokyo",
+      "target": "e_headcount_tokyo_2021_pg21",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e_tokyo",
+      "target": "e_headcount_tokyo_2022_pg21",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e_daejeon",
+      "target": "e_headcount_daejeon_2019_pg21",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e_daejeon",
+      "target": "e_headcount_daejeon_2020_pg21",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e_daejeon",
+      "target": "e_headcount_daejeon_2021_pg21",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e_daejeon",
+      "target": "e_headcount_daejeon_2022_pg21",
+      "type": "pekg:reportsHeadcount"
+    },
+    {
+      "source": "e_source_company_info_pg21",
+      "target": "e6_pg3",
+      "type": "pekg:sourceOfData"
+    }
+  ],
+  "page_number": 21
+}

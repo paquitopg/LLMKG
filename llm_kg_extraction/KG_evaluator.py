@@ -5,7 +5,7 @@ import networkx as nx
 from collections import Counter, defaultdict
 import matplotlib.pyplot as plt
 from typing import Dict, List, Set, Tuple, Any, Optional
-from ontology.loader import PEKGOntology
+from ontology_management.ontology_loader import PEKGOntology
 
 
 class KGEvaluator:

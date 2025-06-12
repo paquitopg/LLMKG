@@ -1,0 +1,330 @@
+{
+  "entities": [
+    {
+      "id": "e1",
+      "type": "pekg:Company",
+      "name": "SYSTRAN SAS"
+    },
+    {
+      "id": "e2",
+      "type": "pekg:FinancialMetric",
+      "metricName": "Share Capital"
+    },
+    {
+      "id": "e5",
+      "type": "pekg:Position",
+      "titleName": "President"
+    },
+    {
+      "id": "e20",
+      "type": "Group",
+      "name": "Shareholders"
+    },
+    {
+      "id": "e26",
+      "type": "pekg:ProductOrService",
+      "name": "Ordinary Shares",
+      "category": "Equity"
+    },
+    {
+      "id": "e27",
+      "type": "pekg:ProductOrService",
+      "name": "Preferred Shares",
+      "category": "Equity",
+      "description": "with or without voting rights, with special rights of any kind, temporarily or permanently"
+    },
+    {
+      "id": "e30",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Extraordinary General Meeting of Shareholders",
+      "eventType": "Corporate Meeting"
+    },
+    {
+      "id": "e31",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Share Capital Modification",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e33",
+      "type": "pekg:ProductOrService",
+      "name": "cash shares",
+      "description": "new cash shares"
+    },
+    {
+      "id": "e34",
+      "type": "pekg:FinancialMetric",
+      "metricName": "nominal (or par value)",
+      "scope": "per share"
+    },
+    {
+      "id": "e35",
+      "type": "pekg:FinancialMetric",
+      "metricName": "premium",
+      "scope": "per share"
+    },
+    {
+      "id": "e36",
+      "type": "pekg:ProductOrService",
+      "name": "fractional shares",
+      "description": "rompus"
+    },
+    {
+      "id": "e52",
+      "type": "pekg:ProductOrService",
+      "name": "Securities",
+      "category": "Financial Instrument",
+      "description": "general securities"
+    },
+    {
+      "id": "e37",
+      "type": "pekg:Person",
+      "fullName": "beneficial owner",
+      "biographySummary": "usufruitier in French"
+    },
+    {
+      "id": "e38",
+      "type": "pekg:Person",
+      "fullName": "bare owner",
+      "biographySummary": "nu-propri\u00e9taire in French"
+    },
+    {
+      "id": "e39",
+      "type": "pekg:ProductOrService",
+      "name": "shares",
+      "category": "Equity",
+      "description": "general shares"
+    },
+    {
+      "id": "e40",
+      "type": "pekg:ProductOrService",
+      "name": "preferential right to subscription",
+      "category": "Legal Right"
+    },
+    {
+      "id": "e41",
+      "type": "pekg:ProductOrService",
+      "name": "special benefit",
+      "description": "not provided for in bylaws"
+    },
+    {
+      "id": "e42",
+      "type": "pekg:ProductOrService",
+      "name": "voting rights",
+      "category": "Legal Right"
+    },
+    {
+      "id": "e43",
+      "type": "Group",
+      "name": "purchasers"
+    },
+    {
+      "id": "e44",
+      "type": "Group",
+      "name": "subscribers"
+    },
+    {
+      "id": "e45",
+      "type": "Individual",
+      "name": "subscriber or shareholder selling its shares"
+    },
+    {
+      "id": "e46",
+      "type": "Individual",
+      "name": "defaulting shareholder"
+    },
+    {
+      "id": "e47",
+      "type": "pekg:FinancialMetric",
+      "metricName": "legal rate",
+      "scope": "general"
+    },
+    {
+      "id": "e48",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "buy-back",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e49",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "conversion",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e50",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "depreciation of the share capital",
+      "eventType": "Corporate Action"
+    },
+    {
+      "id": "e51",
+      "type": "pekg:HistoricalEvent",
+      "eventName": "Paying Up of Shares",
+      "eventType": "Corporate Action"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "e33",
+      "target": "e34",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e33",
+      "target": "e35",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e2",
+      "target": "e31",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e31",
+      "target": "e36",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e52",
+      "target": "e40",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e37",
+      "target": "e39",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e38",
+      "target": "e39",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e39",
+      "target": "e40",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e1",
+      "target": "e27",
+      "type": "pekg:offers"
+    },
+    {
+      "source": "e27",
+      "target": "e42",
+      "type": "pekg:hasIntellectualProperty"
+    },
+    {
+      "source": "e27",
+      "target": "e2",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e27",
+      "target": "e48",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e27",
+      "target": "e49",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e49",
+      "target": "e26",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e49",
+      "target": "e27",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e48",
+      "target": "e1",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e48",
+      "target": "e27",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e31",
+      "target": "e20",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e50",
+      "target": "e20",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e31",
+      "target": "e27",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e50",
+      "target": "e27",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e30",
+      "target": "e27",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e30",
+      "target": "e48",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e30",
+      "target": "e49",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e51",
+      "target": "e39",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e51",
+      "target": "e5",
+      "type": "pekg:eventInvolvesParty"
+    },
+    {
+      "source": "e43",
+      "target": "e51",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e44",
+      "target": "e51",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e45",
+      "target": "e51",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e46",
+      "target": "e51",
+      "type": "pekg:isSubjectOf"
+    },
+    {
+      "source": "e51",
+      "target": "e47",
+      "type": "pekg:reportsFinancialMetric"
+    },
+    {
+      "source": "e1",
+      "target": "e46",
+      "type": "pekg:hasClientPerson"
+    }
+  ],
+  "page_number": 4
+}

@@ -1,0 +1,321 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script>function neighbourhoodHighlight(params) {
+  // console.log("in nieghbourhoodhighlight");
+  allNodes = nodes.get({ returnType: "Object" });
+  // originalNodes = JSON.parse(JSON.stringify(allNodes));
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    highlightActive = true;
+    var i, j;
+    var selectedNode = params.nodes[0];
+    var degrees = 2;
+
+    // mark all nodes as hard to read.
+    for (let nodeId in allNodes) {
+      // nodeColors[nodeId] = allNodes[nodeId].color;
+      allNodes[nodeId].color = "rgba(200,200,200,0.5)";
+      if (allNodes[nodeId].hiddenLabel === undefined) {
+        allNodes[nodeId].hiddenLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+    var connectedNodes = network.getConnectedNodes(selectedNode);
+    var allConnectedNodes = [];
+
+    // get the second degree nodes
+    for (i = 1; i < degrees; i++) {
+      for (j = 0; j < connectedNodes.length; j++) {
+        allConnectedNodes = allConnectedNodes.concat(
+          network.getConnectedNodes(connectedNodes[j])
+        );
+      }
+    }
+
+    // all second degree nodes get a different color and their label back
+    for (i = 0; i < allConnectedNodes.length; i++) {
+      // allNodes[allConnectedNodes[i]].color = "pink";
+      allNodes[allConnectedNodes[i]].color = "rgba(150,150,150,0.75)";
+      if (allNodes[allConnectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[allConnectedNodes[i]].label =
+          allNodes[allConnectedNodes[i]].hiddenLabel;
+        allNodes[allConnectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // all first degree nodes get their own color and their label back
+    for (i = 0; i < connectedNodes.length; i++) {
+      // allNodes[connectedNodes[i]].color = undefined;
+      allNodes[connectedNodes[i]].color = nodeColors[connectedNodes[i]];
+      if (allNodes[connectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[connectedNodes[i]].label =
+          allNodes[connectedNodes[i]].hiddenLabel;
+        allNodes[connectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // the main node gets its own color and its label back.
+    // allNodes[selectedNode].color = undefined;
+    allNodes[selectedNode].color = nodeColors[selectedNode];
+    if (allNodes[selectedNode].hiddenLabel !== undefined) {
+      allNodes[selectedNode].label = allNodes[selectedNode].hiddenLabel;
+      allNodes[selectedNode].hiddenLabel = undefined;
+    }
+  } else if (highlightActive === true) {
+    // console.log("highlightActive was true");
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      // allNodes[nodeId].color = "purple";
+      allNodes[nodeId].color = nodeColors[nodeId];
+      // delete allNodes[nodeId].color;
+      if (allNodes[nodeId].hiddenLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].hiddenLabel;
+        allNodes[nodeId].hiddenLabel = undefined;
+      }
+    }
+    highlightActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    // console.log("Nothing was selected");
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        // allNodes[nodeId].color = {};
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function filterHighlight(params) {
+  allNodes = nodes.get({ returnType: "Object" });
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    filterActive = true;
+    let selectedNodes = params.nodes;
+
+    // hiding all nodes and saving the label
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = true;
+      if (allNodes[nodeId].savedLabel === undefined) {
+        allNodes[nodeId].savedLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+
+    for (let i=0; i < selectedNodes.length; i++) {
+      allNodes[selectedNodes[i]].hidden = false;
+      if (allNodes[selectedNodes[i]].savedLabel !== undefined) {
+        allNodes[selectedNodes[i]].label = allNodes[selectedNodes[i]].savedLabel;
+        allNodes[selectedNodes[i]].savedLabel = undefined;
+      }
+    }
+
+  } else if (filterActive === true) {
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = false;
+      if (allNodes[nodeId].savedLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].savedLabel;
+        allNodes[nodeId].savedLabel = undefined;
+      }
+    }
+    filterActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function selectNode(nodes) {
+  network.selectNodes(nodes);
+  neighbourhoodHighlight({ nodes: nodes });
+  return nodes;
+}
+
+function selectNodes(nodes) {
+  network.selectNodes(nodes);
+  filterHighlight({nodes: nodes});
+  return nodes;
+}
+
+function highlightFilter(filter) {
+  let selectedNodes = []
+  let selectedProp = filter['property']
+  if (filter['item'] === 'node') {
+    let allNodes = nodes.get({ returnType: "Object" });
+    for (let nodeId in allNodes) {
+      if (allNodes[nodeId][selectedProp] && filter['value'].includes((allNodes[nodeId][selectedProp]).toString())) {
+        selectedNodes.push(nodeId)
+      }
+    }
+  }
+  else if (filter['item'] === 'edge'){
+    let allEdges = edges.get({returnType: 'object'});
+    // check if the selected property exists for selected edge and select the nodes connected to the edge
+    for (let edge in allEdges) {
+      if (allEdges[edge][selectedProp] && filter['value'].includes((allEdges[edge][selectedProp]).toString())) {
+        selectedNodes.push(allEdges[edge]['from'])
+        selectedNodes.push(allEdges[edge]['to'])
+      }
+    }
+  }
+  selectNodes(selectedNodes)
+}</script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            
+            
+            
+            
+            
+
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1f77b4", "id": "e1", "label": "SYSTRAN SAS", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e1\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e SYSTRAN SAS"}, {"color": "#e7969c", "id": "e4", "label": "Bylaws updated", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e4\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#98df8a", "id": "e16", "label": "Board of Directors", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e16\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Position"}, {"color": "#cccccc", "id": "e20", "label": "Shareholders", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e20\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e Group\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Shareholders"}, {"color": "#98df8a", "id": "e5", "label": "President", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e5\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Position"}, {"color": "#1f77b4", "id": "e68", "label": "corporate entity", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e68\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e corporate entity"}, {"color": "#2ca02c", "id": "e69", "label": "natural person", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e69\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Person\u003cbr\u003e\u003cb\u003efullName:\u003c/b\u003e natural person"}, {"color": "#ff7f0e", "id": "e70", "label": "Compensation", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e70\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Compensation"}, {"color": "#9467bd", "id": "e73", "label": "Annual Report", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e73\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Annual Report"}, {"color": "#ff7f0e", "id": "e75", "label": "Remuneration", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e75\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Remuneration"}, {"color": "#c7c7c7", "id": "e3", "label": "company\u0027s head office", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e3\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Location"}, {"color": "#e7969c", "id": "e81", "label": "ordinary collective decision of the shareholders", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e81\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e82", "label": "co-optation", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e82\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#98df8a", "id": "e83", "label": "permanent representative", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e83\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Position"}, {"color": "#e7969c", "id": "e84", "label": "removal of Board members", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e84\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e85", "label": "resignation of Board members", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e85\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e86", "label": "vacancy of Board members", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e86\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e87", "label": "appointments to Board", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e87\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#e7969c", "id": "e88", "label": "Board Meetings", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e88\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:HistoricalEvent"}, {"color": "#9467bd", "id": "e89", "label": "convening notice", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e89\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e convening notice"}, {"color": "#9467bd", "id": "e90", "label": "agenda", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e90\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e agenda"}, {"color": "#8c564b", "id": "e91", "label": "videoconferencing", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e91\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Technology\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e videoconferencing"}, {"color": "#8c564b", "id": "e92", "label": "telecommunication", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e92\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Technology\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e telecommunication"}, {"color": "#98df8a", "id": "e93", "label": "Chairperson", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e93\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Position"}, {"color": "#9467bd", "id": "e94", "label": "Board decisions", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e94\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Board decisions"}, {"color": "#9467bd", "id": "e95", "label": "minutes of Board meetings", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e95\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e minutes of Board meetings"}, {"color": "#ff7f0e", "id": "e96", "label": "reimbursable costs", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e96\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e reimbursable costs"}, {"color": "#ffbb78", "id": "e97", "label": "Board of Directors Composition", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e97\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:OperationalKPI\u003cbr\u003e\u003cb\u003ekpiName:\u003c/b\u003e Board of Directors Composition\u003cbr\u003e\u003cb\u003edescription:\u003c/b\u003e minimum number of members for the Board of Directors"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "e16", "label": "positionAt", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:positionAt\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e16\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e1", "to": "e1"}, {"arrows": "to", "from": "e16", "label": "eventInvolvesParty", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:eventInvolvesParty\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e16\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e81", "to": "e81"}, {"arrows": "to", "from": "e20", "label": "eventInvolvesParty", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:eventInvolvesParty\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e20\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e81", "to": "e81"}, {"arrows": "to", "from": "e16", "label": "eventInvolvesParty", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:eventInvolvesParty\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e16\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e82", "to": "e82"}, {"arrows": "to", "from": "e5", "label": "holdsPosition", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:holdsPosition\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e5\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e16", "to": "e16"}, {"arrows": "to", "from": "e68", "label": "employs", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:employs\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e68\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e69", "to": "e69"}, {"arrows": "to", "from": "e69", "label": "holdsPosition", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:holdsPosition\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e69\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e83", "to": "e83"}, {"arrows": "to", "from": "e83", "label": "positionAt", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:positionAt\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e83\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e16", "to": "e16"}, {"arrows": "to", "from": "e16", "label": "eventInvolvesParty", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:eventInvolvesParty\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e16\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e84", "to": "e84"}, {"arrows": "to", "from": "e20", "label": "eventInvolvesParty", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:eventInvolvesParty\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e20\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e84", "to": "e84"}, {"arrows": "to", "from": "e84", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e84\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e70", "to": "e70"}, {"arrows": "to", "from": "e16", "label": "eventInvolvesParty", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:eventInvolvesParty\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e16\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e85", "to": "e85"}, {"arrows": "to", "from": "e16", "label": "eventInvolvesParty", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:eventInvolvesParty\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e16\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e86", "to": "e86"}, {"arrows": "to", "from": "e16", "label": "eventInvolvesParty", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:eventInvolvesParty\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e16\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e87", "to": "e87"}, {"arrows": "to", "from": "e87", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e87\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e73", "to": "e73"}, {"arrows": "to", "from": "e5", "label": "eventInvolvesParty", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:eventInvolvesParty\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e5\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e87", "to": "e87"}, {"arrows": "to", "from": "e20", "label": "eventInvolvesParty", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:eventInvolvesParty\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e20\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e87", "to": "e87"}, {"arrows": "to", "from": "e16", "label": "eventInvolvesParty", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:eventInvolvesParty\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e16\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e88", "to": "e88"}, {"arrows": "to", "from": "e5", "label": "eventInvolvesParty", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:eventInvolvesParty\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e5\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e88", "to": "e88"}, {"arrows": "to", "from": "e88", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e88\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e89", "to": "e89"}, {"arrows": "to", "from": "e89", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e89\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e90", "to": "e90"}, {"arrows": "to", "from": "e88", "label": "hasOfficeIn", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:hasOfficeIn\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e88\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e3", "to": "e3"}, {"arrows": "to", "from": "e88", "label": "usesTechnology", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:usesTechnology\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e88\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e91", "to": "e91"}, {"arrows": "to", "from": "e88", "label": "usesTechnology", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:usesTechnology\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e88\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e92", "to": "e92"}, {"arrows": "to", "from": "e93", "label": "positionAt", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:positionAt\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e93\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e16", "to": "e16"}, {"arrows": "to", "from": "e5", "label": "holdsPosition", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:holdsPosition\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e5\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e93", "to": "e93"}, {"arrows": "to", "from": "e16", "label": "eventInvolvesParty", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:eventInvolvesParty\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e16\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e94", "to": "e94"}, {"arrows": "to", "from": "e16", "label": "eventInvolvesParty", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:eventInvolvesParty\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e16\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e95", "to": "e95"}, {"arrows": "to", "from": "e5", "label": "eventInvolvesParty", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:eventInvolvesParty\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e5\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e95", "to": "e95"}, {"arrows": "to", "from": "e93", "label": "eventInvolvesParty", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:eventInvolvesParty\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e93\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e95", "to": "e95"}, {"arrows": "to", "from": "e16", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e16\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e75", "to": "e75"}, {"arrows": "to", "from": "e16", "label": "isSubjectOf", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:isSubjectOf\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e16\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e96", "to": "e96"}, {"arrows": "to", "from": "e16", "label": "reportsOperationalKPI", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:reportsOperationalKPI\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e16\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e97", "to": "e97"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shape": "dot", "font": {"size": 14, "face": "Tahoma"}, "borderWidth": 2, "shadow": true}, "edges": {"arrows": {"to": {"enabled": true, "scaleFactor": 0.7}}, "color": {"inherit": "from"}, "smooth": {"type": "continuous", "roundness": 0.2}, "font": {"size": 10, "align": "middle"}, "shadow": true}, "physics": {"enabled": true, "barnesHut": {"gravitationalConstant": -30000, "centralGravity": 0.3, "springLength": 250, "springConstant": 0.04, "damping": 0.09}, "minVelocity": 0.75}, "interaction": {"hover": true, "tooltipDelay": 200, "multiselect": true, "navigationButtons": true, "keyboard": true}, "layout": {"hierarchical": false}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,321 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script>function neighbourhoodHighlight(params) {
+  // console.log("in nieghbourhoodhighlight");
+  allNodes = nodes.get({ returnType: "Object" });
+  // originalNodes = JSON.parse(JSON.stringify(allNodes));
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    highlightActive = true;
+    var i, j;
+    var selectedNode = params.nodes[0];
+    var degrees = 2;
+
+    // mark all nodes as hard to read.
+    for (let nodeId in allNodes) {
+      // nodeColors[nodeId] = allNodes[nodeId].color;
+      allNodes[nodeId].color = "rgba(200,200,200,0.5)";
+      if (allNodes[nodeId].hiddenLabel === undefined) {
+        allNodes[nodeId].hiddenLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+    var connectedNodes = network.getConnectedNodes(selectedNode);
+    var allConnectedNodes = [];
+
+    // get the second degree nodes
+    for (i = 1; i < degrees; i++) {
+      for (j = 0; j < connectedNodes.length; j++) {
+        allConnectedNodes = allConnectedNodes.concat(
+          network.getConnectedNodes(connectedNodes[j])
+        );
+      }
+    }
+
+    // all second degree nodes get a different color and their label back
+    for (i = 0; i < allConnectedNodes.length; i++) {
+      // allNodes[allConnectedNodes[i]].color = "pink";
+      allNodes[allConnectedNodes[i]].color = "rgba(150,150,150,0.75)";
+      if (allNodes[allConnectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[allConnectedNodes[i]].label =
+          allNodes[allConnectedNodes[i]].hiddenLabel;
+        allNodes[allConnectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // all first degree nodes get their own color and their label back
+    for (i = 0; i < connectedNodes.length; i++) {
+      // allNodes[connectedNodes[i]].color = undefined;
+      allNodes[connectedNodes[i]].color = nodeColors[connectedNodes[i]];
+      if (allNodes[connectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[connectedNodes[i]].label =
+          allNodes[connectedNodes[i]].hiddenLabel;
+        allNodes[connectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // the main node gets its own color and its label back.
+    // allNodes[selectedNode].color = undefined;
+    allNodes[selectedNode].color = nodeColors[selectedNode];
+    if (allNodes[selectedNode].hiddenLabel !== undefined) {
+      allNodes[selectedNode].label = allNodes[selectedNode].hiddenLabel;
+      allNodes[selectedNode].hiddenLabel = undefined;
+    }
+  } else if (highlightActive === true) {
+    // console.log("highlightActive was true");
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      // allNodes[nodeId].color = "purple";
+      allNodes[nodeId].color = nodeColors[nodeId];
+      // delete allNodes[nodeId].color;
+      if (allNodes[nodeId].hiddenLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].hiddenLabel;
+        allNodes[nodeId].hiddenLabel = undefined;
+      }
+    }
+    highlightActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    // console.log("Nothing was selected");
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        // allNodes[nodeId].color = {};
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function filterHighlight(params) {
+  allNodes = nodes.get({ returnType: "Object" });
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    filterActive = true;
+    let selectedNodes = params.nodes;
+
+    // hiding all nodes and saving the label
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = true;
+      if (allNodes[nodeId].savedLabel === undefined) {
+        allNodes[nodeId].savedLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+
+    for (let i=0; i < selectedNodes.length; i++) {
+      allNodes[selectedNodes[i]].hidden = false;
+      if (allNodes[selectedNodes[i]].savedLabel !== undefined) {
+        allNodes[selectedNodes[i]].label = allNodes[selectedNodes[i]].savedLabel;
+        allNodes[selectedNodes[i]].savedLabel = undefined;
+      }
+    }
+
+  } else if (filterActive === true) {
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = false;
+      if (allNodes[nodeId].savedLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].savedLabel;
+        allNodes[nodeId].savedLabel = undefined;
+      }
+    }
+    filterActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function selectNode(nodes) {
+  network.selectNodes(nodes);
+  neighbourhoodHighlight({ nodes: nodes });
+  return nodes;
+}
+
+function selectNodes(nodes) {
+  network.selectNodes(nodes);
+  filterHighlight({nodes: nodes});
+  return nodes;
+}
+
+function highlightFilter(filter) {
+  let selectedNodes = []
+  let selectedProp = filter['property']
+  if (filter['item'] === 'node') {
+    let allNodes = nodes.get({ returnType: "Object" });
+    for (let nodeId in allNodes) {
+      if (allNodes[nodeId][selectedProp] && filter['value'].includes((allNodes[nodeId][selectedProp]).toString())) {
+        selectedNodes.push(nodeId)
+      }
+    }
+  }
+  else if (filter['item'] === 'edge'){
+    let allEdges = edges.get({returnType: 'object'});
+    // check if the selected property exists for selected edge and select the nodes connected to the edge
+    for (let edge in allEdges) {
+      if (allEdges[edge][selectedProp] && filter['value'].includes((allEdges[edge][selectedProp]).toString())) {
+        selectedNodes.push(allEdges[edge]['from'])
+        selectedNodes.push(allEdges[edge]['to'])
+      }
+    }
+  }
+  selectNodes(selectedNodes)
+}</script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            
+            
+            
+            
+            
+
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#ff7f0e", "id": "e_adj_sale_fy20a_pg46", "label": "Adjusted Sale (FY20A)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_adj_sale_fy20a_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Adjusted Sale\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e \u20ac15.3mn"}, {"color": "#ff7f0e", "id": "e_adj_sale_fy21a_pg46", "label": "Adjusted Sale (FY21A)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_adj_sale_fy21a_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Adjusted Sale\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e \u20ac16.0mn"}, {"color": "#ff7f0e", "id": "e_adj_sale_fy22b_pg46", "label": "Adjusted Sale (FY22B)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_adj_sale_fy22b_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Adjusted Sale\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e \u20ac19.5mn"}, {"color": "#ff7f0e", "id": "e_rev_maint_perc_fy19a_pg46", "label": "Maintenance Revenue Percentage (FY19A)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rev_maint_perc_fy19a_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Maintenance Revenue Percentage\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 26%"}, {"color": "#ff7f0e", "id": "e_rev_maint_perc_fy20a_pg46", "label": "Maintenance Revenue Percentage (FY20A)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rev_maint_perc_fy20a_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Maintenance Revenue Percentage\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 27%"}, {"color": "#ff7f0e", "id": "e_rev_maint_perc_fy21a_pg46", "label": "Maintenance Revenue Percentage (FY21A)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rev_maint_perc_fy21a_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Maintenance Revenue Percentage\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 28%"}, {"color": "#ff7f0e", "id": "e_rev_maint_perc_fy22b_pg46", "label": "Maintenance Revenue Percentage (FY22B)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rev_maint_perc_fy22b_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Maintenance Revenue Percentage\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 27%"}, {"color": "#ff7f0e", "id": "e_rev_annual_lic_perc_fy19a_pg46", "label": "Annual Licenses Revenue Percentage (FY19A)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rev_annual_lic_perc_fy19a_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Annual Licenses Revenue Percentage\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 21%"}, {"color": "#ff7f0e", "id": "e_rev_annual_lic_perc_fy20a_pg46", "label": "Annual Licenses Revenue Percentage (FY20A)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rev_annual_lic_perc_fy20a_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Annual Licenses Revenue Percentage\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 21%"}, {"color": "#ff7f0e", "id": "e_rev_annual_lic_perc_fy21a_pg46", "label": "Annual Licenses Revenue Percentage (FY21A)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rev_annual_lic_perc_fy21a_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Annual Licenses Revenue Percentage\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 22%"}, {"color": "#ff7f0e", "id": "e_rev_annual_lic_perc_fy22b_pg46", "label": "Annual Licenses Revenue Percentage (FY22B)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rev_annual_lic_perc_fy22b_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Annual Licenses Revenue Percentage\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 22%"}, {"color": "#ff7f0e", "id": "e_rev_cloud_perc_fy19a_pg46", "label": "Cloud Revenue Percentage (FY19A)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rev_cloud_perc_fy19a_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Cloud Revenue Percentage\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 1%"}, {"color": "#ff7f0e", "id": "e_rev_cloud_perc_fy20a_pg46", "label": "Cloud Revenue Percentage (FY20A)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rev_cloud_perc_fy20a_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Cloud Revenue Percentage\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 1%"}, {"color": "#ff7f0e", "id": "e_rev_cloud_perc_fy21a_pg46", "label": "Cloud Revenue Percentage (FY21A)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rev_cloud_perc_fy21a_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Cloud Revenue Percentage\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 1%"}, {"color": "#ff7f0e", "id": "e_rev_cloud_perc_fy22b_pg46", "label": "Cloud Revenue Percentage (FY22B)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rev_cloud_perc_fy22b_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Cloud Revenue Percentage\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 3%"}, {"color": "#ff7f0e", "id": "e_rev_perpetual_lic_perc_fy19a_pg46", "label": "Perpetual Licenses Revenue Percentage (FY19A)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rev_perpetual_lic_perc_fy19a_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Perpetual Licenses Revenue Percentage\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 35%"}, {"color": "#ff7f0e", "id": "e_rev_perpetual_lic_perc_fy20a_pg46", "label": "Perpetual Licenses Revenue Percentage (FY20A)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rev_perpetual_lic_perc_fy20a_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Perpetual Licenses Revenue Percentage\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 28%"}, {"color": "#ff7f0e", "id": "e_rev_perpetual_lic_perc_fy21a_pg46", "label": "Perpetual Licenses Revenue Percentage (FY21A)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rev_perpetual_lic_perc_fy21a_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Perpetual Licenses Revenue Percentage\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 32%"}, {"color": "#ff7f0e", "id": "e_rev_perpetual_lic_perc_fy22b_pg46", "label": "Perpetual Licenses Revenue Percentage (FY22B)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rev_perpetual_lic_perc_fy22b_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Perpetual Licenses Revenue Percentage\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 31%"}, {"color": "#ff7f0e", "id": "e_rev_others_perc_fy19a_pg46", "label": "Others Revenue Percentage (FY19A)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rev_others_perc_fy19a_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Others Revenue Percentage\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 17%"}, {"color": "#ff7f0e", "id": "e_rev_others_perc_fy20a_pg46", "label": "Others Revenue Percentage (FY20A)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rev_others_perc_fy20a_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Others Revenue Percentage\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 22%"}, {"color": "#ff7f0e", "id": "e_rev_others_perc_fy21a_pg46", "label": "Others Revenue Percentage (FY21A)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rev_others_perc_fy21a_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Others Revenue Percentage\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 17%"}, {"color": "#ff7f0e", "id": "e_rev_others_perc_fy22b_pg46", "label": "Others Revenue Percentage (FY22B)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rev_others_perc_fy22b_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Others Revenue Percentage\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 16%"}, {"color": "#ff7f0e", "id": "e_recurring_rev_perc_fy19a_pg46", "label": "Recurring Revenues Percentage of Total Revenue (FY", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_recurring_rev_perc_fy19a_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Recurring Revenues Percentage of Total Revenue\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 47%"}, {"color": "#ff7f0e", "id": "e_recurring_rev_perc_fy20a_pg46", "label": "Recurring Revenues Percentage of Total Revenue (FY", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_recurring_rev_perc_fy20a_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Recurring Revenues Percentage of Total Revenue\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 48%"}, {"color": "#ff7f0e", "id": "e_recurring_rev_perc_fy21a_pg46", "label": "Recurring Revenues Percentage of Total Revenue (FY", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_recurring_rev_perc_fy21a_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Recurring Revenues Percentage of Total Revenue\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 50%"}, {"color": "#ff7f0e", "id": "e_recurring_rev_perc_fy22b_pg46", "label": "Recurring Revenues Percentage of Total Revenue (FY", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_recurring_rev_perc_fy22b_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Recurring Revenues Percentage of Total Revenue\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e 49%"}, {"color": "#ff7f0e", "id": "e_recurring_rev_text_perc_pg46", "label": "Recurring Revenues Percentage of Total Revenue (Ea", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_recurring_rev_text_perc_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Recurring Revenues Percentage of Total Revenue\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e c.50%"}, {"color": "#ff7f0e", "id": "e_perpetual_lic_recurring_maint_perc_pg46", "label": "Recurring Maintenance from Perpetual Licenses Perc", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_perpetual_lic_recurring_maint_perc_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Recurring Maintenance from Perpetual Licenses Percentage\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e c.18-22%"}, {"color": "#ff7f0e", "id": "e_rev_cagr_fy19a_22b_pg46", "label": "Revenues CAGR (FY19A-22B)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rev_cagr_fy19a_22b_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Revenues CAGR\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e +12.2%"}, {"color": "#ff7f0e", "id": "e_cloud_cagr_pg46", "label": "Cloud Revenue CAGR (FY19A-22B)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_cloud_cagr_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Cloud Revenue CAGR\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e +71%"}, {"color": "#ff7f0e", "id": "e_annual_license_cagr_pg46", "label": "Annual License Revenue CAGR (FY19A-22B)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_annual_license_cagr_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Annual License Revenue CAGR\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e +15%"}, {"color": "#ff7f0e", "id": "e_maintenance_renewal_cagr_pg46", "label": "Maintenance Renewal Revenue CAGR (FY19A-22B)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_maintenance_renewal_cagr_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Maintenance Renewal Revenue CAGR\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e +10%"}, {"color": "#ff7f0e", "id": "e_perpetual_cagr_pg46", "label": "Perpetual Revenue CAGR (FY19A-22B)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_perpetual_cagr_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Perpetual Revenue CAGR\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e +12%"}, {"color": "#ff7f0e", "id": "e_other_cagr_pg46", "label": "Other Revenue CAGR (FY19A-22B)", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_other_cagr_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:FinancialMetric\u003cbr\u003e\u003cb\u003emetricName:\u003c/b\u003e Other Revenue CAGR\u003cbr\u003e\u003cb\u003evalueString:\u003c/b\u003e +11%"}, {"color": "#9467bd", "id": "e_recurring_revenues_category_pg46", "label": "Recurring revenues", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_recurring_revenues_category_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Recurring revenues\u003cbr\u003e\u003cb\u003edescription:\u003c/b\u003e Comprising both annual licenses and recurring maintenance included in perpetual licenses"}, {"color": "#9467bd", "id": "e_one_time_revenue_category_pg46", "label": "One-time revenue", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_one_time_revenue_category_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:ProductOrService\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e One-time revenue\u003cbr\u003e\u003cb\u003edescription:\u003c/b\u003e Includes services \u0026 other spot sales"}, {"color": "#1f77b4", "id": "e_adidas_pg46", "label": "Adidas", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_adidas_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Adidas"}, {"color": "#1f77b4", "id": "e_stellantis_pg46", "label": "Stellantis", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_stellantis_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Stellantis"}, {"color": "#1f77b4", "id": "e_toyota_pg46", "label": "Toyota", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_toyota_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Toyota"}, {"color": "#1f77b4", "id": "e_lexcelera_pg46", "label": "Lexcelera", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_lexcelera_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Lexcelera"}, {"color": "#1f77b4", "id": "e_hcl_pg46", "label": "HCL", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_hcl_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e HCL"}, {"color": "#1f77b4", "id": "e_heidelberg_pg46", "label": "Heidelberg", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_heidelberg_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Heidelberg"}, {"color": "#1f77b4", "id": "e_tata_consultancy_services_pg46", "label": "Tata Consultancy Services", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_tata_consultancy_services_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Tata Consultancy Services"}, {"color": "#1f77b4", "id": "e_the_global_fund_pg46", "label": "The Global Fund", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_the_global_fund_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e The Global Fund"}, {"color": "#1f77b4", "id": "e_tenneco_pg46", "label": "Tenneco", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_tenneco_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Tenneco"}, {"color": "#1f77b4", "id": "e_admantx_pg46", "label": "ADmantX", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_admantx_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e ADmantX"}, {"color": "#1f77b4", "id": "e_airbus_pg46", "label": "Airbus", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_airbus_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Airbus"}, {"color": "#1f77b4", "id": "e_dy4_gate_pg46", "label": "DY4 Gate", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_dy4_gate_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e DY4 Gate"}, {"color": "#1f77b4", "id": "e_ford_pg46", "label": "Ford", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_ford_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Ford"}, {"color": "#1f77b4", "id": "e_ikea_pg46", "label": "IKEA", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_ikea_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e IKEA"}, {"color": "#1f77b4", "id": "e_alvarez_marsal_pg46", "label": "Alvarez \u0026 Marsal", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_alvarez_marsal_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Alvarez \u0026 Marsal"}, {"color": "#1f77b4", "id": "e_ravenpack_pg46", "label": "RavenPack", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_ravenpack_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e RavenPack"}, {"color": "#1f77b4", "id": "e_rosetta_technology_pg46", "label": "ROZETTA Technology", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_rosetta_technology_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e pekg:Company\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e ROZETTA Technology"}, {"color": "#cccccc", "id": "e_french_ministry_of_defense_pg46", "label": "French Ministry of Defense", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_french_ministry_of_defense_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e Government\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e French Ministry of Defense"}, {"color": "#cccccc", "id": "e_abu_dhabi_police_pg46", "label": "Abu Dhabi Police", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_abu_dhabi_police_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e Government\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Abu Dhabi Police"}, {"color": "#cccccc", "id": "e_fra_pg46", "label": "European Union Agency for Fundamental Rights", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_fra_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e Government Agency\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e European Union Agency for Fundamental Rights"}, {"color": "#cccccc", "id": "e_korean_intellectual_property_office_pg46", "label": "Korean Intellectual Property Office", "shape": "dot", "size": 15, "title": "\u003cb\u003eID:\u003c/b\u003e e_korean_intellectual_property_office_pg46\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e Government Agency\u003cbr\u003e\u003cb\u003ename:\u003c/b\u003e Korean Intellectual Property Office"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "e_recurring_revenues_category_pg46", "label": "reportsFinancialMetric", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:reportsFinancialMetric\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e_recurring_revenues_category_pg46\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e_perpetual_lic_recurring_maint_perc_pg46", "to": "e_perpetual_lic_recurring_maint_perc_pg46"}, {"arrows": "to", "from": "e_adj_sale_fy20a_pg46", "label": "reportsFinancialMetric", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:reportsFinancialMetric\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e_adj_sale_fy20a_pg46\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e_recurring_rev_perc_fy20a_pg46", "to": "e_recurring_rev_perc_fy20a_pg46"}, {"arrows": "to", "from": "e_adj_sale_fy21a_pg46", "label": "reportsFinancialMetric", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:reportsFinancialMetric\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e_adj_sale_fy21a_pg46\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e_recurring_rev_perc_fy21a_pg46", "to": "e_recurring_rev_perc_fy21a_pg46"}, {"arrows": "to", "from": "e_adj_sale_fy22b_pg46", "label": "reportsFinancialMetric", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:reportsFinancialMetric\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e_adj_sale_fy22b_pg46\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e_recurring_rev_perc_fy22b_pg46", "to": "e_recurring_rev_perc_fy22b_pg46"}, {"arrows": "to", "from": "e_adj_sale_fy20a_pg46", "label": "reportsFinancialMetric", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:reportsFinancialMetric\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e_adj_sale_fy20a_pg46\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e_rev_cagr_fy19a_22b_pg46", "to": "e_rev_cagr_fy19a_22b_pg46"}, {"arrows": "to", "from": "e_adj_sale_fy21a_pg46", "label": "reportsFinancialMetric", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:reportsFinancialMetric\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e_adj_sale_fy21a_pg46\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e_rev_cagr_fy19a_22b_pg46", "to": "e_rev_cagr_fy19a_22b_pg46"}, {"arrows": "to", "from": "e_adj_sale_fy22b_pg46", "label": "reportsFinancialMetric", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:reportsFinancialMetric\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e_adj_sale_fy22b_pg46\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e_rev_cagr_fy19a_22b_pg46", "to": "e_rev_cagr_fy19a_22b_pg46"}, {"arrows": "to", "from": "e_recurring_revenues_category_pg46", "label": "reportsFinancialMetric", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:reportsFinancialMetric\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e_recurring_revenues_category_pg46\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e_recurring_rev_text_perc_pg46", "to": "e_recurring_rev_text_perc_pg46"}, {"arrows": "to", "from": "e_recurring_revenues_category_pg46", "label": "reportsFinancialMetric", "title": "\u003cb\u003eType:\u003c/b\u003e pekg:reportsFinancialMetric\u003cbr\u003e\u003cb\u003eFrom:\u003c/b\u003e e_recurring_revenues_category_pg46\u003cbr\u003e\u003cb\u003eTo:\u003c/b\u003e e_perpetual_lic_recurring_maint_perc_pg46", "to": "e_perpetual_lic_recurring_maint_perc_pg46"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shape": "dot", "font": {"size": 14, "face": "Tahoma"}, "borderWidth": 2, "shadow": true}, "edges": {"arrows": {"to": {"enabled": true, "scaleFactor": 0.7}}, "color": {"inherit": "from"}, "smooth": {"type": "continuous", "roundness": 0.2}, "font": {"size": 10, "align": "middle"}, "shadow": true}, "physics": {"enabled": true, "barnesHut": {"gravitationalConstant": -30000, "centralGravity": 0.3, "springLength": 250, "springConstant": 0.04, "damping": 0.09}, "minVelocity": 0.75}, "interaction": {"hover": true, "tooltipDelay": 200, "multiselect": true, "navigationButtons": true, "keyboard": true}, "layout": {"hierarchical": false}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
