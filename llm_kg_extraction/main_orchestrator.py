@@ -32,7 +32,7 @@ from _4_knowledge_graph_operations.inter_document_merger import InterDocumentMer
 # Use the upgraded visualizer
 from visualization_tools.KG_visualizer import KnowledgeGraphVisualizer
 
-from core_components.document_scanner import discover_pdf_files 
+from core_components.document_scanner import discover_pdf_files
 
 # Optional diagnostic tool
 try:
@@ -43,7 +43,7 @@ except ImportError:
     DIAGNOSTIC_AVAILABLE = False
 
 try:
-    from transform_json import transform_kg
+    from REPOS.llm_kg_extraction.llm_kg_extraction._5_transformations.transform_json import transform_kg
     TRANSFORM_AVAILABLE = True
 except ImportError:
     print("Note: Transform functionality not available.")
@@ -69,9 +69,9 @@ def get_llm_client(llm_provider: str, model_name: str, azure_model_env_suffix: O
     else:
         raise ValueError(f"Unsupported LLM provider: {llm_provider}")
 
-def setup_project_structure(output_dir: str, project_name: str) -> Path:
+def setup_project_structure(project_name: str) -> Path:
     """Setup project directory structure and return project path."""
-    base_output_path = Path(output_dir)
+    base_output_path = Path(str("C:/PE/REPOS/outputs"))
     project_output_path = base_output_path / project_name
     project_output_path.mkdir(parents=True, exist_ok=True)
     print(f"Project output directory: {project_output_path}")
@@ -122,10 +122,13 @@ def initialize_components(llm_provider: str, model_configs: Dict[str, Any], onto
 
 def process_single_document(pdf_path: Path, document_output_path: Path, 
                           components: Dict[str, Any], config: Dict[str, Any]) -> Dict[str, Any]:
-    """Process a single document and return its KG with ID."""
+    """
+    MODIFIED: Process a single document with support for document-aware processing.
+    """
     
     document_id = pdf_path.stem
     print(f"\nProcessing document: '{pdf_path.name}' (ID: {document_id})")
+    print(f"Processing mode: {config.get('processing_mode', 'page_based')}")
 
     # Parse PDF
     pdf_parser = PDFParser(pdf_path)
@@ -150,16 +153,25 @@ def process_single_document(pdf_path: Path, document_output_path: Path,
         extraction_mode=config["extraction_mode"]
     )
     
-    # Initialize KG constructor
+    # Initialize KG constructor with processing mode
     kg_constructor = KGConstructorSingleDoc(
         pdf_parser=pdf_parser,
         document_context_info=document_context_info,
         page_llm_processor=page_llm_processor,
         page_level_merger=components["page_level_merger"],
         graph_visualizer=components["graph_visualizer"],
-        config={"dump_page_kgs": config["dump_page_kgs"]},
+        config={
+            "dump_page_kgs": config["dump_page_kgs"],
+            # NEW: Add semantic chunking configuration
+            "chunk_size": config.get("chunk_size", 4000),
+            "min_chunk_size": config.get("min_chunk_size", 500),
+            "chunk_overlap": config.get("chunk_overlap", 200),
+            "respect_sentence_boundaries": config.get("respect_sentence_boundaries", True),
+            "detect_topic_shifts": config.get("detect_topic_shifts", True)
+        },
         document_id=document_id,
-        document_output_path=document_output_path
+        document_output_path=document_output_path,
+        processing_mode=config.get("processing_mode", "page_based")  # NEW PARAMETER
     )
 
     # Execute KG construction
@@ -174,6 +186,7 @@ def process_single_document(pdf_path: Path, document_output_path: Path,
         "entities": document_kg.get("entities", []),
         "relationships": document_kg.get("relationships", [])
     }
+
 
 def save_and_visualize_kg(kg_data: Dict[str, Any], output_path: Path, 
                          filename_base: str, visualizer: Any, 
@@ -259,19 +272,25 @@ def run_project_pipeline(
     max_workers: int,
     dump_page_kgs: bool,
     transform_final_kg: bool,
-    output_dir: str,
-    run_diagnostics: bool = False
+    run_diagnostics: bool = False,
+    # NEW PARAMETERS for semantic chunking
+    processing_mode: str = "page_based",
+    chunk_size: int = 4000,
+    min_chunk_size: int = 500,
+    chunk_overlap: int = 200,
+    respect_sentence_boundaries: bool = True,
+    detect_topic_shifts: bool = True
 ):
     """
-    Orchestrates the entire knowledge graph extraction pipeline for a project
-    containing multiple documents.
+    MODIFIED: Orchestrates the entire pipeline with support for document-aware processing.
     """
     start_time = time.time()
     print(f"Starting PEKG extraction pipeline for project: '{project_name}'")
     print(f"Input folder: {input_folder_path_str}")
+    print(f"Processing mode: {processing_mode}")
 
     # Setup project structure
-    project_output_path = setup_project_structure(output_dir, project_name)
+    project_output_path = setup_project_structure(project_name)
 
     # Prepare model configurations
     model_configs = {
@@ -293,8 +312,24 @@ def run_project_pipeline(
         "construction_mode": construction_mode,
         "extraction_mode": extraction_mode,
         "max_workers": max_workers,
-        "dump_page_kgs": dump_page_kgs
+        "dump_page_kgs": dump_page_kgs,
+        # NEW: Document-aware processing configuration
+        "processing_mode": processing_mode,
+        "chunk_size": chunk_size,
+        "min_chunk_size": min_chunk_size,
+        "chunk_overlap": chunk_overlap,
+        "respect_sentence_boundaries": respect_sentence_boundaries,
+        "detect_topic_shifts": detect_topic_shifts
     }
+
+    # Log configuration for document-aware processing
+    if processing_mode == "document_aware":
+        print(f"Semantic chunking configuration:")
+        print(f"  - Max chunk size: {chunk_size} characters")
+        print(f"  - Min chunk size: {min_chunk_size} characters")
+        print(f"  - Chunk overlap: {chunk_overlap} characters")
+        print(f"  - Respect sentence boundaries: {respect_sentence_boundaries}")
+        print(f"  - Detect topic shifts: {detect_topic_shifts}")
 
     # Discover PDF files
     pdf_files = discover_pdf_files(input_folder_path_str)
@@ -318,6 +353,9 @@ def run_project_pipeline(
         )
         all_document_kgs_with_ids.append(document_kg_with_id)
 
+    # Rest of the function remains the same...
+    # (Inter-document merging, visualization, transformation, etc.)
+    
     # Merge all document KGs (Project-Level)
     print(f"\nMerging {len(all_document_kgs_with_ids)} document KGs into project-level KG...")
     final_project_kg = components["inter_document_merger"].merge_project_kgs(all_document_kgs_with_ids)
@@ -330,12 +368,6 @@ def run_project_pipeline(
         components["graph_visualizer"], 
         is_multi_doc=True
     )
-
-    # Run diagnostic analysis if requested
-    if run_diagnostics and len(all_document_kgs_with_ids) > 1:
-        # Note: This would need the individual page KGs, which we'd need to collect during processing
-        print("\nDiagnostic analysis requested but requires page-level KGs.")
-        print("Consider enabling dump_page_kgs and implementing page-level diagnostic collection.")
 
     # Apply transformation if requested
     if transform_final_kg:
@@ -355,6 +387,7 @@ def run_project_pipeline(
     print(f"PEKG EXTRACTION PIPELINE COMPLETED")
     print(f"{'='*60}")
     print(f"Project: {project_name}")
+    print(f"Processing mode: {processing_mode}")
     print(f"Processing time: {end_time - start_time:.2f} seconds")
     print(f"Documents processed: {len(pdf_files)}")
     print(f"Final entities: {total_entities}")
@@ -395,7 +428,26 @@ if __name__ == "__main__":
     parser.add_argument("--dump_page_kgs", action="store_true", help="Save intermediate KGs for each page of each document.")
     parser.add_argument("--transform_final_kg", action="store_true", help="Perform transformation on the final merged project KG.")
     parser.add_argument("--run_diagnostics", action="store_true", help="Run diagnostic analysis on merging process.")
-    parser.add_argument("--output_dir", default="outputs", help="Base directory for all outputs.")
+
+    parser.add_argument("--processing_mode", type=str, choices=["page_based", "document_aware"], 
+                       default="page_based", 
+                       help="Processing approach: 'page_based' (existing) or 'document_aware' (new semantic chunking)")
+    
+    parser.add_argument("--chunk_size", type=int, default=4000,
+                       help="Maximum chunk size for document-aware processing (default: 4000)")
+    
+    parser.add_argument("--min_chunk_size", type=int, default=500,
+                       help="Minimum chunk size for document-aware processing (default: 500)")
+    
+    parser.add_argument("--chunk_overlap", type=int, default=200,
+                       help="Overlap size between chunks for document-aware processing (default: 200)")
+    
+    parser.add_argument("--no_sentence_boundaries", action="store_true",
+                       help="Allow chunk breaks in middle of sentences (not recommended)")
+    
+    parser.add_argument("--no_topic_detection", action="store_true",
+                       help="Disable automatic topic shift detection in chunks")
+
 
     if len(sys.argv) <= 7:
         parser.print_help(sys.stderr)
@@ -428,5 +480,10 @@ if __name__ == "__main__":
         dump_page_kgs=args.dump_page_kgs,
         transform_final_kg=args.transform_final_kg,
         run_diagnostics=args.run_diagnostics,
-        output_dir=args.output_dir
+        processing_mode=args.processing_mode,
+        chunk_size=args.chunk_size,
+        min_chunk_size=args.min_chunk_size,
+        chunk_overlap=args.chunk_overlap,
+        respect_sentence_boundaries=not args.no_sentence_boundaries,
+        detect_topic_shifts=not args.no_topic_detection
     )
