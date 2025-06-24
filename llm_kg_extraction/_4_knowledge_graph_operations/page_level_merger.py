@@ -54,6 +54,8 @@ class PageLevelMerger:
     def _get_entity_type_unprefixed(self, entity: Dict[str, Any]) -> str:
         """Extract unprefixed entity type."""
         entity_type = entity.get('type', '')
+        if not entity_type:
+            return ''
         if ':' in entity_type:
             return entity_type.split(':')[-1].lower()
         return entity_type.lower()

@@ -36,7 +36,8 @@ class KGConstructorSingleDoc:
                  config: Dict[str, Any],
                  document_id: str,
                  document_output_path: Path,
-                 processing_mode: str = "page_based"):  # NEW PARAMETER
+                 processing_mode: str = "page_based", 
+                 use_ontology: bool = True):  # NEW PARAMETER
         """
         Initializes the KGConstructorSingleDoc.
 

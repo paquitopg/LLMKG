@@ -39,6 +39,7 @@ entities:
         - category: string # "Product", "Service", "Platform", "Solution Suite".
         - description: string # What it does, key features, benefits, target users.
         - pricingModelInfo: string # Textual description of pricing (e.g., "Subscription model", "Perpetual license with maintenance").
+        - otherRelevantInfo: string # Any other relevant details (e.g., "Supports 130+ languages", "Make for 30% of revenue").
 
   - pekg:Technology:
       description: "Key underlying technologies or technological capabilities that are a core differentiator."
@@ -62,6 +63,7 @@ entities:
       attributes:
         - name: string # Name of the use case or industry (e.g., "Defense & Security", "Retail Banking", "E-commerce Fulfillment").
         - description: string # Further details if provided.
+        - percentageOfRevenue: float # If mentioned, the percentage of revenue from this use case/industry (e.g., "c.30% of FY21A Revenue").
 
   - pekg:FinancialMetric:
       description: "Quantitative financial data point reported by a company or for a market."

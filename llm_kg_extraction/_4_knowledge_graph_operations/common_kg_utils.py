@@ -1,5 +1,3 @@
-# Enhanced similarity functions for your PEKG ontology
-# These replace the functions in common_kg_utils.py
 
 from typing import Dict, Any, List, Optional, Tuple, Set
 import re
@@ -25,10 +23,32 @@ def normalize_text(text: str) -> str:
     text = re.sub(r'\s+', ' ', text)
     return text.strip()
 
+def get_attribute_primary_value(entity: Dict[str, Any], attribute_key: str) -> Any:
+    """
+    NEW: Intelligently retrieves the primary value of an attribute,
+    handling both simple values and the provenance list format.
+    """
+    value = entity.get(attribute_key)
+    if value is None:
+        return None
+    
+    # If the value is a list (likely provenance format), get the first value
+    if isinstance(value, list) and value:
+        first_item = value[0]
+        if isinstance(first_item, dict) and "value" in first_item:
+            return first_item["value"]
+            
+    # Otherwise, return the value as is (e.g., a simple string, int)
+    return value
+
 def get_entity_primary_name(entity: Dict[str, Any]) -> str:
     """Extract the primary name field based on PEKG ontology entity types."""
-    entity_type = entity.get('type', '').lower().split(':')[-1]
-    
+    if ":" in entity.get('type', ''):
+        # If type is a full URI, extract the last part after the colon
+        entity_type = entity.get('type', '').lower().split(':')[-1]
+    else:
+        entity_type = entity.get('type', '').lower()
+
     # Map entity types to their primary name fields based on your ontology
     name_field_mapping = {
         "company": "name",
@@ -46,11 +66,15 @@ def get_entity_primary_name(entity: Dict[str, Any]) -> str:
         "marketcontext": "segmentName",
         "usecaseorindustry": "name",
         "position": "titleName",
-        "governmentbody": "name"
+        "governmentbody": "name", 
+        "default": "name"  # Fallback for any other types
     }
+    name_field = name_field_mapping.get(entity_type, name_field_mapping["default"])
     
-    primary_field = name_field_mapping.get(entity_type, "name")
-    return str(entity.get(primary_field, entity.get("name", "")))
+    # Use the new helper to get the primary name value
+    primary_name = get_attribute_primary_value(entity, name_field)
+
+    return normalize_text(str(primary_name)) if primary_name is not None else ""
 
 def find_matching_entity_pekg(entity: Dict[str, Any], entities: list, 
                              threshold: float = 0.75) -> Dict[str, Any]:
@@ -61,7 +85,10 @@ def find_matching_entity_pekg(entity: Dict[str, Any], entities: list,
     for candidate_entity in entities:
         if _are_entities_similar_pekg(entity, candidate_entity, threshold):
             return candidate_entity
-    return None
+
+    # If no match found, return an empty dictionary
+    print(f"No match found for entity: {entity}")
+    return {}
 
 def _are_entities_similar_pekg(entity1: Dict[str, Any], entity2: Dict[str, Any], 
                               threshold: float = 0.8) -> bool:
@@ -71,20 +98,15 @@ def _are_entities_similar_pekg(entity1: Dict[str, Any], entity2: Dict[str, Any],
     """
     # Type must match
     type1_full = entity1.get('type', '').lower()
-    type2_full = entity2.get('type', '').lower()
-    
-    if type1_full != type2_full:
-        return False
-    
     entity_type = type1_full.split(':')[-1] if ':' in type1_full else type1_full
     
-    # Use entity-type specific similarity functions
+    # Use entity-type specific similarity functions A REPRENDRE
     if entity_type == "financialmetric":
         return _are_financial_metrics_similar(entity1, entity2)
     elif entity_type == "transactioncontext":
         return _are_transaction_contexts_similar(entity1, entity2)
     elif entity_type == "company":
-        return _are_companies_similar(entity1, entity2, threshold)
+        return _are_companies_similar(entity1, entity2, 0.95)
     elif entity_type == "operationalkpi":
         return _are_operational_kpis_similar(entity1, entity2)
     elif entity_type == "headcount":
@@ -103,9 +125,9 @@ def _are_entities_similar_pekg(entity1: Dict[str, Any], entity2: Dict[str, Any],
 
 def _are_financial_metrics_similar(entity1: Dict[str, Any], entity2: Dict[str, Any]) -> bool:
     """Special similarity check for FinancialMetric entities."""
-    name1 = normalize_text(entity1.get("metricName", ""))
-    name2 = normalize_text(entity2.get("metricName", ""))
-    
+    name1 = normalize_text(get_entity_primary_name(entity1))
+    name2 = normalize_text(get_entity_primary_name(entity2))
+
     if not name1 or not name2:
         return False
     
@@ -126,14 +148,13 @@ def _are_financial_metrics_similar(entity1: Dict[str, Any], entity2: Dict[str, A
     if scope1 and scope2:
         if normalize_text(str(scope1)) != normalize_text(str(scope2)):
             return False
-    
     return True
 
 def _are_transaction_contexts_similar(entity1: Dict[str, Any], entity2: Dict[str, Any]) -> bool:
     """Special similarity check for TransactionContext entities - very strict."""
-    name1 = normalize_text(entity1.get("contextName", ""))
-    name2 = normalize_text(entity2.get("contextName", ""))
-    
+    name1 = normalize_text(get_entity_primary_name(entity1))
+    name2 = normalize_text(get_entity_primary_name(entity2))
+
     if not name1 or not name2:
         return False
     
@@ -159,10 +180,9 @@ def _are_transaction_contexts_similar(entity1: Dict[str, Any], entity2: Dict[str
 
 def _are_companies_similar(entity1: Dict[str, Any], entity2: Dict[str, Any], threshold: float) -> bool:
     """Enhanced similarity check for Company entities considering aliases."""
-    name1 = normalize_text(entity1.get("name", ""))
-    name2 = normalize_text(entity2.get("name", ""))
-    
-    # Check primary name similarity
+    name1 = normalize_text(get_entity_primary_name(entity1))
+    name2 = normalize_text(get_entity_primary_name(entity2))
+
     if name1 and name2:
         if similarity_score(name1, name2) >= threshold:
             return True
@@ -180,7 +200,7 @@ def _are_companies_similar(entity1: Dict[str, Any], entity2: Dict[str, Any], thr
     # Check if any alias matches main name or other aliases
     all_names1 = [name1] + [normalize_text(str(alias)) for alias in aliases1 if alias]
     all_names2 = [name2] + [normalize_text(str(alias)) for alias in aliases2 if alias]
-    
+
     for n1 in all_names1:
         for n2 in all_names2:
             if n1 and n2 and similarity_score(n1, n2) >= threshold:
@@ -190,8 +210,8 @@ def _are_companies_similar(entity1: Dict[str, Any], entity2: Dict[str, Any], thr
 
 def _are_operational_kpis_similar(entity1: Dict[str, Any], entity2: Dict[str, Any]) -> bool:
     """Similarity check for OperationalKPI entities."""
-    name1 = normalize_text(entity1.get("kpiName", ""))
-    name2 = normalize_text(entity2.get("kpiName", ""))
+    name1 = normalize_text(get_entity_primary_name(entity1))
+    name2 = normalize_text(get_entity_primary_name(entity2))
     
     if not name1 or not name2:
         return False
@@ -211,9 +231,9 @@ def _are_operational_kpis_similar(entity1: Dict[str, Any], entity2: Dict[str, An
 
 def _are_headcount_similar(entity1: Dict[str, Any], entity2: Dict[str, Any]) -> bool:
     """Similarity check for Headcount entities."""
-    name1 = normalize_text(entity1.get("headcountName", ""))
-    name2 = normalize_text(entity2.get("headcountName", ""))
-    
+    name1 = normalize_text(get_entity_primary_name(entity1))
+    name2 = normalize_text(get_entity_primary_name(entity2))
+
     if not name1 or not name2:
         return False
     
@@ -232,9 +252,9 @@ def _are_headcount_similar(entity1: Dict[str, Any], entity2: Dict[str, Any]) -> 
 
 def _are_historical_events_similar(entity1: Dict[str, Any], entity2: Dict[str, Any]) -> bool:
     """Similarity check for HistoricalEvent entities."""
-    name1 = normalize_text(entity1.get("eventName", ""))
-    name2 = normalize_text(entity2.get("eventName", ""))
-    
+    name1 = normalize_text(get_entity_primary_name(entity1))
+    name2 = normalize_text(get_entity_primary_name(entity2))
+
     if not name1 or not name2:
         return False
     
@@ -259,9 +279,9 @@ def _are_historical_events_similar(entity1: Dict[str, Any], entity2: Dict[str, A
 
 def _are_advisors_similar(entity1: Dict[str, Any], entity2: Dict[str, Any]) -> bool:
     """Similarity check for Advisor entities."""
-    name1 = normalize_text(entity1.get("name", ""))
-    name2 = normalize_text(entity2.get("name", ""))
-    
+    name1 = normalize_text(get_entity_primary_name(entity1))
+    name2 = normalize_text(get_entity_primary_name(entity2))
+
     if not name1 or not name2:
         return False
     
@@ -281,9 +301,9 @@ def _are_advisors_similar(entity1: Dict[str, Any], entity2: Dict[str, Any]) -> b
 
 def _are_shareholders_similar(entity1: Dict[str, Any], entity2: Dict[str, Any]) -> bool:
     """Similarity check for Shareholder entities."""
-    name1 = normalize_text(entity1.get("name", ""))
-    name2 = normalize_text(entity2.get("name", ""))
-    
+    name1 = normalize_text(get_entity_primary_name(entity1))
+    name2 = normalize_text(get_entity_primary_name(entity2))
+
     if not name1 or not name2:
         return False
     
@@ -301,8 +321,8 @@ def _are_shareholders_similar(entity1: Dict[str, Any], entity2: Dict[str, Any]) 
 
 def _are_persons_similar(entity1: Dict[str, Any], entity2: Dict[str, Any]) -> bool:
     """Similarity check for Person entities."""
-    name1 = normalize_text(entity1.get("fullName", ""))
-    name2 = normalize_text(entity2.get("fullName", ""))
+    name1 = normalize_text(get_entity_primary_name(entity1))
+    name2 = normalize_text(get_entity_primary_name(entity2))
     
     if not name1 or not name2:
         return False
@@ -485,8 +505,8 @@ def normalize_entity_ids(graph: Dict[str, List[Dict[str, Any]]]) -> Dict[str, Li
         old_target = rel_dict.get('target') #
         
         # Map old source/target IDs to the new "eX" IDs
-        new_source = id_remap.get(old_source) #
-        new_target = id_remap.get(old_target) #
+        new_source = id_remap.get(str(old_source)) #
+        new_target = id_remap.get(str(old_target)) #
         
         # Ensure both remapped source and target IDs are valid and present in the new entity set
         if new_source and new_target and \

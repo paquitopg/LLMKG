@@ -1,5 +1,3 @@
-# File: llm_kg_extraction/_1_document_ingestion/document_classifier.py
-
 from typing import List, Optional, Dict, Any, Union
 import base64
 import json
@@ -35,7 +33,6 @@ class DocumentClassifier:
             raise ValueError("A list of categories must be provided.")
         
         self.llm_client = llm_client
-        # Use a potentially different (larger/more capable) model for summarization if specified
         self.summary_llm_client = summary_llm_client if summary_llm_client else llm_client
         self.categories = [category.lower() for category in categories]
         self.default_category = "unknown_document_type"
@@ -50,23 +47,23 @@ class DocumentClassifier:
         # Truncate based on typical LLM context limits for classification
         truncated_text = text_content[:15000] # Approx 3-4k tokens. Adjust based on model capability.
         prompt = f"""
-Your task is to classify a document based on its content.
-Content source: {input_source_description}.
-Predefined Categories: {category_list_str}.
+        Your task is to classify a document based on its content.
+        Content source: {input_source_description}.
+        Predefined Categories: {category_list_str}.
 
-Instructions:
-1. Analyze the provided "Text Content to Analyze".
-2. Choose the single most appropriate category from the "Predefined Categories" list.
-3. Respond with ONLY the chosen category name.
-4. If the document does not clearly fit any category or you are highly uncertain, respond with '{self.default_category}'.
+        Instructions:
+        1. Analyze the provided "Text Content to Analyze".
+        2. Choose the single most appropriate category from the "Predefined Categories" list.
+        3. Respond with ONLY the chosen category name.
+        4. If the document does not clearly fit any category or you are highly uncertain, respond with '{self.default_category}'.
 
-Text Content to Analyze:
----
-{truncated_text}
----
+        Text Content to Analyze:
+        ---
+        {truncated_text}
+        ---
 
-Classification (respond with only one category name):
-"""
+        Classification (respond with only one category name):
+        """
         return prompt
 
     def _build_multimodal_classification_prompt(self, text_content: Optional[str] = None) -> str:
@@ -77,15 +74,15 @@ Classification (respond with only one category name):
         truncated_text_content = text_content[:8000] if text_content else "" # Shorter text for multimodal
         
         base_prompt_text = f"""
-Your task is to classify a document based on the provided page content (text and image(s)).
-Predefined Categories: {category_list_str}.
+        Your task is to classify a document based on the provided page content (text and image(s)).
+        Predefined Categories: {category_list_str}.
 
-Instructions:
-1. Analyze the provided "Text Content on Page(s)" and the associated image(s).
-2. Choose the single most appropriate category from the "Predefined Categories" list.
-3. Respond with ONLY the chosen category name.
-4. If the document does not clearly fit any category or you are highly uncertain, respond with '{self.default_category}'.
-"""
+        Instructions:
+        1. Analyze the provided "Text Content on Page(s)" and the associated image(s).
+        2. Choose the single most appropriate category from the "Predefined Categories" list.
+        3. Respond with ONLY the chosen category name.
+        4. If the document does not clearly fit any category or you are highly uncertain, respond with '{self.default_category}'.
+        """
         if truncated_text_content:
             return f"{base_prompt_text}\nText Content on Page(s) (use with image(s)):\n---\n{truncated_text_content}\n---\n\nClassification:"
         else:
@@ -156,11 +153,119 @@ Instructions:
             return self.default_category
             
         return self._parse_llm_response(llm_response)
+    
+    def classify_document(self,
+                          pdf_parser: PDFParser,
+                          num_pages_for_classification_text: int = 4,
+                          num_pages_for_classification_image: int = 4,
+                          num_pages_for_summary: int = 10
+                         ) -> Dict[str, str]: # Return type changed to ensure string for summary
+        """
+        Attempts classification with priority (ToC -> N-page Text -> N-page Multimodal).
+        Always generates and returns a document summary.
 
+        Args:
+            pdf_parser (PDFParser): An instance of the PDF parser for the document.
+            num_pages_for_classification_text (int): Number of first pages to use for text classification.
+            num_pages_for_classification_image (int): Number of first pages to use for multimodal classification.
+            num_pages_for_summary (int): Number of pages to use for summary generation.
+
+        Returns:
+            Dict[str, str]: 
+                - "identified_doc_type": The classified document type (or default_category).
+                - "document_summary": A generated summary of the document.
+        """
+        identified_category = self.default_category
+
+        # 1. Try Table of Contents (ToC) text first
+        toc_text = pdf_parser.get_toc_text()
+        if toc_text and toc_text.strip():
+            print("DocumentClassifier: Attempting classification using Table of Contents.")
+            prompt = self._build_classification_prompt(toc_text, "Table of Contents")
+            classified_by_toc = self._call_llm_for_classification(prompt, is_multimodal=False)
+            if classified_by_toc != self.default_category:
+                identified_category = classified_by_toc
+                print(f"DocumentClassifier: Classified as '{identified_category}' using ToC.")
+            else:
+                print("DocumentClassifier: Classification with ToC was insufficient.")
+
+        # 2. If ToC failed or not available and category still default, try First N Pages Text
+        if identified_category == self.default_category:
+            first_n_pages_text = pdf_parser.extract_text_from_first_n_pages(num_pages_for_classification_text)
+            if first_n_pages_text and first_n_pages_text.strip():
+                print(f"DocumentClassifier: Attempting classification using text from first {num_pages_for_classification_text} pages.")
+                prompt = self._build_classification_prompt(first_n_pages_text, f"First {num_pages_for_classification_text} Pages Text")
+                classified_by_text = self._call_llm_for_classification(prompt, is_multimodal=False)
+                if classified_by_text != self.default_category:
+                    identified_category = classified_by_text
+                    print(f"DocumentClassifier: Classified as '{identified_category}' using first N pages text.")
+                else:
+                    print("DocumentClassifier: Classification with first N pages text was insufficient.")
+            
+        # 3. If text classification was insufficient and images are available, try Multimodal
+        if identified_category == self.default_category:
+            first_n_pages_text_for_multimodal = pdf_parser.extract_text_from_first_n_pages(num_pages_for_classification_image) # Get text for multimodal if not already
+            if isinstance(self.llm_client, (VertexLLM, AzureLLM)): # Check for multimodal capability
+                first_n_pages_images_b64 = pdf_parser.extract_images_from_first_n_pages_base64(num_pages_for_classification_image)
+                if first_n_pages_images_b64:
+                    print(f"DocumentClassifier: Attempting multimodal classification using first {num_pages_for_classification_image} page images (and text if available).")
+                    
+                    llm_input_parts: List[Any] = []
+                    prompt_text_part = self._build_multimodal_classification_prompt(first_n_pages_text_for_multimodal)
+                    
+                    if isinstance(self.llm_client, VertexLLM):
+                        llm_input_parts.append({'text': prompt_text_part})
+                        for img_b64 in first_n_pages_images_b64:
+                            try:
+                                image_bytes = base64.b64decode(img_b64)
+                                llm_input_parts.append({'inline_data': {'mime_type': 'image/png', 'data': image_bytes}})
+                            except Exception as e:
+                                print(f"Warning: Could not decode base64 image for Vertex AI: {e}")
+                                continue
+                    elif isinstance(self.llm_client, AzureLLM):
+                        llm_input_parts.append({"type": "text", "text": prompt_text_part})
+                        for img_b64 in first_n_pages_images_b64:
+                            llm_input_parts.append(
+                                {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{img_b64}"}}
+                            )
+                    
+                    if len(llm_input_parts) > 1 or (len(llm_input_parts) == 1 and any('image' in str(part) for part in llm_input_parts)): # Check if images were actually added
+                        classified_by_multimodal = self._call_llm_for_classification(llm_input_parts, is_multimodal=True)
+                        if classified_by_multimodal != self.default_category:
+                            identified_category = classified_by_multimodal
+                            print(f"DocumentClassifier: Classified as '{identified_category}' using multimodal analysis.")
+                        else:
+                            print("DocumentClassifier: Multimodal classification was insufficient.")
+                    else:
+                        print("DocumentClassifier: No valid image parts prepared for multimodal call, or LLM type not specialized for multimodal.")
+                else:
+                    print(f"DocumentClassifier: No images extracted from first {num_pages_for_classification_image} pages for multimodal classification.")
+            else:
+                print(f"DocumentClassifier: LLM client type {type(self.llm_client).__name__} does not support multimodal classification.")
+
+        print(f"DocumentClassifier: Classification process finished. Identified type: '{identified_category}'.")
+        print(f"DocumentClassifier: Proceeding to generate document summary from first {num_pages_for_summary} pages.")
+        
+        text_for_summary = pdf_parser.extract_text_from_first_n_pages(num_pages_for_summary)
+        document_summary = self._generate_document_summary(text_for_summary)
+        
+        # Ensure summary is a string, even if None was returned
+        if document_summary is None:
+            document_summary = "" 
+
+        return {
+            "identified_doc_type": identified_category,
+            "document_summary": document_summary
+        }
+    
     def _generate_document_summary(self, text_content: str, max_length_chars: int = 20000) -> Optional[Dict[str, Any]]:
         """
         Generates a summary of the text_content using the summary_llm_client.
-        
+
+        Args:
+            text_content (str): The text content of the document to summarize.
+            max_length_chars (int): Maximum length of text content to send to the LLM for summarization.
+                   
         Returns:
             Optional[Dict[str, Any]]: Dictionary with 'summary' and optional 'main_entity' fields,
                                     or None if generation fails.
@@ -246,110 +351,3 @@ Instructions:
         except Exception as e:
             print(f"Error generating document summary: {e}")
             return None
-
-    def classify_document(self,
-                          pdf_parser: PDFParser,
-                          num_pages_for_classification_text: int = 4,
-                          num_pages_for_classification_image: int = 4,
-                          num_pages_for_summary: int = 10
-                         ) -> Dict[str, str]: # Return type changed to ensure string for summary
-        """
-        Attempts classification with priority (ToC -> N-page Text -> N-page Multimodal).
-        Always generates and returns a document summary.
-
-        Args:
-            pdf_parser (PDFParser): An instance of the PDF parser for the document.
-            num_pages_for_classification_text (int): Number of first pages to use for text classification.
-            num_pages_for_classification_image (int): Number of first pages to use for multimodal classification.
-            num_pages_for_summary (int): Number of pages to use for summary generation.
-
-        Returns:
-            Dict[str, str]: 
-                - "identified_doc_type": The classified document type (or default_category).
-                - "document_summary": A generated summary of the document.
-        """
-        identified_category = self.default_category
-        
-        # --- Classification Attempts ---
-
-        # 1. Try Table of Contents (ToC) text first
-        toc_text = pdf_parser.get_toc_text()
-        if toc_text and toc_text.strip():
-            print("DocumentClassifier: Attempting classification using Table of Contents.")
-            prompt = self._build_classification_prompt(toc_text, "Table of Contents")
-            classified_by_toc = self._call_llm_for_classification(prompt, is_multimodal=False)
-            if classified_by_toc != self.default_category:
-                identified_category = classified_by_toc
-                print(f"DocumentClassifier: Classified as '{identified_category}' using ToC.")
-            else:
-                print("DocumentClassifier: Classification with ToC was insufficient.")
-
-        # 2. If ToC failed or not available and category still default, try First N Pages Text
-        if identified_category == self.default_category:
-            first_n_pages_text = pdf_parser.extract_text_from_first_n_pages(num_pages_for_classification_text)
-            if first_n_pages_text and first_n_pages_text.strip():
-                print(f"DocumentClassifier: Attempting classification using text from first {num_pages_for_classification_text} pages.")
-                prompt = self._build_classification_prompt(first_n_pages_text, f"First {num_pages_for_classification_text} Pages Text")
-                classified_by_text = self._call_llm_for_classification(prompt, is_multimodal=False)
-                if classified_by_text != self.default_category:
-                    identified_category = classified_by_text
-                    print(f"DocumentClassifier: Classified as '{identified_category}' using first N pages text.")
-                else:
-                    print("DocumentClassifier: Classification with first N pages text was insufficient.")
-            
-        # 3. If text classification was insufficient and images are available, try Multimodal
-        if identified_category == self.default_category:
-            first_n_pages_text_for_multimodal = pdf_parser.extract_text_from_first_n_pages(num_pages_for_classification_image) # Get text for multimodal if not already
-            if isinstance(self.llm_client, (VertexLLM, AzureLLM)): # Check for multimodal capability
-                first_n_pages_images_b64 = pdf_parser.extract_images_from_first_n_pages_base64(num_pages_for_classification_image)
-                if first_n_pages_images_b64:
-                    print(f"DocumentClassifier: Attempting multimodal classification using first {num_pages_for_classification_image} page images (and text if available).")
-                    
-                    llm_input_parts: List[Any] = []
-                    prompt_text_part = self._build_multimodal_classification_prompt(first_n_pages_text_for_multimodal)
-                    
-                    if isinstance(self.llm_client, VertexLLM):
-                        llm_input_parts.append({'text': prompt_text_part})
-                        for img_b64 in first_n_pages_images_b64:
-                            try:
-                                image_bytes = base64.b64decode(img_b64)
-                                llm_input_parts.append({'inline_data': {'mime_type': 'image/png', 'data': image_bytes}})
-                            except Exception as e:
-                                print(f"Warning: Could not decode base64 image for Vertex AI: {e}")
-                                continue
-                    elif isinstance(self.llm_client, AzureLLM):
-                        llm_input_parts.append({"type": "text", "text": prompt_text_part})
-                        for img_b64 in first_n_pages_images_b64:
-                            llm_input_parts.append(
-                                {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{img_b64}"}}
-                            )
-                    
-                    if len(llm_input_parts) > 1 or (len(llm_input_parts) == 1 and any('image' in str(part) for part in llm_input_parts)): # Check if images were actually added
-                        classified_by_multimodal = self._call_llm_for_classification(llm_input_parts, is_multimodal=True)
-                        if classified_by_multimodal != self.default_category:
-                            identified_category = classified_by_multimodal
-                            print(f"DocumentClassifier: Classified as '{identified_category}' using multimodal analysis.")
-                        else:
-                            print("DocumentClassifier: Multimodal classification was insufficient.")
-                    else:
-                        print("DocumentClassifier: No valid image parts prepared for multimodal call, or LLM type not specialized for multimodal.")
-                else:
-                    print(f"DocumentClassifier: No images extracted from first {num_pages_for_classification_image} pages for multimodal classification.")
-            else:
-                print(f"DocumentClassifier: LLM client type {type(self.llm_client).__name__} does not support multimodal classification.")
-
-        # --- Always Generate Summary ---
-        print(f"DocumentClassifier: Classification process finished. Identified type: '{identified_category}'.")
-        print(f"DocumentClassifier: Proceeding to generate document summary from first {num_pages_for_summary} pages.")
-        
-        text_for_summary = pdf_parser.extract_text_from_first_n_pages(num_pages_for_summary)
-        document_summary = self._generate_document_summary(text_for_summary)
-        
-        # Ensure summary is a string, even if None was returned
-        if document_summary is None:
-            document_summary = "" 
-
-        return {
-            "identified_doc_type": identified_category,
-            "document_summary": document_summary
-        }

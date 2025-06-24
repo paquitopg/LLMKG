@@ -10,6 +10,14 @@ from llm_integrations.vertex_llm import VertexLLM # For type checking
 
 from ontology_management.ontology_loader import PEKGOntology # Assuming PEKGOntology or a base class
 
+# Semantic chunking configuration
+config = {
+    "chunk_size": 4000,
+    "min_chunk_size": 500, 
+    "chunk_overlap": 200,
+    "respect_sentence_boundaries": True,
+    "detect_topic_shifts": True
+}
 
 class PageLLMProcessor:
     """
@@ -20,7 +28,8 @@ class PageLLMProcessor:
     def __init__(self,
                  llm_client: BaseLLMWrapper,
                  ontology: PEKGOntology, 
-                 extraction_mode: str): 
+                 extraction_mode: str,
+                 use_ontology: bool = True): 
         """
         Initializes the PageLLMProcessor.
 
@@ -32,6 +41,7 @@ class PageLLMProcessor:
         self.ontology = ontology
         self.temperature = 0.1
         self.extraction_mode = extraction_mode
+        self.use_ontology = use_ontology
 
     def _build_text_extraction_prompt(self,
                                       page_text: str,
@@ -42,7 +52,11 @@ class PageLLMProcessor:
         """
         Builds the detailed prompt for text-based knowledge graph extraction.
         """
-        ontology_desc = self.ontology.format_for_prompt()
+        if self.use_ontology:
+            ontology_desc = self.ontology.format_for_prompt()
+        
+        else :
+            ontology_desc = "No ontology is being used for this extraction. Entities and relationships will be extracted based on general relevance."
         
         previous_graph_json_for_prompt = "{}"
     
@@ -102,10 +116,14 @@ class PageLLMProcessor:
         elif construction_mode != "onego": 
              prompt += "\nNo previous graph context provided or it was empty. Extract all information fresh from the current page.\n"
 
-        prompt += f"""
-        The ontology for Knowledge Graph Extraction is as follows:
-        {ontology_desc}
+        if self.use_ontology: 
+            prompt += f"""
+            The ontology for Knowledge Graph Extraction is as follows:
+            {ontology_desc}
 
+            **CRITICAL: Ensure you extract entities and relationships respecting the ontology. Do not deviate from the specified types.**
+        """
+        prompt += f"""
         Output Format Example (Attributes are direct entity properties, NOT nested under "properties"):
         {{
         "entities": [
@@ -121,8 +139,18 @@ class PageLLMProcessor:
         \"\"\"{page_text}\"\"\"
 
         Extraction Instructions for CURRENT PAGE TEXT:
-        1.  From the "Current Page Text to Analyze" *only*, identify all entities MATCHING THE ONTOLOGY.
-        2.  For these entities, extract all relevant attributes specified in the ontology, based *only* on the "Current Page Text to Analyze". Attributes should be direct properties of the entity object (e.g., "name": "X", "value": Y), NOT nested under a "properties" key.
+        """
+        if self.use_ontology:
+             prompt += f"""
+             1.  From the "Current Page Text to Analyze" *only*, identify all entities MATCHING THE ONTOLOGY.
+            **CRITICAL: Ensure you extract entities and relationships respecting the ontology structure. Do not deviate from the specified types**
+            2.  For these entities, extract all relevant attributes specified in the ontology, based *only* on the "Current Page Text to Analyze". Attributes should be direct properties of the entity object (e.g., "name": "X", "value": Y), NOT nested under a "properties" key.
+            """
+        else:
+            prompt += f"""
+            1.  From the "Current Page Text to Analyze" *only*, identify all entities and relations you consider relevant.
+            """
+        prompt += f"""     
         3.  Identify and create relationships between entities, based *only* on information in the "Current Page Text to Analyze".
         4.  Ensure every entity extracted from the "Current Page Text to Analyze" is connected if the current text provides relational context. Avoid disconnected nodes if linkage is present in the *current page's text*.
         5.  Pay particular attention to numerical values, dates, currencies, and units found in the "Current Page Text to Analyze".
@@ -142,8 +170,12 @@ class PageLLMProcessor:
         """
         Builds the detailed prompt for multimodal (text + image) KG extraction.
         """
-        ontology_desc = self.ontology.format_for_prompt()
+        if self.use_ontology:
+            ontology_desc = self.ontology.format_for_prompt()
         
+        else:
+            ontology_desc = "No ontology is being used for this extraction. Entities and relationships will be extracted based on general relevance."
+            
         previous_graph_json_for_prompt = "{}"
     
         if construction_mode == "iterative" and previous_graph_context and previous_graph_context.get("entities"):
@@ -200,15 +232,31 @@ class PageLLMProcessor:
         elif construction_mode != "onego":
             prompt += "\nNo previous graph context provided or it was empty. Extract all information fresh from the current page.\n"
 
+        if self.use_ontology:
+            prompt += f"""
+            The ontology for Knowledge Graph Extraction is as follows:
+            {ontology_desc}
+
+            **CRITICAL: Ensure you extract entities and relationships respecting the ontology. Do not deviate from the specified types.**
+        """
+            
         prompt += f"""
-        Ontology for Knowledge Graph Extraction:
-        {ontology_desc}
 
         Current Page Text to Analyze (use in conjunction with the image):
         \"\"\"{page_text}\"\"\"
 
         Task for CURRENT PAGE {page_number} (Image and Text):
-        1.  From the "Current Page Text" and Image *only*, identify all entities matching the ontology.
+        """
+        if self.use_ontology:
+             prompt += f"""
+            1.  From the "Current Page Text" and Image *only*, identify all entities matching the ontology.
+            """
+        else:
+            prompt += f"""
+            1.  From the "Current Page Text" and Image *only*, identify all entities and relations you consider relevant.
+            """
+            
+        prompt += f"""
         2.  For these entities, extract all relevant attributes. Attributes should be direct properties of the entity object (e.g., "name": "X"), NOT nested under a "properties" key.
         3.  Identify and create relationships between entities, based *only* on information in the "Current Page Text" and Image.
             - **Crucially, prioritize creating meaningful relationships between extracted entities.** Connect entities as supported by the page content. Graphs with disconnected entities are not useful.
@@ -300,16 +348,21 @@ class PageLLMProcessor:
                     )
 
                 elif isinstance(self.llm_client, VertexLLM):
-                    image_bytes = base64.b64decode(page_image_base64)
-                    vertex_parts = [
-                        {'text': prompt_str},
-                        {'inline_data': {'mime_type': 'image/png', 'data': image_bytes}}
-                    ]
-                    llm_response_content = self.llm_client.generate_content(
-                        prompt=vertex_parts,
-                        temperature=self.temperature,
-                        response_mime_type="application/json"
-                    )
+                    # Fix: Add type check to ensure page_image_base64 is not None
+                    if page_image_base64 is not None:
+                        image_bytes = base64.b64decode(page_image_base64)
+                        vertex_parts = [
+                            {'text': prompt_str},
+                            {'inline_data': {'mime_type': 'image/png', 'data': image_bytes}}
+                        ]
+                        llm_response_content = self.llm_client.generate_content(
+                            prompt=vertex_parts,
+                            temperature=self.temperature,
+                            response_mime_type="application/json"
+                        )
+                    else:
+                        print(f"Warning: page_image_base64 is None for VertexLLM processing on page {page_number}")
+                        use_multimodal = False
                 else:
                     print(f"Multimodal extraction not configured for LLM type: {self.llm_client.__class__.__name__}. Falling back to text-only.")
                     use_multimodal = False
@@ -367,6 +420,7 @@ class PageLLMProcessor:
             
             # Add page_number to result for tracking
             result["page_number"] = page_number
+
             return result
 
         except json.JSONDecodeError as e:

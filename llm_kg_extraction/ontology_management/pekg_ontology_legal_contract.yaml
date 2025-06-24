@@ -1,0 +1,83 @@
+entities:
+  - pekg:Company:
+      description: "A business entity or organization party to or mentioned in a legal agreement."
+      attributes:
+        - name: string # Primary legal name of the company.
+        - alias: list_string # Alternative names or defined terms (e.g., 'the Company').
+        - description: string # A brief description of the company.
+
+  - pekg:Person:
+      description: "An individual party to or mentioned in a legal agreement."
+      attributes:
+        - fullName: string # Full name of the person.
+        - address: string # Residential address.
+        - alias: list_string # Defined terms for the person in the contract (e.g., 'the President', 'the Employee').
+
+  - pekg:LegalAgreement:
+      description: "The legal contract or agreement itself."
+      attributes:
+        - title: string #s The title of the agreement (e.g., 'MANDATE', 'Employment Agreement').
+        - agreementType: string # The type of contract (e.g., Mandate, NDA, Service Agreement, Shareholder Agreement).
+        - effectiveDate: date # The date the agreement comes into force.
+        - signatureDate: date # The date the agreement was signed.
+        - terminationDate: date # The date the agreement ends, if specified.
+        - governingLaw: string # The jurisdiction's law that governs the contract (e.g., 'French law').
+        - jurisdiction: string # The court or body that has authority to hear disputes (e.g., 'Paris Commercial Court').
+
+  - pekg:ContractualRole:
+      description: "A specific role or function defined by the contract for a person or entity."
+      attributes:
+        - roleName: string # The name of the role (e.g., President, Director, Consultant, Licensor).
+        - description: string # A summary of the powers, duties, or responsibilities of the role.
+
+  - pekg:Remuneration:
+      description: "Describes the compensation package for a role under the agreement."
+      attributes:
+        - componentType: string # Type of remuneration (e.g., 'Fixed Salary', 'Variable Bonus', 'Equity Award', 'Benefit-in-Kind').
+        - amount: float # The monetary value.
+        - currency: string # e.g., 'EUR', 'USD'.
+        - paymentFrequency: string # e.g., 'Annual', 'Monthly'.
+        - description: string # Textual description, including conditions, KPIs, or calculation methods.
+        - vestingPeriod: string # For equity, the time until ownership is granted (e.g., '2 years').
+
+  - pekg:ContractClause:
+      description: "A specific clause or provision within the legal agreement."
+      attributes:
+        - clauseType: string # e.g., 'Termination', 'Non-Compete', 'Non-Solicitation', 'Confidentiality', 'Notice Period', 'Severance'.
+        - duration: string # The time period the clause is effective for (e.g., '12 months following termination').
+        - geographicScope: string # The geographical area the clause applies to (e.g., 'French and US territories').
+        - description: string # A summary of the key terms, conditions, and obligations of the clause.
+        - penaltyOrConsideration: string # Any penalty for breach or payment for the obligation (e.g., '50% of total gross remuneration').
+
+  - pekg:DefinedTerm:
+      description: "A specific term or phrase that is explicitly defined within the contract for clarity."
+      attributes:
+        - term: string # The term being defined (e.g., "Board", "BOD", "Company").
+        - definition: string # The full definition provided in the text.
+
+  - pekg:HistoricalEvent:
+      description: "A notable past event mentioned as context for the agreement (e.g., a board meeting, a prior appointment)."
+      attributes:
+        - eventName: string # Concise description of the event (e.g., "Board of Director Meeting", "End of mandate of Mr. Jean SENELLART").
+        - eventType: string # e.g., BoardMeeting, Appointment, Resignation, CorporateAction.
+        - dateOrYear: string # Date or year of the event (e.g., "2022, May 12th").
+
+relations:
+  # --- Agreement & Parties ---
+  - pekg:isPartyTo (pekg:Company|pekg:Person -> pekg:LegalAgreement) # A person or company is a signatory/party to the agreement.
+  - pekg:governs (pekg:LegalAgreement -> pekg:Company|pekg:Person) # The agreement governs the relationship of a party.
+
+  # --- Roles & Responsibilities ---
+  - pekg:appoints (pekg:LegalAgreement -> pekg:ContractualRole) # The agreement establishes a specific role.
+  - pekg:assignsRoleTo (pekg:ContractualRole -> pekg:Person|pekg:Company) # A defined role is assigned to a person or company.
+  - pekg:roleWithin (pekg:ContractualRole -> pekg:Company) # The role exists within the context of a specific company.
+
+  # --- Clauses & Obligations ---
+  - pekg:containsClause (pekg:LegalAgreement -> pekg:ContractClause) # The agreement includes a specific clause.
+  - pekg:specifiesRemuneration (pekg:LegalAgreement|pekg:ContractClause -> pekg:Remuneration) # The agreement or a clause defines a remuneration component.
+  - pekg:appliesTo (pekg:ContractClause|pekg:Remuneration -> pekg:Person|pekg:Company) # A clause or remuneration applies to a specific party.
+
+  # --- Context & Definitions ---
+  - pekg:defines (pekg:LegalAgreement -> pekg:DefinedTerm) # The agreement provides a specific definition.
+  - pekg:referencesEvent (pekg:LegalAgreement -> pekg:HistoricalEvent) # The agreement references a past event as context.
+  - pekg:eventInvolves (pekg:HistoricalEvent -> pekg:Person|pekg:Company) # A person or company was involved in a past event.

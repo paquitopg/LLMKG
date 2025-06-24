@@ -57,14 +57,14 @@ def get_llm_client(llm_provider: str, model_name: str, azure_model_env_suffix: O
             raise ValueError("azure_model_env_suffix must be provided for Azure LLM.")
         if not model_name:
             model_name = "gpt-4o"  # Default to GPT-4o if not specified
-        return AzureLLM(model_name=model_name, azure_model_env_suffix=azure_model_env_suffix)
+        return AzureLLM(model_name=model_name, deployment_name=model_name, azure_model_env_suffix=azure_model_env_suffix)
     elif llm_provider == "vertexai":
         project_id = os.getenv("GOOGLE_CLOUD_PROJECT")
         location = os.getenv("GOOGLE_CLOUD_LOCATION")
         if not project_id or not location:
             print("Warning: GOOGLE_CLOUD_PROJECT or GOOGLE_CLOUD_LOCATION not set in environment variables. VertexAI client might fail.")
         if not model_name:
-            model_name = os.getenv("VERTEXAI_DEFAULT_MODEL")
+            model_name = os.getenv("VERTEXAI_DEFAULT_MODEL") or "gemini-1.5-pro"  # Provide fallback
         return VertexLLM(model_name=model_name, project_id=project_id, location=location)
     else:
         raise ValueError(f"Unsupported LLM provider: {llm_provider}")
@@ -101,9 +101,18 @@ def initialize_components(llm_provider: str, model_configs: Dict[str, Any], onto
     if not ontology_path.exists():
         print(f"Error: Ontology file not found at {ontology_path}")
         sys.exit(1)
-    ontology = PEKGOntology(ontology_path=str(ontology_path))
+
+    print("Using ontology file:", model_configs.get("use_ontology"))
+    if model_configs.get("use_ontology", True):
+        ontology = PEKGOntology(ontology_path=str(ontology_path))
+    else:
+        print("Ontology loading skipped as per configuration.")
+        ontology = None
 
     # Initialize processing components
+    # Handle case where ontology might be None
+    use_ontology_flag = model_configs.get("use_ontology", True) and ontology is not None
+    
     components = {
         "main_llm_client": main_llm_client,
         "ontology": ontology,
@@ -112,7 +121,7 @@ def initialize_components(llm_provider: str, model_configs: Dict[str, Any], onto
             categories=model_configs["predefined_categories"],
             summary_llm_client=summary_llm_client
         ),
-        "document_context_preparer": DocumentContextPreparer(ontology=ontology),
+        "document_context_preparer": DocumentContextPreparer(ontology=ontology or PEKGOntology(""), use_ontology=use_ontology_flag),
         "page_level_merger": PageLevelMerger(ontology=ontology),
         "inter_document_merger": InterDocumentMerger(ontology=ontology),
         "graph_visualizer": KnowledgeGraphVisualizer()
@@ -150,7 +159,8 @@ def process_single_document(pdf_path: Path, document_output_path: Path,
     page_llm_processor = PageLLMProcessor(
         llm_client=components["main_llm_client"],
         ontology=components["ontology"], 
-        extraction_mode=config["extraction_mode"]
+        extraction_mode=config["extraction_mode"], 
+        use_ontology=config.get("use_ontology", True),
     )
     
     # Initialize KG constructor with processing mode
@@ -241,17 +251,20 @@ def apply_transformation(kg_data: Dict[str, Any], project_name: str,
     
     print("\nPerforming transformation on the final project KG...")
     try:
-        transform_request_id = str(uuid.uuid4())
-        transformed_kg = transform_kg(kg_data, transform_request_id, project_name)
+        # Note: transform_kg requires additional parameters that are not available in this context
+        # Commenting out for now to avoid missing parameter errors
+        print("Transform functionality not fully configured - skipping transformation.")
+        # transform_request_id = str(uuid.uuid4())
+        # transformed_kg = transform_kg(kg_data, transform_request_id, project_name)
         
         # Save and visualize transformed KG
-        save_and_visualize_kg(
-            transformed_kg, 
-            output_path, 
-            "transformed_project_kg", 
-            visualizer, 
-            is_multi_doc=True
-        )
+        # save_and_visualize_kg(
+        #     transformed_kg, 
+        #     output_path, 
+        #     "transformed_project_kg", 
+        #     visualizer, 
+        #     is_multi_doc=True
+        # )
         
     except Exception as e:
         print(f"Transformation failed: {e}")
@@ -272,6 +285,7 @@ def run_project_pipeline(
     max_workers: int,
     dump_page_kgs: bool,
     transform_final_kg: bool,
+    use_ontology: bool,
     run_diagnostics: bool = False,
     # NEW PARAMETERS for semantic chunking
     processing_mode: str = "page_based",
@@ -279,8 +293,7 @@ def run_project_pipeline(
     min_chunk_size: int = 500,
     chunk_overlap: int = 200,
     respect_sentence_boundaries: bool = True,
-    detect_topic_shifts: bool = True
-):
+    detect_topic_shifts: bool = True):
     """
     MODIFIED: Orchestrates the entire pipeline with support for document-aware processing.
     """
@@ -300,7 +313,8 @@ def run_project_pipeline(
         "classification_azure_model_env_suffix": classification_azure_model_env_suffix,
         "summary_model_name": summary_model_name,
         "summary_azure_model_env_suffix": summary_azure_model_env_suffix,
-        "predefined_categories": predefined_categories
+        "predefined_categories": predefined_categories,
+        "use_ontology": use_ontology  # Default to using ontology in context preparation
     }
 
     # Initialize components
@@ -313,13 +327,13 @@ def run_project_pipeline(
         "extraction_mode": extraction_mode,
         "max_workers": max_workers,
         "dump_page_kgs": dump_page_kgs,
-        # NEW: Document-aware processing configuration
         "processing_mode": processing_mode,
         "chunk_size": chunk_size,
         "min_chunk_size": min_chunk_size,
         "chunk_overlap": chunk_overlap,
         "respect_sentence_boundaries": respect_sentence_boundaries,
-        "detect_topic_shifts": detect_topic_shifts
+        "detect_topic_shifts": detect_topic_shifts, 
+        "use_ontology": use_ontology
     }
 
     # Log configuration for document-aware processing
@@ -422,8 +436,8 @@ if __name__ == "__main__":
                         help="KG construction mode: 'iterative' (sequential page processing) or 'parallel' (concurrent page processing).")
     parser.add_argument("--extraction_mode", type=str, choices=["text", "multimodal"], default="text",
                         help="Extraction modality: 'text' or 'multimodal'.")
-    parser.add_argument("--predefined_categories", nargs='+', default=["financial_report", "legal_contract", "press_release", "annual_report"],
-                        help="List of predefined document categories for classification. Default: financial_report legal_contract press_release annual_report")
+    parser.add_argument("--predefined_categories", nargs='+', default=["financial_teaser", "legal_contract", "press_release", "annual_report"],
+                        help="List of predefined document categories for classification. Default: financial_teaser legal_contract press_release annual_report")
     parser.add_argument("--max_workers", type=int, default=4, help="Number of parallel workers (default: 4).")
     parser.add_argument("--dump_page_kgs", action="store_true", help="Save intermediate KGs for each page of each document.")
     parser.add_argument("--transform_final_kg", action="store_true", help="Perform transformation on the final merged project KG.")
@@ -432,6 +446,9 @@ if __name__ == "__main__":
     parser.add_argument("--processing_mode", type=str, choices=["page_based", "document_aware"], 
                        default="page_based", 
                        help="Processing approach: 'page_based' (existing) or 'document_aware' (new semantic chunking)")
+
+    parser.add_argument('--no_ontology', action='store_true', 
+                        help="Disable ontology-driven extraction. The LLM will identify entities and relations freely.")
     
     parser.add_argument("--chunk_size", type=int, default=4000,
                        help="Maximum chunk size for document-aware processing (default: 4000)")
@@ -463,6 +480,12 @@ if __name__ == "__main__":
         if not args.summary_azure_model_env_suffix:
             parser.error("--summary_azure_model_env_suffix is required when llm_provider is 'azure' for the summarization model.")
 
+    use_ontology_flag = not args.no_ontology
+    if use_ontology_flag:
+        print("Ontology-driven extraction is enabled. The LLM will use the ontology to guide entity and relation extraction.")
+    else:
+        print("Ontology-driven extraction is disabled. The LLM will identify entities and relations freely.")
+
     run_project_pipeline(
         input_folder_path_str=args.input_folder_path,
         project_name=args.project_name,
@@ -485,5 +508,6 @@ if __name__ == "__main__":
         min_chunk_size=args.min_chunk_size,
         chunk_overlap=args.chunk_overlap,
         respect_sentence_boundaries=not args.no_sentence_boundaries,
-        detect_topic_shifts=not args.no_topic_detection
+        detect_topic_shifts=not args.no_topic_detection,
+        use_ontology=use_ontology_flag
     )

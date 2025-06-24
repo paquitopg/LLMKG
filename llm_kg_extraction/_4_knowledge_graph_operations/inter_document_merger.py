@@ -3,7 +3,6 @@ from typing import List, Dict, Any, Set, Tuple, Optional, Union
 from .common_kg_utils import (
     find_matching_entity_pekg, # Still used for finding matches based on single-value attributes from input KGs
     normalize_entity_ids,
-    get_entity_primary_name,
     clean_knowledge_graph,
     merge_entity_attributes
 )
@@ -17,7 +16,7 @@ class InterDocumentMerger:
 
     def __init__(self,
                  ontology,
-                 similarity_threshold: float = 0.5,
+                 similarity_threshold: float = 0.8,
                  default_source_id: str = "aggregated"):
         """
         Initializes the InterDocumentMerger.
@@ -120,7 +119,7 @@ class InterDocumentMerger:
                 continue
             
             doc_entity_id = entity_doc['id']
-            
+            #print(f"Inter-Document Merge: Processing entity '{entity_doc}'") #debugging output
             matching_entity_in_project = find_matching_entity_pekg(
                 entity_doc, # find_matching_entity expects single-value attributes for comparison
                 list(merged_entities_map.values()),
@@ -128,6 +127,8 @@ class InterDocumentMerger:
             )
 
             if matching_entity_in_project:
+                # Found a matching entity in the project KG
+                print(f"Inter-Document Merge: Found matching entity '{matching_entity_in_project.get('name')}' for entity '{entity_doc.get('name')}'") #debugging output
                 project_id = matching_entity_in_project['id']
                 id_doc_to_project_id_map[doc_entity_id] = project_id
                 

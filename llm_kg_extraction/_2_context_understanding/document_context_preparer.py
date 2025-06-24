@@ -1,13 +1,8 @@
-# File: llm_kg_extraction/_2_context_understanding/generic_context_identifier.py
-
 from typing import Dict, Any, Optional
 from ontology_management.ontology_loader import PEKGOntology
 import json # Ensure json is imported
 
-# File: llm_kg_extraction/_2_context_understanding/document_context_preparer.py (New name)
-
 from typing import Dict, Any, Optional
-# No longer needs BaseLLMWrapper here as it won't call LLM
 from ontology_management.ontology_loader import PEKGOntology
 
 class DocumentContextPreparer:
@@ -17,14 +12,16 @@ class DocumentContextPreparer:
     and the full ontology schema. This class does NOT call an LLM.
     """
 
-    def __init__(self, ontology: PEKGOntology):
+    def __init__(self, ontology: PEKGOntology, use_ontology: bool = True):
         """
         Initializes the DocumentContextPreparer.
 
         Args:
             ontology (PEKGOntology): The loaded ontology for the project.
+            use_ontology (bool): Flag indicating whether to use the ontology in context preparation.
         """
         self.ontology = ontology
+        self.use_ontology = use_ontology
 
     def prepare_context(self, 
                         identified_doc_type: str,
@@ -47,16 +44,24 @@ class DocumentContextPreparer:
             This dictionary will be passed to the PageLLMProcessor.
         """
         print(f"DocumentContextPreparer: Preparing context for type '{identified_doc_type}'.")
-        
-        full_ontology_schema = self.ontology.format_for_prompt()
 
-        document_context_info = {
-            "identified_document_type": identified_doc_type,
-            "document_summary": summary["summary"],
-            "main_entity": summary["main_entity"] if "main_entity" in summary else None,
-            "ontology_schema": full_ontology_schema,
-            # Add any other document-level context data here if needed in the future
-        }
+        if self.use_ontology:
+            full_ontology_schema = self.ontology.format_for_prompt()
+            document_context_info = {
+                "identified_document_type": identified_doc_type,
+                "document_summary": summary["summary"],
+                "main_entity": summary["main_entity"] if "main_entity" in summary else None,
+                "ontology_schema": full_ontology_schema,
+                # Add any other document-level context data here if needed in the future
+            }
+
+        else:
+            document_context_info = {
+                "identified_document_type": identified_doc_type,
+                "document_summary": summary["summary"],
+                "main_entity": summary["main_entity"] if "main_entity" in summary else None,
+                "ontology_schema": "",
+            }
         
         print("DocumentContextPreparer: Context prepared.")
         return document_context_info
